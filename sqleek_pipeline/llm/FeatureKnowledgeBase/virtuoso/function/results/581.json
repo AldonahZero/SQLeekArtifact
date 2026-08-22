@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_table_set_policy/"
+  ],
+  "Title": [
+    "table_set_policy ("
+  ],
+  "Feature": [
+    "table_set_policy ("
+  ],
+  "Description": [
+    "Sets policy function to table."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

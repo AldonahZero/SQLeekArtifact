@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_charsets_list/"
+  ],
+  "Title": [
+    "any charsets_list ("
+  ],
+  "Feature": [
+    "any charsets_list ("
+  ],
+  "Description": [
+    "This function produces a list of all character set names and aliases\n      known to Virtuoso. The returned value is an array of string s with a character set name as each element.\n      If the gen_res_set flag is 1, the function also\n      produces a result set in which each row contains one varchar column with\n      a name of a character set or alias.\ngen_res_set"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

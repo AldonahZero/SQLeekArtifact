@@ -1,0 +1,8 @@
+tool,PostgreSQL,MySQL,MariaDB,MonetDB,Union,source_note
+SQLancer,0,0,0,N/A,0,Five-run union of deduplicated bugs after developer-feedback filtering; N/A follows unsupported status in runs.csv.
+SQUIRREL,0,3,1,N/A,4,Five-run union of deduplicated bugs after developer-feedback filtering; N/A follows unsupported status in runs.csv.
+Griffin,0,4,3,4,11,Five-run union of deduplicated bugs after developer-feedback filtering; Griffin MariaDB=3 and MonetDB=4 per user-provided developer-deduplicated counts; N/A follows unsupported status in runs.csv.
+DynSQL,0,0,0,0,0,Five-run union of deduplicated bugs after developer-feedback filtering; N/A follows unsupported status in runs.csv.
+AFLGo,0,0,0,0,0,Five-run union of deduplicated bugs after developer-feedback filtering; N/A follows unsupported status in runs.csv.
+SQLaser,0,1,N/A,N/A,1,Five-run union of deduplicated bugs after developer-feedback filtering; N/A follows unsupported status in runs.csv.
+SQLeek,3,10,19,13,45,Paper-level SQLeek union row uses PostgreSQL=3 as requested; Figure 6 still reports per-run mean +/- std and does not use the five-run union as a time-series endpoint.

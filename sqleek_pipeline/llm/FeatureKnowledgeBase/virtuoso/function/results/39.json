@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bag_of_nonnulls_or_null_agg/"
+  ],
+  "Title": [
+    "vector DB.DBA.BAG_OF_NONNULLS_OR_NULL_AGG ("
+  ],
+  "Feature": [
+    "vector DB.DBA.BAG_OF_NONNULLS_OR_NULL_AGG ("
+  ],
+  "Description": [
+    "DB.DBA.BAG_OF_NONNULLS_OR_NULL_AGG returns a vector of passed values.\n    Similar to DB.DBA.BAG_OF_NONNULLS_AGG() but returns NULL\ninstead of an empty vector if no arguments were passed or only NULLs were passed.\nDB.DBA.BAG_OF_NONNULLS_OR_NULL_AGG\nThe order of items in the vector is not predefined and may vary from run to run."
+  ],
+  "Examples": [
+    "SELECT DB.DBA.BAG_OF_NONNULLS_OR_NULL_AGG (subquery.X)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

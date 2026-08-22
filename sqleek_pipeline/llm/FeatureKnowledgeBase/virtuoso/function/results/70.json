@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_charset_define/"
+  ],
+  "Title": [
+    "charset_define ("
+  ],
+  "Feature": [
+    "charset_define ("
+  ],
+  "Description": [
+    "This function creates a new narrow\n    language-specific character set, or redefines an existing one."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

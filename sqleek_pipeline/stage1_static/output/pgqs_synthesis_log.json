@@ -1,0 +1,45 @@
+{
+  "algorithm": "PGQS",
+  "convergence": false,
+  "dual_available": false,
+  "final_score": 0.3909,
+  "iterations": [
+    {
+      "compile_error": "",
+      "compiled": true,
+      "dual": 0.0,
+      "dual_holds": false,
+      "iteration": 1,
+      "llm_ok": true,
+      "note": "heuristic_score_no_dual_db",
+      "precision": 0.1818,
+      "recall": 0.1818,
+      "score": 0.3727
+    },
+    {
+      "compile_error": "Compiling query plan for /root/SQLeek/sqleek_pipeline/stage1_static/queries/pgqs.ql.\nERROR: expected a term but found an expression instead (/root/SQLeek/sqleek_pipeline/stage1_static/queries/pgqs.ql:64,6-35)\nWARNING: unused variable 'f' (/root/SQLeek/sqleek_pipeline/stage1_static/queries/pgqs.ql:37,29-30)\nFailed [1/1] /root/SQLeek/sqleek_pipeline/stage1_static/queries/pgqs.ql.\n",
+      "compiled": false,
+      "iteration": 2,
+      "llm_ok": true
+    },
+    {
+      "compile_error": "",
+      "compiled": true,
+      "dual": 0.0,
+      "dual_holds": false,
+      "iteration": 3,
+      "llm_ok": true,
+      "note": "heuristic_score_no_dual_db",
+      "precision": 0.2273,
+      "recall": 0.2273,
+      "score": 0.3909
+    }
+  ],
+  "k_max": 3,
+  "mode": "llm",
+  "weights": {
+    "w1": 0.3,
+    "w2": 0.3,
+    "w3": 0.4
+  }
+}

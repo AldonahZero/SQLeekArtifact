@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlconcat/"
+  ],
+  "Title": [
+    "XMLCONCAT ("
+  ],
+  "Feature": [
+    "XMLCONCAT ("
+  ],
+  "Description": [
+    "XMLCONCAT accepts a list of XML value expressions as its arguments, and produces a forest of elements by\n   concatenating the XML values that are returned from the same row to make one value. XMLCONCAT works like XMLFOREST ,\n   except that XMLCONCAT parameters is a list of XML elements.\n    Null expressions are dropped from the result. If all the value expressions are null, then the function returns NULL.\nXMLCONCAT\nXMLCONCAT\nXMLFOREST\nXMLCONCAT"
+  ],
+  "Examples": [
+    "select XMLCONCAT (",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

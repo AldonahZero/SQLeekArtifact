@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_gvector_sort/"
+  ],
+  "Title": [
+    "gvector_sort ("
+  ],
+  "Feature": [
+    "gvector_sort ("
+  ],
+  "Description": [
+    "The function gets an vector that consists of groups of elements.\nAll groups are of equal size, namely elements_in_group , so the total length of data vector\nshould be whole multiple of elements_in_group .\nOne element of each group is a key of sorting; it is identified by its zero-based position within the group, key_idx_in_group .\nThe sorting procedure edits data and reorders groups in such a way that their keys become ordered ascending or descending,\ndepending on sort_ascending flag.\nelements_in_group\ndata\nelements_in_group\nkey_idx_in_group\ndata\nsort_ascending\nThe simplest case is plain sorting of a uniform array. In this case every element is an individual group, elements_in_group is 1\nand key_idx_in_group is 0.\nelements_in_group\nkey_idx_in_group\nOther popular case is sorting of result of dict_to_vector ().\nIn this case, every item of the original dictionary is represended in the vector by a pair of elements ( elements_in_group is 2),\nso to sort items by their keys, the key_idx_in_group is 0 and to sort them by associated values,\nthe key_idx_in_group is 1.\ndict_to_vector\nelements_in_group\nkey_idx_in_group\nkey_idx_in_group\nSimilarly, elements_in_block is 2 for arrays like \"lines\" or \"params\" of a VSP page.\nelements_in_block"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

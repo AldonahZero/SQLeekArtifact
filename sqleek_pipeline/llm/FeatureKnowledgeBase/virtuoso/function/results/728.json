@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlreplace/"
+  ],
+  "Title": [
+    "any XMLReplace ("
+  ],
+  "Feature": [
+    "any XMLReplace ("
+  ],
+  "Description": [
+    "The function takes of the XML document referenced by source XML tree entity and modifies it by replacing nodes specified by location1 , location2 , ..., locationN with\nvalues specified by replacement1 , replacement2 , ..., replacementN .\nAt the end of function call, the source points to the root of a modified entity.\nsource\nlocation1\nlocation2\nlocationN\nreplacement1\nreplacement2\nreplacementN\nsource\nThe source parameter should be an XML tree entity whose document is not locked (see Changing XML Entities in DOM Style for details).\nsource\nEvery replacementI may be an XML tree entity, a NULL or a value of some other type that will be converted to varchar before use.\nreplacementI\nFor simplicity, consider the case when there is only one location1 XML entity and only one replacement1 . If the location1 is an XML entity that is not in the source document\nthen no modifications is made in source . If replacement1 is an entity that \nis in the source document then a temporary \"cut\" of replacement1 is created, like xml_cut is called).\nlocation1\nreplacement1\nlocation1\nsource\nreplacement1\nreplacement1\nxml_cut\nIf the location1 is an attribute entity then the value of the attribute is changed.\nIf replacement1 is NULL then the attribute is removed at all, otherwise its value is set to the string value of\nthe replacement1 .\nlocation1\nreplacement1\nreplacement1\nIf the location1 is not an attribute entity but a entity then location1 is replaced with the value of replacement1 .\nThe method of  replacement depends on the type of the replacement value.\nIf replacement1 is NULL then the location1 node is simply removed from the result; if the node is the root or a\nsingle child of the root then function immediately returns NULL (because XML document can not be totally empty),\notherwise the parent of the location1 will simply have one child less.\nIf replacement1 is an non-empty string then location1 is\nreplaced with a new text node whose string value is equal to replacement1 .\nIf replacement1 is an empty string then the effect is exactly the same as in case of NULL because the string value of a text node can not be empty.\nIf replacement1 is an XML entity that is a root entity of some document then the highlighted node is replaced with a sequence of copies of all children of that root.\nIf replacement1 is an XML entity of some other sort (XML element, text, comment etc.) then the that is not a root entity of some document then the highlighted node is replaced with a sequence of copies of all children of that root.\nlocation1\nlocation1\nreplacement1\nreplacement1\nlocation1\nlocation1\nreplacement1\nlocation1\nreplacement1\nreplacement1\nreplacement1\nreplacement1\nAfter changing the source , some normalization may happen. The modified document may contain adjacent text nodes; every sequence of such nodes\nis replaced with one text node whose string value is a concatenation of string values of that nodes. E.g. if the location1 is an element <a/>\nthat resides between two text nodes \"text1\" and \"text2\" and it is removed (by replacing with NULL) then these text nodes become neighbors;\nnormalization will replace them with a single text node \"text1text2\"\nsource\nlocation1\nNow consider the case of more than one replacement made in one function call. If more than one pair of location and replacement is given then\nthe function first finds all locations, then it performs all replacements, then it performs an normalization.\nIt is very important to understand that the order of making replacements has nothing to do with the order of pairs of parameters in the function call.\nIf some location node is an ancestor of some other location node then the effect of the replacement of the descendant location node is void:\nthe descendant is replaced first; then the ancestor is replaced as a whole, no matter if some of its descendants are modified.\nThe order of parameters in the function call\nis used to resolve ambiguity If two locations are equal: the last pair of parameters will have a higher priority.\nIf the source is an instance of XMLType then its inner XML document is changed and \"is validated\" flag is reset to\n0 indicating that there is no warranty that the modified version of document matches the declared schema even if the original document matched.\nsource"
+  ],
+  "Examples": [
+    "create procedure XMLReplace_demo ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

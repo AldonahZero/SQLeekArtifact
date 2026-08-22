@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_view_sync_to_physical/"
+  ],
+  "Title": [
+    "RDF_VIEW_SYNC_TO_PHYSICAL ("
+  ],
+  "Feature": [
+    "RDF_VIEW_SYNC_TO_PHYSICAL ("
+  ],
+  "Description": [
+    "This function create new Transient and Materialized View pairs with option (where load = 1/0) to load data\n    \tor wait for updates -- from triggers at execute time. 0 for non-transaction mode, and atomicity 0/1 determines\n    \tserver accessiblity where 1 indicates inaccessiblity during run. Note: applicable for Virtuoso 6.0 and higher."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

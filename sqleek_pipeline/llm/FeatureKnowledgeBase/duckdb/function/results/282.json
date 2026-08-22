@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "list_pack"
+    ],
+    "Feature": [
+        "list_pack"
+    ],
+    "Description": [
+        "list_value(any, ...)",
+        "Create a LIST containing the argument values."
+    ],
+    "Examples": [
+        "list_value(4, 5, 6)"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT list_value(1, 2, 3, 4, 5);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 282,
+            "Prompt Tokens": 251,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 5.624999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT list_value(1, 2, 3, 4, 5);"
+    ]
+}

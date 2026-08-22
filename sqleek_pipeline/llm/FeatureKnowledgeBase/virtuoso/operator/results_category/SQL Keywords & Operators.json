@@ -1,0 +1,66 @@
+[
+  {
+    "name": "ALTER",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "AS",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "CAST",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "COLLATE",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "CREATE",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "DELETE",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "DROP",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "FROM",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "INDEX",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "INSERT",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "SELECT",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "TABLE",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "UPDATE",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "VIEW",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "WHERE",
+    "description": "Doc-derived SQL keyword (grammar/BNF + headings)."
+  },
+  {
+    "name": "|",
+    "description": "Doc-derived SQL operator symbol (grammar/BNF)."
+  }
+]

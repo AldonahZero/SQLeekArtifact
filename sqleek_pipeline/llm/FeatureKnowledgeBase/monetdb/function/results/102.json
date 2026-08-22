@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "replace(s, srch, repl)"
+    ],
+    "Feature": [
+        "replace(s, srch, repl)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as input arg 1",
+        "replace occurrences of string srch in string s by string repl"
+    ],
+    "Examples": [
+        "replace('abc', 'b', 'X')"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT replace('hello world', 'world', 'MonetDB')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 313,
+            "Prompt Tokens": 286,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.9099999999999986e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT replace('hello world', 'world', 'MonetDB')"
+    ]
+}

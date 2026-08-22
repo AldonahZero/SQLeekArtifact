@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ucase/"
+  ],
+  "Title": [
+    "ucase ("
+  ],
+  "Feature": [
+    "ucase ("
+  ],
+  "Description": [
+    "ucase returns a copy of string str with all\n    the lowercase alphabetical\n    characters converted to corresponding uppercase letters. This includes\n    also the diacritic letters present in the ISO 8859/1 standard in range\n    224 - 254 decimal, excluding the character 255, y diaeresis, which is not\n    converted to a German double-s.\nucase\nupper is just an alias for ucase.\nucase('AbracadabrA')  -> 'ABRACADABRA'"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

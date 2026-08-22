@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sysutcdatetime/"
+  ],
+  "Title": [
+    "sysutcdatetime ("
+  ],
+  "Feature": [
+    "sysutcdatetime ("
+  ],
+  "Description": [
+    "The function returns current datetime, like now() , but\n    fractional part of seconds can be adjusted by providing the number of \"microseconds\" as the argument.\nnow()\nThe function is similar to curdatetime() but the returned datetime is in GMT timezone.\ncurdatetime()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

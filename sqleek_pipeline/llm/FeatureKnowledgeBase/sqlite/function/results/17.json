@@ -1,0 +1,66 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "load_extension(X)load_extension(X,Y)"
+    ],
+    "Feature": [
+        "load_extension(X)load_extension(X,Y)"
+    ],
+    "Description": [
+        "\n  The load_extension(X,Y) function loads SQLite extensions out of the shared\n  library file named X using the entry point Y.  The result of load_extension()\n  is always a NULL.  If Y is omitted then the default entry point name is used.\n  The load_extension() function raises an exception if the extension fails to\n  load or initialize correctly.\n\n  The load_extension() function will fail if the extension attempts to \n  modify or delete an SQL function or collating sequence.  The\n  extension can add new functions or collating sequences, but cannot\n  modify or delete existing functions or collating sequences because\n  those functions and/or collating sequences might be used elsewhere\n  in the currently running SQL statement.  To load an extension that\n  changes or deletes functions or collating sequences, use the\n  sqlite3_load_extension() C-language API.\nFor security reasons, extension loading is disabled by default and must\n  be enabled by a prior call to sqlite3_enable_load_extension().\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "load_extension('my_extension')",
+        "SELECT load_extension('my_extension')",
+        "SELECT sqlite3_enable_load_extension(1); load_extension('my_extension')",
+        "load_extension('my_extension')",
+        "SELECT load_extension('my_extension');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 500,
+            "Prompt Tokens": 481,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 8.355e-05
+        },
+        {
+            "Total Tokens": 645,
+            "Prompt Tokens": 625,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00010574999999999998
+        },
+        {
+            "Total Tokens": 793,
+            "Prompt Tokens": 765,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 0.00013155
+        },
+        {
+            "Total Tokens": 939,
+            "Prompt Tokens": 920,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 0.0001494
+        },
+        {
+            "Total Tokens": 1084,
+            "Prompt Tokens": 1064,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.0001716
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) near \"load_extension\": syntax error\n",
+        "(sqlite3.OperationalError) not authorized\n",
+        "(sqlite3.OperationalError) no such function: sqlite3_enable_load_extension\n",
+        "(sqlite3.OperationalError) near \"load_extension\": syntax error\n",
+        "(sqlite3.OperationalError) not authorized\n"
+    ],
+    "EffectiveSQLs": []
+}

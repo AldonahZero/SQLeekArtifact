@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/time"
+    ],
+    "Title": [
+        "date_part(part, time)"
+    ],
+    "Feature": [
+        "date_part(part, time)"
+    ],
+    "Description": [
+        "Get subfield (equivalent to extract)."
+    ],
+    "Examples": [
+        "date_part('minute', TIME '14:21:13')"
+    ],
+    "Category": [
+        "Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT date_part('year', CURRENT_TIMESTAMP);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 283,
+            "Prompt Tokens": 261,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.234999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT date_part('year', CURRENT_TIMESTAMP);"
+    ]
+}

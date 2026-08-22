@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "sign(X)"
+    ],
+    "Feature": [
+        "sign(X)"
+    ],
+    "Description": [
+        "\n  The sign(X) function returns -1, 0, or +1 if the argument X is a numeric\n  value that is negative, zero, or positive, respectively.  If the argument\n  to sign(X) is NULL or is a string or blob that cannot be losslessly converted\n  into a number, then sign(X) returns NULL.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sign(X);",
+        "SELECT sign(0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 333,
+            "Prompt Tokens": 316,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 5.759999999999999e-05
+        },
+        {
+            "Total Tokens": 468,
+            "Prompt Tokens": 450,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 7.83e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: X\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sign(0);"
+    ]
+}

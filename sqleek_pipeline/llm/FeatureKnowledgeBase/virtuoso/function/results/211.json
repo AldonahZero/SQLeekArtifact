@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_header/"
+  ],
+  "Title": [
+    "http_header ("
+  ],
+  "Feature": [
+    "http_header ("
+  ],
+  "Description": [
+    "This function is used to add additional HTTP  header lines to the server response.\nThe http_header parameter MUST finish with <CR><LF> characters.\nWarning: Each call of this function cancels the effect of the previous call.\nIn order to add to previously set header lines, use\nthe http_header_get function to retrieve the current headers.\nhttp_header_get\nA Content-Type or Media-Type header specified as a part of the headers given with\nthis function will override the default.  Otherwise the header lines set using this function add to but do  not replace  the default response headers.\nNote that this function cannot set the status line.  Use http_request_status for that."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

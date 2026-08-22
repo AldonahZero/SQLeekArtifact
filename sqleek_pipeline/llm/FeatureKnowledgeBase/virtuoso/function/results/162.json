@@ -1,0 +1,34 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_explain/"
+  ],
+  "Title": [
+    "explain ("
+  ],
+  "Feature": [
+    "explain ("
+  ],
+  "Description": [
+    "The explain function compiles a SQL statement and returns a description\nof that compilation as a result set, return value or parse tree. The result set consists of one\nVARCHAR column with one line of the description in each row.  Any given\nline may be quite long, even several hundred characters.\nThe output is not a complete disassembly of the query graph, but it\nis detailed enough to show the join order, the sub-query structure,\nand the order of evaluation of query predicates, as well as the\nsplitting of a distributed VDB query over different data sources.\nThe optional cursor type can be one of the SQL_CURSOR_<xx> constants,\nor one of the special values listed below.  The default is 0, for\nFORWARD ONLY. The special values each have special effect, as listed.\nIf the statement is a SELECT and the cursor type is not FORWARD ONLY,\nthe auxiliary SQL statements used by the cursor implementation are\nshown.\nTable 24.30. Cursor Type"
+  ],
+  "Examples": [
+    "Select ($47 \".U_ID\", $46 \".U_NAME\", $45 \".U_IS_ROLE\", $44 \".U_FULL_NAME\", $43 \".U_E_MAIL\", $42 \".U_PASSWORD\", $41 \".U_GROUP\", $40 \".U_LOGIN_TIME\", $39",
+    "select *",
+    "Select (TOP <constant (10)>) ($34 \"s\", $35 \"p\", $36 \"o\", <$33 \"<DB.DBA.RDF_QUAD s-1-1-t0>\" spec 5>)",
+    "select *",
+    "callret",
+    "Select (TOP <constant (10)>) ($34 \"s\", $35 \"p\", $36 \"o\", <$33 \"<DB.DBA.RDF_QUAD s-1-1-t0>\" spec 5>)",
+    "call id_to_iri: (609 'id_to_iri' ((201 't1' 'S' ) ) )",
+    "call id_to_iri: (609 'id_to_iri' ((201 't1' 'P' ) ) )",
+    "call __rdf_sqlval_of_obj: (609 '__rdf_sqlval_of_obj' ((201 't1' 'O' ) ) )",
+    "call iri_to_id_nosignal: (609 'iri_to_id_nosignal' ('http://myopenlink.net/dataspace/person/kidehen#this' ) )"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_drop_snapshot_sub/"
+  ],
+  "Title": [
+    "None REPL_DROP_SNAPSHOT_SUB ("
+  ],
+  "Feature": [
+    "None REPL_DROP_SNAPSHOT_SUB ("
+  ],
+  "Description": [
+    "This procedure drops a subscription to a snapshot publication.\nThis function should be run on publisher."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_geo_add/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_GEO_ADD ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_GEO_ADD ("
+  ],
+  "Description": [
+    "This function translates a geometry into a RDF box. It looks if an identical geometry\nalready exists and if so assigns the existing id to it. If the geometry is new, it gets a new ID\nand is stored in the RDF literals table RDF_OBJ. At this time it is also automatically inserted\ninto the RDF geometry index.\nNote: In a cluster situation one should use the dpipe mechanism\nfor inserting into RDF quad so as to get large numbers of inserts into a single message. This\nis essential for performance."
+  ],
+  "Examples": [
+    "INSERT INTO RDF_QUAD (g, s, p, o)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

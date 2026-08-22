@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_revoke_role/"
+  ],
+  "Title": [
+    "USER_REVOKE_ROLE ("
+  ],
+  "Feature": [
+    "USER_REVOKE_ROLE ("
+  ],
+  "Description": [
+    "This function is used to remove a role from the specified security\n    object. This is equivalent to using the REVOKE <role> statement.\nREVOKE <role>"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

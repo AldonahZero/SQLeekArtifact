@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-oid.html"
+    ],
+    "Title": [
+        "regdictionary"
+    ],
+    "Feature": [
+        "regdictionary"
+    ],
+    "Description": [
+        "References",
+        "pg_ts_dict",
+        "Description",
+        "text search dictionary",
+        "Value Example",
+        "simple"
+    ],
+    "Examples": [],
+    "Category": [
+        "Object Identifier Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM pg_ts_dict WHERE dictname = 'regdictionary';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 283,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.46e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT * FROM pg_ts_dict WHERE dictname = 'regdictionary';"
+    ]
+}

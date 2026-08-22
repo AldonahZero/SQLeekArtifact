@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-json.html"
+    ],
+    "Title": [
+        "number . abs"
+    ],
+    "Feature": [
+        "number . abs() \u2192 number"
+    ],
+    "Description": [
+        "Absolute value of the given number"
+    ],
+    "Examples": [
+        "jsonb_path_query('{\"z\": -0.3}', '$.z.abs()') \u2192 0.3"
+    ],
+    "Category": [
+        "JSON Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT abs(-5);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 266,
+            "Prompt Tokens": 248,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.7999999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT abs(-5);"
+    ]
+}

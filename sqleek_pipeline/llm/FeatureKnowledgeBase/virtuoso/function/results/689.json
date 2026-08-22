@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_pkcs12_export/"
+  ],
+  "Title": [
+    "xenc_pkcs12_export ("
+  ],
+  "Feature": [
+    "xenc_pkcs12_export ("
+  ],
+  "Description": [
+    "Generates a secure Public-Key Cryptography Standards (PKCS#12) file from a PEM (base64 encoded DER) file comprised of an X.509 certificate and an associated Private Key."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sample/"
+  ],
+  "Title": [
+    "DB.DBA.SAMPLE ("
+  ],
+  "Feature": [
+    "DB.DBA.SAMPLE ("
+  ],
+  "Description": [
+    "DB.DBA.SAMPLE is aggregate function that returns an arbitrary value from the multiset passed to it.\nNote: Using the \"sql:\" prefix is mandatory for this aggregate."
+  ],
+  "Examples": [
+    "SELECT  (sql:SAMPLE(?nick)), (sql:SAMPLE(?interest))",
+    "callret-0   callret-1"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

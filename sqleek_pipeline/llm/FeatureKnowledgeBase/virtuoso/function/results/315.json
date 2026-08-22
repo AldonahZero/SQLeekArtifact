@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nntp_post/"
+  ],
+  "Title": [
+    "array nntp_post ("
+  ],
+  "Feature": [
+    "array nntp_post ("
+  ],
+  "Description": [
+    "Nntp_post is used to post a message to the server running \nthe Network News Transfer Protocol as defined in the rfc977.\nNntp_post"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

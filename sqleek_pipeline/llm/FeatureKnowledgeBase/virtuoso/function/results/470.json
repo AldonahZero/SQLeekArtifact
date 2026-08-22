@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_smtp_send/"
+  ],
+  "Title": [
+    "smtp_send ("
+  ],
+  "Feature": [
+    "smtp_send ("
+  ],
+  "Description": [
+    "Virtuoso can act as an SMTP client. This means that Virtuoso is able to send emails directly\nto a mail SMTP server. Virtuoso has a simple function to facilitate this. This can be called from\nstored procedures, VSP pages, triggers etc.\nThe sender and recipient email addresses must be enclosed with <..> and separated by commas\ni.e. string '<support@openlinksw.co.uk>,<sales@openlinksw.co.uk>'\nThe message Body contains headers such as Subject, From, To, Cc, Bcc and then continues with\nthe actual message text itself. New lines can be added using '\\r\\n'\nExample 24.377. Example:\n'Subject: subject message\\r\\nFrom: sender\\r\\nTo: recipient\\r\\nCc:\ncopy\\r\\nBcc: copy\\n\\n body of message'\nVirtuoso will pick up Subject and other headers from the body content. Note\nthat the RFC insists there should be a NULL line between body headers and the\nmessage body text.\nExample 24.378. Example:\nsmtp_send(\n\t\t'mail.example.com:25',\n\t\t'<sender@example.com>',\n\t\t'<receiver@example.com>',\n\t\tconcat(\n\t\t  'X-Mailer: Virtuoso Universal Server\\r\\n',\n\t\t\t'Date: ', soap_print_box (now (), '', 1), '\\r\\n',\n\t\t\t'Message-ID: <', regexp_replace(cast(now() as varchar), '[- :.]', '', 1, null), '#some.vsp@example.com>\\r\\n',\n\t\t\t'Subject: This is a test mail...\\r\\n',\n\t\t\t'From: <sender@example.com>\\r\\n',\n\t\t\t'To: <receiver@example.com>\\r\\n',\n\t\t\t'\\n',\n\t\t\t'Hi Receiver, this is a test message from Virtuoso')\n\t);\nA more involved example. It is the responsibility of the developer to ensure\nthat the message is correctly formed, complete with all necessary headers. This\nexample shows a complete use of the function.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

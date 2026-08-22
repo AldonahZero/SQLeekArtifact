@@ -1,0 +1,18 @@
+--- a/PostgreSQL/docker/fuzz_root/run_parallel.py
++++ b/PostgreSQL/docker/fuzz_root/run_parallel.py
+@@ -166,6 +166,7 @@
+     modi_env = os.environ.copy()
+     modi_env["AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES"] = "1"
+     modi_env["AFL_SKIP_CPUFREQ"] = "1"
++    modi_env["LD_LIBRARY_PATH"] = os.environ.get("SQLEEK_SQLRIGHT_CLIENT_LD_LIBRARY_PATH", "/usr/lib/x86_64-linux-gnu")
+ 
+     print("Running fuzzing command: " + " ".join(fuzzing_command))
+ 
+@@ -209,6 +210,7 @@
+ 
+     postgre_env = os.environ.copy()
+     postgre_env["__AFL_SHM_ID"] = cur_shm_str
++    postgre_env["LD_LIBRARY_PATH"] = os.environ.get("SQLEEK_POSTGRES_LD_LIBRARY_PATH", "/opt/dbms/lib")
+ 
+     print("Running postgres command: __AFL_SHM_ID=" + cur_shm_str + " " + " ".join(postgre_command), end="\n\n")
+     p = subprocess.Popen(

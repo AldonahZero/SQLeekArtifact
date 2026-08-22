@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vector_or_null_agg/"
+  ],
+  "Title": [
+    "vector DB.DBA.VECTOR_OR_NULL_AGG ("
+  ],
+  "Feature": [
+    "vector DB.DBA.VECTOR_OR_NULL_AGG ("
+  ],
+  "Description": [
+    "DB.DBA.VECTOR_OR_NULL_AGG returns a vector of passed values.\n    Similar to DB.DBA.VECTOR_AGG() but returns NULL instead of an empty vector\n    if no arguments were actually passed.\nDB.DBA.VECTOR_OR_NULL_AGG\nDB.DBA.VECTOR_AGG()\nThe order of items in the vector repeats the order of passing individual values to the aggregate."
+  ],
+  "Examples": [
+    "SELECT DB.DBA.VECTOR_OR_NULL_AGG (subquery.X)",
+    "SELECT DB.DBA.VECTOR_OR_NULL_AGG (subquery.Y)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

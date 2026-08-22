@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_mime_body/"
+  ],
+  "Title": [
+    "varchar mime_body ("
+  ],
+  "Feature": [
+    "varchar mime_body ("
+  ],
+  "Description": [
+    "The mime_body() procedure is used to compose a \nmultipart/mixed MIME body.  it takes only one parameter, mime_parts, an array of mime_part elements such as those \nproduced by the mime_part() function.\nmime_body()\nmime_part\nmime_part()"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

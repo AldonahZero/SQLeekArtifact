@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_mkpath/"
+  ],
+  "Title": [
+    "file_mkpath ("
+  ],
+  "Feature": [
+    "file_mkpath ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis is to create a directory chain i.e. 'a/b/c/d',\n\t  where one or more elements in the path may not exist."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vhost_define/"
+  ],
+  "Title": [
+    "Void DB.DBA. VHOST_DEFINE ("
+  ],
+  "Feature": [
+    "Void DB.DBA. VHOST_DEFINE ("
+  ],
+  "Description": [
+    "VHOST_DEFINE is used to define virtual hosts\n    and virtual paths on the Virtuoso HTTP server. Effectively this procedure inserts\n    a row in table DB.DBA.HTTP_PATH Virtuoso\n    supports both flavours of virtual hosting: IP-based and name-based.\nVHOST_DEFINE\nDB.DBA.HTTP_PATH"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

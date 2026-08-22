@@ -1,0 +1,16 @@
+% Paper RQ2 bug-yield table stored under server RQ3 ordering.
+% Each cell reports the five-run union of deduplicated bugs after developer-feedback filtering.
+\begin{tabular}{lccccc}
+\toprule
+Tool & PostgreSQL & MySQL & MariaDB & MonetDB & Union \\
+\midrule
+\sqlancer & 0 & 0 & 0 & N/A & 0 \\
+\squirrel & 0 & 3 & 1 & N/A & 4 \\
+\griffin & 0 & 4 & 3 & 4 & 11 \\
+\dynsql & 0 & 0 & 0 & 0 & 0 \\
+\aflgo & 0 & 0 & 0 & 0 & 0 \\
+\sqlaser & 0 & 1 & N/A & N/A & 1 \\
+\midrule
+\textbf{\toolname} & 3 & 10 & 19 & 13 & 45 \\
+\bottomrule
+\end{tabular}

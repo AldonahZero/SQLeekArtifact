@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_position/"
+  ],
+  "Title": [
+    "position ("
+  ],
+  "Feature": [
+    "position ("
+  ],
+  "Description": [
+    "position returns the one-based index for the first occurrence of element within an array or string , beginning from offset start_index and iterating with step. \n    If the second argument is a string , the first argument must be a string with a single character.\n    If the second argument is an array of any , then depending of type of it's elements \n    same type is expected as the first argument."
+  ],
+  "Examples": [
+    "callret",
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_map_table/"
+  ],
+  "Title": [
+    "http_map_table ("
+  ],
+  "Feature": [
+    "http_map_table ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function inserts an entry defining a virtual directory into the HTTP maps table."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

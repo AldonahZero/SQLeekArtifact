@@ -1,0 +1,78 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "audit_log_filter_remove_filter()",
+    "Description": [
+        "\naudit_log_filter_remove_filter(filter_name)\n",
+        "\n              Given a filter name, removes the filter from the current\n              set of filters. It is not an error for the filter not to\n              exist.\n            ",
+        "\n              If a removed filter is assigned to any user accounts,\n              those users stop being filtered (they are removed from the\n              audit_log_user table). Termination of\n              filtering includes any current sessions for those users:\n              They are detached from the filter and no longer logged.\n            ",
+        "\n              Arguments:\n",
+        "\n\nfilter_name: A string that\n                  specifies the filter name.\n\n",
+        "\n              Return value:\n            ",
+        "\n              A string that indicates whether the operation succeeded.\n              OK indicates success. ERROR:\n              message indicates\n              failure.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SELECT audit_log_filter_remove_filter('SomeFilter');\n+----------------------------------------------+\n| audit_log_filter_remove_filter('SomeFilter') |\n+----------------------------------------------+\n| OK                                           |\n+----------------------------------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#function_audit-log-filter-remove-filter",
+    "Feature": [
+        "audit_log_filter_remove_filter(filter_name)"
+    ],
+    "Examples": [
+        "mysql> SELECT audit_log_filter_remove_filter('SomeFilter');\n+----------------------------------------------+\n| audit_log_filter_remove_filter('SomeFilter') |\n+----------------------------------------------+\n| OK                                           |\n+----------------------------------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT audit_log_filter_remove_filter('SomeFilter');",
+        "SELECT audit_log_filter_remove_filter('NewFilter');",
+        "SELECT audit_log_filter_remove_filter('FilterName');",
+        "SELECT audit_log_filter_remove_filter('ExistingFilter');",
+        "SELECT audit_log_filter_remove_filter('NonExistentFilter');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 516,
+            "Prompt Tokens": 493,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 8.774999999999999e-05
+        },
+        {
+            "Total Tokens": 677,
+            "Prompt Tokens": 654,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.0001119
+        },
+        {
+            "Total Tokens": 838,
+            "Prompt Tokens": 815,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00013605
+        },
+        {
+            "Total Tokens": 999,
+            "Prompt Tokens": 976,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.0001602
+        },
+        {
+            "Total Tokens": 1162,
+            "Prompt Tokens": 1137,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 0.00018554999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_remove_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_remove_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_remove_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_remove_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_remove_filter does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

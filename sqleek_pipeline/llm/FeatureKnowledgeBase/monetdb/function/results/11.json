@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/comparison-functions"
+    ],
+    "Title": [
+        "coalesce(arg1, arg2, ...)"
+    ],
+    "Feature": [
+        "coalesce(arg1, arg2, ...)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as arg1 or arg2",
+        "returns the first non-NULL value in the list, or NULL if all args are NULL. At least two parameters must be passed."
+    ],
+    "Examples": [
+        "coalesce(null, 'ac', 'dc')"
+    ],
+    "Category": [
+        "Comparison Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT coalesce(column1, column2) FROM my_table;",
+        "SELECT coalesce(NULL, 'value2');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 331,
+            "Prompt Tokens": 306,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 6.0899999999999996e-05
+        },
+        {
+            "Total Tokens": 490,
+            "Prompt Tokens": 468,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 8.34e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42S02!SELECT: no such table 'my_table'\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT coalesce(NULL, 'value2');"
+    ]
+}

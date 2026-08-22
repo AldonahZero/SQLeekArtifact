@@ -1,0 +1,6 @@
+run_id,tool,dbms,repeat_id,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate,global_branches_total,global_branches_hit,global_branch_coverage,time_to_first_risk_target_sec,time_to_50pct_risk_targets_sec
+mariadb_sqlaser_r1,SQLaser,mariadb,1,4220,1826,0.4327014218009479,3041,1731,0.5838271174625305,284668,84943,0.29839321595683393,3600,
+mariadb_sqlaser_r2,SQLaser,mariadb,2,4220,1816,0.43033175355450237,3041,1673,0.5653537818055071,284668,84216,0.2958393637500527,3600,
+mariadb_sqlaser_r3,SQLaser,mariadb,3,4220,1711,0.40545023696682464,3041,1649,0.5569884977344022,284668,81382,0.28588390686694676,3600,
+mariadb_sqlaser_r4,SQLaser,mariadb,4,4220,1600,0.3791469194312796,3041,1565,0.5284071104914604,284668,74362,0.26122360082622564,3600,
+mariadb_sqlaser_r5,SQLaser,mariadb,5,4220,1555,0.3684834123222749,3041,1505,0.5092366678285116,284668,74144,0.26045779645060213,3600,

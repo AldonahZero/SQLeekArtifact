@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "rpad(string, count, character)"
+    ],
+    "Feature": [
+        "rpad(string, count, character)"
+    ],
+    "Description": [
+        "Pads the string with the character from the right until it has count characters."
+    ],
+    "Examples": [
+        "rpad('hello', 10, '<')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT rpad('hello', 10, '*');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 299,
+            "Prompt Tokens": 275,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.565e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT rpad('hello', 10, '*');"
+    ]
+}

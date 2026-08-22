@@ -1,0 +1,70 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "sys.str_to_timestamp(s, format_str)"
+    ],
+    "Feature": [
+        "sys.str_to_timestamp(s, format_str)"
+    ],
+    "Description": [
+        "Return type: ",
+        "timestamptz",
+        "parse string s using format_str and construct a timestamp with time zone value. See format specifiers"
+    ],
+    "Examples": [
+        "sys.str_to_timestamp('4/30/2021 09:30:49','%m/%d/%Y %H:%M:%S')"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.str_to_timestamp('2023-10-01 12:00:00', 'YYYY-MM-DD HH24:MI:SS');",
+        "SELECT sys.str_to_timestamp('2023-10-01 12:00:00', 'YYYY-MM-DD HH:MI:SS');",
+        "SELECT sys.str_to_timestamp('2023-10-01 12:00:00', 'YYYY-MM-DD HH24:MI:SS');",
+        "SELECT sys.str_to_timestamp('2023-10-01 12:00:00', 'YYYY-MM-DD HH:MI:SS');",
+        "SELECT sys.str_to_timestamp('2023-10-01 12:00:00', 'YYYY-MM-DD HH:MM:SS');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 339,
+            "Prompt Tokens": 296,
+            "Completion Tokens": 43,
+            "Total Cost (USD)": 7.02e-05
+        },
+        {
+            "Total Tokens": 533,
+            "Prompt Tokens": 491,
+            "Completion Tokens": 42,
+            "Total Cost (USD)": 9.884999999999999e-05
+        },
+        {
+            "Total Tokens": 727,
+            "Prompt Tokens": 684,
+            "Completion Tokens": 43,
+            "Total Cost (USD)": 0.0001284
+        },
+        {
+            "Total Tokens": 921,
+            "Prompt Tokens": 879,
+            "Completion Tokens": 42,
+            "Total Cost (USD)": 0.00015704999999999997
+        },
+        {
+            "Total Tokens": 1114,
+            "Prompt Tokens": 1072,
+            "Completion Tokens": 42,
+            "Total Cost (USD)": 0.000186
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) format 'YYYY-MM-DD HH24:MI:SS', doesn't match timestamp '2023-10-01 12:00:00'\n\n",
+        "(pymonetdb.exceptions.OperationalError) format 'YYYY-MM-DD HH:MI:SS', doesn't match timestamp '2023-10-01 12:00:00'\n\n",
+        "(pymonetdb.exceptions.OperationalError) format 'YYYY-MM-DD HH24:MI:SS', doesn't match timestamp '2023-10-01 12:00:00'\n\n",
+        "(pymonetdb.exceptions.OperationalError) format 'YYYY-MM-DD HH:MI:SS', doesn't match timestamp '2023-10-01 12:00:00'\n\n",
+        "(pymonetdb.exceptions.OperationalError) format 'YYYY-MM-DD HH:MM:SS', doesn't match timestamp '2023-10-01 12:00:00'\n\n"
+    ],
+    "EffectiveSQLs": []
+}

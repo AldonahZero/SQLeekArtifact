@@ -1,0 +1,6 @@
+{
+  "db_after": "/root/SQLeek/sqleek_pipeline/stage1_static/output/codeql_db/postgres",
+  "db_before": "/root/SQLeek/sqleek_pipeline/stage1_static/output/codeql_db/postgres",
+  "dual_available": false,
+  "note": "fix_commit_not_found"
+}

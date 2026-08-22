@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "left(s, int n)"
+    ],
+    "Feature": [
+        "left(s, int n)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as input arg 1",
+        "return first n characters in the string"
+    ],
+    "Examples": [
+        "left('MonetDB', 3)"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT left('Hello, World!', 5);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 296,
+            "Prompt Tokens": 273,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.4749999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT left('Hello, World!', 5);"
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "firewall_group_enlist()",
+    "Description": [
+        "\nfirewall_group_enlist(group,\n              user)\n",
+        "\n              This function adds an account to a group profile. It\n              requires the FIREWALL_ADMIN\n              privilege.\n            ",
+        "\n              It is not necessary to register the account itself with\n              the firewall before adding the account to the group.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy SELECT firewall_group_enlist('g', 'fwuser@localhost');",
+        "\n              This function was added in MySQL 8.0.23.\n            "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/firewall-reference.html#function_firewall-group-enlist",
+    "Feature": [
+        "firewall_group_enlist(group,\n              user)"
+    ],
+    "Examples": [
+        "SELECT firewall_group_enlist('g', 'fwuser@localhost');"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT firewall_group_enlist('g', 'fwuser@localhost');",
+        "SELECT firewall_group_enlist('example_group', 'example_user');",
+        "SELECT firewall_group_enlist('test_group', 'test_user');",
+        "SELECT firewall_group_enlist('group_name', 'user_name');",
+        "SELECT firewall_group_enlist('default_group', 'default_user');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 406,
+            "Prompt Tokens": 379,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 7.304999999999999e-05
+        },
+        {
+            "Total Tokens": 570,
+            "Prompt Tokens": 544,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 9.72e-05
+        },
+        {
+            "Total Tokens": 734,
+            "Prompt Tokens": 708,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00012179999999999998
+        },
+        {
+            "Total Tokens": 898,
+            "Prompt Tokens": 872,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00014639999999999998
+        },
+        {
+            "Total Tokens": 1062,
+            "Prompt Tokens": 1036,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00017099999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.firewall_group_enlist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.firewall_group_enlist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.firewall_group_enlist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.firewall_group_enlist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.firewall_group_enlist does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

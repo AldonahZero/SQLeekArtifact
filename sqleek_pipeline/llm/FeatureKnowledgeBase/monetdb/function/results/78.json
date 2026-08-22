@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "charindex(substr, s)"
+    ],
+    "Feature": [
+        "charindex(substr, s)"
+    ],
+    "Description": [
+        "Return type: ",
+        "int",
+        "start position of substr in string s or 0 when not found"
+    ],
+    "Examples": [
+        "charindex('gh', 'highigh')"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT charindex('example', 'This is an example string')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 300,
+            "Prompt Tokens": 274,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.6699999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT charindex('example', 'This is an example string')"
+    ]
+}

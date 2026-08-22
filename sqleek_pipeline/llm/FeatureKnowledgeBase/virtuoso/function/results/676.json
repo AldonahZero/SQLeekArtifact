@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_3des_read/"
+  ],
+  "Title": [
+    "xenc_key_3DES_read ("
+  ],
+  "Feature": [
+    "xenc_key_3DES_read ("
+  ],
+  "Description": [
+    "This function is used to import a triple-des serialized key\n\tinto user's repository and register it with a name supplied.\nNote that key will not be persisted. It is loaded in the\n\tmemory only."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

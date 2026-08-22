@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_create_image/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_CREATE_IMAGE ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_CREATE_IMAGE ("
+  ],
+  "Description": [
+    "Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

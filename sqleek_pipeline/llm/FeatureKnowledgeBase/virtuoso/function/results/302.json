@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_msec_time/"
+  ],
+  "Title": [
+    "msec_time ("
+  ],
+  "Feature": [
+    "msec_time ("
+  ],
+  "Description": [
+    "msec_time returns the number of milliseconds since system epoch. It is useful for benchmarking purposes, timing operations, etc.\nmsec_time"
+  ],
+  "Examples": [
+    "create procedure",
+    "create procedure"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

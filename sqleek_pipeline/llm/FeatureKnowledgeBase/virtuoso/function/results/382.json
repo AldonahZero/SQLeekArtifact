@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_registry_get/"
+  ],
+  "Title": [
+    "varchar registry_get ("
+  ],
+  "Feature": [
+    "varchar registry_get ("
+  ],
+  "Description": [
+    "registry_get is used to retrieve values\n    stored within database registry.\nregistry_get"
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

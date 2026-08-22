@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regexp_parse/"
+  ],
+  "Title": [
+    "index_vector regexp_parse ("
+  ],
+  "Feature": [
+    "index_vector regexp_parse ("
+  ],
+  "Description": [
+    "It applies regular expression to target_str with offset. This function returns a\nvector containing 2 elements for first match of the pattern and if there a sub expressions : \n2 elements for each of subexpression match. \nThe first (even numbered) element of each pair is the start index and the second \n(odd numbered) is the end index of the match.\nThe regexp_parse function is more efficient than regexp_match and regexp_substr,\nbecause it doesn't allocate strings.\nSQL> select regexp_parse('(2[34]).*(2[35])','22232225222323', 0);\n\t  callret\n\t  VARCHAR\n\t  _______________________________________________________________________________\n\n\t  lvector(2,14,2,4,12,14)\n\n\t  1 Rows. -- 10 msec.\nWhere: 2-14 is a range matched by whole expression,\n\t  2-4 is a range where '(2[34])' is matched , and 12-14 \n\t  is a range where '(2[35])' subexpression matched.\nExample 24.252. Examples\nCREATE PROCEDURE all_tokens2 (IN pattern VARCHAR,IN str VARCHAR, IN offs INTEGER)\n{\n\n\tDECLARE vec ANY;\n\tDECLARE i INTEGER;\n\tDECLARE out_str VARCHAR;\n\n\tvec:=regexp_parse(pattern,str,offs);\n\tIF ((vec IS NOT NULL) AND (length(vec)>1))\n\t{\n\t\tout_str:='';\n\t\ti:=0;\n\t\tWHILE ( (length(vec)/2) > i )\n\t\t{\n\t\t\tout_str:=concat(out_str,'/',\n\t\t\t\tsubseq(str,aref(vec,(i)*2),\n\t\t\t\taref(vec,(i)*2+1)));\n\t\t\ti:=i+1;\n\t\t};\n\t\tRETURN concat(out_str,test_parsing(pattern,str,aref(vec,1)+1));\n\t}\n\treturn NULL;\n};\nThe regular expressions supported here follow version 7.9 of the Perl\n        Compatible Regular Expression (PCRE) syntax.\nWikipedia\nWikipedia\nPCRE.org\nPCRE.org"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

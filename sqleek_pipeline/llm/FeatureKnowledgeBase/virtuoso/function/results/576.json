@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sys_stat/"
+  ],
+  "Title": [
+    "any sys_stat ("
+  ],
+  "Feature": [
+    "any sys_stat ("
+  ],
+  "Description": [
+    "This function returns the statistic related to the requested statistic name\ngive as a parameter to the function."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

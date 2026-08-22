@@ -1,0 +1,23 @@
+[mysql]
+source = /root/SQLeek/sources/mysql
+version = 9.6.0
+branch = trunk
+commit = 447eb26e094b444a88c532028647e48228c3c04f
+
+[mariadb]
+source = /root/SQLeek/sources/mariadb
+version = 13.1.0-alpha
+branch = main
+commit = a06be0288f63f520aec95982cc6f872d26c4f23c
+
+[postgresql]
+source = /root/SQLeek/sources/postgres
+version = 18.3
+branch = detached
+commit = 62d6c7d3df6287f1bd83199c1a746e50d31571a0
+
+[monetdb]
+source = /root/SQLeek/sources/monetdb
+version = 56.0.0-unreleased
+branch = master
+commit = 9b26fc8e25a3948fc94486caae3e30103330a5a7

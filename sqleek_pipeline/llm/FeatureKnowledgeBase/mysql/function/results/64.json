@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "DATE_SUB()",
+    "Description": [
+        "\nDATE_SUB(date,INTERVAL\n          expr\nunit)\n",
+        "\n          See the description for\n          DATE_ADD().\n        "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-sub",
+    "Feature": [
+        "DATE_SUB(date,INTERVAL\n          expr\nunit)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Date and Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT DATE_SUB(NOW(), INTERVAL 1 DAY);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 322,
+            "Prompt Tokens": 297,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.954999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT DATE_SUB(NOW(), INTERVAL 1 DAY);"
+    ]
+}

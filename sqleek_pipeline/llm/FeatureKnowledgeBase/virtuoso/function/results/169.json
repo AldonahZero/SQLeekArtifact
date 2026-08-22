@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_to_string/"
+  ],
+  "Title": [
+    "varchar file_to_string ("
+  ],
+  "Feature": [
+    "varchar file_to_string ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nReturns the contents of a file as a varchar value. The file's\n    length is limited to 16 MB. The path is relative to the working directory\n    of the database server."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

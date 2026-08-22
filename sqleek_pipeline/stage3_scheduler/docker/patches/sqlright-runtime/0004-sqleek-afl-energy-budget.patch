@@ -1,0 +1,164 @@
+--- a/MySQL/docker/src/AFL/afl-fuzz.cpp
++++ b/MySQL/docker/src/AFL/afl-fuzz.cpp
+@@ -41,6 +41,9 @@
+ #include "debug.h"
+ #include "alloc-inl.h"
+ #include "hash.h"
++#include <cstddef>
++#include <string>
++#include <unordered_map>
+ #include "../include/ast.h"
+ #include "../include/mutate.h"
+ #include "sql/sql_ir_define.h"
+@@ -173,6 +176,11 @@
+ 
+ u64 max_mutation_count = 100;
+ 
++static unordered_map<string, u64> sqleek_energy_map;
++static time_t sqleek_energy_mtime = 0;
++static bool sqleek_energy_loaded = false;
++
++
+ u64 timeout_seed_num = 0;
+ 
+ u64 mysql_execute_ok = 0;
+@@ -2276,6 +2284,117 @@
+   queued_at_start = queued_paths;
+ }
+ 
++
++/* SQLeek Stage 3 energy integration. The scheduler writes energy.tsv with
++   seed_name, score, assigned_energy. SQLRight AFL keeps ownership of parsing,
++   mutation, execution, and coverage; this layer only changes how much mutation
++   budget a queued seed receives. */
++static string sqleek_basename(const string &path) {
++  size_t pos = path.find_last_of("/\\");
++  if (pos == string::npos) return path;
++  return path.substr(pos + 1);
++}
++
++static string sqleek_orig_name_from_queue(const string &name) {
++  size_t pos = name.find("orig:");
++  if (pos == string::npos) return "";
++  return name.substr(pos + 5);
++}
++
++static u64 sqleek_env_u64(const char *name, u64 fallback) {
++  const char *value = getenv(name);
++  if (!value || !value[0]) return fallback;
++  char *endptr = NULL;
++  unsigned long long parsed = strtoull(value, &endptr, 10);
++  if (endptr == value) return fallback;
++  return (u64)parsed;
++}
++
++static void sqleek_reload_energy_if_needed(void) {
++  const char *path = getenv("SQLEEK_ENERGY_FILE");
++  if (!path || !path[0]) return;
++
++  struct stat st;
++  if (stat(path, &st)) return;
++  if (sqleek_energy_loaded && st.st_mtime == sqleek_energy_mtime) return;
++
++  ifstream in(path);
++  if (!in.good()) return;
++
++  unordered_map<string, u64> next_map;
++  string line;
++  while (getline(in, line)) {
++    if (line.empty() || line[0] == '#') continue;
++    string seed_name;
++    string score_text;
++    string energy_text;
++    stringstream ss(line);
++    if (!(ss >> seed_name >> score_text >> energy_text)) continue;
++    char *endptr = NULL;
++    unsigned long long parsed = strtoull(energy_text.c_str(), &endptr, 10);
++    if (endptr == energy_text.c_str()) continue;
++    u64 energy = (u64)parsed;
++    if (energy < 1) energy = 1;
++    next_map[seed_name] = energy;
++    next_map[sqleek_basename(seed_name)] = energy;
++  }
++
++  sqleek_energy_map.swap(next_map);
++  sqleek_energy_mtime = st.st_mtime;
++  sqleek_energy_loaded = true;
++}
++
++static u64 sqleek_assigned_energy_for_seed(struct queue_entry *q) {
++  if (!q || !q->fname) return 0;
++  sqleek_reload_energy_if_needed();
++  if (sqleek_energy_map.empty()) return 0;
++
++  string base = sqleek_basename((char *)q->fname);
++  auto it = sqleek_energy_map.find(base);
++  if (it != sqleek_energy_map.end()) return it->second;
++
++  string orig = sqleek_orig_name_from_queue(base);
++  if (!orig.empty()) {
++    it = sqleek_energy_map.find(orig);
++    if (it != sqleek_energy_map.end()) return it->second;
++    string orig_base = sqleek_basename(orig);
++    it = sqleek_energy_map.find(orig_base);
++    if (it != sqleek_energy_map.end()) return it->second;
++  }
++
++  return 0;
++}
++
++static u64 sqleek_mutation_budget_for_seed(struct queue_entry *q, u64 *assigned_energy_out) {
++  u64 assigned = sqleek_assigned_energy_for_seed(q);
++  if (assigned_energy_out) *assigned_energy_out = assigned;
++  if (!assigned) return max_mutation_count;
++
++  u64 unit = sqleek_env_u64("SQLEEK_ENERGY_UNIT_MUTATIONS", 25);
++  u64 cap = sqleek_env_u64("SQLEEK_MUTATION_BUDGET_MAX", 1600);
++  if (!unit) unit = 1;
++  if (!cap) cap = max_mutation_count;
++
++  u64 budget = assigned * unit;
++  if (budget < 1) budget = 1;
++  if (budget > cap) budget = cap;
++  return budget;
++}
++
++static void sqleek_trace_energy(u8 *fname, u64 assigned_energy, u64 mutation_budget) {
++  const char *path = getenv("SQLEEK_ENERGY_TRACE");
++  if (!path || !path[0]) return;
++
++  ofstream out(path, ios::app);
++  if (!out.good()) return;
++  if (out.tellp() == 0) {
++    out << "unix_time\tseed_name\tassigned_energy\tmutation_budget\tdefault_mutation_count\n";
++  }
++  string base = fname ? sqleek_basename((char *)fname) : "";
++  out << time(NULL) << "\t" << base << "\t" << assigned_energy << "\t"
++      << mutation_budget << "\t" << max_mutation_count << "\n";
++}
++
+ /* Helper function for load_extras. */
+ 
+ static int compare_extras_len(const void *p1, const void *p2)
+@@ -6500,6 +6619,9 @@
+ 
+   string input;
+ 
++  u64 sqleek_assigned_energy = 0;
++  u64 sqleek_mutation_budget = max_mutation_count;
++
+   // DEBUG
+   string ori_input_str;
+ 
+@@ -6705,7 +6827,10 @@
+ 
+   // cerr << "After get_oracle_select_stmts. \n\n\n";
+ 
+-  for (int cur_mutation_count = 0; cur_mutation_count < max_mutation_count; cur_mutation_count++) {
++  sqleek_mutation_budget = sqleek_mutation_budget_for_seed(queue_cur, &sqleek_assigned_energy);
++  sqleek_trace_energy(queue_cur->fname, sqleek_assigned_energy, sqleek_mutation_budget);
++
++  for (u64 cur_mutation_count = 0; cur_mutation_count < sqleek_mutation_budget; cur_mutation_count++) {
+     if (stop_soon) {
+       goto abandon_entry;
+     }

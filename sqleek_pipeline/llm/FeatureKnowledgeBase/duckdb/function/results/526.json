@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "greatest(timestamptz, timestamptz)"
+    ],
+    "Feature": [
+        "greatest(timestamptz, timestamptz)"
+    ],
+    "Description": [
+        "The later of two timestamps."
+    ],
+    "Examples": [
+        "greatest(TIMESTAMPTZ '1992-09-20 20:38:48', TIMESTAMPTZ '1992-03-22 01:02:03.1234')"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT greatest('2023-10-01 12:00:00+00', '2023-10-02 12:00:00+00');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 333,
+            "Prompt Tokens": 286,
+            "Completion Tokens": 47,
+            "Total Cost (USD)": 7.11e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT greatest('2023-10-01 12:00:00+00', '2023-10-02 12:00:00+00');"
+    ]
+}

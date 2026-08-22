@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_load_file/"
+  ],
+  "Title": [
+    "DB.DBA. VAD_LOAD_FILE ("
+  ],
+  "Feature": [
+    "DB.DBA. VAD_LOAD_FILE ("
+  ],
+  "Description": [
+    "This splits a plain sql file into single statements and executes\n  them one by one. The root directory for this procedure is the 'code'\n  root of VAD's repository."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

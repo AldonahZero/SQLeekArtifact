@@ -1,0 +1,349 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index db5eff9..838478f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -14,10 +14,12 @@ option(ALL "Build all types of database" ON)
+ option(SQLITE "Build sqlite" OFF)
+ option(MYSQL "Build mysql" OFF)
+ option(POSTGRESQL "Build postgresql" OFF)
++option(MONETDB "Build MonetDB with the PostgreSQL-compatible mutator" OFF)
+ 
+ if(SQLITE
+    OR MYSQL
+-   OR POSTGRESQL)
++   OR POSTGRESQL
++   OR MONETDB)
+   set(ALL OFF)
+ endif()
+ 
+@@ -59,6 +61,16 @@ if(POSTGRESQL)
+   list(APPEND CLIENT_DEFINITION __SQUIRREL_POSTGRESQL__)
+ endif()
+ 
++if(MONETDB)
++  list(APPEND CLIENT_DEFINITION __SQUIRREL_MONETDB__)
++  add_library(monetdb_client OBJECT
++              srcs/internal/client/client_monetdb.cc)
++  target_include_directories(monetdb_client PUBLIC srcs/internal/client)
++  target_link_libraries(monetdb_client PUBLIC yaml-cpp)
++  target_compile_options(monetdb_client PRIVATE -fPIC)
++  list(APPEND LINK_CLIENT monetdb_client)
++endif()
++
+ include(FetchContent)
+ find_package(yaml-cpp REQUIRED)
+ # FetchContent_Declare( ${YAML_CPP_LIBRARIES} URL
+@@ -102,7 +114,31 @@ foreach(dbms IN LISTS DBMS)
+                              PRIVATE __SQUIRREL_${UPPER_CASE_DBMS}__)
+ endforeach()
+ 
+-if(MYSQL OR POSTGRESQL)
++if(MONETDB)
++  # Reuse Squirrel's PostgreSQL grammar and structural mutator for MonetDB.
++  # MonetDB is exercised through the dedicated mclient-based DB client above.
++  add_library(monetdb_impl OBJECT
++              srcs/internal/postgresql/postgresql.cc
++              srcs/internal/postgresql/postgresql.h
++              srcs/internal/postgresql/srcs/ast.cpp
++              srcs/internal/postgresql/srcs/mutator.cpp
++              srcs/internal/postgresql/srcs/utils.cpp
++              srcs/internal/postgresql/parser/bison_parser.cpp
++              srcs/internal/postgresql/parser/flex_lexer.cpp)
++  target_include_directories(monetdb_impl PRIVATE
++                             srcs/internal/postgresql/include srcs)
++  target_compile_options(monetdb_impl PRIVATE -fPIC)
++  target_link_libraries(monetdb_impl ${YAML_CPP_LIBRARIES} absl::strings
++                        absl::str_format)
++
++  add_library(monetdb_mutator SHARED srcs/custom_mutator.cc srcs/db_factory.cc)
++  target_link_libraries(monetdb_mutator monetdb_impl config_validator)
++  target_include_directories(monetdb_mutator PRIVATE
++                             srcs/internal/postgresql srcs)
++  target_compile_definitions(monetdb_mutator PRIVATE __SQUIRREL_MONETDB__)
++endif()
++
++if(MYSQL OR POSTGRESQL OR MONETDB)
+   add_executable(db_driver srcs/db_driver.cc)
+   target_link_libraries(db_driver ${YAML_CPP_LIBRARIES} all_client
+                         absl::strings absl::str_format)
+diff --git a/data/config_monetdb.yml b/data/config_monetdb.yml
+new file mode 100644
+index 0000000..12ede5d
+--- /dev/null
++++ b/data/config_monetdb.yml
+@@ -0,0 +1,17 @@
++---
++required: ["init_lib", "data_lib", "db", "host", "port", "db_name", "mclient", "startup_cmd"]
++should_exist: ["init_lib", "data_lib", "mclient"]
++init_lib: /home/Squirrel/data/fuzz_root/pqsql_init_lib
++data_lib: /home/Squirrel/data/fuzz_root/global_data_lib_pqsql
++db: monetdb
++host: localhost
++port: "50000"
++user_name: monetdb
++passwd: monetdb
++db_name: demo
++mclient: /opt/monetdb/bin/mclient
++auth_file: /home/squirrel/.monetdb
++schema: squirrel
++timeout_seconds: 60
++# db_driver starts this command once and keeps the server alive for all cases.
++startup_cmd: "/opt/monetdb/bin/mserver5 --in-memory --set mapi_port=50000 --without-geom > /tmp/squirrel-monetdb.log 2>&1 &"
+diff --git a/scripts/utils/run.py b/scripts/utils/run.py
+index 755a3bc..6730a15 100644
+--- a/scripts/utils/run.py
++++ b/scripts/utils/run.py
+@@ -6,7 +6,7 @@ import fire
+ import uuid
+ from pathlib import Path
+ 
+-DBMS = ["sqlite", "mysql", "mariadb", "postgresql"]
++DBMS = ["sqlite", "mysql", "mariadb", "postgresql", "monetdb"]
+ ROOTPATH = Path(os.path.dirname(os.path.realpath(__file__))).parent.parent
+ 
+ 
+diff --git a/srcs/db_factory.cc b/srcs/db_factory.cc
+index 8d62717..68671ab 100644
+--- a/srcs/db_factory.cc
++++ b/srcs/db_factory.cc
+@@ -12,6 +12,10 @@
+ #include "postgresql.h"
+ #endif
+ 
++#ifdef __SQUIRREL_MONETDB__
++#include "postgresql.h"
++#endif
++
+ //#include "db.h"
+ 
+ DataBase* create_database(YAML::Node config) {
+@@ -28,6 +32,12 @@ DataBase* create_database(YAML::Node config) {
+   } else if (db_name == "postgresql") {
+ #ifdef __SQUIRREL_POSTGRESQL__
+     result = create_postgresql();
++#endif
++  } else if (db_name == "monetdb") {
++#ifdef __SQUIRREL_MONETDB__
++    // MonetDB's SQL surface is close enough to PostgreSQL for Squirrel's
++    // structural mutator; execution is handled by the MonetDB client.
++    result = create_postgresql();
+ #endif
+   } else {
+     assert(false && "Unreachable");
+diff --git a/srcs/internal/client/client.cc b/srcs/internal/client/client.cc
+index ece3d88..ca80514 100644
+--- a/srcs/internal/client/client.cc
++++ b/srcs/internal/client/client.cc
+@@ -11,6 +11,10 @@
+ #include "client_postgresql.h"
+ #endif
+ 
++#ifdef __SQUIRREL_MONETDB__
++#include "client_monetdb.h"
++#endif
++
+ namespace client {
+ DBClient *create_client(const std::string &db_name, const YAML::Node &config) {
+   DBClient *result = nullptr;
+@@ -21,6 +25,10 @@ DBClient *create_client(const std::string &db_name, const YAML::Node &config) {
+   } else if (db_name == "postgresql") {
+ #ifdef __SQUIRREL_POSTGRESQL__
+     result = new PostgreSQLClient;
++#endif
++  } else if (db_name == "monetdb") {
++#ifdef __SQUIRREL_MONETDB__
++    result = new MonetDBClient;
+ #endif
+   } else {
+     assert(false && "It is not supported!");
+diff --git a/srcs/internal/client/client_monetdb.cc b/srcs/internal/client/client_monetdb.cc
+new file mode 100644
+index 0000000..6851291
+--- /dev/null
++++ b/srcs/internal/client/client_monetdb.cc
+@@ -0,0 +1,134 @@
++#include "client_monetdb.h"
++
++#include <fcntl.h>
++#include <signal.h>
++#include <sys/wait.h>
++#include <unistd.h>
++
++#include <chrono>
++#include <cstdlib>
++#include <string>
++
++namespace {
++
++int wait_for_process(pid_t pid, int timeout_seconds) {
++  const auto deadline = std::chrono::steady_clock::now()
++                        + std::chrono::seconds(timeout_seconds);
++  int status = 0;
++  while (true) {
++    const pid_t result = waitpid(pid, &status, WNOHANG);
++    if (result == pid) {
++      if (WIFEXITED(status)) return WEXITSTATUS(status);
++      if (WIFSIGNALED(status)) return 128 + WTERMSIG(status);
++      return 1;
++    }
++    if (result < 0) return 1;
++    if (std::chrono::steady_clock::now() >= deadline) {
++      kill(pid, SIGKILL);
++      waitpid(pid, &status, 0);
++      return -2;
++    }
++    usleep(10000);
++  }
++}
++
++}  // namespace
++
++namespace client {
++
++void MonetDBClient::initialize(YAML::Node config) {
++  mclient_path_ = config["mclient"]
++                      ? config["mclient"].as<std::string>()
++                      : "/opt/monetdb/bin/mclient";
++  port_ = config["port"] ? config["port"].as<std::string>() : "50000";
++  schema_ = config["schema"] ? config["schema"].as<std::string>() : "squirrel";
++  auth_file_ = config["auth_file"]
++                   ? config["auth_file"].as<std::string>()
++                   : "/tmp/squirrel-monetdb.auth";
++  if (config["timeout_seconds"]) {
++    timeout_seconds_ = config["timeout_seconds"].as<int>();
++  }
++
++  const int auth_fd = open(auth_file_.c_str(), O_WRONLY | O_CREAT | O_TRUNC,
++                           0600);
++  if (auth_fd >= 0) {
++    const char auth[] = "user=monetdb\npassword=monetdb\n";
++    write(auth_fd, auth, sizeof(auth) - 1);
++    close(auth_fd);
++  }
++  setenv("DOTMONETDBFILE", auth_file_.c_str(), 1);
++}
++
++int MonetDBClient::run_mclient(const std::string *input_file,
++                               const std::string *query) const {
++  const pid_t pid = fork();
++  if (pid < 0) return 1;
++
++  if (pid == 0) {
++    if (input_file != nullptr) {
++      const int input = open(input_file->c_str(), O_RDONLY);
++      if (input < 0 || dup2(input, STDIN_FILENO) < 0) _exit(127);
++      close(input);
++    }
++    const int output = open("/dev/null", O_WRONLY);
++    if (output >= 0) {
++      dup2(output, STDOUT_FILENO);
++      dup2(output, STDERR_FILENO);
++      close(output);
++    }
++
++    const char *client = mclient_path_.c_str();
++    const char *port = port_.c_str();
++    if (query != nullptr) {
++      execl(client, client, "-p", port, "-s", query->c_str(), nullptr);
++    } else {
++      execl(client, client, "-p", port, "-f", "sql", nullptr);
++    }
++    _exit(127);
++  }
++
++  return wait_for_process(pid, timeout_seconds_);
++}
++
++void MonetDBClient::prepare_env() {
++  const std::string drop = "DROP SCHEMA \"" + schema_ + "\" CASCADE;";
++  const std::string create = "CREATE SCHEMA \"" + schema_ + "\";";
++  const std::string set = "SET SCHEMA \"" + schema_ + "\";";
++  // The DROP is intentionally allowed to fail when this is the first input.
++  run_mclient(nullptr, &drop);
++  run_mclient(nullptr, &create);
++  run_mclient(nullptr, &set);
++}
++
++ExecutionStatus MonetDBClient::execute(const char *query, size_t size) {
++  char path[] = "/tmp/squirrel-monetdb-query-XXXXXX";
++  const int fd = mkstemp(path);
++  if (fd < 0) return kExecuteError;
++
++  size_t written = 0;
++  while (written < size) {
++    const ssize_t count = write(fd, query + written, size - written);
++    if (count <= 0) {
++      close(fd);
++      unlink(path);
++      return kExecuteError;
++    }
++    written += static_cast<size_t>(count);
++  }
++  close(fd);
++
++  const std::string input_file(path);
++  const int result = run_mclient(&input_file, nullptr);
++  unlink(path);
++  if (result == -2) return kTimeout;
++  if (result == 0) return kNormal;
++  if (!check_alive()) return kServerCrash;
++  return kExecuteError;
++}
++
++bool MonetDBClient::check_alive() {
++  const std::string probe = "SELECT 1;";
++  return run_mclient(nullptr, &probe) == 0;
++}
++
++}  // namespace client
+diff --git a/srcs/internal/client/client_monetdb.h b/srcs/internal/client/client_monetdb.h
+new file mode 100644
+index 0000000..1f173ec
+--- /dev/null
++++ b/srcs/internal/client/client_monetdb.h
+@@ -0,0 +1,32 @@
++#ifndef __CLIENT_MONETDB_H__
++#define __CLIENT_MONETDB_H__
++
++#include <cstddef>
++#include <string>
++
++#include "client.h"
++#include "yaml-cpp/yaml.h"
++
++namespace client {
++
++class MonetDBClient : public DBClient {
++ public:
++  void initialize(YAML::Node config) override;
++  void prepare_env() override;
++  ExecutionStatus execute(const char *query, size_t size) override;
++  bool check_alive() override;
++
++ private:
++  int run_mclient(const std::string *input_file,
++                  const std::string *query) const;
++
++  std::string mclient_path_;
++  std::string port_;
++  std::string schema_;
++  std::string auth_file_;
++  int timeout_seconds_ = 60;
++};
++
++}  // namespace client
++
++#endif
+diff --git a/srcs/utils/config_validate.cc b/srcs/utils/config_validate.cc
+index 0fcbfc0..efcaa5e 100644
+--- a/srcs/utils/config_validate.cc
++++ b/srcs/utils/config_validate.cc
+@@ -11,7 +11,7 @@
+ 
+ namespace {
+ constexpr std::string_view kSupportedDB[] = {"sqlite", "mysql", "postgresql",
+-                                             "mariadb"};
++                                             "mariadb", "monetdb"};
+ };
+ 
+ namespace utils {

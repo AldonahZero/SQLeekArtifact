@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_mathfunc.html"
+    ],
+    "Title": [
+        "trunc(X)"
+    ],
+    "Feature": [
+        "trunc(X)"
+    ],
+    "Description": [
+        "\n  Return the representable integer in between X and 0 (inclusive)\n  that is furthest away from zero.  Or, in other words, return the\n  integer part of X, rounding toward zero.\n  The trunc() function is similar to ceiling(X) and floor(X) except\n  that it always rounds toward zero whereas ceiling(X) and floor(X) round\n  up and down, respectively.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Mathematical SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT trunc(X);",
+        "SELECT trunc(5.7);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 350,
+            "Prompt Tokens": 333,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 6.015e-05
+        },
+        {
+            "Total Tokens": 488,
+            "Prompt Tokens": 468,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 8.219999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: X\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT trunc(5.7);"
+    ]
+}

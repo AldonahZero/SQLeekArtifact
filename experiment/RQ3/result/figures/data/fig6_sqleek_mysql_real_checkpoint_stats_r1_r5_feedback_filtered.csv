@@ -1,0 +1,7 @@
+tool,dbms,checkpoint_hours,mean,sample_std,min,max,runs,run_values
+SQLeek,MySQL,1,0.800000,0.447214,0,1,5,r1=0;r2=1;r3=1;r4=1;r5=1
+SQLeek,MySQL,5,1.400000,0.547723,1,2,5,r1=1;r2=2;r3=1;r4=1;r5=2
+SQLeek,MySQL,10,2.000000,0.707107,1,3,5,r1=1;r2=3;r3=2;r4=2;r5=2
+SQLeek,MySQL,15,2.400000,1.140175,1,4,5,r1=1;r2=4;r3=3;r4=2;r5=2
+SQLeek,MySQL,20,2.400000,1.140175,1,4,5,r1=1;r2=4;r3=3;r4=2;r5=2
+SQLeek,MySQL,24,2.400000,1.140175,1,4,5,r1=1;r2=4;r3=3;r4=2;r5=2

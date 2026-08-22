@@ -1,0 +1,6 @@
+repeat_id	cov_json_count	report_count	profdata_count	docker_exit_code	artifact_status
+1	9	9	9	0	complete_artifacts_validated
+2	9	9	9	125	complete_artifacts_validated
+3	9	9	9	0	complete_artifacts_validated
+4	9	9	9	125	complete_artifacts_validated
+5	9	9	9	125	complete_artifacts_validated

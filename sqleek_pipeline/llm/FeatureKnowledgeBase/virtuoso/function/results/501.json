@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_data_sources/"
+  ],
+  "Title": [
+    "sql_data_sources ("
+  ],
+  "Feature": [
+    "sql_data_sources ("
+  ],
+  "Description": [
+    "sql_data_sources is used to get the list of datasources\n    available to the dsn. It returns a vector of 2 element vectors containing Data\n    source name and type pairs.\nsql_data_sources"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

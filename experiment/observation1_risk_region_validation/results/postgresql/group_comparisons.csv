@@ -1,0 +1,5 @@
+comparison,left_region_count,left_future_bug_region_count,left_future_bug_rate,right_region_count,right_future_bug_region_count,right_future_bug_rate,relative_risk,risk_difference,odds_ratio,ci95_low,ci95_high,test,p_value,p_value_bh
+H+C+S vs None,0,0,0.0,14,0,0.0,0.0,0.0,nan,nan,nan,insufficient,nan,nan
+H+C+S vs H only,0,0,0.0,0,0,0.0,0.0,0.0,nan,nan,nan,insufficient,nan,nan
+H+C+S vs C only,0,0,0.0,0,0,0.0,0.0,0.0,nan,nan,nan,insufficient,nan,nan
+H+C+S vs S only,0,0,0.0,12,0,0.0,0.0,0.0,nan,nan,nan,insufficient,nan,nan

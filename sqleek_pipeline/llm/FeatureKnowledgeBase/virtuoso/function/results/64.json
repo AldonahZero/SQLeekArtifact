@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cfg_item_count/"
+  ],
+  "Title": [
+    "cfg_item_count ("
+  ],
+  "Feature": [
+    "cfg_item_count ("
+  ],
+  "Description": [
+    "Return the number of items that exist\n    in the specified section of the INI file."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-aggregate.html"
+    ],
+    "Title": [
+        "every"
+    ],
+    "Feature": [
+        "every ( boolean ) \u2192 boolean"
+    ],
+    "Description": [
+        "This is the SQL standard's equivalent to bool_and."
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT every(true);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 264,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.7249999999999997e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT every(true);"
+    ]
+}

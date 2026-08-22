@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_server/"
+  ],
+  "Title": [
+    "varchar soap_server ("
+  ],
+  "Feature": [
+    "varchar soap_server ("
+  ],
+  "Description": [
+    "This function executes the SOAP request in the same way as it it was\ndirected to the /SOAP physical path.\nIt returns the XML SOAP reply as a varchar value.\n/SOAP"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

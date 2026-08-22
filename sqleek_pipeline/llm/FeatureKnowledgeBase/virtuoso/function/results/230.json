@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_root/"
+  ],
+  "Title": [
+    "varchar http_root ("
+  ],
+  "Feature": [
+    "varchar http_root ("
+  ],
+  "Description": [
+    "Returns the absolute path of the server root directory."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

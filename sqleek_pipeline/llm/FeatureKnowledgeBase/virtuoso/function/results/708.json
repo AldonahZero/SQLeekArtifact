@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_persistent/"
+  ],
+  "Title": [
+    "xml_persistent ("
+  ],
+  "Feature": [
+    "xml_persistent ("
+  ],
+  "Description": [
+    "This parses the argument, which is expected to be a well formed XML fragment and returns a parse tree as a special\n    \tobject with underlying disk structure, named \"persistent XML\" or \"XPER\" While the result of xml_tree() is a memory-resident array of vectors, the XPER\n    \tobject consumes only a little amount of memory, and almost all data is disk-resident.\nxml_tree()\nThis function is equivalent to xper_doc() , and the only\n    difference is in the order of arguments; xper_doc() has the same order of arguments as xml_tree() .\nxper_doc()\nxml_tree()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

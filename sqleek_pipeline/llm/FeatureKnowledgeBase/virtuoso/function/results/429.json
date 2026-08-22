@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_update_snapshot/"
+  ],
+  "Title": [
+    "None REPL_UPDATE_SNAPSHOT ("
+  ],
+  "Feature": [
+    "None REPL_UPDATE_SNAPSHOT ("
+  ],
+  "Description": [
+    "This procedure should be used to update a bi-directional snapshot\n    publication. This procedure pulls all the updates from subscribers\n    (with conflict resolution) and then pushes all the updates from\n    publisher to all the subscribers.\nThis function should be run on the publisher."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

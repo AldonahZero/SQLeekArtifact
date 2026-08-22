@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "read_text(source)"
+    ],
+    "Feature": [
+        "read_text(source)"
+    ],
+    "Description": [
+        "Returns the content from source (a filename, a list of filenames, or a glob pattern) as a VARCHAR. The file content is first validated to be valid UTF-8. If read_text attempts to read a file with invalid UTF-8 an error is thrown suggesting to use read_blob instead. See the read_text guide for more details."
+    ],
+    "Examples": [
+        "read_text('hello.txt')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT read_text('source')",
+        "SELECT * FROM read_text('source')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 332,
+            "Prompt Tokens": 313,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 5.8349999999999995e-05
+        },
+        {
+            "Total Tokens": 519,
+            "Prompt Tokens": 498,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 8.73e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Function \"read_text\" is a table function but it was used as a scalar function. This function has to be called in a FROM clause (similar to a table).\nLINE 1: SELECT read_text('source')\n               ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT * FROM read_text('source')"
+    ]
+}

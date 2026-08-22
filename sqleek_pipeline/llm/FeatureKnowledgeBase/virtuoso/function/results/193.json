@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_gz_compress/"
+  ],
+  "Title": [
+    "gz_compress ("
+  ],
+  "Feature": [
+    "gz_compress ("
+  ],
+  "Description": [
+    "The gz_compress returns its argument compressed with the gzip\nalgorithm. The argument and return values are arbitrary strings,\npossibly including any 8 bit characters."
+  ],
+  "Examples": [
+    "create procedure"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

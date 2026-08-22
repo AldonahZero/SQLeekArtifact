@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_trim/"
+  ],
+  "Title": [
+    "trim ("
+  ],
+  "Feature": [
+    "trim ("
+  ],
+  "Description": [
+    "trim returns a copy of subsequence of string str\n    with all the characters present in trimchars trimmed off from the beginning.\n    If the second argument is omitted, it is a space ' ' by default.\ntrim\nrtrim is similar except that it trims from\n    the right.\nrtrim\ntrim trims from both ends.\nconcat('*',trim('   SIMURG   '),'*') -> '*SIMURG*'\nltrim('AbracadabrA','bAr')  -> 'acadabrA'\nrtrim('AbracadabrA','bAr')  -> 'Abracada'\ntrim('AbracadabrA','bAr')    -> 'acada'\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

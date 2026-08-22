@@ -1,0 +1,74 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "read_firewall_groups()",
+    "Description": [
+        "\nread_firewall_groups(group,\n              mode,\n              user)\n",
+        "\n              This aggregate function updates the firewall group profile\n              cache through a SELECT\n              statement on the mysql.firewall_groups\n              table. It requires the\n              FIREWALL_ADMIN privilege.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy SELECT read_firewall_groups('g', 'RECORDING', 'fwuser@localhost')\nFROM mysql.firewall_groups;",
+        "\n              This function was added in MySQL 8.0.23.\n            "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/firewall-reference.html#function_read-firewall-groups",
+    "Feature": [
+        "read_firewall_groups(group,\n              mode,\n              user)"
+    ],
+    "Examples": [
+        "SELECT read_firewall_groups('g', 'RECORDING', 'fwuser@localhost')\nFROM mysql.firewall_groups;"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT read_firewall_groups('g', 'RECORDING', 'fwuser@localhost')",
+        "SELECT read_firewall_groups('g', 'RECORDING', 'fwuser')",
+        "SELECT read_firewall_groups('g', 'RECORDING', 'user')",
+        "SELECT read_firewall_groups('g', 'RECORDING', 'admin')",
+        "SELECT read_firewall_groups('g', 'RECORDING', 'root')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 416,
+            "Prompt Tokens": 384,
+            "Completion Tokens": 32,
+            "Total Cost (USD)": 7.68e-05
+        },
+        {
+            "Total Tokens": 583,
+            "Prompt Tokens": 553,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 0.00010094999999999999
+        },
+        {
+            "Total Tokens": 749,
+            "Prompt Tokens": 720,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00012539999999999999
+        },
+        {
+            "Total Tokens": 915,
+            "Prompt Tokens": 886,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00015029999999999997
+        },
+        {
+            "Total Tokens": 1081,
+            "Prompt Tokens": 1052,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00017519999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.read_firewall_groups does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.read_firewall_groups does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.read_firewall_groups does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.read_firewall_groups does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.read_firewall_groups does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

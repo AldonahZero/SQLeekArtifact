@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "sys.alpha(pdec double, pradius double)"
+    ],
+    "Feature": [
+        "sys.alpha(pdec double, pradius double)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double",
+        "compute alpha 'expansion' of theta for a given declination (used by SkyServer)"
+    ],
+    "Examples": [
+        "sys.alpha(5.0, 1.2)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.alpha(0.5, 1.0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 322,
+            "Prompt Tokens": 296,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.9999999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.alpha(0.5, 1.0);"
+    ]
+}

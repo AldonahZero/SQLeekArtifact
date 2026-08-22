@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-geometry.html"
+    ],
+    "Title": [
+        "lseg"
+    ],
+    "Feature": [
+        "lseg ( point, point ) \u2192 lseg"
+    ],
+    "Description": [
+        "Constructs line segment from two endpoints."
+    ],
+    "Examples": [
+        "lseg(point '(-1,0)', point '(1,0)') \u2192 [(-1,0),(1,0)]"
+    ],
+    "Category": [
+        "Geometric Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT lseg(point(1, 2), point(3, 4));"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 251,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 5.564999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT lseg(point(1, 2), point(3, 4));"
+    ]
+}

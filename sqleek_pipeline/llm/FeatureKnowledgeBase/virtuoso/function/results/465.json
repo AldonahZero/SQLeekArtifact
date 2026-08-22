@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sinv_drop_inverse/"
+  ],
+  "Title": [
+    "sinv_drop_inverse ("
+  ],
+  "Feature": [
+    "sinv_drop_inverse ("
+  ],
+  "Description": [
+    "Reverses the effect of sinv_create_inverse procedure.\nsinv_create_inverse"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

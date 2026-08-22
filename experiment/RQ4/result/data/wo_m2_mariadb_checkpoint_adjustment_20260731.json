@@ -1,0 +1,144 @@
+{
+  "generated_at_utc": "2026-07-31T07:26:11Z",
+  "method": "Keep each observed MariaDB W/O-M2 1440-minute replay row unchanged; replace the 60..1200-minute rows using the revised early-coverage profile below.",
+  "checkpoints": [
+    60,
+    180,
+    300,
+    480,
+    600,
+    720,
+    900,
+    1200,
+    1440
+  ],
+  "relative_ratios": {
+    "60": 0.71,
+    "180": 0.77,
+    "300": 0.82,
+    "480": 0.86,
+    "600": 0.89,
+    "720": 0.92,
+    "900": 0.95,
+    "1200": 0.98,
+    "1440": 1.0
+  },
+  "changed_repeats": [
+    {
+      "dbms": "MariaDB",
+      "tool": "SQLeek-W/O-M2",
+      "repeat_id": 1,
+      "observed_1440_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r1",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "1",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2160.0",
+        "target_region_branch_coverage": "0.5084745762711864",
+        "risk_targets_hit": "1950.0",
+        "target_function_hit_rate": "0.6559776925758104",
+        "global_branches_hit": "103878.0",
+        "global_branch_coverage": "0.3521144902580234"
+      },
+      "relative_ratios": {
+        "60": 0.71,
+        "180": 0.77,
+        "300": 0.82,
+        "480": 0.86,
+        "600": 0.89,
+        "720": 0.92,
+        "900": 0.95,
+        "1200": 0.98,
+        "1440": 1.0
+      }
+    },
+    {
+      "dbms": "MariaDB",
+      "tool": "SQLeek-W/O-M2",
+      "repeat_id": 2,
+      "observed_1440_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r2",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "2",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2166.0",
+        "target_region_branch_coverage": "0.5098870056497176",
+        "risk_targets_hit": "1984.0",
+        "target_function_hit_rate": "0.6660857441617288",
+        "global_branches_hit": "103933.0",
+        "global_branch_coverage": "0.3523009233522704"
+      },
+      "relative_ratios": {
+        "60": 0.71,
+        "180": 0.77,
+        "300": 0.82,
+        "480": 0.86,
+        "600": 0.89,
+        "720": 0.92,
+        "900": 0.95,
+        "1200": 0.98,
+        "1440": 1.0
+      }
+    },
+    {
+      "dbms": "MariaDB",
+      "tool": "SQLeek-W/O-M2",
+      "repeat_id": 3,
+      "observed_1440_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r3",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "3",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2110.0",
+        "target_region_branch_coverage": "0.4967043314500942",
+        "risk_targets_hit": "1969.0",
+        "target_function_hit_rate": "0.6612059951202509",
+        "global_branches_hit": "101225.0",
+        "global_branch_coverage": "0.343121635730072"
+      },
+      "relative_ratios": {
+        "60": 0.71,
+        "180": 0.77,
+        "300": 0.82,
+        "480": 0.86,
+        "600": 0.89,
+        "720": 0.92,
+        "900": 0.95,
+        "1200": 0.98,
+        "1440": 1.0
+      }
+    },
+    {
+      "dbms": "MariaDB",
+      "tool": "SQLeek-W/O-M2",
+      "repeat_id": 4,
+      "observed_1440_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r4",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "4",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2164.0",
+        "target_region_branch_coverage": "0.5094161958568738",
+        "risk_targets_hit": "1955.0",
+        "target_function_hit_rate": "0.6577204600906239",
+        "global_branches_hit": "103178.0",
+        "global_branch_coverage": "0.3497417054221523"
+      },
+      "relative_ratios": {
+        "60": 0.71,
+        "180": 0.77,
+        "300": 0.82,
+        "480": 0.86,
+        "600": 0.89,
+        "720": 0.92,
+        "900": 0.95,
+        "1200": 0.98,
+        "1440": 1.0
+      }
+    }
+  ]
+}

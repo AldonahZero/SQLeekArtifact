@@ -1,0 +1,15 @@
+CREATE TYPE
+BEGIN
+DECLARE CURSOR
+      row       
+----------------
+ (1,1073741824)
+(1 row)
+
+ALTER TYPE
+psql:/tmp/trigger.sql:6: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+psql:/tmp/trigger.sql:6: error: connection to server was lost
+=== No core file, trying gdb attach on second trigger ===
+waiting for server to shut down....

@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/intersects/"
+    ],
+    "Title": [
+        "INTERSECTS"
+    ],
+    "Feature": [
+        "INTERSECTS(g1,g2)\n"
+    ],
+    "Description": [
+        "Returns 1 or 0 to indicate whether geometry g1 spatially intersects geometry g2.",
+        "INTERSECTS() is based on the original MySQL implementation and uses object bounding rectangles, while ST_INTERSECTS() uses object shapes.",
+        "INTERSECTS() tests the opposite relationship to DISJOINT()."
+    ],
+    "Examples": [],
+    "Category": [
+        "Geographic Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT INTERSECTS(g1, g2);",
+        "SELECT INTERSECTS(POINT(1, 1), POINT(2, 2));"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 332,
+            "Prompt Tokens": 309,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 6.014999999999999e-05
+        },
+        {
+            "Total Tokens": 496,
+            "Prompt Tokens": 464,
+            "Completion Tokens": 32,
+            "Total Cost (USD)": 8.879999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'g1' in 'field list'\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT INTERSECTS(POINT(1, 1), POINT(2, 2));"
+    ]
+}

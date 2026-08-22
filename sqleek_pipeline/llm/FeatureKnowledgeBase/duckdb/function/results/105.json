@@ -1,0 +1,55 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/bitstring"
+    ],
+    "Title": [
+        "bitstring_agg(arg)"
+    ],
+    "Feature": [
+        "bitstring_agg(arg)"
+    ],
+    "Description": [
+        "Returns a bitstring with bits set for each distinct position defined in arg.",
+        "The bitstring_agg function takes any integer type as input and returns a bitstring with bits set for each distinct value. The left-most bit represents the smallest value in the column and the right-most bit the maximum value. If possible, the min and max are retrieved from the column statistics. Otherwise, it is also possible to provide the min and max values."
+    ],
+    "Examples": [
+        "bitstring_agg(A)"
+    ],
+    "Category": [
+        "Bitstring Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT bitstring_agg(arg) FROM your_table;",
+        "SELECT bitstring_agg(arg);",
+        "SELECT bitstring_agg(arg) FROM (SELECT 1 AS arg UNION SELECT 2 UNION SELECT 3);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 364,
+            "Prompt Tokens": 341,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 6.494999999999999e-05
+        },
+        {
+            "Total Tokens": 540,
+            "Prompt Tokens": 520,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 8.999999999999999e-05
+        },
+        {
+            "Total Tokens": 723,
+            "Prompt Tokens": 687,
+            "Completion Tokens": 36,
+            "Total Cost (USD)": 0.00012465
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.CatalogException) Catalog Error: Table with name your_table does not exist!\nDid you mean \"pg_tables\"?\nLINE 1: SELECT bitstring_agg(arg) FROM your_table;\n                                       ^\n",
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"arg\" not found in FROM clause!\nLINE 1: SELECT bitstring_agg(arg);\n                             ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT bitstring_agg(arg) FROM (SELECT 1 AS arg UNION SELECT 2 UNION SELECT 3);"
+    ]
+}

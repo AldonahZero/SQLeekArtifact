@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_space/"
+  ],
+  "Title": [
+    "space ("
+  ],
+  "Feature": [
+    "space ("
+  ],
+  "Description": [
+    "space returns a new string, composed of count spaces.\nIf count is zero, an empty string '' is returned.\nspace\nspace(5) -> '     '\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

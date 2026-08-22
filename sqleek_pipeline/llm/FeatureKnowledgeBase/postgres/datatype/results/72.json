@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-pseudo.html"
+    ],
+    "Title": [
+        "internal"
+    ],
+    "Feature": [
+        "internal"
+    ],
+    "Description": [
+        "Description",
+        "Indicates that a function accepts or returns a server-internal data type."
+    ],
+    "Examples": [],
+    "Category": [
+        "Pseudo-Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM pg_catalog.pg_type WHERE typname = 'internal';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 276,
+            "Prompt Tokens": 249,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.355e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT * FROM pg_catalog.pg_type WHERE typname = 'internal';"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_jvm_ref_import/"
+  ],
+  "Title": [
+    "varchar jvm_ref_import ("
+  ],
+  "Feature": [
+    "varchar jvm_ref_import ("
+  ],
+  "Description": [
+    "This function will returns an XML description of the selected classes\n    from the source files.\nThe XML produced by the JVM_REF_IMPORT can be supplied to the\n    predefined XSL style sheet __javavm_type to produce the CREATE TYPE statements:\n__javavm_type\nselect xslt ('__javavm_type', xml_tree_doc (JVM_REF_IMPORT (files, classes)));\nThis can also be achieve directly using a single call to:\nIMPORT_JAR (in files any, in classes any)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

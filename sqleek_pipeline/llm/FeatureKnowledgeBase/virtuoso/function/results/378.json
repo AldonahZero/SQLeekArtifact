@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regexp_match/"
+  ],
+  "Title": [
+    "varchar regexp_match ("
+  ],
+  "Feature": [
+    "varchar regexp_match ("
+  ],
+  "Description": [
+    "The regexp_match function returns a copy of substring of string str which matches the regular expression pattern.\nstr\nPrevious behavior of this function would cut the first characters of str until the end of regular expression matched substring.  In this way str could be passed to this function again to find\nthe next occurrence of substring that matches the regular expression.  By\ndefault this behavior is not adopted by this function, but can be enabled for\npre 3.2 compatibility by supplying the optional third parameter.\nstr\nstr\nIf either the pattern or str parameter contain wide characters this function will operate in wide mode,\nfirst converting any narrow characters to wide and returning a wide character\nresponse.  Otherwise this function operates in narrow mode by default.\npattern\nstr"
+  ],
+  "Examples": [
+    "CREATE PROCEDURE all_tokens(IN pattern VARCHAR, IN str VARCHAR)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

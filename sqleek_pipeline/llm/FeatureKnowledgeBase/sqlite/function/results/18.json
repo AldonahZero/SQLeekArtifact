@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "lower(X)"
+    ],
+    "Feature": [
+        "lower(X)"
+    ],
+    "Description": [
+        "\n  The lower(X) function returns a copy of string X with all ASCII characters\n  converted to lower case.  The default built-in lower() function works\n  for ASCII characters only.  To do case conversions on non-ASCII\n  characters, load the ICU extension.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT lower(X);",
+        "SELECT lower('example string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 316,
+            "Prompt Tokens": 299,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 5.5049999999999996e-05
+        },
+        {
+            "Total Tokens": 452,
+            "Prompt Tokens": 433,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 7.634999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: X\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT lower('example string');"
+    ]
+}

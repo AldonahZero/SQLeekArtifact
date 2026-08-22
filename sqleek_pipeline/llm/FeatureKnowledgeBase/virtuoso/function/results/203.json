@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_client/"
+  ],
+  "Title": [
+    "varchar http_client ("
+  ],
+  "Feature": [
+    "varchar http_client ("
+  ],
+  "Description": [
+    "This function is used to perform HTTP operations to retrieve\ngeneric content and/or to perform generic operations over HTTP/HTTPS protocols.\nIt also supports HTTP authentication based on username/password credentials.\nIf the URL is https: an no x509 certificate given then it will operate as https client w/o client certificate."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

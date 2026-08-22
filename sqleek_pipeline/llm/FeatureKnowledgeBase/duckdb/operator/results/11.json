@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/date"
+    ],
+    "Title": [
+        "-"
+    ],
+    "Feature": [
+        "-"
+    ],
+    "Description": [
+        "Subtraction of a variable INTERVAL"
+    ],
+    "Examples": [
+        "SELECT DATE '1992-03-27' - INTERVAL (d.days) DAY FROM (VALUES (5), (11)) AS d(days)"
+    ],
+    "Category": [
+        "Date Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT INTERVAL '1 day' - INTERVAL '2 hours';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 266,
+            "Prompt Tokens": 239,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.204999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT INTERVAL '1 day' - INTERVAL '2 hours';"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_composite_ref/"
+  ],
+  "Title": [
+    "integer composite_ref ("
+  ],
+  "Feature": [
+    "integer composite_ref ("
+  ],
+  "Description": [
+    "composite_ref returns the nth element of the composite. The index is 0 based.\ncomposite_ref\nnth"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

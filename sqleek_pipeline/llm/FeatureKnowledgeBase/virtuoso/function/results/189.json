@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_group_concat_distinct/"
+  ],
+  "Title": [
+    "DB.DBA.GROUP_CONCAT_DISTINCT ("
+  ],
+  "Feature": [
+    "DB.DBA.GROUP_CONCAT_DISTINCT ("
+  ],
+  "Description": [
+    "DB.DBA.GROUP_CONCAT_DISTINCT is aggregate function that performs a string concatenation across\n    \tthe values of an expression with a group. The order of the strings is not specified.\n    \tThe separator character used in the concatenation may be given with the scalar\n    \targument delimiter.\nNote: the \"sql:\" prefix is mandatory when this aggregate is used in SPARQL queries.\n    \tIn SQL queries the prefix is \"DB.DBA\"."
+  ],
+  "Examples": [
+    "SELECT ?name, (sql:GROUP_CONCAT_DISTINCT(?near, ' , '))"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

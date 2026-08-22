@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_status/"
+  ],
+  "Title": [
+    "repl_status ("
+  ],
+  "Feature": [
+    "repl_status ("
+  ],
+  "Description": [
+    "Given a publisher and publication name this returns the \n      status of the publication on the local server."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

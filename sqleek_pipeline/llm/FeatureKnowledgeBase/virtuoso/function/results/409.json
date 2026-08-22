@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_pub_add/"
+  ],
+  "Title": [
+    "REPL_PUB_ADD ("
+  ],
+  "Feature": [
+    "REPL_PUB_ADD ("
+  ],
+  "Description": [
+    "This function is used to add items to a pre-existing  publication and\n    to set replication options for the published items. Operations concerning\n    the added item will henceforth be logged into the publication's log. Performing\n    this operation will copy the item and optionally its definition\n to existing     subscribers."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

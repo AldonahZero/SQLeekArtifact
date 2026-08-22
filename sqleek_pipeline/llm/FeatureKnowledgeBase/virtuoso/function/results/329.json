@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_prof_sample/"
+  ],
+  "Title": [
+    "prof_sample ("
+  ],
+  "Feature": [
+    "prof_sample ("
+  ],
+  "Description": [
+    "prof_sample is used to adds a profiling\n    sample to a profile being accumulated.\nprof_sample\nThe first argument is the name of the sampled section, the times called and\ncumulative times will be totaled under this heading.  The second argument is the\ntime in milliseconds.  The third argument is a flag indicating whether the\nsection was successfully executed. 0 indicates success, 1 indicates execute of\nthe statement, 2 indicates fetch on a statement's resultset, 4 indicates error.\nFor more description of profiling capabilities see the section about SQL Execution Profiling in Performance tuning part of\n    Virtuoso documentation."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

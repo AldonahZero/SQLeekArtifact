@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-textsearch.html"
+    ],
+    "Title": [
+        "length"
+    ],
+    "Feature": [
+        "length ( tsvector ) \u2192 integer"
+    ],
+    "Description": [
+        "Returns the number of lexemes in the tsvector."
+    ],
+    "Examples": [
+        "length('fat:2,4 cat:3 rat:5A'::tsvector) \u2192 3"
+    ],
+    "Category": [
+        "Text Search Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT length(to_tsvector('example text'));"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 273,
+            "Prompt Tokens": 250,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.129999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT length(to_tsvector('example text'));"
+    ]
+}

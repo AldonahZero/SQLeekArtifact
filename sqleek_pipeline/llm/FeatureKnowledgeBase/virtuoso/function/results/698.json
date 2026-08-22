@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_auto/"
+  ],
+  "Title": [
+    "xml_auto ("
+  ],
+  "Feature": [
+    "xml_auto ("
+  ],
+  "Description": [
+    "This function prepares and executes the given SQL string, which should be a query expression with\nthe FOR XML clause at the end of the last term. The query\nis passed the parameters from the params vector, which should have one element for\neach ? in the query text, values assigned from left to right. Consider the\nquery: select a, b from table where a = ? and b = ?; then the params vector\ncould reasonably be:\nvector(1, 'myfilter')\n.\nThe result set is converted to XML and appended to the string _output.\nIf the string _output is omitted and the function executes in the context\nof a VSP page, the output is sent to the stream going to the user agent.\nstring\nstring"
+  ],
+  "Examples": [
+    "create procedure xmla (in q varchar)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

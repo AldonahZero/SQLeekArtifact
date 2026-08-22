@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/logical-functions"
+    ],
+    "Title": [
+        "\"or\"(a boolean, b boolean)"
+    ],
+    "Feature": [
+        "\"or\"(a boolean, b boolean)"
+    ],
+    "Description": [
+        "Return type: ",
+        "boolean",
+        "a OR b"
+    ],
+    "Examples": [
+        "\"or\"(true, false)"
+    ],
+    "Category": [
+        "Logical Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT TRUE OR FALSE;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 293,
+            "Prompt Tokens": 276,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 5.1599999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT TRUE OR FALSE;"
+    ]
+}

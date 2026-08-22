@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ends_with/"
+  ],
+  "Title": [
+    "ends_with ("
+  ],
+  "Feature": [
+    "ends_with ("
+  ],
+  "Description": [
+    "ends_with checks whether string X ends with Y, ignoring occurencies of Y in other places. Returns 1 or 0.\nends_with"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

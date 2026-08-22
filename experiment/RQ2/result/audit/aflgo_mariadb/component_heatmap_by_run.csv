@@ -1,0 +1,7 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mariadb_aflgo_r1,mariadb,1,type_system,AFLGo,2100,348,0.1657142857142857,965,266,0.2854006586169045
+mariadb_aflgo_r1,mariadb,1,other,AFLGo,1486,466,0.3135935397039031,400,211,0.5314861460957179
+mariadb_aflgo_r1,mariadb,1,optimizer,AFLGo,160,54,0.3375,31,26,0.8275862068965517
+mariadb_aflgo_r1,mariadb,1,cursor_prepared,AFLGo,204,98,0.4803921568627451,3,1,0.3333333333333333
+mariadb_aflgo_r1,mariadb,1,parser,AFLGo,64,40,0.625,5,5,1.0
+mariadb_aflgo_r1,mariadb,1,catalog_metadata,AFLGo,46,14,0.30434782608695654,29,8,0.27586206896551724

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/utility"
+    ],
+    "Title": [
+        "sha256(value)"
+    ],
+    "Feature": [
+        "sha256(value)"
+    ],
+    "Description": [
+        "Returns a VARCHAR with the SHA-256 hash of the value."
+    ],
+    "Examples": [
+        "sha256('\ud83e\udd86')"
+    ],
+    "Category": [
+        "Utility Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sha256('your_value_here')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.1149999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sha256('your_value_here')"
+    ]
+}

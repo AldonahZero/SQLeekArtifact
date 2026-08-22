@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_restore_metadata/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_RESTORE_METADATA ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_RESTORE_METADATA ("
+  ],
+  "Description": [
+    "This restores RDF metadata from specified file or graph in RDF storage.\nThe file or graph should be previously created by DB.DBA.RDF_BACKUP_METADATA () .\nIt is usually safe to restore metadata from backup made by some previous version of Virtuoso server but\nit is good idea to call DB.DBA.RDF_AUDIT_METADATA () after such restore.\nDB.DBA.RDF_BACKUP_METADATA\nDB.DBA.RDF_AUDIT_METADATA\nWhen the procedure is executed on the server that continues to serve user requests during the maintenance then SPARQL query compiler may interrupt query compilations or create queries that will return incomplete result sets.\nThese queries may be cached till the end of metadata update procedure but the cache is flushed when the update is complete, so possible errors will be transient.\nIf even transient errors are not appropriate then do RDF metadata update with all precautions usual for changing database schema of an application."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

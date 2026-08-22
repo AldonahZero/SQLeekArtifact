@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_system/"
+  ],
+  "Title": [
+    "system ("
+  ],
+  "Feature": [
+    "system ("
+  ],
+  "Description": [
+    "The system function will run a shell command from SQL. The shell command is executed\nin the server's current directory as the user that owns the database server process.\nThis function is available to dba users only. Since this is a security\nrisk this feature is normally disabled. It can be enabled by setting the\nAllowOSCalls setting in virtuoso.ini to 1.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

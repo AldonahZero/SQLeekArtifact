@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_delete_snapshot/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_DELETE_SNAPSHOT ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_DELETE_SNAPSHOT ("
+  ],
+  "Description": [
+    "Deletes a snapshot of an Amazon EBS volume."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

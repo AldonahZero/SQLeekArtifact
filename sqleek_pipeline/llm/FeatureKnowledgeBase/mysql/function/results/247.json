@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "Point()",
+    "Description": [
+        "\nPoint(x,\n          y)\n",
+        "\n          Constructs a Point using its coordinates.\n        "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/gis-mysql-specific-functions.html#function_point",
+    "Feature": [
+        "Point(x,\n          y)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Spatial Analysis Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT Point(1, 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 305,
+            "Prompt Tokens": 284,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.519999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT Point(1, 2);"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xq_sequence_agg/"
+  ],
+  "Title": [
+    "vector DB.DBA.XQ_SEQUENCE_AGG ("
+  ],
+  "Feature": [
+    "vector DB.DBA.XQ_SEQUENCE_AGG ("
+  ],
+  "Description": [
+    "DB.DBA.XQ_SEQUENCE_AGG creates an XQuery sequence object that consists of all values\n    passed the aggregate.\nDB.DBA.XQ_SEQUENCE_AGG"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,27 @@
+--- sql/dd/impl/upgrade/server.cc
++++ sql/dd/impl/upgrade/server.cc
+@@ -271,8 +271,8 @@ void comma_separated_join(std::vector<dd::String_type> &list,
+                           dd::String_type &dest) {
+   assert(!list.empty());
+   dest.append(list.front());
+-  for (const dd::String_type &elt : list | std::ranges::views::drop(1)) {
+-    dest.append(", ").append(elt);
++  for (size_t idx = 1; idx < list.size(); ++idx) {
++    dest.append(", ").append(list[idx]);
+   }
+ }
+ 
+@@ -303,11 +303,10 @@ class MySQL_check {
+     append_escaped(tables_list, sch->name()).append(1, '.');
+     append_escaped(tables_list, schema_table_names.front());
+ 
+-    for (const dd::String_type &table_name :
+-         schema_table_names | std::ranges::views::drop(1)) {
++    for (size_t idx = 1; idx < schema_table_names.size(); ++idx) {
+       tables_list.append(", ");
+       append_escaped(tables_list, sch->name()).append(1, '.');
+-      append_escaped(tables_list, table_name);
++      append_escaped(tables_list, schema_table_names[idx]);
+     }
+ 
+     return false;

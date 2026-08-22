@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_udt_defines_field/"
+  ],
+  "Title": [
+    "integer udt_defines_field ("
+  ],
+  "Feature": [
+    "integer udt_defines_field ("
+  ],
+  "Description": [
+    "This function is used to determine whether the supplied member_name\n    is a member contained by the supplied udt."
+  ],
+  "Examples": [
+    "select udt_defines_field (new SER_UDT(), 'A');",
+    "select udt_defines_field (new SER_UDT_SUB(), 'A');",
+    "select udt_defines_field (new SER_UDT(), 'B');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

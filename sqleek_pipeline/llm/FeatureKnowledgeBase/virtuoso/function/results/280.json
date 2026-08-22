@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_length/"
+  ],
+  "Title": [
+    "integer length ("
+  ],
+  "Feature": [
+    "integer length ("
+  ],
+  "Description": [
+    "Returns the length of its argument.\nTable 24.50. Value returned by length by argument datatype\nlength\nIn case of a LOB that does not have a length as in the case of one supplied by a client with SQLPutData and not yet stored, a zero is returned."
+  ],
+  "Examples": [
+    "callret   callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

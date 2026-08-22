@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/cast-conversion-functions"
+    ],
+    "Title": [
+        "url 'valid url string'"
+    ],
+    "Feature": [
+        "url 'valid url string'"
+    ],
+    "Description": [
+        "convert string value to url type"
+    ],
+    "Examples": [
+        "url 'https://www.monetdb.org/Home'"
+    ],
+    "Category": [
+        "Cast Conversion Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CAST('valid url string' AS URL)"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 259,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.204999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CAST('valid url string' AS URL)"
+    ]
+}

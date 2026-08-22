@@ -1,0 +1,33 @@
+dbms: postgresql
+sqleek_root: /root/SQLeek
+source_repo: /root/SQLeek/sources/postgres
+source_path: /root/SQLeek/sources/postgres
+stage1_codeql_results_dir: /root/SQLeek/sqleek_pipeline/stage1_static/output/codeql_results/postgres
+stage1_targets_dir: /root/SQLeek/sqleek_pipeline/stage1_static/output/targets
+coverage:
+  official_coverage_csv: ''
+  allow_fuzzing_coverage_for_main: false
+  excluded_fuzzing_coverage_note: Fuzzing/replay coverage is not used for Observation
+    1 main coverage-gap signal.
+analysis:
+  historical_repair_threshold: 2
+  mapping_confidence_for_main: high
+  coverage_gap_primary: below_dbms_median_branch_coverage
+paths:
+  data_dir: /root/SQLeek/experiment/observation1_risk_region_validation/data/postgresql
+  results_dir: /root/SQLeek/experiment/observation1_risk_region_validation/results/postgresql
+  reports_dir: /root/SQLeek/experiment/observation1_risk_region_validation/reports
+windows:
+  main:
+    window_id: main
+    historical_start: '2026-02-23'
+    historical_end: '2024-12-31'
+    validation_start: '2025-01-01'
+    validation_end: '2026-12-31'
+  rolling: []
+source_commit: 62d6c7d3df6287f1bd83199c1a746e50d31571a0
+history:
+  repo_first_commit_date: '2026-02-23'
+  repo_latest_commit_date: '2026-02-23'
+  latest_complete_year: 2026
+  commit_count_no_merges: 1

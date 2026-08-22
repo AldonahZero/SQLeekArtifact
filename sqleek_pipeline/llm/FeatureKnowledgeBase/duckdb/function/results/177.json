@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/interval"
+    ],
+    "Title": [
+        "to_decades(integer)"
+    ],
+    "Feature": [
+        "to_decades(integer)"
+    ],
+    "Description": [
+        "Construct a decade interval."
+    ],
+    "Examples": [
+        "to_decades(5)"
+    ],
+    "Category": [
+        "Interval Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT to_decades(2023);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 274,
+            "Prompt Tokens": 253,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.0549999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT to_decades(2023);"
+    ]
+}

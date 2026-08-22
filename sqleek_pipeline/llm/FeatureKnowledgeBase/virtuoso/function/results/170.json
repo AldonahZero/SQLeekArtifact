@@ -1,0 +1,31 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_to_string_output/"
+  ],
+  "Title": [
+    "file_to_string_output ("
+  ],
+  "Feature": [
+    "file_to_string_output ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function returns a   string output stream\n    initialized to contain the text of the file or its segment, on local file system path\n    relative to the server's working directory.\nfile_to_string_output can handle longer\n    files than file_to_string and the resulting string output, if too long to be converted into\n    a varchar, can be stored inside a blob.\nfile_to_string_output\nfile_to_string\nAccess controls in the server configuration file apply. An attempt\n    to access a file in a directory where access is not explicitly allowed will signal an error."
+  ],
+  "Examples": [
+    "create table",
+    "create procedure",
+    "insert_files (in fname varchar)",
+    "insert into file_table (ft_name, ft_cont)",
+    "insert into file_table (concat (ft_name, '_1'), ft_cont)",
+    "insert into file_table (concat (ft_name, '_2'), ft_cont)",
+    "insert_file ('foo.dat');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

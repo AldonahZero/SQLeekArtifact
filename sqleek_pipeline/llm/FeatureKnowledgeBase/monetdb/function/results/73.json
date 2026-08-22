@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "tanh(x)"
+    ],
+    "Feature": [
+        "tanh(x)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double",
+        "hyperbolic tangent of angle x in radians"
+    ],
+    "Examples": [
+        "tanh(1.4)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT tanh(x);",
+        "SELECT tanh(1.0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 262,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 5.01e-05
+        },
+        {
+            "Total Tokens": 430,
+            "Prompt Tokens": 409,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 7.394999999999998e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 'x' unknown\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT tanh(1.0);"
+    ]
+}

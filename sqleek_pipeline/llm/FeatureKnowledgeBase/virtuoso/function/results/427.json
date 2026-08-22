@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_unpublish/"
+  ],
+  "Title": [
+    "REPL_UNPUBLISH ("
+  ],
+  "Feature": [
+    "REPL_UNPUBLISH ("
+  ],
+  "Description": [
+    "This function is used to remove from current replication set an existing publication.\n    The replication messages for all existing items will be stopped, so the last replication message will\n    instruct the subscribers that this publication is dropped.\n    On subscriber side depending of the copy mode of items they can be removed or not, but the\n    description entry for that publication will be removed explicitly.\n    Any existing grants to the publication being dropped will be revoked."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

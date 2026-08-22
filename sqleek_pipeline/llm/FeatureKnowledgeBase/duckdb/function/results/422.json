@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "regexp_full_match(string, regex)"
+    ],
+    "Feature": [
+        "regexp_full_match(string, regex)"
+    ],
+    "Description": [
+        "Returns true if the entire string matches the regex (see Pattern Matching)."
+    ],
+    "Examples": [
+        "regexp_full_match('anabanana', '(an)')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_full_match('example_string', '^example_string$')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 296,
+            "Prompt Tokens": 270,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.6099999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_full_match('example_string', '^example_string$')"
+    ]
+}

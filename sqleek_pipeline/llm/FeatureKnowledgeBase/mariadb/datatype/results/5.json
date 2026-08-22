@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://mariadb.com/kb/en/integer/"
+    ],
+    "Title": [
+        "INTEGER"
+    ],
+    "Feature": [
+        "INTEGER[(M)] [SIGNED | UNSIGNED | ZEROFILL]\n"
+    ],
+    "Description": [
+        "This type is a synonym for INT."
+    ],
+    "Examples": [],
+    "Category": [
+        "Numeric Data Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 1;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 272,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.8e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 1;"
+    ]
+}

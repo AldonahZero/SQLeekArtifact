@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlupdate/"
+  ],
+  "Title": [
+    "any XMLUpdate ("
+  ],
+  "Feature": [
+    "any XMLUpdate ("
+  ],
+  "Description": [
+    "The function takes of the XML document referenced by source XML tree entity, makes a copy of that document;\nthen it modifies the copy by finding fragments that are values of path1 , path2 , ..., pathN XPATH expressions and replacing them with\nvalues specified by replacement1 , replacement2 , ..., replacementN ;\nthe modified copy is returned as the result of the function call.\nsource\npath1\npath2\npathN\nreplacement1\nreplacement2\nreplacementN\nEvery pathI should be a string that is  a correct XPATH expression.\nEvery such expression is evaluated according to the rules for XPATH expressions in XSLT (attribute entities are not cast to their string values).\nThe context node is source , context size and position are both equal to 1.\npathI\nsource\nEvery replacementI may be an XML tree entity, a NULL or a value of some other type that will be converted to varchar before use.\nreplacementI\nFor simplicity, consider the case when there is only one path1 XPATH expression parameter and only one replacement1 . First of all, a copy of the document of the source XML tree entity is created.\nThen path1 is evaluated.\npath1\nreplacement1\nsource\npath1\nIf the result of evaluation is not an XML entity then no replacement is made and\nthe copy of the source document is returned unchanged.\nIf the result is an XML entity that is not in the source document (e.g. an entity returned by the call of document(...) function.)\nthen no replacement is made either.\nIf the result of evaluation is an XML entity in the source document then the function finds a node in the copied document that is a copy of\nthe node in the source that is returned by XPATH evaluation. This node in the copied document will be referred to as a \"highlighted\" node.\nIf the result of evaluation is an attribute entity then the value of the attribute in the highlighted node is changed.\nIf replacement1 is NULL then the attribute is removed at all, otherwise its value is set to the string value of\nthe replacement1 .\nreplacement1\nreplacement1\nIf the result of evaluation is not an attribute entity but a entity then the highlighted node is replaced with the value of replacement1 .\nThe method of  replacement depends on the type of the replacement value.\nIf replacement1 is NULL then the highlighted node is simply removed from the result; if the node is the root or a\nsingle child of the root then function immediately returns NULL instead of an XML entity (because XML document can not be totally empty),\notherwise the parent of the highlighted node will simply have one child less.\nIf replacement1 is an non-empty string then the highlighted node is\nreplaced with a new text node whose string value is equal to replacement1 .\nIf replacement1 is an empty string then the effect is exactly the same as in case of NULL because the string value of a text node can not be empty.\nIf replacement1 is an XML entity that is a root entity of some document then the highlighted node is replaced with a sequence of copies of all children of that root.\nIf replacement1 is an XML entity of some other sort (XML element, text, comment etc.) then the that is not a root entity of some document then the highlighted node is replaced with a sequence of copies of all children of that root.\nreplacement1\nreplacement1\nreplacement1\nreplacement1\nreplacement1\nreplacement1\nreplacement1\nAfter editing the copied document, some normalization may happen. The modified document may contain adjacent text nodes; every sequence of such nodes\nis replaced with one text node whose string value is a concatenation of string values of that nodes. E.g. if the highlighted node is an element <a/>\nthat resides between two text nodes \"text1\" and \"text2\" and the highlighted node is removed, then these text nodes become neighbors;\nnormalization will replace them with a single text node \"text1text2\"\nNow consider the case of more than one replacement made in one function call. If more than one pair of XPATH expression and replacement is given then\nthe function first finds all highlighted nodes, all together, then it performs all replacements, then it performs an normalization.\nIt is very important to understand that the order of making replacements has nothing to do  with the order of pairs of parameters in the function call.\nIf some highlighted node is an ancestor of some other highlighted node then the effect of the replacement of the descendant highlighted node is void:\nthe descendant is replaced first; then the ancestor is replaced as a whole, no matter if some of its descendants are modified.\nIf a node is the result of two different XPATH expressions (\"highlighted more than once\"), the order of parameters in the function call\nis used to resolve ambiguity: the last pair of parameters will have a higher priority."
+  ],
+  "Examples": [
+    "select XMLUpdate (xtree_doc('<a><b><q/>-<c>Hello</c>-</b></a>'), '//c', xtree_doc('<replacement/>'))",
+    "callret",
+    "select XMLUpdate (xtree_doc('",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

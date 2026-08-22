@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_purge/"
+  ],
+  "Title": [
+    "repl_purge ("
+  ],
+  "Feature": [
+    "repl_purge ("
+  ],
+  "Description": [
+    "This procedure purges transactional replication logs for specified account.\n\nLogs whose start replication level lags more than\nREPL_MAX_DELTA (1000000000) transactions behind current replication level of\na specified account are removed. After repl_purge() is\nfinished next repl_purge() run is scheduled\nusing SYS_SCHEDULED_EVENT facility.\nrepl_purge()\nrepl_purge()\nAccount sync requests from subscribers are delayed while repl_purge() is running for this account.\nrepl_purge()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

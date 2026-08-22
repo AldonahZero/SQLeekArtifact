@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vsp_calculate_digest/"
+  ],
+  "Title": [
+    "vsp_calculate_digest ("
+  ],
+  "Feature": [
+    "vsp_calculate_digest ("
+  ],
+  "Description": [
+    "The vsp_calculate_digest() function is used to calculate on server-side a digest to perform a\nHTTP digest authentication. When the authentication type is 'digest' the function will return a md5\nchecksum based on credentials, user name and password. The checksum calculation will be made as required\nfor HTTP Digest authentication to compare against 'response' element of credentials. If the authentication\nis basic a NULL will be returned."
+  ],
+  "Examples": [
+    "create procedure app_get_auth ()",
+    "create procedure app_auth_vec (in lines any)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

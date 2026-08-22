@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_lfs_exp/"
+  ],
+  "Title": [
+    "WS.WS. LFS_EXP ("
+  ],
+  "Feature": [
+    "WS.WS. LFS_EXP ("
+  ],
+  "Description": [
+    "This function is used to export local content retrieved from a Web Robot Copy\nto the local file system."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

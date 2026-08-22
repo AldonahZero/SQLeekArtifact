@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_server_name/"
+  ],
+  "Title": [
+    "varchar REPL_SERVER_NAME ("
+  ],
+  "Feature": [
+    "varchar REPL_SERVER_NAME ("
+  ],
+  "Description": [
+    "This function should be used to determine bi-directional snapshot replication server name."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

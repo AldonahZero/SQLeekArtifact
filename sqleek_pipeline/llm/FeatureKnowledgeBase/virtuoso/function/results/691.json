@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_spki_read/"
+  ],
+  "Title": [
+    "xenc_SPKI_read ("
+  ],
+  "Feature": [
+    "xenc_SPKI_read ("
+  ],
+  "Description": [
+    "This function is used to read an RSA public key from SPKI content."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

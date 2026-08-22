@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vd_statistics/"
+  ],
+  "Title": [
+    "DB.DBA. VD_STATISTICS ("
+  ],
+  "Feature": [
+    "DB.DBA. VD_STATISTICS ("
+  ],
+  "Description": [
+    "This procedure will update the RPC round-trip statistics for\n\tselected data sources."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

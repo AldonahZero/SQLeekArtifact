@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_geometrytype/"
+  ],
+  "Title": [
+    "GeometryType ("
+  ],
+  "Feature": [
+    "GeometryType ("
+  ],
+  "Description": [
+    "GeometryType function returns EWKT type name of a given shape."
+  ],
+  "Examples": [
+    "SELECT ?s,"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

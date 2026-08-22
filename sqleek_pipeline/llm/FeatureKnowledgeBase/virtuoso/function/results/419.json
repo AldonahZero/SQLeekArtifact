@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_snp_server/"
+  ],
+  "Title": [
+    "varchar REPL_SNP_SERVER ("
+  ],
+  "Feature": [
+    "varchar REPL_SNP_SERVER ("
+  ],
+  "Description": [
+    "This function should be used to define a server for bi-directional snapshot replication."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

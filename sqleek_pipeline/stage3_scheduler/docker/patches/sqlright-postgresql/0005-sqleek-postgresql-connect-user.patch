@@ -1,0 +1,13 @@
+--- a/PostgreSQL/docker/src/AFL/afl-fuzz.cpp
++++ b/PostgreSQL/docker/src/AFL/afl-fuzz.cpp
+@@ -180,7 +180,9 @@ public:
+ 
+   PGconn *connect()
+   {
+-    string conninfo = "postgresql://localhost?port=" + to_string(bind_to_port) + "&dbname=x";
++    const char *user_env = getenv("SQLEEK_POSTGRES_USER");
++    string user = (user_env && user_env[0]) ? string(user_env) : "postgres";
++    string conninfo = "postgresql://localhost?port=" + to_string(bind_to_port) + "&dbname=x&user=" + user;
+     // const char conninfo[] = "postgresql://localhost?port=5432&dbname=x"; 
+     return PQconnectdb(conninfo.c_str());
+   }

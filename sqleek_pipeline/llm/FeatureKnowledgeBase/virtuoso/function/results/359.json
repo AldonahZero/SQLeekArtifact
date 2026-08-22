@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_quad_uri_l_typed/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_QUAD_URI_L_TYPED ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_QUAD_URI_L_TYPED ("
+  ],
+  "Description": [
+    "Performs simple insertion of a quad where object is a literal value in 'SQL valmode' and can be specified datatype and language. The arguments g_uri, s_uri and p_uri should be IRI strings or IRI_IDs. All string arguments should be in UTF-8 encoding, otherwise they will be stored but are not queryable via SPARQL."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

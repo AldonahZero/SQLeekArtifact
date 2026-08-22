@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_haversine_deg_km/"
+  ],
+  "Title": [
+    "haversine_deg_km ("
+  ],
+  "Feature": [
+    "haversine_deg_km ("
+  ],
+  "Description": [
+    "The function calculates the approximate distance between two points, using haversine formula with an adjustment\n    \tfor case when points are ends of some diameter.\nNote that the order of arguments is latitude-longitude, not longitude-latitude."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

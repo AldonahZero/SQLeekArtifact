@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rclose/"
+  ],
+  "Title": [
+    "rclose ("
+  ],
+  "Feature": [
+    "rclose ("
+  ],
+  "Description": [
+    "Closes the cursor opened to a remote DSN by the rexecute() function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

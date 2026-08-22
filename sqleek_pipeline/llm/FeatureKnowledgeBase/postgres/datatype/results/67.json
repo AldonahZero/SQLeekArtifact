@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-pseudo.html"
+    ],
+    "Title": [
+        "anycompatiblearray"
+    ],
+    "Feature": [
+        "anycompatiblearray"
+    ],
+    "Description": [
+        "Description",
+        "Indicates that a function accepts any array data type, with automatic promotion of multiple arguments to a common data type (see Section\u00a038.2.5)."
+    ],
+    "Examples": [],
+    "Category": [
+        "Pseudo-Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ARRAY[1, 2, 3]::anycompatiblearray;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 302,
+            "Prompt Tokens": 274,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 5.79e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ARRAY[1, 2, 3]::anycompatiblearray;"
+    ]
+}

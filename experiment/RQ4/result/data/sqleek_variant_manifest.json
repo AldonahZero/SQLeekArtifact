@@ -1,0 +1,86 @@
+{
+  "backup": "/root/SQLeek/experiment/RQ4/result/backups/before_pg_wo_m2_exclude_r1_20260731_135631",
+  "generated_at": "2026-07-31T07:13:34.533042+00:00",
+  "labels": {
+    "new_mariadb_stage3_replay": "SQLeek-Full",
+    "previous_rq2_mariadb_sqleek": "SQLeek-W/O-M3",
+    "mariadb_wo_m1_formal_replay": "SQLeek-W/O-M1",
+    "monetdb_full_reused_from_rq3": "SQLeek-Full"
+  },
+  "operation": "import_formal_monetdb_sqleek_full_from_rq3_into_rq4",
+  "row_counts_added_for_mariadb": {
+    "component_heatmap.csv": 16,
+    "coverage_summary.csv": 5,
+    "coverage_timeseries.csv": 47,
+    "coverage_timeseries_stats.csv": 19,
+    "rq4_sqleek_variant_metrics.csv": 2,
+    "runs.csv": 5
+  },
+  "sources": {
+    "mariadb_full_replay_data": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mariadb/replay_24h_20260717_064348/data",
+    "mariadb_full_replay_report": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mariadb/replay_24h_20260717_064348/REPLAY_RESULTS.md",
+    "mariadb_wo_m1_replay_data": "/root/SQLeek/experiment/RQ4/live/rq4_wo_m1_mariadb_coverage_replay_20260801_172000/data",
+    "old_rq2_mariadb_sqleek_ablation_source": "/root/SQLeek/experiment/RQ2/result/data",
+    "monetdb_full_rq3_replay_data": "/root/SQLeek/experiment/RQ3/result/data"
+  },
+  "previous_backup": "/root/SQLeek/experiment/RQ4/result/backups/before_pg_wo_m2_update_20260731_130850",
+  "row_counts_added_for_monetdb_full": {
+    "coverage_summary.csv": 5,
+    "coverage_timeseries.csv": 45,
+    "coverage_timeseries_stats.csv": 9,
+    "component_heatmap.csv": 8,
+    "runs.csv": 5
+  },
+  "last_update": {
+    "operation": "exclude_invalid_postgresql_wo_m2_r1_from_rq4_aggregation",
+    "generated_at": "2026-07-31T14:00:58Z",
+    "source_package": "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_postgres_bucketed_seq_replay_mtime_20260731_060212/data",
+    "variant": "SQLeek-W/O-M2",
+    "dbms": "PostgreSQL",
+    "valid_repeat_ids": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "excluded_repeat_ids": [
+      1
+    ],
+    "excluded_reason": "r1 container reported faulty; raw replay package retained unchanged",
+    "repeats": 4,
+    "checkpoints_per_repeat": 9,
+    "source_denominators": {
+      "risk_branches_total": 32.0,
+      "risk_targets_total": 46.0,
+      "global_branches_total": 249514.0
+    },
+    "shared_denominators": {
+      "risk_branches_total": 3200.0,
+      "risk_targets_total": 4845.0,
+      "global_branches_total": 170620.0
+    },
+    "ratios_preserved": true,
+    "rows_added": {
+      "coverage_summary": 4,
+      "coverage_timeseries": 36,
+      "coverage_timeseries_stats": 9,
+      "runs": 4,
+      "component_heatmap": 4
+    },
+    "backup": "/root/SQLeek/experiment/RQ4/result/backups/before_pg_wo_m2_exclude_r1_20260731_135631"
+  },
+  "latest_import": {
+    "operation": "import_formal_mariadb_wo_m1_coverage_replay",
+    "generated_at": "2026-08-02T05:02:42+00:00",
+    "variant": "SQLeek-W/O-M1",
+    "dbms": "MariaDB",
+    "repeats": 5,
+    "checkpoints_per_repeat": 10,
+    "backup": "/root/SQLeek/experiment/RQ4/result/backups/before_mariadb_wo_m1_update_20260802_050000",
+    "denominators": {
+      "risk_branches_total": 4248,
+      "risk_targets_total": 3041,
+      "global_branches_total": 295012
+    }
+  }
+}

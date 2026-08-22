@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_decrypt/"
+  ],
+  "Title": [
+    "varchar decrypt ("
+  ],
+  "Feature": [
+    "varchar decrypt ("
+  ],
+  "Description": [
+    "Returns decrypted content as a string_session. The algorithm to encrypt depends of the key, so if the\n    key is AES the AES will be used, if it is 3DES it is 3DES etc. The AES key can be created with\n    xenc_key_AES_rand_create (key_name, 256). Alternatively 3DES key can be generated with\n    xenc_key_3DES_rand_create ()."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

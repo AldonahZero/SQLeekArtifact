@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cov_load/"
+  ],
+  "Title": [
+    "cov_load ("
+  ],
+  "Feature": [
+    "cov_load ("
+  ],
+  "Description": [
+    "This function accepts one argument with name of file containing \n    test coverage data.  The expected format of the file is described in \n    the Branch Coverage section.  \n    The loaded file is merged with the data already collected by Virtuoso.  \n    More than one file can be loaded.  The ultimate report will be the union \n    of all files."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

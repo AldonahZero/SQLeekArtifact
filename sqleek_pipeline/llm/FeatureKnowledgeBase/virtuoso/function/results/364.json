@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_repl_stop/"
+  ],
+  "Title": [
+    "RDF_REPL_STOP ("
+  ],
+  "Feature": [
+    "RDF_REPL_STOP ("
+  ],
+  "Description": [
+    "This function stops the RDF replication at the publishing side. It calls repl_unpublish but does not make empty reates replication\n\t\t\t\t\"publication\" named '__rdf_repl' and makes a log file '__rdf_repl.log' to record changes in replicated graphs.\nrepl_unpublish"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "localtimestamp()"
+    ],
+    "Feature": [
+        "localtimestamp()"
+    ],
+    "Description": [
+        "Return type: ",
+        "timestamp",
+        "get current local timestamp (date and time and fractions) without time zone"
+    ],
+    "Examples": [
+        "localtimestamp()"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT localtimestamp();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.965e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT localtimestamp();"
+    ]
+}

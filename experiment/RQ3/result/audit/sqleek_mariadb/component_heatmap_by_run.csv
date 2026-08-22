@@ -1,0 +1,17 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mariadb_sqleek_r1,mariadb,1,type_system,SQLeek,2206,1061,0.48096101541251135,996,682,0.6896918172157279
+mariadb_sqleek_r1,mariadb,1,storage,SQLeek,4,1,0.25,1,1,1.0
+mariadb_sqleek_r1,mariadb,1,other,SQLeek,1594,958,0.6010037641154329,415,319,0.7694174757281553
+mariadb_sqleek_r1,mariadb,1,optimizer,SQLeek,170,117,0.6882352941176471,32,30,0.9333333333333333
+mariadb_sqleek_r1,mariadb,1,executor,SQLeek,2,0,0.0,1,0,0.0
+mariadb_sqleek_r1,mariadb,1,cursor_prepared,SQLeek,214,155,0.7242990654205608,3,1,0.3333333333333333
+mariadb_sqleek_r1,mariadb,1,parser,SQLeek,64,53,0.828125,5,5,1.0
+mariadb_sqleek_r1,mariadb,1,catalog_metadata,SQLeek,56,26,0.4642857142857143,31,14,0.45161290322580644
+mariadb_sqleek_r2,mariadb,2,type_system,SQLeek,2206,1052,0.4768812330009066,996,672,0.6780021253985122
+mariadb_sqleek_r2,mariadb,2,storage,SQLeek,4,1,0.25,1,1,1.0
+mariadb_sqleek_r2,mariadb,2,other,SQLeek,1594,959,0.6016311166875784,415,316,0.7621359223300971
+mariadb_sqleek_r2,mariadb,2,optimizer,SQLeek,170,115,0.6764705882352942,32,31,0.9666666666666667
+mariadb_sqleek_r2,mariadb,2,executor,SQLeek,2,0,0.0,1,0,0.0
+mariadb_sqleek_r2,mariadb,2,cursor_prepared,SQLeek,214,159,0.7429906542056075,3,1,0.3333333333333333
+mariadb_sqleek_r2,mariadb,2,parser,SQLeek,64,54,0.84375,5,5,1.0
+mariadb_sqleek_r2,mariadb,2,catalog_metadata,SQLeek,56,26,0.4642857142857143,31,14,0.45161290322580644

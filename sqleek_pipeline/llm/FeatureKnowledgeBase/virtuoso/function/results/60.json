@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_script_upload/"
+  ],
+  "Title": [
+    "BPEL.BPEL.script_upload ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.script_upload ("
+  ],
+  "Description": [
+    "BPEL.BPEL.script_upload uploads a new BPEL script, makes expanded version,\n\tand put into edit mode. If content is supplied the function will not try to download or check\n\tthe URL specified.\nBPEL.BPEL.script_upload"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

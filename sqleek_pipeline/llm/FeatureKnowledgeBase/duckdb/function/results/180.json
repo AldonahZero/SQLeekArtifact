@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/interval"
+    ],
+    "Title": [
+        "to_millennia(integer)"
+    ],
+    "Feature": [
+        "to_millennia(integer)"
+    ],
+    "Description": [
+        "Construct a millennium interval."
+    ],
+    "Examples": [
+        "to_millennia(5)"
+    ],
+    "Category": [
+        "Interval Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT to_millennia(5);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.1149999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT to_millennia(5);"
+    ]
+}

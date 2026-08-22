@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_lh_load_handler/"
+  ],
+  "Title": [
+    "int lh_load_handler ("
+  ],
+  "Feature": [
+    "int lh_load_handler ("
+  ],
+  "Description": [
+    "Loads given handler in global table of the server, using ISO 639 and\nRFC 1766 language IDs of the handler as keys for future table lookups.\nIf another handler was already specified for given RFC 1766 id, table entry\nwill be updated and will refer to new handler. If another handler was already\nspecified for given ISO 639 id, it will be replaced only if new handler has\nISO 639 language ID equal to its RFC 1766 ID.\nPlease do not load custom versions of 'x-any' and 'x-ftq-x-any' handlers."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

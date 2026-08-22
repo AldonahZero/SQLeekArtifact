@@ -1,0 +1,532 @@
+diff --git a/SQLite/docker/fuzz_root/sqlaser/sqlite_target_chains.tsv b/SQLite/docker/fuzz_root/sqlaser/sqlite_target_chains.tsv
+new file mode 100644
+index 0000000..9875b20
+--- /dev/null
++++ b/SQLite/docker/fuzz_root/sqlaser/sqlite_target_chains.tsv
+@@ -0,0 +1,11 @@
++# pattern_id	clause_chain	target_call_chain	weight	enabled
++# Clause chains are lower-case SQL feature prefixes used for lightweight
++# seed-to-target distance. Function chains are SQLite 3.54.0 mapping candidates
++# and must be validated by source/trace before target claims.
++sqlite_index_pk_without_rowid_nocase	create table|primary key|without rowid|collate nocase|create index	sqlite3StartTable|sqlite3AddPrimaryKey|sqlite3EndTable|sqlite3CreateIndex	2	1
++sqlite_partial_index_likely	create index|where|likely	sqlite3CreateIndex|sqlite3ExprFunction|sqlite3ResolveExprNames	2	1
++sqlite_column_cast	select|cast	sqlite3Select|sqlite3ExprCodeTarget|sqlite3VdbeAddOp	1	1
++sqlite_cast_exists	cast|exists	sqlite3ExprCodeTarget|sqlite3CodeSubselect|sqlite3Select	1	1
++sqlite_distinct_order_by	select distinct|order by	sqlite3Select|sqlite3SelectPrep|sqlite3WhereBegin|sqlite3VdbeAddOp	2	1
++sqlite_view_index	create view|create index	sqlite3CreateView|sqlite3CreateIndex|sqlite3FixInit	1	1
++sqlite_in_order_by	 in |order by	sqlite3ExprCodeIN|sqlite3Select|sqlite3WhereBegin	1	1
+diff --git a/SQLite/docker/src/AFL/afl-fuzz.cpp b/SQLite/docker/src/AFL/afl-fuzz.cpp
+index e3aa949..f0ca1bf 100644
+--- a/SQLite/docker/src/AFL/afl-fuzz.cpp
++++ b/SQLite/docker/src/AFL/afl-fuzz.cpp
+@@ -325,6 +325,25 @@ static s32 cpu_aff = -1; /* Selected CPU core                */
+ 
+ static FILE *plot_file; /* Gnuplot output file              */
+ 
++struct sqlaser_target_chain {
++  string pattern_id;
++  vector<string> clause_chain;
++  vector<string> target_call_chain;
++  u32 weight;
++};
++
++static u8 sqlaser_enabled = 0;
++static string sqlaser_targets_path;
++static vector<sqlaser_target_chain> sqlaser_targets;
++static FILE *sqlaser_seed_meta_file = NULL;
++
++u64 sqlaser_total_scored = 0;
++u64 sqlaser_progress_seeds = 0;
++u64 sqlaser_chain_hits = 0;
++u64 sqlaser_energy_boosts = 0;
++u32 sqlaser_best_progress = 0;
++u32 sqlaser_best_distance = 0xffffffffu;
++
+ struct queue_entry {
+ 
+   u8 *fname; /* File name for the test case      */
+@@ -349,6 +368,12 @@ struct queue_entry {
+   u8 *trace_mini; /* Trace bytes, if kept             */
+   u32 tc_ref;     /* Trace bytes ref count            */
+ 
++  u8 sqlaser_has_meta;       /* SQLaser distance metadata ready? */
++  u32 sqlaser_target_id;     /* Selected target chain index      */
++  u32 sqlaser_chain_progress;
++  u32 sqlaser_chain_len;
++  u32 sqlaser_distance;
++
+   struct queue_entry *next, /* Next element, if any             */
+       *next_100;            /* 100 elements ahead               */
+ };
+@@ -377,6 +402,252 @@ static u32 a_extras_cnt;            /* Total number of tokens available */
+ 
+ static u8 *(*post_handler)(u8 *buf, u32 *len);
+ 
++static string sqlaser_trim(const string &s) {
++
++  size_t begin = 0, end = s.size();
++  while (begin < end && isspace((unsigned char)s[begin]))
++    begin++;
++  while (end > begin && isspace((unsigned char)s[end - 1]))
++    end--;
++  return s.substr(begin, end - begin);
++}
++
++static string sqlaser_lower(string s) {
++
++  transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
++    return (char)tolower(c);
++  });
++  return s;
++}
++
++static vector<string> sqlaser_split(const string &s, char sep) {
++
++  vector<string> parts;
++  string item;
++  stringstream ss(s);
++
++  while (getline(ss, item, sep)) {
++    item = sqlaser_trim(item);
++    if (!item.empty())
++      parts.push_back(sqlaser_lower(item));
++  }
++
++  return parts;
++}
++
++static u8 sqlaser_env_enabled(const char *value) {
++
++  if (!value)
++    return 0;
++
++  string v = sqlaser_lower(sqlaser_trim(value));
++  return v == "1" || v == "true" || v == "yes" || v == "on";
++}
++
++static string sqlaser_read_file(u8 *path) {
++
++  if (!path)
++    return "";
++
++  ifstream in((char *)path, ios::in | ios::binary);
++  if (!in)
++    return "";
++
++  stringstream buffer;
++  buffer << in.rdbuf();
++  return buffer.str();
++}
++
++static void sqlaser_load_targets(void) {
++
++  const char *path_env = getenv("SQLASER_TARGETS");
++  sqlaser_targets_path = path_env ? path_env : "./sqlaser/sqlite_target_chains.tsv";
++
++  ifstream in(sqlaser_targets_path);
++  if (!in) {
++    WARNF("SQLaser enabled but target file not found: %s",
++          sqlaser_targets_path.c_str());
++    sqlaser_enabled = 0;
++    return;
++  }
++
++  string line;
++  while (getline(in, line)) {
++
++    line = sqlaser_trim(line);
++    if (line.empty() || line[0] == '#')
++      continue;
++
++    vector<string> cols;
++    string col;
++    stringstream ss(line);
++    while (getline(ss, col, '\t'))
++      cols.push_back(sqlaser_trim(col));
++
++    if (cols.size() < 5)
++      continue;
++
++    string enabled = sqlaser_lower(cols[4]);
++    if (!(enabled == "1" || enabled == "true" || enabled == "yes"))
++      continue;
++
++    sqlaser_target_chain target;
++    target.pattern_id = cols[0];
++    target.clause_chain = sqlaser_split(cols[1], '|');
++    target.target_call_chain = sqlaser_split(cols[2], '|');
++    target.weight = (u32)MAX(1, atoi(cols[3].c_str()));
++
++    if (!target.clause_chain.empty())
++      sqlaser_targets.push_back(target);
++  }
++
++  if (sqlaser_targets.empty()) {
++    WARNF("SQLaser enabled but no active target chains were loaded.");
++    sqlaser_enabled = 0;
++    return;
++  }
++
++  OKF("SQLaser loaded %zu SQLite target chains from %s",
++      sqlaser_targets.size(), sqlaser_targets_path.c_str());
++}
++
++static void sqlaser_configure_from_env(void) {
++
++  sqlaser_enabled = sqlaser_env_enabled(getenv("SQLASER_ENABLE"));
++  if (!sqlaser_enabled)
++    return;
++
++  sqlaser_load_targets();
++}
++
++static FILE *sqlaser_open_seed_meta_file(void) {
++
++  if (!sqlaser_enabled || !out_dir)
++    return NULL;
++
++  if (sqlaser_seed_meta_file)
++    return sqlaser_seed_meta_file;
++
++  u8 *path = alloc_printf("%s/sqlaser_seed_metadata.tsv", out_dir);
++  struct stat st;
++  u8 need_header = stat((char *)path, &st) || st.st_size == 0;
++
++  sqlaser_seed_meta_file = fopen((char *)path, "a");
++  if (!sqlaser_seed_meta_file) {
++    WARNF("Unable to create SQLaser seed metadata log: %s", path);
++    ck_free(path);
++    return NULL;
++  }
++
++  if (need_header)
++    fprintf(sqlaser_seed_meta_file,
++            "queue_file\tsource\tpattern_id\tprogress\tchain_len\tdistance\tweight\n");
++
++  ck_free(path);
++  return sqlaser_seed_meta_file;
++}
++
++static void sqlaser_score_queue_entry(struct queue_entry *q,
++                                      const string &query,
++                                      const char *source) {
++
++  if (!sqlaser_enabled || !q || query.empty() || sqlaser_targets.empty())
++    return;
++
++  string lower_query = sqlaser_lower(query);
++  u32 best_target = 0xffffffffu;
++  u32 best_progress = 0;
++  u32 best_len = 0;
++  u32 best_distance = 0xffffffffu;
++
++  for (u32 i = 0; i < sqlaser_targets.size(); i++) {
++
++    const sqlaser_target_chain &target = sqlaser_targets[i];
++    size_t pos = 0;
++    u32 progress = 0;
++
++    for (const string &clause : target.clause_chain) {
++
++      size_t found = lower_query.find(clause, pos);
++      if (found == string::npos)
++        break;
++
++      progress++;
++      pos = found + clause.size();
++    }
++
++    u32 chain_len = target.clause_chain.size();
++    u32 distance = chain_len - progress;
++    if (!progress)
++      distance++;
++
++    if (distance < best_distance ||
++        (distance == best_distance && progress > best_progress)) {
++      best_target = i;
++      best_progress = progress;
++      best_len = chain_len;
++      best_distance = distance;
++    }
++  }
++
++  if (best_target == 0xffffffffu)
++    return;
++
++  q->sqlaser_has_meta = 1;
++  q->sqlaser_target_id = best_target;
++  q->sqlaser_chain_progress = best_progress;
++  q->sqlaser_chain_len = best_len;
++  q->sqlaser_distance = best_distance;
++
++  sqlaser_total_scored++;
++  if (best_progress)
++    sqlaser_progress_seeds++;
++  if (best_distance == 0)
++    sqlaser_chain_hits++;
++  if (best_progress > sqlaser_best_progress)
++    sqlaser_best_progress = best_progress;
++  if (best_distance < sqlaser_best_distance)
++    sqlaser_best_distance = best_distance;
++
++  FILE *meta = sqlaser_open_seed_meta_file();
++  if (meta) {
++    const sqlaser_target_chain &target = sqlaser_targets[best_target];
++    fprintf(meta, "%s\t%s\t%s\t%u\t%u\t%u\t%u\n",
++            q->fname ? (char *)q->fname : "",
++            source ? source : "unknown",
++            target.pattern_id.c_str(), best_progress, best_len, best_distance,
++            target.weight);
++    fflush(meta);
++  }
++}
++
++static u32 sqlaser_energy_rounds(struct queue_entry *q) {
++
++  if (!sqlaser_enabled || !q || !q->sqlaser_has_meta || !q->sqlaser_chain_len ||
++      q->sqlaser_target_id >= sqlaser_targets.size())
++    return 1;
++
++  u32 rounds = 1;
++
++  if (q->sqlaser_distance == 0)
++    rounds = 4;
++  else if (q->sqlaser_distance == 1)
++    rounds = 3;
++  else if (q->sqlaser_distance == 2)
++    rounds = 2;
++  else if (q->sqlaser_chain_progress)
++    rounds = 2;
++
++  rounds *= MAX(1, sqlaser_targets[q->sqlaser_target_id].weight);
++  if (rounds > 6)
++    rounds = 6;
++
++  if (rounds > 1)
++    sqlaser_energy_boosts++;
++
++  return rounds;
++}
++
+ /* Interesting values, as per config.h */
+ 
+ static s8 interesting_8[] = {INTERESTING_8};
+@@ -938,6 +1209,12 @@ static void add_to_queue(u8 *fname, u32 len, u8 passed_det) {
+   last_path_time = get_cur_time();
+ 
+   q_len++;
++
++  if (sqlaser_enabled) {
++    string seed_query = sqlaser_read_file(fname);
++    if (!seed_query.empty())
++      sqlaser_score_queue_entry(q, seed_query, "input");
++  }
+ }
+ 
+ /* Write bitmap to file. The bitmap is useful mostly for the secret
+@@ -3934,6 +4211,8 @@ static u8 save_if_interesting(char **argv, string &query_str, const ALL_COMP_RES
+              fn);
+     close(fd);
+ 
++    sqlaser_score_queue_entry(queue_top, stripped_query_string, "generated");
++
+     keeping = 1;
+   }
+ 
+@@ -4290,7 +4569,7 @@ static void maybe_update_plot_file(double bitmap_cvg, double eps) {
+      execs_per_sec */
+ 
+   fprintf(plot_file,
+-          "%llu, %llu, %u, %u, %u, %u, %0.02f%%, %llu, %llu, %u, %0.02f, %u, %u, %u, %0.02f%%, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %0.02f%%, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u\n",
++          "%llu, %llu, %u, %u, %u, %u, %0.02f%%, %llu, %llu, %u, %0.02f, %u, %u, %u, %0.02f%%, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %0.02f%%, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %u, %llu, %llu, %llu, %llu\n",
+           get_cur_time() / 1000, queue_cycle - 1, current_entry, queued_paths,
+           pending_not_fuzzed, pending_favored, bitmap_cvg, unique_crashes,
+           unique_hangs, max_depth, eps, 
+@@ -4303,7 +4582,11 @@ static void maybe_update_plot_file(double bitmap_cvg, double eps) {
+           bug_output_id, queued_with_cov,total_execs,
+           num_parse,num_mutate_all,num_reparse,num_append,num_validate,num_common_fuzz,
+           num_total_mutate_all_tree_size / (num_mutate_all+1),
+-          total_mutate_gen_num, total_mutate_gen_failed, p_oracle->total_oracle_rand_valid_failed, num_total_mutate_all_before_ir_set_size / (num_mutate_all+1)
++          total_mutate_gen_num, total_mutate_gen_failed, p_oracle->total_oracle_rand_valid_failed, num_total_mutate_all_before_ir_set_size / (num_mutate_all+1),
++          sqlaser_enabled, (u32)sqlaser_targets.size(), sqlaser_best_progress,
++          sqlaser_best_distance == 0xffffffffu ? 0 : sqlaser_best_distance,
++          sqlaser_total_scored, sqlaser_progress_seeds, sqlaser_chain_hits,
++          sqlaser_energy_boosts
+           ); /* ignore errors */
+   fflush(plot_file);
+ }
+@@ -5632,6 +5915,28 @@ static u32 calculate_score(struct queue_entry *q) {
+     perf_score *= 5;
+   }
+ 
++  if (sqlaser_enabled && q->sqlaser_has_meta && q->sqlaser_chain_len) {
++
++    u32 boost_pct = 100;
++
++    if (q->sqlaser_distance == 0)
++      boost_pct = 400;
++    else if (q->sqlaser_distance == 1)
++      boost_pct = 300;
++    else if (q->sqlaser_distance == 2)
++      boost_pct = 200;
++    else if (q->sqlaser_chain_progress)
++      boost_pct = 150;
++
++    boost_pct *= MAX(1, sqlaser_targets[q->sqlaser_target_id].weight);
++    if (boost_pct > 600)
++      boost_pct = 600;
++
++    if (boost_pct > 100) {
++      perf_score = (perf_score * boost_pct) / 100;
++    }
++  }
++
+   /* Make sure that we don't go over limit. */
+ 
+   if (perf_score > HAVOC_MAX_MULT * 100)
+@@ -5876,6 +6181,7 @@ static u8 fuzz_one(char **argv) {
+   vector<IR*> ori_valid_stmts;
+   char *tmp_name = stage_name;
+   int skip_count;
++  u32 sqlaser_rounds = 1;
+   string input;
+ 
+ #ifdef IGNORE_FINDS
+@@ -6046,6 +6352,14 @@ static u8 fuzz_one(char **argv) {
+     goto abandon_entry;
+   }
+ 
++  sqlaser_rounds = sqlaser_energy_rounds(queue_cur);
++  for (u32 sqlaser_round = 1; sqlaser_round < sqlaser_rounds; sqlaser_round++) {
++    vector<string *> extra_mutated_tree =
++        g_mutator.mutate_all(ir_set, total_mutate_gen_num, total_mutate_gen_failed);
++    mutated_tree.insert(mutated_tree.end(), extra_mutated_tree.begin(),
++                        extra_mutated_tree.end());
++  }
++
+   num_mutate_all++;
+   num_total_mutate_all_tree_size += mutated_tree.size();
+   num_total_mutate_all_before_ir_set_size += ir_set.size();
+@@ -6846,7 +7160,8 @@ EXP_ST void setup_dirs_fds(void) {
+                      "total_mutate_num,total_oracle_mutate_failed,total_oracle_mutate,"
+                      "total_append_failed,total_cri_valid_stmts_lib,total_valid_stmts_lib,"
+                      "total_bad_statms,total_good_stmts,total_good_rate,but_output_id,new_edges_on,total_execs,"
+-                     "num_parse,num_mutate_all,num_reparse,num_append,num_validate,num_common_fuzz,avg_mutate_all_num,total_mutate_gen_num,total_mutate_gen_failed," "total_oracle_rand_valid_failed,avg_ir_set_size"
++                     "num_parse,num_mutate_all,num_reparse,num_append,num_validate,num_common_fuzz,avg_mutate_all_num,total_mutate_gen_num,total_mutate_gen_failed," "total_oracle_rand_valid_failed,avg_ir_set_size,"
++                     "sqlaser_enabled,sqlaser_target_count,sqlaser_best_progress,sqlaser_best_distance,sqlaser_total_scored,sqlaser_progress_seeds,sqlaser_chain_hits,sqlaser_energy_boosts"
+                      "\n");
+   /* ignore errors */
+ }
+@@ -7426,6 +7741,8 @@ int main(int argc, char **argv) {
+   gettimeofday(&tv, &tz);
+   srandom(tv.tv_sec ^ tv.tv_usec ^ getpid());
+ 
++  sqlaser_configure_from_env();
++
+   while ((opt = getopt(argc, argv, "+i:o:f:m:t:T:dnCB:S:M:x:QDF:c:EO:s:w")) > 0)
+ 
+     switch (opt) {
+diff --git a/patterns/sqlite/sqlaser_patterns.yaml b/patterns/sqlite/sqlaser_patterns.yaml
+new file mode 100644
+index 0000000..5d6c3e2
+--- /dev/null
++++ b/patterns/sqlite/sqlaser_patterns.yaml
+@@ -0,0 +1,98 @@
++sqlite_version: "3.54.0"
++manifest_uuid: "3c0a277e6741c72281e12c44d85902aa6780890a7f59bacc3ac2b35ba27f7211"
++source_path: "/root/SQLeek/sources/sqlite"
++runtime_config: "SQLite/docker/fuzz_root/sqlaser/sqlite_target_chains.tsv"
++mapping_policy: "target functions are treated as candidates until source and dynamic trace validation are complete"
++
++patterns:
++  - pattern_id: sqlite_index_pk_without_rowid_nocase
++    clause_combination: ["INDEX", "PRIMARY KEY", "WITHOUT ROWID", "NOCASE"]
++    known_bug_id: pending
++    trigger_sql: "CREATE TABLE t(a TEXT COLLATE NOCASE PRIMARY KEY) WITHOUT ROWID; CREATE INDEX i ON t(a);"
++    oracle: pending
++    target_functions: ["sqlite3StartTable", "sqlite3AddPrimaryKey", "sqlite3EndTable", "sqlite3CreateIndex"]
++    target_call_chain: ["sqlite3StartTable", "sqlite3AddPrimaryKey", "sqlite3EndTable", "sqlite3CreateIndex"]
++    chain_source: "static candidate"
++    sqlite_original_version: pending
++    sqlite_354_mapping: pending_dynamic_trace
++    enabled: true
++    validation_status: pending_trace
++    notes: "Phase-1 scheduling pattern; target mapping still requires SQLite 3.54.0 trace confirmation."
++  - pattern_id: sqlite_partial_index_likely
++    clause_combination: ["partial INDEX", "LIKELY"]
++    known_bug_id: pending
++    trigger_sql: "CREATE INDEX i ON t(a) WHERE likely(a > 0);"
++    oracle: pending
++    target_functions: ["sqlite3CreateIndex", "sqlite3ExprFunction", "sqlite3ResolveExprNames"]
++    target_call_chain: ["sqlite3CreateIndex", "sqlite3ExprFunction", "sqlite3ResolveExprNames"]
++    chain_source: "static candidate"
++    sqlite_original_version: pending
++    sqlite_354_mapping: pending_dynamic_trace
++    enabled: true
++    validation_status: pending_trace
++    notes: "Phase-1 scheduling pattern."
++  - pattern_id: sqlite_column_cast
++    clause_combination: ["column value", "CAST"]
++    known_bug_id: pending
++    trigger_sql: "SELECT CAST(a AS TEXT) FROM t;"
++    oracle: pending
++    target_functions: ["sqlite3Select", "sqlite3ExprCodeTarget", "sqlite3VdbeAddOp"]
++    target_call_chain: ["sqlite3Select", "sqlite3ExprCodeTarget", "sqlite3VdbeAddOp"]
++    chain_source: "static candidate"
++    sqlite_original_version: pending
++    sqlite_354_mapping: pending_dynamic_trace
++    enabled: true
++    validation_status: pending_trace
++    notes: "Phase-1 scheduling pattern."
++  - pattern_id: sqlite_cast_exists
++    clause_combination: ["CAST", "EXISTS"]
++    known_bug_id: pending
++    trigger_sql: "SELECT CAST(EXISTS(SELECT 1 FROM t) AS INT);"
++    oracle: pending
++    target_functions: ["sqlite3ExprCodeTarget", "sqlite3CodeSubselect", "sqlite3Select"]
++    target_call_chain: ["sqlite3ExprCodeTarget", "sqlite3CodeSubselect", "sqlite3Select"]
++    chain_source: "static candidate"
++    sqlite_original_version: pending
++    sqlite_354_mapping: pending_dynamic_trace
++    enabled: true
++    validation_status: pending_trace
++    notes: "Phase-1 scheduling pattern."
++  - pattern_id: sqlite_distinct_order_by
++    clause_combination: ["DISTINCT", "ORDER BY"]
++    known_bug_id: pending
++    trigger_sql: "SELECT DISTINCT a FROM t ORDER BY a;"
++    oracle: pending
++    target_functions: ["sqlite3Select", "sqlite3SelectPrep", "sqlite3WhereBegin", "sqlite3VdbeAddOp"]
++    target_call_chain: ["sqlite3Select", "sqlite3SelectPrep", "sqlite3WhereBegin", "sqlite3VdbeAddOp"]
++    chain_source: "static candidate"
++    sqlite_original_version: pending
++    sqlite_354_mapping: pending_dynamic_trace
++    enabled: true
++    validation_status: pending_trace
++    notes: "Phase-1 scheduling pattern."
++  - pattern_id: sqlite_view_index
++    clause_combination: ["VIEW", "INDEX"]
++    known_bug_id: pending
++    trigger_sql: "CREATE VIEW v AS SELECT a FROM t; CREATE INDEX i ON t(a);"
++    oracle: pending
++    target_functions: ["sqlite3CreateView", "sqlite3CreateIndex", "sqlite3FixInit"]
++    target_call_chain: ["sqlite3CreateView", "sqlite3CreateIndex", "sqlite3FixInit"]
++    chain_source: "static candidate"
++    sqlite_original_version: pending
++    sqlite_354_mapping: pending_dynamic_trace
++    enabled: true
++    validation_status: pending_trace
++    notes: "Phase-1 scheduling pattern."
++  - pattern_id: sqlite_in_order_by
++    clause_combination: ["IN", "ORDER BY"]
++    known_bug_id: pending
++    trigger_sql: "SELECT a FROM t WHERE a IN (SELECT a FROM t) ORDER BY a;"
++    oracle: pending
++    target_functions: ["sqlite3ExprCodeIN", "sqlite3Select", "sqlite3WhereBegin"]
++    target_call_chain: ["sqlite3ExprCodeIN", "sqlite3Select", "sqlite3WhereBegin"]
++    chain_source: "static candidate"
++    sqlite_original_version: pending
++    sqlite_354_mapping: pending_dynamic_trace
++    enabled: true
++    validation_status: pending_trace
++    notes: "Phase-1 scheduling pattern."

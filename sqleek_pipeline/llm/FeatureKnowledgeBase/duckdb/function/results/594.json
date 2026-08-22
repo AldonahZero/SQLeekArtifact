@@ -1,0 +1,68 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/utility"
+    ],
+    "Title": [
+        "query(query_string_literal)"
+    ],
+    "Feature": [
+        "query(query_string_literal)"
+    ],
+    "Description": [
+        "Table function that parses and executes the query defined in query_string_literal. Only literal strings are allowed. Warning: this function allows invoking arbitrary queries, potentially altering the database state."
+    ],
+    "Examples": [
+        "query('SELECT 42 AS x')"
+    ],
+    "Category": [
+        "Utility Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "query('SELECT * FROM my_table')",
+        "query('SELECT * FROM my_table')",
+        "SELECT * FROM (query('SELECT * FROM my_table'))",
+        "query('SELECT * FROM my_table')",
+        "query('SELECT 1')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 304,
+            "Prompt Tokens": 283,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.5049999999999996e-05
+        },
+        {
+            "Total Tokens": 453,
+            "Prompt Tokens": 432,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 7.739999999999998e-05
+        },
+        {
+            "Total Tokens": 606,
+            "Prompt Tokens": 581,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 0.00010214999999999999
+        },
+        {
+            "Total Tokens": 754,
+            "Prompt Tokens": 733,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 0.00012255
+        },
+        {
+            "Total Tokens": 901,
+            "Prompt Tokens": 882,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 0.0001437
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.ParserException) Parser Error: syntax error at or near \"query\"\n",
+        "(duckdb.duckdb.ParserException) Parser Error: syntax error at or near \"query\"\n",
+        "(duckdb.duckdb.ParserException) Parser Error: syntax error at or near \")\"\n",
+        "(duckdb.duckdb.ParserException) Parser Error: syntax error at or near \"query\"\n",
+        "(duckdb.duckdb.ParserException) Parser Error: syntax error at or near \"query\"\n"
+    ],
+    "EffectiveSQLs": []
+}

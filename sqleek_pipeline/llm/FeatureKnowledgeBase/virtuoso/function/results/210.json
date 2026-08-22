@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_get/"
+  ],
+  "Title": [
+    "varchar http_get ("
+  ],
+  "Feature": [
+    "varchar http_get ("
+  ],
+  "Description": [
+    "http_get returns a varchar containing the body of the\nrequested target_uri or NULL if the body is not received."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

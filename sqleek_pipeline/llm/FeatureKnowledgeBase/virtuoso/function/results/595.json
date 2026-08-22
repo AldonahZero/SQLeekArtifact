@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_txn_error/"
+  ],
+  "Title": [
+    "txn_error ("
+  ],
+  "Feature": [
+    "txn_error ("
+  ],
+  "Description": [
+    "Calling this function will poison the current transaction. This means that\nit is forced to roll back at when committed. The code can be\nin integer that selects the error message generated when trying to commit.\nThis is useful before signalling application errors from SQL code that runs\nin manual commit mode. This can ensure that even if the client attempts\na commit after getting the error signalled by the application the transaction\nwill not commit.\nIn most cases the code should be the constant 6, resulting the in the 'transaction\nrolled back due to previous SQL Error'.\nTable 24.84. Transaction error codes\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

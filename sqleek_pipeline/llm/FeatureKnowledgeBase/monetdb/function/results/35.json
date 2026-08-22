@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "log(x)"
+    ],
+    "Feature": [
+        "log(x)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double",
+        "natural logarithm, same as ln(x)"
+    ],
+    "Examples": [
+        "log(2.0)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT log(x);",
+        "SELECT log(1);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 275,
+            "Prompt Tokens": 258,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.8899999999999996e-05
+        },
+        {
+            "Total Tokens": 421,
+            "Prompt Tokens": 403,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 7.125e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 'x' unknown\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT log(1);"
+    ]
+}

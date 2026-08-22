@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/json-functions-search"
+    ],
+    "Title": [
+        "JSON_EXTRACT()"
+    ],
+    "Feature": [
+        "JSON_EXTRACT()"
+    ],
+    "Description": [
+        "JSON_EXTRACT()",
+        "JSON_EXTRACT(json_doc, path[, path] ...) \u51fd\u6570\u4ece JSON \u6587\u6863\u4e2d\u63d0\u53d6\u4e0e path \u53c2\u6570\u5339\u914d\u7684\u6570\u636e\u3002",
+        "SELECT JSON_EXTRACT('{\"foo\": \"bar\", \"aaa\": 5}', '$.foo');\n",
+        "+---------------------------------------------------+\n| JSON_EXTRACT('{\"foo\": \"bar\", \"aaa\": 5}', '$.foo') |\n+---------------------------------------------------+\n| \"bar\"                                             |\n+---------------------------------------------------+\n1 row in set (0.00 sec)\n",
+        "->",
+        "column->path \u51fd\u6570\u8fd4\u56de column \u4e2d\u4e0e path \u53c2\u6570\u5339\u914d\u7684\u6570\u636e\u3002\u8be5\u51fd\u6570\u662f JSON_EXTRACT() \u7684\u522b\u540d\u3002",
+        "SELECT\n    j->'$.foo',\n    JSON_EXTRACT(j, '$.foo')\nFROM (\n    SELECT\n        '{\"foo\": \"bar\", \"aaa\": 5}' AS j\n    ) AS tbl;\n",
+        "+------------+--------------------------+\n| j->'$.foo' | JSON_EXTRACT(j, '$.foo') |\n+------------+--------------------------+\n| \"bar\"      | \"bar\"                    |\n+------------+--------------------------+\n1 row in set (0.00 sec)\n",
+        "->>",
+        "column->>path \u51fd\u6570\u53bb\u6389 column \u4e2d\u4e0e path \u53c2\u6570\u5339\u914d\u7684\u6570\u636e\u7684\u5f15\u53f7\u3002\u5b83\u662f JSON_UNQUOTE(JSON_EXTRACT(doc,path_literal)) \u7684\u522b\u540d\u3002",
+        "SELECT\n    j->'$.foo',\n    JSON_EXTRACT(j, '$.foo')\n    j->>'$.foo',\n    JSON_UNQUOTE(JSON_EXTRACT(j, '$.foo'))\nFROM (\n    SELECT\n        '{\"foo\": \"bar\", \"aaa\": 5}' AS j\n    ) AS tbl;\n",
+        "+------------+--------------------------+-------------+----------------------------------------+\n| j->'$.foo' | JSON_EXTRACT(j, '$.foo') | j->>'$.foo' | JSON_UNQUOTE(JSON_EXTRACT(j, '$.foo')) |\n+------------+--------------------------+-------------+----------------------------------------+\n| \"bar\"      | \"bar\"                    | bar         | bar                                    |\n+------------+--------------------------+-------------+----------------------------------------+\n1 row in set (0.00 sec)\n"
+    ],
+    "Examples": [
+        "SELECT JSON_EXTRACT('{\"foo\": \"bar\", \"aaa\": 5}', '$.foo');\n",
+        "SELECT\n    j->'$.foo',\n    JSON_EXTRACT(j, '$.foo')\nFROM (\n    SELECT\n        '{\"foo\": \"bar\", \"aaa\": 5}' AS j\n    ) AS tbl;\n",
+        "SELECT\n    j->'$.foo',\n    JSON_EXTRACT(j, '$.foo')\n    j->>'$.foo',\n    JSON_UNQUOTE(JSON_EXTRACT(j, '$.foo'))\nFROM (\n    SELECT\n        '{\"foo\": \"bar\", \"aaa\": 5}' AS j\n    ) AS tbl;\n"
+    ],
+    "Category": [
+        "\u641c\u7d22 JSON \u7684\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT JSON_EXTRACT('{\"foo\": \"bar\", \"aaa\": 5}', '$.foo');",
+        "SELECT\n    j->'$.foo',\n    JSON_EXTRACT(j, '$.foo')\nFROM (\n    SELECT\n        '{\"foo\": \"bar\", \"aaa\": 5}' AS j\n    ) AS tbl;"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT JSON_EXTRACT('{\"foo\": \"bar\", \"aaa\": 5}', '$.foo');",
+        "SELECT\n    j->'$.foo',\n    JSON_EXTRACT(j, '$.foo')\nFROM (\n    SELECT\n        '{\"foo\": \"bar\", \"aaa\": 5}' AS j\n    ) AS tbl;"
+    ]
+}

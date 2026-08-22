@@ -1,0 +1,865 @@
+{
+  "db": "sqleek_seed_check",
+  "seed_dir": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory",
+  "seed_count": 50,
+  "executed_count": 50,
+  "mysql_version": "8.0.43-0ubuntu0.22.04.1\t(Ubuntu)\tONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION",
+  "server_before": "mysqld is alive",
+  "server_after": "mysqld is alive",
+  "cleanup_returncode": 0,
+  "counts": {
+    "ok": 50
+  },
+  "results": [
+    {
+      "index": 1,
+      "name": "llm_rank00_00.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_00.sql",
+      "status": "ok",
+      "duration_s": 0.177,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_00'\nid\tvc2\tjv\n12\taaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa_copy:-7\t\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa_copy:-7\"\n2\taaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:7\t\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:7\"\n11\talpha_copy:-123.456\t\"alpha_copy:-123.456\"\n1\talpha:123.456\t\"alpha:123.456\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 2,
+      "name": "llm_rank00_01.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_01.sql",
+      "status": "ok",
+      "duration_s": 0.17,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_01'\nid\tvc2\tjv\n12\tbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb_copy:-64\t\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb_copy:-64\"\n2\tbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:64\t\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:64\"\n11\tbeta_copy:-999999.0001\t\"beta_copy:-999999.0001\"\n1\tbeta:999999.0001\t\"beta:999999.0001\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 3,
+      "name": "llm_rank00_02.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_02.sql",
+      "status": "ok",
+      "duration_s": 0.153,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_02'\nid\tvc2\tjv\n11\tmix_copy:42.125\t\"mix_copy:42.125\"\n1\tmix:-42.125\t\"mix:-42.125\"\n12\tmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm_copy:-255\t\"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm_copy:-255\"\n2\tmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm:255\t\"mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm:255\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 4,
+      "name": "llm_rank00_03.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_03.sql",
+      "status": "ok",
+      "duration_s": 0.158,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_03'\nid\tvc2\tjv\n11\twide_copy:-21474836.47\t\"wide_copy:-21474836.47\"\n1\twide:21474836.47\t\"wide:21474836.47\"\n12\twwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww_copy:-1024\t\"wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww_copy:-1024\"\n2\twwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww:1024\t\"wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww:1024\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 5,
+      "name": "llm_rank00_04.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_04.sql",
+      "status": "ok",
+      "duration_s": 0.174,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_04'\nid\tvc2\tjv\n12\tjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj_copy:-4096\t\"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj_copy:-4096\"\n2\tjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj:4096\t\"jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj:4096\"\n11\tjson_copy:99999.999\t\"json_copy:99999.999\"\n1\tjson:-99999.999\t\"json:-99999.999\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 6,
+      "name": "llm_rank00_05.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_05.sql",
+      "status": "ok",
+      "duration_s": 0.175,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_05'\nid\tvc2\tjv\n11\trange_copy:-65535.00001\t\"range_copy:-65535.00001\"\n1\trange:65535.00001\t\"range:65535.00001\"\n12\trrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_copy:-65535\t\"rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_copy:-65535\"\n2\trrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr:65535\t\"rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr:65535\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 7,
+      "name": "llm_rank00_06.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_06.sql",
+      "status": "ok",
+      "duration_s": 0.161,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_06'\nid\tvc2\tjv\n11\tedge_copy:-123456789.98765\t\"edge_copy:-123456789.98765\"\n1\tedge:123456789.98765\t\"edge:123456789.98765\"\n12\teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee_copy:-100000\t\"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee_copy:-100000\"\n2\teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee:100000\t\"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee:100000\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 8,
+      "name": "llm_rank00_07.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_07.sql",
+      "status": "ok",
+      "duration_s": 0.194,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_07'\nid\tvc2\tjv\n12\tnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn_copy:-2048\t\"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn_copy:-2048\"\n2\tnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn:2048\t\"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn:2048\"\n11\tnull_copy:-0.0000001\t\"null_copy:-0.0000001\"\n1\tnull:0.0000001\t\"null:0.0000001\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 9,
+      "name": "llm_rank00_08.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_08.sql",
+      "status": "ok",
+      "duration_s": 0.166,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_08'\nid\tvc2\tjv\n11\tsort_copy:-314159.26535\t\"sort_copy:-314159.26535\"\n1\tsort:314159.26535\t\"sort:314159.26535\"\n12\tsssssssssssssssssssssssssssssssss_copy:-8192\t\"sssssssssssssssssssssssssssssssss_copy:-8192\"\n2\tsssssssssssssssssssssssssssssssss:8192\t\"sssssssssssssssssssssssssssssssss:8192\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 10,
+      "name": "llm_rank00_09.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_09.sql",
+      "status": "ok",
+      "duration_s": 0.169,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_field_09'\nid\tvc2\tjv\n11\tcast_copy:314159.26535\t\"cast_copy:314159.26535\"\n1\tcast:-314159.26535\t\"cast:-314159.26535\"\n12\tccccccccccccccccccccccccccccccccc_copy:-32768\t\"ccccccccccccccccccccccccccccccccc_copy:-32768\"\n2\tccccccccccccccccccccccccccccccccc:32768\t\"ccccccccccccccccccccccccccccccccc:32768\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 11,
+      "name": "llm_rank01_00.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_00.sql",
+      "status": "ok",
+      "duration_s": 0.251,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_00'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_00'\nid\tv\tc2\n3\t-1\taaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n1\t7\talpha\n2\t8\talpha_range\nid\tv\tc2\n3\t-1\taaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:-123.45600000000000000000\n2\t8\talpha_range:124.45600000000000000000\n1\t7\talpha:123.45600000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 12,
+      "name": "llm_rank01_01.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_01.sql",
+      "status": "ok",
+      "duration_s": 0.238,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_01'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_01'\nid\tv\tc2\n3\t-1\tbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n1\t64\tbeta\n2\t65\tbeta_range\nid\tv\tc2\n3\t-1\tbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:-999999.00010000000000000000\n2\t65\tbeta_range:1000000.00010000000000000000\n1\t64\tbeta:999999.00010000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 13,
+      "name": "llm_rank01_02.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_02.sql",
+      "status": "ok",
+      "duration_s": 0.198,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_02'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_02'\nid\tv\tc2\n1\t255\tmix\n2\t256\tmix_range\n3\t-1\tmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\nid\tv\tc2\n2\t256\tmix_range:-41.12500000000000000000\n1\t255\tmix:-42.12500000000000000000\n3\t-1\tmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm:-42.12500000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 14,
+      "name": "llm_rank01_03.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_03.sql",
+      "status": "ok",
+      "duration_s": 0.261,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_03'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_03'\nid\tv\tc2\n1\t1024\twide\n2\t1025\twide_range\n3\t-1\twwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww\nid\tv\tc2\n1\t1024\twide:21474836.47000000000000000000\n2\t1025\twide_range:21474837.47000000000000000000\n3\t-1\twwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww:-21474836.47000000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 15,
+      "name": "llm_rank01_04.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_04.sql",
+      "status": "ok",
+      "duration_s": 0.259,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_04'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_04'\nid\tv\tc2\n3\t-1\tjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj\n1\t4096\tjson\n2\t4097\tjson_range\nid\tv\tc2\n3\t-1\tjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj:-99999.99900000000000000000\n2\t4097\tjson_range:-99998.99900000000000000000\n1\t4096\tjson:-99999.99900000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 16,
+      "name": "llm_rank01_05.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_05.sql",
+      "status": "ok",
+      "duration_s": 0.267,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_05'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_05'\nid\tv\tc2\n1\t65535\trange\n2\t65536\trange_range\n3\t-1\trrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr\nid\tv\tc2\n1\t65535\trange:65535.00001000000000000000\n2\t65536\trange_range:65536.00001000000000000000\n3\t-1\trrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr:-65535.00001000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.008,
+        "timeout": false
+      }
+    },
+    {
+      "index": 17,
+      "name": "llm_rank01_06.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_06.sql",
+      "status": "ok",
+      "duration_s": 0.257,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_06'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_06'\nid\tv\tc2\n1\t100000\tedge\n2\t100001\tedge_range\n3\t-1\teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\nid\tv\tc2\n2\t100001\tedge_range:123456790.98765000000000000000\n1\t100000\tedge:123456789.98765000000000000000\n3\t-1\teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee:-123456789.98765000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 18,
+      "name": "llm_rank01_07.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_07.sql",
+      "status": "ok",
+      "duration_s": 0.266,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_07'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_07'\nid\tv\tc2\n3\t-1\tnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\n1\t2048\tnull\n2\t2049\tnull_range\nid\tv\tc2\n3\t-1\tnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn:-0.00000010000000000000\n1\t2048\tnull:0.00000010000000000000\n2\t2049\tnull_range:1.00000010000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.008,
+        "timeout": false
+      }
+    },
+    {
+      "index": 19,
+      "name": "llm_rank01_08.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_08.sql",
+      "status": "ok",
+      "duration_s": 0.181,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_08'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_08'\nid\tv\tc2\n1\t8192\tsort\n2\t8193\tsort_range\n3\t-1\tssssssssssssssssssssssssssssssssssssssss\nid\tv\tc2\n2\t8193\tsort_range:314160.26535000000000000000\n1\t8192\tsort:314159.26535000000000000000\n3\t-1\tssssssssssssssssssssssssssssssssssssssss:-314159.26535000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 20,
+      "name": "llm_rank01_09.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_09.sql",
+      "status": "ok",
+      "duration_s": 0.243,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_b_09'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_range_a_09'\nid\tv\tc2\n1\t32768\tcast\n2\t32769\tcast_range\n3\t-1\tcccccccccccccccccccccccccccccccccccccccc\nid\tv\tc2\n2\t32769\tcast_range:-314158.26535000000000000000\n1\t32768\tcast:-314159.26535000000000000000\n3\t-1\tcccccccccccccccccccccccccccccccccccccccc:-314159.26535000000000000000\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 21,
+      "name": "llm_rank02_00.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_00.sql",
+      "status": "ok",
+      "duration_s": 0.217,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_00'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_00'\nid\tgrp\trn\tprev_txt\n2\t1\t1\talpha\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\talpha:alpha\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 22,
+      "name": "llm_rank02_01.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_01.sql",
+      "status": "ok",
+      "duration_s": 0.273,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_01'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_01'\nid\tgrp\trn\tprev_txt\n2\t1\t1\tbeta\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\tbeta:beta\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 23,
+      "name": "llm_rank02_02.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_02.sql",
+      "status": "ok",
+      "duration_s": 0.257,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_02'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_02'\nid\tgrp\trn\tprev_txt\n2\t1\t1\tmix\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\tmix:mix\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 24,
+      "name": "llm_rank02_03.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_03.sql",
+      "status": "ok",
+      "duration_s": 0.224,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_03'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_03'\nid\tgrp\trn\tprev_txt\n2\t1\t1\twide\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\twide:wide\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 25,
+      "name": "llm_rank02_04.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_04.sql",
+      "status": "ok",
+      "duration_s": 0.224,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_04'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_04'\nid\tgrp\trn\tprev_txt\n2\t1\t1\tjson\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\tjson:json\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 26,
+      "name": "llm_rank02_05.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_05.sql",
+      "status": "ok",
+      "duration_s": 0.197,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_05'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_05'\nid\tgrp\trn\tprev_txt\n2\t1\t1\trange\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\trange:range\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 27,
+      "name": "llm_rank02_06.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_06.sql",
+      "status": "ok",
+      "duration_s": 0.205,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_06'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_06'\nid\tgrp\trn\tprev_txt\n2\t1\t1\tedge\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\tedge:edge\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 28,
+      "name": "llm_rank02_07.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_07.sql",
+      "status": "ok",
+      "duration_s": 0.242,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_07'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_07'\nid\tgrp\trn\tprev_txt\n2\t1\t1\tnull\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\tnull:null\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 29,
+      "name": "llm_rank02_08.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_08.sql",
+      "status": "ok",
+      "duration_s": 0.207,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_08'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_08'\nid\tgrp\trn\tprev_txt\n2\t1\t1\tsort\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\tsort:sort\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 30,
+      "name": "llm_rank02_09.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_09.sql",
+      "status": "ok",
+      "duration_s": 0.198,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_v_09'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_win_09'\nid\tgrp\trn\tprev_txt\n2\t1\t1\tcast\n1\t1\t2\tNULL\n3\t2\t1\tNULL\nid\tgrp\trn\tprev_txt\n2\t1\t1\tcast:cast\n1\t1\t2\tNULL\n3\t2\t1\tNULL\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 31,
+      "name": "llm_rank03_00.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_00.sql",
+      "status": "ok",
+      "duration_s": 0.064,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_00'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_00'\nbucket\tpacked\ttotal_bytes\n1\taaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:1|alpha:1\t64\n2\talpha_tail:3\t32\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.008,
+        "timeout": false
+      }
+    },
+    {
+      "index": 32,
+      "name": "llm_rank03_01.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_01.sql",
+      "status": "ok",
+      "duration_s": 0.076,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_01'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_01'\nbucket\tpacked\ttotal_bytes\n1\tbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:1|beta:1\t256\n2\tbeta_tail:3\t128\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 33,
+      "name": "llm_rank03_02.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_02.sql",
+      "status": "ok",
+      "duration_s": 0.063,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_02'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_02'\nbucket\tpacked\ttotal_bytes\n2\tmix_tail:3\t64\n1\tmix:1|mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm:1\t128\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 34,
+      "name": "llm_rank03_03.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_03.sql",
+      "status": "ok",
+      "duration_s": 0.073,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_03'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_03'\nbucket\tpacked\ttotal_bytes\n2\twide_tail:3\t256\n1\twide:1|wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww:1\t512\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 35,
+      "name": "llm_rank03_04.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_04.sql",
+      "status": "ok",
+      "duration_s": 0.076,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_04'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_04'\nbucket\tpacked\ttotal_bytes\n1\tjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj:1|json:1\t1024\n2\tjson_tail:3\t512\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 36,
+      "name": "llm_rank03_05.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_05.sql",
+      "status": "ok",
+      "duration_s": 0.078,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_05'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_05'\nbucket\tpacked\ttotal_bytes\n2\trange_tail:3\t32\n1\trange:1|rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr:1\t64\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 37,
+      "name": "llm_rank03_06.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_06.sql",
+      "status": "ok",
+      "duration_s": 0.044,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_06'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_06'\nbucket\tpacked\ttotal_bytes\n2\tedge_tail:3\t1024\n1\tedge:1|eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee:1\t2048\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 38,
+      "name": "llm_rank03_07.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_07.sql",
+      "status": "ok",
+      "duration_s": 0.065,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_07'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_07'\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.006,
+        "timeout": false
+      }
+    },
+    {
+      "index": 39,
+      "name": "llm_rank03_08.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_08.sql",
+      "status": "ok",
+      "duration_s": 0.06,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_08'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_08'\nbucket\tpacked\ttotal_bytes\n2\tsort_tail:3\t2048\n1\tsort:1|ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss:1\t4096\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 40,
+      "name": "llm_rank03_09.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_09.sql",
+      "status": "ok",
+      "duration_s": 0.065,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_work_09'\nNote (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_tmp_09'\nbucket\tpacked\ttotal_bytes\n2\tcast_tail:3\t128\n1\tcast:1|cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc:1\t256\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 41,
+      "name": "llm_rank04_00.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_00.sql",
+      "status": "ok",
+      "duration_s": 0.176,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_00'\nid\tg\tjk\n1\t0:alpha\t\"alpha\"\n2\t7:alpha_tail\t\"alpha_tail\"\nid\tg\tjk\n1\t0:alpha\t\"alpha\"\n2\t7:alpha_tail\t\"alpha_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 42,
+      "name": "llm_rank04_01.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_01.sql",
+      "status": "ok",
+      "duration_s": 0.168,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_01'\nid\tg\tjk\n1\t1:beta\t\"beta\"\n2\t64:beta_tail\t\"beta_tail\"\nid\tg\tjk\n1\t1:beta\t\"beta\"\n2\t64:beta_tail\t\"beta_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 43,
+      "name": "llm_rank04_02.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_02.sql",
+      "status": "ok",
+      "duration_s": 0.171,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_02'\nid\tg\tjk\n1\t-1:mix\t\"mix\"\n2\t255:mix_tail\t\"mix_tail\"\nid\tg\tjk\n1\t-1:mix\t\"mix\"\n2\t255:mix_tail\t\"mix_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.008,
+        "timeout": false
+      }
+    },
+    {
+      "index": 44,
+      "name": "llm_rank04_03.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_03.sql",
+      "status": "ok",
+      "duration_s": 0.178,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_03'\nid\tg\tjk\n2\t1024:wide_tail\t\"wide_tail\"\n1\t2147483647:wide\t\"wide\"\nid\tg\tjk\n2\t1024:wide_tail\t\"wide_tail\"\n1\t2147483647:wide\t\"wide\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.008,
+        "timeout": false
+      }
+    },
+    {
+      "index": 45,
+      "name": "llm_rank04_04.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_04.sql",
+      "status": "ok",
+      "duration_s": 0.118,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_04'\nid\tg\tjk\n1\t-2147483648:json\t\"json\"\n2\t4096:json_tail\t\"json_tail\"\nid\tg\tjk\n1\t-2147483648:json\t\"json\"\n2\t4096:json_tail\t\"json_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 46,
+      "name": "llm_rank04_05.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_05.sql",
+      "status": "ok",
+      "duration_s": 0.177,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_05'\nid\tg\tjk\n1\t65535:range\t\"range\"\n2\t65535:range_tail\t\"range_tail\"\nid\tg\tjk\n1\t65535:range\t\"range\"\n2\t65535:range_tail\t\"range_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 47,
+      "name": "llm_rank04_06.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_06.sql",
+      "status": "ok",
+      "duration_s": 0.185,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_06'\nid\tg\tjk\n2\t100000:edge_tail\t\"edge_tail\"\n1\t9223372036854775807:edge\t\"edge\"\nid\tg\tjk\n2\t100000:edge_tail\t\"edge_tail\"\n1\t9223372036854775807:edge\t\"edge\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 48,
+      "name": "llm_rank04_07.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_07.sql",
+      "status": "ok",
+      "duration_s": 0.168,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_07'\nid\tg\tjk\n2\t2048:null_tail\t\"null_tail\"\nid\tg\tjk\n2\t2048:null_tail\t\"null_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    },
+    {
+      "index": 49,
+      "name": "llm_rank04_08.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_08.sql",
+      "status": "ok",
+      "duration_s": 0.168,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_08'\nid\tg\tjk\n1\t17:sort\t\"sort\"\n2\t8192:sort_tail\t\"sort_tail\"\nid\tg\tjk\n1\t17:sort\t\"sort\"\n2\t8192:sort_tail\t\"sort_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.008,
+        "timeout": false
+      }
+    },
+    {
+      "index": 50,
+      "name": "llm_rank04_09.sql",
+      "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_09.sql",
+      "status": "ok",
+      "duration_s": 0.175,
+      "returncode": 0,
+      "stdout_tail": "Note (Code 1051): Unknown table 'sqleek_seed_check.sqleek_s2_gen_09'\nid\tg\tjk\n1\t-999:cast\t\"cast\"\n2\t32768:cast_tail\t\"cast_tail\"\nid\tg\tjk\n1\t-999:cast\t\"cast\"\n2\t32768:cast_tail\t\"cast_tail\"\n",
+      "stderr_tail": "",
+      "server_ping_after": {
+        "returncode": 0,
+        "stdout": "mysqld is alive\n",
+        "stderr": "",
+        "duration_s": 0.007,
+        "timeout": false
+      }
+    }
+  ]
+}

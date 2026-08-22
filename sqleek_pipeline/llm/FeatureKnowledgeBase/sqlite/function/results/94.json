@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_mathfunc.html"
+    ],
+    "Title": [
+        "ceil(X)ceiling(X)"
+    ],
+    "Feature": [
+        "ceil(X)ceiling(X)"
+    ],
+    "Description": [
+        "\n  Return the first representable integer value greater than or equal to X.\n  For positive values of X, this routine rounds away from zero.\n  For negative values of X, this routine rounds toward zero.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Mathematical SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ceil(3.14);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 322,
+            "Prompt Tokens": 302,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.73e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ceil(3.14);"
+    ]
+}

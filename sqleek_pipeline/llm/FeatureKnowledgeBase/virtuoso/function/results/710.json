@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_template/"
+  ],
+  "Title": [
+    "xml_template ("
+  ],
+  "Feature": [
+    "xml_template ("
+  ],
+  "Description": [
+    "The xml_template() function was introduced to\n    enable PL programming to make use of XML templates.\n    This function expects an XML entity for the first argument, that will be\n    the XML template file contents. Usually this entity is composed making\n    use of the xtree_doc() function from the XML\n    template file.\nxml_template()\nxtree_doc()\nThe second argument should be a vector of name-value pairs of the\n    parameters for XML template.\nThe last argument is an output string stream for the result. If the\n    output stream is not specified the HTTP internal stream will be used\n    if it is available, otherwise an error will be signalled."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

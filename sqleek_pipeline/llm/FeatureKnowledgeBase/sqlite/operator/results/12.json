@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_expr.html"
+    ],
+    "Title": [
+        "SQL Language Expressions"
+    ],
+    "Feature": [
+        "ESCAPE"
+    ],
+    "Description": [
+        "The ESCAPE operator specifies an escape character for the LIKE pattern matching operation. It is used to escape special characters in the pattern that would otherwise be interpreted as wildcards.",
+        "Parameters: A pattern with a special character and an escape character.",
+        "Returns: The result of the LIKE operation with the special character escaped."
+    ],
+    "Examples": [],
+    "Category": [
+        "Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM table_name WHERE column_name LIKE '100\\%' ESCAPE '\\';",
+        "SELECT '100%' LIKE '100\\%' ESCAPE '\\';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 331,
+            "Prompt Tokens": 301,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 6.314999999999999e-05
+        },
+        {
+            "Total Tokens": 475,
+            "Prompt Tokens": 449,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 8.295e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such table: table_name\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT '100%' LIKE '100\\%' ESCAPE '\\';"
+    ]
+}

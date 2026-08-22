@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_virtuoso_ini_path/"
+  ],
+  "Title": [
+    "virtuoso_ini_path ("
+  ],
+  "Feature": [
+    "virtuoso_ini_path ("
+  ],
+  "Description": [
+    "This function returns the complete path to the configuration\n    INI file. It is typically used by the cfg_ functions that\n    modify or read the contents of the INI file."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

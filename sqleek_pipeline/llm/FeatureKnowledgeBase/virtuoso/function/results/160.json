@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_exec_score/"
+  ],
+  "Title": [
+    "exec_score ("
+  ],
+  "Feature": [
+    "exec_score ("
+  ],
+  "Description": [
+    "This function provides dynamic SQL capabilities in Virtuoso PL.\n    The first argument is an arbitrary SQL statement, which may contain\n    parameter placeholders. The function returns as output parameters a\n    SQL state, error message and returns the estimate time cost in milliseconds."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

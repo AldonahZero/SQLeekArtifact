@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "cos(x)"
+    ],
+    "Feature": [
+        "cos(x)"
+    ],
+    "Description": [
+        "Computes the cosine of x."
+    ],
+    "Examples": [
+        "cos(90)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT cos(0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 265,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.785e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT cos(0);"
+    ]
+}

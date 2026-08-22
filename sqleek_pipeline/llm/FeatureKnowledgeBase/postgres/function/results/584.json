@@ -1,0 +1,67 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-admin.html"
+    ],
+    "Title": [
+        "pg_ls_replslotdir"
+    ],
+    "Feature": [
+        "pg_ls_replslotdir ( slot_name text ) \u2192 setof record ( name text, size bigint, modification timestamp with time zone )"
+    ],
+    "Description": [
+        "Returns the name, size, and last modification time (mtime) of each ordinary file in the server's pg_replslot/slot_name directory, where slot_name is the name of the replication slot provided as input of the function. Filenames beginning with a dot, directories, and other special files are excluded.",
+        "This function is restricted to superusers and members of the pg_monitor role by default, but other users can be granted EXECUTE to run the function."
+    ],
+    "Examples": [],
+    "Category": [
+        "System Administration Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM pg_ls_replslotdir('your_slot_name');",
+        "SELECT * FROM pg_ls_replslotdir('existing_slot_name');",
+        "SELECT * FROM pg_ls_replslotdir('valid_slot_name');",
+        "SELECT * FROM pg_ls_replslotdir('default_slot');",
+        "SELECT * FROM pg_ls_replslotdir('my_slot');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 394,
+            "Prompt Tokens": 367,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 7.125e-05
+        },
+        {
+            "Total Tokens": 551,
+            "Prompt Tokens": 524,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 9.48e-05
+        },
+        {
+            "Total Tokens": 708,
+            "Prompt Tokens": 681,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00011835
+        },
+        {
+            "Total Tokens": 864,
+            "Prompt Tokens": 838,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.0001413
+        },
+        {
+            "Total Tokens": 1019,
+            "Prompt Tokens": 993,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00016455
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(psycopg2.errors.UndefinedObject) replication slot \"your_slot_name\" does not exist\n\n",
+        "(psycopg2.errors.UndefinedObject) replication slot \"existing_slot_name\" does not exist\n\n",
+        "(psycopg2.errors.UndefinedObject) replication slot \"valid_slot_name\" does not exist\n\n",
+        "(psycopg2.errors.UndefinedObject) replication slot \"default_slot\" does not exist\n\n",
+        "(psycopg2.errors.UndefinedObject) replication slot \"my_slot\" does not exist\n\n"
+    ],
+    "EffectiveSQLs": []
+}

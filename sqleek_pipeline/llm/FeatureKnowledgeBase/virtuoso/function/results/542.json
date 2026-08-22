@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_within/"
+  ],
+  "Title": [
+    "st_within ("
+  ],
+  "Feature": [
+    "st_within ("
+  ],
+  "Description": [
+    "Returns true if all points of g1 are in g2.\nIf prec is supplied, this is a tolerance for the matching in units of linear distance\nappropriate to the srid. Both geometries should have the same srid."
+  ],
+  "Examples": [
+    "SELECT ?c ?geo"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

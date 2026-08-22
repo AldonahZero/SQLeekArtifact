@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/regular_expressions"
+    ],
+    "Title": [
+        "regexp_matches(string, pattern[, options])"
+    ],
+    "Feature": [
+        "regexp_matches(string, pattern[, options])"
+    ],
+    "Description": [
+        "Returns true if  string contains the regexp pattern, false otherwise.",
+        "Returns true if  string contains the regexp pattern, false otherwise. A set of optional options can be set."
+    ],
+    "Examples": [
+        "regexp_matches('anabanana', '(an)*')"
+    ],
+    "Category": [
+        "Regular Expressions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_matches('hello world', 'world');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 319,
+            "Prompt Tokens": 296,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.819999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_matches('hello world', 'world');"
+    ]
+}

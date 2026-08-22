@@ -1,0 +1,34 @@
+created_at=2026-07-08T10:16:50+00:00
+mysql_repo=/root/SQLeek/sources/mysql
+mysql_commit=447eb26e094b444a88c532028647e48228c3c04f
+patch=experiment/RQ2/aflgo/mysql/patches/mysql96_cpp20_header_fixes_20260708_101650.patch
+stat=experiment/RQ2/aflgo/mysql/patches/mysql96_cpp20_header_fixes_20260708_101650.stat.txt
+reason=MySQL 9.6 AFLGo build compatibility fixes for C++20 header/concept failures in libs/mysql/sets and related headers
+modified_files:
+  libs/mysql/ranges/collection_interface.h
+  libs/mysql/sets/boundary_set_binary_operation_view_base.h
+  libs/mysql/sets/boundary_set_const_views.h
+  libs/mysql/sets/boundary_set_meta.h
+  libs/mysql/sets/int_set_traits.h
+  libs/mysql/sets/interval.h
+  libs/mysql/sets/interval_set_interface.h
+  libs/mysql/sets/interval_set_volume.h
+  libs/mysql/sets/nested_set_binary_operation_iterator_base.h
+  libs/mysql/sets/nested_set_traits.h
+  libs/mysql/sets/nonthrowing_boundary_container_adaptor.h
+  libs/mysql/sets/strconv/encode.h
+  libs/mysql/sets/throwing/boundary_container.h
+  libs/mysql/sets/throwing/map_boundary_storage.h
+  libs/mysql/sets/throwing/vector_boundary_storage.h
+  libs/mysql/strconv/conv/text_source_location.h
+  libs/mysql/strconv/decode/decode.h
+  libs/mysql/strconv/decode/parse_options.h
+  libs/mysql/strconv/decode/parser.h
+  libs/mysql/utils/tuple_find.h
+  libs/mysql/uuids/uuid.h
+  sql/dd/impl/upgrade/server.cc
+  sql/join_optimizer/interesting_orders.cc
+untracked_files:
+  libs/mysql/strconv/decode/parse_options.h.rej
+  libs/mysql/strconv/decode/parser.h.orig
+  sql/dd/impl/upgrade/server.cc.rej

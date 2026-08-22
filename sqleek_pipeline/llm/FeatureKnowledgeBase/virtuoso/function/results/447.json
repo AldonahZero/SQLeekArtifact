@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sequence_remove/"
+  ],
+  "Title": [
+    "sequence_remove ("
+  ],
+  "Feature": [
+    "sequence_remove ("
+  ],
+  "Description": [
+    "The function removes a sequence object created before by sequence_set or sequence_next .\nsequence_set\nsequence_next"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

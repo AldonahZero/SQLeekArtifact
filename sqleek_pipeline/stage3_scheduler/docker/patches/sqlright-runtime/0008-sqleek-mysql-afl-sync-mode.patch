@@ -1,0 +1,41 @@
+--- a/MySQL/docker/fuzz_root/run_parallel.py
++++ b/MySQL/docker/fuzz_root/run_parallel.py
+@@ -74,6 +74,7 @@
+ sqleek_memory_limit = os.environ.get("SQLEEK_MEMORY_LIMIT", "4000")
+ sqleek_log_dir = os.environ.get("SQLEEK_LOG_DIR", os.environ.get("LOG_DIR", ""))
+ sqleek_runtime_dir = os.environ.get("SQLEEK_RUNTIME_DIR", os.environ.get("RUNTIME_DIR", os.getcwd()))
++sqleek_afl_sync_id = os.environ.get("SQLEEK_AFL_SYNC_ID", "")
+ 
+ if os.path.isfile(os.path.join(os.getcwd(), "shm_env.txt")):
+     os.remove(os.path.join(os.getcwd(), "shm_env.txt"))
+@@ -100,6 +101,10 @@
+         os.makedirs(os.path.dirname(cur_output_dir_str), exist_ok=True)
+     elif not os.path.isdir(cur_output_dir_str):
+         os.makedirs(cur_output_dir_str)
++    cur_afl_output_dir_str = cur_output_dir_str
++    if sqleek_afl_sync_id:
++        # AFL -S stores this instance under <sync_dir>/<sync_id>.
++        cur_afl_output_dir_str = os.path.dirname(cur_output_dir_str)
+ 
+     cur_output_file = os.path.join(cur_output_dir_str, "output.txt")
+ 
+@@ -134,7 +139,7 @@
+         "-P", str(cur_port_num), 
+         "-K", socket_path,
+         "-i", sqleek_input_dir,
+-        "-o", cur_output_dir_str,
++        "-o", cur_afl_output_dir_str,
+         "-c", str(cur_inst_id),
+         "-O", oracle_str
+         ]
+@@ -142,6 +147,10 @@
+     if is_non_deter == True:
+         fuzzing_command.append("-w")
+ 
++    if sqleek_afl_sync_id:
++        fuzzing_command.append("-S")
++        fuzzing_command.append(sqleek_afl_sync_id)
++
+     fuzzing_command.append("aaa")
+ 
+     print("Running fuzzing command: " + " ".join(fuzzing_command))

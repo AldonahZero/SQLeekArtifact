@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_upper/"
+  ],
+  "Title": [
+    "upper ("
+  ],
+  "Feature": [
+    "upper ("
+  ],
+  "Description": [
+    "ucase returns a copy of string str with\n      all the lowercase alphabetical\n      characters converted to corresponding uppercase letters. This includes\n      also the diacritic letters present in the ISO 8859/1 standard in range\n      224 - 254 decimal, excluding the character 255, y diaeresis, which is not\n      converted to a German double-s.\nucase\nupper is just an alias for ucase.\nucase('AbracadabrA')  -> 'ABRACADABRA'\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

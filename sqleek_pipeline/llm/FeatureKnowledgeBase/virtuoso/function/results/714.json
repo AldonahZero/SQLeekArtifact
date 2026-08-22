@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_uri_get/"
+  ],
+  "Title": [
+    "varchar DB.DBA. xml_uri_get ("
+  ],
+  "Feature": [
+    "varchar DB.DBA. xml_uri_get ("
+  ],
+  "Description": [
+    "This function combines a base URI and a relative URI and returns the referenced resource.\nThe supported protocol identifiers are http: file: and virt:. The virt: allows\nreferencing data stored in local Virtuoso tables without passing through HTTP.  See\n'Entity References in Stored XML' for details.\nThe effective URI will be the reference if the URI of the reference is absolute. Otherwise it will\nbe the base URI modified by the relative reference.\nAuthorization is derived from the SQL or DAV identification of the caller. The DAV\nidentification is used if processing DAV content in response to a DAV request. The SQL user\naccount is used otherwise.\nxml_uri_get returns the text of the requested resource. If specific encodings\nor special authentication schemes are desired one may use\nhttp_get directly."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

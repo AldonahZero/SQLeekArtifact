@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_pop3_get/"
+  ],
+  "Title": [
+    "array pop3_get ("
+  ],
+  "Feature": [
+    "array pop3_get ("
+  ],
+  "Description": [
+    "Pop3_get is used to retrieve and delete messages from a server\n    running the Post Office Protocol version 3 as defined in rfc1725. In its default form it\n    returns a vector of vectors containing messages retrieved from the POP3 server.\n    Each vector within the vector contains a pair of VARCHAR UIDL and VARCHAR Message body, i.e. to get the message body of the second message retrieved,\n    one would use aref (aref (msg_vec, 1), 1) .\n    Total length of messages retrieved will not exceed the value of buffer_size parameter in bytes.\nPop3_get\naref (aref (msg_vec, 1), 1)\nbuffer_size\nThe optional parameter command can be used to control output\n    or delete messages. When command is passed a VARCHAR 'uidl', pop3_get outputs single\n    vector containing VARCHAR UIDLs. The buffer_size constraint\n    is effective here. Thus, the vector will only contain UIDLs of messages whose total message text\n    length does not exceed buffer_size bytes. These message lengths are\n    accumulated in the order returned by the POP3 server.\ncommand\ncommand\npop3_get\nbuffer_size\nbuffer_size\nCommand 'delete' will cause retrieved messages to be deleted from the server\n    after retrieval."
+  ],
+  "Examples": [
+    "create table MY_MSGS (MSG_ID INTEGER IDENTITY,",
+    "create procedure",
+    "insert into MY_MSGS (MSG_HOST, MSG_UIDL, MSG_TEXT)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

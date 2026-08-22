@@ -1,0 +1,34 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rexecute/"
+  ],
+  "Title": [
+    "rexecute ("
+  ],
+  "Feature": [
+    "rexecute ("
+  ],
+  "Description": [
+    "This function can be used to execute SQL on a remote data source\n    directly.\nThe result_set parameter is useful for\n\tobtaining a result-set quickly and easily. However, if the result-set is\n\tgoing to be large, this comes at a cost in terms of time and resources,\n\tparticularly memory, since Virtuoso will have to obtain all results from\n\tthe statement and build the result-set arrays in memory before returning\n\tback to the caller.\nresult_set\nA more efficient way is to obtain a cursor handle and iterate\n    through the result set one row at a time:\nrexecute()\nrnext()\nrmoreresults()\nSQL_NO_DATA_FOUND\nrnext()\nrclose()\nTo keep Virtuoso from obtaining the whole result set from the\n    remote, pass NULL as the result_set parameter\n    when calling rexecute.\nresult_set\nRexecute() supports IN parameters and can also\n    support INOUT and OUT parameters. If INOUT and OUT parameters are to be used\n    then cursors should not be used with this function (as the values of output\n    parameters in ODBC are not guaranteed to be set before SQLMoreResults()\n    returns SQL_NO_DATA_FOUND). Rexecute supports INOUT and\n    OUT parameters by extending the in_params vector\n\tand requiring it to be a PL variable so values can be set back to it.\nRexecute()\nRexecute\nin_params\nUnless explicitly granted, only the DBA group is permitted to use the rexecute() to maintain security. Caution is required\n\there since any user granted use of rexecute() has\n\tfull control of the remote data source set-up by the DBA, however limited\n\tto the overall abilities of the remote user on the remote data source.\n\tUsers can be granted and denied access to this function using the following\n\tcommands:\nrexecute()\nrexecute()\nGRANT REXECUTE ON '<attached_dsn_name>' TO <user_name>\nREVOKE REXECUTE ON '<attached_dsn_name>' FROM <user_name>\nrstmtexec() provides a short-hand to this function.\nrstmtexec()"
+  ],
+  "Examples": [
+    "create procedure",
+    "create procedure",
+    "create procedure test_rexecute_3 (in remote_dsn varchar, in max_results integer)",
+    "select url into url from rdfstore_mysql where id = _id;",
+    "create procedure FUNCRET (in data varchar) returns varchar { return concat (data, 'Out'); };",
+    "create procedure call_FUNCRET (in data varchar, in DSN varchar) returns integer",
+    "select call_FUNCRET ('abc', 'Local Virtuoso Demo');",
+    "create procedure INOUT_PROC (inout DATA varchar)",
+    "create procedure call_INOUT_PROC (in DATA varchar, in DSN varchar) returns varchar",
+    "select call_INOUT_PROC ('abc', 'Local Virtuoso Demo');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

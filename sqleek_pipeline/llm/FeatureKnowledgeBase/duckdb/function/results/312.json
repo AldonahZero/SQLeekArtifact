@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "divide(x, y)"
+    ],
+    "Feature": [
+        "divide(x, y)"
+    ],
+    "Description": [
+        "Alias for x // y."
+    ],
+    "Examples": [
+        "divide(5, 2)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT divide(10, 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 275,
+            "Prompt Tokens": 254,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.07e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT divide(10, 2);"
+    ]
+}

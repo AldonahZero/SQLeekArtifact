@@ -1,0 +1,15 @@
+--- a/PostgreSQL/docker/src/AFL/afl-fuzz.cpp
++++ b/PostgreSQL/docker/src/AFL/afl-fuzz.cpp
+@@ -1924,7 +1924,11 @@
+ 
+   memset(virgin_tmout, 255, MAP_SIZE);
+ 
+-  shm_id = shmget(IPC_PRIVATE, MAP_SIZE, IPC_CREAT | IPC_EXCL | 0640);
++  /* SQLeek runs SQLRight's controller as root and PostgreSQL as the postgres
++     user inside the same container. The instrumented server must be able to
++     attach to the AFL bitmap created by the controller, so use container-local
++     cross-user shm permissions. */
++  shm_id = shmget(IPC_PRIVATE, MAP_SIZE, IPC_CREAT | IPC_EXCL | 0666);
+ 
+   if (shm_id < 0)
+     PFATAL("shmget() failed");

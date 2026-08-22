@@ -1,0 +1,9 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mariadb_squirrel_r1,mariadb,1,type_system,SQUIRREL,2206,542,0.2456935630099728,996,392,0.40170031880977686
+mariadb_squirrel_r1,mariadb,1,storage,SQUIRREL,4,1,0.25,1,1,1.0
+mariadb_squirrel_r1,mariadb,1,other,SQUIRREL,1594,639,0.40087829360100374,415,254,0.616504854368932
+mariadb_squirrel_r1,mariadb,1,optimizer,SQUIRREL,170,69,0.40588235294117647,32,26,0.8333333333333334
+mariadb_squirrel_r1,mariadb,1,executor,SQUIRREL,2,0,0.0,1,0,0.0
+mariadb_squirrel_r1,mariadb,1,cursor_prepared,SQUIRREL,214,124,0.5794392523364486,3,1,0.3333333333333333
+mariadb_squirrel_r1,mariadb,1,parser,SQUIRREL,64,48,0.75,5,5,1.0
+mariadb_squirrel_r1,mariadb,1,catalog_metadata,SQUIRREL,56,14,0.25,31,8,0.25806451612903225

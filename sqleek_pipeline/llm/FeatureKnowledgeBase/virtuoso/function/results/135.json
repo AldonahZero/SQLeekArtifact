@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_remove/"
+  ],
+  "Title": [
+    "int dict_remove ("
+  ],
+  "Feature": [
+    "int dict_remove ("
+  ],
+  "Description": [
+    "The function removes the given key and the associated dependent value from the given dictionary.\nIf the key-value pair is found (and removed) the function returns 1.\nIf the dictionary does not contain a key equivalent to the given one the function returns zero."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

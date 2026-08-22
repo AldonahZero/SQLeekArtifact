@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bif_arg/"
+  ],
+  "Title": [
+    "caddr_t bif_arg ("
+  ],
+  "Feature": [
+    "caddr_t bif_arg ("
+  ],
+  "Description": [
+    "The bif_...._arg functions are used in the Virtuoso shared object. They allow\n    customization of the Virtuoso server.\n    They are written in C code, and linked with the Virtuoso shared object.\nThe _or_null_ variants of these functions represent the SQL null\n    value as a 00 pointer, even though getting the same argument with bif_arg()\n    would return a box with the DV_DB_NULL tag.\n    All number functions will coerce other types of numbers to the result type. \n    All array argument functions will accept any type of array. It is up to the \n    VSE itself to distinguish.\nVirtuoso Server Extensions (VSEs) were formally referred to as Built-In Functions (BIFs)."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

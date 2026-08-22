@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vd_remote_data_source/"
+  ],
+  "Title": [
+    "vd_remote_data_source ("
+  ],
+  "Feature": [
+    "vd_remote_data_source ("
+  ],
+  "Description": [
+    "A remote data source is uniquely identified by its DSN, the dsn argument\nto this function. The connstr argument is presently ignored. The user and\npassword are the login name and password to use when communicating with\nthe remote data source. All Virtuoso users dealing with the remote data\nsource will appear as this user to the remote data source. Virtuoso will\nmake as many connections as there are concurrent users of the data source.\nConnections are cached by Virtuoso.\nThe default qualifier of the user of the remote data source is usually\nnot relevant. This function connects to the DSN in order to retrieve various meta data, which it stores locally. The DSN should be defined in the server's environment and the DSN's database should be on line."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

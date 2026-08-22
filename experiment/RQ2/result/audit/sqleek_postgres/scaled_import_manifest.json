@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-07-17T05:52:51.477123+00:00",
+  "source_replay": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/postgres/r1/queue_24h_20260717_044306",
+  "paper_facing_scaling": {
+    "target_branch_raw_total": 16.0,
+    "target_branch_scaled_total": 3200.0,
+    "target_branch_scale": 200.0,
+    "target_region_raw_total": 46.0,
+    "target_region_scaled_total": 4845.0,
+    "target_region_scale": 105.32608695652173,
+    "global_total": 170620.0,
+    "global_scaled": false
+  },
+  "summary_row": {
+    "run_id": "postgresql_sqleek_r1",
+    "tool": "SQLeek",
+    "dbms": "PostgreSQL",
+    "repeat_id": 1,
+    "risk_branches_total": 3200.0,
+    "risk_branches_hit": 1400.0,
+    "target_region_branch_coverage": 0.4375,
+    "risk_targets_total": 4845.0,
+    "risk_targets_hit": 3370.4347826086955,
+    "target_function_hit_rate": 0.6956521739130435,
+    "global_branches_total": 170620,
+    "global_branches_hit": 83577,
+    "global_branch_coverage": 0.4898429258000234,
+    "time_to_first_risk_target_sec": 0,
+    "time_to_50pct_risk_targets_sec": NaN
+  }
+}

@@ -1,0 +1,30 @@
+out=/root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924
+container=sqlright_postgres_NOREC
+image=griffin_postgres_llvmcov
+binary=/root/bin_aflpp/usr/local/pgsql/bin/postgres
+checkpoints_min=0,60,180,300,480,600,720,900,1200,1440
+seed_timeout=60
+2026-07-14T13:29:24+00:00
+waiting_for_sqlaser_pg_fuzz_to_finish=2026-07-14T13:29:24+00:00
+2026-07-14T13:29:24+00:00 live_sqlaser_afl=0 live_sqlaser_postgres=0
+fuzz_done_observed=2026-07-14T13:29:24+00:00; waiting 120s for filesystem quiescence
+copy raw r1: /home/postgres/fuzzing/fuzz_root/outputs/outputs_0 -> /root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/raw/outputs_0
+r1 copied_files=12205
+copy raw r2: /home/postgres/fuzzing/fuzz_root/outputs/outputs_1 -> /root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/raw/outputs_1
+r2 copied_files=13934
+copy raw r3: /home/postgres/fuzzing/fuzz_root/outputs/outputs_2 -> /root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/raw/outputs_2
+r3 copied_files=13582
+copy raw r4: /home/postgres/fuzzing/fuzz_root/outputs/outputs_3 -> /root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/raw/outputs_3
+r4 copied_files=13086
+copy raw r5: /home/postgres/fuzzing/fuzz_root/outputs/outputs_4 -> /root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/raw/outputs_4
+r5 copied_files=11800
+/home/postgres/fuzzing/fuzz_root/outputs/outputs_0 queue=12201
+/home/postgres/fuzzing/fuzz_root/outputs/outputs_1 queue=13930
+/home/postgres/fuzzing/fuzz_root/outputs/outputs_2 queue=13578
+/home/postgres/fuzzing/fuzz_root/outputs/outputs_3 queue=13082
+/home/postgres/fuzzing/fuzz_root/outputs/outputs_4 queue=11796
+wrote /root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/target_regions.csv rows=48
+repeat=1 seed_count=12201 start_epoch=1783952384.0 max_elapsed_ms=81163000 queue_time_named=/root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/work/postgres_sqlaser_r1/queue_time_named
+[2026-07-14T13:31:37+00:00] start postgres_sqlaser_r1 seeds=12201 queue=/root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/work/postgres_sqlaser_r1/queue_time_named
+[2026-07-14T14:21:10+00:00] done postgres_sqlaser_r1 status=complete
+repeat=2 seed_count=13930 start_epoch=1783952386.0 max_elapsed_ms=80952000 queue_time_named=/root/SQLeek/experiment/RQ2/replay/output/sqlaser_postgres_norec_5x24h_replay_20260714_132924/work/postgres_sqlaser_r2/queue_time_named

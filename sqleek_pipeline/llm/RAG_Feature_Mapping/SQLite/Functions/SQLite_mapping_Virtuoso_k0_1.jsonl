@@ -1,0 +1,17 @@
+{"a_db": {"index": 0, "Feature": ["ABS()"]}, "b_db": {"Feature": ["ABS()"], "Explanation": "Identity mapping: `SQLite` function `ABS` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 1, "Feature": ["ACOS()"]}, "b_db": {"Feature": ["ACOS()"], "Explanation": "Identity mapping: `SQLite` function `ACOS` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 2, "Feature": ["CONCAT()"]}, "b_db": {"Feature": ["CONCAT()"], "Explanation": "Identity mapping: `SQLite` function `CONCAT` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 3, "Feature": ["EXP()"]}, "b_db": {"Feature": ["EXP()"], "Explanation": "Identity mapping: `SQLite` function `EXP` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 4, "Feature": ["FLOOR()"]}, "b_db": {"Feature": ["FLOOR()"], "Explanation": "Identity mapping: `SQLite` function `FLOOR` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 5, "Feature": ["GROUP_CONCAT()"]}, "b_db": {"Feature": ["GROUP_CONCAT()"], "Explanation": "Identity mapping: `SQLite` function `GROUP_CONCAT` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 6, "Feature": ["LENGTH()"]}, "b_db": {"Feature": ["LENGTH()"], "Explanation": "Identity mapping: `SQLite` function `LENGTH` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 7, "Feature": ["LOG()"]}, "b_db": {"Feature": ["LOG()"], "Explanation": "Identity mapping: `SQLite` function `LOG` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 8, "Feature": ["LOWER()"]}, "b_db": {"Feature": ["LOWER()"], "Explanation": "Identity mapping: `SQLite` function `LOWER` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 9, "Feature": ["LTRIM()"]}, "b_db": {"Feature": ["LTRIM()"], "Explanation": "Identity mapping: `SQLite` function `LTRIM` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 10, "Feature": ["MOD()"]}, "b_db": {"Feature": ["MOD()"], "Explanation": "Identity mapping: `SQLite` function `MOD` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 11, "Feature": ["REPLACE()"]}, "b_db": {"Feature": ["REPLACE()"], "Explanation": "Identity mapping: `SQLite` function `REPLACE` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 12, "Feature": ["RTRIM()"]}, "b_db": {"Feature": ["RTRIM()"], "Explanation": "Identity mapping: `SQLite` function `RTRIM` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 13, "Feature": ["SIGN()"]}, "b_db": {"Feature": ["SIGN()"], "Explanation": "Identity mapping: `SQLite` function `SIGN` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 14, "Feature": ["SQRT()"]}, "b_db": {"Feature": ["SQRT()"], "Explanation": "Identity mapping: `SQLite` function `SQRT` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 15, "Feature": ["TRIM()"]}, "b_db": {"Feature": ["TRIM()"], "Explanation": "Identity mapping: `SQLite` function `TRIM` is supported by `Virtuoso` with the same name.", "index": -1}}
+{"a_db": {"index": 16, "Feature": ["UPPER()"]}, "b_db": {"Feature": ["UPPER()"], "Explanation": "Identity mapping: `SQLite` function `UPPER` is supported by `Virtuoso` with the same name.", "index": -1}}

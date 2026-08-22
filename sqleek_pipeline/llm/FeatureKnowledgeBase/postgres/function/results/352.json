@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-aggregate.html"
+    ],
+    "Title": [
+        "variance"
+    ],
+    "Feature": [
+        "variance ( numeric_type ) \u2192 double precision for real or double precision, otherwise numeric"
+    ],
+    "Description": [
+        "This is a historical alias for var_samp."
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT variance(column_name) FROM table_name;",
+        "SELECT variance(1);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 277,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.1e-05
+        },
+        {
+            "Total Tokens": 435,
+            "Prompt Tokens": 417,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 7.335e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(psycopg2.errors.UndefinedTable) relation \"table_name\" does not exist\nLINE 1: SELECT variance(column_name) FROM table_name;\n                                          ^\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT variance(1);"
+    ]
+}

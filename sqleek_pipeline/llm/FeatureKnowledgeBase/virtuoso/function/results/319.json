@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_pem_certificates_to_array/"
+  ],
+  "Title": [
+    "pem_certificates_to_array ("
+  ],
+  "Feature": [
+    "pem_certificates_to_array ("
+  ],
+  "Description": [
+    "This gets a PEM file with (possibly) many X509 certificates among others and\n    constructs an array containing each X509 certificate as a separate PEM\n    string. This can serve for splitting a PEM file containing multiple\n    certificates (for example CA file) to single certificate entries so it can\n    be examined with get_certificate_info function.  Note that the array can\n    contain NULL elements in places where in the PEM file there are blocks other\n    than X509 PEM certificates."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

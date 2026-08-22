@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-window.html"
+    ],
+    "Title": [
+        "cume_dist"
+    ],
+    "Feature": [
+        "cume_dist () \u2192 double precision"
+    ],
+    "Description": [
+        "Returns the cumulative distribution, that is (number of partition rows preceding or peers with current row) / (total partition rows). The value thus ranges from 1/N to 1."
+    ],
+    "Examples": [],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT cume_dist() OVER ()"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 300,
+            "Prompt Tokens": 280,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.4e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT cume_dist() OVER ()"
+    ]
+}

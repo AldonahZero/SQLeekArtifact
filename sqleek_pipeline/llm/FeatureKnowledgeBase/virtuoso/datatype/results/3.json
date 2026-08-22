@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/ch-sqlreference/#sqlrefdatatypes"
+  ],
+  "Title": [
+    "DATETIME"
+  ],
+  "Feature": [
+    "DATETIME"
+  ],
+  "Description": [
+    "DATETIME"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Data Types"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

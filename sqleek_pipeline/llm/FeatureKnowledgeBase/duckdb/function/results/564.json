@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "timezone(text, timestamptz)"
+    ],
+    "Feature": [
+        "timezone(text, timestamptz)"
+    ],
+    "Description": [
+        "Use the date parts of the timestamp in the given time zone to construct a timestamp. Effectively, the result is a \u201clocal\u201d time."
+    ],
+    "Examples": [
+        "timezone('America/Denver', TIMESTAMPTZ '2001-02-16 20:38:40-05')"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT timezone('America/New_York', '2023-10-01 12:00:00-00'::timestamptz);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 333,
+            "Prompt Tokens": 289,
+            "Completion Tokens": 44,
+            "Total Cost (USD)": 6.974999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT timezone('America/New_York', '2023-10-01 12:00:00-00'::timestamptz);"
+    ]
+}

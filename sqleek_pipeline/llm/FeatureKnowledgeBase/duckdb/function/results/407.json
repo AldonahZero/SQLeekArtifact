@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "nfc_normalize(string)"
+    ],
+    "Feature": [
+        "nfc_normalize(string)"
+    ],
+    "Description": [
+        "Convert string to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not."
+    ],
+    "Examples": [
+        "nfc_normalize('arde\u0300ch')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT nfc_normalize('Your String Here')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 299,
+            "Prompt Tokens": 276,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.519999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT nfc_normalize('Your String Here')"
+    ]
+}

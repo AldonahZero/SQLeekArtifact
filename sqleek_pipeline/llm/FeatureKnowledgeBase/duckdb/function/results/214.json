@@ -1,0 +1,47 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "list_inner_product"
+    ],
+    "Feature": [
+        "list_inner_product"
+    ],
+    "Description": [
+        "list_dot_product(list1, list2)",
+        "Computes the dot product of two same-sized lists of numbers."
+    ],
+    "Examples": [
+        "list_dot_product([1, 2, 3], [1, 2, 5])"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT list_inner_product(list1, list2);",
+        "SELECT list_inner_product([1, 2, 3], [4, 5, 6]);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 286,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.324999999999999e-05
+        },
+        {
+            "Total Tokens": 469,
+            "Prompt Tokens": 434,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 8.609999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"list1\" not found in FROM clause!\nLINE 1: SELECT list_inner_product(list1, list2);\n                                  ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT list_inner_product([1, 2, 3], [4, 5, 6]);"
+    ]
+}

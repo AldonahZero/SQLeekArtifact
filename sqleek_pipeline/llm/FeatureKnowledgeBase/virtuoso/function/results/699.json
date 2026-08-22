@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_auto_dtd/"
+  ],
+  "Title": [
+    "varchar xml_auto_dtd ("
+  ],
+  "Feature": [
+    "varchar xml_auto_dtd ("
+  ],
+  "Description": [
+    "This function returns an XML DTD for the results of a SQL query with\na FOR XML clause. The returned DTD will apply to the output generated\nby xml_auto with the query in question after wrapping it into the specified root element."
+  ],
+  "Examples": [
+    "callret",
+    "select \"category\".\"CategoryID\", \"CategoryName\","
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

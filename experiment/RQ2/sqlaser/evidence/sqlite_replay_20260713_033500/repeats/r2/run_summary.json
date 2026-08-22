@@ -1,0 +1,15 @@
+{
+  "run_id": "sqlaser_sqlite354_r2",
+  "repeat_id": "2",
+  "status": "complete",
+  "start_time": "2026-07-13T03:35:01Z",
+  "end_time": "2026-07-13T03:40:31Z",
+  "seeds_executed_once": 1571,
+  "successful_seeds": 80,
+  "failed_seeds": 1491,
+  "timed_out_seeds": 0,
+  "profraw_files_merged": 1571,
+  "forced_leak_cleanups": 0,
+  "final_tmp_files": 0,
+  "min_free_kb": 15728640
+}

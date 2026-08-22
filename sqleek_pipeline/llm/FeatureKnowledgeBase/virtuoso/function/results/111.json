@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_datestring_gmt/"
+  ],
+  "Title": [
+    "datestring_GMT ("
+  ],
+  "Feature": [
+    "datestring_GMT ("
+  ],
+  "Description": [
+    "Converts the local datetime to GMT and returns its\n    external representation as a string."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

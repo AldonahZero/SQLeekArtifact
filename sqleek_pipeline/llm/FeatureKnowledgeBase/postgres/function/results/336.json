@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-aggregate.html"
+    ],
+    "Title": [
+        "xmlagg"
+    ],
+    "Feature": [
+        "xmlagg ( xml ) \u2192 xml"
+    ],
+    "Description": [
+        "Concatenates the non-null XML input values (see Section\u00a09.15.1.7)."
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT xmlagg(x) FROM (VALUES (xml '<item>1</item>'), (xml '<item>2</item>')) AS t(x)"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 305,
+            "Prompt Tokens": 261,
+            "Completion Tokens": 44,
+            "Total Cost (USD)": 6.555e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT xmlagg(x) FROM (VALUES (xml '<item>1</item>'), (xml '<item>2</item>')) AS t(x)"
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-numeric.html"
+    ],
+    "Title": [
+        "integer"
+    ],
+    "Feature": [
+        "integer"
+    ],
+    "Description": [
+        "Storage Size",
+        "4 bytes",
+        "Description",
+        "typical choice for integer",
+        "Range",
+        "-2147483648 to +2147483647"
+    ],
+    "Examples": [],
+    "Category": [
+        "Numeric Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 42;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 262,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.8899999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 42;"
+    ]
+}

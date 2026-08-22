@@ -1,0 +1,50 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "ST_MLineFromText(), ST_MultiLineStringFromText()",
+    "Description": [
+        "\nST_MLineFromText(wkt\n          [, srid [,\n          options]]),\n          ST_MultiLineStringFromText(wkt\n          [, srid [,\n          options]])\n",
+        "\n          Constructs a MultiLineString value using\n          its WKT representation and SRID.\n        ",
+        "\n          These functions handle their arguments as described in the\n          introduction to this section.\n        "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/gis-wkt-functions.html#function_st-mlinefromtext",
+    "Feature": [
+        "ST_MLineFromText(wkt\n          [, srid [,\n          options]])",
+        "ST_MultiLineStringFromText(wkt\n          [, srid [,\n          options]])"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Spatial Analysis Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ST_MLineFromText('LINESTRING(0 0, 1 1, 2 2)', 4326);",
+        "SELECT ST_MultiLineStringFromText('MULTILINESTRING((0 0, 1 1), (2 2, 3 3))', 4326);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 426,
+            "Prompt Tokens": 385,
+            "Completion Tokens": 41,
+            "Total Cost (USD)": 8.235e-05
+        },
+        {
+            "Total Tokens": 620,
+            "Prompt Tokens": 569,
+            "Completion Tokens": 51,
+            "Total Cost (USD)": 0.00011594999999999999
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (3516, 'WKT value is a geometry of unexpected type LINESTRING in st_mlinefromtext.')\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ST_MultiLineStringFromText('MULTILINESTRING((0 0, 1 1), (2 2, 3 3))', 4326);"
+    ]
+}

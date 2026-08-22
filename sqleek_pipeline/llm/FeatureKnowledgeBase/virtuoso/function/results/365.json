@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_repl_sync/"
+  ],
+  "Title": [
+    "RDF_REPL_SYNC ("
+  ],
+  "Feature": [
+    "RDF_REPL_SYNC ("
+  ],
+  "Description": [
+    "This function starts the syncing process against an existing RDF subscription. It will not only initial synchronisation\n\t\t\t\tbut also wait for the end of subscription to guarantee that the total effect of INSERT and DELETE operations is correct\n\t\t\t\teven if these operations were made in an order that differs from the original one."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

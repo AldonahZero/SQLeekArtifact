@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dist_from_point_to_line_segment/"
+  ],
+  "Title": [
+    "dist_from_point_to_line_segment ("
+  ],
+  "Feature": [
+    "dist_from_point_to_line_segment ("
+  ],
+  "Description": [
+    "returns the distance between a point and a segment on a plane."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

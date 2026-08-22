@@ -1,0 +1,12 @@
+"DBMS tainted size in memory operation (priority-filtered)","SQL/parser-related source may flow to memory op size argument. Sink reported only when the call sits in a Stage-0 priority function.","error","SQL/parser input flows to memory op 'text_to_cstring' (priority-filtered sink)","/src/backend/utils/adt/pg_locale_builtin.c","244","12","244","37"
+"DBMS tainted size in memory operation (priority-filtered)","SQL/parser-related source may flow to memory op size argument. Sink reported only when the call sits in a Stage-0 priority function.","error","SQL/parser input flows to memory op 'text_to_cstring' (priority-filtered sink)","/src/backend/utils/adt/pg_locale_builtin.c","257","12","257","37"
+"DBMS tainted size in memory operation (priority-filtered)","SQL/parser-related source may flow to memory op size argument. Sink reported only when the call sits in a Stage-0 priority function.","error","SQL/parser input flows to memory op 'palloc' (priority-filtered sink)
+SQL/parser input flows to memory op 'palloc' (priority-filtered sink)
+SQL/parser input flows to memory op 'palloc' (priority-filtered sink)
+SQL/parser input flows to memory op 'palloc' (priority-filtered sink)
+SQL/parser input flows to memory op 'palloc' (priority-filtered sink)","/src/backend/utils/adt/varlena.c","224","27","224","33"
+"DBMS tainted size in memory operation (priority-filtered)","SQL/parser-related source may flow to memory op size argument. Sink reported only when the call sits in a Stage-0 priority function.","error","SQL/parser input flows to memory op 'memcpy' (priority-filtered sink)
+SQL/parser input flows to memory op 'memcpy' (priority-filtered sink)
+SQL/parser input flows to memory op 'memcpy' (priority-filtered sink)
+SQL/parser input flows to memory op 'memcpy' (priority-filtered sink)
+SQL/parser input flows to memory op 'memcpy' (priority-filtered sink)","/src/backend/utils/adt/varlena.c","225","41","225","43"

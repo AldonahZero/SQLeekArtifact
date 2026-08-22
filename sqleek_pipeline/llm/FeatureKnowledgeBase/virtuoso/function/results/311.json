@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nm_min_notnull/"
+  ],
+  "Title": [
+    "any __min_notnull ("
+  ],
+  "Feature": [
+    "any __min_notnull ("
+  ],
+  "Description": [
+    "The function returns the minimum value among all values in all its arguments by\n  \tignoring NULLs entirely."
+  ],
+  "Examples": [
+    "INSERT INTO GRAPH <http://mygraph.com>",
+    "Insert into <http://mygraph.com>, 6 (or less) triples -- done",
+    "SELECT DISTINCT ?s"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_x509_certificate_serialize/"
+  ],
+  "Title": [
+    "varchar xenc_X509_certificate_serialize ("
+  ],
+  "Feature": [
+    "varchar xenc_X509_certificate_serialize ("
+  ],
+  "Description": [
+    "This function is used to export X.509 from user's space."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

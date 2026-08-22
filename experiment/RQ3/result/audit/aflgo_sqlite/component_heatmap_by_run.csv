@@ -1,0 +1,7 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+sqlite_aflgo_r1_live,sqlite,1,executor,AFLGo,1050,554,0.5276190476190477,255,213,0.8301886792452831
+sqlite_aflgo_r1_live,sqlite,1,other,AFLGo,764,536,0.7015706806282722,80,70,0.8541666666666666
+sqlite_aflgo_r1_live,sqlite,1,storage,AFLGo,500,192,0.384,62,41,0.675
+sqlite_aflgo_r1_live,sqlite,1,type_system,AFLGo,54,27,0.5,8,8,1.0
+sqlite_aflgo_r1_live,sqlite,1,optimizer,AFLGo,434,255,0.5875576036866359,32,28,0.8421052631578947
+sqlite_aflgo_r1_live,sqlite,1,catalog_metadata,AFLGo,6,3,0.5,6,6,1.0

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/interval"
+    ],
+    "Title": [
+        "epoch(interval)"
+    ],
+    "Feature": [
+        "epoch(interval)"
+    ],
+    "Description": [
+        "Get total number of seconds, as double precision floating point number, in interval."
+    ],
+    "Examples": [
+        "epoch(INTERVAL 5 HOUR)"
+    ],
+    "Category": [
+        "Interval Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT epoch(interval '1 day');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 276,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.04e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT epoch(interval '1 day');"
+    ]
+}

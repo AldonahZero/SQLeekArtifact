@@ -1,0 +1,9 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+monetdb_aflgo_r1,monetdb,1,other,AFLGo,102594,8831,0.08607715850829484,5999,3202,0.5362392295995946
+monetdb_aflgo_r1,monetdb,1,storage,AFLGo,696,92,0.13218390804597702,219,91,0.41743119266055045
+monetdb_aflgo_r1,monetdb,1,type_system,AFLGo,3550,535,0.15070422535211267,166,88,0.5641025641025641
+monetdb_aflgo_r1,monetdb,1,optimizer,AFLGo,9324,2951,0.3164950664950665,1276,813,0.6375786163522013
+monetdb_aflgo_r1,monetdb,1,parser,AFLGo,148,20,0.13513513513513514,4,3,0.75
+monetdb_aflgo_r1,monetdb,1,executor,AFLGo,5128,130,0.02535101404056162,91,36,0.3956043956043956
+monetdb_aflgo_r1,monetdb,1,catalog_metadata,AFLGo,2148,679,0.3161080074487896,271,158,0.5961538461538461
+monetdb_aflgo_r1,monetdb,1,cursor_prepared,AFLGo,216,47,0.2175925925925926,5,2,0.5

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_delete/"
+  ],
+  "Title": [
+    "integer file_delete ("
+  ],
+  "Feature": [
+    "integer file_delete ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function is used to delete a file from file system. This function has a silent mode,\nwhere no errors will be signalled upon failure."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

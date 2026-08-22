@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/url-functions"
+    ],
+    "Title": [
+        "sys.getport(url)"
+    ],
+    "Feature": [
+        "sys.getport(url)"
+    ],
+    "Description": [
+        "Return type: ",
+        "clob",
+        "extract the port number part of the url, may return null"
+    ],
+    "Examples": [
+        "sys.getport( url_example)"
+    ],
+    "Category": [
+        "URL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.getport('http://example.com:8080')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 296,
+            "Prompt Tokens": 270,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.6099999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.getport('http://example.com:8080')"
+    ]
+}

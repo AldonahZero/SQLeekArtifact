@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_string_output_string/"
+  ],
+  "Title": [
+    "string_output_string ("
+  ],
+  "Feature": [
+    "string_output_string ("
+  ],
+  "Description": [
+    "This function is used to produce a string from contents of a\n    string output stream. See string_output for more information about string output streams.\nstring_output"
+  ],
+  "Examples": [
+    "Create a string output, write 'foo' and ' bar' into it, convert"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

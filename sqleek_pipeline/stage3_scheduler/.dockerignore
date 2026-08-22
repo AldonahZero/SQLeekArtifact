@@ -1,0 +1,21 @@
+.git
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.so
+
+# Stage 3 experiment/runtime artifacts. These must never enter Docker build context.
+checkpoints/
+runtime/
+logs/
+output/
+configs/*_RUN.md
+configs/*_RESULTS.md
+configs/MYSQL_*.md
+
+# Local cache / editor files.
+.vscode/
+.idea/
+*.swp
+*.tmp

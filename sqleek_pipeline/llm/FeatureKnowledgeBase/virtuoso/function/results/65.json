@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cfg_item_name/"
+  ],
+  "Title": [
+    "cfg_item_name ("
+  ],
+  "Feature": [
+    "cfg_item_name ("
+  ],
+  "Description": [
+    "Returns the name of the item specified by item_index\n    (begins from zero). If the index and section name do not point\n    to a valid item, then zero is returned, otherwise on success the\n    function returns the item name."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,34 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_current-time",
+    "Title": "CURRENT_TIME(), CURRENT_TIME",
+    "Feature": [
+        "CURRENT_TIME",
+        "CURRENT_TIME([fsp])"
+    ],
+    "Description": [
+        "\nCURRENT_TIME,\n          CURRENT_TIME([fsp])\n",
+        "\nCURRENT_TIME and\n          CURRENT_TIME() are synonyms for\n          CURTIME().\n        "
+    ],
+    "Examples": [],
+    "Category": [
+        "\u65e5\u671f\u548c\u65f6\u95f4\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CURRENT_TIME();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 299,
+            "Prompt Tokens": 282,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 5.249999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CURRENT_TIME();"
+    ]
+}

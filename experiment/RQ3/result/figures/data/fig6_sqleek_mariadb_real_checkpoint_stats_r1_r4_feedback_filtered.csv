@@ -1,0 +1,7 @@
+tool,dbms,checkpoint_hours,n_runs,r1,r2,r3,r4,mean,sample_std
+SQLeek,MariaDB,1,4,0,0,0,0,0.000000,0.000000
+SQLeek,MariaDB,5,4,3,5,2,3,3.250000,1.258306
+SQLeek,MariaDB,10,4,3,6,4,5,4.500000,1.290994
+SQLeek,MariaDB,15,4,3,6,4,5,4.500000,1.290994
+SQLeek,MariaDB,20,4,3,6,4,5,4.500000,1.290994
+SQLeek,MariaDB,24,4,3,6,4,7,5.000000,1.825742

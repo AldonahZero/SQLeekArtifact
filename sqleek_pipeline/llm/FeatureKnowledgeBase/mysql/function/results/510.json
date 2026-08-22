@@ -1,0 +1,72 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "version_tokens_show()",
+    "Description": [
+        "\nversion_tokens_show()\n",
+        "\n              Returns the server's list of version tokens as a binary\n              string containing a semicolon-separated list of\n              name=value\n              pairs.\n            ",
+        "Press CTRL+C to copy mysql> SELECT version_tokens_show();\n+--------------------------+\n| version_tokens_show()    |\n+--------------------------+\n| tok2=value2;tok1=value1; |\n+--------------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html#function_version-tokens-show",
+    "Feature": [
+        "version_tokens_show()"
+    ],
+    "Examples": [
+        "mysql> SELECT version_tokens_show();\n+--------------------------+\n| version_tokens_show()    |\n+--------------------------+\n| tok2=value2;tok1=value1; |\n+--------------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT version_tokens_show();",
+        "SELECT version_tokens_show() AS version_tokens;",
+        "SELECT * FROM version_tokens_show();",
+        "SELECT version_tokens_show;",
+        "SELECT * FROM information_schema.functions WHERE function_name = 'version_tokens_show';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 363,
+            "Prompt Tokens": 345,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 6.254999999999999e-05
+        },
+        {
+            "Total Tokens": 520,
+            "Prompt Tokens": 499,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 8.744999999999998e-05
+        },
+        {
+            "Total Tokens": 676,
+            "Prompt Tokens": 656,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00011039999999999999
+        },
+        {
+            "Total Tokens": 851,
+            "Prompt Tokens": 834,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 0.00013529999999999998
+        },
+        {
+            "Total Tokens": 1014,
+            "Prompt Tokens": 986,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 0.0001647
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.version_tokens_show does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.version_tokens_show does not exist')\n",
+        "(pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '()' at line 1\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'version_tokens_show' in 'field list'\")\n",
+        "(pymysql.err.OperationalError) (1109, \"Unknown table 'FUNCTIONS' in information_schema\")\n"
+    ],
+    "EffectiveSQLs": []
+}

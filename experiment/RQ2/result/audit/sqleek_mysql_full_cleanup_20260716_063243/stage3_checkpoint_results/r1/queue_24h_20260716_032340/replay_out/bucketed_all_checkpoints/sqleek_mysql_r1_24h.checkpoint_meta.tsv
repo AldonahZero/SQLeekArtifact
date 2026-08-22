@@ -1,0 +1,11 @@
+checkpoint_min	seed_count	profile_count	profdata	report_txt
+60	10102	17815	/rq2_out/sqleek_mysql_r1_24h_t60.profdata	/rq2_out/sqleek_mysql_r1_24h_t60.report.txt
+180	12055	21362	/rq2_out/sqleek_mysql_r1_24h_t180.profdata	/rq2_out/sqleek_mysql_r1_24h_t180.report.txt
+300	13631	24228	/rq2_out/sqleek_mysql_r1_24h_t300.profdata	/rq2_out/sqleek_mysql_r1_24h_t300.report.txt
+480	15830	28169	/rq2_out/sqleek_mysql_r1_24h_t480.profdata	/rq2_out/sqleek_mysql_r1_24h_t480.report.txt
+600	16404	29275	/rq2_out/sqleek_mysql_r1_24h_t600.profdata	/rq2_out/sqleek_mysql_r1_24h_t600.report.txt
+720	16960	30213	/rq2_out/sqleek_mysql_r1_24h_t720.profdata	/rq2_out/sqleek_mysql_r1_24h_t720.report.txt
+900	17835	31924	/rq2_out/sqleek_mysql_r1_24h_t900.profdata	/rq2_out/sqleek_mysql_r1_24h_t900.report.txt
+1200	19886	35572	/rq2_out/sqleek_mysql_r1_24h_t1200.profdata	/rq2_out/sqleek_mysql_r1_24h_t1200.report.txt
+1440	21353	38180	/rq2_out/sqleek_mysql_r1_24h_t1440.profdata	/rq2_out/sqleek_mysql_r1_24h_t1440.report.txt
+1441	21355	38260	/rq2_out/sqleek_mysql_r1_24h_t1441.profdata	/rq2_out/sqleek_mysql_r1_24h_t1441.report.txt

@@ -1,0 +1,14 @@
+{
+  "capture_epoch": 1784123544.361802,
+  "capture_utc": "2026-07-15T13:52:24.363308171Z",
+  "checkpoint_path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h",
+  "earliest_mtime_utc": "2026-07-15T02:01:41.491811Z",
+  "hi_val_count": 0,
+  "initial_corpus_count": 7898,
+  "latest_mtime_utc": "2026-07-15T13:52:17.315574Z",
+  "new_queue_count": 9052,
+  "queue_total": 16950,
+  "selection_rule": "all regular non-symlink queue files present with st_mtime <= capture_epoch",
+  "source_queue": "/root/sqleek_stage3_official_runs/mysql/mysql2x24h_resetfix0006_20260715_020032/r1/output/mysql_memory/default/queue",
+  "total_size_bytes": 47899870
+}

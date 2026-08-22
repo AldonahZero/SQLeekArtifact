@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_adjust_timezone/"
+  ],
+  "Title": [
+    "datetime adjust_timezone ("
+  ],
+  "Feature": [
+    "datetime adjust_timezone ("
+  ],
+  "Description": [
+    "The function returns its first argument with unchanged GMT value but new timezone offset, as it is specified by the\n    second argument. If the first argument is timezoneless and third argument is missing or zero then error 22023 is signaled.\n    If the first argument is timezoneless and third argument is nonzero then no error is signaled and the argument is handled\n    like it is a GMT value."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

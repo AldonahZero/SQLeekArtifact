@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/ch-sqlreference/#sqlrefdatatypes"
+  ],
+  "Title": [
+    "VARCHAR"
+  ],
+  "Feature": [
+    "VARCHAR"
+  ],
+  "Description": [
+    "VARCHAR\\nVARCHAR(INTNUM)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Data Types"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

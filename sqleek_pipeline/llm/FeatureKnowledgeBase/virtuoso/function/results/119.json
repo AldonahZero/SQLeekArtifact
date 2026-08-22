@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dbf_set/"
+  ],
+  "Title": [
+    "__dbf_set ("
+  ],
+  "Feature": [
+    "__dbf_set ("
+  ],
+  "Description": [
+    "Sets at run time by a dba group user the vector execution parameters."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

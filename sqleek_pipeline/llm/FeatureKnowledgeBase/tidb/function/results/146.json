@@ -1,0 +1,28 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_weekofyear",
+    "Title": "WEEKOFYEAR()",
+    "Feature": [
+        "WEEKOFYEAR(date)"
+    ],
+    "Description": [
+        "\nWEEKOFYEAR(date)\n",
+        "\n          Returns the calendar week of the date as a number in the range\n          from 1 to 53. Returns\n          NULL if date is\n          NULL.\n        ",
+        "\nWEEKOFYEAR() is a compatibility\n          function that is equivalent to\n          WEEK(date,3).\n        ",
+        "Press CTRL+C to copy mysql> SELECT WEEKOFYEAR('2008-02-20');\n        -> 8"
+    ],
+    "Examples": [
+        "mysql> SELECT WEEKOFYEAR('2008-02-20');\n        -> 8"
+    ],
+    "Category": [
+        "\u65e5\u671f\u548c\u65f6\u95f4\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT WEEKOFYEAR('2008-02-20');"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT WEEKOFYEAR('2008-02-20');"
+    ]
+}

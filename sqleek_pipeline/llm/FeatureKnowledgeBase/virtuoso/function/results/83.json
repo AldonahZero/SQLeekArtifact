@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_connection_get/"
+  ],
+  "Title": [
+    "any connection_get ("
+  ],
+  "Feature": [
+    "any connection_get ("
+  ],
+  "Description": [
+    "connection_get is used to retrieve values\n    stored within the current connection context. See connection_set for a more detailed discussion of connection variables.\nconnection_get\nconnection_set"
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

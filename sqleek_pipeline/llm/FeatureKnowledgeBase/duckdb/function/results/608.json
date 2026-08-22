@@ -1,0 +1,47 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/window_functions"
+    ],
+    "Title": [
+        "dense_rank()"
+    ],
+    "Feature": [
+        "dense_rank()"
+    ],
+    "Description": [
+        "The rank of the current row without gaps; this function counts peer groups.",
+        "BIGINT"
+    ],
+    "Examples": [
+        "dense_rank()"
+    ],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT dense_rank() OVER (ORDER BY column_name) AS rank_value;",
+        "SELECT dense_rank() OVER () AS rank_value;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 258,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.489999999999999e-05
+        },
+        {
+            "Total Tokens": 460,
+            "Prompt Tokens": 438,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 7.89e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"column_name\" not found in FROM clause!\nLINE 1: SELECT dense_rank() OVER (ORDER BY column_name) AS rank_value;\n                                           ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT dense_rank() OVER () AS rank_value;"
+    ]
+}

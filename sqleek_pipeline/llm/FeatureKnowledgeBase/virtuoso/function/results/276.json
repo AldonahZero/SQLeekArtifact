@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ldap_delete/"
+  ],
+  "Title": [
+    "int ldap_delete ("
+  ],
+  "Feature": [
+    "int ldap_delete ("
+  ],
+  "Description": [
+    "This function removes a leaf entry in the LDAP Directory Information Tree."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

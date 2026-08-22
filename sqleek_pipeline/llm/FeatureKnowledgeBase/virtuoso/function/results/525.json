@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_get_bounding_box_n/"
+  ],
+  "Title": [
+    "st_get_bounding_box_n ("
+  ],
+  "Feature": [
+    "st_get_bounding_box_n ("
+  ],
+  "Description": [
+    "Given a 1-based index of a member of a MULTI... or ...COLLECTION shape, returns the bounding box of a member.\n    \tThis is a fast equivalent of st_get_bounding_box_n(ST_GeometryN (shape,idx)) .\nst_get_bounding_box_n(ST_GeometryN (shape,idx))"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

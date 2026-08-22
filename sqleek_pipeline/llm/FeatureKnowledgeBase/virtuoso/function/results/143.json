@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dt_set_tz/"
+  ],
+  "Title": [
+    "dt_set_tz ("
+  ],
+  "Feature": [
+    "dt_set_tz ("
+  ],
+  "Description": [
+    "This modifies the timezone component of a datetime.\n    The value remains equal for purposes of comparison but will look\n    different when converted to a string.  The  timezone component is an\n    offset from UTC in minutes. It can be retrieved with the timezone\n    function.\nTimezoneless: The function returns its first argument with unchanged GMT value but new timezone offset. Unlike adjust_timezone() , if the argument is timezoneless then no\n    \terror is signaled.\nadjust_timezone()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_create_snapshot/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_CREATE_SNAPSHOT ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_CREATE_SNAPSHOT ("
+  ],
+  "Description": [
+    "Creates a snapshot of an Amazon EBS volume and stores it in Amazon S3. You can use snapshots for\n    backups, to make copies of instance store volumes, and to save data before shutting down an instance."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

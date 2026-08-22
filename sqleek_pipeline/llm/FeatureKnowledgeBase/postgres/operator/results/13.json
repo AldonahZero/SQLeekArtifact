@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-math.html"
+    ],
+    "Title": [
+        "numeric_type % numeric_type"
+    ],
+    "Feature": [
+        "numeric_type % numeric_type \u2192 numeric_type"
+    ],
+    "Description": [
+        "Modulo (remainder); available for smallint, integer, bigint, and numeric"
+    ],
+    "Examples": [
+        "5 % 4 \u2192 1"
+    ],
+    "Category": [
+        "Mathematical Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 10 % 3;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 266,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 5.13e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 10 % 3;"
+    ]
+}

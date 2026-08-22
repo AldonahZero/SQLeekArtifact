@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "<<"
+    ],
+    "Feature": [
+        "<<"
+    ],
+    "Description": [
+        "bitwise shift left (integers only)"
+    ],
+    "Examples": [
+        "1 << 4"
+    ],
+    "Category": [
+        "Mathematics Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT << 2 FROM my_table;",
+        "SELECT 5 << 2;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 262,
+            "Prompt Tokens": 242,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 4.8299999999999995e-05
+        },
+        {
+            "Total Tokens": 412,
+            "Prompt Tokens": 393,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 7.035e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!syntax error, unexpected LEFT_SHIFT in: \"select <<\"\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 5 << 2;"
+    ]
+}

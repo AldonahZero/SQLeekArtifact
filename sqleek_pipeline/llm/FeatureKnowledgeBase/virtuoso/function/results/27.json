@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ascii/"
+  ],
+  "Title": [
+    "integer ascii ("
+  ],
+  "Feature": [
+    "integer ascii ("
+  ],
+  "Description": [
+    "ascii returns the ASCII value of the first \n\t  character of a string.  If an empty string is given, then zero is returned.\nascii"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

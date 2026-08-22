@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-info.html"
+    ],
+    "Title": [
+        "pg_get_ruledef"
+    ],
+    "Feature": [
+        "pg_get_ruledef ( rule oid [, pretty boolean ] ) \u2192 text"
+    ],
+    "Description": [
+        "Reconstructs the creating command for a rule. (This is a decompiled reconstruction, not the original text of the command.)"
+    ],
+    "Examples": [],
+    "Category": [
+        "System Information Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pg_get_ruledef(oid) FROM pg_rewrite;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 304,
+            "Prompt Tokens": 279,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.685e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pg_get_ruledef(oid) FROM pg_rewrite;"
+    ]
+}

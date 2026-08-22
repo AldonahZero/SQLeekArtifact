@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ceiling/"
+  ],
+  "Title": [
+    "ceiling ("
+  ],
+  "Feature": [
+    "ceiling ("
+  ],
+  "Description": [
+    "ceiling calculates the smallest integer greater than or equal to x .\nceiling\nx"
+  ],
+  "Examples": [
+    "callret   callret   callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

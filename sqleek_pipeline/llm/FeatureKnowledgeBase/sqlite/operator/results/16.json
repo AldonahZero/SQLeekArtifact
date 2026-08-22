@@ -1,0 +1,49 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_expr.html"
+    ],
+    "Title": [
+        "SQL Language Expressions"
+    ],
+    "Feature": [
+        "BETWEEN"
+    ],
+    "Description": [
+        "The BETWEEN operator is used to filter the result set within a range. It includes the boundary values in the range. The range can be specified with two values, and the operator returns true if the value falls within this range.",
+        "Parameters: An expression and two boundary values.",
+        "Returns: True if the expression value is within the specified range, inclusive of the boundaries."
+    ],
+    "Examples": [
+        "SELECT * FROM products WHERE price BETWEEN 50 AND 100; -- Finds products with prices between 50 and 100",
+        "SELECT * FROM orders WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31'; -- Finds orders placed within the year 2024"
+    ],
+    "Category": [
+        "Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM table_name WHERE column_name BETWEEN value1 AND value2;",
+        "SELECT * FROM sqlite_master WHERE type='table' AND name BETWEEN 'A' AND 'Z';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 339,
+            "Prompt Tokens": 312,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 6.3e-05
+        },
+        {
+            "Total Tokens": 490,
+            "Prompt Tokens": 457,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 8.835e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such table: table_name\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT * FROM sqlite_master WHERE type='table' AND name BETWEEN 'A' AND 'Z';"
+    ]
+}

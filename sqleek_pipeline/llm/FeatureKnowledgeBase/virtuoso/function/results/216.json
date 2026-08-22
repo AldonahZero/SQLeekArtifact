@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_lock/"
+  ],
+  "Title": [
+    "any http_lock ("
+  ],
+  "Feature": [
+    "any http_lock ("
+  ],
+  "Description": [
+    "This function takes as parameter the password of the dba user, locks the HTTP Web Server port\n  \tand on any http access attempt shows the content of the html file given as value for the MaintenancePage parameter in the Virtuoso ini [HTTPServer] section:\n-- Virtuoso ini\n...\n[HTTPServer]\n...\nMaintenancePage = atomic.html\n..\nNote: the html file should be placed in the HTTP root."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

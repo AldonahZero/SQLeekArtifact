@@ -1,0 +1,14 @@
+# MariaDB AFLGo build/runtime artifacts
+/bin/
+/build/
+/logs/
+/tmp/
+/runtime/
+/output_rq2_sanity/
+/output_rq2_24h/
+/patches/
+*.bak_*
+
+# Keep compact external archives used to avoid flaky GitHub release downloads,
+# but do not track extracted dependency trees.
+/deps/*/

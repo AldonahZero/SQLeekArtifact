@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_instance_delete/"
+  ],
+  "Title": [
+    "BPEL.BPEL.instance_delete ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.instance_delete ("
+  ],
+  "Description": [
+    "BPEL.BPEL.instance_delete Deletes the instance, regardless of completion state or such. If there are waits for the instance the waits are flagged as deleted, not physically deleted. This will cause the reply message to be received instead of going to the unexpected messages queue.\nBPEL.BPEL.instance_delete"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

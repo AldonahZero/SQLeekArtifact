@@ -1,0 +1,1 @@
+dbms,commit_hash,commit_date,parent_hash,subject,full_message,issue_id,cve_id,is_bug_fix,confidence,confidence_score,confidence_reasons,is_backport,original_fix_hash,is_test_only,regression_test_added,bug_type,component,changed_source_files,changed_test_files,changed_doc_files,changed_build_files,changed_generated_files,churn_added,churn_deleted,churn_total,changed_file_count

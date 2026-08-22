@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_uninstall/"
+  ],
+  "Title": [
+    "varchar DB.DBA. VAD_UNINSTALL ("
+  ],
+  "Feature": [
+    "varchar DB.DBA. VAD_UNINSTALL ("
+  ],
+  "Description": [
+    "Invokes the uninstall operation from interactive SQL or from the\n  web user interface. This will:\nenter into atomic mode\nenter into atomic mode\nCheck if no other package is using the subject of uninstall\nCheck if no other package is using the subject of uninstall\nRun the pre-uninstall SQL script\nRun the pre-uninstall SQL script\nRun any post-uninstall SQL code\nRun any post-uninstall SQL code\nRemove all VSP and XSLT and other web resources from their\n    designated place in DAV or the Virtuoso Web root where permitted.\nRemove all VSP and XSLT and other web resources from their\n    designated place in DAV or the Virtuoso Web root where permitted.\nIf DB.DBA.VAD_UNINSTALL() succeeded the server comes back\n    on-line. If there was a failure in mid-uninstall, such as running out\n    of disk or some other serious unrecoverable database error, the server\n    exits. The failed uninstallation can be undone manually. As usual,\n    halting the server, deleting the transaction log file and restarting\n    will force the server to start from the checkpoint as if the\n    uninstallation was never attempted.\nIf DB.DBA.VAD_UNINSTALL() succeeded the server comes back\n    on-line. If there was a failure in mid-uninstall, such as running out\n    of disk or some other serious unrecoverable database error, the server\n    exits. The failed uninstallation can be undone manually. As usual,\n    halting the server, deleting the transaction log file and restarting\n    will force the server to start from the checkpoint as if the\n    uninstallation was never attempted."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_status/"
+  ],
+  "Title": [
+    "status ("
+  ],
+  "Feature": [
+    "status ("
+  ],
+  "Description": [
+    "Depending of input parameter displays a statistics for running server.\nNote that counters reported by status will be reset after server startup."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

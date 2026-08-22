@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "round_even(v NUMERIC, s INTEGER)"
+    ],
+    "Feature": [
+        "round_even(v NUMERIC, s INTEGER)"
+    ],
+    "Description": [
+        "Alias of roundbankers(v, s). Round to s decimal places using the rounding half to even rule. Values s < 0 are allowed."
+    ],
+    "Examples": [
+        "round_even(24.5, 0)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT round_even(123.4567, 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 319,
+            "Prompt Tokens": 294,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.909999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT round_even(123.4567, 2);"
+    ]
+}

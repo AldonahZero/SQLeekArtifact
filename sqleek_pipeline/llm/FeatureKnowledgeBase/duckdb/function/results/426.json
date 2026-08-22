@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "regexp_split_to_table(string, regex)"
+    ],
+    "Feature": [
+        "regexp_split_to_table(string, regex)"
+    ],
+    "Description": [
+        "Splits the string along the regex and returns a row for each part."
+    ],
+    "Examples": [
+        "regexp_split_to_table('hello world; 42', ';? ')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_split_to_table('hello,world', ',')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 300,
+            "Prompt Tokens": 275,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.625e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_split_to_table('hello,world', ',')"
+    ]
+}

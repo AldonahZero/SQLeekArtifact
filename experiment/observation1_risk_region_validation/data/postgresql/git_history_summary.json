@@ -1,0 +1,20 @@
+{
+  "commit_count_no_merges": 1,
+  "dbms": "postgresql",
+  "generated_at": "2026-07-16T09:03:20.817373+00:00",
+  "source_commit": "62d6c7d3df6287f1bd83199c1a746e50d31571a0",
+  "source_repo": "/root/SQLeek/sources/postgres",
+  "windows": {
+    "latest_complete_year": 2026,
+    "main": {
+      "historical_end": "2024-12-31",
+      "historical_start": "2026-02-23",
+      "validation_end": "2026-12-31",
+      "validation_start": "2025-01-01",
+      "window_id": "main"
+    },
+    "repo_first_commit_date": "2026-02-23",
+    "repo_latest_commit_date": "2026-02-23",
+    "rolling": []
+  }
+}

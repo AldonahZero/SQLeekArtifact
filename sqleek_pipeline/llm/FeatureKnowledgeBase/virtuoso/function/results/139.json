@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_disconnect_user/"
+  ],
+  "Title": [
+    "disconnect_user ("
+  ],
+  "Feature": [
+    "disconnect_user ("
+  ],
+  "Description": [
+    "disconnect_user disconnects clients whose\n      username matches the username_pattern string given as an argument, and\n      returns an integer value giving the number of clients disconnected.\n      This can be used after DELETE USER or REVOKE statement to make sure that\n      the affected user has no open connections."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

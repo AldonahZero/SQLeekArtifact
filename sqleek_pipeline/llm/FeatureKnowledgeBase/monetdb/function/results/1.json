@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/logical-functions"
+    ],
+    "Title": [
+        "\"not\"(a boolean)"
+    ],
+    "Feature": [
+        "\"not\"(a boolean)"
+    ],
+    "Description": [
+        "Return type: ",
+        "boolean",
+        "NOT a"
+    ],
+    "Examples": [
+        "\"not\"(true)"
+    ],
+    "Category": [
+        "Logical Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT NOT TRUE;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 279,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.905e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT NOT TRUE;"
+    ]
+}

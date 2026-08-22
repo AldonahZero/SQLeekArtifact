@@ -1,0 +1,39 @@
+--- a/MySQL/docker/fuzz_root/run_parallel.py	2026-07-14 04:53:41.073939208 +0000
++++ b/MySQL/docker/fuzz_root/run_parallel.py	2026-07-14 04:53:41.073939208 +0000
+@@ -93,19 +93,23 @@
+         cur_output_dir_str = output_dir_str + "/outputs_" + str(cur_inst_id - starting_core_id)
+     else:
+         cur_output_dir_str = "./outputs/outputs_" + str(cur_inst_id - starting_core_id)
+-    if not os.path.isdir(cur_output_dir_str):
++    if os.environ.get("SQLEEK_OUTPUT_LAYOUT", "") == "1":
++        os.makedirs(os.path.dirname(cur_output_dir_str), exist_ok=True)
++    elif not os.path.isdir(cur_output_dir_str):
+         os.makedirs(cur_output_dir_str)
+ 
+     cur_output_file = os.path.join(cur_output_dir_str, "output.txt")
+ 
+-    cur_output_file_2 = os.path.join(cur_output_dir_str, "output_AFL.txt")
+-    cur_output_file_2 = open(cur_output_file_2, "w")
++    if os.path.isdir(cur_output_dir_str):
++        cur_output_file_2 = open(os.path.join(cur_output_dir_str, "output_AFL.txt"), "w")
++    else:
++        cur_output_file_2 = open(os.devnull, "w")
+     
+     # Prepare for env shared by the fuzzer and mysql. 
+     cur_port_num = port_starting_num + cur_inst_id - starting_core_id
+     socket_path = "/tmp/mysql_" + str(cur_inst_id) + ".sock"
+ 
+-    modi_env = dict()
++    modi_env = os.environ.copy()
+     modi_env["AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES"] = "1"
+     modi_env["AFL_SKIP_CPUFREQ"] = "1"
+ 
+@@ -183,7 +187,7 @@
+         "--performance_schema=OFF",
+         "'"  # right quote
+      ]
+-    mysql_modi_env = dict()
++    mysql_modi_env = os.environ.copy()
+     mysql_modi_env["__AFL_SHM_ID"] = cur_shm_str
+ 
+     mysql_command = " ".join(mysql_command)

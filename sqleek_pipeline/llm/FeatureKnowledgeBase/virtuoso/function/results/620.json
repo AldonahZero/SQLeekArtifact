@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_set_password/"
+  ],
+  "Title": [
+    "user_set_password ("
+  ],
+  "Feature": [
+    "user_set_password ("
+  ],
+  "Description": [
+    "Explicitly sets a new password for the SQL account user_name to new_password .\n    Only users in the dba group may execute this function. It allows the\n    database administrator to reset lost passwords of SQL accounts.\n    The new password will be set without further confirmation, so\n    the DBA must be sure of the new password.\nuser_name\nnew_password"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_lcase/"
+  ],
+  "Title": [
+    "lcase ("
+  ],
+  "Feature": [
+    "lcase ("
+  ],
+  "Description": [
+    "lcase returns a copy of string str with all the uppercase alphabetical\n    characters converted to corresponding lowercase letters. This includes\n    also the diacritic letters present in the ISO 8859/1 standard in range\n    192 - 222 decimal, excluding the character 223, German double-s which\n    stays the same.\nlower is an alias for lcase.\nlcase('AbracadabrA')  -> 'abracadabra'\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

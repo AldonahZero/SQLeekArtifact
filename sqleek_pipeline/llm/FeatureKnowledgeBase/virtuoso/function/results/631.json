@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_install/"
+  ],
+  "Title": [
+    "varchar DB.DBA. VAD_INSTALL ("
+  ],
+  "Feature": [
+    "varchar DB.DBA. VAD_INSTALL ("
+  ],
+  "Description": [
+    "Invoke the install operation from interactive SQL or from the web user\n  interface. This will:\nenter into atomic mode\nenter into atomic mode\nCheck for version and prerequisite package compatibility\nCheck for version and prerequisite package compatibility\nRun the pre-install SQL script\nRun the pre-install SQL script\nLoad all SQL code and other resources in the order given by the developer\nLoad all SQL code and other resources in the order given by the developer\nRun any post install SQL code\nRun any post install SQL code\nIf DB.DBA.VAD_INSTALL() succeeded the server comes back on-line.\nIf DB.DBA.VAD_INSTALL() succeeded the server comes back on-line.\nIf there was a failure in mid-install, such as running out of disk or\n  some other serious unrecoverable database error, the server exits. The\n  installation can be undone manually by halting the server, deleting the\n  transaction log file and restarting. The server will start from the checkpoint\n  as if the installation was never attempted."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

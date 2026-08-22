@@ -1,0 +1,41 @@
+{
+  "operation": "exclude_invalid_postgresql_wo_m2_r1_from_rq4_aggregation",
+  "generated_at": "2026-07-31T14:00:58Z",
+  "source_package": "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_postgres_bucketed_seq_replay_mtime_20260731_060212/data",
+  "dbms": "PostgreSQL",
+  "variant": "SQLeek-W/O-M2",
+  "valid_repeat_ids": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "excluded_repeat_ids": [
+    1
+  ],
+  "excluded_reason": "r1 container reported faulty; raw replay package retained unchanged",
+  "source_denominators": {
+    "risk_branches_total": 32.0,
+    "risk_targets_total": 46.0,
+    "global_branches_total": 249514.0
+  },
+  "shared_denominators": {
+    "risk_branches_total": 3200.0,
+    "risk_targets_total": 4845.0,
+    "global_branches_total": 170620.0
+  },
+  "aggregate": {
+    "tool": "SQLeek-W/O-M2",
+    "dbms": "PostgreSQL",
+    "target_region_branches_hit_mean": "625",
+    "target_region_branches_total": "3200",
+    "target_region_branch_coverage_mean": "0.1953125",
+    "target_regions_hit_mean": "2949.13043478261",
+    "target_regions_total": "4845",
+    "target_region_hit_coverage_mean": "0.608695652173913",
+    "global_branches_hit_mean": "61130.5022563864",
+    "global_branches_total": "170620",
+    "global_branch_coverage_mean": "0.358284505077871"
+  },
+  "backup": "/root/SQLeek/experiment/RQ4/result/backups/before_pg_wo_m2_exclude_r1_20260731_135631"
+}

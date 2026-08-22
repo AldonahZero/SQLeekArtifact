@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-info.html"
+    ],
+    "Title": [
+        "pg_conversion_is_visible"
+    ],
+    "Feature": [
+        "pg_conversion_is_visible ( conversion oid ) \u2192 boolean"
+    ],
+    "Description": [
+        "Is conversion visible in search path?"
+    ],
+    "Examples": [],
+    "Category": [
+        "System Information Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pg_conversion_is_visible(12345);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.1599999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pg_conversion_is_visible(12345);"
+    ]
+}

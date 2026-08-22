@@ -1,0 +1,55 @@
+format: sqleek-stage3-docker-lock-v1
+generated_at: 2026-07-14T00:00:00+08:00
+
+base_image:
+  name: ubuntu:22.04
+  digest: sha256:0e0a0fc6d18feda9db1590da249ac93e8d5abfea8f4c3c0c849ce512b5ef8982
+  note: build.sh passes BASE_IMAGE; record the resolved digest from docker/buildx on the build host.
+
+sqleek:
+  repository: git@github.com:AldonahZero/SQLeek.git
+  stage3_scheduler_path: /root/SQLeek/sqleek_pipeline/stage3_scheduler
+  commit: 67293c1e9af124b3dfca93c4b2e496485001c121
+
+sqlright:
+  repository: git@github.com:PSU-Security-Universe/sqlright.git
+  branch: main
+  commit: 9457f0311b70562a3423ee86ac7e2ebdaaa6664b
+  mysql_parser_source:
+    repository: git@github.com:mysql/mysql-server.git
+    tag: mysql-8.0.27
+    commit: 3290a66c89eb1625a7058e0ef732432b6952b435
+  mysql_parser_boost:
+    source_url: https://downloads.sourceforge.net/project/boost/boost/1.73.0/boost_1_73_0.tar.bz2?use_mirror=twds
+    version: 1.73.0
+    sha256: 4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402
+    note: SQLRight's MySQL parser requires Boost minor version 73; project Git clones still use SSH.
+  mysql_parser_openssl:
+    repository: git@github.com:openssl/openssl.git
+    tag: OpenSSL_1_1_1w
+    commit: e04bd3433fd84e1861bf258ea37928d9845e6a86
+    tag_object: 529ba79d5b9cc7e7139c32819e995cb123ab6f93
+    install_prefix: /opt/openssl111
+
+aflplusplus:
+  repository: git@github.com:AFLplusplus/AFLplusplus.git
+  branch: stable
+  commit: 011cd189801830253c66ecd3cd6919ec01b46c34
+
+dbms:
+  mysql:
+    repository: git@github.com:mysql/mysql-server.git
+    version: 9.6.0
+    commit: 447eb26e094b444a88c532028647e48228c3c04f
+  mariadb:
+    repository: git@github.com:MariaDB/server.git
+    version: 13.1.0-alpha
+    commit: a06be0288f63f520aec95982cc6f872d26c4f23c
+  postgresql:
+    repository: git@github.com:postgres/postgres.git
+    version: 18.3
+    commit: 62d6c7d3df6287f1bd83199c1a746e50d31571a0
+  monetdb:
+    repository: git@github.com:MonetDB/MonetDB.git
+    version: 56.0.0-unreleased
+    commit: 9b26fc8e25a3948fc94486caae3e30103330a5a7

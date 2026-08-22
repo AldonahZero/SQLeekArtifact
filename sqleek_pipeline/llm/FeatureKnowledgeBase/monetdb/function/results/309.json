@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/window-functions"
+    ],
+    "Title": [
+        "sys.stddev_samp(numeric_expr)"
+    ],
+    "Feature": [
+        "sys.stddev_samp(numeric_expr)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double"
+    ],
+    "Examples": [],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.stddev_samp(10) AS sample_stddev;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 297,
+            "Prompt Tokens": 271,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.625e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.stddev_samp(10) AS sample_stddev;"
+    ]
+}

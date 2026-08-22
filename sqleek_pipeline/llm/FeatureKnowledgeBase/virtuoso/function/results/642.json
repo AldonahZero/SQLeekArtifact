@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vd_remote_table/"
+  ],
+  "Title": [
+    "vd_remote_table ("
+  ],
+  "Feature": [
+    "vd_remote_table ("
+  ],
+  "Description": [
+    "Declares an existing table as resident on a data source previously\ndeclared with vd_remote_data_source().\nThis function declares the table local_name as table remote_name on\nthe dsn. The tables names should be full, names with qualifier and\nowner. The names are case sensitive and must be in the exact case where\nthey appear in the local and remote schemas.\nIf remote_name is NULL, the effect of a possible previous vd_remote_table\nis reversed. The table is thereafter treated as a local table, except\nin procedures and statements compiled when the remote declaration was\nin effect."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

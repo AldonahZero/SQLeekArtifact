@@ -1,0 +1,13 @@
+[sqlsmith]
+url = git@github.com:anse1/sqlsmith.git
+branch = master
+commit = e794141f8a8dd4e2353433c818cf13f0f2382e49
+path = third_party/sqlsmith
+status = cloned
+
+[aflplusplus]
+url = git@github.com:AFLplusplus/AFLplusplus.git
+branch = stable
+commit = 011cd189801830253c66ecd3cd6919ec01b46c34
+path = third_party/aflplusplus
+status = cloned

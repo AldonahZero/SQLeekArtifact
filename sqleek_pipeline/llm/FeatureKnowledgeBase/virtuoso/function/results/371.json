@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_ttl2hash/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_TTL2HASH ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_TTL2HASH ("
+  ],
+  "Description": [
+    "Returns a dict of triples in 'long valmode'."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

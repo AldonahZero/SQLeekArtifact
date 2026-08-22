@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_getdate/"
+  ],
+  "Title": [
+    "getdate ("
+  ],
+  "Feature": [
+    "getdate ("
+  ],
+  "Description": [
+    "getdate() returns the timestamp associated with current transaction.\n\tThis is an alias of now() .\ngetdate()\nnow()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

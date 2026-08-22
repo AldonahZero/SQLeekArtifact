@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/json_object_filter_keys/"
+    ],
+    "Title": [
+        "JSON_OBJECT_FILTER_KEYS"
+    ],
+    "Feature": [
+        "JSON_OBJECT_FILTER_KEYS(obj, array_keys)\n"
+    ],
+    "Description": [
+        "JSON_OBJECT_FILTER_KEYS returns a JSON object with keys from the object that are also present in the array as string. It is used when one wants to get key-value pair such that the keys are common but the values may not be common."
+    ],
+    "Examples": [
+        "SET @obj1= '{ \"a\": 1, \"b\": 2, \"c\": 3}';\nSET @obj2= '{\"b\" : 10, \"c\": 20, \"d\": 30}';\nSELECT JSON_OBJECT_FILTER_KEYS (@obj1, JSON_ARRAY_INTERSECT(JSON_KEYS(@obj1), JSON_KEYS(@obj2)));\n+-------------------------------------------------------------------------------------------+\n| JSON_OBJECT_FILTER_KEYS (@obj1, JSON_ARRAY_INTERSECT(JSON_KEYS(@obj1), JSON_KEYS(@obj2))) |\n+-------------------------------------------------------------------------------------------+\n| {\"b\": 2, \"c\": 3}                                                                          |\n+-------------------------------------------------------------------------------------------+\n"
+    ],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT JSON_OBJECT_FILTER_KEYS(your_json_object, 'your_array_keys')",
+        "SELECT JSON_OBJECT_FILTER_KEYS('{\"key1\": \"value1\", \"key2\": \"value2\"}', '[\"key1\"]')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 327,
+            "Prompt Tokens": 299,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 6.165e-05
+        },
+        {
+            "Total Tokens": 503,
+            "Prompt Tokens": 461,
+            "Completion Tokens": 42,
+            "Total Cost (USD)": 9.435e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'your_json_object' in 'field list'\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT JSON_OBJECT_FILTER_KEYS('{\"key1\": \"value1\", \"key2\": \"value2\"}', '[\"key1\"]')"
+    ]
+}

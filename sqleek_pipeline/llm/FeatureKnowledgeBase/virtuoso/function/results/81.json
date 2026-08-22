@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_concat/"
+  ],
+  "Title": [
+    "concat ("
+  ],
+  "Feature": [
+    "concat ("
+  ],
+  "Description": [
+    "concat returns a new string ,\n    concatenated from a variable number of strings given as\n    arguments. NULL arguments are handled as empty strings.\nconcat\nconcat (str)\nreturns a copy of str .\nstr\nconcat ()\nreturns an empty string ."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_pub_remove/"
+  ],
+  "Title": [
+    "REPL_PUB_REMOVE ("
+  ],
+  "Feature": [
+    "REPL_PUB_REMOVE ("
+  ],
+  "Description": [
+    "This function is used to remove an item from existing publication.\n    It's action is performed on publisher side and depending of flag it \n    can send replication message to subscribers to remove this from subscription."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

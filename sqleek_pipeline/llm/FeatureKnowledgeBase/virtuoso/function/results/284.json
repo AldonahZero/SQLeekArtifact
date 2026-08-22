@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_locate/"
+  ],
+  "Title": [
+    "integer locate ("
+  ],
+  "Feature": [
+    "integer locate ("
+  ],
+  "Description": [
+    "Returns the starting position of the first occurrence of\nstring_exp1 within string_exp2. The search for the first occurrence\nof string_exp1 begins with the first character position in string_exp2\nunless the optional argument, start, is specified.\nIf start is specified, the search begins with the character\nposition indicated by the value of start.\nThe first character position in string_exp2 is indicated by the value 1.\nIf string_exp1 is not found within string_exp2, the value 0 is returned.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

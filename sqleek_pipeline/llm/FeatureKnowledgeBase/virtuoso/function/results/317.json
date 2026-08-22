@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_os_chmod/"
+  ],
+  "Title": [
+    "os_chmod ("
+  ],
+  "Feature": [
+    "os_chmod ("
+  ],
+  "Description": [
+    "os_chmod set the file mode bits\n\t    by calling the system function chmod() with the arguments supplied.\nos_chmod\nNot all the host OSes support all the file modes. That's why the function\n\t    will not throw an SQL error if the function fails.\nIt will return DB NULL value when the function was called successfully\n\t    and the error message as a string if it failed.\nIn most OSes the mode is a bitmask, so one would usually use the file_stat to get the current mode and bit_or / bit_xor to make the new\n\t    mode.\nfile_stat\nbit_or\nbit_xor\nTypical bit layout (from Linux 'man 2 chmod') is :\nThe DirsAllowed and DirsDenied lists in Parameters section of the\n\t    virtuoso configuration file (virtuoso.ini by default) are used to control\n\t    disk access."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_sync_all/"
+  ],
+  "Title": [
+    "repl_sync_all ("
+  ],
+  "Feature": [
+    "repl_sync_all ("
+  ],
+  "Description": [
+    "This function is used to synchronize all subscriptions. It make a synchronization\nrequests to the all publisher and will return immediately after that. The status of\nsubscriptions can be tested with repl_stat() function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

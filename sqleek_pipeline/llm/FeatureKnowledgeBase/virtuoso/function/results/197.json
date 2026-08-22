@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_hs_resolve/"
+  ],
+  "Title": [
+    "string HS_Resolve ("
+  ],
+  "Feature": [
+    "string HS_Resolve ("
+  ],
+  "Description": [
+    "Returns URL that represents the given DOI. The function is installed from the hslookup plugin which uses http://www.handle.net/.\nNote that you need to have in your Virtuoso database ini file\nin section Plugins added the hslookup.dll file, which location should be in the plugins folder under your\nVirtuoso server installation. For ex:\n[Plugins]\nLoadPath = ./plugin\n...\nLoad6    = plain,hslookup"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

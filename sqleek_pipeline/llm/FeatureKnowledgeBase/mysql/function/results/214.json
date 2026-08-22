@@ -1,0 +1,57 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "MBRCovers()",
+    "Description": [
+        "\nMBRCovers(g1,\n            g2)\n",
+        "\n            Returns 1 or 0 to indicate whether the minimum bounding\n            rectangle of g1 covers the\n            minimum bounding rectangle of g2.\n            This tests the opposite relationship as\n            MBRCoveredBy(). See the\n            description of MBRCoveredBy()\n            for examples.\n          ",
+        "\nMBRCovers() handles its\n            arguments as described in the introduction to this section.\n          "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/spatial-relation-functions-mbr.html#function_mbrcovers",
+    "Feature": [
+        "MBRCovers(g1,\n            g2)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Spatial Analysis Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT MBRCovers(geometry1, geometry2);",
+        "SELECT MBRCovers(ST_GeomFromText('POLYGON((...))'), ST_GeomFromText('POLYGON((...))'));",
+        "SELECT MBRCovers(ST_GeomFromText('POINT(0 0)'), ST_GeomFromText('POINT(1 1)'));"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 394,
+            "Prompt Tokens": 370,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 6.989999999999999e-05
+        },
+        {
+            "Total Tokens": 573,
+            "Prompt Tokens": 530,
+            "Completion Tokens": 43,
+            "Total Cost (USD)": 0.00010529999999999998
+        },
+        {
+            "Total Tokens": 753,
+            "Prompt Tokens": 709,
+            "Completion Tokens": 44,
+            "Total Cost (USD)": 0.00013274999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'geometry1' in 'field list'\")\n",
+        "(pymysql.err.OperationalError) (3037, 'Invalid GIS data provided to function st_geomfromtext.')\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT MBRCovers(ST_GeomFromText('POINT(0 0)'), ST_GeomFromText('POINT(1 1)'));"
+    ]
+}

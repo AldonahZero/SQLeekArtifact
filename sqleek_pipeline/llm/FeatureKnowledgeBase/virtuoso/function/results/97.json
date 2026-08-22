@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_csv_cols_def/"
+  ],
+  "Title": [
+    "csv_cols_def ("
+  ],
+  "Feature": [
+    "csv_cols_def ("
+  ],
+  "Description": [
+    "This function will try to guess the columns by given CSV file. It would\nwork if CSV file begins with a header row."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

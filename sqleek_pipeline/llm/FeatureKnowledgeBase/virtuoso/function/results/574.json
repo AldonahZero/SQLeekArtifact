@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_substring/"
+  ],
+  "Title": [
+    "substring ("
+  ],
+  "Feature": [
+    "substring ("
+  ],
+  "Description": [
+    "Returns a substring of string str. The start index is 1 based.\nThe substring is sublen characters long.\nThis function follows SQL 92.\nsubstring('AbracadabrA',1,4) -> 'Abra'\nsubstring('AbracadabrA',5,4) -> 'cada'\nsubstring('AbracadabrA',8,4) -> 'abrA'\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_set_primary_key/"
+  ],
+  "Title": [
+    "xenc_set_primary_key ("
+  ],
+  "Feature": [
+    "xenc_set_primary_key ("
+  ],
+  "Description": [
+    "This function is used to associate a key (to be used as primary) with a X.509 certificate.\n\tUsually this function is called after key import from a X.509 certificate."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

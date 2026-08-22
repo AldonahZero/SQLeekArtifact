@@ -1,0 +1,6 @@
+BEGIN;
+CREATE TYPE foo AS (a int, b text);
+PREPARE p AS SELECT CAST(ROW(1, 'hello') AS foo)::text;
+EXECUTE p;
+ALTER TYPE foo ALTER ATTRIBUTE a TYPE VARCHAR(100);
+EXECUTE p;

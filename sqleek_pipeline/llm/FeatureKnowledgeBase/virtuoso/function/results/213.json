@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_internal_redirect/"
+  ],
+  "Title": [
+    "any http_internal_redirect ("
+  ],
+  "Feature": [
+    "any http_internal_redirect ("
+  ],
+  "Description": [
+    "This function performs internal redirect. Can be used in handling situations where HTTP level \n    \tredirection is inadequate. For example, 303 redirection offered when implementing hashless Linked \n    \tData URIs. Instead of sending a 303 Virtuoso will redirect to the URL in \"Location:\" and \n    \treturn 200 OK. Basically, this is like curl -iL instead of curl -i, but implemented inside Virtuoso.\nThe function can be used directly or via URI template syntax used to construct rewrite rules \n    \tfor Virtuoso virtual directories / web service endpoints."
+  ],
+  "Examples": [
+    "create procedure my_redirect()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_create_snapshot_sub/"
+  ],
+  "Title": [
+    "None REPL_CREATE_SNAPSHOT_SUB ("
+  ],
+  "Feature": [
+    "None REPL_CREATE_SNAPSHOT_SUB ("
+  ],
+  "Description": [
+    "This procedure should be used to create a bi-directional snapshot subscription.\nThis function should be run on publisher."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

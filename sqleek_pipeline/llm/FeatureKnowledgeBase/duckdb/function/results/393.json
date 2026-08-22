@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "least(x1, x2, ...)"
+    ],
+    "Feature": [
+        "least(x1, x2, ...)"
+    ],
+    "Description": [
+        "Selects the smallest value using lexicographical ordering. Note that uppercase characters are considered \u201csmaller\u201d than lowercase characters, and collations are not supported."
+    ],
+    "Examples": [
+        "least('abc', 'BCD', 'cde', 'EFG')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT least('apple', 'Banana', 'cherry');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 318,
+            "Prompt Tokens": 292,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.9399999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT least('apple', 'Banana', 'cherry');"
+    ]
+}

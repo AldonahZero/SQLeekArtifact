@@ -1,0 +1,73 @@
+diff --git a/MySQL/docker/fuzz_root/afl_config.py b/MySQL/docker/fuzz_root/afl_config.py
+index c8420f5..10d653f 100644
+--- a/MySQL/docker/fuzz_root/afl_config.py
++++ b/MySQL/docker/fuzz_root/afl_config.py
+@@ -1,11 +1,11 @@
+ import os
+ 
+-mysql_root_dir = "/home/mysql/mysql-server/bld"
++mysql_root_dir = os.environ.get("SQLEEK_MYSQL_ROOT", "/opt/dbms")
+ mysql_src_data_dir = os.path.join(mysql_root_dir, "data_all/ori_data")
+ current_workdir = os.getcwd()
+ 
+-starting_core_id = 0
+-parallel_num = 5
+-port_starting_num = 9000
++starting_core_id = int(os.environ.get("SQLEEK_START_CORE", "0"))
++parallel_num = int(os.environ.get("SQLEEK_NUM_CONCURRENT", "1"))
++port_starting_num = int(os.environ.get("SQLEEK_PORT_START", "9000"))
+ 
+-MYSQL_REBOOT_TIME_GAP = 60
++MYSQL_REBOOT_TIME_GAP = int(os.environ.get("SQLEEK_MYSQL_REBOOT_TIME_GAP", "60"))
+diff --git a/MySQL/docker/fuzz_root/run_parallel.py b/MySQL/docker/fuzz_root/run_parallel.py
+index 0d46b7d..aeba5f6 100644
+--- a/MySQL/docker/fuzz_root/run_parallel.py
++++ b/MySQL/docker/fuzz_root/run_parallel.py
+@@ -67,6 +67,12 @@ for opt, arg in opts:
+ # signal.signal(signal.SIGQUIT, exit_handler)
+ # signal.signal(signal.SIGHUP, exit_handler)
+ 
++sqleek_dbms_name = os.environ.get("SQLEEK_DBMS", "mysql")
++sqleek_input_dir = os.environ.get("SQLEEK_INPUT_DIR", "./inputs")
++sqleek_afl_bin = os.environ.get("SQLEEK_SQLRIGHT_AFL", "./afl-fuzz")
++sqleek_timeout_ms = os.environ.get("SQLEEK_AFL_TIMEOUT", "300")
++sqleek_memory_limit = os.environ.get("SQLEEK_MEMORY_LIMIT", "4000")
++
+ if os.path.isfile(os.path.join(os.getcwd(), "shm_env.txt")):
+     os.remove(os.path.join(os.getcwd(), "shm_env.txt"))
+ 
+@@ -81,12 +87,14 @@ for cur_inst_id in range(starting_core_id, starting_core_id + parallel_num, 1):
+ 
+     # Set up SQLRight output folder
+     cur_output_dir_str = ""
+-    if output_dir_str != "":
+-        cur_output_dir_str = output_dir_str + "/outputs_"  + str(cur_inst_id - starting_core_id)
++    if os.environ.get("SQLEEK_OUTPUT_LAYOUT", "") == "1":
++        cur_output_dir_str = os.path.join(output_dir_str, sqleek_dbms_name + "_memory", "default")
++    elif output_dir_str != "":
++        cur_output_dir_str = output_dir_str + "/outputs_" + str(cur_inst_id - starting_core_id)
+     else:
+         cur_output_dir_str = "./outputs/outputs_" + str(cur_inst_id - starting_core_id)
+     if not os.path.isdir(cur_output_dir_str):
+-        os.mkdir(cur_output_dir_str)
++        os.makedirs(cur_output_dir_str)
+ 
+     cur_output_file = os.path.join(cur_output_dir_str, "output.txt")
+ 
+@@ -111,12 +119,12 @@ for cur_inst_id in range(starting_core_id, starting_core_id + parallel_num, 1):
+     #                     + " aaa " \
+     #                     + " & "
+     fuzzing_command = [
+-        "./afl-fuzz", 
+-        "-t", "300", 
+-        "-m", "4000",
++        sqleek_afl_bin,
++        "-t", sqleek_timeout_ms,
++        "-m", sqleek_memory_limit,
+         "-P", str(cur_port_num), 
+         "-K", socket_path,
+-        "-i", "./inputs",
++        "-i", sqleek_input_dir,
+         "-o", cur_output_dir_str,
+         "-c", str(cur_inst_id),
+         "-O", oracle_str

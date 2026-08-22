@@ -1,0 +1,29 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/shift-right/"
+    ],
+    "Title": [
+        ">>"
+    ],
+    "Feature": [
+        "value1 >> value2\n"
+    ],
+    "Description": [
+        "Converts a longlong (BIGINT) number (value1) to binary and shifts value2 units to the right."
+    ],
+    "Examples": [
+        "SELECT 4 >> 2;\n+--------+\n| 4 >> 2 |\n+--------+\n|      1 |\n+--------+\n"
+    ],
+    "Category": [
+        "Bit Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT 4 >> 2;"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT 4 >> 2;"
+    ]
+}

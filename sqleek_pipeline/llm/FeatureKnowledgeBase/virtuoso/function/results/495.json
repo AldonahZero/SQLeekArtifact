@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sprintf_inverse/"
+  ],
+  "Title": [
+    "sprintf_inverse ("
+  ],
+  "Feature": [
+    "sprintf_inverse ("
+  ],
+  "Description": [
+    "sprintf_inverse gets a string to parse, a format string and an integer (0,1 or 2)\nthat indicates error recovery method. If the first argument matches the format string then it\nreturns vector of the pattern values."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

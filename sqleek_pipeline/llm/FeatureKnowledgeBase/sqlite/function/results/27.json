@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "randomblob(N)"
+    ],
+    "Feature": [
+        "randomblob(N)"
+    ],
+    "Description": [
+        "\n  The randomblob(N) function return an N-byte blob containing pseudo-random\n  bytes. If N is less than 1 then a 1-byte random blob is returned.\n\n  Hint:  applications can generate globally unique identifiers\n  using this function together with hex() and/or\n  lower() like this:\n\n  hex(randomblob(16))\n  lower(hex(randomblob(16)))\n  \n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "randomblob(16)",
+        "SELECT randomblob(16);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 353,
+            "Prompt Tokens": 336,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 6.0599999999999996e-05
+        },
+        {
+            "Total Tokens": 492,
+            "Prompt Tokens": 473,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 8.235e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) near \"randomblob\": syntax error\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT randomblob(16);"
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-string.html"
+    ],
+    "Title": [
+        "text ^@ text"
+    ],
+    "Feature": [
+        "text ^@ text \u2192 boolean"
+    ],
+    "Description": [
+        "Returns true if the first string starts with the second string (equivalent to the starts_with() function)."
+    ],
+    "Examples": [
+        "'alphabet' ^@ 'alph' \u2192 t"
+    ],
+    "Category": [
+        "String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'text' ^@ 'text';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 266,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.3099999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'text' ^@ 'text';"
+    ]
+}

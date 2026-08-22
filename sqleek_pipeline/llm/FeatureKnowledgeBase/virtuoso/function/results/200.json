@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_acl_remove/"
+  ],
+  "Title": [
+    "integer http_acl_remove ("
+  ],
+  "Feature": [
+    "integer http_acl_remove ("
+  ],
+  "Description": [
+    "This function can be used within application logic to remove ACLs rule."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

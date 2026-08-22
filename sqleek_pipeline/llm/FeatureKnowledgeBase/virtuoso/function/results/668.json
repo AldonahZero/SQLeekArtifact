@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_bn2dec/"
+  ],
+  "Title": [
+    "xenc_bn2dec ("
+  ],
+  "Feature": [
+    "xenc_bn2dec ("
+  ],
+  "Description": [
+    "Prints as a string a big number serialized as binary using base64 encoding"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

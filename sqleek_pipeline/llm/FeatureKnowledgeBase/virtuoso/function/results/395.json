@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regr_syy/"
+  ],
+  "Title": [
+    "numeric REGR_SYY ("
+  ],
+  "Feature": [
+    "numeric REGR_SYY ("
+  ],
+  "Description": [
+    "REGR_SYY makes the following computation after eliminating NULL (expr1, expr2) pairs:\nREGR_COUNT(expr1, expr2) * VAR_POP(expr1)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

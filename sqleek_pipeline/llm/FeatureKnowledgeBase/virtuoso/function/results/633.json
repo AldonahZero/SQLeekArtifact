@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_load_sql_file/"
+  ],
+  "Title": [
+    "DB.DBA. VAD_LOAD_SQL_FILE ("
+  ],
+  "Feature": [
+    "DB.DBA. VAD_LOAD_SQL_FILE ("
+  ],
+  "Description": [
+    "Loads SQL file ( can be regular file or DAV resource ) and then splits its content\n    \tinto single statements and executes them one by one. Along the process, the function\n    \tmakes needed reports and changes 'VAD_errcount' registry variable."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

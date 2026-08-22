@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_postgis_proj_version/"
+  ],
+  "Title": [
+    "postgis_proj_version ("
+  ],
+  "Feature": [
+    "postgis_proj_version ("
+  ],
+  "Description": [
+    "Returns the version of the proj4 plugin in use,\n    as a string, for compatibility with PostGIS."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

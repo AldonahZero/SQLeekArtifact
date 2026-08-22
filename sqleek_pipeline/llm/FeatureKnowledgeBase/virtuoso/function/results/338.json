@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_default_user_perms_del/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_DEFAULT_USER_PERMS_DEL ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_DEFAULT_USER_PERMS_DEL ("
+  ],
+  "Description": [
+    "This function removes the setting of default permissions of user named uname. \n    As the result, the default permission of \"nobody\" is used for the specified user, the future changes \n    in permissions of \"nobody\" will change the access control for the user.\nIf set_private is true then the permission in question is the default permission for \"private\" \n    \tgraphs otherwise it is for \"world\" graphs.\nThe function works for disabled or DAV users as well as for active SQL\nusers, so a user can be banned first and then restricted in RDF access\nrights or visa versa. However the function will signal an error if it is called for \"nobody\" or \"dba\" \nusers. Default permissions for these two users can be changed but can not deleted."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

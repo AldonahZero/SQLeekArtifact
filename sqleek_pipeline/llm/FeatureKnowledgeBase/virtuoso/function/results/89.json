@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_contains/"
+  ],
+  "Title": [
+    "boolean contains ("
+  ],
+  "Feature": [
+    "boolean contains ("
+  ],
+  "Description": [
+    "This is a SQL predicate that specifies a condition on a column\n      on which a free text index exists.  The expression is a string matching the grammar of a text search expression.\n      This is computed for each evaluation of the contains predicate and\n      does not have to be a constant. For example a parameter or variable\n      of a containing score (e.g. procedure) is accepted.\nThe score_limit is optional. If\n      specified, it should be a numeric expression determining the minimum score\n      required to produce a hit.\nscore_limit\nA virtual column named 'SCORE' is available in queries\n      involving a contains predicate. This can for\n      example be returned in a result set or used for sorting.\n      Note that the name is in upper case and is case sensitive in all\n      case modes.\ncontains"
+  ],
+  "Examples": [
+    "select count (*) from docs"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

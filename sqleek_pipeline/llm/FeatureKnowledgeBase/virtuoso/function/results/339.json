@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_default_user_perms_set/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_DEFAULT_USER_PERMS_SET ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_DEFAULT_USER_PERMS_SET ("
+  ],
+  "Description": [
+    "This function sets default permissions of user named uname to the value\nspecified by perms."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

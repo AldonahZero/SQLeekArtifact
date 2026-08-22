@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_curdatetime/"
+  ],
+  "Title": [
+    "curdatetime ("
+  ],
+  "Feature": [
+    "curdatetime ("
+  ],
+  "Description": [
+    "The function returns current datetime, like now() , but\n    fractional part of seconds can be adjusted by providing the number of \"microseconds\" as the argument.\nnow()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

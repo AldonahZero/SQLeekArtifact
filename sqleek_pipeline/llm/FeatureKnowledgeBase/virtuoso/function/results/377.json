@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regexp_like/"
+  ],
+  "Title": [
+    "integer regexp_like ("
+  ],
+  "Feature": [
+    "integer regexp_like ("
+  ],
+  "Description": [
+    "The source_string supports character datatypes (CHAR, VARCHAR2, CLOB,\nNCHAR, NVARCHAR2, and NCLOB but not LONG).  The pattern parameter is another\nname for the regular expression.  match_parameter allows optional parameters such\nas handling the newline character, retaining multiline formatting, and providing\ncontrol over case-sensitivity."
+  ],
+  "Examples": [
+    "SELECT postalcode FROM demo.demo.customers"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

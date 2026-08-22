@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "age(timestamptz)"
+    ],
+    "Feature": [
+        "age(timestamptz)"
+    ],
+    "Description": [
+        "Subtract from current_date."
+    ],
+    "Examples": [
+        "age(TIMESTAMP '1992-09-20')"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT age(current_timestamp);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 279,
+            "Prompt Tokens": 261,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.9949999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT age(current_timestamp);"
+    ]
+}

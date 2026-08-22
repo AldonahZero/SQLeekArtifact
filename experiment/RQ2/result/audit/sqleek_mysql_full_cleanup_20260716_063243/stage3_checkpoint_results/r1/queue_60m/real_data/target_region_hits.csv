@@ -1,0 +1,1 @@
+run_id,dbms,repeat_id,region_id,rule_family,component,file,source_path,anchor_file,anchor_line,start_line,end_line,function,span_source,hit

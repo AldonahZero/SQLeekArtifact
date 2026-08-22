@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xte_node_from_nodebld/"
+  ],
+  "Title": [
+    "xte_node_from_nodebld ("
+  ],
+  "Feature": [
+    "xte_node_from_nodebld ("
+  ],
+  "Description": [
+    "This function replaces the first item of the second argument by the first argument and returns\n    a vector corresponding to an XML element."
+  ],
+  "Examples": [
+    "create procedure test_nodebld()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

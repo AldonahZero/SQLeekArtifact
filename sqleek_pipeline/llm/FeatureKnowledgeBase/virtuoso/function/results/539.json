@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_transform_by_custom_projection/"
+  ],
+  "Title": [
+    "st_transform_by_custom_projection ("
+  ],
+  "Feature": [
+    "st_transform_by_custom_projection ("
+  ],
+  "Description": [
+    "Performs a custom projection of shape, using the specified algorithm and algorithm-specific arguments."
+  ],
+  "Examples": [
+    "select st_transform_by_custom_projection ("
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

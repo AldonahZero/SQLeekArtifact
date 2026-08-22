@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_backup_metadata/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_BACKUP_METADATA ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_BACKUP_METADATA ("
+  ],
+  "Description": [
+    "This saves all RDF metadata to file or to some graph in RDF storage, depending on first argument (nonzero for file, zero for graph).\nIf the function gets nonzero as first argument then it creates two files, called, say, 'example.ttl', and 'example-DEBUG.ttl'.\nIt's enough to save only the former file in order to restore metadata later,\nbut the latter contains important additional debug information so both files should be attached to any bug report related to RDF metadata.\nThere are no functions to make copies of backups. File backup consists of plain TURTLE RDF files only.\nBackup graph is just a regular RDF graph in the default storage so it can be serialized into a file or copied into other graph.\nHowever it is important to remember that the system graph, whose name is returned by JSO_SYS_GRAPH() stored procedure, should not be edited directly.\nThe content of the system graph is not necessarily equal to the content of a backup graph and it should be touched only by API function calls."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

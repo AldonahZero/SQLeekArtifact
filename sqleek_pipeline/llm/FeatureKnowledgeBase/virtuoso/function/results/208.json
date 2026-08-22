@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_file/"
+  ],
+  "Title": [
+    "varchar http_file ("
+  ],
+  "Feature": [
+    "varchar http_file ("
+  ],
+  "Description": [
+    "This function causes the contents of the file specified by\npath to be sent as the response of the calling request.\nThe file is not sent until the code calling this returns.\nContent types etc. are defaulted based on the file's extension.\nIf this function is called, other output to the HTTP client\nby the caller is discarded."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,12 @@
+start_utc=2026-07-13T14:35:43Z
+image=mysql:9.7.0
+ready_check=tcp_127.0.0.1_3306
+source_manifest=/root/SQLeek/experiment/RQ2/replay/output/sqlaser_mysql827_formal_mysql97_replay_20260713_141356/work/r2/selected_queue.tsv
+limit=1400
+restart_every=200
+out=/root/SQLeek/experiment/RQ2/sqlaser/replay/mysql/official_mysql97_r2_prefix1400_tcp_20260713_143543
+container=sqlaser_official_mysql97_prefixtcp_20260713_143543
+last_idx=1400
+failed=1
+alive_final=no
+end_utc=2026-07-13T14:48:33Z

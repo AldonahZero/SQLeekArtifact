@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_pending_req/"
+  ],
+  "Title": [
+    "http_pending_req ("
+  ],
+  "Feature": [
+    "http_pending_req ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nhttp_pending_req returns an array of arrays of data\non running VSP requests.  Each array contains the Client IP Address, URL,\nand Process Request ID.  These values can be used\nwith the http_kill() function.\nhttp_pending_req\nhttp_kill()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

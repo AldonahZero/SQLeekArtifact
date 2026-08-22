@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "abs(X)"
+    ],
+    "Feature": [
+        "abs(X)"
+    ],
+    "Description": [
+        "\n  The abs(X) function returns the absolute value of the numeric\n  argument X.  Abs(X) returns NULL if X is NULL.\n  Abs(X) returns 0.0 if X is a string or blob\n  that cannot be converted to a numeric value.  If X is the\n  integer -9223372036854775808 then abs(X) throws an integer overflow\n  error since there is no equivalent positive 64-bit two complement value.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT abs(X);",
+        "SELECT abs(0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 356,
+            "Prompt Tokens": 339,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 6.104999999999999e-05
+        },
+        {
+            "Total Tokens": 491,
+            "Prompt Tokens": 473,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 8.174999999999998e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: X\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT abs(0);"
+    ]
+}

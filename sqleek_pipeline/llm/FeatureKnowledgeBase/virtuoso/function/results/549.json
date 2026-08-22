@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_z/"
+  ],
+  "Title": [
+    "ST_Z ("
+  ],
+  "Feature": [
+    "ST_Z ("
+  ],
+  "Description": [
+    "Retrieves the x coordinate of a geometry."
+  ],
+  "Examples": [
+    "SELECT st_z( st_point (10, 20, 30, 40));"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "regexp_extract(string, pattern, name_list)"
+    ],
+    "Feature": [
+        "regexp_extract(string, pattern, name_list)"
+    ],
+    "Description": [
+        "If string contains the regexp pattern, returns the capturing groups as a struct with corresponding names from name_list (see Pattern Matching)."
+    ],
+    "Examples": [
+        "regexp_extract('2023-04-15', '(\\d+)-(\\d+)-(\\d+)', ['y', 'm', 'd'])"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_extract('example string', 'example (\\w+)', ['match'])"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 319,
+            "Prompt Tokens": 289,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 6.134999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_extract('example string', 'example (\\w+)', ['match'])"
+    ]
+}

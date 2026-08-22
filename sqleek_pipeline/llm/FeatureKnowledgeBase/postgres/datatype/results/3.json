@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-numeric.html"
+    ],
+    "Title": [
+        "decimal"
+    ],
+    "Feature": [
+        "decimal"
+    ],
+    "Description": [
+        "Storage Size",
+        "variable",
+        "Description",
+        "user-specified precision, exact",
+        "Range",
+        "up to 131072 digits before the decimal point; up to 16383 digits after the decimal point"
+    ],
+    "Examples": [],
+    "Category": [
+        "Numeric Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CAST(123.456 AS decimal);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 295,
+            "Prompt Tokens": 273,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.4149999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CAST(123.456 AS decimal);"
+    ]
+}

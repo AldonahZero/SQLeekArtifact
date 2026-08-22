@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_param/"
+  ],
+  "Title": [
+    "http_param ("
+  ],
+  "Feature": [
+    "http_param ("
+  ],
+  "Description": [
+    "This function is used to return value of a HTML form parameter in VSP context.\n\t  It's almost like call get_keyword ('name', params) used in VSP programming.\n\t  When 'name' parameter is not supplied, the result of http_param() call will be\n\t  all parameters, as they are contained in 'params' parameter of the VSP pages.\n\t  This function is useful in HTTP authentication PL hook, as in this place there\n\t  is no 'params' argument."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

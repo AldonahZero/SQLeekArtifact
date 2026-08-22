@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_mts_get_timeout/"
+  ],
+  "Title": [
+    "mts_get_timeout ("
+  ],
+  "Feature": [
+    "mts_get_timeout ("
+  ],
+  "Description": [
+    "If reconnect flag is set to non-zero value then forces Virtuoso to connect even it have been connected already. Returns zero if succeeds. If MS DTC service is not available (W2K) or MTS is not running (NT4.0) signals error with code \"MX000\".\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

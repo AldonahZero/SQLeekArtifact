@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_createxml/"
+  ],
+  "Title": [
+    "XMLType createXML ("
+  ],
+  "Feature": [
+    "XMLType createXML ("
+  ],
+  "Description": [
+    "This function creates an XMLType instance. It works absolutely identically to the XMLType() constructor and\n    \tis provided solely for compatibility.\nXMLType()"
+  ],
+  "Examples": [
+    "create table XMLTYPE_TEST (I integer primary key, XMLVAL long xml)",
+    "insert into XMLTYPE_TEST values (1, createXML('<emp><empno>221</empno><ename>John</ename></emp>'))",
+    "insert into XMLTYPE_TEST values (2, createXML('<po><pono>331</pono><poname>PO_1</poname></po>'))",
+    "select e.XMLVAL.extract ('//empno/text()').getNumVal() as EMPNO"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

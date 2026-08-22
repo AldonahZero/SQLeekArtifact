@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_json_parse/"
+  ],
+  "Title": [
+    "integer json_parse ("
+  ],
+  "Feature": [
+    "integer json_parse ("
+  ],
+  "Description": [
+    "This function takes json string and returns parse tree."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

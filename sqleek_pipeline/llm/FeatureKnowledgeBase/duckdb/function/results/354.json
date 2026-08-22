@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/regular_expressions"
+    ],
+    "Title": [
+        "regexp_extract(string, pattern[, group = 0][, options])"
+    ],
+    "Feature": [
+        "regexp_extract(string, pattern[, group = 0][, options])"
+    ],
+    "Description": [
+        "If string contains the regexp pattern, returns the capturing group specified by optional parameter group. The group must be a constant value. If no group is given, it defaults to 0. A set of optional options can be set."
+    ],
+    "Examples": [
+        "regexp_extract('abc', '([a-z])(b)', 1)"
+    ],
+    "Category": [
+        "Regular Expressions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_extract('example string', 'ex(ample)', 1);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 358,
+            "Prompt Tokens": 330,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 6.63e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_extract('example string', 'ex(ample)', 1);"
+    ]
+}

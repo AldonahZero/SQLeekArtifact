@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "POSITION()",
+    "Description": [
+        "\nPOSITION(substr\n          IN str)\n",
+        "\nPOSITION(substr\n          IN str) is a synonym for\n          LOCATE(substr,str).\n        "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_position",
+    "Feature": [
+        "POSITION(substr\n          IN str)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT POSITION('example' IN 'This is an example string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 320,
+            "Prompt Tokens": 294,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.969999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT POSITION('example' IN 'This is an example string');"
+    ]
+}

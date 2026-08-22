@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regexp_instr/"
+  ],
+  "Title": [
+    "integer regexp_instr ("
+  ],
+  "Feature": [
+    "integer regexp_instr ("
+  ],
+  "Description": [
+    "This function looks for a pattern and returns the first position of the\npattern. Optionally, you can indicate the start_position you want to begin the search. The occurrence parameter\ndefaults to 1 unless you indicate that you are looking for a subsequent occurrence.\nThe default value of the return_option is 0, which returns\nthe starting position of the pattern; a value of 1 returns the starting position of\nthe next character following the match.\nstart_position\noccurrence\nreturn_option\nThis function returns the starting position of a pattern, so it works much\nlike the familiar INSTR function. The main difference between the two functions\nis that REGEXP_INSTR lets you specify a pattern instead of a specific search string;\nthus providing greater versatility."
+  ],
+  "Examples": [
+    "SELECT REGEXP_INSTR('Joe Smith, 10045 Berry Lane, San Joseph, CA 91234',"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

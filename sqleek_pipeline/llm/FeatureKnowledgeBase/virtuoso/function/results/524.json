@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_get_bounding_box/"
+  ],
+  "Title": [
+    "st_get_bounding_box ("
+  ],
+  "Feature": [
+    "st_get_bounding_box ("
+  ],
+  "Description": [
+    "returns BOX2D that is a bounding box of a shape."
+  ],
+  "Examples": [
+    "SELECT bif:st_get_bounding_box(?o) ?o"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

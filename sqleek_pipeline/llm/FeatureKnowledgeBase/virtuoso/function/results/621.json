@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_set_qualifier/"
+  ],
+  "Title": [
+    "USER_SET_QUALIFIER ("
+  ],
+  "Feature": [
+    "USER_SET_QUALIFIER ("
+  ],
+  "Description": [
+    "This function is used to change the default catalog\n    (qualifier/database) of a given user account."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

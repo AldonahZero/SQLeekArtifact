@@ -1,0 +1,2 @@
+run_id	tool	dbms	repeat_id	checkpoint_min	status	cov_json	report_txt	version	start_time	end_time	seed_corpus	build_id	container_id	message
+mysql_sqleek_r1	SQLeek	mysql	1	60	complete	/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/mysql_sqleek_r1_t60.target.lcov	/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_out/r1/sqleek_mysql_r1_t60.report.txt	MySQL clean llvmcov			/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_out/r1	griffin_mysql_clean_llvmcov		

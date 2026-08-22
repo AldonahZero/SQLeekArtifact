@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "greatest_common_divisor(x, y)"
+    ],
+    "Feature": [
+        "greatest_common_divisor(x, y)"
+    ],
+    "Description": [
+        "Computes the greatest common divisor of x and y."
+    ],
+    "Examples": [
+        "greatest_common_divisor(42, 57)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT greatest_common_divisor(12, 8);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 299,
+            "Prompt Tokens": 275,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.565e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT greatest_common_divisor(12, 8);"
+    ]
+}

@@ -1,0 +1,81 @@
+{
+  "csv_dir": "/root/SQLeek/sqleek_pipeline/stage1_static/output/codeql_results/postgres",
+  "files": {
+    "codeql_results/postgres/dbms_callchain.csv": {
+      "bytes": 16599,
+      "lines": 312,
+      "sha256": "35b29f0f1c8932d8306d5cce1a8d189f27a5a39e9f4f25b656deea283968e9db"
+    },
+    "codeql_results/postgres/dbms_memory_sinks.csv": {
+      "bytes": 1926,
+      "lines": 12,
+      "sha256": "f246b940b3febd5e98b7ab3ae7d8963d5f45372df7fff704559d296a44355f48"
+    },
+    "codeql_results/postgres/dbms_stale_descriptor.csv": {
+      "bytes": 11323,
+      "lines": 27,
+      "sha256": "48a78b2250a0827e380ff8bcbe12d3425a5f435ab12843bad6faaa9469b4a1a3"
+    },
+    "codeql_results/postgres/dbms_stale_descriptor_manual.csv": {
+      "bytes": 3899,
+      "lines": 10,
+      "sha256": "e4a8eb16a5767ae3e13efcab0c65350744ae14adc2a3f085b60d25e099cd0176"
+    },
+    "codeql_results/postgres/dbms_stale_descriptor_pgqs.csv": {
+      "bytes": 7424,
+      "lines": 17,
+      "sha256": "84e7eb6276c18054f67dd6f473d7a90df237aadaf97a73cafc5fe07286911b95"
+    },
+    "codeql_results/postgres/pgqs_full.csv": {
+      "bytes": 3899,
+      "lines": 10,
+      "sha256": "e4a8eb16a5767ae3e13efcab0c65350744ae14adc2a3f085b60d25e099cd0176"
+    },
+    "targets/callchains.json": {
+      "bytes": 163992,
+      "lines": 8142,
+      "sha256": "7e95c326f6ca3d54279702ef2e4930030e9f4835d322cdb10bed4aad225d0188"
+    },
+    "targets/mysql_logic.txt": {
+      "bytes": 1,
+      "lines": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "targets/mysql_memory.txt": {
+      "bytes": 1,
+      "lines": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "targets/phi_mapping.json": {
+      "bytes": 6239,
+      "lines": 335,
+      "sha256": "e92c2239ee78408fcc090851c1cc3c8b0de5149e8ebefcc0624404884c6c88b8"
+    },
+    "targets/postgres_memory.txt": {
+      "bytes": 461,
+      "lines": 26,
+      "sha256": "113a8bd2dd99bd4a29ed54f0ad840bffcc983fa1b9042b13f15ffd78299b2479"
+    },
+    "targets/postgres_stale.txt": {
+      "bytes": 385,
+      "lines": 22,
+      "sha256": "8c3b6b256851979c118a1d9d940251c3feebb12ccb390026386b49ab295d9c63"
+    },
+    "targets/sqlite_logic.txt": {
+      "bytes": 1,
+      "lines": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "targets/sqlite_memory.txt": {
+      "bytes": 1,
+      "lines": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "targets/weights.json": {
+      "bytes": 169,
+      "lines": 14,
+      "sha256": "5c3a91f389209ebdfe161ee5015aee5824478757fb9c468c6c81354e7468941c"
+    }
+  },
+  "targets_dir": "/root/SQLeek/sqleek_pipeline/stage1_static/output/targets"
+}

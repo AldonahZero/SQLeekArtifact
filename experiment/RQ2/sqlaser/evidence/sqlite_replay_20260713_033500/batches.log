@@ -1,0 +1,6 @@
+starting_batch=batch1 repeats=r1 r2 time=2026-07-13T03:35:00Z
+finished_batch=batch1 rc=0 time=2026-07-13T03:40:43Z
+starting_batch=batch2 repeats=r3 r4 time=2026-07-13T03:40:43Z
+finished_batch=batch2 rc=0 time=2026-07-13T03:46:21Z
+starting_batch=batch3 repeats=r5 time=2026-07-13T03:46:21Z
+finished_batch=batch3 rc=0 time=2026-07-13T03:52:08Z

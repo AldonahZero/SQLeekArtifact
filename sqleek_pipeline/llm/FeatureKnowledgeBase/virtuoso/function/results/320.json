@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_pldbg_stats/"
+  ],
+  "Title": [
+    "any pldbg_stats ("
+  ],
+  "Feature": [
+    "any pldbg_stats ("
+  ],
+  "Description": [
+    "This function is used to make an array of line/count information \n    based on the current coverage statistics.  If the procedure name is given (first param), then the \n    result will contain only coverage statistic for that procedure.  if \n    the procedure name is not supplied or supplied as NULL then the result \n    will contain coverage data for all procedures having statistic.  The add_line_info flag is used to add code \n    excerpt on line info.\nname\nadd_line_info"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

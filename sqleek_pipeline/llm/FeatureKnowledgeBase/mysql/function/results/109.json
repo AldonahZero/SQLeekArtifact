@@ -1,0 +1,82 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "group_replication_switch_to_single_primary_mode()",
+    "Description": [
+        "\ngroup_replication_switch_to_single_primary_mode()\n",
+        "\n              Changes a group running in multi-primary mode to\n              single-primary mode, without the need to stop Group\n              Replication. Must be issued on a member of a replication\n              group running in multi-primary mode. When you change to\n              single-primary mode, strict consistency checks are also\n              disabled on all group members, as required in\n              single-primary mode\n              (group_replication_enforce_update_everywhere_checks=OFF).\n            ",
+        "\n              Syntax:\n            ",
+        "Press CTRL+C to copy STRING group_replication_switch_to_single_primary_mode([str])",
+        "\n              Arguments:\n",
+        "\n\nstr: A string containing\n                  the UUID of a member of the group which should become\n                  the new single primary. Other members of the group\n                  become secondaries.\n\n",
+        "\n              Return value:\n            ",
+        "\n              A string containing the result of the operation, for\n              example whether it was successful or not.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy SELECT group_replication_switch_to_single_primary_mode(member_uuid);",
+        "\n              For more information, see\n              Section\u00a020.5.1.2, \u201cChanging the Group Mode\u201d\n"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/group-replication-functions-for-mode.html#function_group-replication-switch-to-single-primary-mode",
+    "Feature": [
+        "group_replication_switch_to_single_primary_mode()"
+    ],
+    "Examples": [
+        "SELECT group_replication_switch_to_single_primary_mode(member_uuid);"
+    ],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Replication Functions",
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT group_replication_switch_to_single_primary_mode(member_uuid);",
+        "SELECT group_replication_switch_to_single_primary_mode('your_member_uuid');",
+        "SELECT group_replication_switch_to_single_primary_mode('example_uuid');",
+        "SELECT group_replication_switch_to_single_primary_mode('valid_member_uuid');",
+        "SELECT group_replication_switch_to_single_primary_mode('new_member_uuid');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 563,
+            "Prompt Tokens": 538,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 9.57e-05
+        },
+        {
+            "Total Tokens": 733,
+            "Prompt Tokens": 706,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00012209999999999999
+        },
+        {
+            "Total Tokens": 902,
+            "Prompt Tokens": 876,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.000147
+        },
+        {
+            "Total Tokens": 1072,
+            "Prompt Tokens": 1045,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00017294999999999998
+        },
+        {
+            "Total Tokens": 1242,
+            "Prompt Tokens": 1215,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00019844999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.group_replication_switch_to_single_primary_mode does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.group_replication_switch_to_single_primary_mode does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.group_replication_switch_to_single_primary_mode does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.group_replication_switch_to_single_primary_mode does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.group_replication_switch_to_single_primary_mode does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

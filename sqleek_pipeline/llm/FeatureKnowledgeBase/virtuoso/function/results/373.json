@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_void_store/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_VOID_STORE ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_VOID_STORE ("
+  ],
+  "Description": [
+    "Collects statistics for the first given graph and saves the result into the second graph. For\ncorrect results, the first graph should be loaded in the database before executing the function."
+  ],
+  "Examples": [
+    "select *"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

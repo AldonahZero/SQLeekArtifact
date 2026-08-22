@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_sdl/"
+  ],
+  "Title": [
+    "soap_sdl ("
+  ],
+  "Feature": [
+    "soap_sdl ("
+  ],
+  "Description": [
+    "This function generates a SDL for the procedures in a PL module the same way as\n    /SOAP/services.xml is generated for the procedures in WS.SOAP."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_gz_uncompress/"
+  ],
+  "Title": [
+    "gz_uncompress ("
+  ],
+  "Feature": [
+    "gz_uncompress ("
+  ],
+  "Description": [
+    "gz_uncompress takes a string argument, \n    uncompresses it using the gzip algorithm, writing it to a string_output\n    given as the second argument.\ngz_uncompress"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

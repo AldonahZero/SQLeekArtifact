@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_log_text/"
+  ],
+  "Title": [
+    "log_text ("
+  ],
+  "Feature": [
+    "log_text ("
+  ],
+  "Description": [
+    "The log_text function can be used to insert a SQL statement\n    into the roll forward log.\nThe log_text function causes the SQL text given as first argument to\n    be executed at roll forward time with the following arguments as parameters,\n    bound from left to right to the parameter markers in the statement ('?').\n    There can be a maximum of 8 parameters but these can be arrays."
+  ],
+  "Examples": [
+    "create procedure xx ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

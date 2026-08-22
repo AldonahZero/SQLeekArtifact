@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_string_output_gz_compress/"
+  ],
+  "Title": [
+    "string_output_gz_compress ("
+  ],
+  "Feature": [
+    "string_output_gz_compress ("
+  ],
+  "Description": [
+    "The string_output_gz_compress compresses its string_output argument using the gzip\n    algorithm and writes the result to another string_output given as an argument.\n    When successful, the number of bytes written to str_out_out is returned.\nstr_out_out"
+  ],
+  "Examples": [
+    "create procedure"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_purge/"
+  ],
+  "Title": [
+    "BPEL.BPEL.purge_instance ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.purge_instance ("
+  ],
+  "Description": [
+    "BPEL.BPEL.purge_instance this will erase all instances completed before the datetime specified.\nBPEL.BPEL.purge_instance"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

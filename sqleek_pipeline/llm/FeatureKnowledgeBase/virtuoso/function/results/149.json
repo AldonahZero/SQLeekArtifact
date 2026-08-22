@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_encode_base64/"
+  ],
+  "Title": [
+    "encode_base64 ("
+  ],
+  "Feature": [
+    "encode_base64 ("
+  ],
+  "Description": [
+    "These functions convert strings from/to base64-encoding."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

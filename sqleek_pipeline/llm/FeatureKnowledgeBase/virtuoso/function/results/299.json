@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_mime_part/"
+  ],
+  "Title": [
+    "any mime_part ("
+  ],
+  "Feature": [
+    "any mime_part ("
+  ],
+  "Description": [
+    "This function is used to make a MIME part that can be used with the mime_body() function.\nmime_body()"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

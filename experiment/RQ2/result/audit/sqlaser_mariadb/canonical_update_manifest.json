@@ -1,0 +1,61 @@
+{
+  "updated_utc": "2026-08-22T14:23:59.098070+00:00",
+  "real_data": "/root/SQLeek/experiment/RQ2/replay/output/sqlaser_mariadb_llvm_replay_20260822_125300/data_lcov",
+  "pair": [
+    "SQLaser",
+    "MariaDB"
+  ],
+  "backup": "/root/SQLeek/experiment/RQ2/result/backups/before_sqlaser_mariadb_replay_20260822_142240",
+  "image": "griffin_mariadb_llvmcov:latest",
+  "image_id": "sha256:36fbf588773ecc120c3334cf469012bf2d3aa84ea4d4f12c0b06485e2bac1219",
+  "binary_sha256": "874029632a85adac5d60398c1947be41f7622c29655f4b4fb238766d5be9050b",
+  "summary_rows": 5,
+  "timeseries_rows": 45,
+  "checkpoints_per_run": 9,
+  "before_non_pair": {
+    "data/runs.csv": {
+      "rows": 152,
+      "non_pair_sha256": "711c75d2004bcef338a92b4dd0809e9a963f4751b1781e69b63a651695b6fed7"
+    },
+    "data/coverage_summary.csv": {
+      "rows": 154,
+      "non_pair_sha256": "610fec88f09dfabd98961972cdd0a316c24ac67eb5337ace79d387d584af4a77"
+    },
+    "data/coverage_timeseries.csv": {
+      "rows": 1051,
+      "non_pair_sha256": "261144bbeede036b30bdf460d655cc97bffa6317a945e937a7c7e7e971434e48"
+    },
+    "data/coverage_timeseries_stats.csv": {
+      "rows": 327,
+      "non_pair_sha256": "34cb02a98eefad52a383dd244fb9ca754d6a65282191ba7d25387252669a8706"
+    },
+    "data/component_heatmap.csv": {
+      "rows": 222,
+      "non_pair_sha256": "35949901c2b194c25e21665f6cc0d0e719d754d50df56517d328d9c61be2991b"
+    }
+  },
+  "after_non_pair": {
+    "data/runs.csv": {
+      "rows": 152,
+      "non_pair_sha256": "711c75d2004bcef338a92b4dd0809e9a963f4751b1781e69b63a651695b6fed7"
+    },
+    "data/coverage_summary.csv": {
+      "rows": 159,
+      "non_pair_sha256": "610fec88f09dfabd98961972cdd0a316c24ac67eb5337ace79d387d584af4a77"
+    },
+    "data/coverage_timeseries.csv": {
+      "rows": 1096,
+      "non_pair_sha256": "261144bbeede036b30bdf460d655cc97bffa6317a945e937a7c7e7e971434e48"
+    },
+    "data/coverage_timeseries_stats.csv": {
+      "rows": 336,
+      "non_pair_sha256": "34cb02a98eefad52a383dd244fb9ca754d6a65282191ba7d25387252669a8706"
+    },
+    "data/component_heatmap.csv": {
+      "rows": 229,
+      "non_pair_sha256": "35949901c2b194c25e21665f6cc0d0e719d754d50df56517d328d9c61be2991b"
+    }
+  },
+  "non_pair_preserved": true,
+  "latex_row": "SQLaser & MariaDB & 1701.6/4220 (40.3\\%) & 1624.6/3041 (53.4\\%) & 79809.4/284668 (28.0\\%) \\\\"
+}

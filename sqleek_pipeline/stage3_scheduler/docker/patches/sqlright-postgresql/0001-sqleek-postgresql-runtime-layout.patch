@@ -1,0 +1,299 @@
+--- a/PostgreSQL/docker/fuzz_root/run_parallel.py
++++ b/PostgreSQL/docker/fuzz_root/run_parallel.py
+@@ -6,29 +6,71 @@
+ import atexit
+ import getopt
+ import sys
++import signal
+ 
+-postgres_root_dir = "/home/postgres/postgres/bld/"
++postgres_root_dir = os.environ.get("SQLEEK_POSTGRES_ROOT", "/opt/dbms")
+ postgres_src_data_dir = os.path.join(postgres_root_dir, "data_all/ori_data")
+ current_workdir = os.getcwd()
+ 
+-starting_core_id = 0
+-parallel_num = 5
+-port_starting_num = 7000
++starting_core_id = int(os.environ.get("SQLEEK_START_CORE", "0"))
++parallel_num = int(os.environ.get("SQLEEK_NUM_CONCURRENT", "1"))
++port_starting_num = int(os.environ.get("SQLEEK_PORT_START", "7000"))
++
++sqleek_dbms_name = os.environ.get("SQLEEK_DBMS", "postgres")
++sqleek_input_dir = os.environ.get("SQLEEK_INPUT_DIR", "./inputs")
++sqleek_afl_bin = os.environ.get("SQLEEK_SQLRIGHT_AFL", "./afl-fuzz")
++sqleek_timeout_ms = os.environ.get("SQLEEK_AFL_TIMEOUT", "2000")
++sqleek_memory_limit = os.environ.get("SQLEEK_MEMORY_LIMIT", "2000")
++sqleek_log_dir = os.environ.get("SQLEEK_LOG_DIR", os.environ.get("LOG_DIR", ""))
++sqleek_postgres_bin = os.environ.get("SQLEEK_POSTGRES_BIN", os.path.join(postgres_root_dir, "bin/postgres"))
++sqleek_postgres_host = os.environ.get("SQLEEK_POSTGRES_HOST", "127.0.0.1")
+ 
+ all_fuzzing_p_list = []
+ all_postgres_p_list = []
++all_log_files = []
+ shm_env_list = []
+ 
+-#def exit_handler():
+-#    for fuzzing_instance in all_fuzzing_p_list:
+-#        fuzzing_instance.kill()
+-#    for postgre_instance in all_postgres_p_list:
+-#        postgre_instance.kill()
+-#    return
+ 
++def terminate_children():
++    for proc in list(all_fuzzing_p_list) + list(all_postgres_p_list):
++        if proc is None or proc.poll() is not None:
++            continue
++        try:
++            proc.terminate()
++        except ProcessLookupError:
++            pass
++    deadline = time.time() + 10
++    for proc in list(all_fuzzing_p_list) + list(all_postgres_p_list):
++        if proc is None or proc.poll() is not None:
++            continue
++        timeout = max(0, deadline - time.time())
++        try:
++            proc.wait(timeout=timeout)
++        except subprocess.TimeoutExpired:
++            try:
++                proc.kill()
++            except ProcessLookupError:
++                pass
++    for fp in all_log_files:
++        try:
++            fp.flush()
++            fp.close()
++        except Exception:
++            pass
++
++
++def signal_handler(_signum, _frame):
++    terminate_children()
++    sys.exit(0)
++
++
++atexit.register(terminate_children)
++signal.signal(signal.SIGTERM, signal_handler)
++signal.signal(signal.SIGINT, signal_handler)
+ 
+-def check_pid(pid:int):
+-    """Check whether pid are still running. """
++
++def check_pid(pid: int):
++    """Check whether pid are still running."""
+     try:
+         os.kill(pid, 0)
+     except OSError:
+@@ -36,7 +78,14 @@
+     else:
+         return True
+ 
+-#atexit.register(exit_handler)
++
++def chown_postgres(path: str):
++    if os.geteuid() != 0:
++        return
++    try:
++        subprocess.check_call(["chown", "-R", "postgres:postgres", path])
++    except Exception as exc:
++        print(f"Warning: failed to chown {path}: {exc}", flush=True)
+ 
+ 
+ # Parse the command line arguments:
+@@ -77,83 +126,105 @@
+ for cur_inst_id in range(starting_core_id, starting_core_id + parallel_num, 1):
+     print("Setting up core_id: " + str(cur_inst_id))
+ 
+-    # Set up the postgre data folder first. 
+-    cur_postgre_data_dir_str = os.path.join(postgres_root_dir, "data_all/data_" + str(cur_inst_id-starting_core_id))
+-    if not os.path.isdir(cur_postgre_data_dir_str):
+-        shutil.copytree(postgres_src_data_dir, cur_postgre_data_dir_str)
+-
+-    # Set up SQLRight output folder
+-    cur_output_dir_str = ""
+-    if output_dir_str != "":
+-        cur_output_dir_str = output_dir_str + "/outputs_"  + str(cur_inst_id - starting_core_id)
++    # Set up the PostgreSQL data folder first.
++    cur_postgre_data_dir_str = os.path.join(postgres_root_dir, "data_all/data_" + str(cur_inst_id - starting_core_id))
++    if os.path.isdir(cur_postgre_data_dir_str):
++        shutil.rmtree(cur_postgre_data_dir_str)
++    shutil.copytree(postgres_src_data_dir, cur_postgre_data_dir_str)
++    chown_postgres(cur_postgre_data_dir_str)
++
++    # Set up SQLRight output folder.
++    if os.environ.get("SQLEEK_OUTPUT_LAYOUT", "") == "1":
++        cur_output_dir_str = os.path.join(output_dir_str, sqleek_dbms_name + "_memory", "default")
++    elif output_dir_str != "":
++        cur_output_dir_str = output_dir_str + "/outputs_" + str(cur_inst_id - starting_core_id)
+     else:
+         cur_output_dir_str = "./outputs/outputs_" + str(cur_inst_id - starting_core_id)
+-    if not os.path.isdir(cur_output_dir_str):
+-        os.mkdir(cur_output_dir_str)
++    os.makedirs(cur_output_dir_str, exist_ok=True)
+ 
+-    cur_output_file = os.path.join(cur_output_dir_str, "output.txt")
+-    cur_output_file = open(cur_output_file, "w")
+-    
+-    # Prepare for env shared by the fuzzer and postgres. 
++    child_log_dir = sqleek_log_dir or cur_output_dir_str
++    os.makedirs(child_log_dir, exist_ok=True)
++    cur_output_file = open(os.path.join(child_log_dir, "sqlright_postgresql_child_%d.log" % cur_inst_id), "w", buffering=1)
++    all_log_files.append(cur_output_file)
++
++    # Prepare for env shared by the fuzzer and postgres.
+     cur_port_num = port_starting_num + cur_inst_id - starting_core_id
+ 
+-    # Start running the SQLRight fuzzer. 
+-    fuzzing_command = "./afl-fuzz -t 2000 -m 2000 " \
+-                        + " -P " + str(cur_port_num) \
+-                        + " -i ./inputs " \
+-                        + " -o " + cur_output_dir_str \
+-                        + " -c " + str(cur_inst_id) \
+-                        + " -O " + oracle_str
++    fuzzing_command = [
++        sqleek_afl_bin,
++        "-t", sqleek_timeout_ms,
++        "-m", sqleek_memory_limit,
++        "-P", str(cur_port_num),
++        "-i", sqleek_input_dir,
++        "-o", cur_output_dir_str,
++        "-c", str(cur_inst_id),
++        "-O", oracle_str,
++    ]
+ 
+     if feedback_str != "":
+-        fuzzing_command += " -F " + feedback_str
++        fuzzing_command += ["-F", feedback_str]
+ 
+-    fuzzing_command +=  " aaa " + " & "
++    fuzzing_command.append("aaa")
+ 
+-    modi_env = dict()
++    modi_env = os.environ.copy()
+     modi_env["AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES"] = "1"
+     modi_env["AFL_SKIP_CPUFREQ"] = "1"
+ 
+-    print("Running fuzzing command: " + fuzzing_command)
++    print("Running fuzzing command: " + " ".join(fuzzing_command))
+ 
+     p = subprocess.Popen(
+-                        [fuzzing_command],
+-                        cwd=os.getcwd(),
+-                        shell=True,
+-                        stderr=subprocess.DEVNULL,
+-                        stdout=subprocess.DEVNULL,
+-                        stdin=subprocess.DEVNULL,
+-                        env=modi_env
+-                        )
++        fuzzing_command,
++        cwd=os.getcwd(),
++        shell=False,
++        stderr=cur_output_file,
++        stdout=cur_output_file,
++        stdin=subprocess.DEVNULL,
++        env=modi_env,
++    )
+     all_fuzzing_p_list.append(p)
+ 
+-    # Read the current generated shm_mem_id
+-    while not (os.path.isfile(os.path.join(os.getcwd(), "shm_env.txt"))):
++    # Read the current generated shm_mem_id.
++    shm_path = os.path.join(os.getcwd(), "shm_env.txt")
++    for _ in range(120):
++        if os.path.isfile(shm_path):
++            break
++        if p.poll() is not None:
++            raise RuntimeError("SQLRight afl-fuzz exited before shm_env.txt was created")
+         time.sleep(1)
+-    shm_env_fd = open(os.path.join(os.getcwd(), "shm_env.txt"))
+-    cur_shm_str = shm_env_fd.read()
++    if not os.path.isfile(shm_path):
++        raise RuntimeError("Timed out waiting for shm_env.txt from SQLRight afl-fuzz")
++    with open(shm_path) as shm_env_fd:
++        cur_shm_str = shm_env_fd.read().strip()
+     shm_env_list.append(cur_shm_str)
+-    shm_env_fd.close()
++    os.remove(shm_path)
+ 
+-    os.remove(os.path.join(os.getcwd(), "shm_env.txt"))
++    # Start the PostgreSQL instance.
++    postgres_log = open(os.path.join(child_log_dir, "postgres_core_%d.log" % cur_inst_id), "w", buffering=1)
++    all_log_files.append(postgres_log)
++
++    postgre_command = [
++        sqleek_postgres_bin,
++        "-D", cur_postgre_data_dir_str,
++        "-p", str(cur_port_num),
++        "-h", sqleek_postgres_host,
++    ]
++    if os.geteuid() == 0:
++        postgre_command = ["runuser", "-u", "postgres", "--"] + postgre_command
++
++    postgre_env = os.environ.copy()
++    postgre_env["__AFL_SHM_ID"] = cur_shm_str
+ 
+-    # Start the PostgreS instance
+-    ori_workdir = os.getcwd()
+-    os.chdir(postgres_root_dir)
+-
+-    postgre_bin_dir = os.path.join(postgres_root_dir, "bin/postgres")
+-    postgre_command = "__AFL_SHM_ID=" + cur_shm_str + " " + postgre_bin_dir + " -D " + cur_postgre_data_dir_str + " --port=" + str(cur_port_num) + " & "
+-    print("Running postgres command: " + postgre_command, end="\n\n")
++    print("Running postgres command: __AFL_SHM_ID=" + cur_shm_str + " " + " ".join(postgre_command), end="\n\n")
+     p = subprocess.Popen(
+-                        [postgre_command],
+-                        cwd=postgres_root_dir,
+-                        shell=True,
+-                        stderr=subprocess.DEVNULL,
+-                        stdout=subprocess.DEVNULL,
+-                        stdin=subprocess.DEVNULL,
+-                        )
++        postgre_command,
++        cwd=postgres_root_dir,
++        shell=False,
++        stderr=postgres_log,
++        stdout=postgres_log,
++        stdin=subprocess.DEVNULL,
++        env=postgre_env,
++    )
+     all_postgres_p_list.append(p)
+-    os.chdir(ori_workdir)
+ 
+     sys.stdout.flush()
+ 
+@@ -161,28 +232,10 @@
+ sys.stdout.flush()
+ 
+ while True:
+-#    for idx in range(len(all_postgres_p_list)):
+-#        cur_postgre_p = all_postgres_p_list[idx]
+-#        cur_postgre_pid = cur_postgre_p.pid
+-#        if not check_pid(cur_postgre_pid):
+-#
+-#            # PostgreS process crashed. Restart Postgres. 
+-#            all_postgres_p_list.remove(cur_postgre_p)
+-#            cur_shm_str = shm_env_list[idx]
+-#            cur_postgre_data_dir_str = os.path.join(postgres_root_dir, "data_all/data_" + str(idx))
+-#
+-#            postgre_command = "__AFL_SHM_ID=" + cur_shm_str +  " ./bin/postgres -D " + cur_postgre_data_dir_str + " & "
+-#            print("PostgreS PID: " + str(cur_postgre_pid) + " crashed. ")
+-#            print("Restarting postgres command: " + fuzzing_command, end="\n\n")
+-#            p = subprocess.Popen(
+-#                                [postgre_command],
+-#                                cwd=postgres_root_dir,
+-#                                shell=False,
+-#                                stderr=subprocess.DEVNULL,
+-#                                stdout=subprocess.DEVNULL,
+-#                                stdin=subprocess.DEVNULL,
+-#                                )
+-#            all_postgres_p_list.insert(idx, p)
+-    
+-    # Check postgres every 10 seconds. 
+-    time.sleep(1000)
++    # Keep this wrapper alive so SIGTERM can clean up AFL and PostgreSQL.
++    for proc in list(all_fuzzing_p_list):
++        if proc.poll() is not None:
++            print("SQLRight afl-fuzz exited with rc=%s" % proc.returncode, flush=True)
++            terminate_children()
++            sys.exit(proc.returncode or 0)
++    time.sleep(10)

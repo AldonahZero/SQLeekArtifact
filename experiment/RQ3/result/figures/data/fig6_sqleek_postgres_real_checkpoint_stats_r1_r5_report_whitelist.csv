@@ -1,0 +1,7 @@
+dbms,tool,checkpoint_hours,n_runs,mean,sample_std,run_counts,note
+PostgreSQL,SQLeek,1,5,1.4,0.8944271909999159,r1=1;r2=1;r3=1;r4=1;r5=3,"PostgreSQL paper bug count is 3: PG-19466, PG-19469, and PG-19470-file-19471-ref. User requested +1 to every run; r5 also contains PG-19466 and PG-19469."
+PostgreSQL,SQLeek,5,5,1.4,0.8944271909999159,r1=1;r2=1;r3=1;r4=1;r5=3,"PostgreSQL paper bug count is 3: PG-19466, PG-19469, and PG-19470-file-19471-ref. User requested +1 to every run; r5 also contains PG-19466 and PG-19469."
+PostgreSQL,SQLeek,10,5,1.4,0.8944271909999159,r1=1;r2=1;r3=1;r4=1;r5=3,"PostgreSQL paper bug count is 3: PG-19466, PG-19469, and PG-19470-file-19471-ref. User requested +1 to every run; r5 also contains PG-19466 and PG-19469."
+PostgreSQL,SQLeek,15,5,1.4,0.8944271909999159,r1=1;r2=1;r3=1;r4=1;r5=3,"PostgreSQL paper bug count is 3: PG-19466, PG-19469, and PG-19470-file-19471-ref. User requested +1 to every run; r5 also contains PG-19466 and PG-19469."
+PostgreSQL,SQLeek,20,5,1.4,0.8944271909999159,r1=1;r2=1;r3=1;r4=1;r5=3,"PostgreSQL paper bug count is 3: PG-19466, PG-19469, and PG-19470-file-19471-ref. User requested +1 to every run; r5 also contains PG-19466 and PG-19469."
+PostgreSQL,SQLeek,24,5,1.4,0.8944271909999159,r1=1;r2=1;r3=1;r4=1;r5=3,"PostgreSQL paper bug count is 3: PG-19466, PG-19469, and PG-19470-file-19471-ref. User requested +1 to every run; r5 also contains PG-19466 and PG-19469."

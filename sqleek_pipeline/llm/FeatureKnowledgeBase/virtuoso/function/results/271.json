@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_key_estimate/"
+  ],
+  "Title": [
+    "key_estimate ("
+  ],
+  "Feature": [
+    "key_estimate ("
+  ],
+  "Description": [
+    "Given a table and an index, this function takes a random sample of the index,\nwith the first key part equal to the third argument, the second equal to the fourth argument and so on.\nIf only the table and index are given, the returned value is the approximate count of the entire index.\nNormal cast rules are applied to convert the arguments to the types of the corresponding key parts.\nIf the cast fails, -1 is returned.\nThe estimates are typically within 10% of the real count. If there have been random\ndeletions or inserts leading to uneven page filling or if index entries are of greatly varying $\nlength, the estimates may be less precise."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

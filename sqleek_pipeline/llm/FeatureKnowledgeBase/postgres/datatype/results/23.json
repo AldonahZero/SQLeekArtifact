@@ -1,0 +1,45 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-datetime.html"
+    ],
+    "Title": [
+        "interval [ fields ] [ (p) ]"
+    ],
+    "Feature": [
+        "interval [ fields ] [ (p) ]"
+    ],
+    "Description": [
+        "Storage Size",
+        "16 bytes",
+        "Description",
+        "time interval",
+        "Low Value",
+        "-178000000 years",
+        "High Value",
+        "178000000 years",
+        "Resolution",
+        "1 microsecond"
+    ],
+    "Examples": [],
+    "Category": [
+        "Date divide Time Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT INTERVAL '1 day';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 324,
+            "Prompt Tokens": 304,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.76e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT INTERVAL '1 day';"
+    ]
+}

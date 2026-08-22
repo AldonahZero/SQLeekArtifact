@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_new_log/"
+  ],
+  "Title": [
+    "repl_new_log ("
+  ],
+  "Feature": [
+    "repl_new_log ("
+  ],
+  "Description": [
+    "This function switches to a new file for logging data for the publication.\nIf the file is NULL a new file name will be generated based on the previous file name by appending\nor replacing a datetime field in the file name."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

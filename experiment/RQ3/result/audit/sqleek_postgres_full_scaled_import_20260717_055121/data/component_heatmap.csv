@@ -1,0 +1,5 @@
+dbms,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+PostgreSQL,executor,SQLeek,2,1.0,0.5,2,2.0,1.0
+PostgreSQL,other,SQLeek,4,3.0,0.75,4,4.0,1.0
+PostgreSQL,storage,SQLeek,6,0.0,0.0,4,0.0,0.0
+PostgreSQL,type_system,SQLeek,4,3.0,0.75,6,6.0,1.0

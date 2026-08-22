@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-aggregate.html"
+    ],
+    "Title": [
+        "json_agg_strict"
+    ],
+    "Feature": [
+        "json_agg_strict ( anyelement ) \u2192 json",
+        "jsonb_agg_strict ( anyelement ) \u2192 jsonb"
+    ],
+    "Description": [
+        "Collects all the input values, skipping nulls, into a JSON array. Values are converted to JSON as per to_json or to_jsonb."
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT json_agg_strict(value) FROM (VALUES (1), (2), (3), (NULL)) AS temp(value);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 338,
+            "Prompt Tokens": 298,
+            "Completion Tokens": 40,
+            "Total Cost (USD)": 6.869999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT json_agg_strict(value) FROM (VALUES (1), (2), (3), (NULL)) AS temp(value);"
+    ]
+}

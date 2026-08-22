@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_destructive_list_rnd_keys/"
+  ],
+  "Title": [
+    "dict_destructive_list_rnd_keys ("
+  ],
+  "Feature": [
+    "dict_destructive_list_rnd_keys ("
+  ],
+  "Description": [
+    "The function returns an array of keys stored in the given dictionary, ignoring dependent parts of key-value pairs, but unlike dict_list_keys it may return only some keys, not all, and it always remove the returned keys from the dictionary.\nThe returned array is batch_size items long (if the dictionary is big enough to fill it).\ndict_list_keys\nbatch_size\nThe order of items returned (and hence the content of the dictionary after function call) is undefined.\nIt is not randomized artificially but it may vary from run to run depending on barely predictable factors.\nAs a result, the most typical use of the function is calling it in a loop that ends when the size of returned array falls down to zero indicating that the dictionary is exausted."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

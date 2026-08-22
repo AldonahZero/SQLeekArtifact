@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_aes_rand_create/"
+  ],
+  "Title": [
+    "xenc_key_AES_rand_create ("
+  ],
+  "Feature": [
+    "xenc_key_AES_rand_create ("
+  ],
+  "Description": [
+    "Used to make a temporary session key for AES encryption."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

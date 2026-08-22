@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_curdate/"
+  ],
+  "Title": [
+    "datetime curdate ("
+  ],
+  "Feature": [
+    "datetime curdate ("
+  ],
+  "Description": [
+    "These functions return the current date or time as a date,\n    time or datetime, respectively. Internally they all return the\n    same value but data type reported to client differs."
+  ],
+  "Examples": [
+    "callret     callret   callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

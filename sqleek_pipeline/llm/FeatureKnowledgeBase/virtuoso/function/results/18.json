@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_run_instance/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_RUN_INSTANCE ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_RUN_INSTANCE ("
+  ],
+  "Description": [
+    "Runs new AMI instance of image."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

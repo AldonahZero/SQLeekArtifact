@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_java_call_method/"
+  ],
+  "Title": [
+    "java_call_method ("
+  ],
+  "Feature": [
+    "java_call_method ("
+  ],
+  "Description": [
+    "Calls a class method using the supplied parameters (if any) and returns \n    the return value (if any).  If instance_obj is supplied (not NULL) then this \n    function searches for a non-static method otherwise for static."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

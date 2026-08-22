@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_complete_table_name/"
+  ],
+  "Title": [
+    "varchar complete_table_name ("
+  ],
+  "Feature": [
+    "varchar complete_table_name ("
+  ],
+  "Description": [
+    "The complete_table_name() can be used to make a\n    fully qualified table name from non-qualified one, i.e. the qualifier and\n    owner will be added if they are missing.\ncomplete_table_name()"
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

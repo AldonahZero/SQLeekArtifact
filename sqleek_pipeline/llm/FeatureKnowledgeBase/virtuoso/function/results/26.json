@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_aref/"
+  ],
+  "Title": [
+    "aref ("
+  ],
+  "Feature": [
+    "aref ("
+  ],
+  "Description": [
+    "aref returns the nth element of an array , string or string_session , where nth is a zero-based index.  If the first argument is a string or string_session , the integer ASCII value of the nth character is returned.  If the first argument is an\n    array of any , then the corresponding element is returned.\naref\nnth\nnth\nnth"
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

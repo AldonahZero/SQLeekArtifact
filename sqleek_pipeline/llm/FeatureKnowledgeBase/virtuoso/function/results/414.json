@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_revoke/"
+  ],
+  "Title": [
+    "REPL_REVOKE ("
+  ],
+  "Feature": [
+    "REPL_REVOKE ("
+  ],
+  "Description": [
+    "Revokes Privileges for Subscription.  This is called on the publisher to \n\trevoke access to the publication from the user account on the publisher.  \n\tThe subscriber will no longer gain access to the publication with this account."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

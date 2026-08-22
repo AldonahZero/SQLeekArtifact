@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "right(string, count)"
+    ],
+    "Feature": [
+        "right(string, count)"
+    ],
+    "Description": [
+        "Extract the right-most count characters."
+    ],
+    "Examples": [
+        "right('Hello\ud83e\udd86', 3)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT right('Hello, World!', 6);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 255,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.204999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT right('Hello, World!', 6);"
+    ]
+}

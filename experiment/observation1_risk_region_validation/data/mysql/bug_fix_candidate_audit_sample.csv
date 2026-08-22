@@ -1,0 +1,1504 @@
+dbms,commit_hash,commit_date,parent_hash,subject,full_message,issue_id,cve_id,is_bug_fix,confidence,confidence_score,confidence_reasons,is_backport,original_fix_hash,is_test_only,regression_test_added,bug_type,component,changed_source_files,changed_test_files,changed_doc_files,changed_build_files,changed_generated_files,churn_added,churn_deleted,churn_total,changed_file_count
+mysql,d7636dbedbdda380fbdb494d9f047c3cf6b45807,2018-02-09T14:16:43+01:00,a9655322adceeddaa6671d1c51e52648340eb49b,Bug#27831843: Encapsulate the reference count in TABLE_SHARE,"Bug#27831843: Encapsulate the reference count in TABLE_SHARE
+
+Encapsulate the reference count in TABLE_SHARE to prevent callers from
+modifying it in unintended ways. Add asserts to verify that the
+reference count is only accessed by callers that hold the required
+mutex, and to verify that the reference count doesn't go below zero.
+
+Make some debug code in TABLE::init() take the required mutex before
+it accesses the reference count.
+
+Update the table_cache-t unit test to maintain the reference count
+correctly, instead of setting it to a huge value to prevent it from
+going down to zero.
+
+Change-Id: I4fc33a2337f9661ca0fd07950de10a15cf085bd4",27831843,,True,high,8,"message_score=6.5;bug_word;strong:assert;issue_id:27831843;keyword:bug,assert;strong_keyword:assert;issue_id:27831843;source_change;regression_test_added",False,,False,True,crash,sql/sql_base.cc,sql/sql_base.cc;sql/sql_derived.cc;sql/sql_servers.cc;sql/sql_tmp_table.cc;sql/table.cc;sql/table.h;storage/heap/ha_heap.cc;storage/innobase/handler/ha_innodb.cc,unittest/gunit/table_cache-t.cc,,,,145,66,211,9
+mysql,294ddbf6d1a3f85da4bd5bb55c11948facf40d3f,2021-06-08T10:21:07+02:00,721647b1666a7601f4574673c15e796b5133ccae,Bug#32736931 - MEB_DDL.DROP_POS2 FAILS SPORADICALLY ON PB2,"Bug#32736931 - MEB_DDL.DROP_POS2 FAILS SPORADICALLY ON PB2
+
+Sporadic result differences come from timing-dependent page tracking.
+
+The InnoDB page-tracking feature tracks page changes from a certain LSN
+to the checkpoint LSN before another LSN. So it depends on the
+checkpoint activity, whether recent data changes are reported as changed
+pages.
+
+Fix by introducing a UDF that makes a sharp checkpoint. Use the UDF in
+wait_for_clean_innodb_buffer_pool.inc instead of waiting for a clean
+buffer pool. The clean buffer pool is not an indication of a checkpoint.
+
+If wait_for_clean_innodb_buffer_pool.inc is used before every
+incremental backup (even without page tracking), the tests should now
+get more stable results.
+
+Mysqlbackup does also get the ability to make a sharp checkpoint after
+starting the redo log archiving. If used, the redo log archive file
+contains all log blocks, that are relevant for a backup. The feature can
+be used through the --debug=MAKE_SHARP_CHECKPOINT option.
+
+Fix a std::string constant in log0meb.cc to constexpr const char *.
+
+The modified timing uncoveres a race when a tablespace vanishes while
+waiting for its encryption info. Fix by going to the next file to copy.
+
+RB#26523",32736931,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:race;issue_id:32736931;keyword:fix,bug,race;strong_keyword:race;issue_id:32736931;source_change",False,,False,False,concurrency,storage/innobase,storage/innobase/log/log0meb.cc,,,,,97,33,130,1
+mysql,ce27032c1f1817dadfff0796b9e695e013929c69,2022-05-24T14:35:18+02:00,9dd638e2c16eee73b9a99da6277004caead78abe,Bug#34204325 Router stacktrace tests fail with ASAN,"Bug#34204325 Router stacktrace tests fail with ASAN
+
+ASAN marks the component tests that use ABORT signal as failed.
+
+This patch disables those tests for ASAN build.
+It also fixes the function that checks for the signal handler
+readiness following the core-file related changes around the signal
+handler.
+
+Change-Id: I8803b7c4680a22a7dc65f125ded262a07b78a1d8",34204325,,False,low,5,"message_score=7.0;weak_fix_word;bug_word;strong:abort,race;issue_id:34204325;keyword:fix,bug,abort,race;strong_keyword:abort,race;issue_id:34204325;regression_test_added;non_behavior_only",False,,True,True,crash,,,router/tests/component/test_router_stacktrace.cc;router/tests/component/test_sd_notify.cc;router/tests/component/test_stacktrace.cc,,,,49,1,50,3
+mysql,1df217989c790271ab66fbc83203679dc4574390,2017-12-13T10:16:20+11:00,ae457eb28bba6728af952e9bf9cf35fed9a9978d,BUG#27253116 - ASSERT FAILURE AT SERVER STARTUP WHEN KEYRING FILE EXTENSION IS .IBD,"BUG#27253116 - ASSERT FAILURE AT SERVER STARTUP WHEN KEYRING FILE EXTENSION IS .IBD
+
+A tablespace can never have a space ID of 0. Ignore tablespaces with
+tablespace ID 0.
+
+Approved by Jimmy over IM.",27253116,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:27253116;keyword:bug,assert;strong_keyword:assert;issue_id:27253116;source_change",False,,False,False,crash,storage/innobase,storage/innobase/fil/fil0fil.cc,,,,,3,4,7,1
+mysql,237787546c9932bf6e26f7b05ac69b2609852d8d,2018-10-04T21:29:46+02:00,7cc7d30af4192d0bae99d6715b31d29cacf50e53,Bug#28380808 NDB : GRACEFUL STOP API STATE NOTIFICATION TOO SLOW,"Bug#28380808 NDB : GRACEFUL STOP API STATE NOTIFICATION TOO SLOW
+
+Post push fix for fatal compiler warning with gcc 8.0.1:
+  QmgrMain.cpp:8001:60: error: type qualifiers ignored on cast result
+type [-Werror=ignored-qualifiers]
+       (const NodeInfo::NodeType) getNodeInfo(nodeToNotify).m_type;
+                                                            ^~~~~~
+
+Fix by using NodeInfo accessor function which returns NodeInfo::NodeType
+instead of direct accessing of member variable of type Uint32 using
+unneccessary cast.
+
+Change-Id: I5234335e69291e22b6e6a801af57d67c4a6ffddd",28380808,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:race;issue_id:28380808;keyword:fix,bug,race;strong_keyword:race;issue_id:28380808;source_change",False,,False,False,concurrency,storage/ndb,storage/ndb/src/kernel/blocks/qmgr/QmgrMain.cpp,,,,,1,2,3,1
+mysql,175574290e61b8291131154d5ccd7c2d8bb38ccf,2021-11-30T10:06:57+01:00,0fc184a4b51ad267536a2bf9828b22646d225be5,BUG#33559219 Crash in pthread_cond_signal on bus error on Mac OS X ARM,"BUG#33559219 Crash in pthread_cond_signal on bus error on Mac OS X ARM
+
+Moved NdbCondition_Signal into the mutex context to avoid the condition
+being destroyed during execution of NdbCondition_Signal.
+
+Change-Id: I982f4c89388f27cbea039f7eb79a9e97e9bf836c",33559219,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:33559219;keyword:bug,crash;strong_keyword:crash;issue_id:33559219;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/kernel/blocks/ndbfs/AsyncIoThread.cpp;storage/ndb/src/ndbapi/NdbPoolImpl.cpp,,,,,3,3,6,2
+mysql,7a36c155ea3f484799c213a5be5a3deb464251dc,2015-06-01T19:08:39+05:30,d9d21400491d8ad0726448a7cb2d4ef05df590f4,Bug #18194196: OPTIMIZER EXECUTES STATEMENT INPERFORMANT,"Bug #18194196: OPTIMIZER EXECUTES STATEMENT INPERFORMANT
+
+Problem:
+While choosing the join order, the cost for doing table_scan
+is wrongly calculated. As a result table_scan is preferred
+over eq_ref, thereby choosing a bad plan.
+
+Analysis:
+
+While calculating the fanout in semijoin_dupsweedout method,
+if an inner table is ahead of the outer table in the join order,
+fanout is not calculated correctly. This is what is happening
+w.r.t the query in the bugpage.
+
+As seen from the trace, a table scan is preferred over eq_ref.
+This is because when calculating the cost for eq_ref, optimizer
+takes into consideration the correct prefix_row_count calculated
+in prev_records_read. In this case the first table emailstorerel
+ has around 42000 records and the next one is a ref scan with 1 row as
+fanout and the next one is also 1. Cost for eq_ref is calculated
+based on this.
+
+While in table_scan, cost is calculated based on row_count
+passed to best_access_path which ideally should be the prefix_row_count
+based on the partial plan chosen. In this case it should be more than
+42000. It is currently 1. This changes to ""1""  after semi-join strategy
+for dups_weedout is checked after choosing emailstore as the second table
+in the following part of trace.
+
+                    ""plan_prefix"": [
+                      ""`emailstoreorel`""
+                    ],
+                    ""table"": ""`emailstore`"",
+                    ""best_access_path"": {
+                      ""considered_access_paths"": [
+                        {
+                          ""access_type"": ""ref"",
+                          ""index"": ""PRIMARY"",
+                          ""rows"": 1,
+                          ""cost"": 42092,
+                          ""chosen"": true
+                        },
+                        {
+                          ""access_type"": ""scan"",
+                          ""using_join_cache"": true,
+                          ""rows"": 70554,
+                          ""cost"": 5.94e8,
+                          ""chosen"": false
+                        }
+                      ]
+                    },
+                    ""cost_for_plan"": 67583,
+                    ""rows_for_plan"": 42092,
+                    ""semijoin_strategy_choice"": [
+                      {
+                        ""strategy"": ""DuplicatesWeedout"",
+                        ""cost"": 76004,
+                        ""rows"": 1,
+                        ""duplicate_tables_left"": true,
+                        ""chosen"": true
+                      }
+                    ],
+So after Optimize_table_order::semijoin_dupsweedout_access_paths(), the
+current_rowcount now becomes ""1"" because the prefix_row_count is
+calculated solely on outer fanout (from table emailstore) which in this case
+is 1. The inner fanout from table emailstoreorel is not considered at all.
+
+Solution:
+Change the current formulas to the one's mentioned in the todo text.
+The formulas now take into consideration all the scenarios which can have inner
+tables ahead of outer tables in a join order. In such a scenario, if
+inner_fanout is more than 1, this will be moved to outer_fanout and inner_fanout
+is re-calculated.
+max_outer_fanout is introduced to keep a cap on outer_fanout not to exceed the
+cardinality of the cross product of outer tables.
+
+changes to test files:
+Two sets of changes can be noted.
+1. When a inner table with full table scan is chosen as the first table in the join
+order, earlier fanout was wrongly calculated. As a result the cost for doing
+dups weedout was less. With the current formulas, the cost for doing writes become
+more because of increased outer fanout in these cases. As a result the cost is not less
+than materialized scan.
+
+2. Optimizer now calculates the cost of table scan correctly. As a result, eq_ref
+is preferred over table scan in these cases.",18194196,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:race;issue_id:18194196;keyword:fix,bug,race;strong_keyword:race;issue_id:18194196;source_change;regression_test_added",False,,False,True,incorrect_result,sql/sql_planner.cc,sql/sql_planner.cc,mysql-test/include/subquery_sj.inc;mysql-test/r/subquery_sj_all.result;mysql-test/r/subquery_sj_all_bka.result;mysql-test/r/subquery_sj_all_bka_nixbnl.result;mysql-test/r/subquery_sj_all_bkaunique.result;mysql-test/r/subquery_sj_dupsweed.result;mysql-test/r/subquery_sj_dupsweed_bka.result;mysql-test/r/subquery_sj_dupsweed_bka_nixbnl.result;mysql-test/r/subquery_sj_dupsweed_bkaunique.result;mysql-test/r/subquery_sj_firstmatch.result;mysql-test/r/subquery_sj_firstmatch_bka.result;mysql-test/r/subquery_sj_firstmatch_bka_nixbnl.result;mysql-test/r/subquery_sj_firstmatch_bkaunique.result;mysql-test/r/subquery_sj_innodb_all.result;mysql-test/r/subquery_sj_innodb_all_bka.result;mysql-test/r/subquery_sj_innodb_all_bka_nixbnl.result;mysql-test/r/subquery_sj_innodb_all_bkaunique.result;mysql-test/r/subquery_sj_loosescan.result;mysql-test/r/subquery_sj_loosescan_bka.result;mysql-test/r/subquery_sj_loosescan_bka_nixbnl.result;mysql-test/r/subquery_sj_loosescan_bkaunique.result;mysql-test/r/subquery_sj_mat.result;mysql-test/r/subquery_sj_mat_bka.result;mysql-test/r/subquery_sj_mat_bka_nixbnl.result;mysql-test/r/subquery_sj_mat_bkaunique.result;mysql-test/r/subquery_sj_mat_nosj.result;mysql-test/r/subquery_sj_none.result;mysql-test/r/subquery_sj_none_bka.result;mysql-test/r/subquery_sj_none_bka_nixbnl.result;mysql-test/r/subquery_sj_none_bkaunique.result,,,,2527,880,3407,31
+mysql,6d570d729682039edd6c490187a0434e7d75d486,2018-05-10T10:14:30+05:30,a08508abf83d953f11e4823798398d9229ba0237,Bug#27230925: HANDLE_FATAL_SIGNAL (SIG=11) IN               SHOW_ROUTINE_GRANTS,"Bug#27230925: HANDLE_FATAL_SIGNAL (SIG=11) IN
+              SHOW_ROUTINE_GRANTS
+
+
+Description :- Server crashes in show_routine_grants().
+
+Analysis :- When ""grant_reload_procs_priv"" encounters
+an error, the grant structures (structures with column,
+function and procedure privileges) are freed. Server
+crashes when trying to access these structures later.
+
+Fix :- Grant structures are retained even when
+""grant_reload_procs_priv()"" encounters an error while
+reloading column, function and procedure privileges.",27230925,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:27230925;keyword:fix,bug,crash;strong_keyword:crash;issue_id:27230925;source_change",False,,False,True,crash,sql/sql_acl.cc,sql/sql_acl.cc,mysql-test/r/grant.result;mysql-test/t/grant.test,,,,65,31,96,3
+mysql,073378c937f6143d513394c3ee16169759810607,2021-12-03T15:38:27+01:00,69a0f8bce4684e5182e42e2f1949b18045cd8d85,BUG#33615493: Assert failure `local_member_info->get_recovery_status() == MEMBER_OFFLINE`,"BUG#33615493: Assert failure `local_member_info->get_recovery_status() == MEMBER_OFFLINE`
+
+In BUG#33380840 we added a assert to validate that rejoining members
+would be the only ones that do enter a group with a ERROR state,
+more precisely:
+```
+gcs_module->notify_of_view_change_end();
+...
+    if (autorejoin_module->is_autorejoin_ongoing()) {
+      assert(local_member_info->get_recovery_status() ==
+             Group_member_info::MEMBER_ERROR);
+    } else {
+      assert(local_member_info->get_recovery_status() ==
+             Group_member_info::MEMBER_OFFLINE);
+    }
+```
+Though these asserts were added too late on the view change handler.
+In order to allow their correct evaluation, that is, while the join
+or automatic rejoin is ongoing, they must be executed before signal
+that the view change handling is complete.
+Thence these asserts must be placed before the line
+`gcs_module->notify_of_view_change_end();`.
+
+RB: 27442",33380840;33615493,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:33380840;33615493;keyword:bug,assert;strong_keyword:assert;issue_id:33380840;33615493;source_change",False,,False,False,crash,plugin,plugin/group_replication/src/gcs_event_handlers.cc,,,,,8,1,9,1
+mysql,b2d6b93aa291b1b6eaee3190efd3c49c74cb9693,2010-05-03T13:45:46+02:00,fc52f46312c8bf73722508c98f1fb4ef9a1df012,ndb - bug#52536 - check alloc >= 4Gb on 32-bit system instead of segfault,ndb - bug#52536 - check alloc >= 4Gb on 32-bit system instead of segfault,52536,,True,high,7,"message_score=6.5;bug_word;strong:segfault;issue_id:52536;keyword:bug,segfault;strong_keyword:segfault;issue_id:52536;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/kernel/vm/ndbd_malloc_impl.cpp,,,,,14,4,18,1
+mysql,9bd98eb60547f1feff45a782f525db9382bec42a,2017-09-14T18:51:48+02:00,51c873c7879bdd360f2c29c55670a11ca656a38a,BUG#26802395: ASSERT `SERVER_ENGINE_INITIALIZED()' AT DELAYED_PLUGIN_INITIALIZATION.CC:167,"BUG#26802395: ASSERT `SERVER_ENGINE_INITIALIZED()' AT DELAYED_PLUGIN_INITIALIZATION.CC:167
+
+During server initialization, with --initialize or
+--initialize-insecure, replication applier infrastructure is not
+initialized, as such Group Replication cannot be started on server
+boot.
+
+The above condition was not being properly considered, which led to
+a assertion failed.
+To avoid that issue, now the condition is properly considered and
+Group Replication is not started, which is intended since the server
+is being initialized.",26802395,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:26802395;keyword:bug,assert;strong_keyword:assert;issue_id:26802395;source_change",False,,False,False,crash,rapid,rapid/plugin/group_replication/src/delayed_plugin_initialization.cc,,,,,15,5,20,1
+mysql,2a71cc26aa2095ad27da7d385d0c30f7df023390,2004-07-21T18:23:13+05:00,64fa4cc1249548a3bfbc97efe8aadc54c3afc33a,Fix for bug #4531(64bit embedded server crashes) There is some 'ulong'<->'uint' mess in libmysqld.c,"Fix for bug #4531(64bit embedded server crashes)
+There is some 'ulong'<->'uint' mess in libmysqld.c",4531,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:4531;keyword:fix,bug,crash;strong_keyword:crash;issue_id:4531;source_change",False,,False,False,crash,libmysqld,libmysqld/libmysqld.c,,,,,7,6,13,1
+mysql,7f104b752ed8917a24fd17b1464577e9dc61c0a0,2016-04-18T15:35:04+05:30,f750df5e743c8410057931ac0af622dc959cee7c,"Bug #22445211   GCOLS: SIMPLE DML, FAILING ASSERTION: !CURSOR->INDEX->IS_COMMITTED()","Bug #22445211   GCOLS: SIMPLE DML, FAILING ASSERTION:
+!CURSOR->INDEX->IS_COMMITTED()
+
+PROBLEM:
+
+On 5.7 & trunk:
+When trying to do a simple DML like REPLACE , server used to crash with
+error : ROW_NOT_FOUND
+on update . The issue is basically the value of max_prefix(which is the
+maximum value of prefix
+for the index) being incorrectly set. When the index uses whole of the
+column length , the
+max_prefix value was not being set to 0(since max_prefix=0 would
+represent indexing the whole column).
+Hence causing the length of column being wrongly set  and to the
+discrepancy as we try to fetch the
+row while doing a REPLACE.
+
+FIX:
+
+Fix is to set the max_prefix to 0 if a column is a part of an index
+where the prefix length is 0
+and otherwise set it to any higher values (based on non zero prefix
+length for field).
+
+Reviewed by:Jimmy Yang<Jimmy.Yang@oracle.com>
+Reviewed by:Thirunarayanan Balathandayuth
+	    <thirunarayanan.balathandayuth@oracle.com>
+Rb :12375",22445211,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash,assert;issue_id:22445211;keyword:fix,bug,crash,assert;strong_keyword:crash,assert;issue_id:22445211;source_change;original_hash:22445211",False,22445211,False,True,crash,storage/innobase,storage/innobase/dict/dict0dict.cc,mysql-test/suite/innodb/r/bug_22445211.result;mysql-test/suite/innodb/t/innodb_prefix_index_check.test,,,,95,3,98,3
+mysql,2eca61dd4f5d83c1b0d866208f735a961b914590,2018-09-11T22:22:37+01:00,dece4c10b1e9c1fbe7c399ab75295f64a794bccd,BUG#28679449 IMPROVES PROCESS'S PID FILE DELETION,"BUG#28679449 IMPROVES PROCESS'S PID FILE DELETION
+
+Deletes pid file when a temporary process is in state ""running"" but is
+no longer running in the system.
+Do not remove pid file when scheduling the process to stop, allowing it
+to be removed only when the process is actually stopped.
+
+These changes were identified while chatting with Mauritz about on-going
+investigation of autotest (atrt+ndb_cpcd) failures. One of the known
+issues was pid files not being removed while the processes were long
+gone. This was due to not accounting that a running process could stop
+for reasons others then CPCD stopping it (e.g. server process crash or
+test finishing).
+The removal of the pid file when a process is scheduled to be stopped
+seems unnatural, because we have explict code to remove the file when
+the process is actually stopped - so code was removed.",28679449,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:28679449;keyword:bug,crash;strong_keyword:crash;issue_id:28679449;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/cw/cpcd/Process.cpp,,,,,1,2,3,1
+mysql,7df00f61b726e0e2465304b5da99a40f0ab078cd,2015-09-18T13:17:10+02:00,9c3c6c7d364755ea996a38cb9b42ba484bad62ca,"Bug#21808680: JSON + GENERATED COLUMN CORRUPTS TABLE CACHE MEMORY, CRASHES","Bug#21808680: JSON + GENERATED COLUMN CORRUPTS TABLE CACHE MEMORY, CRASHES
+
+In some cases pointers to stale data could be left in the Item tree of
+the generated column expression, which would lead to problems the next
+time the generated column was accessed.
+
+There is already code in place to avoid this situation.
+TABLE::cleanup_gc_items() calls Item::cleanup() on the generated
+column expression upon completion of a statement, and this is supposed
+to revert the Item tree to a pristine state, ready for reuse in a new
+statement.
+
+However, since the Item::cleanup() functions are not recursive, only
+the top-level item in the generated column expression will be cleaned
+up. Children, such as items representing the arguments of a function
+call, will not be cleaned up and can point to stale data inserted into
+the item tree during execution.
+
+The fix changes TABLE::cleanup_gc_items() so that it calls cleanup()
+on all the items in the generated column's item_free_list, and not
+only on the top-level item.
+
+The patch also removes an unused parameter from the function.",21808680,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:21808680;keyword:fix,bug,crash;strong_keyword:crash;issue_id:21808680;source_change",False,,False,True,crash,sql/sql_base.cc,sql/sql_base.cc;sql/table.cc;sql/table.h,mysql-test/suite/gcol/r/gcol_bugfixes.result;mysql-test/suite/gcol/t/gcol_bugfixes.test,,,,30,15,45,5
+mysql,ae7be460bd1f38b11de4c36f34b38d4988ec1192,2014-03-26T16:04:01+08:00,a12b69391ffe4d22d374b973099789d84e8f7ca2,Bug #18271429 - GB18030_UNICODE_520_CI CRASHES PARSER!,"Bug #18271429 - GB18030_UNICODE_520_CI CRASHES PARSER!
+
+The gb18030_unicode_520_ci charset is not set with a proper ctype,
+so the state_map of it would not be initialized. When parser want
+to use the state_map, server crashes.
+
+We should give a proper ctype which shall be the same with that
+defined in gb18030.c to gb18030_unicode_520_ci charset.
+
+rb://4732, approved by Ramil.",18271429,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:18271429;keyword:bug,crash;strong_keyword:crash;issue_id:18271429;source_change",False,,False,True,crash,strings,strings/ctype-uca.c,mysql-test/r/ctype_gb18030.result;mysql-test/t/ctype_gb18030.test,,,,34,1,35,3
+mysql,d43e4edafec4a1236df08c15b66dd329da0b4b6f,2023-04-24T08:31:40+02:00,15231537c2be09f3bcb09eaf76be2b4360a00479,Bug#34790366  Assertion failure: row0quiesce.cc:351:len > 1 thread 140537240692480,"Bug#34790366  Assertion failure: row0quiesce.cc:351:len > 1 thread 140537240692480
+
+Background:
+  When we flush a table for export we write its metadata information in
+  the CFG file. For tables having instant dropped columns, we write the
+  ENUM/SET element names for these INSTANT dropped columns along with
+  their lengths. When we import tablespace, we use this information to
+  verify that the instant dropped columns' ENUM/SET element names matches
+  with the instant dropped columns' ENUM/SET element names in the
+  destination table. If target table doesn't have instant add/drop column,
+  we create a new one with the information read from the CFG file.
+
+Issue:
+  The DD returns the ENUM/SET element names in the column character set
+  as they are string literals. In the case of UCS-2, UTF-16 and UTF-32,
+  the string returned by DD is non-ASCII. This means that we can't use
+  string functions like strlen. But these string functions were used
+  which were causing assert to hit.
+
+Fix:
+  During EXPORT, write the length and the data followed by the null byte
+  in CFG file. Handle the string literals returned by DD as non-ASCII
+  strings i.e. do not use string functions like strlen. Ensure backward
+  compatibility with older CFG files by writing the extra null byte.
+  Ensure that number of ENUM/SET elements and their names have exact
+  match with destination table. In case destination does not have this
+  instant dropped column, ensure to write correct elements' name in
+  correct type.
+
+Note:
+  1. ENUM/SET element with name as empty string is allowed. This is used
+  to capture error state. Hence the assert is removed.
+  2. The CFG written for ENUM/SET is corrupt for the case of 'utf16le'.
+  This is because 'utf16le' has strings of length 2. If the ENUM/SET
+  element name is ""a"", then the DD returns a basic_string<char> containing
+  string ""a\0"" and length 2. However, strlen returns 1 and the CFG written
+  is corrupt. The current IMPORT implementation will error out with schema
+  mismatch.
+
+Change-Id: I0648b86c515de02c292584d25b6916e31413d715",34790366,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:34790366;keyword:fix,bug,assert;strong_keyword:assert;issue_id:34790366;source_change",False,,False,True,crash,storage/innobase,storage/innobase/handler/ha_innodb.cc;storage/innobase/include/ha_prototypes.h;storage/innobase/row/row0import.cc;storage/innobase/row/row0quiesce.cc,mysql-test/std_data/instant_ddl/old_instant_drop_enum.zip;mysql-test/suite/innodb/include/bug34790366.inc;mysql-test/suite/innodb/include/instant_ddl_import_charset_drop_enum.inc;mysql-test/suite/innodb/r/bug34790366.result;mysql-test/suite/innodb/r/instant_ddl_import_charset_drop_enum_compact.result;mysql-test/suite/innodb/r/instant_ddl_import_charset_drop_enum_dynamic.result;mysql-test/suite/innodb/r/instant_ddl_import_charset_drop_enum_redundant.result;mysql-test/suite/innodb/t/bug34790366.test;mysql-test/suite/innodb/t/instant_ddl_import_charset_drop_enum_compact.test;mysql-test/suite/innodb/t/instant_ddl_import_charset_drop_enum_dynamic.test;mysql-test/suite/innodb/t/instant_ddl_import_charset_drop_enum_redundant.test,share/messages_to_clients.txt;share/messages_to_error_log.txt,,,13631,236,13867,17
+mysql,586c4e4bbe7c35a74bc84e6d432e50154111f09b,2011-09-19T18:44:43+04:00,5f20040308f2b3d41e30b3fba44f36d5bfe8d86a,Bug#12977203: SERVER CRASH ON A DERIVED TABLE WITH QUERY CACHE ENABLED When query cache is enabled it checks handler for permission to save table in the cache. At the moment of check derived tables aren't instantiated yet and this led to a crash. Now derived tables are unconditionally allowed for query cache. The reason is that MyISAM gives permission to all tables except ones under concurrent insert and it's never the case for a derived table. HEAP tables are always give the permission. Other engines currently aren't used for storing result of derived tables.,"Bug#12977203: SERVER CRASH ON A DERIVED TABLE WITH QUERY CACHE ENABLED
+When query cache is enabled it checks handler for permission to save table in
+the cache. At the moment of check derived tables aren't instantiated yet and
+this led to a crash.
+Now derived tables are unconditionally allowed for query cache. The reason
+is that MyISAM gives permission to all tables except ones under concurrent
+insert and it's never the case for a derived table. HEAP tables are always
+give the permission. Other engines currently aren't used for storing result
+of derived tables.",12977203,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:12977203;keyword:bug,crash;strong_keyword:crash;issue_id:12977203;source_change",False,,False,True,crash,sql/sql_cache.cc,sql/sql_cache.cc;sql/table.h,mysql-test/r/query_cache.result;mysql-test/t/query_cache.test,,,,37,0,37,4
+mysql,a2e0059f3c1cf647b1feaf80780a917476ae4bba,2006-10-18T17:57:29+05:00,3ee35a76187b479c71dc4c417819c6183397521b,BUG#23175 - MYISAM crash/repair failed during repair,"BUG#23175 - MYISAM crash/repair failed during repair
+
+Repair table could crash a server if there is not sufficient
+memory (myisam_sort_buffer_size) to operate. Affects not only
+repair, but also all statements that use create index by sort:
+repair by sort, parallel repair, bulk insert.
+
+Return an error if there is not sufficient memory to store at
+least one key per BUFFPEK.
+
+Also fixed memory leak if thr_find_all_keys returns an error.",23175,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:23175;keyword:fix,bug,crash,memory leak;strong_keyword:crash;issue_id:23175;source_change",False,,False,True,crash,myisam,myisam/sort.c,mysql-test/r/repair.result;mysql-test/t/repair.test,,,,62,2,64,3
+mysql,43268d20e747f4e4194ea26f7fecc434e0ebf550,2014-07-02T10:45:22+02:00,edc029442c4f720d5fb921bbabd26f8d5e30ffbe,BUG#18779944: MYSQLDUMP BUFFER OVERFLOW,"BUG#18779944: MYSQLDUMP BUFFER OVERFLOW
+
+Mysqldump overflows stack buffer when copying table name from commandline arguments resulting in stack corruption and ability to execute arbitrary code.
+
+Fix: Check length of all positional arguments passed to mysqldump is smaller than NAME_LEN.
+Note: Mysqldump heavily depends on that database objects (databases, tablespaces, tables, etc) are limited to small size (now it is 64).",18779944,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:buffer overflow;issue_id:18779944;keyword:fix,bug,buffer overflow;strong_keyword:buffer overflow;issue_id:18779944;source_change",False,,False,False,crash,client,client/mysqldump.c,,,,,28,11,39,1
+mysql,4168199ad284736c0304b7aa99fb654d85f18bec,2015-09-11T13:30:22+02:00,9efdc7ced85123c23efef378651ac95956c5a887,Bug#21613615 GCOLS: ASSERTION FAILED: !TABLE || (!TABLE->READ_SET || BITMAP_IS_SET,"Bug#21613615 GCOLS: ASSERTION FAILED: !TABLE || (!TABLE->READ_SET || BITMAP_IS_SET
+
+Taking this table:
+CREATE TABLE v (
+a INT,
+c INT,
+b CHAR(2) GENERATED ALWAYS AS (a IN (1)) VIRTUAL,
+KEY(c,b(1)));
+and query:
+SELECT (SELECT MAX(c) FROM v);
+
+opt_sum_query() optimizes the query, decides to read the MAX(c) using
+the index over (c,b(1)). It first does this:
+          // Set bits for user-defined parts of key
+          table->mark_columns_used_by_index_no_reset(ref.key, table->read_set);
+which puts ""c"" and ""b"" in read_set (it's actually tmp_set).
+mark_columns_used_by_index_no_reset() adds ""b"" but doesn't add
+dependencies of ""b"", which looks correct as otherwise it would force a
+read of the data row and make any index on ""b"" be useless.
+Then in the index read, update_generated_read_fields() is called,
+which calls index_contains_this_virtual_gcol() which says that ""b"" is
+*not* in the index; it's because the index is on a prefix of ""b"",
+(key_part->field isn't equal to vfield, it's a forged field based on
+""b"" but with a field_length of 1). It is also correct, ""b"" isn't in
+the index, only a prefix is.
+So update_generated_read_fields() wants to calculate ""b"", thus needs
+""a"", which isn't in read_set, and it fails.
+
+Fix: put in this temporary read_set only columns which are necessary
+for this index read. They are the columns involved in
+'WHERE col=const' and the aggregated one.",21613615,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:21613615;keyword:fix,bug,assert;strong_keyword:assert;issue_id:21613615;source_change",False,,False,True,crash,sql/opt_sum.cc,sql/opt_sum.cc;sql/table.cc;sql/table.h,mysql-test/suite/gcol/r/gcol_bugfixes.result;mysql-test/suite/gcol/t/gcol_bugfixes.test,,,,111,9,120,5
+mysql,0f2e79a1f69be07ee22b2307e4596af6a8ff949f,2019-02-12T09:30:56+01:00,1eed25c2e13113938986fe8b5f964ee96a76fb01,Bug#28955358 VIRTUAL LONGLONG FIELD_NEWDATE::VAL_DATE_TEMPORAL(): ASSERTION `!TABLE || (!TAB,"Bug#28955358 VIRTUAL LONGLONG FIELD_NEWDATE::VAL_DATE_TEMPORAL(): ASSERTION `!TABLE || (!TAB
+
+The optimizer decides to do a filesort before reading OUTR.
+So this filesort must store in its buffer all columns of OUTR needed
+for its execution.
+To determine the set of those columns, read_all_rows() does
+first register_used_fields(), then
+qep_tab->condition()->walk (this gathers the columns used by
+the condition attached to the table, which condition is tested during
+filesort).
+As OUTR is materialized in a MEMORY-engine table, addon fields are not used
+(see init_for_filesort()) (if they were used, then there would be no
+problem).
+register_used_fields() looks at addon fields, but as they are not used,
+it doesn't help.
+So it's really up to the walk() to catch the fields which the condition
+uses. Here, the condition is:
+WHERE ... IN (SELECT FROM (derived table referencing a column of OUTR) AS qn, ...
+so the walk operates on IN, dives into the subquery, walks its SELECT list,
+WHERE clause, etc, but misses the reference located inside 'qn'.
+This can happen now that we have WL#461.
+
+The same bug existed even before WL#461, with JSON_TABLE; a testcase is
+added for it too.
+It was also causing a problem in functional dependency detection; a
+testcase is added for it.
+
+Fix: Item_subselect::walk_body() must walk its FROM clause too. To this
+aim, all its walk job is moved to functions SELECT_LEX_UNIT::walk
+and SELECT_LEX::walk. For JSON_TABLE, Table_function_json::walk is
+added.
+
+An alternative was earlier suggested by Roy: when the walk on
+qep_tab->condition() meets an Item_field, and this field is from a
+materialized table, then walk the materialized query block.
+But I think this won't always work: in the example added to the test
+file:
+SELECT 2 FROM (materialized derived table having outer ref) AS qn
+the walk meets '2' and no column of 'qn'; but 'qn' will be
+materialized, so its outer ref will be read, so it still needs some
+read_set marking.
+Moreover, it looks natural to me that, as outer-correlated derived
+tables are some sort of subquery, so walk them just like we walk
+Item_subselect.
+
+Minor consequence of the patch: table_function.h needs access to
+Item::enum_walk so has to include item.h. A second patch will declare
+enum_walk in a better way.
+
+Reviewed by: Evgeny Potemkin <evgeny.potemkin@oracle.com>",28955358,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:28955358;keyword:fix,bug,assert;strong_keyword:assert;issue_id:28955358;source_change;regression_test_added",False,,False,True,crash,sql/item_subselect.cc,sql/item_subselect.cc;sql/sql_lex.cc;sql/sql_lex.h;sql/sql_union.cc;sql/table_function.h,mysql-test/r/derived_correlated.result;mysql-test/t/derived_correlated.test,,,,199,77,276,7
+mysql,d2b9085df812f03dd4cdc2854fc27b1e830c735a,2005-09-13T15:15:38+04:00,1313a30c8308e981126c59fbd302ddd7642b80d1,Fix for Bug #13124 Stored Procedure using SELECT INTO crashes server,Fix for Bug #13124 Stored Procedure using SELECT INTO crashes server,13124,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:13124;keyword:fix,bug,crash;strong_keyword:crash;issue_id:13124;source_change",False,,False,True,crash,sql/item.cc,sql/item.cc,mysql-test/r/sp.result;mysql-test/t/sp.test,,,,29,1,30,3
+mysql,e2e70836f913af7468df3c0685403ce6bbd39653,2010-05-07T16:16:16+02:00,18ac4eac55432c4c3d6da6ea3f1f193510bfaf93,"Fix for Bug#50381 Assertion failing in handler.h:1283: void COST_VECT::add_io(double, double)","Fix for Bug#50381 Assertion failing in handler.h:1283: void COST_VECT::add_io(double, double)
+
+(backporting of revid:olav.sandstaa@sun.com-20100316175401-iax4ockzqybjrjpl)
+      
+The crash occured when an assert was checking that the value for the
+average IO cost in the cost vector did not have the value NaN. The NaN
+value was introduced in the cost vector object in get_sweep_read_cost()
+when the size of the data file for the table was 0 byte (ie. empty
+data file).  This resulted in a division by zero when computing the
+estimated number of blocks needed to be read from disk.
+      
+The fix for avoiding the division by zero is to assume that the data
+file always contains at least one block. This is similar to what is
+done for the estimated number of blocks to be accessed. So after this
+fix the cost estimate in get_sweep_read_cost() will assume both that
+the data file and the estimate for number of blocks to access are at
+least 1.",50381,,True,high,8,"message_score=8.0;weak_fix_word;bug_word;backport_word;strong:crash,assert;issue_id:50381;keyword:fix,bug,crash,assert,backport;strong_keyword:crash,assert;issue_id:50381;source_change;backport_or_cherry_pick;original_hash:20100316175401",True,20100316175401,False,True,crash,sql/handler.cc,sql/handler.cc,mysql-test/include/mrr_tests.inc;mysql-test/r/innodb_mrr.result;mysql-test/r/myisam_mrr.result,,,,69,1,70,4
+mysql,989ddf1706e4150411630124c65794f9b12ed008,2017-12-15T22:42:25+11:00,06b5dfb9c751de61a64f627a2dd3119f589202fc,Bug#27263206 - ASSERTION FAILURE: FIL0FIL.CC:4133:(*FILE)->IN_USE == 0,"Bug#27263206 - ASSERTION FAILURE: FIL0FIL.CC:4133:(*FILE)->IN_USE == 0
+
+The assertion will not hold after WL#8619. A thread that is preparing to
+do IO will increment file.in_use. This will ensure that the file is not closed
+by some other thread. After that it will try and acquire the Fil_shard::mutex.
+
+Some additional code clean up too.
+
+RB#18260 Approved by: Bin Su",27263206,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:27263206;keyword:bug,assert;strong_keyword:assert;issue_id:27263206;source_change",False,,False,False,crash,storage/innobase,storage/innobase/fil/fil0fil.cc,,,,,28,46,74,1
+mysql,3bffd42b8517c26b85a51aa4f94007daab1fb0bf,2016-03-01T12:44:53+05:30,a8ba02f383baf81f3c8c0d5d89921f32392c6834,Bug#21507981: REPLICATION POSITION LOST AFTER CRASH ON MTS CONFIGURED SLAVE,"Bug#21507981: REPLICATION POSITION LOST AFTER CRASH ON MTS
+CONFIGURED SLAVE
+
+Problem:
+========
+Enable MTS along with crash-safe replication tables. Make
+sure that the server is busily inserting data with multiple
+threads in parallel. Shutdown mysqld uncleanly (kill -9 or
+power off server without notice).
+
+Now users are restarting the server with
+--relay-log-recovery=1 to recover the crashed slave.
+
+This results in following error:
+================================
+2015-06-24 13:49:03 3895 [ERROR] --relay-log-recovery cannot
+be executed when the slave was stopped with an error or
+killed in MTS mode; consider using RESET SLAVE or restart
+the server with --relay-log-recovery = 0 followed by
+START SLAVE UNTIL SQL_AFTER_MTS_GAPS.
+
+i.e relay-log-recovery will not work in MTS mode.
+
+Manual steps that are followed to fix this issue:
+================================================
+1) The server has to be restarted with –-relay-log-recovery= 0.
+2) Execute START SLAVE UNTIL SQL_AFTER_MTS_GAPS.
+This step will ensure that gaps are filled and the slave will
+stop at this point.
+3) Restart the slave server with ‘relay-log-recovery=1’.
+
+Analysis:
+========
+The above mentioned process involves manual intervention.
+This needs to be automated.
+
+Fix:
+====
+During crash recovery if gaps are present in MTS execution
+then START SLAVE UNTIL SQL_AFTER_MTS_GAPS is invoked
+implicitly and the gaps are filled. Once slave reaches this
+gap less consistent state it will stop. Then initialize the
+Receiver thread's positions to the latest Applier thread's
+positions and discard the old relay logs as we do in the
+case of single threaded slave mode.
+
+This recovery process may not work if MTS has stopped due to
+an error during an earlier session in that case appropriate
+error message will be printed. Users will have to eliminate
+the route cause of the error and restart the recovery
+process.",21507981,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:21507981;keyword:fix,bug,crash;strong_keyword:crash;issue_id:21507981;source_change;regression_test_added",False,,False,True,crash,sql/rpl_rli.cc,sql/rpl_rli.cc;sql/rpl_rli.h;sql/rpl_slave.cc,mysql-test/extra/rpl_tests/rpl_generate_mts_gap.test;mysql-test/extra/rpl_tests/rpl_mts_relay_log_recovery.test;mysql-test/suite/rpl/r/rpl_mts_relay_log_post_crash_recovery.result;mysql-test/suite/rpl/r/rpl_mts_relay_log_recovery_on_error.result;mysql-test/suite/rpl/r/rpl_parallel_change_master.result;mysql-test/suite/rpl/t/rpl_mts_relay_log_post_crash_recovery-slave.opt;mysql-test/suite/rpl/t/rpl_mts_relay_log_post_crash_recovery.test;mysql-test/suite/rpl/t/rpl_mts_relay_log_recovery_on_error-slave.opt;mysql-test/suite/rpl/t/rpl_mts_relay_log_recovery_on_error.test;mysql-test/suite/rpl/t/rpl_parallel_change_master.test,,,,629,54,683,13
+mysql,3e8c32aa99c3c96dd5d99ac211d8545fcc5632eb,2019-04-12T14:37:40+04:00,ffb82500694d9a752d6d415d0116c8de80d16597,"Reverting Bug#28652733 ASSERTION FAILED: !TABLE || (!TABLE->READ_SET || BITMAP_IS_SET(TABLE->READ_SET,","Reverting Bug#28652733 ASSERTION FAILED: !TABLE || (!TABLE->READ_SET || BITMAP_IS_SET(TABLE->READ_SET,
+
+for 5.7 only.
+
+Reviewed-by: Sergey Glukhov <sergey.glukhov@oracle.com>",28652733,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:28652733;keyword:bug,assert;strong_keyword:assert;issue_id:28652733;source_change",False,,False,False,crash,sql/sql_join_buffer.cc,sql/sql_join_buffer.cc;sql/sql_join_buffer.h,,,,,13,57,70,2
+mysql,06741baef463ce8c781843e3ea86f96cd0844511,2010-05-10T11:37:24+02:00,84414608534afa18f6214e523d556d07f7cf1955,"Fix for BUG#50595 ""funcs_1.myisam_views takes longer time on 6.0 branch than 5.1 branch"". (Backporting of guilhem@mysql.com-20100428194200-tqlpkfre7tzjye0e ). EXPLAIN SELECT for a 20-table query took 28% less time in next-mr than in 6.0-codebase (1427 ms vs 1979 ms, release builds on Linux 64-bit, gcc 4.4.1-4ubuntu9). This patch makes 6.0-codebase almost as fast as next-mr in the ""index"" test (time decreased by 26% compared to pre-patch 6.0-codebase), and faster than next-mr in the ""no index"" test (time decreased by 35%). Details of the test query and observed timings are in the bug report.","Fix for BUG#50595 ""funcs_1.myisam_views takes longer time on 6.0 branch than 5.1 branch"".
+(Backporting of guilhem@mysql.com-20100428194200-tqlpkfre7tzjye0e ).
+EXPLAIN SELECT for a 20-table query took 28% less time in next-mr than in 6.0-codebase
+(1427 ms vs 1979 ms, release builds on Linux 64-bit, gcc 4.4.1-4ubuntu9). This patch
+makes 6.0-codebase almost as fast as next-mr in the ""index"" test (time decreased by 26%
+compared to pre-patch 6.0-codebase), and faster than next-mr in the ""no index"" test
+(time decreased by 35%).
+Details of the test query and observed timings are in the bug report.",50595,,True,high,7,"message_score=5.0;weak_fix_word;bug_word;backport_word;issue_id:50595;keyword:fix,bug,backport;issue_id:50595;source_change;regression_test_added;backport_or_cherry_pick;original_hash:20100428194200",True,20100428194200,False,True,bug_fix,sql/sql_select.cc,sql/sql_select.cc,mysql-test/r/greedy_optimizer.result;mysql-test/r/status.result;mysql-test/r/subselect3.result;mysql-test/r/subselect3_jcl6.result;mysql-test/r/subselect_mat.result;mysql-test/t/subselect3.test,,,,226,227,453,7
+mysql,7bd6b84d4ca9bb571108ac891a5517733b7d39e9,2018-08-21T11:00:35+02:00,03ddd1f2e2e13c8073434d964eeb3bcead300295,Bug#28526493 ASSERTION WHEN CREATING A FUNCTIONAL INDEX ON A SUBQUERY,"Bug#28526493 ASSERTION WHEN CREATING A FUNCTIONAL INDEX ON A SUBQUERY
+
+When trying to add a functional index on a subquery, the server
+would hit an assertion when trying to resolve the indexed expression.
+It shouldn't be possible to add a functional index on a subquery in
+the first place, so this patch adds a call to
+pre_validate_value_generator_expr() before trying to resolve the
+indexed expression. This function catches a lot of disallowed
+expressions, and will thus return an appropriate error message.
+
+Change-Id: I1ed3945938df3d7f00fbc9454c45f2ea6db95d29",28526493,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:28526493;keyword:bug,assert;strong_keyword:assert;issue_id:28526493;source_change",False,,False,True,crash,sql/field.cc,sql/field.cc;sql/field.h;sql/sql_table.cc,mysql-test/r/functional_index.result;mysql-test/t/functional_index.test,,,,40,11,51,5
+mysql,b433e348c27f552f86ef1c40c2efceabd2fb20dd,2016-03-03T09:02:01+01:00,4ac11bdb053abf87b6def80653894e565e263f36,Bug#22848937 FIX MORE ERRORS REPORTED BY UBSAN - GOOGLE PROTOBUF,"Bug#22848937 FIX MORE ERRORS REPORTED BY UBSAN - GOOGLE PROTOBUF
+
+protobuf-2.6.0/src/google/protobuf/io/coded_stream.cc:634
+null pointer passed as argument 1, which is declared to never be null
+
+protobuf-2.6.0/src/google/protobuf/io/printer.cc:181
+null pointer passed as argument 1, which is declared to never be null
+
+protobuf-2.6.0/src/google/protobuf/stubs/strutil.cc:908
+signed integer overflow: 42 * -100000000 cannot be represented in type 'int'
+
+protobuf-2.6.0/src/google/protobuf/text_format.cc:1113
+null pointer passed as argument 1, which is declared to never be null
+
+protobuf-2.6.0/src/google/protobuf/wire_format_lite.h:650
+left shift of negative value -128",22848937,,True,high,8,"message_score=8.5;weak_fix_word;bug_word;reporter_reference;strong:null pointer;issue_id:22848937;keyword:fix,bug,null pointer,reported by;strong_keyword:null pointer;issue_id:22848937;source_change",False,,False,False,crash,extra,extra/protobuf/protobuf-2.6.0/src/google/protobuf/io/coded_stream.cc;extra/protobuf/protobuf-2.6.0/src/google/protobuf/io/printer.cc;extra/protobuf/protobuf-2.6.0/src/google/protobuf/stubs/strutil.cc;extra/protobuf/protobuf-2.6.0/src/google/protobuf/text_format.cc;extra/protobuf/protobuf-2.6.0/src/google/protobuf/wire_format_lite.h,,,,,8,5,13,5
+mysql,028c291ff35560eb3a08a8a6ea2ef1f3bb4797c7,2013-08-26T13:27:29+02:00,2d91c6fc595b2887922448680640cde483ea8eb5,"This is a fix for Bug #17177279 'NDB : IMPROVE JAM() COVERAGE AND EFFECTIVENESS'. This commit changes the jam trace mechanism such that each entry in the jam trace buffer now will refer to a unique file id (JAM_FILE_ID) rather than a block number. This bringe the following benefits: - It is much easier to map an entry to the right source code location.   (Trace files will point to the source file rather than the block.) - jam should be slightly faster, since the jam value can be calculated at   compile time. - Forgetting to call jamEntry() when going from one block to another is no   longer a problem. Each jam() call records the complete context. From   now on, there is no need to add jamEntry() calls, jam() is sufficient. - There is no need to maintain per-file jam offsets to distinguish between   different files within a block.","This is a fix for Bug #17177279 'NDB : IMPROVE JAM() COVERAGE AND 
+EFFECTIVENESS'. This commit changes the jam trace mechanism such that each 
+entry in the jam trace buffer now will refer to a unique file id (JAM_FILE_ID) 
+rather than a block number. This bringe the following benefits:
+- It is much easier to map an entry to the right source code location.
+  (Trace files will point to the source file rather than the block.)
+- jam should be slightly faster, since the jam value can be calculated at
+  compile time.
+- Forgetting to call jamEntry() when going from one block to another is no 
+  longer a problem. Each jam() call records the complete context. From
+  now on, there is no need to add jamEntry() calls, jam() is sufficient.
+- There is no need to maintain per-file jam offsets to distinguish between
+  different files within a block.
+
+See comments for jamFileNames in Emulator.cpp for a decription of how
+to add new JAM_FILE_IDs.
+
+This commit gathers include directives at the top of the source files
+that have JAM_FILE_Ids. That way, it is easier to add a JAM_FILE_ID 
+macro that will not be  redefined by some include file. Also, gathering 
+include directives in one place improves code readability.
+
+Notes:
+* There were two cases of the following pattern: A.hpp defines class A. Then
+  B.hpp in included, which defines class B and then defines inline methods for
+  B which refers members of A. Finally A.hpp defines inline methods for A 
+  which refers members of B. This mutual dependency means that A.hpp cannot 
+  include B.hpp until *after* class A has been defined. It turned out that
+  both cases of this pattern were due to methods that were not in use. 
+  This was LogLevel::operator=(const EventSubscribeReq&) and 
+  SignalCounter::operator=(const NodeReceiverGroup&). These methods have been
+  removed such that the corresponding #include directives could be moved to
+  the top.  
+
+* SimulatedBlock.hpp had an unneeded #include of Mutex.hpp. This would not 
+  compile unless Mutex.hpp was included after initial definitions in
+  SimulatedBlock.hpp. Therefore, the #include was removed from 
+  SimulatedBlock.hpp. Instead, Mutex.hpp is included directly from the files
+  that need it.",17177279,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:race;issue_id:17177279;keyword:fix,bug,race;strong_keyword:race;issue_id:17177279;source_change;original_hash:17177279",False,17177279,False,False,concurrency,storage/ndb,storage/ndb/include/kernel/AttributeDescriptor.hpp;storage/ndb/include/kernel/AttributeHeader.hpp;storage/ndb/include/kernel/AttributeList.hpp;storage/ndb/include/kernel/Interpreter.hpp;storage/ndb/include/kernel/LogLevel.hpp;storage/ndb/include/kernel/NodeBitmask.hpp;storage/ndb/include/kernel/NodeInfo.hpp;storage/ndb/include/kernel/NodeState.hpp;storage/ndb/include/kernel/RefConvert.hpp;storage/ndb/include/kernel/signaldata/AbortAll.hpp;storage/ndb/include/kernel/signaldata/AccFrag.hpp;storage/ndb/include/kernel/signaldata/AccLock.hpp;storage/ndb/include/kernel/signaldata/AccScan.hpp;storage/ndb/include/kernel/signaldata/AccSizeAltReq.hpp;storage/ndb/include/kernel/signaldata/AllocMem.hpp;storage/ndb/include/kernel/signaldata/AllocNodeId.hpp;storage/ndb/include/kernel/signaldata/AlterIndx.hpp;storage/ndb/include/kernel/signaldata/AlterIndxImpl.hpp;storage/ndb/include/kernel/signaldata/AlterTab.hpp;storage/ndb/include/kernel/signaldata/AlterTable.hpp;storage/ndb/include/kernel/signaldata/ApiBroadcast.hpp;storage/ndb/include/kernel/signaldata/ApiRegSignalData.hpp;storage/ndb/include/kernel/signaldata/ApiVersion.hpp;storage/ndb/include/kernel/signaldata/ArbitSignalData.hpp;storage/ndb/include/kernel/signaldata/AttrInfo.hpp;storage/ndb/include/kernel/signaldata/BackupContinueB.hpp;storage/ndb/include/kernel/signaldata/BackupImpl.hpp;storage/ndb/include/kernel/signaldata/BackupLockTab.hpp;storage/ndb/include/kernel/signaldata/BackupSignalData.hpp;storage/ndb/include/kernel/signaldata/BlockCommitOrd.hpp;storage/ndb/include/kernel/signaldata/BuildIndx.hpp;storage/ndb/include/kernel/signaldata/BuildIndxImpl.hpp;storage/ndb/include/kernel/signaldata/CallbackSignal.hpp;storage/ndb/include/kernel/signaldata/CheckNodeGroups.hpp;storage/ndb/include/kernel/signaldata/CloseComReqConf.hpp;storage/ndb/include/kernel/signaldata/CmInit.hpp;storage/ndb/include/kernel/signaldata/CmRegSignalData.hpp;storage/ndb/include/kernel/signaldata/CmvmiCfgConf.hpp;storage/ndb/include/kernel/signaldata/CntrMasterConf.hpp;storage/ndb/include/kernel/signaldata/CntrMasterReq.hpp;storage/ndb/include/kernel/signaldata/CntrStart.hpp;storage/ndb/include/kernel/signaldata/ConfigChange.hpp;storage/ndb/include/kernel/signaldata/ConfigParamId.hpp;storage/ndb/include/kernel/signaldata/ContinueFragmented.hpp;storage/ndb/include/kernel/signaldata/CopyActive.hpp;storage/ndb/include/kernel/signaldata/CopyData.hpp;storage/ndb/include/kernel/signaldata/CopyFrag.hpp;storage/ndb/include/kernel/signaldata/CopyGCIReq.hpp;storage/ndb/include/kernel/signaldata/CreateEvnt.hpp;storage/ndb/include/kernel/signaldata/CreateFilegroup.hpp;storage/ndb/include/kernel/signaldata/CreateFilegroupImpl.hpp;storage/ndb/include/kernel/signaldata/CreateFragmentation.hpp;storage/ndb/include/kernel/signaldata/CreateHashMap.hpp;storage/ndb/include/kernel/signaldata/CreateIndx.hpp;storage/ndb/include/kernel/signaldata/CreateIndxImpl.hpp;storage/ndb/include/kernel/signaldata/CreateNodegroup.hpp;storage/ndb/include/kernel/signaldata/CreateNodegroupImpl.hpp;storage/ndb/include/kernel/signaldata/CreateObj.hpp;storage/ndb/include/kernel/signaldata/CreateTab.hpp;storage/ndb/include/kernel/signaldata/CreateTable.hpp;storage/ndb/include/kernel/signaldata/CreateTrig.hpp;storage/ndb/include/kernel/signaldata/CreateTrigImpl.hpp;storage/ndb/include/kernel/signaldata/DataFileOrd.hpp;storage/ndb/include/kernel/signaldata/DbinfoScan.hpp;storage/ndb/include/kernel/signaldata/DbspjErr.hpp;storage/ndb/include/kernel/signaldata/DiAddTab.hpp;storage/ndb/include/kernel/signaldata/DiGetNodes.hpp;storage/ndb/include/kernel/signaldata/DictLock.hpp;storage/ndb/include/kernel/signaldata/DictObjOp.hpp;storage/ndb/include/kernel/signaldata/DictSchemaInfo.hpp;storage/ndb/include/kernel/signaldata/DictSignal.hpp;storage/ndb/include/kernel/signaldata/DictSizeAltReq.hpp;storage/ndb/include/kernel/signaldata/DictStart.hpp;storage/ndb/include/kernel/signaldata/DictTabInfo.hpp;storage/ndb/include/kernel/signaldata/DictTakeover.hpp;storage/ndb/include/kernel/signaldata/DihAddFrag.hpp;storage/ndb/include/kernel/signaldata/DihContinueB.hpp;storage/ndb/include/kernel/signaldata/DihFragCount.hpp;storage/ndb/include/kernel/signaldata/DihGetTabInfo.hpp;storage/ndb/include/kernel/signaldata/DihRestart.hpp;storage/ndb/include/kernel/signaldata/DihScanTab.hpp;storage/ndb/include/kernel/signaldata/DihSizeAltReq.hpp;storage/ndb/include/kernel/signaldata/DihStartTab.hpp;storage/ndb/include/kernel/signaldata/DihSwitchReplica.hpp;storage/ndb/include/kernel/signaldata/DisconnectRep.hpp;storage/ndb/include/kernel/signaldata/DropFilegroup.hpp;storage/ndb/include/kernel/signaldata/DropFilegroupImpl.hpp;storage/ndb/include/kernel/signaldata/DropIndx.hpp;storage/ndb/include/kernel/signaldata/DropIndxImpl.hpp;storage/ndb/include/kernel/signaldata/DropNodegroup.hpp;storage/ndb/include/kernel/signaldata/DropNodegroupImpl.hpp;storage/ndb/include/kernel/signaldata/DropObj.hpp;storage/ndb/include/kernel/signaldata/DropTab.hpp;storage/ndb/include/kernel/signaldata/DropTabFile.hpp;storage/ndb/include/kernel/signaldata/DropTable.hpp;storage/ndb/include/kernel/signaldata/DropTrig.hpp;storage/ndb/include/kernel/signaldata/DropTrigImpl.hpp;storage/ndb/include/kernel/signaldata/DumpStateOrd.hpp;storage/ndb/include/kernel/signaldata/EmptyLcp.hpp;storage/ndb/include/kernel/signaldata/EnableCom.hpp;storage/ndb/include/kernel/signaldata/EventReport.hpp;storage/ndb/include/kernel/signaldata/ExecFragReq.hpp;storage/ndb/include/kernel/signaldata/Extent.hpp;storage/ndb/include/kernel/signaldata/FailRep.hpp;storage/ndb/include/kernel/signaldata/FireTrigOrd.hpp;storage/ndb/include/kernel/signaldata/FsAppendReq.hpp;storage/ndb/include/kernel/signaldata/FsCloseReq.hpp;storage/ndb/include/kernel/signaldata/FsConf.hpp;storage/ndb/include/kernel/signaldata/FsOpenReq.hpp;storage/ndb/include/kernel/signaldata/FsReadWriteReq.hpp;storage/ndb/include/kernel/signaldata/FsRef.hpp;storage/ndb/include/kernel/signaldata/FsRemoveReq.hpp;storage/ndb/include/kernel/signaldata/GCP.hpp;storage/ndb/include/kernel/signaldata/GetConfig.hpp;storage/ndb/include/kernel/signaldata/GetTabInfo.hpp;storage/ndb/include/kernel/signaldata/GetTableId.hpp;storage/ndb/include/kernel/signaldata/HashMapImpl.hpp;storage/ndb/include/kernel/signaldata/HotSpareRep.hpp;storage/ndb/include/kernel/signaldata/IndexStatSignal.hpp;storage/ndb/include/kernel/signaldata/IndxAttrInfo.hpp;storage/ndb/include/kernel/signaldata/IndxKeyInfo.hpp;storage/ndb/include/kernel/signaldata/InvalidateNodeLCPConf.hpp;storage/ndb/include/kernel/signaldata/InvalidateNodeLCPReq.hpp;storage/ndb/include/kernel/signaldata/KeyInfo.hpp;storage/ndb/include/kernel/signaldata/LCP.hpp;storage/ndb/include/kernel/signaldata/LgmanContinueB.hpp;storage/ndb/include/kernel/signaldata/ListTables.hpp;storage/ndb/include/kernel/signaldata/LocalRouteOrd.hpp;storage/ndb/include/kernel/signaldata/LqhFrag.hpp;storage/ndb/include/kernel/signaldata/LqhKey.hpp;storage/ndb/include/kernel/signaldata/LqhSizeAltReq.hpp;storage/ndb/include/kernel/signaldata/LqhTransConf.hpp;storage/ndb/include/kernel/signaldata/LqhTransReq.hpp;storage/ndb/include/kernel/signaldata/MasterGCP.hpp;storage/ndb/include/kernel/signaldata/MasterLCP.hpp;storage/ndb/include/kernel/signaldata/NFCompleteRep.hpp;storage/ndb/include/kernel/signaldata/NdbSttor.hpp;storage/ndb/include/kernel/signaldata/NdbfsContinueB.hpp;storage/ndb/include/kernel/signaldata/NextScan.hpp;storage/ndb/include/kernel/signaldata/NodeFailRep.hpp;storage/ndb/include/kernel/signaldata/NodePing.hpp;storage/ndb/include/kernel/signaldata/NodeStateSignalData.hpp;storage/ndb/include/kernel/signaldata/PackedSignal.hpp;storage/ndb/include/kernel/signaldata/PgmanContinueB.hpp;storage/ndb/include/kernel/signaldata/PrepDropTab.hpp;storage/ndb/include/kernel/signaldata/PrepFailReqRef.hpp;storage/ndb/include/kernel/signaldata/QueryTree.hpp;storage/ndb/include/kernel/signaldata/ReadConfig.hpp;storage/ndb/include/kernel/signaldata/ReadNodesConf.hpp;storage/ndb/include/kernel/signaldata/RelTabMem.hpp;storage/ndb/include/kernel/signaldata/ReleasePages.hpp;storage/ndb/include/kernel/signaldata/RestoreContinueB.hpp;storage/ndb/include/kernel/signaldata/RestoreImpl.hpp;storage/ndb/include/kernel/signaldata/ResumeReq.hpp;storage/ndb/include/kernel/signaldata/RouteOrd.hpp;storage/ndb/include/kernel/signaldata/ScanFrag.hpp;storage/ndb/include/kernel/signaldata/ScanTab.hpp;storage/ndb/include/kernel/signaldata/SchemaTrans.hpp;storage/ndb/include/kernel/signaldata/SchemaTransImpl.hpp;storage/ndb/include/kernel/signaldata/SetLogLevelOrd.hpp;storage/ndb/include/kernel/signaldata/SetVarReq.hpp;storage/ndb/include/kernel/signaldata/SignalData.hpp;storage/ndb/include/kernel/signaldata/SignalDataPrint.hpp;storage/ndb/include/kernel/signaldata/SignalDroppedRep.hpp;storage/ndb/include/kernel/signaldata/SrFragidConf.hpp;storage/ndb/include/kernel/signaldata/StartFragReq.hpp;storage/ndb/include/kernel/signaldata/StartInfo.hpp;storage/ndb/include/kernel/signaldata/StartMe.hpp;storage/ndb/include/kernel/signaldata/StartOrd.hpp;storage/ndb/include/kernel/signaldata/StartPerm.hpp;storage/ndb/include/kernel/signaldata/StartRec.hpp;storage/ndb/include/kernel/signaldata/StopForCrash.hpp;storage/ndb/include/kernel/signaldata/StopMe.hpp;storage/ndb/include/kernel/signaldata/StopPerm.hpp;storage/ndb/include/kernel/signaldata/StopReq.hpp;storage/ndb/include/kernel/signaldata/SumaImpl.hpp;storage/ndb/include/kernel/signaldata/Sync.hpp;storage/ndb/include/kernel/signaldata/SystemError.hpp;storage/ndb/include/kernel/signaldata/TabCommit.hpp;storage/ndb/include/kernel/signaldata/TakeOver.hpp;storage/ndb/include/kernel/signaldata/TamperOrd.hpp;storage/ndb/include/kernel/signaldata/TcCommit.hpp;storage/ndb/include/kernel/signaldata/TcContinueB.hpp;storage/ndb/include/kernel/signaldata/TcHbRep.hpp;storage/ndb/include/kernel/signaldata/TcIndx.hpp;storage/ndb/include/kernel/signaldata/TcKeyConf.hpp;storage/ndb/include/kernel/signaldata/TcKeyFailConf.hpp;storage/ndb/include/kernel/signaldata/TcKeyRef.hpp;storage/ndb/include/kernel/signaldata/TcKeyReq.hpp;storage/ndb/include/kernel/signaldata/TcRollbackRep.hpp;storage/ndb/include/kernel/signaldata/TcSizeAltReq.hpp;storage/ndb/include/kernel/signaldata/TestOrd.hpp;storage/ndb/include/kernel/signaldata/TransIdAI.hpp;storage/ndb/include/kernel/signaldata/TrigAttrInfo.hpp;storage/ndb/include/kernel/signaldata/TsmanContinueB.hpp;storage/ndb/include/kernel/signaldata/TupCommit.hpp;storage/ndb/include/kernel/signaldata/TupFrag.hpp;storage/ndb/include/kernel/signaldata/TupKey.hpp;storage/ndb/include/kernel/signaldata/TupSizeAltReq.hpp;storage/ndb/include/kernel/signaldata/TuxBound.hpp;storage/ndb/include/kernel/signaldata/TuxContinueB.hpp;storage/ndb/include/kernel/signaldata/TuxMaint.hpp;storage/ndb/include/kernel/signaldata/TuxSizeAltReq.hpp;storage/ndb/include/kernel/signaldata/Upgrade.hpp;storage/ndb/include/kernel/signaldata/UtilDelete.hpp;storage/ndb/include/kernel/signaldata/UtilExecute.hpp;storage/ndb/include/kernel/signaldata/UtilLock.hpp;storage/ndb/include/kernel/signaldata/UtilPrepare.hpp;storage/ndb/include/kernel/signaldata/UtilRelease.hpp;storage/ndb/include/kernel/signaldata/UtilSequence.hpp;storage/ndb/include/kernel/signaldata/WaitGCP.hpp;storage/ndb/include/kernel/statedesc.hpp;storage/ndb/src/kernel/SimBlockList.cpp;storage/ndb/src/kernel/angel.cpp;storage/ndb/src/kernel/angel.hpp;storage/ndb/src/kernel/blocks/LocalProxy.cpp;storage/ndb/src/kernel/blocks/LocalProxy.hpp;storage/ndb/src/kernel/blocks/PgmanProxy.cpp;storage/ndb/src/kernel/blocks/PgmanProxy.hpp;storage/ndb/src/kernel/blocks/RestoreProxy.cpp;storage/ndb/src/kernel/blocks/RestoreProxy.hpp;storage/ndb/src/kernel/blocks/backup/Backup.cpp;storage/ndb/src/kernel/blocks/backup/Backup.hpp;storage/ndb/src/kernel/blocks/backup/BackupFormat.hpp;storage/ndb/src/kernel/blocks/backup/BackupInit.cpp;storage/ndb/src/kernel/blocks/backup/BackupProxy.cpp;storage/ndb/src/kernel/blocks/backup/BackupProxy.hpp;storage/ndb/src/kernel/blocks/backup/FsBuffer.hpp;storage/ndb/src/kernel/blocks/backup/read.cpp;storage/ndb/src/kernel/blocks/cmvmi/Cmvmi.cpp;storage/ndb/src/kernel/blocks/cmvmi/Cmvmi.hpp;storage/ndb/src/kernel/blocks/dbacc/Container.hpp;storage/ndb/src/kernel/blocks/dbacc/Dbacc.hpp;storage/ndb/src/kernel/blocks/dbacc/DbaccInit.cpp;storage/ndb/src/kernel/blocks/dbacc/DbaccMain.cpp;storage/ndb/src/kernel/blocks/dbacc/DbaccProxy.cpp;storage/ndb/src/kernel/blocks/dbacc/DbaccProxy.hpp;storage/ndb/src/kernel/blocks/dbdict/Dbdict.cpp;storage/ndb/src/kernel/blocks/dbdict/Dbdict.hpp;storage/ndb/src/kernel/blocks/dbdict/SchemaFile.hpp;storage/ndb/src/kernel/blocks/dbdict/printSchemaFile.cpp;storage/ndb/src/kernel/blocks/dbdih/Dbdih.hpp;storage/ndb/src/kernel/blocks/dbdih/DbdihInit.cpp;storage/ndb/src/kernel/blocks/dbdih/DbdihMain.cpp;storage/ndb/src/kernel/blocks/dbdih/Sysfile.hpp;storage/ndb/src/kernel/blocks/dbdih/printSysfile.cpp;storage/ndb/src/kernel/blocks/dbgdm/DbgdmProxy.cpp;storage/ndb/src/kernel/blocks/dbgdm/DbgdmProxy.hpp;storage/ndb/src/kernel/blocks/dbinfo/Dbinfo.cpp;storage/ndb/src/kernel/blocks/dbinfo/Dbinfo.hpp;storage/ndb/src/kernel/blocks/dblqh/Dblqh.hpp;storage/ndb/src/kernel/blocks/dblqh/DblqhCommon.cpp;storage/ndb/src/kernel/blocks/dblqh/DblqhCommon.hpp;storage/ndb/src/kernel/blocks/dblqh/DblqhInit.cpp;storage/ndb/src/kernel/blocks/dblqh/DblqhMain.cpp;storage/ndb/src/kernel/blocks/dblqh/DblqhProxy.cpp;storage/ndb/src/kernel/blocks/dblqh/DblqhProxy.hpp;storage/ndb/src/kernel/blocks/dblqh/DblqhStateDesc.cpp;storage/ndb/src/kernel/blocks/dblqh/redoLogReader/reader.cpp;storage/ndb/src/kernel/blocks/dblqh/redoLogReader/records.cpp;storage/ndb/src/kernel/blocks/dblqh/redoLogReader/records.hpp;storage/ndb/src/kernel/blocks/dbspj/Dbspj.hpp;storage/ndb/src/kernel/blocks/dbspj/DbspjInit.cpp;storage/ndb/src/kernel/blocks/dbspj/DbspjMain.cpp;storage/ndb/src/kernel/blocks/dbspj/DbspjProxy.cpp;storage/ndb/src/kernel/blocks/dbspj/DbspjProxy.hpp;storage/ndb/src/kernel/blocks/dbtc/Dbtc.hpp;storage/ndb/src/kernel/blocks/dbtc/DbtcInit.cpp;storage/ndb/src/kernel/blocks/dbtc/DbtcMain.cpp;storage/ndb/src/kernel/blocks/dbtc/DbtcProxy.cpp;storage/ndb/src/kernel/blocks/dbtc/DbtcProxy.hpp;storage/ndb/src/kernel/blocks/dbtc/DbtcStateDesc.cpp;storage/ndb/src/kernel/blocks/dbtup/AttributeOffset.hpp;storage/ndb/src/kernel/blocks/dbtup/Dbtup.hpp;storage/ndb/src/kernel/blocks/dbtup/DbtupAbort.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupBuffer.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupClient.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupCommit.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupDebug.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupDiskAlloc.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupExecQuery.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupFixAlloc.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupGen.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupIndex.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupMeta.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupPagMan.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupPageMap.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupProxy.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupProxy.hpp;storage/ndb/src/kernel/blocks/dbtup/DbtupRoutines.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupScan.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupStoredProcDef.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupTabDesMan.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupTrigger.cpp;storage/ndb/src/kernel/blocks/dbtup/DbtupVarAlloc.cpp;storage/ndb/src/kernel/blocks/dbtup/Undo_buffer.cpp;storage/ndb/src/kernel/blocks/dbtup/Undo_buffer.hpp;storage/ndb/src/kernel/blocks/dbtup/test_varpage.cpp;storage/ndb/src/kernel/blocks/dbtup/tuppage.cpp;storage/ndb/src/kernel/blocks/dbtup/tuppage.hpp;storage/ndb/src/kernel/blocks/dbtux/Dbtux.hpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxBuild.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxCmp.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxDebug.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxGen.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxMaint.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxMeta.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxNode.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxProxy.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxProxy.hpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxScan.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxSearch.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxStat.cpp;storage/ndb/src/kernel/blocks/dbtux/DbtuxTree.cpp;storage/ndb/src/kernel/blocks/dbutil/DbUtil.cpp;storage/ndb/src/kernel/blocks/dbutil/DbUtil.hpp;storage/ndb/src/kernel/blocks/diskpage.cpp;storage/ndb/src/kernel/blocks/diskpage.hpp;storage/ndb/src/kernel/blocks/lgman.cpp;storage/ndb/src/kernel/blocks/lgman.hpp;storage/ndb/src/kernel/blocks/mutexes.hpp;storage/ndb/src/kernel/blocks/ndbcntr/Ndbcntr.hpp;storage/ndb/src/kernel/blocks/ndbcntr/NdbcntrInit.cpp;storage/ndb/src/kernel/blocks/ndbcntr/NdbcntrMain.cpp;storage/ndb/src/kernel/blocks/ndbcntr/NdbcntrSysTable.cpp;storage/ndb/src/kernel/blocks/ndbfs/AsyncFile.cpp;storage/ndb/src/kernel/blocks/ndbfs/AsyncFile.hpp;storage/ndb/src/kernel/blocks/ndbfs/AsyncFileTest/AsyncFileTest.cpp;storage/ndb/src/kernel/blocks/ndbfs/AsyncIoThread.cpp;storage/ndb/src/kernel/blocks/ndbfs/AsyncIoThread.hpp;storage/ndb/src/kernel/blocks/ndbfs/Filename.cpp;storage/ndb/src/kernel/blocks/ndbfs/Filename.hpp;storage/ndb/src/kernel/blocks/ndbfs/MemoryChannel.cpp;storage/ndb/src/kernel/blocks/ndbfs/MemoryChannel.hpp;storage/ndb/src/kernel/blocks/ndbfs/MemoryChannelTest/MemoryChannelTest.cpp;storage/ndb/src/kernel/blocks/ndbfs/Ndbfs.cpp;storage/ndb/src/kernel/blocks/ndbfs/Ndbfs.hpp;storage/ndb/src/kernel/blocks/ndbfs/OpenFiles.hpp;storage/ndb/src/kernel/blocks/ndbfs/Pool.hpp;storage/ndb/src/kernel/blocks/ndbfs/PosixAsyncFile.cpp;storage/ndb/src/kernel/blocks/ndbfs/PosixAsyncFile.hpp;storage/ndb/src/kernel/blocks/ndbfs/VoidFs.cpp;storage/ndb/src/kernel/blocks/ndbfs/Win32AsyncFile.cpp;storage/ndb/src/kernel/blocks/ndbfs/Win32AsyncFile.hpp;storage/ndb/src/kernel/blocks/pgman.cpp;storage/ndb/src/kernel/blocks/pgman.hpp;storage/ndb/src/kernel/blocks/print_file.cpp;storage/ndb/src/kernel/blocks/qmgr/Qmgr.hpp;storage/ndb/src/kernel/blocks/qmgr/QmgrInit.cpp;storage/ndb/src/kernel/blocks/qmgr/QmgrMain.cpp;storage/ndb/src/kernel/blocks/qmgr/timer.hpp;storage/ndb/src/kernel/blocks/record_types.hpp;storage/ndb/src/kernel/blocks/restore.cpp;storage/ndb/src/kernel/blocks/restore.hpp;storage/ndb/src/kernel/blocks/suma/Suma.cpp;storage/ndb/src/kernel/blocks/suma/Suma.hpp;storage/ndb/src/kernel/blocks/suma/SumaInit.cpp;storage/ndb/src/kernel/blocks/thrman.cpp;storage/ndb/src/kernel/blocks/thrman.hpp;storage/ndb/src/kernel/blocks/trix/Trix.cpp;storage/ndb/src/kernel/blocks/trix/Trix.hpp;storage/ndb/src/kernel/blocks/trpman.cpp;storage/ndb/src/kernel/blocks/trpman.hpp;storage/ndb/src/kernel/blocks/tsman.cpp;storage/ndb/src/kernel/blocks/tsman.hpp;storage/ndb/src/kernel/error/ErrorHandlingMacros.hpp;storage/ndb/src/kernel/error/ErrorReporter.cpp;storage/ndb/src/kernel/error/ErrorReporter.hpp;storage/ndb/src/kernel/error/TimeModule.cpp;storage/ndb/src/kernel/error/TimeModule.hpp;storage/ndb/src/kernel/main.cpp;storage/ndb/src/kernel/ndbd.cpp;storage/ndb/src/kernel/ndbd.hpp;storage/ndb/src/kernel/vm/ArenaPool.cpp;storage/ndb/src/kernel/vm/ArenaPool.hpp;storage/ndb/src/kernel/vm/Array.hpp;storage/ndb/src/kernel/vm/ArrayPool.hpp;storage/ndb/src/kernel/vm/CArray.hpp;storage/ndb/src/kernel/vm/Callback.hpp;storage/ndb/src/kernel/vm/ClusterConfiguration.cpp;storage/ndb/src/kernel/vm/ClusterConfiguration.hpp;storage/ndb/src/kernel/vm/Configuration.cpp;storage/ndb/src/kernel/vm/Configuration.hpp;storage/ndb/src/kernel/vm/CountingPool.cpp;storage/ndb/src/kernel/vm/CountingPool.hpp;storage/ndb/src/kernel/vm/CountingSemaphore.hpp;storage/ndb/src/kernel/vm/DLCHashTable.hpp;storage/ndb/src/kernel/vm/DLHashTable.hpp;storage/ndb/src/kernel/vm/DLHashTable2.hpp;storage/ndb/src/kernel/vm/DataBuffer.hpp;storage/ndb/src/kernel/vm/DataBuffer2.hpp;storage/ndb/src/kernel/vm/DynArr256.cpp;storage/ndb/src/kernel/vm/DynArr256.hpp;storage/ndb/src/kernel/vm/Emulator.cpp;storage/ndb/src/kernel/vm/Emulator.hpp;storage/ndb/src/kernel/vm/FastScheduler.cpp;storage/ndb/src/kernel/vm/FastScheduler.hpp;storage/ndb/src/kernel/vm/GlobalData.cpp;storage/ndb/src/kernel/vm/GlobalData.hpp;storage/ndb/src/kernel/vm/IntrusiveList.cpp;storage/ndb/src/kernel/vm/IntrusiveList.hpp;storage/ndb/src/kernel/vm/KeyDescriptor.hpp;storage/ndb/src/kernel/vm/KeyTable.hpp;storage/ndb/src/kernel/vm/KeyTable2.hpp;storage/ndb/src/kernel/vm/KeyTable2Ref.hpp;storage/ndb/src/kernel/vm/LHLevel.cpp;storage/ndb/src/kernel/vm/LHLevel.hpp;storage/ndb/src/kernel/vm/LinearPool.hpp;storage/ndb/src/kernel/vm/LockQueue.cpp;storage/ndb/src/kernel/vm/LockQueue.hpp;storage/ndb/src/kernel/vm/LongSignal.cpp;storage/ndb/src/kernel/vm/LongSignal.hpp;storage/ndb/src/kernel/vm/LongSignalImpl.hpp;storage/ndb/src/kernel/vm/LongSignal_mt.cpp;storage/ndb/src/kernel/vm/LongSignal_nonmt.cpp;storage/ndb/src/kernel/vm/Mutex.cpp;storage/ndb/src/kernel/vm/Mutex.hpp;storage/ndb/src/kernel/vm/NdbSeqLock.hpp;storage/ndb/src/kernel/vm/NdbdSuperPool.cpp;storage/ndb/src/kernel/vm/NdbdSuperPool.hpp;storage/ndb/src/kernel/vm/Ndbinfo.cpp;storage/ndb/src/kernel/vm/Ndbinfo.hpp;storage/ndb/src/kernel/vm/NdbinfoTables.cpp;storage/ndb/src/kernel/vm/Pool.cpp;storage/ndb/src/kernel/vm/Pool.hpp;storage/ndb/src/kernel/vm/Prio.hpp;storage/ndb/src/kernel/vm/RWPool.cpp;storage/ndb/src/kernel/vm/RWPool.hpp;storage/ndb/src/kernel/vm/RequestTracker.hpp;storage/ndb/src/kernel/vm/Rope.cpp;storage/ndb/src/kernel/vm/Rope.hpp;storage/ndb/src/kernel/vm/SafeCounter.cpp;storage/ndb/src/kernel/vm/SafeCounter.hpp;storage/ndb/src/kernel/vm/SafeMutex.cpp;storage/ndb/src/kernel/vm/SafeMutex.hpp;storage/ndb/src/kernel/vm/SectionReader.cpp;storage/ndb/src/kernel/vm/SectionReader.hpp;storage/ndb/src/kernel/vm/SignalCounter.hpp;storage/ndb/src/kernel/vm/SimBlockList.hpp;storage/ndb/src/kernel/vm/SimplePropertiesSection.cpp;storage/ndb/src/kernel/vm/SimplePropertiesSection_mt.cpp;storage/ndb/src/kernel/vm/SimplePropertiesSection_nonmt.cpp;storage/ndb/src/kernel/vm/SimulatedBlock.cpp;storage/ndb/src/kernel/vm/SimulatedBlock.hpp;storage/ndb/src/kernel/vm/SimulatedBlock_mt.cpp;storage/ndb/src/kernel/vm/SimulatedBlock_nonmt.cpp;storage/ndb/src/kernel/vm/SuperPool.cpp;storage/ndb/src/kernel/vm/SuperPool.hpp;storage/ndb/src/kernel/vm/ThreadConfig.cpp;storage/ndb/src/kernel/vm/ThreadConfig.hpp;storage/ndb/src/kernel/vm/TimeQueue.cpp;storage/ndb/src/kernel/vm/TimeQueue.hpp;storage/ndb/src/kernel/vm/TransporterCallback.cpp;storage/ndb/src/kernel/vm/TransporterCallbackKernel.hpp;storage/ndb/src/kernel/vm/TransporterCallback_mt.cpp;storage/ndb/src/kernel/vm/TransporterCallback_nonmt.cpp;storage/ndb/src/kernel/vm/VMSignal.cpp;storage/ndb/src/kernel/vm/VMSignal.hpp;storage/ndb/src/kernel/vm/WOPool.cpp;storage/ndb/src/kernel/vm/WOPool.hpp;storage/ndb/src/kernel/vm/WaitQueue.hpp;storage/ndb/src/kernel/vm/WatchDog.cpp;storage/ndb/src/kernel/vm/WatchDog.hpp;storage/ndb/src/kernel/vm/al_test/arrayListTest.cpp;storage/ndb/src/kernel/vm/al_test/arrayPoolTest.cpp;storage/ndb/src/kernel/vm/al_test/main.cpp;storage/ndb/src/kernel/vm/bench_pool.cpp;storage/ndb/src/kernel/vm/dummy_mt.cpp;storage/ndb/src/kernel/vm/dummy_nonmt.cpp;storage/ndb/src/kernel/vm/mt-lock.hpp;storage/ndb/src/kernel/vm/mt-send-t.cpp;storage/ndb/src/kernel/vm/mt.cpp;storage/ndb/src/kernel/vm/mt.hpp;storage/ndb/src/kernel/vm/mt_thr_config.cpp;storage/ndb/src/kernel/vm/mt_thr_config.hpp;storage/ndb/src/kernel/vm/ndbd_malloc.cpp;storage/ndb/src/kernel/vm/ndbd_malloc.hpp;storage/ndb/src/kernel/vm/ndbd_malloc_impl.cpp;storage/ndb/src/kernel/vm/ndbd_malloc_impl.hpp;storage/ndb/src/kernel/vm/pc.hpp;storage/ndb/src/kernel/vm/testCopy/rr.cpp;storage/ndb/src/kernel/vm/testCopy/testCopy.cpp;storage/ndb/src/kernel/vm/testDataBuffer/testDataBuffer.cpp;storage/ndb/src/kernel/vm/testLongSig/testLongSig.cpp;storage/ndb/src/kernel/vm/testSimplePropertiesSection/test.cpp;storage/ndb/src/kernel/vm/testSuperPool.cpp;storage/ndb/src/kernel/vm/test_context.cpp;storage/ndb/src/kernel/vm/test_context.hpp,,,,,4150,1204,5354,488
+mysql,00faad5b8a86762116f30038dbfd96c733244049,2019-05-16T13:28:47+02:00,62bf275e85d9f4df15074ec324a5fee7284fe0f3,"Bug#29739778 ASSERTION FAILED: MAYBE_NULL, IN ITEM_STR_FUNC::PUSH_PACKET_OVERFLOW_WARNING","Bug#29739778 ASSERTION FAILED: MAYBE_NULL, IN ITEM_STR_FUNC::PUSH_PACKET_OVERFLOW_WARNING
+
+Handle over/underflow when calculating the max length of a repeat(str, count)
+with constant count.
+
+Change-Id: I062d09741935ccf53b7c78ea3dd1d4fd863eaca7
+(cherry picked from commit 01c16af9231a8ba0410ee45977e1ac2543d11641)",29739778,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:29739778;keyword:bug,assert;strong_keyword:assert;issue_id:29739778;source_change;backport_or_cherry_pick;original_hash:29739778",True,29739778,False,True,crash,sql/item_strfunc.cc,sql/item_strfunc.cc,mysql-test/r/func_str.result;mysql-test/t/func_str.test,,,,35,2,37,3
+mysql,19afcdb529836a06fa572e22ae5ce5316805c8c7,2019-08-27T12:42:42+02:00,122b11062d7bd3054cc988160e2ba3745f9cb61b,Bug #30186874 DIFFERING ERROR FOR MAX_EXECUTION_TIME DEPENDING ON QUERY STAGE AT TERMINATION,"Bug #30186874 DIFFERING ERROR FOR MAX_EXECUTION_TIME DEPENDING ON QUERY STAGE AT TERMINATION
+
+When a query is terminated due to exceeding its maximum execution time
+specified using the MAX_EXECUTION_TIME hint, the error produced will differ
+depending on the query stage at termination. Most queries will produce
+ER_QUERY_TIMEOUT (3024), but if a query is terminated during filesort,
+ER_FILSORT_ABORT (1028) will be produced instead.
+
+This makes it unnecessarily harder to trap these errors and respond
+correctly.
+
+The fix is to remove the two special error codes ER_FILSORT_ABORT and
+ER_FILESORT_TERMINATED. filesort() is now a normal part of the
+execution engine, and query termination (timeout or killed) will be
+reported in the standard way.
+
+Change-Id: I6afdbf6937d2f260005b336b17f23c8125b275fb",30186874,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:abort;issue_id:30186874;keyword:fix,bug,abort;strong_keyword:abort;issue_id:30186874;source_change",False,,False,True,crash,sql/filesort.cc,sql/filesort.cc,mysql-test/r/filesort_debug.result;mysql-test/r/warnings.result;mysql-test/t/filesort_debug-master.opt;mysql-test/t/filesort_debug.test,share/errmsg-utf8.txt,,,2,97,99,6
+mysql,405c746e06799347097a3dd80a86deed3b883734,2017-05-15T23:04:33+02:00,515219849e21cabf32c61fe65c88fc5d3a004daa,"WL#10302: BUG#26076862: A table that was dropped and not properly dropped by DICT caused restore to crash, fixed by adding a drop case also to restore code such that all control files and data files are deleted if we find an LCP file from an old table version","WL#10302: BUG#26076862: A table that was dropped and not properly dropped by DICT caused restore to crash, fixed by adding a drop case also to restore code such that all control files and data files are deleted if we find an LCP file from an old table version",26076862,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:26076862;keyword:fix,bug,crash;strong_keyword:crash;issue_id:26076862;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/kernel/blocks/restore.cpp;storage/ndb/src/kernel/blocks/restore.hpp,,,,,26,2,28,2
+mysql,7704e3c2c200d479ced1c943efb9cf9575493091,2010-11-23T13:18:47+03:00,e1923f51e555b867f0069ac387b934c64c8b9810,"Bug#56862 Execution of a query that uses index merge returns a wrong result In case of low memory sort buffer QUICK_INDEX_MERGE_SELECT creates temporary file where is stores row ids which meet QUICK_SELECT ranges except of clustered pk range, clustered range is processed separately. In init_read_record we check if temporary file is used and choose appropriate record access method. It does not take into account that temporary file contains partial result in case of QUICK_INDEX_MERGE_SELECT with clustered pk range. The fix is always to use rr_quick if QUICK_INDEX_MERGE_SELECT with clustered pk range is used.","Bug#56862 Execution of a query that uses index merge returns a wrong result
+In case of low memory sort buffer QUICK_INDEX_MERGE_SELECT creates
+temporary file where is stores row ids which meet QUICK_SELECT ranges
+except of clustered pk range, clustered range is processed separately.
+In init_read_record we check if temporary file is used and choose
+appropriate record access method. It does not take into account that
+temporary file contains partial result in case of QUICK_INDEX_MERGE_SELECT
+with clustered pk range.
+The fix is always to use rr_quick if QUICK_INDEX_MERGE_SELECT
+with clustered pk range is used.",56862,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:wrong result;issue_id:56862;keyword:fix,bug,wrong result;strong_keyword:wrong result;issue_id:56862;source_change",False,,False,True,incorrect_result,sql/opt_range.h,sql/opt_range.h;sql/records.cc,mysql-test/suite/innodb/r/innodb_mysql.result;mysql-test/suite/innodb/t/innodb_mysql.test;mysql-test/suite/innodb_plugin/r/innodb_mysql.result;mysql-test/suite/innodb_plugin/t/innodb_mysql.test,,,,175,0,175,6
+mysql,b191c09fd18432a390cc5edcc6964ae371d5b3d7,2012-08-30T17:06:13+02:00,91221ea0315b36a94f7c3a7f41167f95aa9e22ec,Bug#14247298: Failing dbug_assert in Item_in_subquery::val_int(),"Bug#14247298: Failing dbug_assert in Item_in_subquery::val_int()
+
+Debug regression from WL#4443.
+
+Item_in_subselect::val_int() was called from get_mm_tree() when
+it only should be used in Item_in_optimizer.
+
+Fixed by skipping evaluation if item has subquery.",14247298,,True,high,8,"message_score=8.5;weak_fix_word;bug_word;regression_word;strong:assert;issue_id:14247298;keyword:fix,bug,assert,regression;strong_keyword:assert;issue_id:14247298;source_change",False,,False,False,crash,sql/opt_range.cc,sql/opt_range.cc,,,,,1,1,2,1
+mysql,f97dfa81a557d8f5b336ca65fd6c56079567205c,2014-08-25T16:25:07+02:00,97beafc532c8e45cb9c2f740c6f83d07c371194b,Bug #19471516 SERVER CRASHES WHEN EXECUTING ALTER TABLE ADD FOREIGN KEY,"Bug #19471516 SERVER CRASHES WHEN EXECUTING ALTER TABLE ADD FOREIGN KEY
+
+Problem:
+
+We maintain two rb trees in each dict_table_t.  The foreign_rbt must be in
+sync with foreign_list.  The referenced_rbt must be in sync with
+referenced_list. There is one function which checks this consistency and it
+failed, resulting in an assert failure.
+
+The root cause of the problem was identified that the search order was 
+lost in the referenced_rbt.  This is because while renaming the table,
+we didn't not refresh this referenced_rbt.
+
+Solution:
+
+When a foreign key is renamed, we must delete and re-insert into both
+foreign_rbt and referenced_rbt.  
+
+rb#6412 approved by Jimmy.",19471516,,True,high,8,"message_score=6.5;bug_word;strong:crash,assert;issue_id:19471516;keyword:bug,crash,assert;strong_keyword:crash,assert;issue_id:19471516;source_change",False,,False,True,crash,storage/innobase,storage/innobase/dict/dict0dict.c,mysql-test/suite/innodb/r/foreign-keys.result;mysql-test/suite/innodb/t/foreign-keys.test,,,,52,0,52,3
+mysql,3b5ef2eaea0d609b53ef2ccd6077208ac1bc1bfe,2024-03-02T07:11:30+00:00,aaf8e138b7e86c3e6cd1fea5b10e13442391a663,WL#16345 : Adding support for JSON modify functions,"WL#16345 : Adding support for JSON modify functions
+
+This commit adds Heatwave support for the JSON modify functions by
+implementing the follwoing MySQL commands:
+JSON_INSERT
+JSON_REMOVE
+JSON_REPLACE
+JSON_SET
+JSON_ARRAY_APPEND
+JSON_ARRAY_INSERT
+JSON_MERGE_PATCH
+
+Details on the above MySQL commands can be found here:
+https://dev.mysql.com/doc/refman/8.0/en/json-modification-
+functions.html
+
+A new MTR test is added to test all above commands.
+
+Additional changes:
+===================
+A fix for casting boolean literal values (true/false) to JSON has been
+included in this WL. This bug affected the commands CAST AS JSON,
+JSON_ARRAY, and JSON_OBJECT. Boolean literals where treated as INT
+values (1/0) instead of actual bollean values.
+
+An test for this fix is included in the above MTR test.
+
+Bug#36671948: ASAN rpdserver crash cast_as_json
+Bug#36672270: Assertion failure after cast_as_json
+Issue:
+=====
+The maximum number of bytes needed to convert a constant into JSON is
+miscalculated leading to writing out of bounds and corrupted output.
+Fix:
+===
+Calculate maximum number of bytes correctly.
+
+Change-Id: I372b6a6bb2dc7e75629a9e90a72b9188722ba69d",36671948;36672270,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash,assert;issue_id:36671948;36672270;keyword:fix,bug,crash,assert;strong_keyword:crash,assert;issue_id:36671948;36672270;source_change;original_hash:36671948",False,36671948,False,False,crash,sql-common,sql-common/json_binary.cc;sql-common/json_binary.h,,,,,19,20,39,2
+mysql,931e8ccfced56cc769201c539b1e25dcd23b23d3,2010-03-24T11:28:13+01:00,a282d78ea852ad64845aad6c79ea18a2fc8cc89c,ndb - bug#52325 - don't abort but handle errors in ndbcluster_find_all_databases,ndb - bug#52325 - don't abort but handle errors in ndbcluster_find_all_databases,52325,,True,high,7,"message_score=6.5;bug_word;strong:abort;issue_id:52325;keyword:bug,abort;strong_keyword:abort;issue_id:52325;source_change",False,,False,False,crash,sql/ha_ndbcluster_binlog.cc,sql/ha_ndbcluster_binlog.cc,,,,,21,5,26,1
+mysql,18cd61d0d0cd0cd6079bb14009dbbc791aa4c7a5,2004-06-24T15:06:56+02:00,8ff57ee4697c89f411d896cc87027b1381d8c2ee,bug#3565 - HANDLER and FLUSH TABLE/TABLES deadlock. Redesigned the handler close functions so that they are usable at different places where waiting for closing tables is done.,"bug#3565 - HANDLER and FLUSH TABLE/TABLES deadlock.
+Redesigned the handler close functions so that they are usable
+at different places where waiting for closing tables is done.",3565,,True,high,7,"message_score=6.5;bug_word;strong:deadlock;issue_id:3565;keyword:bug,deadlock;strong_keyword:deadlock;issue_id:3565;source_change",False,,False,True,concurrency,sql/mysql_priv.h,sql/mysql_priv.h;sql/sql_base.cc;sql/sql_handler.cc;sql/sql_table.cc,mysql-test/r/flush_table.result;mysql-test/t/flush_table.test,,,,398,40,438,6
+mysql,d07f47fdbe5c5fe8762ad44224de93b03fc7da33,2021-04-28T11:54:26+02:00,c2b72ef271bafcabc5bc66ad0f119149ecc5f4c1,Bug #32695103 ASSERTION `RC == TYPE_OK' FAILED|SQL/DD/IMPL/RAW/RAW_RECORD.CC,"Bug #32695103 ASSERTION `RC == TYPE_OK' FAILED|SQL/DD/IMPL/RAW/RAW_RECORD.CC
+
+The function make_unique_view_field_name() was documented to truncate
+generated column names. However, it relied on snprintf to do the
+truncation, and that does not work: It does not account for multibyte
+characters, and the 'size' argument to snprintf changed from 64 to 192
+at the time we switched to utf8mb3 as system character set.
+
+Add code to count the number of characters of the generated name in
+system character set, and truncate accordingly.
+
+Change-Id: I95dbde4d3daea21e267ad60e0e1db076f551f7db",32695103,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:32695103;keyword:bug,assert;strong_keyword:assert;issue_id:32695103;source_change",False,,False,True,crash,sql/sql_view.cc,sql/sql_view.cc,mysql-test/r/view_alias_bug32695103.result;mysql-test/t/view_alias_bug32695103.test,strings/CHARSET_INFO.txt,,,106,3,109,4
+mysql,71bd661b44ffd6bb36dac11a47f862324974fe4b,2020-05-07T12:16:08+02:00,07631816ad4a0931a9c0012d2ddb01471c54b6c7,Bug#31314958 NDB_LIMIT_DEFERRED_TRIGGERS DEADLOCK TIMEOUT,"Bug#31314958 NDB_LIMIT_DEFERRED_TRIGGERS DEADLOCK TIMEOUT
+
+The ndb_limit_deferred_triggers test executes update queries which are
+intended to heavily stress the job buffers in the NDB data nodes. While
+running these heavy queries on slower machines, the transaction deadlock
+timeout will be triggered causing the queries to fail.
+
+  CURRENT_TEST: ndb.ndb_limit_deferred_triggers
+  mysqltest: At line 95: Query 'reap' failed.
+  ERROR 1205 (HY000): Lock wait timeout exceeded; try restarting
+transaction
+
+Since test intentionally stressed the NDB data nodes towards its limits,
+the system need to be configured appropriately to handle the load also on
+slow machines. Increase the transaction deadlock detection timeout to
+make the configured system more resilient.
+
+Change-Id: I5853b68752fbe588cc451483d11012b7a92a8499",31314958,,False,low,4,"message_score=6.5;bug_word;strong:deadlock;issue_id:31314958;keyword:bug,deadlock;strong_keyword:deadlock;issue_id:31314958;regression_test_added;non_behavior_only",False,,True,True,concurrency,,,mysql-test/suite/ndb/t/ndb_limit_deferred_triggers.cnf,,,,1,0,1,1
+mysql,3cc8d0b99f6f5c21b1a55b6202ba6c13369cf88d,2025-03-31T18:46:40+02:00,97e9516fe98f8dc8b205db17c7488311fba78985,Bug#37125720 UBSAN issue reported for gcs_xcom_xcom_single_writer-t.cc,"Bug#37125720 UBSAN issue reported for gcs_xcom_xcom_single_writer-t.cc
+
+Running the gcs_xcom_xcom_single_writer unittest with ubsan enabled fails with:
+
+plugin/group_replication/libmysqlgcs/src/bindings/xcom/xcom/node_list.cc:90:17:
+runtime error: null pointer passed as argument 1, which is declared to never be null
+
+Fix ensures memcmp() is never called on nullptrs.
+
+Change-Id: I81d5781f8d62ad9f4b6cb0cf7acc2b705613f409",37125720,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:null pointer;issue_id:37125720;keyword:fix,bug,null pointer;strong_keyword:null pointer;issue_id:37125720;source_change",False,,False,False,crash,plugin,plugin/group_replication/libmysqlgcs/src/bindings/xcom/xcom/node_list.cc,,,,,2,1,3,1
+mysql,d96f91299d40c04601ef6ba58183eacc21793986,2023-10-12T09:07:59+02:00,d4ce6f1893a83a5112a8aa19574bb67dc28c7103,Bug#35686098 Assertion `n < size()' failed in Element_type& Mem_root_array_YY,"Bug#35686098 Assertion `n < size()' failed in Element_type& Mem_root_array_YY
+
+This patch fixes three issues
+
+     - For hashed set operations we compute the number of chunk files
+       as a multiple of two. If the statistics for the number of rows
+       in the left set operand is wrong (in this case it was -1), we
+       would get a calculated number of chunk files of zero. When the
+       bug report was made, this led to us not having any chunk files,
+       since the ceiling method used (to get multiple of two) returned
+       0 for 0 input.  This ceiling function has since been changed
+       (commit 88d716a - Bug#35813111: Use C++ standard library for
+       more bit operations [my_round_up_to_next_power, noclose]), so
+       we now get 1 on zero input, so we end up with just one chunk
+       file.  This makes the crash seen with the old optimizer go
+       away; we would quickly run out of space again and revert to
+       de-duplicating via tmp table index.  This is fixed by sanity
+       checking the number of rows estimate and making a wild guess at
+       the number of rows in the result set, currently set to 8 * rows
+       already in hash table when we overflow memory.
+
+     - The estimate of -1 for the windowed left operand is obviously
+       wrong, and we changed the code to propagate the number of rows
+       of the child table. The added tests shows new behavior for this
+       case.
+
+     - even if the estimate is not -1, but a reasonable number, fixing
+       the above saw another crash (using the repro for the hypergraph
+       given, but with old optimizer enabled): we ran out of space in
+       the dedicated hash table upon re-reading one of the on-disk
+       chunks into the hash table. If the estimate is too low, we may
+       end up in a situation where one of the chunks just barely fits
+       into the dedicated mem_root when processing the left
+       operand. Later, when processing operands 2..n we have to
+       re-read the chunks into the hash table in preparation for
+       matching with right operand rows. We asserted that this should
+       always succeed, since these rows already fit for the left
+       operand. However, the order in which the rows are entered into
+       the hash table for operand two will in general differ from that
+       of operand one. This will in general lead to different
+       fragmentation of the dedicated mem_root - notably if we have
+       blobs of different sizes as in the repro - and the chunk that
+       previously *just* fit, will may not fit this time around. In
+       the example we saw the last row in the chunk file not fit (row
+       #290 out of 290 rows in the chunk file).  We fix this by
+       falling back on the thread's main mem_root if this
+       happens. This should be very rare.  Note that in most cases if
+       the estimate is low too low, we would run out of space when
+       processing the left operand, and fall back on index based
+       de-duplication using tmp table.
+
+Change-Id: Ie2b299ff6f106df727866b3cd3631b7a273c1c9b",35686098;35813111,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:crash,assert;issue_id:35686098;35813111;keyword:fix,bug,crash,assert;strong_keyword:crash,assert;issue_id:35686098;35813111;source_change;regression_test_added;original_hash:35686098",False,35686098,False,True,crash,sql/iterators,sql/iterators/composite_iterators.cc;sql/iterators/composite_iterators.h;sql/join_optimizer/access_path.h,mysql-test/r/derived_condition_pushdown.result;mysql-test/r/explain_tree.result;mysql-test/r/query_expression-bugs.result;mysql-test/r/window_functions.result;mysql-test/std_data/t1_2cols.csv;mysql-test/t/query_expression-bugs.test;mysql-test/t/window_functions.test,,,,686,31,717,10
+mysql,81a16d3e8a9a8386b478aa35c88f3fd43a265fab,2018-05-04T12:30:39+02:00,c0bdefafcb523a48c53d890d4300489c9d2a2a21,WL#9638: Step 52 ---------------- Fixed a timer race condition that could cause crashes in debug mode. Made it clear in the comments that the time is not perfectly synchronised to ensure that it is known that this is a normal condition. Old behaviour that timer expires in this conditon is kept.,"WL#9638: Step 52
+----------------
+Fixed a timer race condition that could cause crashes
+in debug mode. Made it clear in the comments that the
+time is not perfectly synchronised to ensure that it
+is known that this is a normal condition. Old behaviour
+that timer expires in this conditon is kept.",,,True,high,6,"message_score=5.0;weak_fix_word;bug_word;strong:crash,race;keyword:fix,bug,crash,race;strong_keyword:crash,race;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/kernel/vm/mt.cpp,,,,,33,5,38,1
+mysql,850d89e3eb59431c761c262a46360b281768de3e,2013-05-02T13:46:00+03:00,c5346f9cf1a5e2fa32490ad09946b655c7a37b49,"wl#6244 bugXXW This patch fixes a problem with deferred TC triggers, the problem was that while these triggers where firering (i.e sending FIRE_TRIG_REQ) new operations is being added and these new operations could also be used to send FIRE_TRIG_REQ when infact they should strictly wait until next pre_commit_pass.","wl#6244 bugXXW
+This patch fixes a problem with deferred TC triggers,
+the problem was that while these triggers where firering
+(i.e sending FIRE_TRIG_REQ) new operations is being added
+and these new operations could also be used to send FIRE_TRIG_REQ
+when infact they should strictly wait until next pre_commit_pass.
+
+This is a quite rare race condition.
+The result of this was potential data corruption but more likely
+seemingly random crash(es).
+The fix changes so that sendFireTrigReq takes first/last operation as argument
+rather than just first.",,,True,high,6,"message_score=5.0;weak_fix_word;bug_word;strong:crash,race;keyword:fix,bug,crash,race;strong_keyword:crash,race;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/kernel/blocks/dbtc/Dbtc.hpp;storage/ndb/src/kernel/blocks/dbtc/DbtcMain.cpp,,,,,24,8,32,2
+mysql,8328b244f73b229d24348d4ba63d30fbbb55bbf0,2012-03-22T09:17:51+01:00,35e3afdde86a8d72c41d1905c05c550f15bfd6ef,Fix for BUG#13685026 ASSERTION CUR_SJ_INNER_TABLES == 0 IN OPTIMIZE_TABLE_ORDER::CHOOSE_TABLE_ORDER: cur_sj_inner_tables was not properly computed when the search depth is less than the number of tables.,"Fix for BUG#13685026 ASSERTION CUR_SJ_INNER_TABLES == 0 IN
+OPTIMIZE_TABLE_ORDER::CHOOSE_TABLE_ORDER:
+cur_sj_inner_tables was not properly computed when
+the search depth is less than the number of tables.",13685026,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:13685026;keyword:fix,bug,assert;strong_keyword:assert;issue_id:13685026;source_change",False,,False,True,crash,sql/sql_planner.cc,sql/sql_planner.cc;sql/sql_planner.h;sql/sql_select.h,mysql-test/include/subquery_sj.inc;mysql-test/r/subquery_sj_all.result;mysql-test/r/subquery_sj_all_bka.result;mysql-test/r/subquery_sj_all_bka_nixbnl.result;mysql-test/r/subquery_sj_all_bkaunique.result;mysql-test/r/subquery_sj_dupsweed.result;mysql-test/r/subquery_sj_dupsweed_bka.result;mysql-test/r/subquery_sj_dupsweed_bka_nixbnl.result;mysql-test/r/subquery_sj_dupsweed_bkaunique.result;mysql-test/r/subquery_sj_firstmatch.result;mysql-test/r/subquery_sj_firstmatch_bka.result;mysql-test/r/subquery_sj_firstmatch_bka_nixbnl.result;mysql-test/r/subquery_sj_firstmatch_bkaunique.result;mysql-test/r/subquery_sj_loosescan.result;mysql-test/r/subquery_sj_loosescan_bka.result;mysql-test/r/subquery_sj_loosescan_bka_nixbnl.result;mysql-test/r/subquery_sj_loosescan_bkaunique.result;mysql-test/r/subquery_sj_mat.result;mysql-test/r/subquery_sj_mat_bka.result;mysql-test/r/subquery_sj_mat_bka_nixbnl.result;mysql-test/r/subquery_sj_mat_bkaunique.result;mysql-test/r/subquery_sj_mat_nosj.result;mysql-test/r/subquery_sj_none.result;mysql-test/r/subquery_sj_none_bka.result;mysql-test/r/subquery_sj_none_bka_nixbnl.result;mysql-test/r/subquery_sj_none_bkaunique.result,,,,1676,89,1765,29
+mysql,d558c023993f228464b91af90506facee2f5ad0b,2008-06-11T10:23:36+02:00,761e908eff9a9e48da726d2d8f194950a9f1a7ef,ndb - bug#37279         Dont copy dropped subscriptions during node restart         cause it will cause starting node to crash,"ndb - bug#37279
+        Dont copy dropped subscriptions during node restart
+        cause it will cause starting node to crash",37279,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:37279;keyword:bug,crash;strong_keyword:crash;issue_id:37279;source_change",False,,False,True,crash,storage/ndb,storage/ndb/src/kernel/blocks/suma/Suma.cpp,storage/ndb/test/ndbapi/test_event.cpp;storage/ndb/test/run-test/daily-basic-tests.txt,storage/ndb/test/run-test/daily-basic-tests.txt,,,87,7,94,3
+mysql,c7f31d41d422987668451978ba9d72e2c93e0a6a,2009-11-25T17:32:04+01:00,2718aa5a29e8b29c5bb17f04bfafb092ddc0ab2a,Backport into build-200911241145-5.1.40sp1,"Backport into build-200911241145-5.1.40sp1
+
+> ------------------------------------------------------------
+> revno: 1810.3959.4
+> revision-id: ramil@mysql.com-20091021090408-208mvwwrcroi2j8c
+> parent: azundris@mysql.com-20091021033856-ydodp4q42o58e7ka
+> committer: Ramil Kalimullin <ramil@mysql.com>
+> branch nick: b47019-5.0-bugteam
+> timestamp: Wed 2009-10-21 14:04:08 +0500
+> message:
+>   Fix for bug#47019: Assertion failed: 0, file .\rt_mbr.c, 
+>   line 138 when forcing a spatial index
+>   
+>   Problem: ""Spatial indexes can be involved in the search 
+>   for queries that use a function such as MBRContains() 
+>   or MBRWithin() in the WHERE clause"".
+>   Using spatial indexes for JOINs with =, <=> etc.
+>   predicates is incorrect.
+>   
+>   Fix: disable spatial indexes for such queries.",47019,,True,high,8,"message_score=8.0;weak_fix_word;bug_word;backport_word;strong:assert;issue_id:47019;keyword:fix,bug,assert,backport;strong_keyword:assert;issue_id:47019;source_change;backport_or_cherry_pick;original_hash:200911241145",True,200911241145,False,True,crash,sql/sql_select.cc,sql/sql_select.cc,mysql-test/r/select.result;mysql-test/t/select.test,,,,46,1,47,3
+mysql,fe6eb9885b0face40e2df3fe51102d7962ff0c50,2015-07-08T14:51:09+02:00,e4e06287ff0dbd25102eb349fd7cebd217249e3e,Bug#21384048: ASSERTION FAILED: N >= 0 && N <= 308 IN               RAPIDJSON::INTERNAL::FASTPATH,"Bug#21384048: ASSERTION FAILED: N >= 0 && N <= 308 IN
+              RAPIDJSON::INTERNAL::FASTPATH
+
+An assertion was hit in rapidjson when parsing a JSON text that
+contained a floating point number with a large, negative exponent.
+
+The bug is fixed upstream in this bug report:
+https://github.com/miloyip/rapidjson/issues/313
+
+This patch applies the upstream fix to
+extra/rapidjson/include/rapidjson/reader.h.
+
+(cherry picked from commit 9392c553a046a6feb053dbd62649e33db8b41c2b)",21384048,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:21384048;keyword:fix,bug,assert;strong_keyword:assert;issue_id:21384048;source_change;backport_or_cherry_pick;original_hash:21384048",True,21384048,False,True,crash,extra,extra/rapidjson/include/rapidjson/reader.h,mysql-test/r/json.result;mysql-test/suite/gis/r/geojson_functions.result;mysql-test/suite/gis/t/geojson_functions.test;mysql-test/t/json.test,,,,99,8,107,6
+mysql,77ba8eb0127b31b53fd15b82c2e6a969eeabc684,2013-08-06T11:46:42+05:30,5160d01c21b884fbdd848f3d5cb2e0daa9803cb8,Bug #16862290 	ASSERT TRX->DICT_OPERATION_LOCK_MODE == 0,"Bug #16862290 	ASSERT TRX->DICT_OPERATION_LOCK_MODE == 0
+
+Problem:
+
+There is an assert in place to ensure that the dictionary operation lock
+is not taken recursively.  This assert was failing. 
+
+Solution:
+
+Added an if condition to ensure that the dictionary operation lock is
+not taken recursively. 
+
+rb#3015 approved by Kevin and Marko.",16862290,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:16862290;keyword:bug,assert;strong_keyword:assert;issue_id:16862290;source_change",False,,False,False,crash,storage/innobase,storage/innobase/row/row0mysql.cc,,,,,1,1,2,1
+mysql,3d680eb2abed42179319cff9bd26530f08316f89,2025-03-13T21:14:44+05:30,27d890619094b346c1bb7e941efd3004f0b8ffab,"Revert ""BUG#31360522 : >=5.6.36 SOME RANGE QUERIES STILL CRASH...""","Revert ""BUG#31360522 : >=5.6.36 SOME RANGE QUERIES STILL CRASH...""
+
+This reverts commit e86c8eaa8012de53d67f4489f6c3774abdc4cdc1.
+
+Change-Id: I1e7d58346e92ef2b36ec9dad5d8f4e6128a72c4b",31360522,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:31360522;keyword:bug,crash;strong_keyword:crash;issue_id:31360522;source_change;original_hash:31360522",False,31360522,False,False,crash,sql/sql_partition.cc,sql/sql_partition.cc;sql/table.cc,,,,,1,14,15,2
+mysql,dc6b9e2556bf247cda80670b824cb24b271946f2,2023-11-14T13:38:43+01:00,c816527be0dee74a7148d7181ce53103831b6a5a,Bug#35330950 Contribution: sql/memory: Fix build on musl,"Bug#35330950 Contribution: sql/memory: Fix build on musl
+
+Misc. fixes for Alpine Linux:
+ - disable build-id
+ - disable compiler option -ftls-model=initial-exec
+ - add missing include of libgen.h
+ - DNS resolver functions
+ - include <unistd.h> rather than <sys/unistd.h>
+ - include <sys/stat.h> to get definition of mode_t
+ - misc sysconf() macros are only available with __GLIBC__
+ - no backtrace/stacktrace on Alpine Linux
+ - disable the unit test for segfault
+
+The list of packages required or useful to build on Alpine:
+ - BOOST version boost_1_77_0
+ - bash
+ - bison
+ - build-base
+ - cmake
+ - curl-dev
+ - cyrus-sasl-dev
+ - cyrus-sasl-scram
+ - emacs
+ - gcc
+ - gcompat
+ - git
+ - git-review
+ - libaio
+ - libc6-compat
+ - libfido2-dev
+ - libnsl
+ - libpthread-stubs
+ - libtirpc
+ - libtirpc-dev
+ - libudev-zero-dev
+ - linux-headers
+ - ncurses-dev
+ - openldap-dev make
+ - openssl
+ - openssl-dev
+ - perl
+ - perl-app-cpanminus
+ - perl-dbi
+ - perl-dev
+ - perl-devel-checklib
+ - perl-expect
+ - perl-json
+ - protobuf-dev
+ - rpcgen
+ - zip
+
+Change-Id: Iec8fc1617eb3fece5152b9b2a1221da45510562d
+(cherry picked from commit 4cecfd91a6e8e1b29e835ca17e3da4c94065908f)",35330950,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:segfault,race;issue_id:35330950;keyword:fix,bug,segfault,race;strong_keyword:segfault,race;issue_id:35330950;source_change;regression_test_added;backport_or_cherry_pick;original_hash:35330950",True,35330950,False,True,crash,router,libmysql/dns_srv.cc;router/src/harness/include/mysql/harness/access_rights.h;router/src/router/include/mysqlrouter/utils.h;sql/memory/aligned_atomic.h;storage/ndb/src/common/portlib/ndb_stacktrace.cpp,unittest/gunit/CMakeLists.txt,CMakeLists.txt;unittest/gunit/CMakeLists.txt,CMakeLists.txt;cmake/build_configurations/compiler_options.cmake;unittest/gunit/CMakeLists.txt,,30,5,35,8
+mysql,9cb84f8466d9f51dc5444f8034a489957fed6fe4,2009-07-10T17:34:03+06:00,af1f8c6dd8389e76866b958626b562bad48681d1,Bug #45796: invalid memory reads and writes when altering merge             and base tables,"Bug #45796: invalid memory reads and writes when altering merge 
+            and base tables 
+
+myrg_attach_children() could reuse a buffer that was allocated 
+previously based on a definition of a child table. The problem 
+was that the child's definition might have been changed, so 
+reusing the buffer could lead to crashes or valgrind errors 
+under some circumstances. 
+ 
+Fixed by changing myrg_attach_children() so that the 
+rec_per_key_part buffer is reused only when the child table
+have not changed, and reallocated otherwise (the old buffer is 
+deallocated if necessary).",45796,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:45796;keyword:fix,bug,crash;strong_keyword:crash;issue_id:45796;source_change",False,,False,True,crash,storage/myisammrg,include/myisammrg.h;storage/myisammrg/ha_myisammrg.cc;storage/myisammrg/myrg_open.c,mysql-test/r/merge.result;mysql-test/t/merge.test,,,,52,8,60,5
+mysql,d5c44d543b06bfbada7f7ad30d6a4807941fab18,2012-06-01T12:14:06+05:30,c3b1ec5e074b834c8e3c6c38ce8ac81bb064f0af,Bug #14033490:ASSERT IN DIAGNOSTICS_AREA::SET_ERROR_STATUS FOR FEW EVENT TYPES APPLYING,"Bug #14033490:ASSERT IN DIAGNOSTICS_AREA::SET_ERROR_STATUS 
+FOR FEW EVENT TYPES APPLYING
+                  
+Problem:
+Error reporting in certain events like 'Create_file_log_event',
+'Execute_load_log_event' causes a debug assert to fail.
+
+Analysis:
+When an error is reported through my_error() function call,
+the assert expects 'thd->get_stmt_da()->m_status' 
+diagnostic variable to be 'DA_EMPTY'.
+But in the above events (thd->get_stmt_da())->m_status = DA_OK.
+During the start of each command the THD object needs to be
+reset so that the errors, flags and diagnostic variables
+that are set by the previous command are cleared.
+
+Fix: 
+Events like 'Create_file_log_event', 'Execute_load_log_event'
+must invoke 'mysql_reset_thd_for_next_command(thd)' call at
+the beginning of their event execution. This function is 
+responsible for resetting the THD; One of the many things it
+does is cleaning and resetting the Diagnostic area.",14033490,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:14033490;keyword:fix,bug,assert;strong_keyword:assert;issue_id:14033490;source_change",False,,False,False,crash,sql/log_event.cc,sql/log_event.cc,,,,,50,4,54,1
+mysql,43aac2d8f8fd0ebb8f3dc982412fa68576cf49e2,2018-05-09T13:15:58+02:00,b1197728badf9d40979097d1f22374ece08880f2,Bug#27992531 RUNTIME ERROR: CALL TO FUNCTION ... UDF_INIT,"Bug#27992531 RUNTIME ERROR: CALL TO FUNCTION ... UDF_INIT
+
+Fix function signatures to remove undefined behaviour as reported by clang/ubsan.
+
+Change-Id: I21e8dde9d533ef99d97f22fe11caf0ff9a765017",27992531,,True,high,6,"message_score=5.5;weak_fix_word;bug_word;reporter_reference;issue_id:27992531;keyword:fix,bug,reported by;issue_id:27992531;source_change",False,,False,False,bug_fix,plugin,plugin/keyring_udf/keyring_udf.cc;plugin/rewriter/rewriter_udf.cc;plugin/test_service_sql_api/test_session_attach.cc;plugin/udf_services/test_udf_services.cc;plugin/version_token/version_token.cc;plugin/x/src/udf/mysqlx_error.cc;sql/locking_service_udf.cc;sql/udf_example.cc,,,,,123,156,279,9
+mysql,3c7027bd0a3fca21b99c5132de7213cde93e9d3f,2019-11-13T10:53:52+01:00,14b3dd5015bcd53922762ddf801dff4a0ea1e824,Bug#30418070 Renaming the user table should be handled gracefully,"Bug#30418070 Renaming the user table should be handled gracefully
+
+The version checks on the mysql.user table didn't take the
+number of available fields in the table into account and
+this led to unfortunate memory address exploration.
+
+RB: 23362",30418070,,True,high,7,"message_score=6.5;bug_word;strong:race;issue_id:30418070;keyword:bug,race;strong_keyword:race;issue_id:30418070;source_change",False,,False,True,concurrency,sql/auth,sql/auth/auth_common.cc,mysql-test/suite/auth_sec/r/atomic_rename_user.result;mysql-test/suite/auth_sec/t/atomic_rename_user.test,,,,30,0,30,3
+mysql,4631c6839c5036ae9ba2a84a92119f8b8930ef35,2024-10-03T10:20:23+02:00,ecc1dd9a2893f69483f4849cc9d831b0160dcbb2,"Bug#36830296 : ""Unable to read page"" crash on innodb.dblwr_encrypt_recover","Bug#36830296 : ""Unable to read page"" crash on innodb.dblwr_encrypt_recover
+
+Symptom:
+  Test script fails sporadically with the error that table space for the table is not found.
+
+Cause:
+  Test case is to test the working for dblwr buffer. It
+  1 Stops the checkpointer
+  2 Inserts some rows in table (causing changes in pages in the tablespace)
+  3 These changes are REDO logged.
+  4 Kill the server
+  5 corrupt the pages manually
+  6 Restart the server. REDOs are applied (can't be truncated as checkpointer is stopped).
+  7 Read pages are corrupted, so dblwr copy is used.
+
+ To make the test work, the REDOS generated in step 3, MUST be flushed to disk. If they are not (the failure case)
+ during REDO recovery, corresponding pages are not read. So innodb doesn't know that the pages are corrupted. And
+ later when the pages are read, they are found corrupted and InnoDB error out saying page can't be read.
+
+Fix:
+ Make sure the REDOs generated in step 3 are flushed to disk
+
+Change-Id: I9021db62b01e0be56b921a99d5a4bf185fff7956",36830296,,False,low,5,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:36830296;keyword:fix,bug,crash;strong_keyword:crash;issue_id:36830296;regression_test_added;non_behavior_only",False,,True,True,crash,,,mysql-test/suite/innodb/r/dblwr_encrypt_recover.result;mysql-test/suite/innodb/t/dblwr_encrypt_recover.test,,,,12,14,26,2
+mysql,8a2ef0a2cad2ace46ce1224c6733d36bcd5982d5,2004-11-15T21:26:16+04:00,b7cfe5ecad5d224fe9fcc36a1241ea9864533ce6,"Bug#6608: MySQL server crash in some query with tis620 character set. The bug was that the function allocates 'a', then changes the value of 'a' with the operator ++, and then tries to free 'a'!","Bug#6608: MySQL server crash in some query with tis620 character set.
+The bug was that the function allocates 'a', then changes the value
+of 'a' with the operator ++, and then tries to free 'a'!",6608,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:6608;keyword:bug,crash;strong_keyword:crash;issue_id:6608;source_change",False,,False,True,crash,strings,strings/ctype-tis620.c,mysql-test/r/ctype_tis620.result;mysql-test/t/ctype_tis620.test,,,,76,7,83,3
+mysql,fe0037b996d5c0d816e329b9151517903550976f,2010-06-08T15:26:45+03:00,570a4ae8fefc6c2acdc6e6c25b82953ba4ed16c0,Merge a change from mysql-5.1-innodb: ------------------------------------------------------------ revno: 3503 revision-id: marko.makela@oracle.com-20100608121041-l7t9r6lrpx6lh361 parent: marko.makela@oracle.com-20100608114055-7b04ytuqz0lde6v1 committer: Marko Mäkelä <marko.makela@oracle.com> branch nick: 5.1-innodb timestamp: Tue 2010-06-08 15:10:41 +0300 message:   Bug#54009: Server crashes when data is selected from non backed up table   for InnoDB plugin,"Merge a change from mysql-5.1-innodb:
+------------------------------------------------------------
+revno: 3503
+revision-id: marko.makela@oracle.com-20100608121041-l7t9r6lrpx6lh361
+parent: marko.makela@oracle.com-20100608114055-7b04ytuqz0lde6v1
+committer: Marko Mäkelä <marko.makela@oracle.com>
+branch nick: 5.1-innodb
+timestamp: Tue 2010-06-08 15:10:41 +0300
+message:
+  Bug#54009: Server crashes when data is selected from non backed up table
+  for InnoDB plugin
+
+  dict_load_table(): Pass the correct tablespace flags to
+  fil_open_single_table_tablespace(). For ROW_FORMAT=COMPACT and REDUNDANT,
+  the tablespace flags are 0. The table flags would be 0 or DICT_TF_COMPACT.",54009,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:54009;keyword:bug,crash;strong_keyword:crash;issue_id:54009;source_change;original_hash:20100608121041",False,20100608121041,False,False,crash,storage/innobase,storage/innobase/dict/dict0load.c,,,,,1,0,1,1
+mysql,b7abcb88afc7b7aa8dc335dc3e6d3748ef66d3f7,2021-01-26T10:31:58+01:00,5ba4ba78b00a249acf38eb13d6140eb4d038efce,"Bug#31578783: ASSERTION ""TABLE_FUNCTION_JSON..PRINT""","Bug#31578783: ASSERTION ""TABLE_FUNCTION_JSON..PRINT""
+
+A JSON_TABLE expression could in some cases be attempted written to
+the optimizer trace before the temporary table backing the table
+function had been created. This would fail while attempting to access
+the Field objects of the non-existent temporary table.
+
+It is fixed by printing ""<column type not resolved yet>"" instead of
+the actual column type when the type information is not yet available.
+
+Change-Id: I00668aae55ce8f637112c3e1e38f4e3894af8ae9",31578783,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert,race;issue_id:31578783;keyword:fix,bug,assert,race;strong_keyword:assert,race;issue_id:31578783;source_change",False,,False,False,crash,sql/table_function.cc,sql/table_function.cc,,,,,26,14,40,1
+mysql,d3a7ef991382f41f8d71f83b13280e87fad1b73a,2010-08-18T14:01:10+03:00,ae55711efa4984021fe246b90d5ca1a04c94797d,Bug#55626: MIN and MAX reading a delete-marked record from secondary index,"Bug#55626: MIN and MAX reading a delete-marked record from secondary index
+
+Remove a bogus debug assertion that triggered the bug.
+Add assertions precisely where records must not be delete-marked.
+And a comment to clarify when the record is allowed to be delete-marked.",55626,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:55626;keyword:bug,assert;strong_keyword:assert;issue_id:55626;source_change",False,,False,False,crash,storage/innodb_plugin,storage/innodb_plugin/row/row0sel.c,,,,,12,3,15,1
+mysql,65aa8e727c8124e84bc745157146ff6c74948868,2019-03-21T10:32:32+01:00,1b6f18099f9137340cf544f81498b976bc097cac,Bug #29514504: WRONG RESULT WITH CORRELATED LATERAL JOIN,"Bug #29514504: WRONG RESULT WITH CORRELATED LATERAL JOIN
+
+Fix an issue with derived tables with aggregation, where the aggregation
+gets zero input rows; it would not properly copy the results of the
+aggregate functions into the temporary table.
+
+This would normally be fine, as the default value would be a good one,
+but not if the derived table was evaluated multiple times (e.g. LATERAL).
+
+Change-Id: I447ee454f89d8fcc8894c54c1fc679c27e28dddb",29514504,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:wrong result;issue_id:29514504;keyword:fix,bug,wrong result;strong_keyword:wrong result;issue_id:29514504;source_change",False,,False,True,incorrect_result,sql/composite_iterators.cc,sql/composite_iterators.cc,mysql-test/r/derived_correlated.result;mysql-test/t/derived_correlated.test,,,,40,0,40,3
+mysql,3f2da00e8ea890031f98513f607b53b9ad800efd,2007-06-26T16:54:07+00:00,4b325712b3d4408315d16e03b3ab0855b4a03af6,Bug#23710,"Bug#23710
+
+At InnoDB startup consider the case where log scan went beyond checkpoint_lsn as a crash and initiate crash recovery code path.
+
+reviewed by: Heikki",23710,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:23710;keyword:bug,crash;strong_keyword:crash;issue_id:23710;source_change",False,,False,False,crash,log,log/log0recv.c,,,,,147,100,247,1
+mysql,000f3453b4e60b667b6caa3139af801af0771b23,2023-10-18T13:13:40+02:00,12259915b62a1c1d40916057df78c606b376c6ce,Bug#35115601 InnoDB - Page [...] still fixed or dirty crash during shutdown,"Bug#35115601 InnoDB - Page [...] still fixed or dirty crash during shutdown
+
+Post-push fix to update test files and result files which changed
+as the error message was moved from 8.1 section to 8.0 sections
+
+Change-Id: Ib3f267d07a4565b9f4e92a85f332886d93a04df1",35115601,,False,low,5,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:35115601;keyword:fix,bug,crash;strong_keyword:crash;issue_id:35115601;regression_test_added;non_behavior_only",False,,True,True,crash,,,mysql-test/suite/group_replication/t/gr_acf_ps_query_fail.test;mysql-test/suite/group_replication/t/gr_acf_select_access_error.test;mysql-test/suite/innodb/r/tablespace_first_page_unrecoverable.result,,,,4,4,8,3
+mysql,47a5c451ca53c8a4ce67e6ac71537e0d536e1bbd,2005-09-13T17:06:14+02:00,78bae01281a69a318c6df244cc803ddce61f990b,"BUG#12526 yassl: Crashes in ""integer.cpp"" - Avoid problem with  ""Sun C++ 5.6 2004/07/15""","BUG#12526 yassl: Crashes in ""integer.cpp""
+- Avoid problem with  ""Sun C++ 5.6 2004/07/15""",12526,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:12526;keyword:bug,crash;strong_keyword:crash;issue_id:12526;source_change",False,,False,False,crash,extra,extra/yassl/taocrypt/src/integer.cpp,,,,,4,4,8,1
+mysql,9c12f8ab8f1282f6cbe0d4a8a20f283deda541a0,2012-05-17T19:56:06+10:00,6022f204a96d0c95cf7c2356d8670ccf5d60acf2,WL#5522 - BUG#14084530 - WL5522 - ASSERT FAILURE IN BTR0CUR.CC:916 DURING IMPORT TABLESPACE,"WL#5522 - BUG#14084530 - WL5522 - ASSERT FAILURE IN BTR0CUR.CC:916 DURING IMPORT TABLESPACE
+
+Stamp the index id on the index pages even if they are empty.",14084530,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:14084530;keyword:bug,assert;strong_keyword:assert;issue_id:14084530;source_change",False,,False,True,crash,storage/innobase,storage/innobase/row/row0import.cc,mysql-test/suite/innodb/r/innodb-bug-14084530.result;mysql-test/suite/innodb/t/innodb-bug-14084530.test,,,,93,8,101,3
+mysql,dff0645a83c18ef75edbbc58ee785a6e63c6b6b6,2023-05-15T11:02:59+00:00,168cdc89843f884262e75f183b0866843b3df9dc,BUG#35361668: Fix error reporting when secondary load thread is killed,"BUG#35361668: Fix error reporting when secondary load thread is killed
+
+If an ongoing secondary load DDL is interrupted by the client using
+CTRL+C or KILL QUERY command, then based on the stage at which the DDL
+was before the interruption, it may throw different errors to the user.
+
+For example, if DDL is aborted before secondary engine operation is
+completed, then it returns ER_QUERY_INTERRUPTED; However, if the DDL
+is aborted after secondary engine action is finished but before it
+reaches commit phase, then it returns ER_RUN_HOOK_ERROR; Additionally,
+for latter case, an error message with severity 'ERROR' is added to
+the mysqld error log saying 'transaction commit failed'. This error
+message causes confusion to MTR tests as they don't expect an 'error'
+message in case of intentional interruption.
+
+In this commit, we change the message being reported in the errorlog.
+If thread was killed intentionally, we log a message with severity
+'SYSTEM' saying 'query aborted before commit'.
+Otherwise, if commit failed for some other reasons, we log an error
+message with severity 'ERROR' saying 'transaction commit failed'.
+
+This commit is not changing the error message that the mysql client
+(and thus the user) gets when the DDL fails or is aborted by user.
+
+When LOAD aborts from secondary engine, it gets ER_QUERY_INTERRUPTED;
+When LOAD aborts from transaction commit, it gets ER_RUN_HOOK_ERROR;
+
+New test is added to validate the behavior.
+
+Change-Id: Ifdf04b4c071a7cf851098ffdb6480bb4031d22ce",35361668,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:abort;issue_id:35361668;keyword:fix,bug,abort;strong_keyword:abort;issue_id:35361668;source_change;original_hash:35361668",False,35361668,False,False,crash,sql/sql_table.cc,sql/sql_table.cc,,,,,9,3,12,1
+mysql,359162328daa5ad130f0436522e3110cecdcc6bf,2023-04-21T02:50:29+01:00,f04e08d1bee13c36736a6581dde9563c75fad759,Bug#34836463 Data node should print stack trace only for software error cases Bug#34629622 Stack trace shown twice when data node process receives unix signal,"Bug#34836463 Data node should print stack trace only for software error cases
+Bug#34629622 Stack trace shown twice when data node process receives unix signal
+
+When a data node is shut down with an error it is produced a stack
+trace on stdout. This can result in a stack trace being generated
+for normal 'controlled exit with error' cases, and this gives
+the impression of a crash, requiring a bug report, follow up etc.
+
+To prevent these situations in this patch the stack trace generating
+code is refined to produce stack traces only in unexpected situations.
+In the code the 'unexpected situations' are called as software
+error.
+Currently only the errors with ndbd_exit_classification XIE
+(internal_error) are considered as 'software error'.
+
+This patch also prevents the stack trace to be shown twice when data
+node process receives unix signal. (Bug#34629622)
+In ErrorReporter::handleError(), for the NDBD_EXIT_OS_SIGNAL_RECEIVED
+error code, although it is a software error (ndbd_exit_classification
+XIE), stack trace is not printed because it is already done in the
+Unix signal handler case.
+
+Change-Id: Ia7c0afa2c1093ae74b12a09824e1c3de88125d3f",34629622;34836463,,True,high,8,"message_score=6.5;bug_word;strong:crash,race;issue_id:34629622;34836463;keyword:bug,crash,race;strong_keyword:crash,race;issue_id:34629622;34836463;source_change",False,,False,False,crash,storage/ndb,storage/ndb/include/mgmapi/ndbd_exit_codes.h;storage/ndb/src/kernel/error/ErrorReporter.cpp;storage/ndb/src/mgmapi/ndbd_exit_codes.cpp,,,,,39,1,40,3
+mysql,5203d9bb98bc4696b916317045216de1ee55c663,2012-04-19T14:57:34+05:30,adb352ca3e950666c0fb5ea7ce395886efa61db2,BUG#12427262 : 60961: SHOW TABLES VERY SLOW WHEN NOT IN SYSTEM DISK CACHE,"BUG#12427262 : 60961: SHOW TABLES VERY SLOW WHEN NOT IN SYSTEM DISK CACHE
+
+Reason:
+ This is a regression happened because of changes done in code refactoring 
+ in 5.1 from 5.0.
+
+Issue: 
+ While doing ""Show tables"" lex->verbose was being checked to avoid opening
+ FRM files to get table type. In case of ""Show full table"", lex->verbose
+ is true to indicate table type is required. In 5.0, this check was
+ present which got missing in >=5.5.
+
+Fix:
+ Added the required check to avoid opening FRM files unnecessarily in case
+ of ""Show tables"".",12427262,,True,high,6,"message_score=5.5;weak_fix_word;bug_word;regression_word;issue_id:12427262;keyword:fix,bug,regression;issue_id:12427262;source_change",False,,False,False,bug_fix,sql/sql_show.cc,sql/sql_show.cc,,,,,35,29,64,1
+mysql,824dd7e714f156465d7ac9ccfed3ddab51a090d2,2015-07-08T18:56:59+08:00,05b526176658e227048d957d2e7f7210d4eb5d2f,Bug#21374258 - INNODB: ASSERTION FAILURE IN THREAD 140507082643200 IN FILE ROW0PURGE.CC,"Bug#21374258 - INNODB: ASSERTION FAILURE IN THREAD 140507082643200 IN
+FILE ROW0PURGE.CC
+
+reviewed by: Bin Su <bin.su@oracle.com>
+rb:9555
+
+(cherry picked from commit cf0b98d9726a2c9c5f797247247fa87362c18033)",21374258,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:21374258;keyword:bug,assert;strong_keyword:assert;issue_id:21374258;source_change;backport_or_cherry_pick;original_hash:21374258",True,21374258,False,False,crash,storage/innobase,storage/innobase/include/trx0rec.h;storage/innobase/row/row0row.cc;storage/innobase/row/row0vers.cc;storage/innobase/trx/trx0rec.cc,,,,,189,84,273,4
+mysql,6e31ad3b15973c568372a1ee86404f83af0ef4ad,2011-08-26T09:06:35+02:00,4170a56b0985df7c5b4649d1c15e8275522075c8,"Bug#12744991 - DECIMAL_ROUND(X,D) GIVES WRONG RESULTS WHEN D == N*(-9)","Bug#12744991 - DECIMAL_ROUND(X,D) GIVES WRONG RESULTS WHEN D == N*(-9)",12744991,,True,high,7,"message_score=6.5;bug_word;strong:wrong result;issue_id:12744991;keyword:bug,wrong result;strong_keyword:wrong result;issue_id:12744991;source_change",False,,False,True,incorrect_result,strings,strings/decimal.c,mysql-test/r/func_math.result;mysql-test/t/func_math.test;unittest/gunit/CMakeLists.txt;unittest/gunit/decimal-t.cc,unittest/gunit/CMakeLists.txt,unittest/gunit/CMakeLists.txt,,896,731,1627,5
+mysql,37280829815ee647ea9c57bb6f8a67026a84eed0,2020-02-04T16:29:03+01:00,2a09b06408d7fe2593bf0a212022277cab6f96fd,Bug #28956360: CRASH WHEN CALLING MYSQL_REAL_CONNECT() IN LOOP,"Bug #28956360: CRASH WHEN CALLING MYSQL_REAL_CONNECT() IN LOOP
+
+When loading a character set from Index.xml that was marked as “compiled”,
+we would overwrite the “name” entry in the character set information struct
+with a newly allocated copy of the name, in case the character set wasn't
+actually compiled in (which used to be supported a long time ago). This would
+cause a use-after-free if deinitializing (which would free the memory) and then
+initializing again.
+
+Fix by not allowing overwriting of internal collations; it doesn't make
+any sense to replace e.g. latin1 or binary anyway. In the process, we import
+all the descriptions from the XML file (this means we could probably take out
+the collations from the file, but that's outside the scope of this bug fix).
+
+Change-Id: Ifda525557906fe44e65e4532a881deeac390f4f0",28956360,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash,use-after-free;issue_id:28956360;keyword:fix,bug,crash,use-after-free;strong_keyword:crash,use-after-free;issue_id:28956360;source_change",False,,False,False,crash,strings,mysys/charset.cc;strings/ctype-big5.cc;strings/ctype-bin.cc;strings/ctype-cp932.cc;strings/ctype-czech.cc;strings/ctype-euc_kr.cc;strings/ctype-eucjpms.cc;strings/ctype-extra.cc;strings/ctype-gb18030.cc;strings/ctype-gb2312.cc;strings/ctype-gbk.cc;strings/ctype-latin1.cc;strings/ctype-sjis.cc;strings/ctype-tis620.cc;strings/ctype-uca.cc;strings/ctype-ucs2.cc;strings/ctype-ujis.cc;strings/ctype-utf8.cc;strings/ctype-win1250ch.cc,,,,,455,452,907,19
+mysql,5956241859975f1057db1f54d8965713cd63f697,2011-03-03T15:04:04+03:00,0c396e8fda65177a3abe9b01abcb8618e6592994,BUG#11766519 (bug#59648): MY_STRTOLL10_MB2: ASSERTION `(*ENDPTR - S) % 2 == 0' FAILED,"BUG#11766519 (bug#59648): MY_STRTOLL10_MB2: ASSERTION `(*ENDPTR - S) % 2 == 0' FAILED
+      
+Problem: wrong character set pointer was passed to my_strtoll10_mb2,
+which led to DBUG_ASSERT failure in some cases.
+
+  @ mysql-test/r/func_encrypt_ucs2.result
+  @ mysql-test/t/func_encrypt_ucs2.test
+  @ mysql-test/r/ctype_ucs.result
+  @ mysql-test/t/ctype_ucs.test
+  Adding tests
+
+  @ sql/item_func.cc
+  ""cs"" initialization was wrong (res does not necessarily point to &str_value)
+
+  @ sql/item_strfunc.cc
+  Item_func_dec_encrypt::val_str() and Item_func_des_descrypt::val_str()
+  did not set character set for tmp_value (the returned value),
+  so the old value, which was previously copied from args[1]->val_str(),
+  was incorrectly returned with tmp_value.",11766519;59648,,True,high,8,"message_score=6.5;bug_word;strong:assert;issue_id:11766519;59648;keyword:bug,assert;strong_keyword:assert;issue_id:11766519;59648;source_change;regression_test_added",False,,False,True,crash,sql/item_func.cc,sql/item_func.cc;sql/item_strfunc.cc,mysql-test/r/ctype_ucs.result;mysql-test/r/func_encrypt_ucs2.result;mysql-test/t/ctype_ucs.test;mysql-test/t/func_encrypt_ucs2.test,,,,45,1,46,6
+mysql,0e9b910d6b7442a42f2aea0a0043327fff44b267,2010-07-02T19:21:07+04:00,4e2a2bc93e0da353aa1a3dcc9259f4d31a5aab54,"A test case for Bug#50788 ""main.merge fails on HPUX"", and a backport of relevant changes from the 6.0 version of the fix done by Ingo Struewing. The bug itself was fixed by the patch for Bug#54811.","A test case for Bug#50788 ""main.merge fails on HPUX"",
+and a backport of relevant changes from the 6.0
+version of the fix done by Ingo Struewing.
+The bug itself was fixed by the patch for Bug#54811.
+
+
+MyISAMMRG engine would try to use MMAP on its children
+even on platforms that don't support it and even if
+myisam_use_mmap option was off.
+This lead to an infinite hang in INSERT ... SELECT into 
+a MyISAMMRG table when the destination MyISAM table
+was also selected from.
+
+A bug in duplicate detection fixed by 54811 was essential to 
+the hang - when a duplicate is detected, the optimizer 
+disables the use of memory mapped files, and it wasn't the case.
+
+The patch below is also to not turn on MMAP on children tables
+if myisam_use_mmap is off.
+A test case is added to cover MyISAMMRG and myisam_use_mmap
+option.",50788;54811,,True,high,7,"message_score=5.0;weak_fix_word;bug_word;backport_word;issue_id:50788;54811;keyword:fix,bug,backport;issue_id:50788;54811;source_change;regression_test_added;backport_or_cherry_pick",True,,False,True,bug_fix,storage/myisam,storage/myisam/mi_statrec.c;storage/myisammrg/ha_myisammrg.cc,mysql-test/r/merge_mmap.result;mysql-test/t/merge_mmap-master.opt;mysql-test/t/merge_mmap.test,,,,138,2,140,5
+mysql,4896c9e59bf62c2235d8fa90d0821f6f36d94f95,2012-08-24T22:35:07+08:00,2c0c2cd64455a5ee9c70fa608b1d7fcc288013a9,Fix Bug #14527245 - ASSERT MUTEX_OWN(&DICT_SYS->MUTEX) DICT_TABLE_MOVE_FROM_LRU_TO_NON_LRU FTS,"Fix Bug #14527245 - ASSERT MUTEX_OWN(&DICT_SYS->MUTEX) 
+DICT_TABLE_MOVE_FROM_LRU_TO_NON_LRU FTS
+
+rb://1243 approved by Sunny Bains",14527245,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:14527245;keyword:fix,bug,assert;strong_keyword:assert;issue_id:14527245;source_change",False,,False,False,crash,storage/innobase,storage/innobase/fts/fts0fts.cc;storage/innobase/include/ut0vec.ic,,,,,16,6,22,2
+mysql,140cd7aa6ef72a7af04fda9a1f7cd8b51c795017,2021-06-25T14:52:36+02:00,e2464c49c1241071b449b5313832b6982341ec23,"WL #14454: Lift 64-predicate restriction in hypergraph optimizer [patch 3/3, bugfix]","WL #14454: Lift 64-predicate restriction in hypergraph optimizer [patch 3/3, bugfix]
+
+Fix an issue where ExpandSingleFilterAccessPath() would clear
+applied_sargable_join_predicates inadvertently (which could be a problem
+if it were called during join planning, which could only happen is
+materialize_subqueries was true). This was a preexisting bug, but was
+caught by a new assertion.
+
+Change-Id: Iabcf1b306c57c00627111b4657722dc0390b84a2",,,True,high,6,"message_score=5.0;weak_fix_word;bug_word;strong:assert;keyword:fix,bug,assert;strong_keyword:assert;source_change",False,,False,True,crash,sql/join_optimizer,sql/join_optimizer/access_path.cc,mysql-test/r/join.result;mysql-test/t/join.test,,,,25,1,26,3
+mysql,65bdafda29864697100260e4726b90166b122050,2010-07-08T14:36:10+02:00,37caf28c83c642b631bf5cbfdad8ebd85f9ae3fe,"backport of guilhem@mysql.com-20100628140739-i9vy8ugxp1v5aspb from next-mr-bugfixing: BUG#54682 ""set sql_select_limit=0 does not work""; let SQL_SELECT_LIMIT=0 work like it does in 5.1.","backport of guilhem@mysql.com-20100628140739-i9vy8ugxp1v5aspb
+from next-mr-bugfixing:
+BUG#54682 ""set sql_select_limit=0 does not work""; let SQL_SELECT_LIMIT=0
+work like it does in 5.1.",54682,,True,high,6,"message_score=5.0;weak_fix_word;bug_word;backport_word;issue_id:54682;keyword:fix,bug,backport;issue_id:54682;source_change;backport_or_cherry_pick;original_hash:20100628140739",True,20100628140739,False,True,bug_fix,sql/sys_vars.cc,sql/sys_vars.cc,mysql-test/suite/sys_vars/r/sql_select_limit_func.result;mysql-test/suite/sys_vars/t/sql_select_limit_func.test,,,,19,1,20,3
+mysql,4c9af559086d5094673e2c10812de8080418c30f,2007-06-12T08:47:36-04:00,3ab51acf6abb012db1abc7718267141b6faaf5f4,Bug#28984: crasher on connect with out of range password length in \ 	protocol,"Bug#28984: crasher on connect with out of range password length in \
+	protocol
+
+Fixed duplicated code, same as last commit.
+
+One could send a malformed packet that caused the server to SEGV.  In 
+recent versions of the password protocol, the client tells the server 
+what length the ciphertext is (almost always 20).  If that length was
+large enough to overflow a signed char, then the number would jump to 
+very large after being casted to unsigned int.
+
+Instead, cast the *passwd char to uchar.",28984,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:28984;keyword:fix,bug,crash;strong_keyword:crash;issue_id:28984;source_change",False,,False,False,crash,sql/sql_parse.cc,sql/sql_parse.cc,,,,,4,1,5,1
+mysql,d6e33165d65d48cacfadd6ebddf2dedbe451d773,2017-06-06T13:04:17+02:00,2a05d3fb5187a2a6cbd77d5774756700edf5c8c7,"BUG#26198089: Added ndbrequire such that we crash instead of hang when a node fails to set activeTakeOver variable correctly, this will assist in finding bug around this code","BUG#26198089: Added ndbrequire such that we crash instead of hang when a node fails to set activeTakeOver variable correctly, this will assist in finding bug around this code",26198089,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:26198089;keyword:bug,crash;strong_keyword:crash;issue_id:26198089;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/kernel/blocks/dbdih/DbdihMain.cpp,,,,,37,1,38,1
+mysql,3861b6b07aa49e7153d70c1856f0014d6d9579c3,2024-11-26T01:09:56+00:00,05a3da262c164bef036bad341d764ed74a37db2f,Bug#37300558 segmentation fault in Ndb_cluster_connection Dtor,"Bug#37300558 segmentation fault in Ndb_cluster_connection Dtor
+
+Problem:
+Ndb_cluster_connection destructor calls g_eventLogger::stopAsync()
+in order to release the buffers used by the async log mechanism as
+well as to stop the threads responsible for the async logging.
+Problem is that, if g_eventLogger object is deleted before the
+destructor of the Ndb_cluster_connection is called, program crash
+because it is trying to use a method on a null object.
+
+This can happen in two different ways:
+
+1- Api programs deletes the logger object before deleting the
+   Ndb_cluster_connection
+2- ndb_end() is called before Ndb_cluster_connection is deleted.
+
+Solution:
+In cluster_connection Destructor do not call stopAsync() when
+g_eventLogger object is NULL.
+A warning is also added to inform API users that g_eventLogger
+is *wrongly* deleted before cluster_connection Dtor is called.
+
+Change-Id: I57ff648949a60b45841e8b568030259f1540180b",37300558,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:37300558;keyword:bug,crash;strong_keyword:crash;issue_id:37300558;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/ndbapi/ndb_cluster_connection.cpp,,,,,8,1,9,1
+mysql,97541374d6540720a6df81c807a4e57136ed6cd3,2023-11-15T20:44:17+01:00,7f0fbcd54ea18c3f487a8dc3f2af4ef40557dc32,Bug#35839977 testNodeRestart -n Bug34216 fails randomly,"Bug#35839977 testNodeRestart -n Bug34216 fails randomly
+
+Another attempt to fix this test failure.
+
+We need to also know which tableId we should crash on when
+commiting a ZUPDATE. Previous (failed!) patch is extended with
+using insertError2InNode() to insert the error code as well
+as the tableId to crash on as 'ERROR_INSERT_EXTRA'
+
+Dblqh::execCOMMIT() is enhanced to also check that
+tableId == ERROR_INSERT_EXTRA before CRASH_INSERTION(5048)
+
+Change-Id: If4e453bdf7400a4439465e3e0c0ad9ef7f91a46e",35839977,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:35839977;keyword:fix,bug,crash;strong_keyword:crash;issue_id:35839977;source_change;regression_test_added;original_hash:35839977",False,35839977,False,True,crash,storage/ndb,storage/ndb/src/kernel/blocks/dblqh/DblqhMain.cpp,storage/ndb/test/ndbapi/testNodeRestart.cpp,,,,3,2,5,2
+mysql,b0e823080cb4be92171fe1ac20c7c281f397274f,2013-04-05T09:04:03+03:00,7af8f974785f4447aed059d4ecc4be34a51ca92f,Merge from mysql-5.6 to the 5.6.11 release clone. ------------------------------------------------------------ revno: 5006 revision-id: marko.makela@oracle.com-20130403124730-s8ixii9q152cchtz parent: ritheesh.vedire@oracle.com-20130403104310-53u66hzx3pvb0doa committer: Marko Mäkelä <marko.makela@oracle.com> branch nick: mysql-5.6 timestamp: Wed 2013-04-03 15:47:30 +0300 message:   Fix regression Bug#16544143 ENABLE PARTIAL ROLLBACK DURING ONLINE ALTER TABLE,"Merge from mysql-5.6 to the 5.6.11 release clone.
+------------------------------------------------------------
+revno: 5006
+revision-id: marko.makela@oracle.com-20130403124730-s8ixii9q152cchtz
+parent: ritheesh.vedire@oracle.com-20130403104310-53u66hzx3pvb0doa
+committer: Marko Mäkelä <marko.makela@oracle.com>
+branch nick: mysql-5.6
+timestamp: Wed 2013-04-03 15:47:30 +0300
+message:
+  Fix regression Bug#16544143 ENABLE PARTIAL ROLLBACK DURING ONLINE ALTER TABLE
+  
+  row_log_allocate(): Initialize the added fields.",16544143,,True,high,6,"message_score=5.5;weak_fix_word;bug_word;regression_word;issue_id:16544143;keyword:fix,bug,regression;issue_id:16544143;source_change;original_hash:20130403124730",False,20130403124730,False,False,bug_fix,storage/innobase,storage/innobase/row/row0log.cc,,,,,2,0,2,1
+mysql,dd31a2c27b449539c2b250b3490c196ebf2886b3,2014-06-26T10:08:55+05:30,f499292522c70f8f618d5ac41febc93022fc2d07,Bug#18463911 : SERVER CRASHES ON CREATING A TEMP TABLE WITH                CERTAIN MAX_HEAP_TABLE_SIZE VALUES,"Bug#18463911 : SERVER CRASHES ON CREATING A TEMP TABLE WITH
+               CERTAIN MAX_HEAP_TABLE_SIZE VALUES
+
+Followup patch to fix failure on Window machine.",18463911,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:18463911;keyword:fix,bug,crash;strong_keyword:crash;issue_id:18463911;source_change",False,,False,False,crash,storage/heap,storage/heap/hp_block.c;storage/heap/hp_create.c,,,,,2,2,4,2
+mysql,d1f351bcb6e684f53d1b8d8035a36a362d556db8,2013-01-19T06:01:46+05:30,cd3b2ac9b70b3fab2df294646c55dadf3b975477,Bug#11752707-SLAVE CRASHES IF RBR HAS AS DESTINATION A VIEW RATHER THAN A TABLE,"Bug#11752707-SLAVE CRASHES IF RBR HAS AS DESTINATION A VIEW
+RATHER THAN A TABLE
+
+Problem: In RBR, If a table is converted into a view at slave,
+(i.e., ""drop table 'object1'"" & ""create view 'object1'""), then any
+DML operations on the table at master are causing crash at slave.
+
+Analysis: Slave prepares tables to be opened for DML list when it
+receives Table_map_log_event(s). And the same list will be sent to
+open_table function. Open_table logic assumes that if the list
+contains a view object, it also contains ""select_lex"" object of
+that view. In the above special case, the table object does not
+contain 'select_lex' as it is base table at master. Since it
+is a view at slave, open_table logic goes to 'mysql_make_view()'
+function which assumes that 'select_lex' exists for the object.
+
+Fix: While preparing 'tables to be opened' list, we should make 
+sure that table required type is 'base table'. If it is not 
+base table while opening the object, mysql_make_view will throw an 
+error similar to 'object is not a base table'",11752707,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:11752707;keyword:fix,bug,crash;strong_keyword:crash;issue_id:11752707;source_change",False,,False,False,crash,sql/log_event.cc,sql/log_event.cc,,,,,1,0,1,1
+mysql,6f94324fd83f536237f890c56124023918405898,2008-09-03T12:32:43+05:00,5c256ec67a825c41eac0eaffef354ef73f6fb372,Bug #39002: The server crashes on the query:   INSERT .. SELECT .. ON DUPLICATE KEY UPDATE col=DEFAULT,"Bug #39002: The server crashes on the query:
+  INSERT .. SELECT .. ON DUPLICATE KEY UPDATE col=DEFAULT
+
+In order to get correct values from update fields that
+belongs to the SELECT part in the INSERT .. SELECT .. ON
+DUPLICATE KEY UPDATE statement, the server adds referenced
+fields to the select list. Part of the code that does this
+transformation is shared between implementations of
+the DEFAULT(col) function and the DEFAULT keyword (in
+the col=DEFAULT expression), and an implementation of
+the DEFAULT keyword is incomplete.",39002,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:39002;keyword:bug,crash;strong_keyword:crash;issue_id:39002;source_change",False,,False,True,crash,sql/item.cc,sql/item.cc,mysql-test/r/default.result;mysql-test/t/default.test,,,,41,0,41,3
+mysql,576794214f20f9dbbf20ff1bd9c63c7ae82a9e22,2008-02-20T22:23:39+03:00,812ee08488c5534e09a1bb828f2b857b073fb86f,Fix for Bug#34337: Server crash when Altering a view using a table name.,"Fix for Bug#34337: Server crash when Altering a view using
+a table name.
+
+The problem was that fill_defined_view_parts() did not return
+an error if a table is going to be altered. That happened if
+the table was already in the table cache. In that case,
+open_table() returned non-NULL value (valid TABLE-instance from
+the cache).
+
+The fix is to ensure that an error is thrown even if the table
+is in the cache.",34337,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:34337;keyword:fix,bug,crash;strong_keyword:crash;issue_id:34337;source_change",False,,False,True,crash,sql/sql_view.cc,sql/sql_view.cc,mysql-test/r/view.result;mysql-test/t/view.test,,,,69,3,72,3
+mysql,95f841f456df4917049abf48a6f6a240938fee2d,2014-08-11T11:31:11+02:00,8a7350f703764deb3ba747b74e2acecbdd1bd11c,Fix for Bug#19414511:,"Fix for Bug#19414511:
+
+  ::sendSignalNoRelease() does not report send failure before crashing
+      
+Replace ndbrequire() with calls to either ::handle_out_of_longsignal_memory()
+or ::handle_send_failure() which will print a crash reason before 
+crashing.
+
+This is similar to code already existing in the 'normal' ::sendSignal().",19414511,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:crash;issue_id:19414511;keyword:fix,bug,crash;strong_keyword:crash;issue_id:19414511;source_change",False,,False,False,crash,storage/ndb,storage/ndb/src/kernel/vm/SimulatedBlock.cpp,,,,,24,8,32,1
+mysql,a6781f3d6d1bba54cd78c8edaf882178b89c257b,2023-09-06T13:06:09+02:00,7eddf009effec23806b7bac2d1175f3268f5ab30,Bug#35719688 Assertion`new_path->cost >= new_path->init_cost' in ExpandSingleFilterAccessPath,"Bug#35719688 Assertion`new_path->cost >= new_path->init_cost' in ExpandSingleFilterAccessPath
+
+This bugs is partly a regression due to the commit with Change-Id:
+I34c307b12216025bedf6e995ee89a58793f59aac (fix for bug#34787357),
+and partly a consequence of a preexisting error in init_cost
+calculation for ROWID_UNION.
+
+This bug is triggered by a floating-point rounding error when
+calculating the init_cost of a ROWID_UNION access path. This rounding
+error becomes significant when the relative difference between
+'init_cost' and 'cost_before_filter' is small. Depending on which way
+the rounding goes, this may cause the 'cost >= init_cost' assert to
+fail.
+
+For this to happen, 'init_cost' and 'cost' must be identical (or very
+close). To fix this, two things are changed:
+
+- init_cost for ROWID_UNION is set to the sum of the init_cost of
+  its child scans. Prior to this fix, it was set equal to 'cost',
+  which is wrong.
+
+- Item_func_ne::get_filtering_effect() should not return zero
+  selectivity. Returning zero was a necessary condition for the
+  assert to fail (as 'cost' otherwise would be greater than
+  'init_cost'). Also, returning zero may give distorted cost figures,
+  as e.g. the inner side of a nested-loop join appears to be 'free' if
+  the outer side return zero rows. So if we return a small non-zero
+  value, there is less chance of making very poor plan choices.
+
+Note that init_once_cost for ROWID_UNION is now calculated as the sum
+of the init_once_cost of the child scans. Prior to this fix, it was
+set equal to 'cost'. This had the side effect of making
+rowid_union_path->rescan_cost()==0, which again meant that nested loop
+joins with a ROWID_UNION on the 'inner' side became artificially
+cheap.
+
+Change-Id: Ieaee80d18e27ca937b1776d6ff72484a5f62a251",34787357;35719688,,True,high,9,"message_score=8.5;weak_fix_word;bug_word;regression_word;strong:assert;issue_id:34787357;35719688;keyword:fix,bug,assert,regression;strong_keyword:assert;issue_id:34787357;35719688;source_change;regression_test_added;original_hash:35719688",False,35719688,False,True,crash,sql/histograms,sql/histograms/histogram.cc;sql/item_cmpfunc.cc;sql/item_cmpfunc.h;sql/join_optimizer/join_optimizer.cc,mysql-test/include/index_merge1.inc;mysql-test/r/hypergraph_bugs.result;mysql-test/r/index_merge_innodb.result;mysql-test/r/index_merge_innodb_hypergraph.result;mysql-test/r/index_merge_myisam.result;mysql-test/r/index_merge_myisam_hypergraph.result;mysql-test/t/hypergraph_bugs.test,,,,167,65,232,11
+mysql,3add79dd1113b8623a1caa04f0376023898d8b00,2006-11-30T13:09:48-05:00,98c6f8bf495843f18d84cb4bce52b3591d71739a,Bug#20836 Selecting into variables results in wrong results being returned - Post-merge cleanup. - Disabled this bug's test for 5.x until 16861 is resolved.,"Bug#20836 Selecting into variables results in wrong results being returned
+- Post-merge cleanup.
+- Disabled this bug's test for 5.x until 16861 is resolved.",20836,,True,high,8,"message_score=6.5;bug_word;strong:wrong result;issue_id:20836;keyword:bug,wrong result;strong_keyword:wrong result;issue_id:20836;source_change;regression_test_added",False,,False,True,incorrect_result,sql/sql_class.cc,sql/sql_class.cc,mysql-test/r/distinct.result;mysql-test/t/distinct.test,,,,68,127,195,3
+mysql,26e71eacd53900b0b9791199f339d4b38d6c7c61,2025-10-24T11:13:21+02:00,310e67fddf7a6e48c3b2931ae989b11a98c16856,"Bug#38557567: Assertion `IsEmpty(child.delayed_predicates)' failed|join_optimizer/cost_model.cc [1/2, cleanup, noclose]","Bug#38557567: Assertion `IsEmpty(child.delayed_predicates)'
+failed|join_optimizer/cost_model.cc [1/2, cleanup, noclose]
+
+This patch performs some initial cleanup of the cost estimation code
+for aggregation, streaming and materialization. It does not fix the
+bug.
+
+1) The cost estimation functions EstimateAggregateCost() and
+EstimateStreamCost() initialize some access path properties that are
+not directly related to the cost estimates. These properties are
+ordering_state and safe_for_rowid. Move the initialization of these
+properties to where the access paths are created, so that the cost
+model code doesn't touch unrelated properties of the access paths.
+
+2) Move NewStreamingAccessPath() out-of-line, since it's too big and
+too infrequently called to warrant inlining.
+
+3) Some functions in sql_executor.cc for estimating stream and
+materialization cost used current_thd even though the THD was
+available directly. Change them to use thd instead of current_thd.
+
+Change-Id: I4e2a01f5a8d3f1fb4c8ab34799ad68420371e230",38557567,,True,high,8,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:38557567;keyword:fix,bug,assert;strong_keyword:assert;issue_id:38557567;source_change",False,,False,False,crash,sql/join_optimizer,sql/join_optimizer/access_path.cc;sql/join_optimizer/access_path.h;sql/join_optimizer/cost_model.cc;sql/join_optimizer/join_optimizer.cc;sql/sql_executor.cc,,,,,29,26,55,5
+mysql,1cf9861f86cdc13de6e9fcc48af1f4de5bd41572,2010-05-05T12:17:07+02:00,27da41cc2ed3177ba0f64a6bddf06f80060add14,Bug#48800 CREATE TABLE t...SELECT fails if t is a temporary           table,"Bug#48800 CREATE TABLE t...SELECT fails if t is a temporary
+          table
+
+If a temporary table A exists, and a (permanent) table 
+with the same name is attempted created with 
+""CREATE TABLE ... AS SELECT"", the create would fail with 
+an error.
+   1050: Table 'A' already exists
+
+The error occured in MySQL 5.1 releases, but is not
+present in MySQL 5.5.   This patch adds a regression
+test to ensure that the problem does not reoccur.",48800,,False,low,2,"message_score=5.0;bug_word;regression_word;issue_id:48800;keyword:bug,regression;issue_id:48800;regression_test_added;non_behavior_only",False,,True,True,bug_fix,,,mysql-test/r/create.result;mysql-test/t/create.test,,,,37,0,37,2
+mysql,d9d88327c863957ff4eced6043ae52140a4e2edf,2013-04-29T11:28:02+04:00,1f47bba6c19b5f5b2066cb46ee314ed81afe8f22,Bug#12772601 CENTROID FUNCTION ASSERTS: ASSERTION FAILED: N_LINEAR_RINGS > 0 Bug#16510712 SERVER CRASHES IN GET_POINT ON A GEOMETRY QUERY,"Bug#12772601 CENTROID FUNCTION ASSERTS: ASSERTION FAILED: N_LINEAR_RINGS > 0
+Bug#16510712 SERVER CRASHES IN GET_POINT ON A GEOMETRY QUERY
+
+Addendum: variable initialization added to keep compiler happy.",12772601;16510712,,True,high,8,"message_score=6.5;bug_word;strong:crash,assert;issue_id:12772601;16510712;keyword:bug,crash,assert;strong_keyword:crash,assert;issue_id:12772601;16510712;source_change",False,,False,False,crash,sql/spatial.cc,sql/spatial.cc,,,,,2,2,4,1
+mysql,2d6d5e10436a8f2b58d37af737c2a3e45855d0b7,2025-07-08T13:18:20+02:00,1403ad215db2089c803b0515be196579c1c30e1d,Bug#37882398 [InnoDB] Assertion failure: ddl0file-reader.cc:193:              m_ptr + data_size < m_bounds.second,"Bug#37882398 [InnoDB] Assertion failure: ddl0file-reader.cc:193:
+             m_ptr + data_size < m_bounds.second
+
+PROBLEM:
+
+1. After the fix for the ""Bug #37233273 - DDL buffer increase has
+   out of control memory usage"", this assertion was seen.
+2. The fix for Bug #37233273 basically accounts for meta data as
+   part of innodb_ddl_buffer_size buffer  which reduces the
+   number of rows which can fit in a key buffer block while
+   adding an index.
+3. When the key buffer is full, the records in the key buffer
+   are added to the temporary file, which constitutes a chunk.
+   This chunk is smaller than actual key buffer size.
+4. The offsets of each chunk is recorded in a queue. The chunks
+   sizes are multiples of the sector size (4KB).
+5. When merging the two chunks into one sorted chunk, we read
+   from this queue.
+6. Another bug, Bug#36444172 ""Regression in 8.0.27+ related to
+   Parallel DDL IO Amplification"" read the sizes of the first
+   two chunks from the queue and set a limit on the input buffer
+   based on the size of the first two chunks.
+7. In our case, the sizes of the first two chunks were smaller
+   compared to the subsequent chunk sizes.
+8. Therefore, while reading the rows from subsequent chunks we
+   hit this imit on the input buffer.
+
+FIX:
+
+1. Each ddl thread is allocated a certain amount of input buffer
+   based on the number of scan threads and the DDL buffer size.
+   We should use this allocation as the limit for the input
+   buffer while reading the rows from a chunk.
+
+Change-Id: Iba4a224c9973bea2b5a6a2288a23473dd2c21b06",36444172;37233273;37882398,,True,high,8,"message_score=8.5;weak_fix_word;bug_word;regression_word;strong:assert;issue_id:36444172;37233273;37882398;keyword:fix,bug,assert,regression;strong_keyword:assert;issue_id:36444172;37233273;37882398;source_change",False,,False,False,crash,storage/innobase,storage/innobase/ddl/ddl0builder.cc;storage/innobase/ddl/ddl0file-reader.cc,,,,,3,6,9,2
+mysql,298759267cade1e5b4ffb930de1afee8790fd61d,2012-01-17T12:23:57+04:00,dcc298e76b63f5e5034e654bba3f1280359ee41f,BUG#13545236 - ASSERT IN SEC_SINCE_EPOCH,"BUG#13545236 - ASSERT IN SEC_SINCE_EPOCH
+
+Problem:
+WL#946 introduced a new methid Item_cache_datetime::get_date().
+It did not execute check_date(), so in some cases it started
+to return non-NULL result when instead of expected NULL.
+
+Before WL#946 the generic Item::get_date() was used,
+which executes check_date() inside str_to_datetime_with_warn().
+
+Fix:
+adding check_date() in the new method, to reproduce the pre-WL#946 behaviour.
+
+modified:
+      mysql-test/r/func_time.result
+      mysql-test/t/func_time.test
+      sql/item.cc",13545236,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:assert;issue_id:13545236;keyword:fix,bug,assert;strong_keyword:assert;issue_id:13545236;source_change;regression_test_added",False,,False,True,crash,sql/item.cc,sql/item.cc,mysql-test/r/func_time.result;mysql-test/t/func_time.test,,,,65,4,69,3
+mysql,8144e621e813c7bcf015020b19645f54c0cf81b1,2019-09-03T08:47:33+02:00,34061b4670fdaa1bf2fccc90cfe1e3e756e3d599,"Bug#30264180 Remove user defined constructors for EpochRangeSet, use defaults instead.","Bug#30264180 Remove user defined constructors for EpochRangeSet, use defaults instead.
+
+Found by GCC9 -Werror=deprecated-copy.
+
+Also adding move assignment for Vector to avoid copying of Vector in EpochRangeSet.
+
+Reviewed-by: Tiago Alves <tiago.alves@oracle.com>",30264180,,False,low,1,"message_score=5.0;bug_word;reporter_reference;issue_id:30264180;keyword:bug,found by;issue_id:30264180;non_behavior_only",False,,True,True,bug_fix,,,storage/ndb/test/include/NdbHistory.hpp,,,,1,12,13,1
+mysql,955738faa40202558269e33247388c2a13896df8,2014-02-19T18:15:08+08:00,8ceeeba31649adbb743d7ababbcfd27147547aa0,BUG#18229433 FTS: INVALID MEMMOVE IN FTS_QUERY_FETCH_DOCUMENT CAUSE CRASH,"BUG#18229433 FTS: INVALID MEMMOVE IN FTS_QUERY_FETCH_DOCUMENT CAUSE CRASH
+
+In fts_query_fetch_document, we do 'prev_len += cur_len + 1',
+but we don't check if 'cur_len != UNIV_SQL_NULL', so cause
+'memcpy(document_text + prev_len, data, cur_len);' to crash.
+
+rb://4702 approved by Jimmy.Yang",18229433,,True,high,7,"message_score=6.5;bug_word;strong:crash;issue_id:18229433;keyword:bug,crash;strong_keyword:crash;issue_id:18229433;source_change",False,,False,False,crash,storage/innobase,storage/innobase/fts/fts0que.cc,,,,,7,5,12,1
+mysql,c997fe19ce22c14c3754f423bc2a1369fcfa1ab5,2023-11-07T14:29:20+01:00,dcdd8dd4b376ca249e4e0f1be0d0f1462c74f6d2,Bug#35963172: HLL query crashes mysqld at setup_fields(assertion),"Bug#35963172: HLL query crashes mysqld at setup_fields(assertion)
+
+Changing test case from using function HLL to using METAPHON, since
+HLL cannot be loaded from a default installation.
+
+Change-Id: I96e5d7f702a7be6ff63a0e2f0db44130a4560d34",35963172,,False,low,5,"message_score=6.5;bug_word;strong:crash,assert;issue_id:35963172;keyword:bug,crash,assert;strong_keyword:crash,assert;issue_id:35963172;regression_test_added;non_behavior_only",False,,True,True,crash,,,mysql-test/r/udf.result;mysql-test/t/udf.test,,,,13,13,26,2
+mysql,a01e70c27843ad6f3c1d4d7a9922dedcb8941b6b,2012-12-13T18:53:16+05:30,69689fa432aa1570ecda306bcc18609da4488838,Bug#14628410 - ASSERTION `! IS_SET()' FAILED IN DIAGNOSTICS_AREA::SET_OK_STATUS,"Bug#14628410 - ASSERTION `! IS_SET()' FAILED IN DIAGNOSTICS_AREA::SET_OK_STATUS
+
+The error code returned from Merge file/Temp file creation functions are
+ignored.
+
+Use the return codes of the row_merge_file_create() and innobase_mysql_tmpfile()
+to return the error to caller if file creation fails.
+
+Approved by Marko. rb#1618",14628410,,True,high,7,"message_score=6.5;bug_word;strong:assert;issue_id:14628410;keyword:bug,assert;strong_keyword:assert;issue_id:14628410;source_change",False,,False,False,crash,storage/innodb_plugin,storage/innodb_plugin/handler/ha_innodb.cc;storage/innodb_plugin/row/row0merge.c,,,,,28,5,33,2
+mysql,4941c73dfb2c39ebc1b004e0bcb869a12ba52952,2022-01-19T12:00:25+01:00,003904816fb7e9f40fce3be76385a227a89ccc2d,"Bug #32716838 ALTER TABLE MAY CRASH IF DDL LOG LOSE, IN NON-FILE-PER-TABLE MODE","Bug #32716838 ALTER TABLE MAY CRASH IF DDL LOG LOSE, IN
+NON-FILE-PER-TABLE MODE
+
+Problem:
+1. This bug has been exposed by mtr test ddl_log_error.test.
+Test-case hits the assert when innodb_file_per_table = 0.
+2. In ALTER TABLE ALGORITHM = COPY, there are two cases:
+  a. In case of, innodb_file_per_table = 1, we force DDL log to
+  return error early in build tablespace and then ALTER TABLE
+  is aborted.
+  b. In case of, innodb_file_per_table = 0, we don't need to
+  build tablespace, so we add table metadata to cache and try
+  to add DDL log for cache entry. Here we force DDL log to
+  return error DB_ERROR. Here we didn't handle DB_ERROR, so table
+  metadata (dict_table_t) remains in cache.
+3. Later when ALTER TABLE ALGORITHM = INPLACE try to add table
+dict_table_t entry into cache, it finds entry with same id in dict
+cache and hits the debug assert.
+
+Fix:
+Handled error DB_ERROR from DDL log.
+
+RB: 26868
+Reviewed by : Debarun Banerjee <debarun.banerjee@oracle.com>,
+              Mayank Prasad <mayank.prasad@oracle.com>",32716838,,True,high,9,"message_score=7.0;weak_fix_word;bug_word;strong:crash,assert,abort;issue_id:32716838;keyword:fix,bug,crash,assert,abort;strong_keyword:crash,assert,abort;issue_id:32716838;source_change;regression_test_added",False,,False,True,crash,storage/innobase,storage/innobase/handler/handler0alter.cc;storage/innobase/include/row0mysql.h;storage/innobase/row/row0mysql.cc,mysql-test/suite/innodb/r/ddl_log_error.result;mysql-test/suite/innodb/t/ddl_log_error.test,,,,87,30,117,5

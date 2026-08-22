@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "current_time()"
+    ],
+    "Feature": [
+        "current_time()"
+    ],
+    "Description": [
+        "Return type: ",
+        "timetz",
+        "get current time with time zone"
+    ],
+    "Examples": [
+        "current_time()"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT current_time();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 273,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.86e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT current_time();"
+    ]
+}

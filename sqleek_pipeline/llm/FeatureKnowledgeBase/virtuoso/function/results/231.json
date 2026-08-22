@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_st_dxf_entity/"
+  ],
+  "Title": [
+    "http_st_dxf_entity ("
+  ],
+  "Feature": [
+    "http_st_dxf_entity ("
+  ],
+  "Description": [
+    "This function writes a DXF (Data Exchange Format) representation of shape into the given output session."
+  ],
+  "Examples": [
+    "create procedure Example_http_st_dxf_entity ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_key_load/"
+  ],
+  "Title": [
+    "USER_KEY_LOAD ("
+  ],
+  "Feature": [
+    "USER_KEY_LOAD ("
+  ],
+  "Description": [
+    "This function is used to register and persist an existing\n    key in the Virtuoso server. This is needs to be made once per\n    key/certificate, and does not need to be repeated after server restart,\n    unless the key is erased and has to be redefined."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

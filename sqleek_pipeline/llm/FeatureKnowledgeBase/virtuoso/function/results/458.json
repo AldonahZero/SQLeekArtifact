@@ -1,0 +1,34 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_set_row_count/"
+  ],
+  "Title": [
+    "integer set_row_count ("
+  ],
+  "Feature": [
+    "integer set_row_count ("
+  ],
+  "Description": [
+    "The function set_row_count () is used to set the affected rows \n\t  counter in the current context or in the context of the caller. \n\t  Therefore it can be used to set the affected rows counter (returned by row_count() ) \n\t  in places where an instead of trigger is used.\n\t  If result of decrement of the affected rows counter is an negative integer it will be set to zero.\nrow_count()"
+  ],
+  "Examples": [
+    "create table hid (id integer primary key, dt varchar);",
+    "create table sho (id1 integer primary key, dt1 varchar);",
+    "create trigger i_hid instead of insert on hid",
+    "insert into sho values (id, dt);",
+    "create trigger u_hid instead of update on hid",
+    "update sho set dt1 = dt where id1 = id;",
+    "create procedure test_ins ()",
+    "insert into hid select * from chid;",
+    "create procedure test_upd ()",
+    "update hid set dt = '';"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

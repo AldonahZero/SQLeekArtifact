@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_safe_exec/"
+  ],
+  "Title": [
+    "DB.DBA. VAD_SAFE_EXEC ("
+  ],
+  "Feature": [
+    "DB.DBA. VAD_SAFE_EXEC ("
+  ],
+  "Description": [
+    "Safe way to do something without generating an exception, e.g.: when it is\n  necessary to drop a table without insurance of it's existence."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

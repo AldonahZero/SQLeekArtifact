@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_x509_csr_generate/"
+  ],
+  "Title": [
+    "varchar xenc_x509_csr_generate ("
+  ],
+  "Feature": [
+    "varchar xenc_x509_csr_generate ("
+  ],
+  "Description": [
+    "This function generates Certificate Signing Request (CSR)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_server_rename/"
+  ],
+  "Title": [
+    "repl_server_rename ("
+  ],
+  "Feature": [
+    "repl_server_rename ("
+  ],
+  "Description": [
+    "This function is useful to rename the publishing servers data (that stored\n    in to the replication tables) after renaming the server in virtuoso.ini file.\n    The call of the procedure will associate the all data belong to the old server\n    name to the current server name. It will also set the appropriate transaction\n    levels. In case of duplicate publications (publications with the same name\n    exists in old and new server definitions) it will reject the operation."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

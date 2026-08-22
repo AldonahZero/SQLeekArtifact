@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_graph_collect_fp_list/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_GRAPH_COLLECT_FP_LIST ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_GRAPH_COLLECT_FP_LIST ("
+  ],
+  "Description": [
+    "Gets inverse / functional properties for given graphs. The procedure will fetch all \n    \ttriples of all specified graphs during the run, so it will take some time if graphs are \n    \tbig and/or numerous."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

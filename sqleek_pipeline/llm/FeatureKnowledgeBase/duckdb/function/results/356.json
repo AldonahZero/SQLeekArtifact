@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/regular_expressions"
+    ],
+    "Title": [
+        "regexp_extract_all(string, regex[, group = 0][, options])"
+    ],
+    "Feature": [
+        "regexp_extract_all(string, regex[, group = 0][, options])"
+    ],
+    "Description": [
+        "Split the string along the regex and extract all occurrences of group.",
+        "Split the string along the regex and extract all occurrences of group. A set of optional options can be set."
+    ],
+    "Examples": [
+        "regexp_extract_all('hello_world', '([a-z ]+)_?', 1)"
+    ],
+    "Category": [
+        "Regular Expressions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_extract_all('example text 123, example text 456', '\\d+', 0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 358,
+            "Prompt Tokens": 324,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 6.9e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_extract_all('example text 123, example text 456', '\\d+', 0);"
+    ]
+}

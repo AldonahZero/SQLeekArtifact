@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_get_certificate_info/"
+  ],
+  "Title": [
+    "integer or string get_certificate_info ("
+  ],
+  "Feature": [
+    "integer or string get_certificate_info ("
+  ],
+  "Description": [
+    "This function will return information about the current client X509 certificate\n(if successfully verified).  If there is no valid X509 certificate or the requested\ninformation is not available it will return NULL.\nIf the optional cert_or_key_name is supplied it should contain\na encoded certificate (by default format is PEM). The certificate info is read from the first certificate in\nthat string.\ncert_or_key_name\nIf the optional cert_or_key_name is supplied and in_format is equal to 3 (integer) the function will try to retrieve the certificate registered in the current user's \n    key store by name contained in cert_or_key_name .\ncert_or_key_name\nin_format\ncert_or_key_name"
+  ],
+  "Examples": [
+    "CREATE PROCEDURE get_mail_example (in cert any := null, in cert_type int := 0)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

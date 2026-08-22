@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_udt_instance_of/"
+  ],
+  "Title": [
+    "varchar udt_instance_of ("
+  ],
+  "Feature": [
+    "varchar udt_instance_of ("
+  ],
+  "Description": [
+    "This function returns information about the supplied type(s). There\n    are two versions of this function, one returns the name of the type of the\n    supplied argument, and the other than compares two supplied arguments\n    for matching types. An error will be signalled if either of the types is not defined."
+  ],
+  "Examples": [
+    "select udt_instance_of ('SER_UDT')",
+    "select udt_instance_of (new SER_UDT())",
+    "select udt_instance_of ('SER_UDT_SUB', 'SER_UDT');",
+    "select udt_instance_of (new SER_UDT(), 'SER_UDT_SUB');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

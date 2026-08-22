@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_x/"
+  ],
+  "Title": [
+    "st_x ("
+  ],
+  "Feature": [
+    "st_x ("
+  ],
+  "Description": [
+    "Retrieves the x coordinate of a geometry."
+  ],
+  "Examples": [
+    "callret",
+    "SELECT DISTINCT (bif:st_x(?geo ))",
+    "callret-0"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

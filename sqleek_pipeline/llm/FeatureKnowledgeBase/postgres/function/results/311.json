@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-range.html"
+    ],
+    "Title": [
+        "unnest"
+    ],
+    "Feature": [
+        "unnest ( anymultirange ) \u2192 setof anyrange"
+    ],
+    "Description": [
+        "Expands a multirange into a set of ranges. The ranges are read out in storage order (ascending)."
+    ],
+    "Examples": [
+        "unnest('{[1,2), [3,4)}'::int4multirange) \u2192"
+    ],
+    "Category": [
+        "Range divide Multirange Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT unnest(ARRAY[1, 2, 3]::int[]);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 300,
+            "Prompt Tokens": 269,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 5.8949999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT unnest(ARRAY[1, 2, 3]::int[]);"
+    ]
+}

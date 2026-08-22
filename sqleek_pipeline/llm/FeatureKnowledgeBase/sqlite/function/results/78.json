@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://sqlite.org/json1.html"
+    ],
+    "Title": [
+        "4.15. The jsonb_patch() function"
+    ],
+    "Feature": [
+        "4.15. The jsonb_patch() function"
+    ],
+    "Description": [
+        "4.15. The jsonb_patch() function",
+        "\nThe jsonb_patch() function works just like the json_patch() function\nexcept that the patched JSON is returned in the binary JSONB format.\n\n\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT jsonb_patch('{\"key\": \"value\"}', '{\"key\": \"new_value\"}')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 346,
+            "Prompt Tokens": 312,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 6.720000000000001e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT jsonb_patch('{\"key\": \"value\"}', '{\"key\": \"new_value\"}')"
+    ]
+}

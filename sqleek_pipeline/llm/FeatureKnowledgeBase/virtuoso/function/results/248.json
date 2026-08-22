@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_isarray/"
+  ],
+  "Title": [
+    "boolean isarray ("
+  ],
+  "Feature": [
+    "boolean isarray ("
+  ],
+  "Description": [
+    "isarray is true if the argument is a valid argument to aref.\n    This is the case for any string or vector."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

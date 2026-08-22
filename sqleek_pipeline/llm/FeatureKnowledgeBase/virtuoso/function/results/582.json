@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_tcpip_gethostbyaddr/"
+  ],
+  "Title": [
+    "varchar tcpip_gethostbyaddr ("
+  ],
+  "Feature": [
+    "varchar tcpip_gethostbyaddr ("
+  ],
+  "Description": [
+    "This calls the system function gethostbyaddr() and returns h_name from the\n\t  hostent structure returned by it. If no hostent structure returned, then it\n\t  returns it's argument."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

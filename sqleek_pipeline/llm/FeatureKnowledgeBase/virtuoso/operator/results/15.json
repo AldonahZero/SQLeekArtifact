@@ -1,0 +1,24 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/ch-sqlreference/",
+    "https://docs.openlinksw.com/virtuoso/ch-sqlprocedures/"
+  ],
+  "Title": [
+    "|"
+  ],
+  "Feature": [
+    "|"
+  ],
+  "Description": [
+    "Doc-derived SQL operator symbol (grammar/BNF)."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Operators"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

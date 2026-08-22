@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xper_locate_words/"
+  ],
+  "Title": [
+    "xper_locate_words ("
+  ],
+  "Feature": [
+    "xper_locate_words ("
+  ],
+  "Description": [
+    "This receives the XML entity and returns its fragment or signals an error."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

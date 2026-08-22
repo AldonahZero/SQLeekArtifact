@@ -1,0 +1,6 @@
+tool,dbms,run,source_dir,start_time,logSaved_griffin_logs,dedup_list,dedup_list_lines
+SQLeek,MonetDB,r1,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd1,2026-06-12 11:08:40,106,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd1/unique_bugs/dedup_list.txt,17
+SQLeek,MonetDB,r2,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd2,2026-06-29 11:18:52,47,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd2/unique_bugs/dedup_list.txt,9
+SQLeek,MonetDB,r3,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd3,2026-06-29 11:18:54,306,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd3/unique_bugs/dedup_list.txt,27
+SQLeek,MonetDB,r4,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd4,2026-06-29 11:18:58,112,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd4/unique_bugs/dedup_list.txt,16
+SQLeek,MonetDB,r5,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd5,2026-06-29 11:19:00,158,/root/dfuzz-griffin/griffin_output/griffin_monetdb_sqleek_rnd5/unique_bugs/dedup_list.txt,13

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_checkpoint_interval/"
+  ],
+  "Title": [
+    "integer checkpoint_interval ("
+  ],
+  "Feature": [
+    "integer checkpoint_interval ("
+  ],
+  "Description": [
+    "This function changes the database checkpointing interval to the given\n      value in minutes. It may also be used to disable checkpointing in two\n      ways: By setting checkpoint interval to 0, the checkpoint will only be\n      performed after roll forward upon database startup. A setting of -1\n      will disable all checkpointing. Main use for this function is to\n      ensure a clean online backup of the database slices. Copying of the\n      database may take long and checkpointing would modify those files in\n      mid-copy, thus rendering the resulting copy unusable. In case the\n      system should, for some reason or another, become unstable, it is\n      sometimes better to disable checkpointing after a database restart\n      to resume backing up from where it was left prior to a system crash.\n      Disabling all checkpointing by giving checkpoint_interval the value\n      of -1 will do just that.\nThe interval setting will be saved in the server configuration\n      file as value of CheckpointInterval in section [Parameters], thus it\n      will persist over consecutive server shutdown/restart cycles. A\n      long checkpoint_interval setting will produce longer transaction\n      logs, which in turn prolongs the time it takes for the database to\n      perform a roll forward upon restart in case it was shut down without\n      making a checkpoint."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

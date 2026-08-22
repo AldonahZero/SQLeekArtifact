@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_all_user_perms_del/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_ALL_USER_PERMS_DEL ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_ALL_USER_PERMS_DEL ("
+  ],
+  "Description": [
+    "This function removes all the setting of permissions of user named uname, both default \n    \tpermissions and permissions on specific graphs. The only exception is that it does not remove \n    \tdefault permissions if the specified user is \"nobody\" or \"dba\", but all graph-specific permissions \n    \tare always removed.\nThe procedure can deal with disabled users. Moreover it can be used with entirely deleted users as \n    \tsoon as user id is known. It is possible to pass NULL instead of user name and an integer user ID \n    \tas a second argument."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

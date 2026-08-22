@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/date"
+    ],
+    "Title": [
+        "date_trunc"
+    ],
+    "Feature": [
+        "date_trunc"
+    ],
+    "Description": [
+        "datetrunc(part, date)",
+        "Truncate to specified precision. Alias of date_trunc.",
+        "Truncate to specified precision."
+    ],
+    "Examples": [
+        "datetrunc('month', DATE '1992-03-07')"
+    ],
+    "Category": [
+        "Date Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT date_trunc('month', CURRENT_DATE);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 290,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.3849999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT date_trunc('month', CURRENT_DATE);"
+    ]
+}

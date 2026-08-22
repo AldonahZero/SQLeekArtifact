@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_acos/"
+  ],
+  "Title": [
+    "acos ("
+  ],
+  "Feature": [
+    "acos ("
+  ],
+  "Description": [
+    "All these functions work with double precision floating point numbers.\nThey convert their argument to an IEEE 64-bit float and return a result of that\ntype.\n:  acos\tarc cosine\n:  asin\tarc sine\n:  atan\tarc tangent\n:  cos\tcosine\n:  sin\tsine\n:  tan\ttangent\n:  cot\tcotangent\n:  degrees  convert an angle in radians to degrees.\n:  radians  convert an angle in radians to degrees.\n:  atan2  arc tangent with x and y coordinates, can return an angle in any quadrant.\n:  pi\treturn pi.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

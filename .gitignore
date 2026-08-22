@@ -1,0 +1,225 @@
+# Python cache and tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+config.env
+
+# Logs and runtime output
+*.log
+build.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+useless/
+
+# Editors
+.vscode/
+.idea/
+
+# Documentation: keep only the root README tracked by default
+*.md
+!/README.md
+
+# Build artifacts
+build/
+dist/
+out/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# CMake and autotools output
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+config.log
+config.status
+autom4te.cache/
+
+# Stage 1 CodeQL (large, machine-local, regenerable via build_and_run.sh)
+sqleek_pipeline/stage1_static/output/codeql_db/
+
+# Fuzzing/runtime artifacts
+crashes/
+hangs/
+queue/
+afl-out/
+fuzz-out/
+core
+core.*
+config.env
+config.env
+
+# Stage 3 fuzz outputs (runtime-generated, large)
+sqleek_pipeline/stage3_scheduler/output/fuzz/
+sqleek_pipeline/stage3_scheduler/runtime/seed_snapshots
+sqleek_pipeline/stage3_scheduler/runtime/mysql_resetfix0006_minverify_20260714_164148/runtime/sqlright-mysql
+sqleek_pipeline/stage3_scheduler/checkpoints
+
+# Stage 4 exported container logs
+sqleek_pipeline/stage4_triage/output/backup_logs/
+/sqleek_fuzz_postgres/
+sqleek_pipeline/stage4_triage/output/report/validation
+sqleek_pipeline/stage4_triage/output/postgres_official_seed_002673_20260706
+sqleek_pipeline/stage3_scheduler/runtime/
+
+experiment/RQ2/bug_validation
+experiment/RQ2/replay_smoke
+
+# RQ1
+!experiment/RQ1/BUG_LIST.md
+
+# RQ2 runtime and replay artifacts
+/archive/
+experiment/RQ2/live/logs/
+experiment/RQ2/live/sqlancer/
+experiment/RQ2/live/*.pid
+experiment/RQ2/live/notes/*.tsv
+experiment/RQ2/live/launch_*_20*.sh
+experiment/RQ2/collected/
+experiment/RQ2/replay/llvmcov_build/
+experiment/RQ2/replay/__pycache__/
+experiment/RQ2/replay/*.bak_*
+experiment/RQ2/replay/output/
+experiment/RQ2/result_backup_*/
+experiment/RQ2/backups
+
+*bak*
+experiment/RQ2/result/data/runs.csv.bak_before_dynsql_sync_*
+experiment/RQ2/result/data/preview_sqleek_late_branch_increment
+
+# RQ2 AFLGo integration: track adapters/scripts/targets/patches; ignore heavy local artifacts.
+experiment/RQ2/aflgo/.git/
+experiment/RQ2/aflgo/**/build/
+experiment/RQ2/aflgo/**/tmp/
+experiment/RQ2/aflgo/**/runtime/
+experiment/RQ2/aflgo/**/output/
+experiment/RQ2/aflgo/**/output_rq2/
+experiment/RQ2/aflgo/**/output_rq2_24h/
+experiment/RQ2/aflgo/**/output_rq2_sanity/
+experiment/RQ2/aflgo/**/bin/
+experiment/RQ2/aflgo/**/logs/
+experiment/RQ2/aflgo/**/__pycache__/
+experiment/RQ2/aflgo/**/*.o
+experiment/RQ2/aflgo/**/*.so
+experiment/RQ2/aflgo/**/*.a
+experiment/RQ2/aflgo/**/*.bc
+experiment/RQ2/aflgo/**/*.dot
+experiment/RQ2/aflgo/**/*.dot.pre
+experiment/RQ2/aflgo/**/*.distances.txt
+
+# AFLGo build products with extensionless names.
+experiment/RQ2/aflgo/afl-2.57b/afl-analyze
+experiment/RQ2/aflgo/afl-2.57b/afl-as
+experiment/RQ2/aflgo/afl-2.57b/afl-fuzz
+experiment/RQ2/aflgo/afl-2.57b/afl-gcc
+experiment/RQ2/aflgo/afl-2.57b/afl-gotcpu
+experiment/RQ2/aflgo/afl-2.57b/afl-showmap
+experiment/RQ2/aflgo/afl-2.57b/afl-tmin
+experiment/RQ2/aflgo/afl-2.57b/qemu_mode/qemu-2.10.0/
+experiment/RQ2/aflgo/**/aflgo-clang
+experiment/RQ2/aflgo/**/aflgo-pass.so
+experiment/RQ2/aflgo/**/aflgo-runtime.o
+experiment/RQ2/aflgo/**/aflgo-runtime-64.o
+experiment/RQ2/aflgo/**/distance.bin
+
+# RQ2 SQLRight/SQLaser reproduction: keep only curated evidence and smoke recipe.
+experiment/RQ2/sqlaser/*
+!experiment/RQ2/sqlaser/evidence/
+!experiment/RQ2/sqlaser/evidence/**
+!experiment/RQ2/sqlaser/patches/
+!experiment/RQ2/sqlaser/patches/**
+!experiment/RQ2/sqlaser/scripts/
+!experiment/RQ2/sqlaser/scripts/**
+!experiment/RQ2/sqlaser/replay/
+!experiment/RQ2/sqlaser/replay/**
+!experiment/RQ2/sqlaser/build_context/
+!experiment/RQ2/sqlaser/build_context/sqlright_mariadb/
+!experiment/RQ2/sqlaser/build_context/sqlright_mariadb/**
+!experiment/RQ2/sqlaser/build_context/sqlright_monetdb/
+!experiment/RQ2/sqlaser/build_context/sqlright_monetdb/**
+experiment/RQ2/sqlaser/**/__pycache__/
+experiment/RQ2/sqlaser/**/*.pyc
+!experiment/RQ2/sqlaser/smoke/
+!experiment/RQ2/sqlaser/smoke/Dockerfile.sqlite334.offline
+experiment/RQ2/dynsql/*.mds
+experiment/RQ2/result/data/backups/
+experiment/RQ2/result/data/rq2_mysql_sqleek_full_normalize_*.json
+experiment/RQ2/result/data/runs.csv
+experiment/RQ2/result/data/coverage_summary.csv
+sqleek_pipeline/stage3_scheduler/logs
+experiment/RQ2/result/backups/
+experiment/RQ2/sqlaser/build_context/sqlright_sqlite_smoke_ctx
+experiment/RQ2/live/monetdb_adapters
+experiment/RQ2/result/figures/24h/backups
+experiment/observation1_risk_region_validation/data/mysql/file_history_cache
+experiment/observation1_risk_region_validation/data/mysql/line_history_cache
+experiment/observation1_risk_region_validation/data/postgresql/file_history_cache
+experiment/observation1_risk_region_validation/data/postgresql/line_history_cache
+experiment/RQ4/result/backups
+experiment/RQ4/result/data_wo_m2_replay_only_20260729_173312/
+
+
+# RQ4 replay corpora, profdata, reports, and runtime artifacts
+experiment/RQ4/replay/output/
+
+# Figure 6
+!experiment/RQ3/result/figures/README_FIG6.md
+experiment/RQ3/result/figures/Figure6_Bug_Discovery_Over_Time_mixed_preview*
+experiment/RQ3/result/figures/data/*preview*
+experiment/RQ3/result/figures/data/*mixed_preview*
+experiment/RQ3/result/figures/data/fig6_sqleek_mariadb_real_bug_events_r1_r4.csv
+experiment/RQ3/result/figures/data/fig6_sqleek_mariadb_real_checkpoint_stats_r1_r4.csv
+experiment/RQ3/result/figures/data/fig6_sqleek_mariadb_real_excluded_post24h_r1_r4.csv
+experiment/RQ3/result/figures/data/fig6_sqleek_mariadb_real_run_metadata_r1_r4.csv
+experiment/RQ3/result/data/rq3_runs.csv
+experiment/RQ3/result/data/rq3_coverage_summary.csv
+
+experiment/RQ4/live
+experiment/RQ4/configs
+experiment/RQ4/smoke
+experiment/RQ4/result/data_wo_m2_replay_only_20260729_173312
+experiment/RQ4/result/wo_m2_replay_only_20260730_072723
+experiment/RQ4/replay
+experiment/RQ4/result/data/backups
+
+# One-off local backups, run plans, and cleanup helpers
+README.md.before_*
+run.sh.before_*
+experiment/RQ4/tools/plan_wo_m1_*.json
+experiment/RQ4/tools/cleanup_wo_m1_*.sh
+sqleek_pipeline/stage3_scheduler/output/runs/
+experiment/RQ4/.monetdb_fuzz_tmp_20260803/
+
+tmp/
+
+# Multi-model LLM comparison harness: keep code/config/documentation, ignore
+# potentially large model outputs and per-run logs.
+experiment/otherLLMs/results/
+!experiment/otherLLMs/
+!experiment/otherLLMs/*.py
+!experiment/otherLLMs/*.json
+!experiment/otherLLMs/*.md
+!sqleek_pipeline/llm/skills/
+!sqleek_pipeline/llm/skills/*.md

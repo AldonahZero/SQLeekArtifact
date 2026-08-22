@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "suffix"
+    ],
+    "Feature": [
+        "suffix"
+    ],
+    "Description": [
+        "ends_with(string, search_string)",
+        "Return true if string ends with search_string."
+    ],
+    "Examples": [
+        "ends_with('abc', 'c')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ends_with('example_string', 'string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 272,
+            "Prompt Tokens": 249,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.1149999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ends_with('example_string', 'string');"
+    ]
+}

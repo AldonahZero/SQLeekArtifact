@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_udt_get/"
+  ],
+  "Title": [
+    "any udt_get ("
+  ],
+  "Feature": [
+    "any udt_get ("
+  ],
+  "Description": [
+    "This function returns a copy of the member named member_name, if any,\n    for type instance udt_inst. It is the functional equivalent of member\n    observer."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

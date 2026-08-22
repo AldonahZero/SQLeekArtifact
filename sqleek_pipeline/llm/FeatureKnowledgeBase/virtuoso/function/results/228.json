@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_request_status/"
+  ],
+  "Title": [
+    "http_request_status ("
+  ],
+  "Feature": [
+    "http_request_status ("
+  ],
+  "Description": [
+    "This allows a VSP page to control the status sent to the client in the HTTP response.\nThe argument will be presented as the first line of the reply instead of the default\n\"HTTP/1.1 200 OK\".  The string should not contain a CR or LF at the end.\nThis allows a page to issue redirects, authentication challenges etc.\nUse it with http_headers to control the content of the HTTP reply headers.\nhttp_headers"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

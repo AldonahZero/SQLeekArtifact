@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_isref/"
+  ],
+  "Title": [
+    "IsRef ("
+  ],
+  "Feature": [
+    "IsRef ("
+  ],
+  "Description": [
+    "Returns true if non-blank IRI"
+  ],
+  "Examples": [
+    "SELECT COUNT(DISTINCT (?o))",
+    "callret-0"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

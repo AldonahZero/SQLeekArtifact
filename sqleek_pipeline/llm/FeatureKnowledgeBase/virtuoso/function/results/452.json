@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_server_root/"
+  ],
+  "Title": [
+    "server_root ("
+  ],
+  "Feature": [
+    "server_root ("
+  ],
+  "Description": [
+    "This function returns the complete physical path to\n    server working directory."
+  ],
+  "Examples": [
+    "callret                                   callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

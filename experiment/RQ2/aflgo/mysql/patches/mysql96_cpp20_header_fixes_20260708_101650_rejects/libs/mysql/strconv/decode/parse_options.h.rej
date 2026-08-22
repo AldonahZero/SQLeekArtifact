@@ -1,0 +1,11 @@
+--- libs/mysql/strconv/decode/parse_options.h
++++ libs/mysql/strconv/decode/parse_options.h
+@@ -99,7 +99,7 @@ struct Compound_parse_options {
+   static constexpr bool has_checker = detail::Checker_count<Tuple_t> > 0;
+   // Deliberate use of `::type`
+   // NOLINTNEXTLINE(modernize-type-traits)
+-  using Format_t = std::conditional_t<
++  using Format_t = typename std::conditional_t<
+       has_format,
+       mysql::utils::Tuple_find_helper<Tuple_t, detail::Is_format_pred>,
+       std::type_identity<Text_format>>::type;

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "split_part(string, separator, index)"
+    ],
+    "Feature": [
+        "split_part(string, separator, index)"
+    ],
+    "Description": [
+        "Split the string along the separator and return the data at the (1-based) index of the list. If the index is outside the bounds of the list, return an empty string (to match PostgreSQL's behavior)."
+    ],
+    "Examples": [
+        "split_part('a;b;c', ';', 2)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT split_part('apple,banana,cherry', ',', 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 331,
+            "Prompt Tokens": 304,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 6.18e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT split_part('apple,banana,cherry', ',', 2);"
+    ]
+}

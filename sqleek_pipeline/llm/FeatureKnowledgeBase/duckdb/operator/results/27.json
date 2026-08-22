@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "-"
+    ],
+    "Feature": [
+        "-"
+    ],
+    "Description": [
+        "subtraction"
+    ],
+    "Examples": [
+        "2 - 3"
+    ],
+    "Category": [
+        "Numeric Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 5 - 3;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 253,
+            "Prompt Tokens": 234,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.65e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 5 - 3;"
+    ]
+}

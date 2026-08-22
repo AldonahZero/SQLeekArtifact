@@ -1,0 +1,51 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "NOT EXISTS()",
+    "Description": [
+        "\nNOT\n            EXISTS(query)\n",
+        "\n            Whether the result of a query contains no rows:\n          ",
+        "Press CTRL+C to copy SELECT NOT EXISTS (SELECT * FROM t WHERE col LIKE 'c%');\n        -> 0\n\nSELECT NOT EXISTS (SELECT * FROM t WHERE col LIKE 'd%');\n        -> 1"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_not-exists",
+    "Feature": [
+        "NOT\n            EXISTS(query)"
+    ],
+    "Examples": [
+        "SELECT NOT EXISTS (SELECT * FROM t WHERE col LIKE 'c%');\n        -> 0\n\nSELECT NOT EXISTS (SELECT * FROM t WHERE col LIKE 'd%');\n        -> 1"
+    ],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Comparison Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT NOT EXISTS (SELECT * FROM t WHERE col LIKE 'c%');",
+        "SELECT NOT EXISTS (SELECT * FROM information_schema.tables WHERE table_name = 'non_existent_table');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 364,
+            "Prompt Tokens": 336,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 6.72e-05
+        },
+        {
+            "Total Tokens": 534,
+            "Prompt Tokens": 501,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 9.495e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_mysql.t' doesn't exist\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT NOT EXISTS (SELECT * FROM information_schema.tables WHERE table_name = 'non_existent_table');"
+    ]
+}

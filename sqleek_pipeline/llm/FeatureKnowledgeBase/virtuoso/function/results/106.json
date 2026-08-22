@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_current_timestamp/"
+  ],
+  "Title": [
+    "current_timestamp ("
+  ],
+  "Feature": [
+    "current_timestamp ("
+  ],
+  "Description": [
+    "Now returns the timestamp associated with current transaction as a DATETIME .\nThe function name refer to one function ( alias of now() ) that\n    returns the timestamp of current transaction. It is the datetime of the beginning of current transaction with the\n    fractional part of seconds replaced with serial number of a transaction within the second. If TimezonelessDatetimes=0 then the time has local timezone offset (as it was set at the time of last\n    server start); otherwise it is timezoneless.\nnow()\nTimezonelessDatetimes=0"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,77 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "keyring_key_remove()",
+    "Description": [
+        "\nkeyring_key_remove(key_id)\n",
+        "\n              Removes the key with a given ID from the keyring.\n            ",
+        "\n              Arguments:\n",
+        "\n\nkey_id: A string that\n                  specifies the key ID.\n\n",
+        "\n              Return value:\n            ",
+        "\n              Returns 1 for success, or NULL for\n              failure.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SELECT keyring_key_remove('AES_key');\n+-------------------------------+\n| keyring_key_remove('AES_key') |\n+-------------------------------+\n|                             1 |\n+-------------------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/keyring-functions-general-purpose.html#function_keyring-key-remove",
+    "Feature": [
+        "keyring_key_remove(key_id)"
+    ],
+    "Examples": [
+        "mysql> SELECT keyring_key_remove('AES_key');\n+-------------------------------+\n| keyring_key_remove('AES_key') |\n+-------------------------------+\n|                             1 |\n+-------------------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT keyring_key_remove('AES_key');",
+        "SELECT keyring_key_remove('sample_key_id');",
+        "SELECT keyring_key_remove('test_key_id');",
+        "SELECT keyring_key_remove('key_id');",
+        "SELECT keyring_key_remove('dummy_key_id');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 417,
+            "Prompt Tokens": 395,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 7.245e-05
+        },
+        {
+            "Total Tokens": 577,
+            "Prompt Tokens": 554,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 9.69e-05
+        },
+        {
+            "Total Tokens": 737,
+            "Prompt Tokens": 714,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00012089999999999998
+        },
+        {
+            "Total Tokens": 896,
+            "Prompt Tokens": 874,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.00014429999999999998
+        },
+        {
+            "Total Tokens": 1056,
+            "Prompt Tokens": 1033,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00016874999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.keyring_key_remove does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.keyring_key_remove does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.keyring_key_remove does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.keyring_key_remove does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.keyring_key_remove does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

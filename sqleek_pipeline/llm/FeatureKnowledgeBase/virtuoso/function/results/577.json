@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sys_stat_histogram/"
+  ],
+  "Title": [
+    "sys_stat_histogram ("
+  ],
+  "Feature": [
+    "sys_stat_histogram ("
+  ],
+  "Description": [
+    "This function collects (or updates) values distribution data for a given column.\nIt splits the sorted column values in n_buckets intervals and collects the last value of each interval.\nThe values are then inserted into the SYS_COL_HIST table.\nIf the table in question has not been analyzed, then it calls SYS_STAT_ANALYZE for the table.\nThe histograms are then used by the Optimized SQL compiler. All the cached compilations are\ndiscarded, because some of them may compile differently in the light of the new data."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

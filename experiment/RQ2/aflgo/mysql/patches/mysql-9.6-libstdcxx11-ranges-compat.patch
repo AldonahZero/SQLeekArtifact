@@ -1,0 +1,55 @@
+--- a/sql/dd/impl/upgrade/server.cc
++++ b/sql/dd/impl/upgrade/server.cc
+@@ -271,8 +271,8 @@ void comma_separated_join(std::vector<dd::String_type> &list,
+                           dd::String_type &dest) {
+   assert(!list.empty());
+   dest.append(list.front());
+-  for (const dd::String_type &elt : list | std::ranges::views::drop(1)) {
+-    dest.append(", ").append(elt);
++  for (size_t idx = 1; idx < list.size(); ++idx) {
++    dest.append(", ").append(list[idx]);
+   }
+ }
+ 
+@@ -303,11 +303,10 @@ class MySQL_check {
+     append_escaped(tables_list, sch->name()).append(1, '.');
+     append_escaped(tables_list, schema_table_names.front());
+ 
+-    for (const dd::String_type &table_name :
+-         schema_table_names | std::ranges::views::drop(1)) {
++    for (size_t idx = 1; idx < schema_table_names.size(); ++idx) {
+       tables_list.append(", ");
+       append_escaped(tables_list, sch->name()).append(1, '.');
+-      append_escaped(tables_list, table_name);
++      append_escaped(tables_list, schema_table_names[idx]);
+     }
+ 
+     return false;
+   }
+
+--- a/libs/mysql/strconv/decode/parser.h
++++ b/libs/mysql/strconv/decode/parser.h
+@@ -30,5 +30,6 @@
+ #include <string_view>                             // string_view
+ #include <type_traits>                             // remove_cvref_t
++#include <compare>                                 // strong_ordering
+ #include "mysql/strconv/decode/parse_options.h"    // Is_parse_options
+ #include "mysql/strconv/decode/parse_position.h"   // Parse_position
+ #include "mysql/strconv/decode/parse_result.h"     // Parse_result
+@@ -81,6 +82,16 @@ class Parser : public detail::Parse_position<Parser>,
+   explicit Parser(const std::string_view &source, std::size_t pos_arg = 0)
+       : Parse_position(source, pos_arg) {}
+ 
++  friend bool operator==(const Parser &lhs, const Parser &rhs) {
++    return lhs.distance_from(rhs) == 0;
++  }
++
++  friend std::strong_ordering operator<=>(const Parser &lhs,
++                                          const Parser &rhs) {
++    return lhs.distance_from(rhs) <=> 0;
++  }
++
++
+   // ==== Report parse_error at current position ====
+ 
+   /// Store a result representing that the requested object could not be parsed

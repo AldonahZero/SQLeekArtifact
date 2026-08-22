@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-comparison.html"
+    ],
+    "Title": [
+        "datatype > datatype"
+    ],
+    "Feature": [
+        "datatype > datatype \u2192 boolean"
+    ],
+    "Description": [
+        "Greater than"
+    ],
+    "Examples": [],
+    "Category": [
+        "Comparison Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 5 > 3;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 262,
+            "Prompt Tokens": 243,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.785e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 5 > 3;"
+    ]
+}

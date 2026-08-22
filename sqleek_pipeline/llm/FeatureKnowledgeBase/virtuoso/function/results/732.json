@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xper_cut/"
+  ],
+  "Title": [
+    "xper_cut ("
+  ],
+  "Feature": [
+    "xper_cut ("
+  ],
+  "Description": [
+    "As noted in the Storage in Database section,\na subtree may be extracted from a document during writing of \"persistent XML\"\nentity into field of type LONG VARCHAR. The procedure of converting a subtree into\ncomplete document is known as \"cutting\". Cutting is performed only for\n\"persistent XML\" documents, it has nothing common with serialization of\nXML entities in form of plain XML text.\nUsually it is the job of the Server itself who\ndecides whether a cutting operation should be performed or not, without any specific\nactivity at application level.\nThe CPU time occupied due to cutting is up to 10 times greater than the CPU time of plain copying of LONG VARCHAR,\nbut the amount of disk I/O is about the same, so the optimization rules discussed below are\nimportant only for time-critical, memory-located database applications.\nThe Virtuoso Server tries to reduce the number of cuttings to an absolute minimum.\nFirst of all, cutting is not performed when a given XML entity\nrefers to the root of the document, or to the only child of the root,\nbecause the result of such cutting will be identical to original document.\nIn addition, every document remembers the result of last cutting performed on data from\nthis document, so if data of some XML entity are saved in many places without saving of\nother XML entities between them, cutting will be done only once and plain copying will\nbe done for every subsequent saving.\nThe only situation when cutting may be seriously optimized by the application developer is in code\nlike the following:\ndeclare _blank_forms, _plain, _isdn any;\n_blank_forms := xml_persistent ('file://blank_forms.xml');\n_plain = xpath_eval ('/forms/form[@name = ''Phone Installation'']', _blank_forms);\n_isdn = xpath_eval ('/forms/form[@name = ''ISDN Installation'']', _blank_forms);\nfor select ID as _id, SERVICE as _service, ADDRESS as _address from CLIENTS do\n{\n  if (is_isdn(_service))\n    {\n      insert into JOB_DETAILS (ID, QUERY_XML) values (_id, _isdn);\n    }\n  else\n    {\n      insert into JOB_DETAILS (ID, QUERY_XML) values (_id, _plain);\n    }\n}\nCalls of xpath_eval are outside the loop, so it is faster than retrieval of suitable form for\nevery selected record. But values of both _plain and _isdn shares the same underlying XML document\nand they will be assigned many times by the 'insert' operation. The XML document has no place to cache\ntwo results of cuttings, so new cutting will be done every time\nwhen _isdn entity is saved after _plain or _plain saved after _isdn. To optimize, it is better to\ncut them once outside the loop:\ndeclare _blank_forms, _plain, _isdn any;\n_blank_forms := xml_persistent ('file://blank_forms.xml');\n_plain = xper_cut (xpath_eval ('/forms/form[@name = ''Phone Installation'']', _blank_forms));\n_isdn = xper_cut (xpath_eval ('/forms/form[@name = ''ISDN Installation'']', _blank_forms));\nfor select ID as _id, SERVICE as _service from CLIENTS do\n{\n  if (is_isdn(_service))\n    {\n-- _isdn entity points to the root of its own document, cutting is not needed for root.\n      insert into JOB_DETAILS (ID, QUERY_XML) values (_id, _isdn);\n    }\n  else\n    {\n-- similarly, _plain entity points to the root of its own document.\n      insert into JOB_DETAILS (ID, QUERY_XML) values (_id, _plain);\n    }\n}\n-- If no records found by the 'select' and no inserts done,\n-- then we've made two cuts for nothing...\nThe current node of the resulting entity is the node that is a copy\nof the current node of the source entity. In common,\nthe top-level node of the copied subtree becomes the current node of the result.\nThere are two special cases, however. If the source entity is an attribute entity,\nthen the result is also an attribute entity and the attribute name remains the same.\nIf the source entity points to the root of the document, the resulting entity\nalso points to the root, not to its top-level node."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

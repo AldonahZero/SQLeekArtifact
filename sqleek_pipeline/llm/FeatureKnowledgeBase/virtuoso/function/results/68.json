@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cfg_section_name/"
+  ],
+  "Title": [
+    "cfg_section_name ("
+  ],
+  "Feature": [
+    "cfg_section_name ("
+  ],
+  "Description": [
+    "Returns the name of section specified by the index\n    (begins from zero). If the index can reference a section, the that\n    section name is returned, otherwise returns zero on error."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

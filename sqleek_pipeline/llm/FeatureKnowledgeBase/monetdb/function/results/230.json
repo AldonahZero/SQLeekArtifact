@@ -1,0 +1,56 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/json-functions"
+    ],
+    "Title": [
+        "json.number(js)"
+    ],
+    "Feature": [
+        "json.number(js)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double",
+        "turn a number or singleton array value or singleton object tag of js into a double. Returns null if it fails."
+    ],
+    "Examples": [
+        "json.number(json '{\"n\":4}')"
+    ],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT json.number(js) AS result;",
+        "SELECT json.number('42') AS result;",
+        "SELECT json.number('[42]') AS result;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 296,
+            "Prompt Tokens": 276,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.34e-05
+        },
+        {
+            "Total Tokens": 600,
+            "Prompt Tokens": 579,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 9.944999999999998e-05
+        },
+        {
+            "Total Tokens": 753,
+            "Prompt Tokens": 731,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.00012284999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 'js' unknown\n\n",
+        "(pymonetdb.exceptions.OperationalError) JSON syntax error: json parse failed, expecting '{', '['\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT json.number('[42]') AS result;"
+    ]
+}

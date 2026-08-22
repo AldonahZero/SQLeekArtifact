@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_mime_tree/"
+  ],
+  "Title": [
+    "array mime_tree ("
+  ],
+  "Feature": [
+    "array mime_tree ("
+  ],
+  "Description": [
+    "This function is intended to parse MIME (RFC2045) messages (coming from a RFC822 or HTTP sources).\nIt parses the text and produces an array structure representing the structure of the MIME message.\nIt copies into the structure MIME headers, but for the MIME bodies it only stores start and end offsets,\nthus optimizing space usage.\nThe parameters to mime_tree are:\nIf flag is 1, the \"root\" message follows RFC822. This means mime_tree will unfold the attributes,\nwill scan for MIME registered header fields and will take their attributes.  Alternately this can be a MIME message\nwhich needs no unfolding and has attributes separated with semicolon.\nIf flag is 2, the \"root\" message follows RFC2045. This means mime_tree will scan for MIME attributes.\nIn either cases mime_tree will look for the Content-Type header field and will parse\nthe \"message/rfc822\" and \"multipart/digest\" MIME bodies as nested messages.\nmime_tree will return an array of 3 elements (message descriptor) with the following structure:"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

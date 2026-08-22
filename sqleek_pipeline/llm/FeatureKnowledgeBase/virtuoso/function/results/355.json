@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_loader_run/"
+  ],
+  "Title": [
+    "rdf_loader_run ("
+  ],
+  "Feature": [
+    "rdf_loader_run ("
+  ],
+  "Description": [
+    "Virtuoso Bulk Loader function that performs bulk load. The function recognizes several file types, including .ttl,\n    \t.nt, .xml, .rdf, .owl, .nq, .n4, and others. Internally the function uses ttlp or db..rdf_load_rdfxml, as appropriate.\n    \tPlease see more details for what file formats and file extensions are supported.\nNote: The Virtuoso Bulk Loader functions must be present. They are pre-loaded starting with\n    commercial version 06.02.3129 and open source version 6.1.3, but must be manually loaded into older versions."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

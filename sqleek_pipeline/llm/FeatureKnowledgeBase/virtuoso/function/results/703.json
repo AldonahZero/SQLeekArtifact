@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_doc_output_option/"
+  ],
+  "Title": [
+    "varchar xml_doc_output_option ("
+  ],
+  "Feature": [
+    "varchar xml_doc_output_option ("
+  ],
+  "Description": [
+    "This function reads or updates the specified XSLT output option value\n      of the given xml_entity .\nxml_entity\nThe function updates the option if parameter option_value is provided, otherwise it returns the\n    current value of the option without any side effects.\noption_value\nSupported options are \"method\", \"version\", \"encoding\", \"omit-xml-declaration\", \"standalone\", \"doctype-public\",\n    \t\"doctype-system\", \"indent\" and \"media-type\", but do not support\"cdata-section-elements\". When the entity is serialized,\n    \tthe effect is very similar to the effect of the same option specified in xsl:output element of an XSLT that created\n    \tthe entity.\nNote that output options are properties of the whole document, not properties of some particular node in the\n    \tdocument, so the effect of the update is document-wide. Please also note that the effect of 'preamble' options\n    \t\"omit-xml-declaration\", \"standalone\", \"doctype-public\" and \"doctype-system\" is visible only when the root entity\n    \tof the document is serialized, not any descendant entity. Even the serialization of top-level element of the\n    \tdocument is not affected by these settings. The XML preamble is serialized only if the document is composed by\n    \tan XSLT processor or \"doctype-system\" is set or at least one of two boolean properties \"omit-xml-declaration\"\n    \tand \"standalone\" is set to \"yes\".\nAccording to the DTD rules, \"doctype-public\" has no effect on serialization if \"doctype-system\" is not set."
+  ],
+  "Examples": [
+    "create function test_output_option (",
+    "select test_output_option (",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_client_ip/"
+  ],
+  "Title": [
+    "varchar http_client_ip ("
+  ],
+  "Feature": [
+    "varchar http_client_ip ("
+  ],
+  "Description": [
+    "This function is used to determine the IP address or DNS name of \n    the calling client.\nPlease note that this function is slow when resolving a DNS names. \n    It is advisable to use IP addresses to to make applications faster."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

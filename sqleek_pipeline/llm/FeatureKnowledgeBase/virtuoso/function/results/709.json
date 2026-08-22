@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_set_ns_decl/"
+  ],
+  "Title": [
+    "xml_set_ns_decl ("
+  ],
+  "Feature": [
+    "xml_set_ns_decl ("
+  ],
+  "Description": [
+    "Registers the XML NS prefix as persistent or keeps it in properties of client\nconnection depending on the persistance bits input value."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

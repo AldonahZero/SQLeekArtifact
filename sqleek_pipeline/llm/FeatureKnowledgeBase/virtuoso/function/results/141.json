@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dns_txt_get/"
+  ],
+  "Title": [
+    "varchar dns_txt_get ("
+  ],
+  "Feature": [
+    "varchar dns_txt_get ("
+  ],
+  "Description": [
+    "This function can be used for DNS text record retrieval. It works on UNIX, Windows, Mac OS X w/o \n    additional libraries."
+  ],
+  "Examples": [
+    "SELECT dns_txt_get (null, 'x._domainkey.example.com');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_md5/"
+  ],
+  "Title": [
+    "checksum md5 ("
+  ],
+  "Feature": [
+    "checksum md5 ("
+  ],
+  "Description": [
+    "md5 calculates the MD5 checksum of its argument.\n    The md5 message digest algorithm is defined in RFC1321 .\nmd5"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

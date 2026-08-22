@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-admin.html"
+    ],
+    "Title": [
+        "pg_replication_origin_oid"
+    ],
+    "Feature": [
+        "pg_replication_origin_oid ( node_name text ) \u2192 oid"
+    ],
+    "Description": [
+        "Looks up a replication origin by name and returns the internal ID. If no such replication origin is found, NULL is returned."
+    ],
+    "Examples": [],
+    "Category": [
+        "System Administration Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pg_replication_origin_oid('your_node_name');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 303,
+            "Prompt Tokens": 279,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.625e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pg_replication_origin_oid('your_node_name');"
+    ]
+}

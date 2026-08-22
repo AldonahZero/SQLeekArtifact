@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ldap_search/"
+  ],
+  "Title": [
+    "any ldap_search ("
+  ],
+  "Feature": [
+    "any ldap_search ("
+  ],
+  "Description": [
+    "This function performs a search in the LDAP server.  It returns control to\nthe Virtuoso/PL environment only after all of the search results have been sent by the server\nor if the search request is timed out by the server.  The result of the search\n(attributes, names of the attributes, etc.) will be returned as an array result.  Options\nto the LDAP search can be passed as an array."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

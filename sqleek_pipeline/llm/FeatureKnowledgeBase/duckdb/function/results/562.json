@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "localtimestamp"
+    ],
+    "Feature": [
+        "localtimestamp"
+    ],
+    "Description": [
+        "Synonym for the current_localtimestamp() function call."
+    ],
+    "Examples": [
+        "localtimestamp"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT localtimestamp;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 263,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.6649999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT localtimestamp;"
+    ]
+}

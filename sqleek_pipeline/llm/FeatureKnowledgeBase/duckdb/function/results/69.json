@@ -1,0 +1,56 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/aggregates"
+    ],
+    "Title": [
+        "argmin(arg, val, n)"
+    ],
+    "Feature": [
+        "argmin(arg, val, n)"
+    ],
+    "Description": [
+        "arg_min(arg, val, n)",
+        "Returns a LIST containing the arg expressions for the \"bottom\" n rows ordered by val ascending. This function is affected by ordering.",
+        "The generalized case of arg_min for n values: returns a LIST containing the arg expressions for the top n rows ordered by val descending. This function is affected by ordering."
+    ],
+    "Examples": [
+        "arg_min(A, B, 2)"
+    ],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT argmin(arg, val, 3);",
+        "SELECT argmin(column1, column2, 3) FROM my_table;",
+        "SELECT argmin(column1, column2, 3) FROM (SELECT 1 AS column1, 2 AS column2 UNION ALL SELECT 3, 1 UNION ALL SELECT 2, 3);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 353,
+            "Prompt Tokens": 330,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 6.33e-05
+        },
+        {
+            "Total Tokens": 533,
+            "Prompt Tokens": 505,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 9.255e-05
+        },
+        {
+            "Total Tokens": 754,
+            "Prompt Tokens": 698,
+            "Completion Tokens": 56,
+            "Total Cost (USD)": 0.00013829999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"arg\" not found in FROM clause!\nLINE 1: SELECT argmin(arg, val, 3);\n                      ^\n",
+        "(duckdb.duckdb.CatalogException) Catalog Error: Table with name my_table does not exist!\nDid you mean \"pg_tables\"?\nLINE 1: ...ELECT argmin(column1, column2, 3) FROM my_table;\n                                                  ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT argmin(column1, column2, 3) FROM (SELECT 1 AS column1, 2 AS column2 UNION ALL SELECT 3, 1 UNION ALL SELECT 2, 3);"
+    ]
+}

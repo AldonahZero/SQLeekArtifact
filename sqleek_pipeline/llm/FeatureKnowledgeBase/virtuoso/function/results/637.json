@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_var/"
+  ],
+  "Title": [
+    "numeric VAR ("
+  ],
+  "Feature": [
+    "numeric VAR ("
+  ],
+  "Description": [
+    "VAR (VARIANCE) returns variance of expr.\nVirtuoso calculates the variance of expr as follows: 0 if the number of rows in expr = 1; \nVAR_SAMP if the number of rows in expr > 1"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

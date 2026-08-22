@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_print_box/"
+  ],
+  "Title": [
+    "soap_print_box ("
+  ],
+  "Feature": [
+    "soap_print_box ("
+  ],
+  "Description": [
+    "This function formats an SQL value as an XML fragment and returns it.\nThis is used internally by the SOAP server to encode the output parameter values and return values when\nprocessing a SOAP request."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

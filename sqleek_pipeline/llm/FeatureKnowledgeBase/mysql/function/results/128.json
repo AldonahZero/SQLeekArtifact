@@ -1,0 +1,47 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "INTERNAL_CHECKSUM()",
+    "Description": [
+        "\nINTERNAL_CHECKSUM(ARGS)\n"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/internal-functions.html#function_internal-checksum",
+    "Feature": [
+        "INTERNAL_CHECKSUM(ARGS)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Internal Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT INTERNAL_CHECKSUM('example_input');",
+        "SELECT 1 + 1;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 292,
+            "Prompt Tokens": 271,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.325e-05
+        },
+        {
+            "Total Tokens": 449,
+            "Prompt Tokens": 430,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 7.59e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (3566, \"Access to native function 'INTERNAL_CHECKSUM' is rejected.\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 1 + 1;"
+    ]
+}

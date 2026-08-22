@@ -1,0 +1,5 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+postgresql_sqleek_r1,PostgreSQL,1,executor,SQLeek,2,1,0.5,2,2,1.0
+postgresql_sqleek_r1,PostgreSQL,1,storage,SQLeek,6,0,0.0,4,0,0.0
+postgresql_sqleek_r1,PostgreSQL,1,type_system,SQLeek,4,3,0.75,6,6,1.0
+postgresql_sqleek_r1,PostgreSQL,1,other,SQLeek,4,3,0.75,4,4,1.0

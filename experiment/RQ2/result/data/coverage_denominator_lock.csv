@@ -1,0 +1,5 @@
+dbms,risk_branches_total,risk_targets_total,global_branches_total,target_regions_sha256,coverage_image_id,binary_sha256,llvm_cov_version,notes
+PostgreSQL,3235.84,46,249514,bb361c4ac591d60f83f1e26a951327221204f40d6018750d574263d8eab41b5d,sha256:9e1f5e77e6d8c0c84685da0ac37e49dda35c1545406e8fa01edb881ea2bbec7f,bc5efc7548f18b7ce7ecea09219be1075c6fa8b972e1bfb130ebb3c114d6625d,LLVM 12.0.1,PostgreSQL target-branch denominator for the source replay package
+MySQL,4602,1445,326944,,,,Existing single-build denominator; provenance digest must be filled before final paper release
+MariaDB,4248,3041,295012,fa0bb3709b3b33e39d03e36409990b65fc97966d86b4a6385bed616d49550214,sha256:72dca978bc11dfaa13cef3bb4dee055edb94e142713f64052006c3bf7c92eaf3,49663695fe796c3121a9f831cfa331109e46a4492a363098d23643e689de315d,LLVM 12.0.1,Full MariaDB export denominator; target-filtered AFLGo export is excluded
+MonetDB,120042,10233,301870,,,,Existing single-build denominator; provenance digest must be filled before final paper release

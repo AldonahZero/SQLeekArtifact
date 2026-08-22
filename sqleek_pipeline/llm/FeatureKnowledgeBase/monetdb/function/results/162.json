@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "extract(field from dt_value)"
+    ],
+    "Feature": [
+        "extract(field from dt_value)"
+    ],
+    "Description": [
+        "Return type: ",
+        "int",
+        "extract a specific field from a date or time or timestamp. Supported keywords for field are: CENTURY, DECADE, YEAR, QUARTER, MONTH, WEEK, DAY, DOW, DOY, HOUR, MINUTE and SECOND."
+    ],
+    "Examples": [
+        "extract(doy from date '2027-03-22')"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT extract(YEAR FROM dt_value);",
+        "SELECT extract(YEAR FROM CURRENT_TIMESTAMP);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 332,
+            "Prompt Tokens": 311,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.925e-05
+        },
+        {
+            "Total Tokens": 485,
+            "Prompt Tokens": 464,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 8.219999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 'dt_value' unknown\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT extract(YEAR FROM CURRENT_TIMESTAMP);"
+    ]
+}

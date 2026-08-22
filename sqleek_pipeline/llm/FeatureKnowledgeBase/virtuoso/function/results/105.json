@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_current_charset/"
+  ],
+  "Title": [
+    "current_charset ("
+  ],
+  "Feature": [
+    "current_charset ("
+  ],
+  "Description": [
+    "This function returns the \"preferred\" name of the current charset as a string.\nIt returns value which is set in the INI file or those which is set with 'SET CHARSET=..'\n\t  call. This cannot be used to return charset for the current HTTP connection in the VSP or VSPX context."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

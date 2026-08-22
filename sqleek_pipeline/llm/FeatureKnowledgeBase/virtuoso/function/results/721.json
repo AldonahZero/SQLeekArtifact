@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlappendchildren/"
+  ],
+  "Title": [
+    "XMLAppendChildren ("
+  ],
+  "Feature": [
+    "XMLAppendChildren ("
+  ],
+  "Description": [
+    "The function modifies the XML document of the given source XML tree entity by adding new children to\nthe node specified by the entity. The source entity should be XML tree entity, not \"persistent XML\" entity.\nThe value of source can be either an element entity or a root entity; source can not be an attribute entity or a leaf entity like text or processing instruction.\nsource\nsource\nsource\nsource\nThe values passed in parameters insertion1 ... insertionN will be converted into\nXML nodes according to rules described in section Composing Document Fragments From DOM Function Arguments.\ninsertion1\ninsertionN\nAfter calling the function, parameter source is still a valid XML entity that points to the modified node.\nThe value passed as source can be used in the rest of caller procedure.\nsource\nsource"
+  ],
+  "Examples": [
+    "create procedure XMLAppendChildren_demo()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,34 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_attach_from_csv/"
+  ],
+  "Title": [
+    "attach_from_csv ("
+  ],
+  "Feature": [
+    "attach_from_csv ("
+  ],
+  "Description": [
+    "This function attaches CSV files as virtual tables in Virtuoso, enabling them to be queried as if local\n    \tto the Virtuoso database schema."
+  ],
+  "Examples": [
+    "Create CSV file named contacts1.csv : $ cat > contacts1.csv",
+    "Create CSV file named contacts1.csv :",
+    "Call the attach_from_csv function from iSQL or Virtuoso Conductor UI ( http://host:port/conductor ) . Note: As the pkey_columns parameter",
+    "Call the attach_from_csv function from iSQL or Virtuoso Conductor UI ( http://host:port/conductor ) . Note: As the pkey_columns parameter",
+    "Create CSV file named contacts2.csv : $ cat > contacts2.csv",
+    "Create CSV file named contacts2.csv :",
+    "Call the attach_from_csv function from iSQL or Virtuoso Conductor UI ( http://host:port/conductor ): SQL> attach_from_csv ('csv.tutorials.contacts2', 'file:contacts2.csv', ',', '\\n', null, 1, vector(1,2));",
+    "Call the attach_from_csv function from iSQL or Virtuoso Conductor UI ( http://host:port/conductor ):",
+    "Create CSV file named contacts3.csv : $ cat > contacts3.csv",
+    "Create CSV file named contacts3.csv :"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

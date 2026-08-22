@@ -1,0 +1,6 @@
+dbms,tool,run,source_dir,start_time,logSaved_griffin_logs,dedup_list
+MySQL,SQLeek,r1,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd1,2026-06-02 16:36:51,8,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd1/unique_bugs/dedup_list.txt
+MySQL,SQLeek,r2,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd2,2026-05-31 16:32:23,21,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd2/unique_bugs/dedup_list.txt
+MySQL,SQLeek,r3,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd3,2026-06-29 11:21:00,20,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd3/unique_bugs/dedup_list.txt
+MySQL,SQLeek,r4,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd4,2026-06-29 11:21:07,17,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd4/unique_bugs/dedup_list.txt
+MySQL,SQLeek,r5,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd5,2026-06-29 11:21:03,46,/root/dfuzz-griffin/griffin_output/griffin_mysql_sqleek_rnd5/unique_bugs/dedup_list.txt

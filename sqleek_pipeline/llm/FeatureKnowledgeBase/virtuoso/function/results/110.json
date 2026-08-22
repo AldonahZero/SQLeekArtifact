@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_datestring/"
+  ],
+  "Title": [
+    "datestring ("
+  ],
+  "Feature": [
+    "datestring ("
+  ],
+  "Description": [
+    "datestring and datestring_gmt convert timestamps or datetimes from internal to external date-time representation.\n    The external representation is a human-readable ASCII string of\n    up to 30 characters.\ndatestring\nThe external format is: YYYY-MM-DD hh:mm:ss uuuuuu where uuuuuu represents\n    microseconds.\nYYYY-MM-DD hh:mm:ss uuuuuu\nuuuuuu\nUsing cast (dt as varchar) is preferred over datestring .\ncast (dt as varchar)\ndatestring"
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

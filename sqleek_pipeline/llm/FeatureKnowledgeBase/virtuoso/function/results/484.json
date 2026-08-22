@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sparql_eval/"
+  ],
+  "Title": [
+    "DB.DBA.SPARQL_EVAL ("
+  ],
+  "Feature": [
+    "DB.DBA.SPARQL_EVAL ("
+  ],
+  "Description": [
+    "Local execution of SPARQL via SPARQL protocol, produces a result set of SQL values."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

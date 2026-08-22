@@ -1,0 +1,537 @@
+{
+  "callchains_source": "/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/callchains.json",
+  "generation_method": "ground_truth for key fns; no LLM key",
+  "phi_mapping": {
+    "GDKmalloc": [
+      "MEMORY_ALLOCATION",
+      "COLUMN_STORE"
+    ],
+    "GDKrealloc": [
+      "MEMORY_ALLOCATION",
+      "COLUMN_STORE"
+    ],
+    "GDKstrdup": [
+      "STRING_FUNCTION",
+      "MEMORY_ALLOCATION"
+    ],
+    "SQLengine": [
+      "QUERY_EXECUTION",
+      "SQL_ENGINE",
+      "SELECT"
+    ],
+    "SQLengine_": [
+      "QUERY_EXECUTION",
+      "SQL_ENGINE",
+      "SELECT"
+    ],
+    "SQLparser": [
+      "SQL_PARSE",
+      "SELECT",
+      "DDL"
+    ],
+    "_rel_aggr": [
+      "UNKNOWN"
+    ],
+    "_rel_nop": [
+      "UNKNOWN"
+    ],
+    "bind_func": [
+      "UNKNOWN"
+    ],
+    "bind_func_": [
+      "UNKNOWN"
+    ],
+    "exp_between_check_types": [
+      "UNKNOWN"
+    ],
+    "exp_bin": [
+      "UNKNOWN"
+    ],
+    "exp_bin_conjunctive": [
+      "UNKNOWN"
+    ],
+    "exp_exist": [
+      "UNKNOWN"
+    ],
+    "exp_fix_scale": [
+      "UNKNOWN"
+    ],
+    "exp_freevar": [
+      "UNKNOWN"
+    ],
+    "exp_has_freevar": [
+      "UNKNOWN"
+    ],
+    "exp_key": [
+      "UNKNOWN"
+    ],
+    "exp_only_freevar": [
+      "UNKNOWN"
+    ],
+    "exp_set_freevar": [
+      "UNKNOWN"
+    ],
+    "exp_tuples_set_supertype": [
+      "UNKNOWN"
+    ],
+    "freeMalBlk": [
+      "MAL_EXECUTION",
+      "MEMORY_MANAGEMENT"
+    ],
+    "group_by_pk_project_uk_cond": [
+      "UNKNOWN"
+    ],
+    "is_project_true": [
+      "UNKNOWN"
+    ],
+    "join_on_column_name": [
+      "UNKNOWN"
+    ],
+    "memcpy": [
+      "MEMORY_COPY",
+      "COLUMN_STORE"
+    ],
+    "memmove": [
+      "MEMORY_COPY",
+      "COLUMN_STORE"
+    ],
+    "monetdbe_query_internal": [
+      "QUERY_EXECUTION",
+      "EMBEDDED_API",
+      "SELECT"
+    ],
+    "push_join_exp": [
+      "UNKNOWN"
+    ],
+    "query_exp_optname": [
+      "UNKNOWN"
+    ],
+    "rel2bin_antijoin": [
+      "UNKNOWN"
+    ],
+    "rel2bin_groupjoin": [
+      "UNKNOWN"
+    ],
+    "rel2bin_project": [
+      "UNKNOWN"
+    ],
+    "rel_bind_var": [
+      "UNKNOWN"
+    ],
+    "rel_bind_vars": [
+      "UNKNOWN"
+    ],
+    "rel_binop_": [
+      "UNKNOWN"
+    ],
+    "rel_binop_check_types": [
+      "UNKNOWN"
+    ],
+    "rel_case": [
+      "UNKNOWN"
+    ],
+    "rel_cast": [
+      "UNKNOWN"
+    ],
+    "rel_column_exp": [
+      "UNKNOWN"
+    ],
+    "rel_column_ref": [
+      "UNKNOWN"
+    ],
+    "rel_compare": [
+      "UNKNOWN"
+    ],
+    "rel_compare_exp": [
+      "UNKNOWN"
+    ],
+    "rel_complex_case": [
+      "UNKNOWN"
+    ],
+    "rel_exists_exp": [
+      "UNKNOWN"
+    ],
+    "rel_exists_value_exp": [
+      "UNKNOWN"
+    ],
+    "rel_exp_variable_on_scope": [
+      "UNKNOWN"
+    ],
+    "rel_file_loader": [
+      "UNKNOWN"
+    ],
+    "rel_filter_exp_": [
+      "UNKNOWN"
+    ],
+    "rel_freevar": [
+      "UNKNOWN"
+    ],
+    "rel_get_count": [
+      "UNKNOWN"
+    ],
+    "rel_group_column": [
+      "UNKNOWN"
+    ],
+    "rel_groupings": [
+      "UNKNOWN"
+    ],
+    "rel_has_freevar": [
+      "UNKNOWN"
+    ],
+    "rel_having_limits_nodes": [
+      "UNKNOWN"
+    ],
+    "rel_in_exp": [
+      "UNKNOWN"
+    ],
+    "rel_in_value_exp": [
+      "UNKNOWN"
+    ],
+    "rel_joinquery": [
+      "UNKNOWN"
+    ],
+    "rel_joinquery_": [
+      "UNKNOWN"
+    ],
+    "rel_lastexp": [
+      "UNKNOWN"
+    ],
+    "rel_loader_function": [
+      "UNKNOWN"
+    ],
+    "rel_logical_value_exp": [
+      "UNKNOWN"
+    ],
+    "rel_named_table_function": [
+      "UNKNOWN"
+    ],
+    "rel_next_value_for": [
+      "UNKNOWN"
+    ],
+    "rel_nop": [
+      "UNKNOWN"
+    ],
+    "rel_nop_": [
+      "UNKNOWN"
+    ],
+    "rel_only_freevar": [
+      "UNKNOWN"
+    ],
+    "rel_order_by": [
+      "UNKNOWN"
+    ],
+    "rel_order_by_column_exp": [
+      "UNKNOWN"
+    ],
+    "rel_orderby": [
+      "UNKNOWN"
+    ],
+    "rel_partition_groupings": [
+      "UNKNOWN"
+    ],
+    "rel_query": [
+      "UNKNOWN"
+    ],
+    "rel_rankop": [
+      "UNKNOWN"
+    ],
+    "rel_reduce_on_column_privileges": [
+      "UNKNOWN"
+    ],
+    "rel_rename": [
+      "SELECT",
+      "SQL_REWRITE",
+      "RELATIONAL_OPTIMIZER"
+    ],
+    "rel_select_exp": [
+      "UNKNOWN"
+    ],
+    "rel_select_push_compare_exp_down": [
+      "UNKNOWN"
+    ],
+    "rel_select_push_filter_exp_down": [
+      "UNKNOWN"
+    ],
+    "rel_selects": [
+      "UNKNOWN"
+    ],
+    "rel_setquery_corresponding": [
+      "UNKNOWN"
+    ],
+    "rel_setquery_n_ary_": [
+      "UNKNOWN"
+    ],
+    "rel_subquery": [
+      "UNKNOWN"
+    ],
+    "rel_subquery_optname": [
+      "UNKNOWN"
+    ],
+    "rel_table_exp": [
+      "UNKNOWN"
+    ],
+    "rel_table_optname": [
+      "UNKNOWN"
+    ],
+    "rel_table_projections": [
+      "UNKNOWN"
+    ],
+    "rel_unique_names": [
+      "UNKNOWN"
+    ],
+    "rel_unnest": [
+      "UNKNOWN"
+    ],
+    "rel_unop_": [
+      "UNKNOWN"
+    ],
+    "rel_value_exp": [
+      "UNKNOWN"
+    ],
+    "rel_value_exp2": [
+      "UNKNOWN"
+    ],
+    "rel_where_groupby_nodes": [
+      "UNKNOWN"
+    ],
+    "rel_with_query": [
+      "UNKNOWN"
+    ],
+    "resetMalBlk": [
+      "MAL_EXECUTION",
+      "MEMORY_MANAGEMENT"
+    ],
+    "runMALsequence": [
+      "MAL_EXECUTION",
+      "QUERY_EXECUTION",
+      "SELECT"
+    ],
+    "run_exp_rewriter": [
+      "UNKNOWN"
+    ],
+    "run_rel_rewriter": [
+      "UNKNOWN"
+    ],
+    "schema_selects": [
+      "UNKNOWN"
+    ],
+    "simple_selection": [
+      "UNKNOWN"
+    ],
+    "sql_insert_check": [
+      "UNKNOWN"
+    ],
+    "sql_insert_triggers": [
+      "UNKNOWN"
+    ],
+    "sql_reorder": [
+      "UNKNOWN"
+    ],
+    "subrel_project": [
+      "UNKNOWN"
+    ],
+    "write_out": [
+      "COPY",
+      "STREAM_IO",
+      "BINARY_PAYLOAD"
+    ]
+  },
+  "validation_vs_ground_truth": {
+    "GDKmalloc": {
+      "f1": 1.0,
+      "ground_truth": [
+        "MEMORY_ALLOCATION",
+        "COLUMN_STORE"
+      ],
+      "llm_clauses": [
+        "COLUMN_STORE",
+        "MEMORY_ALLOCATION"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "GDKrealloc": {
+      "f1": 1.0,
+      "ground_truth": [
+        "MEMORY_ALLOCATION",
+        "COLUMN_STORE"
+      ],
+      "llm_clauses": [
+        "COLUMN_STORE",
+        "MEMORY_ALLOCATION"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "GDKstrdup": {
+      "f1": 1.0,
+      "ground_truth": [
+        "STRING_FUNCTION",
+        "MEMORY_ALLOCATION"
+      ],
+      "llm_clauses": [
+        "MEMORY_ALLOCATION",
+        "STRING_FUNCTION"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "SQLengine": {
+      "f1": 1.0,
+      "ground_truth": [
+        "QUERY_EXECUTION",
+        "SQL_ENGINE",
+        "SELECT"
+      ],
+      "llm_clauses": [
+        "QUERY_EXECUTION",
+        "SELECT",
+        "SQL_ENGINE"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "SQLengine_": {
+      "f1": 1.0,
+      "ground_truth": [
+        "QUERY_EXECUTION",
+        "SQL_ENGINE",
+        "SELECT"
+      ],
+      "llm_clauses": [
+        "QUERY_EXECUTION",
+        "SELECT",
+        "SQL_ENGINE"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "SQLparser": {
+      "f1": 1.0,
+      "ground_truth": [
+        "SQL_PARSE",
+        "SELECT",
+        "DDL"
+      ],
+      "llm_clauses": [
+        "DDL",
+        "SELECT",
+        "SQL_PARSE"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "freeMalBlk": {
+      "f1": 1.0,
+      "ground_truth": [
+        "MAL_EXECUTION",
+        "MEMORY_MANAGEMENT"
+      ],
+      "llm_clauses": [
+        "MAL_EXECUTION",
+        "MEMORY_MANAGEMENT"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "memcpy": {
+      "f1": 1.0,
+      "ground_truth": [
+        "MEMORY_COPY",
+        "COLUMN_STORE"
+      ],
+      "llm_clauses": [
+        "COLUMN_STORE",
+        "MEMORY_COPY"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "memmove": {
+      "f1": 1.0,
+      "ground_truth": [
+        "MEMORY_COPY",
+        "COLUMN_STORE"
+      ],
+      "llm_clauses": [
+        "COLUMN_STORE",
+        "MEMORY_COPY"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "monetdbe_query_internal": {
+      "f1": 1.0,
+      "ground_truth": [
+        "QUERY_EXECUTION",
+        "EMBEDDED_API",
+        "SELECT"
+      ],
+      "llm_clauses": [
+        "EMBEDDED_API",
+        "QUERY_EXECUTION",
+        "SELECT"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "rel_rename": {
+      "f1": 1.0,
+      "ground_truth": [
+        "SELECT",
+        "SQL_REWRITE",
+        "RELATIONAL_OPTIMIZER"
+      ],
+      "llm_clauses": [
+        "RELATIONAL_OPTIMIZER",
+        "SELECT",
+        "SQL_REWRITE"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "resetMalBlk": {
+      "f1": 1.0,
+      "ground_truth": [
+        "MAL_EXECUTION",
+        "MEMORY_MANAGEMENT"
+      ],
+      "llm_clauses": [
+        "MAL_EXECUTION",
+        "MEMORY_MANAGEMENT"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "runMALsequence": {
+      "f1": 1.0,
+      "ground_truth": [
+        "MAL_EXECUTION",
+        "QUERY_EXECUTION",
+        "SELECT"
+      ],
+      "llm_clauses": [
+        "MAL_EXECUTION",
+        "QUERY_EXECUTION",
+        "SELECT"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "write_out": {
+      "f1": 1.0,
+      "ground_truth": [
+        "COPY",
+        "STREAM_IO",
+        "BINARY_PAYLOAD"
+      ],
+      "llm_clauses": [
+        "BINARY_PAYLOAD",
+        "COPY",
+        "STREAM_IO"
+      ],
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  }
+}

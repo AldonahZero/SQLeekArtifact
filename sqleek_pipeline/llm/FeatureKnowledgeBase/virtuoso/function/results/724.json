@@ -1,0 +1,30 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlelement/"
+  ],
+  "Title": [
+    "XMLELEMENT ("
+  ],
+  "Feature": [
+    "XMLELEMENT ("
+  ],
+  "Description": [
+    "XMLELEMENT takes an element name for identifier, an optional collection of attributes for the element,\n    and arguments that make up the element's content.\n    It returns a XML element. The second parameter may be omitted and at that time the\n    rest parameters may be present. If one of the arguments is a call of the xpath_eval returning\n    an attribute value, then this value would be added to element's content (not to element's attributes).\nXMLELEMENT\nxpath_eval"
+  ],
+  "Examples": [
+    "select XMLELEMENT ('Title') from \"Demo\".\"demo\".\"Employees\";",
+    "callret",
+    "select XMLELEMENT ('Emp',",
+    "callret",
+    "select XMLELEMENT ('Emp',",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

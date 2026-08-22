@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_unimport_jar/"
+  ],
+  "Title": [
+    "void unimport_jar ("
+  ],
+  "Feature": [
+    "void unimport_jar ("
+  ],
+  "Description": [
+    "This function calls the jvm_ref_import() function\n    to produce the XML, then transforms it to a set of DROP TYPE statements\n    and executes them.\njvm_ref_import()"
+  ],
+  "Examples": [
+    "callret",
+    "select java_lang_System::getProperty('java.vm.name')"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

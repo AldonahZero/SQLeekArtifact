@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_strcasestr/"
+  ],
+  "Title": [
+    "strcasestr ("
+  ],
+  "Feature": [
+    "strcasestr ("
+  ],
+  "Description": [
+    "strcasestr performs a case-insensitive\n    substring search, returning a zero-based index pointing to\n    beginning of first occurrence of sub or\n    NULL if not found.\nstrcasestr\nsub"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

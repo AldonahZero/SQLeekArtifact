@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "qgramnormalize(s)"
+    ],
+    "Feature": [
+        "qgramnormalize(s)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as input",
+        "normalisation of a string s. Converts letters to uppercase and removes all characters not in a..zA..Z0..9 or space"
+    ],
+    "Examples": [
+        "qgramnormalize(R'Prize \u20ac50!')"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT qgramnormalize('Hello, World! 123')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 312,
+            "Prompt Tokens": 287,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.8049999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT qgramnormalize('Hello, World! 123')"
+    ]
+}

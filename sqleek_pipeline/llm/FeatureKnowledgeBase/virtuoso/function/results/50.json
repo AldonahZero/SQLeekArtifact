@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_compile_script/"
+  ],
+  "Title": [
+    "BPEL.BPEL.compile_script ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.compile_script ("
+  ],
+  "Description": [
+    "BPEL.BPEL.compile_script is used to compile BPEL script identified by scp_id and link to\n\tit all WSDL definitions have been associated to it.\nBPEL.BPEL.compile_script"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

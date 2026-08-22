@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://sqlite.org/json1.html"
+    ],
+    "Title": [
+        "4.2. The jsonb() function"
+    ],
+    "Feature": [
+        "4.2. The jsonb() function"
+    ],
+    "Description": [
+        "4.2. The jsonb() function",
+        "The jsonb(X) function returns the binary JSONB representation\nof the JSON provided as argument X.  An error is raised if X is\nTEXT that does not have valid JSON syntax.\n\n",
+        "If X is a BLOB and appears to be JSONB,\nthen this routine simply returns a copy of X.\nOnly the outer-most element of the JSONB input is examined, however.\nThe deep structure of the JSONB is not validated.\n\n\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT jsonb('{\"key\": \"value\"}')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 396,
+            "Prompt Tokens": 372,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 7.02e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT jsonb('{\"key\": \"value\"}')"
+    ]
+}

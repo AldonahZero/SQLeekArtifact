@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_pem_export/"
+  ],
+  "Title": [
+    "xenc_pem_export ("
+  ],
+  "Feature": [
+    "xenc_pem_export ("
+  ],
+  "Description": [
+    "The function is used to export certificate in PEM format, optionally it can export also private key (if present)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

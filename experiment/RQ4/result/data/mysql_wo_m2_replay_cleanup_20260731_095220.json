@@ -1,0 +1,25 @@
+{
+  "operation": "cleanup_mysql_rq4_replay_intermediates",
+  "generated_at": "2026-07-31T09:52:20.396055+00:00",
+  "deleted": {
+    "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_mysql_bucketed_seq_replay_20260730_095301": {
+      "reason": "obsolete denominator-wrong replay",
+      "risk_branches_total": [
+        "5248"
+      ],
+      "bytes": 1028393164
+    },
+    "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_mysql_bucketed_seq_replay_legacy845d52_20260731_060729/bucketed": {
+      "reason": "intermediate profdata/replay logs; final real/ retained",
+      "risk_branches_total": [
+        "4602"
+      ],
+      "bytes": 1022992773
+    }
+  },
+  "retained": "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_mysql_bucketed_seq_replay_legacy845d52_20260731_060729/real",
+  "formal_rows_retained": 5,
+  "formal_risk_branches_total": [
+    "4602"
+  ]
+}

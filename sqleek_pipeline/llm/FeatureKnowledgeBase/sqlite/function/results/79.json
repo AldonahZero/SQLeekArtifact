@@ -1,0 +1,68 @@
+{
+    "HTML": [
+        "https://sqlite.org/json1.html"
+    ],
+    "Title": [
+        "4.16. The json_pretty() function"
+    ],
+    "Feature": [
+        "4.16. The json_pretty() function"
+    ],
+    "Description": [
+        "4.16. The json_pretty() function",
+        "\nThe json_pretty() function works like json() except that it adds\nextra whitespace to make the JSON result easier for humans to read.\nThe first argument is the JSON or JSONB that is to be pretty-printed.\nThe optional second argument is a text string that is used for indentation.\nIf the second argument is omitted or is NULL, then indentation is four\nspaces per level.\n",
+        "\nThe json_pretty() function was added with SQLite version 3.46.0 \n(2024-05-23).\n\n\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT json_pretty('{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}');",
+        "SELECT json_pretty('{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}');",
+        "SELECT json_pretty('{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}');",
+        "SELECT json_pretty('{\"name\":\"John\", \"age\": \"30\", \"city\":\"New York\"}');",
+        "SELECT json_pretty('{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}') AS pretty_json;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 431,
+            "Prompt Tokens": 395,
+            "Completion Tokens": 36,
+            "Total Cost (USD)": 8.084999999999999e-05
+        },
+        {
+            "Total Tokens": 597,
+            "Prompt Tokens": 561,
+            "Completion Tokens": 36,
+            "Total Cost (USD)": 0.00010575
+        },
+        {
+            "Total Tokens": 763,
+            "Prompt Tokens": 727,
+            "Completion Tokens": 36,
+            "Total Cost (USD)": 0.00013064999999999998
+        },
+        {
+            "Total Tokens": 930,
+            "Prompt Tokens": 893,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 0.00015615
+        },
+        {
+            "Total Tokens": 1094,
+            "Prompt Tokens": 1056,
+            "Completion Tokens": 38,
+            "Total Cost (USD)": 0.0001812
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter '30'\n",
+        "(sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter '30'\n",
+        "(sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter '30'\n",
+        "(sqlite3.OperationalError) no such function: json_pretty\n",
+        "(sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter '30'\n"
+    ],
+    "EffectiveSQLs": []
+}

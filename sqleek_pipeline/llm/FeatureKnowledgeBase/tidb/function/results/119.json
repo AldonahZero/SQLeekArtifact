@@ -1,0 +1,27 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_month",
+    "Title": "MONTH()",
+    "Feature": [
+        "MONTH(date)"
+    ],
+    "Description": [
+        "\nMONTH(date)\n",
+        "\n          Returns the month for date, in the\n          range 1 to 12 for\n          January to December, or 0 for dates such as\n          '0000-00-00' or\n          '2008-00-00' that have a zero month part.\n          Returns NULL if\n          date is NULL.\n        ",
+        "Press CTRL+C to copy mysql> SELECT MONTH('2008-02-03');\n        -> 2"
+    ],
+    "Examples": [
+        "mysql> SELECT MONTH('2008-02-03');\n        -> 2"
+    ],
+    "Category": [
+        "\u65e5\u671f\u548c\u65f6\u95f4\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT MONTH('2008-02-03');"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT MONTH('2008-02-03');"
+    ]
+}

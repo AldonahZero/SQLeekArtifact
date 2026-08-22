@@ -1,0 +1,16 @@
+--- a/MySQL/docker/fuzz_root/run_parallel.py
++++ b/MySQL/docker/fuzz_root/run_parallel.py
+@@ -224,7 +224,12 @@
+ echo $! > "$pid_file"
+ for i in $(seq 1 60); do
+   if "$mysql_root/bin/mysqladmin" --protocol=socket --socket="$socket_path" -uroot ping >/dev/null 2>&1; then
+-    "$mysql_root/bin/mysql" --protocol=socket --socket="$socket_path" -uroot -e "CREATE DATABASE IF NOT EXISTS test_init; CREATE DATABASE IF NOT EXISTS test_sqlright1; ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY ''; ALTER USER 'root'@'127.0.0.1' IDENTIFIED WITH caching_sha2_password BY ''; FLUSH PRIVILEGES;" >/dev/null 2>&1 || true
++    if [ "${SQLEEK_DBMS:-mysql}" = "mariadb" ]; then
++      init_sql="CREATE DATABASE IF NOT EXISTS test_init; CREATE DATABASE IF NOT EXISTS test_sqlright1; FLUSH PRIVILEGES;"
++    else
++      init_sql="CREATE DATABASE IF NOT EXISTS test_init; CREATE DATABASE IF NOT EXISTS test_sqlright1; ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY ''; ALTER USER 'root'@'127.0.0.1' IDENTIFIED WITH caching_sha2_password BY ''; FLUSH PRIVILEGES;"
++    fi
++    "$mysql_root/bin/mysql" --protocol=socket --socket="$socket_path" -uroot -e "$init_sql" >/dev/null 2>&1 || true
+     exit 0
+   fi
+   sleep 1

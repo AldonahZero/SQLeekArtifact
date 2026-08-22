@@ -1,0 +1,33 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-sub",
+    "Title": "DATE_SUB()",
+    "Feature": [
+        "DATE_SUB(date,INTERVAL\n          expr\nunit)"
+    ],
+    "Description": [
+        "\nDATE_SUB(date,INTERVAL\n          expr\nunit)\n",
+        "\n          See the description for\n          DATE_ADD().\n        "
+    ],
+    "Examples": [],
+    "Category": [
+        "\u65e5\u671f\u548c\u65f6\u95f4\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT DATE_SUB(NOW(), INTERVAL 7 DAY);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 299,
+            "Prompt Tokens": 274,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.61e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT DATE_SUB(NOW(), INTERVAL 7 DAY);"
+    ]
+}

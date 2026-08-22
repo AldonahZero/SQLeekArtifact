@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vt_batch/"
+  ],
+  "Title": [
+    "batch object vt_batch ("
+  ],
+  "Feature": [
+    "batch object vt_batch ("
+  ],
+  "Description": [
+    "This object can be used to update a free text index by feeding document\ninformation into it using vt_batch_d_id to set the free text document ID and\nvt_batch_feed to feed actual words.\nThis object may not be assigned to other variables and may only be passed as\nan inout parameter.\nThe batch is applied to the index by calling the\nVT_BATCH_PROCESS_<table>_<column> function generated\nby CREATE TEXT INDEX ."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

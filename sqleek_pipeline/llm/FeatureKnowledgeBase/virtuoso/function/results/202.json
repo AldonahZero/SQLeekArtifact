@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_body_read/"
+  ],
+  "Title": [
+    "string http_body_read ("
+  ],
+  "Feature": [
+    "string http_body_read ("
+  ],
+  "Description": [
+    "This function reads the HTTP body from the client HTTP connection and returns it as a string output.\nThis is suitable for processing POST requests with bodies encoded differently than multipart/* and application/x-www-form-urlencoded as in SOAP requests where the POST body is encoded as text/xml ).\nmultipart/*\napplication/x-www-form-urlencoded\ntext/xml"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

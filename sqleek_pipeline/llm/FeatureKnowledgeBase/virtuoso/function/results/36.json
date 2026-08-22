@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bag_agg/"
+  ],
+  "Title": [
+    "vector DB.DBA.BAG_AGG ("
+  ],
+  "Feature": [
+    "vector DB.DBA.BAG_AGG ("
+  ],
+  "Description": [
+    "DB.DBA.BAG_AGG() returns a vector of passed values.\nDB.DBA.BAG_AGG()\nThis is similar to DB.DBA.VECTOR_AGG() and returns a vector of\n    passed values but the order of items in the vector is not predefined and may vary from run to run.\nA query with DB.DBA.BAG_AGG() may work faster than a similar query with DB.DBA.VECTOR_AGG() because DB.DBA.BAG_AGG() gives more\nfreedom to the SQL optimizer. If the order is not important for your application, consider using of DB.DBA.BAG_AGG() .\nDB.DBA.BAG_AGG()\nDB.DBA.BAG_AGG()\nDB.DBA.BAG_AGG()"
+  ],
+  "Examples": [
+    "SELECT DB.DBA.BAG_AGG (subquery.X)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

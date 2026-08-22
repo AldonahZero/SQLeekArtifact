@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        ">>"
+    ],
+    "Feature": [
+        ">>"
+    ],
+    "Description": [
+        "bitwise shift right (integers only)"
+    ],
+    "Examples": [
+        "8 >> 2"
+    ],
+    "Category": [
+        "Mathematics Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 5 >> 1;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 261,
+            "Prompt Tokens": 242,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.7699999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 5 >> 1;"
+    ]
+}

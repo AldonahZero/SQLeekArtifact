@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vt_is_noise/"
+  ],
+  "Title": [
+    "vt_is_noise ("
+  ],
+  "Feature": [
+    "vt_is_noise ("
+  ],
+  "Description": [
+    "Determines whether input is a noise word."
+  ],
+  "Examples": [
+    "select vt_is_noise ('a', 'UTF-8', 'X-ANY');",
+    "select vt_is_noise ('effective', 'UTF-8', 'X-ANY');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

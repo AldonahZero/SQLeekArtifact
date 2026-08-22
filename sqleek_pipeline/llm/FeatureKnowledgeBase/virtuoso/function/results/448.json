@@ -1,0 +1,31 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sequence_set/"
+  ],
+  "Title": [
+    "integer sequence_set ("
+  ],
+  "Feature": [
+    "integer sequence_set ("
+  ],
+  "Description": [
+    "The function sets and returns the state of a sequence object.\nThe mode specifies whether a check for order of values should be made.\nIf mode equals 0, the state is set regardless of the previous state.\nIf mode is non-zero,\nthe state is changed only if the new state is greater than the previous state.\nThis gives some (weak) protection from occasional 'rewind' the sequence back to values that are already in use.\nmode\nmode\nmode"
+  ],
+  "Examples": [
+    "select sequence_set ('sample', 5, 0);",
+    "select sequence_next ('sample');",
+    "select sequence_next ('sample');",
+    "select sequence_set ('sample', 2, 1);",
+    "select sequence_next ('sample');",
+    "select sequence_set ('sample', 2, 0);",
+    "select sequence_next ('sample');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "sqlite_compileoption_used(X)"
+    ],
+    "Feature": [
+        "sqlite_compileoption_used(X)"
+    ],
+    "Description": [
+        "\n  The sqlite_compileoption_used() SQL function is a wrapper around the\n  sqlite3_compileoption_used() C/C++ function.\n  When the argument X to sqlite_compileoption_used(X) is a string which\n  is the name of a compile-time option, this routine returns true (1) or\n  false (0) depending on whether or not that option was used during the\n  build.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sqlite_compileoption_used('ENABLE_JSON1');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 361,
+            "Prompt Tokens": 338,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 6.45e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sqlite_compileoption_used('ENABLE_JSON1');"
+    ]
+}

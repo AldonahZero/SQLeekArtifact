@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_gvector_digit_sort/"
+  ],
+  "Title": [
+    "gvector_digit_sort ("
+  ],
+  "Feature": [
+    "gvector_digit_sort ("
+  ],
+  "Description": [
+    "The function gets an vector that consists of groups of elements.\nAll groups are of equal size, namely elements_in_group , so the total length of data vector\nshould be whole multiple of elements_in_group .\nOne element of each group is a key of sorting; it is identified by its zero-based position within the group, key_idx_in_group .\nThe sorting procedure edits data and reorders groups in such a way that their keys become ordered ascending or descending,\ndepending on sort_ascending flag.\nelements_in_group\ndata\nelements_in_group\nkey_idx_in_group\ndata\nsort_ascending\nThe simplest case is plain sorting of a uniform array. In this case every element is an individual group, elements_in_group is 1\nand key_idx_in_group is 0.\nelements_in_group\nkey_idx_in_group\nOther popular case is sorting of result of dict_to_vector ().\nIn this case, every item of the original dictionary is represended in the vector by a pair of elements ( elements_in_group is 2),\nso to sort items by their keys, the key_idx_in_group is 0 and to sort them by associated values,\nthe key_idx_in_group is 1.\ndict_to_vector\nelements_in_group\nkey_idx_in_group\nkey_idx_in_group\nThe performed sorting is stable. It means that it will not permutate groups in vain: it will preserve the relative order of any two groups that have equal keys.\nUsing this property, one may sort groups by a \"secondary\" key and then by \"primary\" key.\nE.g., if each group contain elements for country code and province code then it is possible to make two-field sorting by sorting first by province and then by country;\nthat will work even if province codes are not globally unique (say, if they're enumerated from 1 in each country).\nThis function supports only integer values of sorting keys. To sort by strings, floating-point numbers etc., use gvector_sort ().\nHowever, out of these two similar functions, only gvector_digit_sort() is stable-sort.\ngvector_sort"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

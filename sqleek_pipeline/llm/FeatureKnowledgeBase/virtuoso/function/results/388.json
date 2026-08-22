@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regr_avgy/"
+  ],
+  "Title": [
+    "numeric REGR_AVGY ("
+  ],
+  "Feature": [
+    "numeric REGR_AVGY ("
+  ],
+  "Description": [
+    "REGR_AVGY evaluates the average of the independent variable (expr1) of the regression line. It\nmakes the following computation after the elimination of null (expr1, expr2) pairs:\nAVG(expr1)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

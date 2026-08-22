@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/url-functions"
+    ],
+    "Title": [
+        "sys.getbasename(url)"
+    ],
+    "Feature": [
+        "sys.getbasename(url)"
+    ],
+    "Description": [
+        "Return type: ",
+        "clob",
+        "extract the base name part (after the / excluding the extension) from the path of the url, may return null"
+    ],
+    "Examples": [
+        "sys.getbasename( url_example)"
+    ],
+    "Category": [
+        "URL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.getbasename('http://example.com/path/to/file.txt');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 308,
+            "Prompt Tokens": 281,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.8349999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.getbasename('http://example.com/path/to/file.txt');"
+    ]
+}

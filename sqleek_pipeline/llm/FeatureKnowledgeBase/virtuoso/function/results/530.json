@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_may_intersect/"
+  ],
+  "Title": [
+    "st_may_intersect ("
+  ],
+  "Feature": [
+    "st_may_intersect ("
+  ],
+  "Description": [
+    "checks whether bounding boxes of two shapes intersect or some of its points are within the specified proximity.\n    \tThis is much faster than full st_intersects() check.\nst_intersects()"
+  ],
+  "Examples": [
+    "SELECT ?s1 ?s2"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

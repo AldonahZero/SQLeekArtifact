@@ -1,0 +1,15 @@
+target_list=/root/SQLeek/experiment/RQ2/aflgo/mariadb/targets/mariadb_rq2_targets.txt
+resolved_targets=/root/SQLeek/experiment/RQ2/aflgo/mariadb/targets/mariadb_rq2_targets_resolved.tsv
+stage1_sources=/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/mariadb_memory.txt /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/mariadb_stale.txt
+mariadb_memory.txt_raw_lines=2114
+mariadb_memory.txt_valid_lines=2114
+mariadb_stale.txt_raw_lines=1107
+mariadb_stale.txt_valid_lines=1107
+mariadb_logic.txt_missing=1
+deduped_targets=2114
+sha256=436afefea21b5976130385eee711f6a91be15ccf57f136e72ad98fc2617376e9
+resolved_unique=3209
+resolved_ambiguous=12
+resolved_missing=0
+mariadb_source=a06be0288f63f520aec95982cc6f872d26c4f23c
+aflgo_source=2963ebef0db04b9483ba3b0e4282a5d1385c3c7e

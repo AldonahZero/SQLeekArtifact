@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_delete_temp_keys/"
+  ],
+  "Title": [
+    "int xenc_delete_temp_keys ("
+  ],
+  "Feature": [
+    "int xenc_delete_temp_keys ("
+  ],
+  "Description": [
+    "When signing an XML document or doing the reverse work\n\tlike verification etc. number of temporary keys are created\n        in user's space. These keys at some point may not needed\n\tanymore, so they can be removed from memory."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

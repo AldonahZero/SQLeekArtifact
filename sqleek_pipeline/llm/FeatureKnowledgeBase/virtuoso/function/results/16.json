@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_describe_instances/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_DESCRIBE_INSTANCES ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_DESCRIBE_INSTANCES ("
+  ],
+  "Description": [
+    "Describes one or more of your instances."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

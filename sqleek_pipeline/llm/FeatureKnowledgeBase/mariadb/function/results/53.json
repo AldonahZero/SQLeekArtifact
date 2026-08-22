@@ -1,0 +1,69 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/crosses/"
+    ],
+    "Title": [
+        "CROSSES"
+    ],
+    "Feature": [
+        "Crosses(g1,g2)\n"
+    ],
+    "Description": [
+        "Returns 1 if g1 spatially crosses g2. Returns NULL if g1 is\na Polygon or a MultiPolygon, or if g2 is a\nPoint or a MultiPoint. Otherwise, returns 0.",
+        "The term spatially crosses denotes a spatial relation between two\ngiven geometries that has the following properties:",
+        "The two geometries intersect\nTheir intersection results in a geometry that has a dimension that is one\n  less than the maximum dimension of the two given geometries\nTheir intersection is not equal to either of the two given geometries\n",
+        "CROSSES() is based on the original MySQL implementation, and uses object bounding rectangles, while ST_CROSSES() uses object shapes."
+    ],
+    "Examples": [],
+    "Category": [
+        "Geographic Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT Crosses(g1, g2);",
+        "SELECT Crosses(geometry1, geometry2);",
+        "SELECT Crosses(geom_a, geom_b);",
+        "SELECT Crosses(geometry1, geometry2) FROM your_table_name;",
+        "SELECT Crosses(geom1, geom2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 415,
+            "Prompt Tokens": 393,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 7.214999999999999e-05
+        },
+        {
+            "Total Tokens": 570,
+            "Prompt Tokens": 547,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 9.585e-05
+        },
+        {
+            "Total Tokens": 725,
+            "Prompt Tokens": 702,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00011909999999999998
+        },
+        {
+            "Total Tokens": 884,
+            "Prompt Tokens": 857,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00014474999999999997
+        },
+        {
+            "Total Tokens": 1044,
+            "Prompt Tokens": 1021,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00016695
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'g1' in 'field list'\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'geometry1' in 'field list'\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'geom_a' in 'field list'\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'pinolo_temp_mariadb.your_table_name' doesn't exist\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'geom1' in 'field list'\")\n"
+    ],
+    "EffectiveSQLs": []
+}

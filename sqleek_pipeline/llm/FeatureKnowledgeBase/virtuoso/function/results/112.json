@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dav_api_add/"
+  ],
+  "Title": [
+    "integer DAV_COL_CREATE ("
+  ],
+  "Feature": [
+    "integer DAV_COL_CREATE ("
+  ],
+  "Description": [
+    "DAV_COL_CREATE creates a new collection on path, with supplied security permissions,\n  returning a collection id (COL_ID) upon success.\nDAV_COL_CREATE\nDAV_RES_UPLOAD creates or replaces an existing resource on path with content, mime type and supplied security permissions. Returns a resource id (RES_ID) on success.\nDAV_RES_UPLOAD\nDAV_DELETE Removes an existing collection/resource.\n    If silent is set to a nonzero value,  no errors codes will be returned.\n  returns 1 on success.\nDAV_DELETE\nsilent"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

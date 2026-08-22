@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "-"
+    ],
+    "Feature": [
+        "-"
+    ],
+    "Description": [
+        "subtraction of TIMESTAMPs"
+    ],
+    "Examples": [
+        "TIMESTAMP '1992-03-27' - TIMESTAMP '1992-03-22'"
+    ],
+    "Category": [
+        "Timestamp Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT TIMESTAMP '2023-10-01 12:00:00' - TIMESTAMP '2023-10-01 10:00:00';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 238,
+            "Completion Tokens": 47,
+            "Total Cost (USD)": 6.39e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT TIMESTAMP '2023-10-01 12:00:00' - TIMESTAMP '2023-10-01 10:00:00';"
+    ]
+}

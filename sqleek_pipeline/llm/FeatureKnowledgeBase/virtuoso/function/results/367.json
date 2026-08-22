@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_suo_apply_patch/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_SUO_APPLY_PATCH ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_SUO_APPLY_PATCH ("
+  ],
+  "Description": [
+    "This function tries to modify either the target graph specified in the patch via guo:target_graph (hence, the non-NULL target_graph argument of the diff creator, DB.DBA.RDF_SUO_DIFF_TTL() ) or the graph specified by\n    \tdefault_target_graph argument. The function returns zero in case of success, non-zero value\n    \totherwise. In addition, the function produces a result set that describes the process of\n    \tmatching blank node in the target graph to instructions in the patch.\nguo:target_graph\nThe TURTLE made by DB.DBA.RDF_GRAPH_DIFF can be\n      loaded later into an empty graph and the IRI_ID of that graph can be passed as the first\n      argument to this patch function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

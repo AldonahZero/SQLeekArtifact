@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_debug_log/"
+  ],
+  "Title": [
+    "http_debug_log ("
+  ],
+  "Feature": [
+    "http_debug_log ("
+  ],
+  "Description": [
+    "When an valid path string is supplied and it is allowed in file ACL list,\n    the WebDAV HTTP requests and responses will be logged in append mode in to that file.\n    When an open logging session is encountered the second call will produce an error.\n    Specifying a NULL instead of file_path string stops the logging.\nThe log file consists of lines with following fields:\nThe request and response are marked by <<< and\n      >>> signs\nThe request and response are marked by <<< and\n      >>> signs\nClient IP address\nClient IP address\nDate and time of request/response\nDate and time of request/response\nTimestamp (milliseconds)\nTimestamp (milliseconds)\nRequest/response line\nRequest/response line"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

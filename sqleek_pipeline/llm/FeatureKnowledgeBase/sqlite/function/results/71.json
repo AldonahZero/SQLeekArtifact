@@ -1,0 +1,45 @@
+{
+    "HTML": [
+        "https://sqlite.org/json1.html"
+    ],
+    "Title": [
+        "4.8. The jsonb_extract() function"
+    ],
+    "Feature": [
+        "4.8. The jsonb_extract() function"
+    ],
+    "Description": [
+        "4.8. The jsonb_extract() function",
+        "\nThe jsonb_extract() function works the same as the json_extract() function,\nexcept in cases where json_extract() would normally return a text\nJSON array object, this routine returns the array or object in the\nJSONB format.  For the common case where a text, numeric, null, or\nboolean JSON element is returned, this routine works exactly the same\nas json_extract().\n\n\n\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT jsonb_extract(your_json_column, '$.your_key') FROM your_table;",
+        "SELECT jsonb_extract('[]', '$[0]');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 395,
+            "Prompt Tokens": 365,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 7.274999999999999e-05
+        },
+        {
+            "Total Tokens": 702,
+            "Prompt Tokens": 677,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 0.00011655
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such table: your_table\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT jsonb_extract('[]', '$[0]');"
+    ]
+}

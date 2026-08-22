@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_is_timezoneless/"
+  ],
+  "Title": [
+    "datetime is_timezoneless ("
+  ],
+  "Feature": [
+    "datetime is_timezoneless ("
+  ],
+  "Description": [
+    "The function returns 1 for timezoneless arguments, zero for timezoned."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dav_api_user/"
+  ],
+  "Title": [
+    "integer DAV_ADD_USER ("
+  ],
+  "Feature": [
+    "integer DAV_ADD_USER ("
+  ],
+  "Description": [
+    "DAV_ADD_USER() create a new WebDAV user with login name 'uid'\n    and password 'pwd'. User will belong to the group named 'gid'.\n     'perms' are the default user permissions for creation of new\n     resources. Additional user info supplied is 'home' directory,\n     'full name' and 'e-mail'.\nDAV_DELETE_USER() remove the existing webDAV user named 'uid'.\nDAV_HOME_DIR() returns the home folder for specified WebDAV user\n    named 'uid'.\nDAV_ADD_GROUP() create a new webDAV group named 'gid'.\nDAV_DELETE_GROUP() remove the existing webDAV group named 'gid'."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

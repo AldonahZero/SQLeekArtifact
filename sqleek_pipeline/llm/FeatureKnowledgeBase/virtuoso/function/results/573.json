@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_subseq/"
+  ],
+  "Title": [
+    "subseq ("
+  ],
+  "Feature": [
+    "subseq ("
+  ],
+  "Description": [
+    "subseq returns a copy of subsequence of string or vector str using zero-based\n    indices from (inclusive) and to (exclusive) to delimit the substring or the vector\n    extracted.\nIf to is omitted or is NULL, then it equals by default to the length of\n    str, i.e. everything from from to the end of str is returned.\nIf to and from are equal, an empty string ''(empty vector) is returned.\nIf from is greater than to or length of str an error is signalled.\nIf str is NULL then NULL is returned.\nsubseq('AbracadabrA',0,4) -> 'Abra'\nsubseq('AbracadabrA',4,8) -> 'cada'\nsubseq('AbracadabrA',7)    -> 'abrA'\nsubseq(string,0,strchr(string,'/'))\nsubseq(vector (1, 2, 3), 2) -> vector (3)\nsubseq(vector (1, 2, 3), 0, 2) -> vector (1, 2)\nThe last one with string argument returns a copy of the string cut from the first slash,\nleaving it and everything following out, and in the case where there\nare no slashes present, returns a copy of the whole string.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

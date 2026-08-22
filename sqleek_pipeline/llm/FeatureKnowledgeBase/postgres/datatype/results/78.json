@@ -1,0 +1,45 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-pseudo.html"
+    ],
+    "Title": [
+        "record"
+    ],
+    "Feature": [
+        "record"
+    ],
+    "Description": [
+        "Description",
+        "Identifies a function taking or returning an unspecified row type."
+    ],
+    "Examples": [],
+    "Category": [
+        "Pseudo-Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM record;",
+        "SELECT * FROM (VALUES (1, 'example')) AS record;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 263,
+            "Prompt Tokens": 246,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.709999999999999e-05
+        },
+        {
+            "Total Tokens": 424,
+            "Prompt Tokens": 398,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 7.53e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(psycopg2.errors.UndefinedTable) relation \"record\" does not exist\nLINE 1: SELECT * FROM record;\n                      ^\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT * FROM (VALUES (1, 'example')) AS record;"
+    ]
+}

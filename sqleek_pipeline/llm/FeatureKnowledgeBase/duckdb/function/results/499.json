@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "dayname(timestamp)"
+    ],
+    "Feature": [
+        "dayname(timestamp)"
+    ],
+    "Description": [
+        "The (English) name of the weekday."
+    ],
+    "Examples": [
+        "dayname(TIMESTAMP '1992-03-22')"
+    ],
+    "Category": [
+        "Timestamp Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT dayname(timestamp);",
+        "SELECT dayname(current_timestamp);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 271,
+            "Prompt Tokens": 253,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.874999999999999e-05
+        },
+        {
+            "Total Tokens": 433,
+            "Prompt Tokens": 414,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 7.35e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"timestamp\" not found in FROM clause!\nLINE 1: SELECT dayname(timestamp);\n                       ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT dayname(current_timestamp);"
+    ]
+}

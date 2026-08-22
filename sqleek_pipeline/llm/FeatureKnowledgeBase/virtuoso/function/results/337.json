@@ -1,0 +1,29 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_datatype_of_obj/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_DATATYPE_OF_OBJ ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_DATATYPE_OF_OBJ ("
+  ],
+  "Description": [
+    "Returns the datatype of a given argument."
+  ],
+  "Examples": [
+    "callret-0",
+    "Insert into <test_datatype>, 1 (or less) triples -- done",
+    "callret-0",
+    "Insert into <test_datatype>, 1 (or less) triples -- done",
+    "SELECT ?o (iri(sql:RDF_DATATYPE_OF_OBJ(?o, 'untyped!')))"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

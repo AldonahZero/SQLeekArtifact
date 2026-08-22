@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_mts_set_timeout/"
+  ],
+  "Title": [
+    "mts_set_timeout ("
+  ],
+  "Feature": [
+    "mts_set_timeout ("
+  ],
+  "Description": [
+    "sets distributed transactions timeout. 'timeout' parameter \n\tindicates amount of timeout in milliseconds. If it equals -1 then \n\tdefault timeout of Virtuoso transaction is used (SQL_QUERY_TIMEOUT). \n\tThis function must be called directly after \"SET MTS_2PC=1\". The time\n\t countdown begins at moment of changing first branch.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

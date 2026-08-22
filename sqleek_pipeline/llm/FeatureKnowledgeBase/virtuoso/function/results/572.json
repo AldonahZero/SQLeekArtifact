@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sub_schedule/"
+  ],
+  "Title": [
+    "sub_schedule ("
+  ],
+  "Feature": [
+    "sub_schedule ("
+  ],
+  "Description": [
+    "Add scheduled job for periodically synchronizing a subscription."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

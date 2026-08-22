@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_translate/"
+  ],
+  "Title": [
+    "ST_Translate ("
+  ],
+  "Feature": [
+    "ST_Translate ("
+  ],
+  "Description": [
+    "returns a copy of a shape with all coordinates shifted by the provided dX, dY and dZ."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

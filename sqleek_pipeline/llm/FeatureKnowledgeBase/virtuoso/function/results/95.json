@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_covar_samp/"
+  ],
+  "Title": [
+    "numeric COVAR_SAMP ("
+  ],
+  "Feature": [
+    "numeric COVAR_SAMP ("
+  ],
+  "Description": [
+    "COVAR_SAMP returns the sample covariance of a set of number pairs.  Both expr1 and expr2 are numeric expressions. Virtuoso applies the function to the set of (expr1, expr2) pairs after eliminating\nall pairs for which either expr1 or expr2 is null. Then Virtuoso makes the following computation:\n(SUM(expr1 * expr2) - SUM(expr2) * SUM(expr1) / n) / (n-1)\nwhere n is the number of (expr1, expr2) pairs where neither expr1 nor expr2 is null."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_call/"
+  ],
+  "Title": [
+    "any soap_call ("
+  ],
+  "Feature": [
+    "any soap_call ("
+  ],
+  "Description": [
+    "This calls a function from a SOAP server and returns the result as a return value.\nParams is an array of (Parameter name, Value) pairs representing the parameters\npassed in the SOAP call. Each of these pairs become an XML sub-entity\nof the procedure entity. The return value of the function is the entity\ninside the SOAP body of the response. In debug mode the return value is an\narray of 3 elements; the non-debug return value (if any) as element 0, the XML\ntext of the request as element 1 and the XML text of the server response\nas element 2. This function does not use any XML types when creating the\nXML. It represents types as a cast to varchar would, with one\nexception - dates and times according to ISO8061.\nThe Virtuoso SOAP client can work with complex datatypes, in which case\nthe parameters array must conform to the following convention:\nvector ( vector ([name1], [type1]), value1, vector ([name2], [type2]), value2 ...)\nThis will cause type checking and validation of the values to be\nencoded for SOAP request."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_wsdl_import/"
+  ],
+  "Title": [
+    "array DB.DBA. SOAP_WSDL_IMPORT ("
+  ],
+  "Feature": [
+    "array DB.DBA. SOAP_WSDL_IMPORT ("
+  ],
+  "Description": [
+    "The soap_wsdl_import() function is used to\n    import operations and types definitions from an WSDL file on\n    a remote server. The retrieved file will be parsed and PL (procedure\n    language) wrappers will be generated for each SOAP operation that is\n    described. The SOAP service will be represented by a PL module which will\n    be the overall container the generated PL wrappers.\n    Once the WSDL file has been imported the PL wrappers are automatically\n    generated and available for use.\nsoap_wsdl_import()"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

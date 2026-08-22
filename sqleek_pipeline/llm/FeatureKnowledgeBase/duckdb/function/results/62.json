@@ -1,0 +1,53 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/aggregates"
+    ],
+    "Title": [
+        "var_pop(x)"
+    ],
+    "Feature": [
+        "var_pop(x)"
+    ],
+    "Description": [
+        "The population variance, which does not include bias correction.",
+        "(sum(x^2) - sum(x)^2 / count(x)) / count(x), var_samp(y, x) * (1 - 1 / count(x))"
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT var_pop(x);",
+        "SELECT var_pop(column_name) FROM table_name;",
+        "SELECT var_pop(1);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 309,
+            "Prompt Tokens": 291,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 5.444999999999999e-05
+        },
+        {
+            "Total Tokens": 474,
+            "Prompt Tokens": 452,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 8.099999999999999e-05
+        },
+        {
+            "Total Tokens": 647,
+            "Prompt Tokens": 628,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 0.00010559999999999999
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"x\" not found in FROM clause!\nLINE 1: SELECT var_pop(x);\n                       ^\n",
+        "(duckdb.duckdb.CatalogException) Catalog Error: Table with name table_name does not exist!\nDid you mean \"pg_tablespace\"?\nLINE 1: SELECT var_pop(column_name) FROM table_name;\n                                         ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT var_pop(1);"
+    ]
+}

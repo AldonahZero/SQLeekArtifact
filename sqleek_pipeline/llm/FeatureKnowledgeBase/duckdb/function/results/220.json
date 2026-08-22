@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "array_has_any"
+    ],
+    "Feature": [
+        "array_has_any"
+    ],
+    "Description": [
+        "list_has_any(list1, list2)",
+        "Returns true if any elements exist is both lists."
+    ],
+    "Examples": [
+        "list_has_any([1, 2, 3], [2, 3, 4])"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_has_any(array[1, 2, 3], array[3, 4, 5]);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 297,
+            "Prompt Tokens": 260,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 6.12e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_has_any(array[1, 2, 3], array[3, 4, 5]);"
+    ]
+}

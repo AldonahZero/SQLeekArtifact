@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/character_length/"
+    ],
+    "Title": [
+        "CHARACTER_LENGTH"
+    ],
+    "Feature": [
+        "CHARACTER_LENGTH(str)\n"
+    ],
+    "Description": [
+        "CHARACTER_LENGTH() is a synonym for CHAR_LENGTH()."
+    ],
+    "Examples": [],
+    "Category": [
+        "String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CHARACTER_LENGTH('example_string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 275,
+            "Prompt Tokens": 255,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.0249999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CHARACTER_LENGTH('example_string');"
+    ]
+}

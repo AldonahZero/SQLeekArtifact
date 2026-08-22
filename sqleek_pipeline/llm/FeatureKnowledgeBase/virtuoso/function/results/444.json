@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_search_excerpt/"
+  ],
+  "Title": [
+    "search_excerpt ("
+  ],
+  "Feature": [
+    "search_excerpt ("
+  ],
+  "Description": [
+    "This function produces representative samples for use in displaying a query hit. There are two modes: html mode and text mode. In html mode everything looks like html tags is ignored and searching of excerpt begins from <body> tag. All found hit words highlighted by html_hit_tag.\nIn text mode text is treated as plain text, html tag detection is disabled and hit words is not highlighted."
+  ],
+  "Examples": [
+    "creates a search excerpt from found DAV resource"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

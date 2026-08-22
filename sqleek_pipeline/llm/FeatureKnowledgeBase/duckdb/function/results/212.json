@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "list_distance(list1, list2)"
+    ],
+    "Feature": [
+        "list_distance(list1, list2)"
+    ],
+    "Description": [
+        "Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length."
+    ],
+    "Examples": [
+        "list_distance([1, 2, 3], [1, 2, 5])"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT list_distance([1, 2, 3], [4, 5, 6])"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 314,
+            "Prompt Tokens": 280,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 6.24e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT list_distance([1, 2, 3], [4, 5, 6])"
+    ]
+}

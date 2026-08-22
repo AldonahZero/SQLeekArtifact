@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_role_create/"
+  ],
+  "Title": [
+    "USER_ROLE_CREATE ("
+  ],
+  "Feature": [
+    "USER_ROLE_CREATE ("
+  ],
+  "Description": [
+    "Creates a new SQL role."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

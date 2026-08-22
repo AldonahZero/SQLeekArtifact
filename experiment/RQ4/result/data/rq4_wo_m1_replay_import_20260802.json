@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-08-02T05:02:42.266388+00:00",
+  "operation": "import_formal_mariadb_wo_m1_coverage_replay",
+  "variant": "SQLeek-W/O-M1",
+  "dbms": "MariaDB",
+  "source_package": "/root/SQLeek/experiment/RQ4/live/rq4_wo_m1_mariadb_coverage_replay_20260801_172000/data",
+  "repeats": 5,
+  "checkpoints_per_repeat": 10,
+  "checkpoints_min": [
+    0,
+    60,
+    180,
+    300,
+    480,
+    600,
+    720,
+    900,
+    1200,
+    1440
+  ],
+  "denominators": {
+    "target_region_branches": 4248,
+    "target_regions": 3041,
+    "global_branches": 295012
+  },
+  "backup": "/root/SQLeek/experiment/RQ4/result/backups/before_mariadb_wo_m1_update_20260802_050000",
+  "rows_added": {
+    "coverage_summary": 5,
+    "coverage_timeseries": 50,
+    "coverage_timeseries_stats": 10,
+    "runs": 5,
+    "component_heatmap": 8
+  }
+}

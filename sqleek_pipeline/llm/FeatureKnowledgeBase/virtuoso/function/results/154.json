@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_exec/"
+  ],
+  "Title": [
+    "exec ("
+  ],
+  "Feature": [
+    "exec ("
+  ],
+  "Description": [
+    "This function provides dynamic SQL capabilities in Virtuoso PL.\n    The first argument is an arbitrary SQL statement, which may contain\n    parameter placeholders. The function returns as output parameters a\n    SQL state, error message, column metadata and result set rows if\n    the statement is a select.\nA stored procedure can be invoked by exec but a procedure's\n    result set will not be received in the rows output parameter but rather\n    sent to the client."
+  ],
+  "Examples": [
+    "create procedure tb_is_empty (in tb varchar)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

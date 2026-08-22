@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_dsa_create/"
+  ],
+  "Title": [
+    "xenc_key_DSA_create ("
+  ],
+  "Feature": [
+    "xenc_key_DSA_create ("
+  ],
+  "Description": [
+    "Used to make asymmetric DSA key for digital signatures. The generated key will\ncontain private and public keys."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

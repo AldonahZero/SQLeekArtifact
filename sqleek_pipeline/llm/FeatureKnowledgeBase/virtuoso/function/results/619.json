@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_set_option/"
+  ],
+  "Title": [
+    "USER_SET_OPTION ("
+  ],
+  "Feature": [
+    "USER_SET_OPTION ("
+  ],
+  "Description": [
+    "This function is used to set a User Option. The options\n    can be any one of those described in User Options section or any\n    other option. Note that existing option will be replaced."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

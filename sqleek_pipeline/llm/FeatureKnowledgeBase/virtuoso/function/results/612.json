@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_get_option/"
+  ],
+  "Title": [
+    "USER_GET_OPTION ("
+  ],
+  "Feature": [
+    "USER_GET_OPTION ("
+  ],
+  "Description": [
+    "This function is used to retrieve an existing user option."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

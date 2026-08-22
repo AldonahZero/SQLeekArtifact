@@ -1,0 +1,65 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "group_replication_get_write_concurrency()",
+    "Description": [
+        "\ngroup_replication_get_write_concurrency()\n",
+        "\n              Check the maximum number of consensus instances that a\n              group can execute in parallel.\n            ",
+        "\n              Syntax:\n            ",
+        "Press CTRL+C to copy INT group_replication_get_write_concurrency()",
+        "\n              This function has no parameters.\n            ",
+        "\n              Return value:\n            ",
+        "\n              The maximum number of consensus instances currently set\n              for the group.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy SELECT group_replication_get_write_concurrency()",
+        "\n              For more information, see\n              Section\u00a020.5.1.3, \u201cUsing Group Replication Group Write Consensus\u201d.\n            "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/group-replication-functions-for-maximum-consensus.html#function_group-replication-get-write-concurrency",
+    "Feature": [
+        "group_replication_get_write_concurrency()"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Replication Functions",
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT group_replication_get_write_concurrency()",
+        "SELECT @@global.group_replication_max_concurrent_write_transactions",
+        "SELECT @@global.max_connections"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 438,
+            "Prompt Tokens": 416,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 7.559999999999998e-05
+        },
+        {
+            "Total Tokens": 604,
+            "Prompt Tokens": 580,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 0.00010139999999999998
+        },
+        {
+            "Total Tokens": 760,
+            "Prompt Tokens": 742,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 0.00012209999999999999
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.group_replication_get_write_concurrency does not exist')\n",
+        "(pymysql.err.OperationalError) (1193, \"Unknown system variable 'group_replication_max_concurrent_write_transactions'\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT @@global.max_connections"
+    ]
+}

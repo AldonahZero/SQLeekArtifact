@@ -1,0 +1,594 @@
+diff --git a/MySQL/docker/fuzz_root/run_parallel.py b/MySQL/docker/fuzz_root/run_parallel.py
+index 0d46b7d..5bf1592 100644
+--- a/MySQL/docker/fuzz_root/run_parallel.py
++++ b/MySQL/docker/fuzz_root/run_parallel.py
+@@ -97,7 +97,7 @@ for cur_inst_id in range(starting_core_id, starting_core_id + parallel_num, 1):
+     cur_port_num = port_starting_num + cur_inst_id - starting_core_id
+     socket_path = "/tmp/mysql_" + str(cur_inst_id) + ".sock"
+ 
+-    modi_env = dict()
++    modi_env = os.environ.copy()
+     modi_env["AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES"] = "1"
+     modi_env["AFL_SKIP_CPUFREQ"] = "1"
+ 
+@@ -175,7 +175,7 @@ for cur_inst_id in range(starting_core_id, starting_core_id + parallel_num, 1):
+         "--performance_schema=OFF",
+         "'"  # right quote
+      ]
+-    mysql_modi_env = dict()
++    mysql_modi_env = os.environ.copy()
+     mysql_modi_env["__AFL_SHM_ID"] = cur_shm_str
+ 
+     mysql_command = " ".join(mysql_command)
+diff --git a/MySQL/docker/fuzz_root/sqlaser/mysql_target_chains.tsv b/MySQL/docker/fuzz_root/sqlaser/mysql_target_chains.tsv
+new file mode 100644
+index 0000000..f263e4d
+--- /dev/null
++++ b/MySQL/docker/fuzz_root/sqlaser/mysql_target_chains.tsv
+@@ -0,0 +1,6 @@
++# pattern_id	clause_chain	target_call_chain	weight	enabled
++# MySQL 8.0.27 SQLaser prototype. Distance is a SQL-structure proxy.
++# Target call chains are source-verified candidates; dynamic trace validation is pending.
++mysql_any	select|any	Item_allany_subselect::select_transformer|Item_in_subselect::val_bool	2	1
++mysql_like_escape_xor	like|escape|xor	Item_func_like::eval_escape_clause|Item_func_like::val_int|Item_func_xor::val_int	2	1
++mysql_in_operator	select|in	Item_func_in::resolve_type|Item_func_in::val_int	1	1
+diff --git a/MySQL/docker/src/AFL/afl-fuzz.cpp b/MySQL/docker/src/AFL/afl-fuzz.cpp
+index b6238c5..17b9d9e 100644
+--- a/MySQL/docker/src/AFL/afl-fuzz.cpp
++++ b/MySQL/docker/src/AFL/afl-fuzz.cpp
+@@ -75,6 +75,7 @@
+ #include <sys/select.h>
+ #include <errno.h>
+ #include <cassert>
++#include <algorithm>
+ #include <deque>
+ #include <random>
+ #include <regex>
+@@ -851,6 +852,26 @@ static s32 cpu_aff = -1; /* Selected CPU core                */
+ 
+ static FILE *plot_file; /* Gnuplot output file              */
+ 
++struct sqlaser_target_chain {
++  string pattern_id;
++  vector<string> clause_chain;
++  vector<string> target_call_chain;
++  u32 weight;
++};
++
++static u8 sqlaser_enabled = 0;
++static string sqlaser_targets_path;
++static vector<sqlaser_target_chain> sqlaser_targets;
++static FILE *sqlaser_seed_meta_file = NULL;
++
++u64 sqlaser_total_scored = 0;
++u64 sqlaser_progress_seeds = 0;
++u64 sqlaser_chain_hits = 0;
++u64 sqlaser_energy_boosts = 0;
++u64 sqlaser_energy_counts[7] = {};
++u32 sqlaser_best_progress = 0;
++u32 sqlaser_best_distance = 0xffffffffu;
++
+ struct queue_entry
+ {
+ 
+@@ -876,6 +897,13 @@ struct queue_entry
+   u8 *trace_mini; /* Trace bytes, if kept             */
+   u32 tc_ref;     /* Trace bytes ref count            */
+ 
++  u8 sqlaser_has_meta;       /* SQLaser distance metadata ready? */
++  u32 sqlaser_target_id;     /* Selected target chain index      */
++  u32 sqlaser_chain_progress;
++  u32 sqlaser_chain_len;
++  u32 sqlaser_distance;
++  u32 sqlaser_energy;
++
+   u8 is_timeout = false; /* Is timeout test cases. */
+ 
+   struct queue_entry *next, /* Next element, if any             */
+@@ -905,6 +933,272 @@ static u32 a_extras_cnt;            /* Total number of tokens available */
+ 
+ static u8 *(*post_handler)(u8 *buf, u32 *len);
+ 
++static string sqlaser_trim(const string &s) {
++
++  size_t begin = 0, end = s.size();
++  while (begin < end && isspace((unsigned char)s[begin]))
++    begin++;
++  while (end > begin && isspace((unsigned char)s[end - 1]))
++    end--;
++  return s.substr(begin, end - begin);
++}
++
++static string sqlaser_lower(string s) {
++
++  transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
++    return (char)tolower(c);
++  });
++  return s;
++}
++
++static vector<string> sqlaser_split(const string &s, char sep) {
++
++  vector<string> parts;
++  string item;
++  stringstream ss(s);
++
++  while (getline(ss, item, sep)) {
++    item = sqlaser_trim(item);
++    if (!item.empty())
++      parts.push_back(sqlaser_lower(item));
++  }
++
++  return parts;
++}
++
++static u8 sqlaser_env_enabled(const char *value) {
++
++  if (!value)
++    return 0;
++
++  string v = sqlaser_lower(sqlaser_trim(value));
++  return v == "1" || v == "true" || v == "yes" || v == "on";
++}
++
++static string sqlaser_read_file(u8 *path) {
++
++  if (!path)
++    return "";
++
++  ifstream in((char *)path, ios::in | ios::binary);
++  if (!in)
++    return "";
++
++  stringstream buffer;
++  buffer << in.rdbuf();
++  return buffer.str();
++}
++
++static u32 sqlaser_energy_for(u32 distance, u32 progress, u32 weight) {
++
++  u32 rounds = 1;
++
++  if (distance == 0)
++    rounds = 4;
++  else if (distance == 1)
++    rounds = 3;
++  else if (distance == 2)
++    rounds = 2;
++  else if (progress)
++    rounds = 2;
++
++  rounds *= MAX(1, weight);
++  if (rounds > 6)
++    rounds = 6;
++
++  return rounds;
++}
++
++static void sqlaser_load_targets(void) {
++
++  const char *path_env = getenv("SQLASER_TARGETS");
++  sqlaser_targets_path = path_env ? path_env : "./sqlaser/mysql_target_chains.tsv";
++
++  ifstream in(sqlaser_targets_path);
++  if (!in) {
++    WARNF("SQLaser enabled but target file not found: %s",
++          sqlaser_targets_path.c_str());
++    sqlaser_enabled = 0;
++    return;
++  }
++
++  string line;
++  while (getline(in, line)) {
++
++    line = sqlaser_trim(line);
++    if (line.empty() || line[0] == '#')
++      continue;
++
++    vector<string> cols;
++    string col;
++    stringstream ss(line);
++    while (getline(ss, col, '\t'))
++      cols.push_back(sqlaser_trim(col));
++
++    if (cols.size() < 5)
++      continue;
++
++    string enabled = sqlaser_lower(cols[4]);
++    if (!(enabled == "1" || enabled == "true" || enabled == "yes"))
++      continue;
++
++    sqlaser_target_chain target;
++    target.pattern_id = cols[0];
++    target.clause_chain = sqlaser_split(cols[1], '|');
++    target.target_call_chain = sqlaser_split(cols[2], '|');
++    target.weight = (u32)MAX(1, atoi(cols[3].c_str()));
++
++    if (!target.clause_chain.empty())
++      sqlaser_targets.push_back(target);
++  }
++
++  if (sqlaser_targets.empty()) {
++    WARNF("SQLaser enabled but no active target chains were loaded.");
++    sqlaser_enabled = 0;
++    return;
++  }
++
++  OKF("SQLaser loaded %zu MySQL target chains from %s",
++      sqlaser_targets.size(), sqlaser_targets_path.c_str());
++}
++
++static void sqlaser_configure_from_env(void) {
++
++  const char *enabled_env = getenv("SQLASER_ENABLED");
++  if (!enabled_env)
++    enabled_env = getenv("SQLASER_ENABLE");
++
++  sqlaser_enabled = sqlaser_env_enabled(enabled_env);
++  if (!sqlaser_enabled)
++    return;
++
++  sqlaser_load_targets();
++}
++
++static FILE *sqlaser_open_seed_meta_file(void) {
++
++  if (!sqlaser_enabled || !out_dir)
++    return NULL;
++
++  if (sqlaser_seed_meta_file)
++    return sqlaser_seed_meta_file;
++
++  u8 *path = alloc_printf("%s/sqlaser_seed_metadata.tsv", out_dir);
++  struct stat st;
++  u8 need_header = stat((char *)path, &st) || st.st_size == 0;
++
++  sqlaser_seed_meta_file = fopen((char *)path, "a");
++  if (!sqlaser_seed_meta_file) {
++    WARNF("Unable to create SQLaser seed metadata log: %s", path);
++    ck_free(path);
++    return NULL;
++  }
++
++  if (need_header)
++    fprintf(sqlaser_seed_meta_file,
++            "queue_file\tsource\tpattern_id\tprogress\tchain_len\tdistance\tweight\tenergy\n");
++
++  ck_free(path);
++  return sqlaser_seed_meta_file;
++}
++
++static void sqlaser_score_queue_entry(struct queue_entry *q,
++                                      const string &query,
++                                      const char *source) {
++
++  if (!sqlaser_enabled || !q || query.empty() || sqlaser_targets.empty())
++    return;
++
++  string lower_query = sqlaser_lower(query);
++  u32 best_target = 0xffffffffu;
++  u32 best_progress = 0;
++  u32 best_len = 0;
++  u32 best_distance = 0xffffffffu;
++
++  for (u32 i = 0; i < sqlaser_targets.size(); i++) {
++
++    const sqlaser_target_chain &target = sqlaser_targets[i];
++    size_t pos = 0;
++    u32 progress = 0;
++
++    for (const string &clause : target.clause_chain) {
++
++      size_t found = lower_query.find(clause, pos);
++      if (found == string::npos)
++        break;
++
++      progress++;
++      pos = found + clause.size();
++    }
++
++    u32 chain_len = target.clause_chain.size();
++    u32 distance = chain_len - progress;
++    if (!progress)
++      distance++;
++
++    if (distance < best_distance ||
++        (distance == best_distance && progress > best_progress)) {
++      best_target = i;
++      best_progress = progress;
++      best_len = chain_len;
++      best_distance = distance;
++    }
++  }
++
++  if (best_target == 0xffffffffu)
++    return;
++
++  q->sqlaser_has_meta = 1;
++  q->sqlaser_target_id = best_target;
++  q->sqlaser_chain_progress = best_progress;
++  q->sqlaser_chain_len = best_len;
++  q->sqlaser_distance = best_distance;
++  q->sqlaser_energy = sqlaser_energy_for(
++      best_distance, best_progress, sqlaser_targets[best_target].weight);
++
++  sqlaser_total_scored++;
++  if (best_progress)
++    sqlaser_progress_seeds++;
++  if (best_distance == 0)
++    sqlaser_chain_hits++;
++  if (best_progress > sqlaser_best_progress)
++    sqlaser_best_progress = best_progress;
++  if (best_distance < sqlaser_best_distance)
++    sqlaser_best_distance = best_distance;
++
++  FILE *meta = sqlaser_open_seed_meta_file();
++  if (meta) {
++    const sqlaser_target_chain &target = sqlaser_targets[best_target];
++    fprintf(meta, "%s\t%s\t%s\t%u\t%u\t%u\t%u\t%u\n",
++            q->fname ? (char *)q->fname : "",
++            source ? source : "unknown",
++            target.pattern_id.c_str(), best_progress, best_len, best_distance,
++            target.weight, q->sqlaser_energy);
++    fflush(meta);
++  }
++}
++
++static u32 sqlaser_energy_rounds(struct queue_entry *q) {
++
++  if (!sqlaser_enabled || !q || !q->sqlaser_has_meta || !q->sqlaser_chain_len ||
++      q->sqlaser_target_id >= sqlaser_targets.size())
++    return 1;
++
++  u32 rounds = q->sqlaser_energy;
++  if (!rounds)
++    rounds = sqlaser_energy_for(q->sqlaser_distance,
++                                q->sqlaser_chain_progress,
++                                sqlaser_targets[q->sqlaser_target_id].weight);
++
++  if (rounds > 6)
++    rounds = 6;
++  if (rounds > 1)
++    sqlaser_energy_boosts++;
++  sqlaser_energy_counts[rounds]++;
++
++  return rounds;
++}
++
+ /* Interesting values, as per config.h */
+ 
+ static s8 interesting_8[] = {INTERESTING_8};
+@@ -1499,6 +1793,12 @@ static void add_to_queue(u8 *fname, u32 len, u8 passed_det)
+   }
+ 
+   last_path_time = get_cur_time();
++
++  if (sqlaser_enabled) {
++    string seed_query = sqlaser_read_file(fname);
++    if (!seed_query.empty())
++      sqlaser_score_queue_entry(q, seed_query, "input");
++  }
+ }
+ 
+ /* Destroy the entire queue. */
+@@ -4003,6 +4303,8 @@ static u8 save_if_interesting(char **argv, string &query_str, u8 fault,
+     ck_write(fd, query_str.c_str(), query_str.size(), fn);
+     close(fd);
+ 
++    sqlaser_score_queue_entry(queue_top, query_str, "generated");
++
+     keeping = 1;
+   }
+ 
+@@ -4402,7 +4704,8 @@ static void maybe_update_plot_file(double bitmap_cvg, double eps)
+   fprintf(plot_file,
+           /* Format */
+           "%llu,%llu,%u,%u,%u,%u,%0.02f%%,%llu,%llu,%u,%0.02f,%llu,%llu,%0.02f%%,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,"
+-          "%0.02f%%,%llu,%llu,%llu,%0.02f%%,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu"
++          "%0.02f%%,%llu,%llu,%llu,%0.02f%%,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,"
++          "%u,%u,%u,%u,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu,%llu"
+           "\n", 
+           /* Data */
+           get_cur_time() / 1000, queue_cycle - 1, current_entry, queued_paths,
+@@ -4412,7 +4715,13 @@ static void maybe_update_plot_file(double bitmap_cvg, double eps)
+           total_mutate_all_failed, total_mutate_failed, total_mutatestmt_failed, total_append_failed,  g_mutator.get_valid_collection_size(), g_mutator.get_collection_size(),
+           debug_good, (debug_good * 100.0 / (debug_error + debug_good)), mysql_execute_ok, mysql_execute_error, mysql_execute_total,
+           (float(total_mutate_failed) / float(total_mutate_num) * 100.0), num_valid, num_parse, num_mutate_all, total_mutate_num, total_mutatestmt_num, 
+-          num_reparse, num_append, num_validate
++          num_reparse, num_append, num_validate,
++          sqlaser_enabled, (u32)sqlaser_targets.size(), sqlaser_best_progress,
++          sqlaser_best_distance == 0xffffffffu ? 0 : sqlaser_best_distance,
++          sqlaser_total_scored, sqlaser_progress_seeds, sqlaser_chain_hits,
++          sqlaser_energy_boosts, sqlaser_energy_counts[1], sqlaser_energy_counts[2],
++          sqlaser_energy_counts[3], sqlaser_energy_counts[4], sqlaser_energy_counts[5],
++          sqlaser_energy_counts[6]
+           ); /* ignore errors */
+ 
+   fflush(plot_file);
+@@ -6490,6 +6799,8 @@ static u8 fuzz_one(char **argv)
+   u64 havoc_queued, orig_hit_cnt, new_hit_cnt;
+   u32 splice_cycle = 0, perf_score = 100, orig_perf, prev_cksum, eff_cnt = 1;
+   u8 ret_val = 1, doing_det = 0;
++  u32 sqlaser_rounds = 1;
++  u64 sqlaser_mutation_budget = max_mutation_count;
+ 
+   u8 a_collect[MAX_AUTO_EXTRA];
+   u32 a_len = 0;
+@@ -6703,9 +7014,12 @@ static u8 fuzz_one(char **argv)
+   v_oracle_select_stmts.clear();
+   get_oracle_select_stmts(v_oracle_select_stmts, 10);
+ 
++  sqlaser_rounds = sqlaser_energy_rounds(queue_cur);
++  sqlaser_mutation_budget = max_mutation_count * sqlaser_rounds;
++
+   // cerr << "After get_oracle_select_stmts. \n\n\n";
+ 
+-  for (int cur_mutation_count = 0; cur_mutation_count < max_mutation_count; cur_mutation_count++) {
++  for (u64 cur_mutation_count = 0; cur_mutation_count < sqlaser_mutation_budget; cur_mutation_count++) {
+     if (stop_soon) {
+       goto abandon_entry;
+     }
+@@ -7634,7 +7948,9 @@ EXP_ST void setup_dirs_fds(void)
+                      "total_input_failed,total_random_VALID,total_add_to_queue,total_mutate_all_failed,"
+                      "total_mutate_failed_num,total_mutatestmt_failed_num,total_append_failed,total_saved_valid_stmts,"
+                      "total_saved_stmts,total_good_stmt,total_good_queries,postgre_execute_ok,postgre_execute_error,postgre_execute_total,"
+-                     "mutate_failed_per,num_valid,num_parse,num_mutate_all,num_mutate,num_mutatestmt,num_reparse,num_append,num_validate\n"
++                     "mutate_failed_per,num_valid,num_parse,num_mutate_all,num_mutate,num_mutatestmt,num_reparse,num_append,num_validate,"
++                     "sqlaser_enabled,sqlaser_target_count,sqlaser_best_progress,sqlaser_best_distance,sqlaser_total_scored,sqlaser_progress_seeds,sqlaser_chain_hits,sqlaser_energy_boosts,"
++                     "sqlaser_energy_1,sqlaser_energy_2,sqlaser_energy_3,sqlaser_energy_4,sqlaser_energy_5,sqlaser_energy_6\n"
+                      );
+ 
+   fflush(plot_file);
+@@ -8264,6 +8580,8 @@ int main(int argc, char *argv[])
+   gettimeofday(&tv, &tz);
+   srandom(tv.tv_sec ^ tv.tv_usec ^ getpid());
+ 
++  sqlaser_configure_from_env();
++
+   while ((opt = getopt(argc, argv, "+i:o:f:m:t:T:dnCB:S:M:x:Q:s:c:lDc:O:P:K:F:w")) > 0)
+ 
+     switch (opt)
+diff --git a/patterns/mysql/sqlaser_patterns.yaml b/patterns/mysql/sqlaser_patterns.yaml
+new file mode 100644
+index 0000000..d6afb92
+--- /dev/null
++++ b/patterns/mysql/sqlaser_patterns.yaml
+@@ -0,0 +1,138 @@
++mysql_version: "8.0.27"
++mysql_source_commit: "3290a66c89eb1625a7058e0ef732432b6952b435"
++sqlright_commit: "9457f0311b70562a3423ee86ac7e2ebdaaa6664b"
++runtime_config: "MySQL/docker/fuzz_root/sqlaser/mysql_target_chains.tsv"
++distance_type: "sql_structure_proxy"
++mapping_policy: "Target functions are source-verified candidates until dynamic trace validation is complete."
++
++patterns:
++  - pattern_id: mysql_column_values
++    clause_combination: ["column values"]
++    known_bug_id: pending
++    trigger_sql: "SELECT a FROM t;"
++    oracle: NOREC
++    target_functions: []
++    target_call_chain: []
++    chain_source: pending_source_validation
++    mysql_original_version: pending
++    mysql_827_mapping: pending_dynamic_trace
++    enabled: false
++    validation_status: not_started
++    notes: "Reserved for the complete ten-pattern configuration; not active in phase 1."
++  - pattern_id: mysql_any
++    clause_combination: ["ANY"]
++    known_bug_id: pending
++    trigger_sql: "CREATE TABLE t(a INT); INSERT INTO t VALUES (1); SELECT * FROM t WHERE a = ANY (SELECT a FROM t);"
++    oracle: NOREC
++    target_functions: ["Item_allany_subselect::select_transformer", "Item_in_subselect::val_bool"]
++    target_call_chain: ["Item_allany_subselect::select_transformer", "Item_in_subselect::val_bool"]
++    chain_source: "MySQL 8.0.27 sql/item_subselect.cc source analysis"
++    mysql_original_version: pending
++    mysql_827_mapping: source_verified_dynamic_trace_pending
++    enabled: true
++    validation_status: source_verified
++    notes: "Phase-1 representative pattern; runtime chain is a candidate mapping, not a completed trace claim."
++  - pattern_id: mysql_like_escape_xor
++    clause_combination: ["LIKE ESCAPE", "XOR"]
++    known_bug_id: pending
++    trigger_sql: "SELECT (a LIKE 'a%' ESCAPE '!') XOR (a = 1) FROM t;"
++    oracle: NOREC
++    target_functions: ["Item_func_like::eval_escape_clause", "Item_func_like::val_int", "Item_func_xor::val_int"]
++    target_call_chain: ["Item_func_like::eval_escape_clause", "Item_func_like::val_int", "Item_func_xor::val_int"]
++    chain_source: "MySQL 8.0.27 sql/item_cmpfunc.cc source analysis"
++    mysql_original_version: pending
++    mysql_827_mapping: source_verified_dynamic_trace_pending
++    enabled: true
++    validation_status: source_verified
++    notes: "Phase-1 representative pattern; ESCAPE and XOR clauses are scored in source order."
++  - pattern_id: mysql_bigint_unsigned_ifnull
++    clause_combination: ["BIGINT UNSIGNED", "IFNULL"]
++    known_bug_id: pending
++    trigger_sql: "SELECT IFNULL(CAST(1 AS UNSIGNED), 0);"
++    oracle: NOREC
++    target_functions: []
++    target_call_chain: []
++    chain_source: pending_source_validation
++    mysql_original_version: pending
++    mysql_827_mapping: pending_dynamic_trace
++    enabled: false
++    validation_status: not_started
++    notes: "Reserved for later source and trace validation."
++  - pattern_id: mysql_null_safe_equal
++    clause_combination: ["<=> comparison"]
++    known_bug_id: pending
++    trigger_sql: "SELECT a <=> b FROM t;"
++    oracle: NOREC
++    target_functions: []
++    target_call_chain: []
++    chain_source: pending_source_validation
++    mysql_original_version: pending
++    mysql_827_mapping: pending_dynamic_trace
++    enabled: false
++    validation_status: not_started
++    notes: "Reserved for later source and trace validation."
++  - pattern_id: mysql_if_false
++    clause_combination: ["IF(FALSE)"]
++    known_bug_id: pending
++    trigger_sql: "SELECT IF(FALSE, a, 0) FROM t;"
++    oracle: NOREC
++    target_functions: []
++    target_call_chain: []
++    chain_source: pending_source_validation
++    mysql_original_version: pending
++    mysql_827_mapping: pending_dynamic_trace
++    enabled: false
++    validation_status: not_started
++    notes: "Reserved for later source and trace validation."
++  - pattern_id: mysql_in_operator
++    clause_combination: ["IN operator"]
++    known_bug_id: pending
++    trigger_sql: "SELECT * FROM t WHERE a IN (1, 2, 3);"
++    oracle: NOREC
++    target_functions: ["Item_func_in::resolve_type", "Item_func_in::val_int"]
++    target_call_chain: ["Item_func_in::resolve_type", "Item_func_in::val_int"]
++    chain_source: "MySQL 8.0.27 sql/item_cmpfunc.cc source analysis"
++    mysql_original_version: pending
++    mysql_827_mapping: source_verified_dynamic_trace_pending
++    enabled: true
++    validation_status: source_verified
++    notes: "Phase-1 representative pattern."
++  - pattern_id: mysql_bit_lt_and
++    clause_combination: ["&", "<", "AND"]
++    known_bug_id: pending
++    trigger_sql: "SELECT (a & 1) < 2 AND a > 0 FROM t;"
++    oracle: NOREC
++    target_functions: []
++    target_call_chain: []
++    chain_source: pending_source_validation
++    mysql_original_version: pending
++    mysql_827_mapping: pending_dynamic_trace
++    enabled: false
++    validation_status: not_started
++    notes: "Reserved for later source and trace validation."
++  - pattern_id: mysql_greatest
++    clause_combination: ["GREATEST"]
++    known_bug_id: pending
++    trigger_sql: "SELECT GREATEST(a, 0) FROM t;"
++    oracle: NOREC
++    target_functions: []
++    target_call_chain: []
++    chain_source: pending_source_validation
++    mysql_original_version: pending
++    mysql_827_mapping: pending_dynamic_trace
++    enabled: false
++    validation_status: not_started
++    notes: "Reserved for later source and trace validation."
++  - pattern_id: mysql_others
++    clause_combination: ["others"]
++    known_bug_id: pending
++    trigger_sql: "SELECT a FROM t;"
++    oracle: NOREC
++    target_functions: []
++    target_call_chain: []
++    chain_source: pending_source_validation
++    mysql_original_version: pending
++    mysql_827_mapping: pending_dynamic_trace
++    enabled: false
++    validation_status: not_started
++    notes: "Reserved for later source and trace validation."

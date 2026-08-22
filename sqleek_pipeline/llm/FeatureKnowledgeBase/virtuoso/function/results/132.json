@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_list_keys/"
+  ],
+  "Title": [
+    "vector dict_list_keys ("
+  ],
+  "Feature": [
+    "vector dict_list_keys ("
+  ],
+  "Description": [
+    "The function returns an array of all keys stored in the given dictionary, ignoring dependent parts of key-value pairs.\nThis is especially useful when dictionary is used to form a set of distinct keys, when dependent parts are fake (typically zeroes).\nIf the destructive parameter is 1 or 2 then the function may avoid copying of keys to the resulting array\nby moving them out from the dictionary. This is faster but the dictionary will become empty at the end of operation.\nThe destructive parameter equal to 1 does not have any effect if the dictionary is used as a value of more than one variable.\nThus it is safe to make this parameter equal to 1 as soon as the variable passed to the function as dict is no longer in use after\nthe function call and there's no need to inspect the whole program to check if other variables may be affected.\nThe parameter equal to 2 ignores the presence of multiple variables so the operation may cause unexpected results in other fragments of code that share the dictionary.\ndestructive\ndestructive\ndict\nThe created array can not be longer than the system limit and even if it is below limit but longer than hundreds of thousands items then memory allocation can be inefficient.\nIf the dictionary can be large and it is possible to process the content of the dictionary in parts, consider using dict_destructive_list_rnd_keys () instead.\ndict_destructive_list_rnd_keys"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_string_output/"
+  ],
+  "Title": [
+    "string_output ("
+  ],
+  "Feature": [
+    "string_output ("
+  ],
+  "Description": [
+    "A string output stream is a special object that may be used to\n    buffer arbitrarily long streams of data. They are useful for handling data\n    that would not otherwise fit within normal varchar size\n    limitations. The HTTP output functions optionally take a string output\n    stream handle as a parameter and then output to said stream instead of\n    the HTTP client. A string output stream can be assigned to a database column in insert or update, causing the characters written to the stream to be assigned to the column as a narrow string.\nThe function string_output_string can be used to produce a varchar out of a string output stream. It may\n     be called repeatedly to obtain several copies of the data. http_rewrite can be used to flush a string output stream.\nstring_output_string\nhttp_rewrite\nIf a string output stream is passed to the function result the\n    data stored in it is sent to the client.\nresult\nThe string output object cannot be copied. It cannot therefore be\n    assigned between two variables or passed by value (as an IN parameter.)\n    It can be passed by reference (OUT, INOUT parameter.)"
+  ],
+  "Examples": [
+    "create table",
+    "create procedure",
+    "insert into foo_table (b) values (str_out);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

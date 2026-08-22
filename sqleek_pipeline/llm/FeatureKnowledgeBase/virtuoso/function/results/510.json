@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_statistics/"
+  ],
+  "Title": [
+    "vector sql_statistics ("
+  ],
+  "Feature": [
+    "vector sql_statistics ("
+  ],
+  "Description": [
+    "This SQL function corresponds to the ODBC catalog call of similar name.\n    It is used to access the data dictionary of remote data sources inside the\n    ATTACH TABLE process.\nThe dsn argument must refer to a dsn previously defined by\n    vd_remote_data_source or ATTACH TABLE.\nThe qualifier argument corresponds to the szTableQualifier and\n    cbTableQualifier arguments of an ODBC catalog function. A SQL NULL value\n    corresponds to the C NULL value. The arguments can contain % signs, which\n    are interpreted as in LIKE.\nThese functions return an array, with one element for each row of the result set.\n    Each row is represented as an array with one element for each column."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

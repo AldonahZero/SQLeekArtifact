@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_inst_create/"
+  ],
+  "Title": [
+    "any xenc_key_inst_create ("
+  ],
+  "Feature": [
+    "any xenc_key_inst_create ("
+  ],
+  "Description": [
+    "The function is used to make a key reference used in\n\tencryption functions."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

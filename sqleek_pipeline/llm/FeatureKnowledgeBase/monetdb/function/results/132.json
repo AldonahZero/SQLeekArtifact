@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "difference(s1, s2)"
+    ],
+    "Feature": [
+        "difference(s1, s2)"
+    ],
+    "Description": [
+        "Return type: ",
+        "int",
+        "converts two strings s1 and s2 to their soundex codes and reports the number of different code positions. Since soundex codes have four characters, the result ranges from zero to four, with zero being an exact match and four being no match."
+    ],
+    "Examples": [
+        "difference('MonetDB', 'DB3')"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT difference(s1, s2);",
+        "SELECT difference('example1', 'example2');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 337,
+            "Prompt Tokens": 316,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.9999999999999995e-05
+        },
+        {
+            "Total Tokens": 493,
+            "Prompt Tokens": 470,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 8.429999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 's1' unknown\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT difference('example1', 'example2');"
+    ]
+}

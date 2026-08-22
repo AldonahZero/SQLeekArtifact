@@ -1,0 +1,13 @@
+{
+  "checkpoint_name": "queue_current_20260715_153117",
+  "checkpoint_path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117",
+  "created_utc": "2026-07-15T15:31:23.432798Z",
+  "earliest_mtime_utc": "2026-07-15T02:01:41.491811Z",
+  "hi_val_count": 0,
+  "initial_corpus_count": 7898,
+  "latest_mtime_utc": "2026-07-15T15:29:23.252425Z",
+  "new_queue_count": 9533,
+  "queue_total": 17431,
+  "source_queue": "/root/sqleek_stage3_official_runs/mysql/mysql2x24h_resetfix0006_20260715_020032/r1/output/mysql_memory/default/queue",
+  "total_size_bytes": 50058330
+}

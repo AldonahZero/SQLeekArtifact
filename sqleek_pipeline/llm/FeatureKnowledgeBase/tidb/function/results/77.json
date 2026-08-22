@@ -1,0 +1,30 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_log2",
+    "Title": "LOG2()",
+    "Feature": [
+        "LOG2(X)"
+    ],
+    "Description": [
+        "\nLOG2(X)\n",
+        "\n            Returns the base-2 logarithm of\n            X. If\n            X is less than or equal to 0.0E0,\n            the function returns NULL and a warning\n            \u201cInvalid argument for logarithm\u201d is reported.\n            Returns NULL if\n            X is NULL.\n          ",
+        "Press CTRL+C to copy mysql> SELECT LOG2(65536);\n        -> 16\nmysql> SELECT LOG2(-100);\n        -> NULL",
+        "\nLOG2() is useful for finding\n            out how many bits a number requires for storage. This\n            function is equivalent to the expression\n            LOG(X) /\n            LOG(2).\n          "
+    ],
+    "Examples": [
+        "mysql> SELECT LOG2(65536);\n        -> 16\nmysql> SELECT LOG2(-100);\n        -> NULL"
+    ],
+    "Category": [
+        "\u6570\u503c\u51fd\u6570\u4e0e\u64cd\u4f5c\u7b26"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT LOG2(65536);",
+        "SELECT LOG2(-100);"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT LOG2(65536);",
+        "SELECT LOG2(-100);"
+    ]
+}

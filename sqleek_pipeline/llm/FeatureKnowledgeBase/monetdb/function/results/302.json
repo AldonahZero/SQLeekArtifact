@@ -1,0 +1,45 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/window-functions"
+    ],
+    "Title": [
+        "prod(numeric_expr)"
+    ],
+    "Feature": [
+        "prod(numeric_expr)"
+    ],
+    "Description": [
+        "Return type: ",
+        "bigint or hugeint or double"
+    ],
+    "Examples": [],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT prod(1, 2, 3, 4);",
+        "SELECT prod(1 * 2 * 3 * 4);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 261,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.534999999999999e-05
+        },
+        {
+            "Total Tokens": 454,
+            "Prompt Tokens": 427,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 8.025e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!syntax error, unexpected ',', expecting ')' in: \"select prod(1,\"\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT prod(1 * 2 * 3 * 4);"
+    ]
+}

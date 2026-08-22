@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/regular_expressions"
+    ],
+    "Title": [
+        "regexp_split_to_array(string, regex[, options])"
+    ],
+    "Feature": [
+        "regexp_split_to_array(string, regex[, options])"
+    ],
+    "Description": [
+        "Alias of string_split_regex. Splits the string along the regex.",
+        "Alias of string_split_regex. Splits the string along the regex. A set of optional options can be set."
+    ],
+    "Examples": [
+        "regexp_split_to_array('hello world; 42', ';? ')"
+    ],
+    "Category": [
+        "Regular Expressions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_split_to_array('hello,world', ',');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 331,
+            "Prompt Tokens": 306,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 6.0899999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_split_to_array('hello,world', ',');"
+    ]
+}

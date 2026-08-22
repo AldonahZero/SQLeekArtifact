@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sinv_create_inverse/"
+  ],
+  "Title": [
+    "sinv_create_inverse ("
+  ],
+  "Feature": [
+    "sinv_create_inverse ("
+  ],
+  "Description": [
+    "Creates inverse mapping for the mentioned functions (as described in the doc section SQL Inverse Functions )"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

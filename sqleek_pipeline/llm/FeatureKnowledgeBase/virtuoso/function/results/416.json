@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_server/"
+  ],
+  "Title": [
+    "REPL_SERVER ("
+  ],
+  "Feature": [
+    "REPL_SERVER ("
+  ],
+  "Description": [
+    "This function defines a server that will participate in replication.\nThe name is a symbolic name that should match the name specified\nas the ServerName configuration parameter in\nthe replication section of the virtuoso.ini file of the server being\ndefined. The address is the <host:port> where the\nserver designated by the name is listening. The DSN is an ODBC data source\nname referring to the server, so that the subscriber can retrieve schema and\nother information. Note that replication communication itself does not take\nplace through ODBC but that ODBC access to the publisher is required to\ninitiate the subscription. In order to subscribe to\npublications from a server the server must first be declared\nwith this function. If this function is called to define the local server, i.e. the given\nserver name is the ServerName in the Replication section of the local ini file\nthe function has no effect."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_size/"
+  ],
+  "Title": [
+    "dict_size ("
+  ],
+  "Feature": [
+    "dict_size ("
+  ],
+  "Description": [
+    "The function returns the number of items in the dict dictionary.\nFor NULL value of dict , zero is returned.\ndict\ndict"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

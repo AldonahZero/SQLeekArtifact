@@ -1,0 +1,90 @@
+--- /root/SQLeek/experiment/RQ2/sqlaser/build/mysql827_sqlright_native/docker/scripts/setup_database.py.before_sqlright_mysql827_envfix	2026-07-12 08:10:47.813981802 +0000
++++ /root/SQLeek/experiment/RQ2/sqlaser/build/mysql827_sqlright_native/docker/scripts/setup_database.py	2026-07-12 08:10:47.821981861 +0000
+@@ -1,21 +1,68 @@
+-import libtmux
+-import re
+-import time
+ import os
++import signal
++import subprocess
++import time
++
++MYSQL_BLD = "/home/mysql/mysql-server/bld"
++MYSQLD = os.path.join(MYSQL_BLD, "bin/mysqld")
++MYSQL = os.path.join(MYSQL_BLD, "bin/mysql")
++DATADIR = os.path.join(MYSQL_BLD, "data_all/ori_data")
++SOCKET = "/tmp/sqlright_setup_mysql.sock"
++PORT = "3910"
++PID_FILE = os.path.join(MYSQL_BLD, "setup_database.pid")
++ERR_FILE = os.path.join(DATADIR, "err.err")
++
++
++def wait_for_mysql():
++    for _ in range(90):
++        probe = subprocess.run(
++            [MYSQL, "-uroot", f"--socket={SOCKET}", f"--port={PORT}", "-e", "SELECT 1"],
++            cwd=MYSQL_BLD,
++            stdout=subprocess.DEVNULL,
++            stderr=subprocess.DEVNULL,
++        )
++        if probe.returncode == 0:
++            return
++        time.sleep(1)
++    raise RuntimeError("mysqld did not become ready for setup_database.py")
++
++
++if os.path.exists(SOCKET):
++    os.remove(SOCKET)
++if os.path.exists(PID_FILE):
++    os.remove(PID_FILE)
+ 
+-server = libtmux.Server()
+-session = server.new_session(session_name="fuzzing")
+-create_database_window = session.new_window(attach=False, window_name="create_database")
+-pane = create_database_window.attached_pane
+-
+-pane.send_keys("cd /home/mysql/mysql-server/bld")
+-pane.send_keys("./bin/mysqld --basedir=./ --datadir=./data_all/ori_data --log-error=./err.err --pid-file=./pid.pid &")
+-time.sleep(10)
+-create_database_window_client = session.new_window(attach=False, window_name="create_database_client")
+-pane_client = create_database_window_client.attached_pane
+-pane_client.send_keys("cd /home/mysql/mysql-server/bld")
+-pane_client.send_keys("./bin/mysql -u root -e \"create database if not exists test_sqlright1; create database if not exists test_init;\"")
+-time.sleep(5)
+-create_database_window.kill_window()
+-create_database_window_client.kill_window()
+-os.system("kill `pidof mysqld`")
++mysqld_cmd = [
++    MYSQLD,
++    "--basedir=./",
++    f"--datadir={DATADIR}",
++    f"--log-error={ERR_FILE}",
++    f"--pid-file={PID_FILE}",
++    f"--port={PORT}",
++    f"--socket={SOCKET}",
++    "--mysqlx=0",
++]
++proc = subprocess.Popen(mysqld_cmd, cwd=MYSQL_BLD)
++try:
++    wait_for_mysql()
++    subprocess.run(
++        [
++            MYSQL,
++            "-uroot",
++            f"--socket={SOCKET}",
++            f"--port={PORT}",
++            "-e",
++            "CREATE DATABASE IF NOT EXISTS test_sqlright1; CREATE DATABASE IF NOT EXISTS test_init;",
++        ],
++        cwd=MYSQL_BLD,
++        check=True,
++    )
++finally:
++    proc.terminate()
++    try:
++        proc.wait(timeout=20)
++    except subprocess.TimeoutExpired:
++        proc.kill()
++        proc.wait(timeout=20)
++    if os.path.exists(SOCKET):
++        os.remove(SOCKET)

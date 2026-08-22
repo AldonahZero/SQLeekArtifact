@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/date"
+    ],
+    "Title": [
+        "monthname(date)"
+    ],
+    "Feature": [
+        "monthname(date)"
+    ],
+    "Description": [
+        "The (English) name of the month."
+    ],
+    "Examples": [
+        "monthname(DATE '1992-09-20')"
+    ],
+    "Category": [
+        "Date Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT monthname(current_date);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 272,
+            "Prompt Tokens": 253,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.934999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT monthname(current_date);"
+    ]
+}

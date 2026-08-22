@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cfg_item_value/"
+  ],
+  "Title": [
+    "cfg_item_value ("
+  ],
+  "Feature": [
+    "cfg_item_value ("
+  ],
+  "Description": [
+    "Return the value of an item identified\n    by item_name and section parameters from the specified INI file.\nitem_name\nsection"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

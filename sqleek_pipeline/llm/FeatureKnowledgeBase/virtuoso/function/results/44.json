@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bit_or/"
+  ],
+  "Title": [
+    "bit_or ("
+  ],
+  "Feature": [
+    "bit_or ("
+  ],
+  "Description": [
+    "The function returns bitwise OR of two given integers.\nOn 64-bit platforms, both arguments are intentionally truncated to 32 bits\n\tto maintain compatibility."
+  ],
+  "Examples": [
+    "select bit_or (18, 6);",
+    "select bit_or (-18, -6);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

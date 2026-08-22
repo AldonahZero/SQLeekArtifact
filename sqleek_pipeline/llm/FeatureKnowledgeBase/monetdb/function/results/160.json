@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "sys.epoch(timestamp)"
+    ],
+    "Feature": [
+        "sys.epoch(timestamp)"
+    ],
+    "Description": [
+        "Return type: ",
+        "int",
+        "convert timestamp (or timestamptz) to nr of seconds since '1970-01-01 00:00:00.0'"
+    ],
+    "Examples": [
+        "sys.epoch(timestamp '2009-02-13 23:31:30.0')"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.epoch(timestamp);",
+        "SELECT sys.epoch(CURRENT_TIMESTAMP);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 306,
+            "Prompt Tokens": 287,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 5.4449999999999995e-05
+        },
+        {
+            "Total Tokens": 457,
+            "Prompt Tokens": 436,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 7.799999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 'timestamp' unknown\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.epoch(CURRENT_TIMESTAMP);"
+    ]
+}

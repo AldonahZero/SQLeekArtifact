@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bit_and/"
+  ],
+  "Title": [
+    "bit_and ("
+  ],
+  "Feature": [
+    "bit_and ("
+  ],
+  "Description": [
+    "The function returns bitwise AND of two given integers.\nOn 64-bit platforms, both arguments are intentionally truncated to 32 bits\n    to maintain compatibility."
+  ],
+  "Examples": [
+    "select bit_and (18, 6);",
+    "select bit_and (-18, -6);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

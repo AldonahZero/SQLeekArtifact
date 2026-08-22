@@ -1,0 +1,12 @@
+generated_at=2026-07-08T15:16:34Z
+source_stage_files=
+  /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/monetdb_memory.txt lines=9946 sha256=a23317a514f4d1566f46b1f159b6eef0c7e5f0e8894098a71b39db11c4224bb4
+  /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/monetdb_stale.txt lines=1838 sha256=b434252287cfbdbd42a739b259f482cd23b67871cc50f1bb000b70dac49244cc
+  /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/monetdb_logic.txt missing
+target_list=/root/SQLeek/experiment/RQ2/aflgo/monetdb/targets/monetdb_rq2_targets.txt
+target_count=9946
+target_sha256=a23317a514f4d1566f46b1f159b6eef0c7e5f0e8894098a71b39db11c4224bb4
+monetdb_commit=9b26fc8e25a3948fc94486caae3e30103330a5a7
+aflgo_commit=7af532bbe44c3007a53ea711f8ec5efa14038bb3
+resolved_ambiguous=2
+resolved_unique=11782

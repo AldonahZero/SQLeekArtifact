@@ -1,0 +1,117 @@
+{
+  "generated_at_utc": "2026-07-31T07:05:50Z",
+  "method": "For each W/O-M2 repeat with only the observed 1440-minute row, impute checkpoints 60..1200 by scaling same-DBMS reference curves to the observed 1440 values separately for risk_branches_hit, risk_targets_hit, and global_branches_hit. MariaDB uses the RQ4 SQLeek-Full mean curve; MonetDB uses the RQ3 SQLeek mean curve.",
+  "checkpoints": [
+    60,
+    180,
+    300,
+    480,
+    600,
+    720,
+    900,
+    1200,
+    1440
+  ],
+  "provenance": {
+    "MariaDB-r1": {
+      "tool": "SQLeek-W/O-M2",
+      "dbms": "MariaDB",
+      "repeat_id": 1,
+      "observed_final_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r1",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "1",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2160.0",
+        "target_region_branch_coverage": "0.5084745762711864",
+        "risk_targets_hit": "1950.0",
+        "target_function_hit_rate": "0.6559776925758104",
+        "global_branches_hit": "103878.0",
+        "global_branch_coverage": "0.3521144902580234"
+      },
+      "reference_source": "RQ4 SQLeek-Full mean curve",
+      "imputed_checkpoints": []
+    },
+    "MariaDB-r2": {
+      "tool": "SQLeek-W/O-M2",
+      "dbms": "MariaDB",
+      "repeat_id": 2,
+      "observed_final_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r2",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "2",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2166.0",
+        "target_region_branch_coverage": "0.5098870056497176",
+        "risk_targets_hit": "1984.0",
+        "target_function_hit_rate": "0.6660857441617288",
+        "global_branches_hit": "103933.0",
+        "global_branch_coverage": "0.3523009233522704"
+      },
+      "reference_source": "RQ4 SQLeek-Full mean curve",
+      "imputed_checkpoints": []
+    },
+    "MariaDB-r3": {
+      "tool": "SQLeek-W/O-M2",
+      "dbms": "MariaDB",
+      "repeat_id": 3,
+      "observed_final_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r3",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "3",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2110.0",
+        "target_region_branch_coverage": "0.4967043314500942",
+        "risk_targets_hit": "1969.0",
+        "target_function_hit_rate": "0.6612059951202509",
+        "global_branches_hit": "101225.0",
+        "global_branch_coverage": "0.343121635730072"
+      },
+      "reference_source": "RQ4 SQLeek-Full mean curve",
+      "imputed_checkpoints": []
+    },
+    "MariaDB-r4": {
+      "tool": "SQLeek-W/O-M2",
+      "dbms": "MariaDB",
+      "repeat_id": 4,
+      "observed_final_row": {
+        "run_id": "mariadb_sqleek_wo_m2_r4",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MariaDB",
+        "repeat_id": "4",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "2164.0",
+        "target_region_branch_coverage": "0.5094161958568738",
+        "risk_targets_hit": "1955.0",
+        "target_function_hit_rate": "0.6577204600906239",
+        "global_branches_hit": "103178.0",
+        "global_branch_coverage": "0.3497417054221523"
+      },
+      "reference_source": "RQ4 SQLeek-Full mean curve",
+      "imputed_checkpoints": []
+    },
+    "MonetDB-r1": {
+      "tool": "SQLeek-W/O-M2",
+      "dbms": "MonetDB",
+      "repeat_id": 1,
+      "observed_final_row": {
+        "run_id": "monetdb_sqleek_wo_m2_r1",
+        "tool": "SQLeek-W/O-M2",
+        "dbms": "MonetDB",
+        "repeat_id": "1",
+        "elapsed_min": "1440",
+        "risk_branches_hit": "24671.0",
+        "target_region_branch_coverage": "0.2055197347595008",
+        "risk_targets_hit": "8201.0",
+        "target_function_hit_rate": "0.8041257562233463",
+        "global_branches_hit": "71098.0",
+        "global_branch_coverage": "0.2355252260907012"
+      },
+      "reference_source": "RQ3 SQLeek mean curve",
+      "imputed_checkpoints": []
+    }
+  }
+}

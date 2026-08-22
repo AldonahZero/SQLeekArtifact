@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlinsertbefore/"
+  ],
+  "Title": [
+    "XMLInsertBefore ("
+  ],
+  "Feature": [
+    "XMLInsertBefore ("
+  ],
+  "Description": [
+    "The function modifies the XML document of the given source XML tree entity by adding new siblings to\nthe node specified by the entity. Siblings will be added right before the node.\nThe source entity should be XML tree entity, not \"persistent XML\" entity.\nThe value of source should be a node entity; source can not be an attribute entity or a root entity.\nsource\nsource\nsource\nsource\nThe values passed in parameters insertion1 ... insertionN will be converted into\nXML nodes according to rules described in section Composing Document Fragments From DOM Function Arguments.\ninsertion1\ninsertionN\nAfter calling the function, parameter source is still a valid XML entity that points to the same node.\nThe value passed as source can be used in the rest of caller procedure.\nsource\nsource"
+  ],
+  "Examples": [
+    "create procedure XMLInsertBefore_demo()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sha1_digest/"
+  ],
+  "Title": [
+    "sha1_digest ("
+  ],
+  "Feature": [
+    "sha1_digest ("
+  ],
+  "Description": [
+    "Returns string containing sha1 digest encoded in base64. This function has an alias: xenc_sha1_digest ()."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

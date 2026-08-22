@@ -1,0 +1,69 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "mysql_firewall_flush_status()",
+    "Description": [
+        "\nmysql_firewall_flush_status()\n",
+        "\n              This function resets several firewall status variables to\n              0:\n",
+        "\n\nFirewall_access_denied\n\nFirewall_access_granted\n\nFirewall_access_suspicious\n\n",
+        "\n              This function requires the\n              FIREWALL_ADMIN privilege or\n              the deprecated SUPER\n              privilege.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy SELECT mysql_firewall_flush_status();"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/firewall-reference.html#function_mysql-firewall-flush-status",
+    "Feature": [
+        "mysql_firewall_flush_status()"
+    ],
+    "Examples": [
+        "SELECT mysql_firewall_flush_status();"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT mysql_firewall_flush_status();",
+        "SELECT mysql_firewall_flush_status();",
+        "SELECT mysql_firewall_flush_status();",
+        "SELECT 'Function does not exist';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 373,
+            "Prompt Tokens": 353,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 6.494999999999999e-05
+        },
+        {
+            "Total Tokens": 531,
+            "Prompt Tokens": 511,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 8.864999999999999e-05
+        },
+        {
+            "Total Tokens": 689,
+            "Prompt Tokens": 669,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00011235
+        },
+        {
+            "Total Tokens": 847,
+            "Prompt Tokens": 827,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00013604999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mysql_firewall_flush_status does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mysql_firewall_flush_status does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mysql_firewall_flush_status does not exist')\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'Function does not exist';"
+    ]
+}

@@ -1,0 +1,98 @@
+SQLRight SQLite Reproduction Evidence
+=====================================
+
+Date (UTC): 2026-07-11
+Host: jie-2
+Task: SQLRight main-source verification and minimal SQLite smoke for SQLeek RQ2 planning.
+
+Key conclusions
+---------------
+1. SQLRight main source is present and complete at:
+   /root/SQLeek/experiment/RQ2/sqlaser/sqlright
+
+2. SQLRight main source commit reproduced:
+   9457f0311b70562a3423ee86ac7e2ebdaaa6664b
+   AuthorDate: Fri Oct 28 16:20:06 2022 -0400
+   CommitDate: Fri Oct 28 16:20:06 2022 -0400
+   Working tree at verification time: clean.
+
+3. SQLRight artifact repository is unavailable for this task.
+   The attempted clone directories contain only incomplete .git state and large temporary pack files.
+   It is intentionally not a blocker for the main SQLRight/SQLeek RQ2 adaptation.
+
+4. SQLite 3.34.0 was used only for original SQLRight baseline smoke.
+   Source path: /root/SQLeek/experiment/RQ2/sqlaser/build_context/sqlite-3.34.0
+   Git HEAD: 384f5c26f48b92e8bfcb168381d4a8caf3ea59e7
+   VERSION: 3.34.0
+   manifest.uuid: a26b6597e3ae272231b96f9982c3bcc17ddec2f2b6eb4df06a224b91089fed5b
+
+5. Formal SQLeek RQ2 SQLite source is the server-unified source, not SQLite 3.34.0:
+   /root/SQLeek/sources/sqlite
+   VERSION: 3.54.0
+   manifest.uuid: 3c0a277e6741c72281e12c44d85902aa6780890a7f59bacc3ac2b35ba27f7211
+   git commit: ca8593ce68390e3ac3801230cf05a3c80ce60e32
+
+SQLRight SQLite entry points
+----------------------------
+Outer launcher:
+  SQLRight/SQLite/scripts/run_sqlite_fuzzing.sh
+Container helper:
+  SQLRight/SQLite/docker/scripts/run_sqlright_sqlite_fuzzing_helper.sh
+Parallel launcher:
+  SQLRight/SQLite/docker/fuzz_root/run_parallel.py
+Main fuzzer entry:
+  SQLRight/SQLite/docker/src/AFL/afl-fuzz.cpp:7400
+
+Component locations
+-------------------
+Generator / parser / IR:
+  SQLRight/SQLite/docker/src/parser/
+  SQLRight/SQLite/docker/src/src/ast.cpp
+  SQLRight/SQLite/docker/src/src/ir_wrapper.cpp
+Mutator:
+  SQLRight/SQLite/docker/src/include/mutator.h
+  SQLRight/SQLite/docker/src/src/mutator.cpp
+Oracles:
+  SQLRight/SQLite/docker/src/oracle/sqlite_norec.*
+  SQLRight/SQLite/docker/src/oracle/sqlite_tlp.*
+  SQLRight/SQLite/docker/src/oracle/sqlite_likely.*
+  SQLRight/SQLite/docker/src/oracle/sqlite_rowid.*
+  SQLRight/SQLite/docker/src/oracle/sqlite_index.*
+  SQLRight/SQLite/docker/src/oracle/sqlite_opt.*
+Queue and coverage feedback:
+  SQLRight/SQLite/docker/src/AFL/afl-fuzz.cpp
+  Important functions include add_to_queue(), has_new_bits(), save_if_interesting(),
+  common_fuzz_stuff(), calculate_score(), and fuzz_one().
+
+Smoke result
+------------
+Built image:
+  sqlright_sqlite_smoke:sqlite334
+Image id:
+  763f120be9f5
+
+Direct foreground smoke command used CPU core 6 because the container cpuset did not include core 0.
+The first probe with core 0 failed at sched_setaffinity; the core-6 probe started successfully.
+
+Core-6 smoke output:
+  /root/SQLeek/experiment/RQ2/sqlaser/output/sqlright_sqlite_direct_probe_core6_20260711_120228
+Summary:
+  /root/SQLeek/experiment/RQ2/sqlaser/output/sqlright_sqlite_direct_probe_core6_20260711_120228.summary.txt
+Log:
+  /root/SQLeek/experiment/RQ2/sqlaser/logs/sqlright_sqlite_direct_probe_core6_20260711_120228.log
+
+Observed fuzzer_stats after the bounded smoke:
+  execs_done: 3394
+  execs_per_sec: 1.31
+  paths_total: 366
+  paths_found: 250
+  unique_crashes: 0
+  unique_hangs: 0
+  bitmap_cvg: 7.53%
+
+Interpretation
+--------------
+The original SQLRight SQLite baseline can build and enter the AFL queue/fuzzing loop
+against SQLite 3.34.0. That version remains smoke-only evidence. Formal SQLeek RQ2
+adaptation must target /root/SQLeek/sources/sqlite (3.54.0) and reuse existing SQLeek
+DBMS build, entry interface, 24h scripts, and LLVM replay flow.

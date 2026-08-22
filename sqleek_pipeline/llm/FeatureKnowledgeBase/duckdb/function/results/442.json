@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "strlen(string)"
+    ],
+    "Feature": [
+        "strlen(string)"
+    ],
+    "Description": [
+        "Number of bytes in string."
+    ],
+    "Examples": [
+        "strlen('\ud83e\udd86')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT strlen('example string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 265,
+            "Prompt Tokens": 246,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.8299999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT strlen('example string');"
+    ]
+}

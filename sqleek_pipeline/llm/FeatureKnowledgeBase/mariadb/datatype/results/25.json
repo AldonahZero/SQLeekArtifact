@@ -1,0 +1,54 @@
+{
+    "HTML": [
+        "https://mariadb.com/kb/en/longblob/"
+    ],
+    "Title": [
+        "LONGBLOB"
+    ],
+    "Feature": [
+        "LONGBLOB\n"
+    ],
+    "Description": [
+        "A BLOB column with a \nmaximum length of 4,294,967,295 bytes or 4GB (232 - 1). The effective maximum length of LONGBLOB columns depends on the\nconfigured maximum packet size in the client/server protocol and\navailable memory. Each LONGBLOB value is stored using a four-byte\nlength prefix that indicates the number of bytes in the value.",
+        "Oracle Mode",
+        "In Oracle mode from MariaDB 10.3, BLOB is a synonym for LONGBLOB."
+    ],
+    "Examples": [],
+    "Category": [
+        "String Data Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "CREATE TABLE example_table (data LONGBLOB);",
+        "ALTER TABLE example_table ADD COLUMN data LONGBLOB;",
+        "SELECT data FROM example_table;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 380,
+            "Prompt Tokens": 356,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 6.78e-05
+        },
+        {
+            "Total Tokens": 534,
+            "Prompt Tokens": 510,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 9.089999999999999e-05
+        },
+        {
+            "Total Tokens": 675,
+            "Prompt Tokens": 657,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 0.00010935
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1050, \"Table 'example_table' already exists\")\n",
+        "This result object does not return rows. It has been closed automatically.",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT data FROM example_table;"
+    ]
+}

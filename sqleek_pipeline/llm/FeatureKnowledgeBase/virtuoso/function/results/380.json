@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regexp_replace/"
+  ],
+  "Title": [
+    "varchar regexp_replace ("
+  ],
+  "Feature": [
+    "varchar regexp_replace ("
+  ],
+  "Description": [
+    "This function replaces occurrence(s) of the matching pattern in the source_string with\na specified replace_string , allowing complex\nsearch-and-replace operations.  The traditional REPLACE SQL function substitutes\none string with another.  Assume your data has extraneous spaces in the text and\nyou would like to replace them with a single space. With the REPLACE function,\nyou would need to list exactly how many spaces you want to replace. However,\nthe number of extra spaces may not be the same everywhere in the text.\npattern\nsource_string\nreplace_string"
+  ],
+  "Examples": [
+    "SELECT"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

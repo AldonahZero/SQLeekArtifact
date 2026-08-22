@@ -1,0 +1,68 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_count-distinct",
+    "Title": "COUNT(DISTINCT)",
+    "Feature": [
+        "COUNT(DISTINCT\n            expr,[expr...])"
+    ],
+    "Description": [
+        "\nCOUNT(DISTINCT\n            expr,[expr...])\n",
+        "\n            Returns a count of the number of rows with different\n            non-NULL expr\n            values.\n          ",
+        "\n            If there are no matching rows,\n            COUNT(DISTINCT) returns\n            0.\n          ",
+        "Press CTRL+C to copy mysql> SELECT COUNT(DISTINCT results) FROM student;",
+        "\n            In MySQL, you can obtain the number of distinct expression\n            combinations that do not contain NULL by\n            giving a list of expressions. In standard SQL, you would\n            have to do a concatenation of all expressions inside\n            COUNT(DISTINCT ...).\n          "
+    ],
+    "Examples": [
+        "mysql> SELECT COUNT(DISTINCT results) FROM student;"
+    ],
+    "Category": [
+        "GROUP BY \u805a\u5408\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT COUNT(DISTINCT results) FROM student;",
+        "SELECT COUNT(DISTINCT expr) FROM your_table;",
+        "SELECT COUNT(DISTINCT expr) FROM some_table;",
+        "SELECT COUNT(DISTINCT expr) FROM my_table;",
+        "SELECT COUNT(DISTINCT expr) FROM any_table;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 416,
+            "Prompt Tokens": 394,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 7.23e-05
+        },
+        {
+            "Total Tokens": 572,
+            "Prompt Tokens": 549,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 9.614999999999999e-05
+        },
+        {
+            "Total Tokens": 730,
+            "Prompt Tokens": 707,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00011984999999999999
+        },
+        {
+            "Total Tokens": 887,
+            "Prompt Tokens": 864,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.0001434
+        },
+        {
+            "Total Tokens": 1044,
+            "Prompt Tokens": 1021,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00016695
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_tidb.student' doesn't exist\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_tidb.your_table' doesn't exist\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_tidb.some_table' doesn't exist\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_tidb.my_table' doesn't exist\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_tidb.any_table' doesn't exist\")\n"
+    ],
+    "EffectiveSQLs": []
+}

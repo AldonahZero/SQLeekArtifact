@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_mkdir/"
+  ],
+  "Title": [
+    "file_mkdir ("
+  ],
+  "Feature": [
+    "file_mkdir ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function creates a file system directory."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

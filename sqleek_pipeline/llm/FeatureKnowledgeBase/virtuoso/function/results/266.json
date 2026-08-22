@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_java_set_property/"
+  ],
+  "Title": [
+    "java_set_property ("
+  ],
+  "Feature": [
+    "java_set_property ("
+  ],
+  "Description": [
+    "Assigns a new value to either a Java class instance property referenced \n    by instance_obj, or if instance_obj is not supplied (NULL) then sets a \n    static Java class property."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_script_obsolete/"
+  ],
+  "Title": [
+    "BPEL.BPEL.script_obsolete ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.script_obsolete ("
+  ],
+  "Description": [
+    "BPEL.BPEL.script_obsolete Marks the script as obsolete. This means that existing instances will complete but no new instances can be made. The effect can be reversed by going to edit mode and recompiling a new version which then becomes current. Directly after this function there will be no current version but there may be a version being edited.\nBPEL.BPEL.script_obsolete"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

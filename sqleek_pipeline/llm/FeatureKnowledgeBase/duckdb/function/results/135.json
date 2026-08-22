@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/date"
+    ],
+    "Title": [
+        "today()"
+    ],
+    "Feature": [
+        "today()"
+    ],
+    "Description": [
+        "Current date (start of current transaction)."
+    ],
+    "Examples": [
+        "today()"
+    ],
+    "Category": [
+        "Date Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT today();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 260,
+            "Prompt Tokens": 244,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.62e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT today();"
+    ]
+}

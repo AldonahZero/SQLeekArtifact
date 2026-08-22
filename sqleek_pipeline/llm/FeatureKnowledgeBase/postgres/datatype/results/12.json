@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-character.html"
+    ],
+    "Title": [
+        "character(n), char(n), bpchar(n)"
+    ],
+    "Feature": [
+        "character(n), char(n), bpchar(n)"
+    ],
+    "Description": [
+        "Description",
+        "fixed-length, blank-padded"
+    ],
+    "Examples": [],
+    "Category": [
+        "Character Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'example'::character(10), 'example'::char(10), 'example'::bpchar(10);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 315,
+            "Prompt Tokens": 276,
+            "Completion Tokens": 39,
+            "Total Cost (USD)": 6.48e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'example'::character(10), 'example'::char(10), 'example'::bpchar(10);"
+    ]
+}

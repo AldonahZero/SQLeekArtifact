@@ -1,0 +1,183 @@
+waiting for server to start.... done
+server started
+=== Attaching gdb to backend PID: 58 ===
+=== psql output ===
+psql:/tmp/trigger.sql:2: NOTICE:  type "foo" does not exist, skipping
+DROP TYPE
+CREATE TYPE
+BEGIN
+DECLARE CURSOR
+      row       
+----------------
+ (1,1073741824)
+(1 row)
+
+ALTER TYPE
+Output format is unaligned.
+
+psql:/tmp/trigger.sql:14: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+psql:/tmp/trigger.sql:14: error: connection to server was lost
+=== postgres log tail ===
+2026-04-25 09:26:41.368 UTC [41] LOG:  starting PostgreSQL 18.3 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0, 64-bit
+2026-04-25 09:26:41.368 UTC [41] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-04-25 09:26:41.372 UTC [41] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-04-25 09:26:41.382 UTC [47] LOG:  database system was shut down at 2026-04-25 09:26:39 UTC
+2026-04-25 09:26:41.386 UTC [41] LOG:  database system is ready to accept connections
+2026-04-25 09:27:01.633 UTC [41] LOG:  client backend (PID 58) was terminated by signal 11: Segmentation fault
+2026-04-25 09:27:01.633 UTC [41] DETAIL:  Failed process was running: FETCH c;
+2026-04-25 09:27:01.633 UTC [41] LOG:  terminating any other active server processes
+2026-04-25 09:27:01.635 UTC [41] LOG:  all server processes terminated; reinitializing
+2026-04-25 09:27:01.654 UTC [325] LOG:  database system was interrupted; last known up at 2026-04-25 09:26:41 UTC
+=== gdb output ===
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007a7235ff9e6a in epoll_wait () from /lib/x86_64-linux-gnu/libc.so.6
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007a7236074c60 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007a7236074c60 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x000058365436157f in text_to_cstring (t=0x58365637774c) at varlena.c:234
+        tunpacked = 0x58365637774c
+        len = 268435452
+        result = 0x7a721c734048 "\020"
+#2  0x00005836543625f9 in textout (fcinfo=0x7ffc86929ea0) at varlena.c:603
+        txt = 96990397953868
+#3  0x00005836543b2225 in FunctionCall1Coll (flinfo=0x5836562990e8, collation=0, arg1=96990397953868) at fmgr.c:1139
+        fcinfodata = {fcinfo = {flinfo = 0x5836562990e8, context = 0x0, resultinfo = 0x0, fncollation = 0, isnull = false, nargs = 1, args = 0x7ffc86929ec0}, fcinfo_data = "\350\220)V6X", '\000' <repeats 23 times>, "z\001\000Lw7V6X\000\000\000u8T6X\000"}
+        fcinfo = 0x7ffc86929ea0
+        result = 202609352192
+        __func__ = "FunctionCall1Coll"
+#4  0x00005836543b3bf8 in OutputFunctionCall (flinfo=0x5836562990e8, val=96990397953868) at fmgr.c:1685
+No locals.
+#5  0x00005836542f6529 in record_out (fcinfo=0x7ffc8692a040) at rowtypes.c:435
+        att = 0x7a722c756344
+        column_info = 0x5836562990d8
+        column_type = 25
+        value = 0x583656377ba8 "2"
+        tmp = 0x583656377ba9 ""
+        attr = 96990397953868
+        nq = false
+        rec = 0x583656377730
+        tupType = 16386
+        tupTypmod = -1
+        tupdesc = 0x7a722c7562a8
+        tuple = {t_len = 32, t_self = {ip_blkid = {bi_hi = 65535, bi_lo = 65535}, ip_posid = 0}, t_tableOid = 0, t_data = 0x583656377730}
+        my_extra = 0x583656299088
+        needComma = true
+        ncolumns = 2
+        i = 1
+        values = 0x583656377760
+        nulls = 0x583656377780
+        buf = {data = 0x583656377798 "(2,", len = 3, maxlen = 1024, cursor = 0}
+#6  0x00005836543b2225 in FunctionCall1Coll (flinfo=0x5836563689a8, collation=0, arg1=96990397904456) at fmgr.c:1139
+        fcinfodata = {fcinfo = {flinfo = 0x5836563689a8, context = 0x0, resultinfo = 0x0, fncollation = 0, isnull = false, nargs = 1, args = 0x7ffc8692a060}, fcinfo_data = "\250\211\066V6X", '\000' <repeats 23 times>, "X\001\000H\266\066V6X\000\000\000\372&V6X\000"}
+        fcinfo = 0x7ffc8692a040
+        result = 96990397042680
+        __func__ = "FunctionCall1Coll"
+#7  0x00005836543b3bf8 in OutputFunctionCall (flinfo=0x5836563689a8, val=96990397904456) at fmgr.c:1685
+No locals.
+#8  0x0000583653b93008 in printtup (slot=0x583656298ff8, self=0x58365626f9c0) at printtup.c:360
+        outputstr = 0x583656353190 "\332\001"
+        thisState = 0x583656368998
+        attr = 96990397904456
+        typeinfo = 0x583656298ed0
+        myState = 0x58365626f9c0
+        oldcontext = 0x583656298dd0
+        buf = 0x58365626fa10
+        natts = 1
+        i = 0
+#9  0x00005836541a1cae in RunFromStore (portal=0x5836562ee740, direction=ForwardScanDirection, count=0, dest=0x58365626f9c0) at pquery.c:1094
+        oldcontext = 0x583656298dd0
+        ok = true
+        forward = true
+        current_tuple_count = 0
+        slot = 0x583656298ff8
+#10 0x00005836541a17b7 in PortalRunSelect (portal=0x5836562ee740, forward=true, count=0, dest=0x58365626f9c0) at pquery.c:917
+        queryDesc = 0x0
+        direction = ForwardScanDirection
+        nprocessed = 140722566242800
+        __func__ = "PortalRunSelect"
+#11 0x00005836541a1416 in PortalRun (portal=0x5836562ee740, count=9223372036854775807, isTopLevel=true, dest=0x58365626f9c0, altdest=0x58365626f9c0, qc=0x7ffc8692a3c0) at pquery.c:765
+        _save_exception_stack = 0x7ffc8692a4e0
+        _save_context_stack = 0x0
+        _local_sigjmp_buf = {{__jmpbuf = {0, -9023516034598445709, 140722566246280, 96990359928215, 96990368952984, 134630953185344, -9023516034659263117, -3651395752247042701}, __mask_was_saved = 0, __saved_mask = {__val = {112, 1445922784, 96990396873264, 96990396869248, 96990396873152, 112, 96990396873264, 140722566243056, 96990356121864, 140722566243088, 10000928915, 140722566243088, 96990396873152, 96990397392704, 96990397449856, 96990397392976}}}}
+        _do_rethrow = false
+        result = false
+        nprocessed = 0
+        saveTopTransactionResourceOwner = 0x5836562a9860
+        saveTopTransactionContext = 0x5836562fc680
+        saveActivePortal = 0x0
+        saveResourceOwner = 0x5836562a9860
+        savePortalContext = 0x0
+        saveMemoryContext = 0x5836562fc680
+        __func__ = "PortalRun"
+#12 0x0000583654199b84 in exec_simple_query (query_string=0x58365626eb80 "FETCH c;") at postgres.c:1273
+        cmdtaglen = 5
+        snapshot_set = false
+        per_parsetree_context = 0x0
+        plantree_list = 0x58365626f970
+        parsetree = 0x58365626f580
+        commandTag = CMDTAG_FETCH
+        qc = {commandTag = CMDTAG_UNKNOWN, nprocessed = 0}
+        querytree_list = 0x58365626f920
+        portal = 0x5836562ee740
+        receiver = 0x58365626f9c0
+        format = 0
+        cmdtagname = 0x5836545f407f "FETCH"
+        parsetree_item__state = {l = 0x58365626f5b0, i = 0}
+        dest = DestRemote
+        oldcontext = 0x5836562fc680
+        parsetree_list = 0x58365626f5b0
+        parsetree_item = 0x58365626f5c8
+        save_log_statement_stats = false
+        was_logged = false
+        use_implicit_block = false
+        msec_str = "\000\244\222\206\374\177\000\000\245\061\363S6X\000\000\000\000\000\000\000\000\000\000\300\244\222\206\374\177\000"
+        __func__ = "exec_simple_query"
+#13 0x000058365419f32f in PostgresMain (dbname=0x5836562a7f38 "postgres", username=0x5836562a7f20 "pguser") at postgres.c:4766
+        query_string = 0x58365626eb80 "FETCH c;"
+        firstchar = 81
+        input_message = {data = 0x58365626eb80 "FETCH c;", len = 9, maxlen = 1024, cursor = 9}
+        local_sigjmp_buf = {{__jmpbuf = {0, -9023516034525045389, 140722566246280, 96990359928215, 96990368952984, 134630953185344, -9023516034497782413, -3651395724485730957}, __mask_was_saved = 1, __saved_mask = {__val = {4194304, 14280, 96990397104160, 140722566243776, 0, 140722566243712, 96990364884965, 144, 96990396851920, 96990396851920, 96990396851920, 140722566243744, 96990362262506, 0, 96990396851920, 140722566243776}}}}
+        send_ready_for_query = false
+        idle_in_transaction_timeout_enabled = false
+        idle_session_timeout_enabled = false
+        __func__ = "PostgresMain"
+#14 0x00005836541952c0 in BackendMain (startup_data=0x7ffc8692a670, startup_data_len=24) at backend_startup.c:124
+        bsdata = 0x7ffc8692a670
+#15 0x0000583654094695 in postmaster_child_launch (child_type=B_BACKEND, child_slot=1, startup_data=0x7ffc8692a670, startup_data_len=24, client_sock=0x7ffc8692a6d0) at launch_backend.c:290
+        pid = 0
+#16 0x000058365409b0c3 in BackendStartup (client_sock=0x7ffc8692a6d0) at postmaster.c:3587
+        bn = 0x58365629a5e8
+        pid = 0
+        startup_data = {canAcceptConnections = CAC_OK, socket_created = 830424401462229, fork_started = 830424401462236}
+        cac = CAC_OK
+        __func__ = "BackendStartup"
+#17 0x000058365409862e in ServerLoop () at postmaster.c:1702
+        s = {sock = 9, raddr = {addr = {ss_family = 2, __ss_padding = "\236(\177\000\000\001\000\000\000\000\000\000\000\000\034\000\000\000\000\000\000\000 \250\222\206\374\177\000\000\000\252\016\066rz\000\000\034\000\000\000\000\000\000\000e\366\365\065rz\000\000\002\000\000\000d\000\000\000coCT6X\000\000\342CdT6X\000\000\060c)V6X", '\000' <repeats 18 times>, "\001\000\000\000\000\000\000\000 \250\222\206\374\177\000", __ss_align = 507713074688}, salen = 16}}
+        i = 0
+        now = 1777109201
+        last_lockfile_recheck_time = 1777109201
+        last_touch_time = 1777109201
+        events = {{pos = 1, events = 2, fd = 6, user_data = 0x0}, {pos = 0, events = 0, fd = 513, user_data = 0x0}, {pos = 64, events = 0, fd = 8, user_data = 0x1}, {pos = 124, events = 120, fd = 118, user_data = 0x5836545e3a00}, {pos = 1060, events = 0, fd = 906947712, user_data = 0x8030}, {pos = 2050, events = 0, fd = 1408449943, user_data = 0x5836547cf298}, {pos = 908324928, events = 31346, fd = 905417314, user_data = 0x3}, {pos = -1564058112, events = 2342740565, fd = 32768, user_data = 0x8}, {pos = -2037207160, events = 32764, fd = 905683723, user_data = 0x1000000b6}, {pos = 3859545, events = 0, fd = 2, user_data = 0x8ba36255a2c65e00}, {pos = 1000, events = 0, fd = -128, user_data = 0x0}, {pos = -2037207160, events = 32764, fd = 1408449943, user_data = 0x5836547cf298}, {pos = 908324928, events = 31346, fd = 905417811, user_data = 0xad57d48}, {pos = 1777109198, events = 0, fd = 181763400, user_data = 0x7a7235f787c1}, {pos = 906947808, events = 31346, fd = 0, user_data = 0x7}, {pos = 1410653691, events = 22582, fd = -2037207160, user_data = 0x1000}, {pos = 1417474560, events = 22582, fd = 1641619416, user_data = 0x10f}, {pos = 905414187, events = 31346, fd = 1445567040, user_data = 0x7a72360eece0}, {pos = 8, events = 0, fd = 1, user_data = 0x5000000000}, {pos = 2048, events = 0, fd = 111, user_data = 0x932c2b3b61d91fd8}, {pos = 143, events = 0, fd = 906947712, user_data = 0x20}, {pos = 129, events = 80, fd = 4, user_data = 0x0}, {pos = 0, events = 3, fd = 7, user_data = 0x583656299a50}, {pos = 1445567096, events = 22582, fd = 4096, user_data = 0x28}, {pos = -2037208592, events = 32764, fd = 1413345800, user_data = 0x583653f33d97 <main>}, {pos = 1417474712, events = 7, fd = 1024, user_data = 0x400}, {pos = 1445567056, events = 22582, fd = 1445558656, user_data = 0x0}, {pos = 1445567096, events = 22582, fd = -2037208464, user_data = 0x5836543df581 <AllocSetAllocFromNewBlock+835>}, {pos = 381762310, events = 0, fd = 905407787, user_data = 0x7ffc8692aaa0}, {pos = 1413351457, events = 22582, fd = 381762310, user_data = 0x583656297980}, {pos = 0, events = 0, fd = -1564058112, user_data = 0x583656297a48}, {pos = -128, events = 4294967295, fd = 0, user_data = 0x7ffc8692af88}, {pos = 1408449943, events = 22582, fd = 1417474712, user_data = 0x7a723623f040 <_rtld_global>}, {pos = 905417811, events = 31346, fd = 1415189033, user_data = 0x5836543de3ad <wipe_mem+37>}, {pos = 784, events = 0, fd = 1445558896, user_data = 0x7ffc8692ab10}, {pos = 1413344452, events = 22582, fd = 906933760, user_data = 0x583656297980}, {pos = 1445603481, events = 22582, fd = 2719176, user_data = 0x0}, {pos = 1445558832, events = 22582, fd = 1445558656, user_data = 0x400}, {pos = -128, events = 4294967295, fd = 0, user_data = 0x2c}, {pos = 905701181, events = 31346, fd = -128, user_data = 0x0}, {pos = 47, events = 0, fd = 905701181, user_data = 0x7a72362400c8 <_rtld_global+4232>}, {pos = 908329160, events = 31346, fd = 908329176, user_data = 0x7a72362400d8 <_rtld_global+4248>}, {pos = 1445567056, events = 22582, fd = 1445558656, user_data = 0x400}, {pos = 1445558656, events = 22582, fd = 1417849008, user_data = 0x58365626ea80}, {pos = -2037208160, events = 1, fd = 1413400095, user_data = 0x7ffc8692abb0}, {pos = -1564058112, events = 2342740565, fd = -2037208112, user_data = 0x7a7235f62ac1}, {pos = 0, events = 0, fd = 1445553504, user_data = 0x7a7235f60fe0}, {pos = 905325249, events = 31346, fd = 0, user_data = 0x0}, {pos = 905318368, events = 31346, fd = 0, user_data = 0x0}, {pos = 0, events = 0, fd = -2037207840, user_data = 0x8ba36255a2c65e00}, {pos = -2037207840, events = 32764, fd = -1564058112, user_data = 0x7ffc8692ad00}, {pos = -1564058112, events = 2342740565, fd = -2037207808, user_data = 0x7a7235f1671d <sigprocmask+13>}, {pos = 1408449943, events = 22582, fd = 1409893356, user_data = 0x2f00400000}, {pos = 1445553504, events = 22582, fd = 1024, user_data = 0x583656296560}, {pos = 4194304, events = 0, fd = 1445390976, user_data = 0x7ffc8692aca0}, {pos = 1413400095, events = 22582, fd = 1024, user_data = 0x583656296560}, {pos = 19, events = 13, fd = -2037207872, user_data = 0x5836543a65bb <should_output_to_server+29>}, {pos = 1445582104, events = 13, fd = 19, user_data = 0x7ffc8692ace0}, {pos = 1413113275, events = 22582, fd = 1445583544, user_data = 0x7ffc8692ad10}, {pos = 1413113672, events = 22582, fd = 0, user_data = 0x8ba36255a2c65e00}, {pos = -2037207744, events = 32764, fd = 1409893780, user_data = 0x0}, {pos = 0, events = 2, fd = -2037207696, user_data = 0x58365409c07c <maybe_start_bgworkers+375>}, {pos = 1417746912, events = 22582, fd = 0, user_data = 0x0}, {pos = 1445391920, events = 22582, fd = 1417641424, user_data = 0x58365626f408}}
+        nevents = 1
+        __func__ = "ServerLoop"
+#18 0x0000583654097f1f in PostmasterMain (argc=7, argv=0x58365626a590) at postmaster.c:1400
+        opt = -1
+        status = 0
+        userDoption = 0x5836562942e0 "/tmp/pgdata"
+        listen_addr_saved = true
+        output_config_variable = 0x0
+        __func__ = "PostmasterMain"
+#19 0x0000583653f34123 in main (argc=7, argv=0x58365626a590) at main.c:227
+        do_check_root = true
+        dispatch_option = DISPATCH_POSTMASTER
+#0  0x00007a7236074c60 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+rip            0x7a7236074c60      0x7a7236074c60
+rbp            0x7ffc86929e30      0x7ffc86929e30
+rsp            0x7ffc86929df8      0x7ffc86929df8
+[Inferior 1 (process 58) detached]

@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "array_has"
+    ],
+    "Feature": [
+        "array_has"
+    ],
+    "Description": [
+        "array_contains",
+        "list_has",
+        "list_contains(list, element)",
+        "Returns true if the list contains the element."
+    ],
+    "Examples": [
+        "list_contains([1, 2, NULL], 1)"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_has(array[1, 2, 3], 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 289,
+            "Prompt Tokens": 260,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 5.64e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_has(array[1, 2, 3], 2);"
+    ]
+}

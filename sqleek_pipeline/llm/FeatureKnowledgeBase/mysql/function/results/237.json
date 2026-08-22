@@ -1,0 +1,75 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "NTH_VALUE()",
+    "Description": [
+        "\nNTH_VALUE(expr,\n            N)\n            [from_first_last]\n            [null_treatment]\n            over_clause\n",
+        "\n            Returns the value of expr from\n            the N-th row of the window frame.\n            If there is no such row, the return value is\n            NULL.\n          ",
+        "\nN must be a literal positive\n            integer.\n          ",
+        "\nfrom_first_last is part of the\n            SQL standard, but the MySQL implementation permits only\n            FROM FIRST (which is also the default).\n            This means that calculations begin at the first row of the\n            window. FROM LAST is parsed, but produces\n            an error. To obtain the same effect as FROM\n            LAST (begin calculations at the last row of the\n            window), use ORDER BY to sort in reverse\n            order.\n          ",
+        "\nover_clause is as described in\n            Section\u00a014.20.2, \u201cWindow Function Concepts and Syntax\u201d.\n            null_treatment is as described in\n            the section introduction.\n          ",
+        "\n            For an example, see the\n            FIRST_VALUE() function\n            description.\n          ",
+        "\n            In MySQL 8.0.22 and later, you cannot use\n            NULL for the row argument of this\n            function.\n          "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html#function_nth-value",
+    "Feature": [
+        "NTH_VALUE(expr,\n            N)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT NTH_VALUE(column_name, N) OVER (ORDER BY some_column) AS nth_value_result;",
+        "SELECT NTH_VALUE(some_value, N) OVER (ORDER BY some_column) AS nth_value_result;",
+        "SELECT NTH_VALUE(1, N) OVER (ORDER BY 1) AS nth_value_result;",
+        "SELECT NTH_VALUE(1, 1) OVER (ORDER BY 1) AS nth_value_result;",
+        "SELECT NTH_VALUE(1, 1) OVER (ORDER BY some_expression) AS nth_value_result;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 578,
+            "Prompt Tokens": 545,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 0.00010155
+        },
+        {
+            "Total Tokens": 748,
+            "Prompt Tokens": 714,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 0.00012749999999999998
+        },
+        {
+            "Total Tokens": 917,
+            "Prompt Tokens": 884,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 0.0001524
+        },
+        {
+            "Total Tokens": 1086,
+            "Prompt Tokens": 1052,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 0.0001782
+        },
+        {
+            "Total Tokens": 1270,
+            "Prompt Tokens": 1236,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 0.0002058
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'column_name' in 'field list'\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'some_value' in 'field list'\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'N' in 'field list'\")\n",
+        "(pymysql.err.OperationalError) (3592, \"Window '<unnamed window>': ORDER BY or PARTITION BY uses legacy position indication which is not supported, use expression.\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'some_expression' in 'window order by'\")\n"
+    ],
+    "EffectiveSQLs": []
+}

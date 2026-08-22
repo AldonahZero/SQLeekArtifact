@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-money.html"
+    ],
+    "Title": [
+        "money"
+    ],
+    "Feature": [
+        "money"
+    ],
+    "Description": [
+        "Storage Size",
+        "8 bytes",
+        "Description",
+        "currency amount",
+        "Range",
+        "-92233720368547758.08 to +92233720368547758.07"
+    ],
+    "Examples": [],
+    "Category": [
+        "Monetary Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CAST(100.00 AS money);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 289,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.324999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CAST(100.00 AS money);"
+    ]
+}

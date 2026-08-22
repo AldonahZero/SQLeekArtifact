@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_set_user_id/"
+  ],
+  "Title": [
+    "integer set_user_id ("
+  ],
+  "Feature": [
+    "integer set_user_id ("
+  ],
+  "Description": [
+    "This function changes the effective user and group to that of the user defined by user_name parameter. When called by a user with DBA group privileges, the optional password may be omitted. Otherwise it has to be the valid password for user_name. The mode parameter determines persistence (context) of effects of the call: If omitted or set to integer value 1, the effective user privileges will remain in effect within current stored procedure context only - upon returning, the effective user privileges will be automatically reset to state effective before set_user_id. When mode is equal to integer value 0, the effective user privileges will remain set for duration of current ODBC session, current request in web server context, or until next call of set_user_id.\n\t  This function is analogous to the UNIX 'su' command."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

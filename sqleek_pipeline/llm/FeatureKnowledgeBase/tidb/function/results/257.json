@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/sequence-functions"
+    ],
+    "Title": [
+        "SETVAL()"
+    ],
+    "Feature": [
+        "SETVAL()"
+    ],
+    "Description": [
+        "SETVAL()",
+        "SETVAL(n) \u51fd\u6570\u8bbe\u7f6e\u5e8f\u5217\u7684\u5f53\u524d\u503c\u3002"
+    ],
+    "Examples": [
+        "SELECT NEXTVAL(s1);\n",
+        "SELECT SETVAL(s1, 10);\n",
+        "SELECT NEXTVAL(s1);\n"
+    ],
+    "Category": [
+        "\u5e8f\u5217\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT NEXTVAL(s1);",
+        "SELECT SETVAL(s1, 10);",
+        "SELECT NEXTVAL(s1);"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT NEXTVAL(s1);",
+        "SELECT SETVAL(s1, 10);",
+        "SELECT NEXTVAL(s1);"
+    ]
+}

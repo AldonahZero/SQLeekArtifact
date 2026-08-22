@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_isstring/"
+  ],
+  "Title": [
+    "boolean isstring ("
+  ],
+  "Feature": [
+    "boolean isstring ("
+  ],
+  "Description": [
+    "isstring returns one if its argument is of type VARCHAR, zero otherwise."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

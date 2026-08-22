@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/aggregates"
+    ],
+    "Title": [
+        "bit_xor(arg)"
+    ],
+    "Feature": [
+        "bit_xor(arg)"
+    ],
+    "Description": [
+        "Returns the bitwise XOR of all bits in a given expression."
+    ],
+    "Examples": [
+        "bit_xor(A)"
+    ],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT bit_xor(1) AS result;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 283,
+            "Prompt Tokens": 261,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.234999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT bit_xor(1) AS result;"
+    ]
+}

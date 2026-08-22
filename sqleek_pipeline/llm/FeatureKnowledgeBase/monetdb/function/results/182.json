@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "sql_sub(dt_or_tm, sec_interval)"
+    ],
+    "Feature": [
+        "sql_sub(dt_or_tm, sec_interval)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as arg 1",
+        "subtract a decimal seconds interval value from a date or time or timetz or timestamp or timestamptz"
+    ],
+    "Examples": [
+        "select sql_sub(time '15:35:50', interval '3:25' minute to second)"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sql_sub('2023-10-01 12:00:00', 60);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 331,
+            "Prompt Tokens": 298,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 6.45e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sql_sub('2023-10-01 12:00:00', 60);"
+    ]
+}

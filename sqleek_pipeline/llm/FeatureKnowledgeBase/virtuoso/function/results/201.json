@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_acl_set/"
+  ],
+  "Title": [
+    "integer http_acl_set ("
+  ],
+  "Feature": [
+    "integer http_acl_set ("
+  ],
+  "Description": [
+    "This function can be used within application logic to set ACLs rule."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

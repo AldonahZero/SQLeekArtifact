@@ -1,0 +1,6 @@
+dbms,tool,run,run_dir,time_origin,time_origin_policy,latest_logSaved_timestamp,observed_hours,report_whitelist
+PostgreSQL,SQLeek,r1,/root/dfuzz-griffin/griffin_output/griffin_postgres_sqleek_rnd1,2026-07-05 05:03:19,earliest_logSaved_dir_timestamp,2026-07-05 22:16:49,17.225,19466.md;19469.md;19470.md
+PostgreSQL,SQLeek,r2,/root/dfuzz-griffin/griffin_output/griffin_postgres_sqleek_rnd2,2026-07-05 05:03:28,earliest_logSaved_dir_timestamp,2026-07-05 16:02:25,10.9825,19466.md;19469.md;19470.md
+PostgreSQL,SQLeek,r3,/root/dfuzz-griffin/griffin_output/griffin_postgres_sqleek_rnd3,2026-07-05 05:03:54,earliest_logSaved_dir_timestamp,2026-07-06 05:58:47,24.914722,19466.md;19469.md;19470.md
+PostgreSQL,SQLeek,r4,/root/dfuzz-griffin/griffin_output/griffin_postgres_sqleek_rnd4,2026-07-05 05:04:10,earliest_logSaved_dir_timestamp,2026-07-06 05:37:08,24.549444,19466.md;19469.md;19470.md
+PostgreSQL,SQLeek,r5,/root/dfuzz-griffin/griffin_output/griffin_postgres1,2026-01-21 15:26:46,earliest_logSaved_dir_timestamp,2026-01-23 06:28:00,39.020556,19466.md;19469.md;19470.md

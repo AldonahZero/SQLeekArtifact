@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "instr"
+    ],
+    "Feature": [
+        "instr"
+    ],
+    "Description": [
+        "strpos(string, search_string)",
+        "Return location of first occurrence of search_string in string, counting from 1. Returns 0 if no match found."
+    ],
+    "Examples": [
+        "strpos('test test', 'es')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT strpos('hello world', 'world');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.264999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT strpos('hello world', 'world');"
+    ]
+}

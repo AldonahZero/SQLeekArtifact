@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-string.html"
+    ],
+    "Title": [
+        "position"
+    ],
+    "Feature": [
+        "position ( substring text IN string text ) \u2192 integer"
+    ],
+    "Description": [
+        "Returns first starting index of the specified substring within string, or zero if it's not present."
+    ],
+    "Examples": [
+        "position('om' in 'Thomas') \u2192 3"
+    ],
+    "Category": [
+        "String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT position('substring' IN 'string')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 258,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.1899999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT position('substring' IN 'string')"
+    ]
+}

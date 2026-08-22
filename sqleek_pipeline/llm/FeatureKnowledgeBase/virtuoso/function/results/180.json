@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_geo_insert/"
+  ],
+  "Title": [
+    "geo_insert ("
+  ],
+  "Feature": [
+    "geo_insert ("
+  ],
+  "Description": [
+    "Inserts a geometry from an R tree index. The tb must be a\nfully qualified name of an R tree table. This function is typically used from triggers\non a geometry column. The function is transactional and makes a transaction log record of the action."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

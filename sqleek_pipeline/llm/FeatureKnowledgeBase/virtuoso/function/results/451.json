@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_serv_queue_top/"
+  ],
+  "Title": [
+    "WS.WS. SERV_QUEUE_TOP ("
+  ],
+  "Feature": [
+    "WS.WS. SERV_QUEUE_TOP ("
+  ],
+  "Description": [
+    "Web Robot site retrieval can be performed with the WS.WS.SERV_QUEUE_TOP PL function\nintegrated in to the Virtuoso server.\nTo run multiple walking robots all you simply need to do is kick them off from\nseparate ODBC/SQL connections and all robots will walk together without overlapping.\nFrom a VSP interface, after calling the retrieval function you may\ncall http_flush to keep running tasks\nin the server and allowing the user agent to continue with other tasks."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

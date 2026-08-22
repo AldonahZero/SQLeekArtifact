@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "datetrunc(part, timestamp)"
+    ],
+    "Feature": [
+        "datetrunc(part, timestamp)"
+    ],
+    "Description": [
+        "Alias of date_trunc. Truncate to specified precision."
+    ],
+    "Examples": [
+        "datetrunc('hour', TIMESTAMP '1992-09-20 20:38:40')"
+    ],
+    "Category": [
+        "Timestamp Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT datetrunc('hour', CURRENT_TIMESTAMP);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 291,
+            "Prompt Tokens": 268,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.4e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT datetrunc('hour', CURRENT_TIMESTAMP);"
+    ]
+}

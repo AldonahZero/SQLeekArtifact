@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-formatting.html"
+    ],
+    "Title": [
+        "to_char"
+    ],
+    "Feature": [
+        "to_char ( numeric_type, text ) \u2192 text"
+    ],
+    "Description": [
+        "Converts number to string according to the given format; available for integer, bigint, numeric, real, double precision."
+    ],
+    "Examples": [
+        "to_char(125, '999') \u2192 125",
+        "to_char(125.8::real, '999D9') \u2192 125.8",
+        "to_char(-125.8, '999D99S') \u2192 125.80-"
+    ],
+    "Category": [
+        "Data Type Formatting Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT to_char(12345, '99999');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 291,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.4449999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT to_char(12345, '99999');"
+    ]
+}

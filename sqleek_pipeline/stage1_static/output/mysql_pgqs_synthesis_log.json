@@ -1,0 +1,23 @@
+{
+  "algorithm": "PGQS",
+  "convergence": false,
+  "dbms": "mysql",
+  "dual_available": false,
+  "final_score": 0.0,
+  "iterations": [
+    {
+      "compile_error": "",
+      "compiled": true,
+      "iteration": 0,
+      "note": "manual_non_postgres; kept existing mysql_pgqs.ql"
+    }
+  ],
+  "k_max": 5,
+  "mode": "manual_non_postgres",
+  "ql_output": "/root/SQLeek/sqleek_pipeline/stage1_static/queries/mysql_pgqs.ql",
+  "weights": {
+    "w1": 0.3,
+    "w2": 0.3,
+    "w3": 0.4
+  }
+}

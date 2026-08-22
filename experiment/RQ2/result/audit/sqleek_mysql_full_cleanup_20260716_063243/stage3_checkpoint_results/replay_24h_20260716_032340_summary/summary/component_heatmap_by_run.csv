@@ -1,0 +1,17 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mysql_sqleek_r1,mysql,1,other,SQLeek,228,75,0.32894736842105265,58,31,0.5454545454545454
+mysql_sqleek_r1,mysql,1,catalog_metadata,SQLeek,42,8,0.19047619047619047,4,3,0.75
+mysql_sqleek_r1,mysql,1,type_system,SQLeek,3786,2222,0.5868991019545695,846,633,0.7629310344827587
+mysql_sqleek_r1,mysql,1,executor,SQLeek,202,97,0.4801980198019802,7,6,0.6666666666666666
+mysql_sqleek_r1,mysql,1,parser,SQLeek,18,12,0.6666666666666666,3,3,1.0
+mysql_sqleek_r1,mysql,1,optimizer,SQLeek,46,36,0.782608695652174,8,8,1.0
+mysql_sqleek_r1,mysql,1,cursor_prepared,SQLeek,290,205,0.7068965517241379,5,5,1.0
+mysql_sqleek_r1,mysql,1,storage,SQLeek,26,9,0.34615384615384615,6,4,0.6
+mysql_sqleek_r1,mysql,1,other,SQLeek,228,75,0.32894736842105265,58,31,0.5454545454545454
+mysql_sqleek_r1,mysql,1,catalog_metadata,SQLeek,42,8,0.19047619047619047,4,3,0.75
+mysql_sqleek_r1,mysql,1,type_system,SQLeek,3786,2222,0.5868991019545695,846,633,0.7629310344827587
+mysql_sqleek_r1,mysql,1,executor,SQLeek,202,97,0.4801980198019802,7,6,0.6666666666666666
+mysql_sqleek_r1,mysql,1,parser,SQLeek,18,12,0.6666666666666666,3,3,1.0
+mysql_sqleek_r1,mysql,1,optimizer,SQLeek,46,36,0.782608695652174,8,8,1.0
+mysql_sqleek_r1,mysql,1,cursor_prepared,SQLeek,290,205,0.7068965517241379,5,5,1.0
+mysql_sqleek_r1,mysql,1,storage,SQLeek,26,9,0.34615384615384615,6,4,0.6

@@ -1,0 +1,94 @@
+--- a/SQLite/docker/src/AFL/afl-fuzz.cpp	2026-07-17 08:27:55.613389473 +0000
++++ b/SQLite/docker/src/AFL/afl-fuzz.cpp	2026-07-17 08:27:56.013387821 +0000
+@@ -4200,6 +4200,74 @@
+   return keeping;
+ }
+ 
++static bool sqleek_sync_coverage_only_enabled(void) {
++  const char *value = getenv("SQLRIGHT_SYNC_COVERAGE_ONLY");
++  return value && value[0] && strcmp(value, "0");
++}
++
++/* MonetDB uses SQLRight's SQLite parser/IR mutator but does not have a
++   SQLite-compatible oracle result for seeds imported through AFL sync. Keep
++   the AFL coverage bookkeeping for synced seeds, but do not touch SQLRight's
++   oracle comparison result or SQLite-specific library metadata here. The seed
++   can still be selected by AFL later; fuzz_one() will parse it through the
++   normal mutation path when it is actually mutated. */
++static u8 save_if_interesting_coverage_only(char **argv, string &query_str, u8 fault) {
++  u8 *fn = "";
++  u8 hnb;
++  s32 fd;
++  u8 keeping = 0;
++
++  if (is_str_empty(query_str))
++    return keeping;
++
++  if (fault == crash_mode) {
++
++    if (!(hnb = has_new_bits(virgin_bits, query_str)) && !disable_coverage_feedback) {
++      if (crash_mode)
++        total_crashes++;
++      return keeping;
++    }
++
++    if (disable_coverage_feedback == 1)
++      return keeping;
++
++    if ((disable_coverage_feedback == 2) && get_rand_int(10) < 9)
++      return keeping;
++
++#ifndef SIMPLE_FILES
++
++    fn = alloc_printf("%s/queue/id:%06u,%s", out_dir, queued_paths,
++                      describe_op(hnb));
++
++#else
++
++    fn = alloc_printf("%s/queue/id_%06u", out_dir, queued_paths);
++
++#endif /* ^!SIMPLE_FILES */
++
++    add_to_queue(fn, query_str.size(), 0);
++    total_add_to_queue++;
++
++    if (hnb == 2) {
++      queue_top->has_new_cov = 1;
++      queued_with_cov++;
++    }
++
++    queue_top->exec_cksum = hash32(trace_bits, MAP_SIZE, HASH_CONST);
++
++    fd = open(fn, O_WRONLY | O_CREAT | O_EXCL, 0640);
++    if (fd < 0)
++      PFATAL("Unable to create '%s'", fn);
++    ck_write(fd, query_str.c_str(), query_str.size(), fn);
++    close(fd);
++
++    return 1;
++  }
++
++  ALL_COMP_RES unused_all_comp_res = ALL_COMP_RES();
++  return save_if_interesting(argv, query_str, unused_all_comp_res, fault);
++}
++
+ /* When resuming, try to find the queue position to start from. This makes sense
+    only when resuming, and when we can find the original fuzzer_stats. */
+ 
+@@ -6516,10 +6584,14 @@
+         for (int output_index = 0; output_index < st.st_size; output_index++) {
+           saved_str += mem[output_index];
+         }
+-        ALL_COMP_RES dummy_all_comp_res;
++        ALL_COMP_RES dummy_all_comp_res = ALL_COMP_RES();
+ 
+         syncing_party = sd_ent->d_name;
+-        queued_imported += save_if_interesting(argv, saved_str, dummy_all_comp_res, fault);
++        if (sqleek_sync_coverage_only_enabled()) {
++          queued_imported += save_if_interesting_coverage_only(argv, saved_str, fault);
++        } else {
++          queued_imported += save_if_interesting(argv, saved_str, dummy_all_comp_res, fault);
++        }
+         syncing_party = 0;
+ 
+         munmap(mem, st.st_size);

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_uptime/"
+  ],
+  "Title": [
+    "uptime ("
+  ],
+  "Feature": [
+    "uptime ("
+  ],
+  "Description": [
+    "The uptime function will run a string result set with how much time server have been up."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

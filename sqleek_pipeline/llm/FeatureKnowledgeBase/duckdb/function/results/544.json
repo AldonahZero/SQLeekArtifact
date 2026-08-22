@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "epoch_ms(timestamptz)"
+    ],
+    "Feature": [
+        "epoch_ms(timestamptz)"
+    ],
+    "Description": [
+        "Converts a timestamptz to milliseconds since the epoch."
+    ],
+    "Examples": [
+        "epoch_ms('2022-11-07 08:43:04.123456+00'::TIMESTAMPTZ);"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT epoch_ms(timestamptz '2023-10-01 12:00:00+00');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 310,
+            "Prompt Tokens": 273,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 6.314999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT epoch_ms(timestamptz '2023-10-01 12:00:00+00');"
+    ]
+}

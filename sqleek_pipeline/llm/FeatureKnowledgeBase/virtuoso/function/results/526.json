@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_interiorringn/"
+  ],
+  "Title": [
+    "ST_InteriorRingN ("
+  ],
+  "Feature": [
+    "ST_InteriorRingN ("
+  ],
+  "Description": [
+    "Given a 1-based index of an interior ring of a polygon, returns the ring. Wrong index is not reported as an\n    \terror and NULL is returned."
+  ],
+  "Examples": [
+    "SELECT ?s, bif:ST_InteriorRingN (?o, bif:ST_NuminteriorRings (?o))"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

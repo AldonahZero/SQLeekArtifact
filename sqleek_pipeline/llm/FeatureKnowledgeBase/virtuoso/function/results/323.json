@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_plink_set_option/"
+  ],
+  "Title": [
+    "BPEL.BPEL.plink_set_option ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.plink_set_option ("
+  ],
+  "Description": [
+    "BPEL.BPEL.plink_set_option This function is used to set an option of the specified partner link.\n\t    The options are used to configure WS-Security, WS-Addressing and WS-Reliable Messaging\n\t    protocols for sending and receiving messages to the given partner.\nBPEL.BPEL.plink_set_option\nwsa the version of namespace value for WS-Addressing protocol.\nwsa the version of namespace value for WS-Addressing protocol.\nhttp-auth-uid user name for basic HTTP authentication\nhttp-auth-uid user name for basic HTTP authentication\nhttp-auth-pwd password for HTTP authentication\nhttp-auth-pwd password for HTTP authentication\nwss-priv-key name of the private key to be used for signing the requests\nwss-priv-key name of the private key to be used for signing the requests\nwss-pub-key name of the partner's public key to be used for encryption of the requests\nwss-pub-key name of the partner's public key to be used for encryption of the requests\nwss-in-encrypt incoming message XML data encryption policy\nwss-in-encrypt incoming message XML data encryption policy\nwss-in-signature incoming messages XML signature policy\nwss-in-signature incoming messages XML signature policy\nwss-in-signers list of public key names which are trusted (empty list mean all are trusted)\nwss-in-signers list of public key names which are trusted (empty list mean all are trusted)\nwss-out-encrypt-key type of the session key for outgoing message encryption\nwss-out-encrypt-key type of the session key for outgoing message encryption\nwss-out-signature-type XML signature template type for signing the outgoing messages\nwss-out-signature-type XML signature template type for signing the outgoing messages\nwss-out-signature-function in case of custom signature this option is a name of the PL function producing the template for XML signature\nwss-out-signature-function in case of custom signature this option is a name of the PL function producing the template for XML signature\nwsrm-in-type WS-Reliable Messaging protocol usage for incoming messages\nwsrm-in-type WS-Reliable Messaging protocol usage for incoming messages\nwsrm-out-type WS-Reliable Messaging protocol usage for outgoing messages\nwsrm-out-type WS-Reliable Messaging protocol usage for outgoing messages"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

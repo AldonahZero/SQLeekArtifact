@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_map_get/"
+  ],
+  "Title": [
+    "http_map_get ("
+  ],
+  "Feature": [
+    "http_map_get ("
+  ],
+  "Description": [
+    "Retrieves information associated with the virtual host / HTTP path mapping in\n    effect for the VSP page being processed.\n    Values valid\n    in current connection or URL context may be retrieved by element_name .\nelement_name\nCalling http_map_get has no use outside of http context. In this case an\n    error will be signalled.\nhttp_map_get"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

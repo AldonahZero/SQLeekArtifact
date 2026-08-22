@@ -1,0 +1,33 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xpath_eval/"
+  ],
+  "Title": [
+    "xpath_eval ("
+  ],
+  "Feature": [
+    "xpath_eval ("
+  ],
+  "Description": [
+    "This function returns the result of applying the XPath\nexpression to the context node. By default only the first result is\nreturned, but supplying a third argument allows you to specify an\nindex for the value; the default assumes a value of 1 here. A value\nof 0 returns an array of 0 or more elements, one for each value\nselected by the XPath expression.\nWhen this function returns an entity in a result set, the client will\nsee an nvarchar value containing the serialization of the entity,\ncomplete with markup. When the entity is passed as an SQL value it\nremains an entity referencing the node of a parsed XML tree,\npermitting navigation inside the tree.\nThe expression can be passed parameters by specifying a fourth argument\nto xpath_eval() . This will be a vector of name/value\npairs. The values can be referenced from inside XPath expression by using\ntheir names with '$' prefix. You may use any Virtuoso data type.\nThe names in the parameter vector should appear without the '$' sign.\nIf any of the parameter values is NULL the parameter will be ignored because NULL\nhas no XPath counterpart.\nIf the same name appears more than once in the vector, the last name/value pair is\nused and all preceding pairs with this name are silently ignored.\nObviously, names should be strings that are valid XPath variable names.\nxpath_eval()"
+  ],
+  "Examples": [
+    "select xt_file, xpath_eval ('//author', t) from xml_text",
+    "CREATE TABLE t_articles (",
+    "insert into t_articles (article_id, article_title) values (1, 'a');",
+    "insert into t_articles (article_id, article_title) values (2, 'b');",
+    "UPDATE t_articles SET article_xml = '",
+    "UPDATE t_articles SET article_xml = '",
+    "SELECT xpath_eval('//beatle/@instrument', xml_tree_doc (article_xml), 0)",
+    "SELECT xpath_eval('//beatle/@instrument', xml_tree_doc (article_xml), 1)",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

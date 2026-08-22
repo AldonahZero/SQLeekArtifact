@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_box_xml_entity/"
+  ],
+  "Title": [
+    "any soap_box_xml_entity ("
+  ],
+  "Feature": [
+    "any soap_box_xml_entity ("
+  ],
+  "Description": [
+    "Converts an XML entity to an SQL value based on the type of the entity and the desired SQL type.\nThis function is called internally to convert a SOAP request parameter to a PL procedure parameter when a SOAP\nrequest is being processed by the SOAP server."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

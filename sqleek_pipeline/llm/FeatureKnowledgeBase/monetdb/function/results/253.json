@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/uuid-functions"
+    ],
+    "Title": [
+        "sys.uuid()"
+    ],
+    "Feature": [
+        "sys.uuid()"
+    ],
+    "Description": [
+        "Return type: ",
+        "uuid",
+        "generates and returns a new random uuid"
+    ],
+    "Examples": [
+        "sys.uuid()"
+    ],
+    "Category": [
+        "UUID Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.uuid();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 274,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.874999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.uuid();"
+    ]
+}

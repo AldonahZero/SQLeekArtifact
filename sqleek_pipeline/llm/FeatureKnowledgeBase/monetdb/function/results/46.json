@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "scale_down(x, y)"
+    ],
+    "Feature": [
+        "scale_down(x, y)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as first arg",
+        "??? divide x by y and round to integer"
+    ],
+    "Examples": [
+        "scale_down(100, 3)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT scale_down(10, 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 295,
+            "Prompt Tokens": 273,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.4149999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT scale_down(10, 2);"
+    ]
+}

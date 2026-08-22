@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_uuencode/"
+  ],
+  "Title": [
+    "uuencode ("
+  ],
+  "Feature": [
+    "uuencode ("
+  ],
+  "Description": [
+    "There are many protocols, like classic UNIX uuencode,\nwhich are used to transmit binary files\nover transmission mediums that do not support other than\nsimple ASCII data. The epoch of physical lines of such sort is\nin past but file attachments in most popular mail systems still\nfollow old regulations.\nEncoded data are transmitted as a sequence of one or more \"sections\".\nThey may be stored or sent as independent documents.\nEvery section contains some range of original document's data.\nThey may be decoded one after another, and original\ndocument may be composed by concatenation of decoded fragments.\nIf the document is small (or if there's no limit on the size of message),\nit may be sent as single section.\nEvery section has some header and footer and a set of\nlines with data between them. Headers and especially footers are\nusually optional and may vary from system to system whereas\ndata lines are described by standards. Data lines of any two\nconsequent sections may be concatenated together, if needed, to\ncreate longer section.\nuuencode creates a vector of strings, where\nevery string contains some number of data lines, without headers or\nfooters. A Virtuoso/PL stored procedure may be used to create some output\nstream(s) and put there sections of appropriate format with\ndata lines from vector.\nEvery item of the created vector will contain up to maxlines lines of data,\nusually 60 to 80 bytes per line; maxlines may vary from 10 to 120000 so section may be 0.8Kb to 10Mb long\ndepending on your choice.\nLast section may be shorter than other, if only partially filled.\n10Mb limit may be bypassed by sending of sections one after another\nwithout intermediate footers or headers, but please keep in\nmind that you cannot concatenate two strings in memory if\nthe sum of their lengths exceeds system-wide 10Mb.\nuuencode\nmaxlines\nmaxlines\nRFC 2045,\n(N. Borenstein, N. Freed.\nMIME (Multipurpose Internet Mail Extensions) Part One:\nThe Format of Internet Message Bodies),\ncontains detailed description of most important encodings used by mail\nsystems.\nOlder RFC 1521 is now obsoleted.\nCurrently, eight conventions are used for mail attachments.\nIn Virtuoso, they are enumerated by integer IDs.\nTable 24.108. Unicode-like standards, supported by Virtuoso"
+  ],
+  "Examples": [
+    "create procedure BINHEX_ENCODE (in txt varchar, in lines_per_section integer)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

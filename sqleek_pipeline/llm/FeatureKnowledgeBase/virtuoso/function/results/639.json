@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_var_samp/"
+  ],
+  "Title": [
+    "numeric VAR_SAMP ("
+  ],
+  "Feature": [
+    "numeric VAR_SAMP ("
+  ],
+  "Description": [
+    "VAR_SAMP returns the sample variance of a set of numbers after discarding the nulls in this set.\nThe expr is a numeric expression, and the function returns a value of type NUMERIC. If the\nfunction is applied to an empty set, then it returns null. The function makes the following calculation:\n(SUM(expr2) - SUM(expr)2 / COUNT(expr)) / (COUNT(expr) - 1)\nThis function is similar to VAR, except that given an input set of one element, VAR returns 0 and\nVAR_SAMP returns null."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

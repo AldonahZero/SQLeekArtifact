@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_unsubscribe/"
+  ],
+  "Title": [
+    "REPL_UNSUBSCRIBE ("
+  ],
+  "Feature": [
+    "REPL_UNSUBSCRIBE ("
+  ],
+  "Description": [
+    "This function is used to stop receiving a replication messages from a\n   publisher server for a item or whole subscription. It will be invoked\n   automatically when a publication is dropped. The subscriber can also invoke\n   this function to stop receiving replication messages. The existing items can be\n   dropped or not depending on the copy mode flag. The description entries for\n   that subscription will be removed. There is no \"undo\" ability. To\n   temporally halt the replication messages you can use repl_disconnect()."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

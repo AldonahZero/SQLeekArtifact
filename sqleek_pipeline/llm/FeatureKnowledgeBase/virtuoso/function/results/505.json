@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_gettypeinfo/"
+  ],
+  "Title": [
+    "vector sql_gettypeinfo ("
+  ],
+  "Feature": [
+    "vector sql_gettypeinfo ("
+  ],
+  "Description": [
+    "You can use the functions described here to find out information about the\nremote datasources that you are using. These could be especially useful in Virtuoso PL\nlater on if you are not able to know everything about the remote tables ahead of time for\nthe ATTACH TABLE statement.\nstatement\nThese SQL functions correspond to the ODBC catalog calls of similar name.\nThe dsn argument must refer to a dsn previously defined by\nvd_remote_data_source or ATTACH TABLE.\nBy default information for all the data types supported by the remote is returned.\nThe optional type argument (defaults to SQL_ALL_TYPES) limits the information\nreturned to cover only the ODBC type number supplied.\nThese functions return an array, with one element for each row of the result set.\nEach row is represented as an array with one element for each column.\ndbg_obj_print (sql_gettypeinfo ('Local Virtuoso'));\n->\n(\n (\"character\" 1 2000 \"'\" \"'\" \"length\" 1 1 3 0 0 0 \"varchar\" <DB NULL> <DB NULL> )\n (\"numeric\" 2 40 \"\" \"\" \"precision,scale\" 1 1 2 0 0 0 \"numeric\" 0 15 )\n (\"decimal\" 3 40 \"\" \"\" \"precision,scale\" 1 1 2 0 0 0 \"decimal\" 0 15 )\n (\"integer\" 4 10 \"\" \"\" <DB NULL> 1 1 2 0 0 0 \"integer\" 0 10 )\n (\"smallint\" 5 3 \"\" \"\" <DB NULL> 1 1 2 0 0 0 \"smallint\" <DB NULL> <DB NULL> )\n (\"smallint\" -7 3 \"\" \"\" <DB NULL> 1 1 2 0 0 0 \"smallint\" <DB NULL> <DB NULL> )\n (\"float\" 6 16 \"\" \"e0\" <DB NULL> 1 1 2 0 0 0 \"double precision\" <DB NULL> <DB NULL> )\n (\"real\" 7 16 \"\" \"e0\" <DB NULL> 1 1 2 0 0 0 \"real\" <DB NULL> <DB NULL> )\n (\"double precision\" 8 16 \"\" \"e0\" <DB NULL> 1 1 2 0 0 0 \"double precision\" <DB NULL> <DB NULL> )\n (\"varchar\" 12 2000 \"'\" \"'\" \"length\" 1 1 3 0 0 0 \"varchar\" <DB NULL> <DB NULL> )\n (\"long varchar\" -1 2147483647 \"'\" \"'\" <DB NULL> 1 1 0 0 0 0 \"long varchar\" <DB NULL> <DB NULL> )\n (\"long varbinary\" -4 2147483647 \"'\" \"'\" <DB NULL> 1 1 0 0 0 0 \"long varbinary\" <DB NULL> <DB NULL> )\n (\"datetime\" 11 19 \"{ts\" \"}\" <DB NULL> 1 1 3 0 0 0 \"datetime\" <DB NULL> <DB NULL> )\n (\"timestamp\" -2 10 \"0x\" <DB NULL> <DB NULL> 0 0 2 0 0 0 \"timestamp\" <DB NULL> <DB NULL> )\n (\"time\" 10 8 \"{t\" \"}\" <DB NULL> 1 1 2 0 0 0 \"time\" <DB NULL> <DB NULL> )\n (\"date\" 9 10 \"{d\" \"}\" <DB NULL> 1 1 2 0 0 0 \"date\" <DB NULL> <DB NULL> )\n (\"binary\" -2 2000 \"0x\" \"\" \"length\" 1 1 2 0 0 0 \"varbinary\" <DB NULL> <DB NULL> )\n (\"varbinary\" -3 2000 \"0x\" \"\" \"length\" 1 1 2 0 0 0 \"varbinary\" <DB NULL> <DB NULL> )\n (\"nchar\" -8 1000 \"N'\" \"'\" \"length\" 1 1 3 0 0 0 \"nvarchar\" <DB NULL> <DB NULL> )\n (\"nvarchar\" -9 1000 \"N'\" \"'\" \"length\" 1 1 3 0 0 0 \"nvarchar\" <DB NULL> <DB NULL> )\n (\"long nvarchar\" -10 1073741823 \"N'\" \"'\" <DB NULL> 1 1 0 0 0 0 \"long nvarchar\" <DB NULL> <DB NULL> )\n)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

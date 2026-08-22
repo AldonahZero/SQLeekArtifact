@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-window.html"
+    ],
+    "Title": [
+        "row_number"
+    ],
+    "Feature": [
+        "row_number () \u2192 bigint"
+    ],
+    "Description": [
+        "Returns the number of the current row within its partition, counting from 1."
+    ],
+    "Examples": [],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT row_number() OVER ()"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 273,
+            "Prompt Tokens": 254,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.95e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT row_number() OVER ()"
+    ]
+}

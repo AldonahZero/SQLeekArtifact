@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_terminate_instance/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_TERMINATE_INSTANCE ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_TERMINATE_INSTANCE ("
+  ],
+  "Description": [
+    "Terminates (shuts down) an already created instance. This operation is idempotent; if you terminate an\n    instance more than once, each call will succeed."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

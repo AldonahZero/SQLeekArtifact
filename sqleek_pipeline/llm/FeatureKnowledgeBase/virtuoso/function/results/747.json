@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xte_nodebld_acc/"
+  ],
+  "Title": [
+    "xte_nodebld_acc ("
+  ],
+  "Feature": [
+    "xte_nodebld_acc ("
+  ],
+  "Description": [
+    "The xte_nodebld_acc() function successively adds\n    the remaining arguments to the first one.\n    If the last items of the first argument and some following arguments are strings,\n    they are concatenated. All successive strings are concatenated.\n    The value of the first item is the number of the non-empty items in the\n    returned vector. The length of the returned vector is the sum of the length\n    of the first argument and number of the remaining arguments."
+  ],
+  "Examples": [
+    "create procedure test_nodebld()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_triples_to_ttl/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_TRIPLES_TO_TTL ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_TRIPLES_TO_TTL ("
+  ],
+  "Description": [
+    "Serializes vector of triples into a session, in TURTLE syntax. In current version, every triple is printed in separate top-level record (say, in rdf:Description tag),\nwithout any pretty-print or nesting optimization."
+  ],
+  "Examples": [
+    "delete from RDF_QUAD where G=DB.DBA.RDF_MAKE_IID_OF_QNAME ('http://fake.example.org/graph/');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

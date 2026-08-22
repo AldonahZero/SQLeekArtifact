@@ -1,0 +1,6 @@
+kind	name	dbms	pid_or_container	log	started_at
+sqlancer	rq2_sqlancer_sqlite_r4_20260615_092736	sqlite	1849205	/root/SQLeek/experiment/RQ2/live/logs/rq2_sqlancer_sqlite_r4_20260615_092736.log	2026-06-15T09:27:36+00:00
+sqlancer	rq2_sqlancer_sqlite_r5_20260615_092736	sqlite	1849211	/root/SQLeek/experiment/RQ2/live/logs/rq2_sqlancer_sqlite_r5_20260615_092736.log	2026-06-15T09:27:36+00:00
+squirrel	rq2_squirrel_sqlite_r1_20260615_092736	sqlite	rq2_squirrel_sqlite_r1_20260615_092736	/root/SQLeek/experiment/RQ2/live/logs/rq2_squirrel_sqlite_r1_20260615_092736.log	2026-06-15T09:27:37+00:00
+squirrel	rq2_squirrel_sqlite_r2_20260615_092736	sqlite	rq2_squirrel_sqlite_r2_20260615_092736	/root/SQLeek/experiment/RQ2/live/logs/rq2_squirrel_sqlite_r2_20260615_092736.log	2026-06-15T09:27:38+00:00
+squirrel	rq2_squirrel_sqlite_r3_20260615_092736	sqlite	rq2_squirrel_sqlite_r3_20260615_092736	/root/SQLeek/experiment/RQ2/live/logs/rq2_squirrel_sqlite_r3_20260615_092736.log	2026-06-15T09:27:38+00:00

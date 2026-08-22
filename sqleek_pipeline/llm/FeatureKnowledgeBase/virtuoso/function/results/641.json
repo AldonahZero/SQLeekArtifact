@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vd_remote_proc_wrapper/"
+  ],
+  "Title": [
+    "varchar vd_remote_proc_wrapper ("
+  ],
+  "Feature": [
+    "varchar vd_remote_proc_wrapper ("
+  ],
+  "Description": [
+    "This is to create a PL stored procedure to execute a Remote Stored Procedures. It returns results as a SQL result set as well as an array(vector) depending of the 'make_resultset' flag."
+  ],
+  "Examples": [
+    "create procedure \"MS\".\"SQL\".\"CustOrderHist\" (IN \"_CustomerID\" VARCHAR) returns any array array"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

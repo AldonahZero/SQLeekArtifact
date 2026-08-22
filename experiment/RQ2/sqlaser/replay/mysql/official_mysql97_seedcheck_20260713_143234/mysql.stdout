@@ -1,0 +1,16 @@
+COUNT( * )
+0
+COALESCE( SUM( CAST( ( c1 = 1.877669 ) <> 0 AS UNSIGNED ) ), 0 )
+0
+COUNT( * )
+0
+COALESCE( SUM( CAST( ( c1 = 0 ) <> 0 AS UNSIGNED ) ), 0 )
+0
+COUNT( * )
+0
+COALESCE( SUM( CAST( ( c2 = 10 ) <> 0 AS UNSIGNED ) ), 0 )
+0
+COUNT( * )
+0
+COALESCE( SUM( CAST( ( c2 = 0 ) <> 0 AS UNSIGNED ) ), 0 )
+0

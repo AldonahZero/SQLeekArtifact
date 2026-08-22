@@ -1,0 +1,9 @@
+group,region_count,future_bug_region_count,future_bug_rate,future_unique_bug_count,mean_future_bug_count,median_future_bug_count,relative_risk,risk_difference,odds_ratio,ci95_low,ci95_high,test,p_value,p_value_bh
+None,14,0,0.0,0,0.0,0.0,1.0,0.0,1.0,,,reference,nan,nan
+H only,0,0,0.0,0,0,0,0.0,0.0,nan,nan,nan,reference,nan,nan
+C only,0,0,0.0,0,0,0,0.0,0.0,nan,nan,nan,reference,nan,nan
+S only,12,0,0.0,0,0.0,0.0,0.0,0.0,1.16,0.021409813768804388,62.849682604929235,fisher_exact,1.0,1.0
+H+C,0,0,0.0,0,0,0,0.0,0.0,nan,nan,nan,reference,nan,nan
+H+S,0,0,0.0,0,0,0,0.0,0.0,nan,nan,nan,reference,nan,nan
+C+S,0,0,0.0,0,0,0,0.0,0.0,nan,nan,nan,reference,nan,nan
+H+C+S,0,0,0.0,0,0,0,0.0,0.0,nan,nan,nan,reference,nan,nan

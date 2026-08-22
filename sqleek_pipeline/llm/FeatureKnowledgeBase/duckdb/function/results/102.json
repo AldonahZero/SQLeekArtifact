@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/bitstring"
+    ],
+    "Title": [
+        "bit_and(arg)"
+    ],
+    "Feature": [
+        "bit_and(arg)"
+    ],
+    "Description": [
+        "Returns the bitwise AND operation performed on all bitstrings in a given expression."
+    ],
+    "Examples": [
+        "bit_and(A)"
+    ],
+    "Category": [
+        "Bitstring Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT bit_and(5) AS result;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 260,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.16e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT bit_and(5) AS result;"
+    ]
+}

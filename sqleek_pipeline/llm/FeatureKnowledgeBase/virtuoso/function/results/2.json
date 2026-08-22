@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn___xml_get_ns_uri/"
+  ],
+  "Title": [
+    "__xml_get_ns_uri ("
+  ],
+  "Feature": [
+    "__xml_get_ns_uri ("
+  ],
+  "Description": [
+    "If str is a globally known namespace prefix, its URI is returned, else null.\nFlags is a bit mask where 1 means to look in the connection, 2 in the global set of known prefixes."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

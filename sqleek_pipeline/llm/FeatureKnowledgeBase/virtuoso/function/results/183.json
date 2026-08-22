@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_get_csv_row/"
+  ],
+  "Title": [
+    "get_csv_row ("
+  ],
+  "Feature": [
+    "get_csv_row ("
+  ],
+  "Description": [
+    "This function takes a string_session containing CSV data, parses a row\nand returns a vector with field values.\nCalling the function in a loop with same input will parse file line by line.\nThe function is also making a basic prediction of field types for varchar,\ninteger and float values, so the result data may have one of these. If come other datatype is need to be produced the caller can convert\nthe string using the BIF like cast sprintf_inverse and so on."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

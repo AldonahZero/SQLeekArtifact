@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-comparison.html"
+    ],
+    "Title": [
+        "num_nulls"
+    ],
+    "Feature": [
+        "num_nulls ( VARIADIC \"any\" ) \u2192 integer"
+    ],
+    "Description": [
+        "Returns the number of null arguments."
+    ],
+    "Examples": [
+        "num_nulls(1, NULL, 2) \u2192 1"
+    ],
+    "Category": [
+        "Comparison Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT num_nulls(NULL, NULL, 'value');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.294999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT num_nulls(NULL, NULL, 'value');"
+    ]
+}

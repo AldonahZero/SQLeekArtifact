@@ -1,0 +1,8 @@
+tool,dbms_count_all,run_count_all,macro_target_region_branch_coverage_all,macro_target_region_branch_coverage_main4
+SQLeek,5,13,0.530753,0.46715
+SQLancer,1,1,0.491809,
+SQUIRREL,4,15,0.350298,0.273878
+Griffin,2,2,0.302814,0.302814
+DynSQL,0,0,,
+AFLGo,5,5,0.239928,0.160398
+SQLaser,3,10,0.416972,0.26976

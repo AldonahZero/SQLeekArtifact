@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_log10/"
+  ],
+  "Title": [
+    "log10 ("
+  ],
+  "Feature": [
+    "log10 ("
+  ],
+  "Description": [
+    "log10 calculates the 10-based logarithm of its\n    argument and returns it as a IEEE 64-bit float.\nlog10"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

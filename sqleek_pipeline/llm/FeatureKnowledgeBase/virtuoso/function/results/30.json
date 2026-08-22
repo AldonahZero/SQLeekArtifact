@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_atoi/"
+  ],
+  "Title": [
+    "atoi ("
+  ],
+  "Feature": [
+    "atoi ("
+  ],
+  "Description": [
+    "atoi returns its argument as an integer.\n      If the string cannot be parsed and converted to a valid\n      integer, a value 0 is returned."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_dirlist/"
+  ],
+  "Title": [
+    "file_dirlist ("
+  ],
+  "Feature": [
+    "file_dirlist ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis returns the list of the contents of a\n\t  given file system directory."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

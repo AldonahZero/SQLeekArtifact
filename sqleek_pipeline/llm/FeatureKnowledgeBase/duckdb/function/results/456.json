@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "jaro_winkler_similarity(s1, s2)"
+    ],
+    "Feature": [
+        "jaro_winkler_similarity(s1, s2)"
+    ],
+    "Description": [
+        "The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., a and A) are considered different. Returns a number between 0 and 1."
+    ],
+    "Examples": [
+        "jaro_winkler_similarity('duck', 'duckdb')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT jaro_winkler_similarity('string1', 'string2');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 341,
+            "Prompt Tokens": 313,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 6.374999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT jaro_winkler_similarity('string1', 'string2');"
+    ]
+}

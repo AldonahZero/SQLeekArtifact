@@ -1,0 +1,41 @@
+FROM ubuntu:22.04
+
+ARG PG_VERSION=18.3
+ARG PG_PREFIX=/usr/local/pg18
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PATH="${PG_PREFIX}/bin:${PATH}"
+
+RUN apt-get update -qq \
+  && apt-get install -y --no-install-recommends \
+    bison \
+    ca-certificates \
+    flex \
+    gcc \
+    gdb \
+    libreadline-dev \
+    libssl-dev \
+    make \
+    perl \
+    pkg-config \
+    wget \
+    zlib1g-dev \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN cd /tmp \
+  && wget -q "https://ftp.postgresql.org/pub/source/v${PG_VERSION}/postgresql-${PG_VERSION}.tar.gz" \
+  && tar xzf "postgresql-${PG_VERSION}.tar.gz" \
+  && cd "postgresql-${PG_VERSION}" \
+  && ./configure \
+    --prefix="${PG_PREFIX}" \
+    --enable-cassert \
+    --enable-debug \
+    --without-icu \
+    CFLAGS="-O0 -g3" \
+  && make -j"$(nproc)" \
+  && make install \
+  && "${PG_PREFIX}/bin/postgres" --version
+
+RUN useradd -m -s /bin/bash pguser
+
+CMD ["sleep", "7200"]

@@ -1,0 +1,24 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/ch-sqlreference/",
+    "https://docs.openlinksw.com/virtuoso/ch-sqlprocedures/"
+  ],
+  "Title": [
+    "CREATE"
+  ],
+  "Feature": [
+    "CREATE"
+  ],
+  "Description": [
+    "Doc-derived SQL keyword (grammar/BNF + headings)."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Keywords"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

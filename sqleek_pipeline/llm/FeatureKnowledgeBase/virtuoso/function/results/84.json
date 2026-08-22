@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_connection_id/"
+  ],
+  "Title": [
+    "connection_id ("
+  ],
+  "Feature": [
+    "connection_id ("
+  ],
+  "Description": [
+    "This function returns a string uniquely identifying the connection\n    in this server instance. It is usually a combination of server's\n    port number and a serial number of the client.\nThe value returned is usually not useful in HTTP invocation\n    context (VSP or SOAP), since consecutive requests by the same client will\n    typically not be on the same connection the way the server sees\n    it."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

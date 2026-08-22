@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_csv_table_def/"
+  ],
+  "Title": [
+    "csv_table_def ("
+  ],
+  "Feature": [
+    "csv_table_def ("
+  ],
+  "Description": [
+    "This function will return table definition appropriate for CSV file\nspecified by file_name."
+  ],
+  "Examples": [
+    "callret",
+    "CREATE TABLE \"tmp_MyContacts_csv\" ("
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_remove/"
+  ],
+  "Title": [
+    "xenc_key_remove ("
+  ],
+  "Feature": [
+    "xenc_key_remove ("
+  ],
+  "Description": [
+    "This will delete a key from current user's space."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

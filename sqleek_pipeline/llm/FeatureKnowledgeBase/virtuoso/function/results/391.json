@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regr_r2/"
+  ],
+  "Title": [
+    "numeric REGR_R2 ("
+  ],
+  "Feature": [
+    "numeric REGR_R2 ("
+  ],
+  "Description": [
+    "REGR_R2 returns the coefficient of determination (also called \"R-squared\" or \"goodness of fit\") \nfor the regression. VAR_POP(expr1) and VAR_POP(expr2) are evaluated after the elimination of \nnull pairs.  The return values are:\nVAR_POP(expr1)\nVAR_POP(expr2)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

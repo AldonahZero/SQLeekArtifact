@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "array_pop_front(list)"
+    ],
+    "Feature": [
+        "array_pop_front(list)"
+    ],
+    "Description": [
+        "Returns the list without the first element."
+    ],
+    "Examples": [
+        "array_pop_front([4, 5, 6])"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_pop_front([1, 2, 3, 4, 5]);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 32,
+            "Total Cost (USD)": 5.76e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_pop_front([1, 2, 3, 4, 5]);"
+    ]
+}

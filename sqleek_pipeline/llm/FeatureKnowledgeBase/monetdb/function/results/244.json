@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/url-functions"
+    ],
+    "Title": [
+        "sys.getprotocol(url)"
+    ],
+    "Feature": [
+        "sys.getprotocol(url)"
+    ],
+    "Description": [
+        "Return type: ",
+        "clob",
+        "extract the protocol or scheme part of the url"
+    ],
+    "Examples": [
+        "sys.getprotocol( url_example)"
+    ],
+    "Category": [
+        "URL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.getprotocol('http://example.com')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 290,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.3849999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.getprotocol('http://example.com')"
+    ]
+}

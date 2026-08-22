@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_x509_from_csr/"
+  ],
+  "Title": [
+    "varchar xenc_x509_from_csr ("
+  ],
+  "Feature": [
+    "varchar xenc_x509_from_csr ("
+  ],
+  "Description": [
+    "This function generates Certificate Signing Request (CSR). The function return 1 upon success,\n      \tsql error on failure. The new certificate can be exported in PEM format with xenc_pem_export(cli_key_name) .\nxenc_pem_export(cli_key_name)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

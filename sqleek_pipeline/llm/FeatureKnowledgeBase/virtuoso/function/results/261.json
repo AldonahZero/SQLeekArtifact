@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_iszero/"
+  ],
+  "Title": [
+    "iszero ("
+  ],
+  "Feature": [
+    "iszero ("
+  ],
+  "Description": [
+    "iszero returns one if its argument is an integer 0, a float 0.0 or a\n    double 0.0 For any other arguments, of whatever type, it will return zero.\niszero(0)\t\t-> 1 (Yes it is)\niszero(0.0)\t\t-> 1 (Double precision zero also\n\t\t\t\tis a zero)\niszero(atof('0.0'))\t-> 1 (As well as single\n\t\t\t\tprecision floating point)\niszero(1)  \t\t-> 0 (No, it's not)\niszero('Cifra')\t\t-> 0 (neither is this one)\niszero(NULL)\t\t-> 0 (nor this one)\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

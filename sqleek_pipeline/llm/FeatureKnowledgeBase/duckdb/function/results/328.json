@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "least(x1, x2, ...)"
+    ],
+    "Feature": [
+        "least(x1, x2, ...)"
+    ],
+    "Description": [
+        "Selects the smallest value."
+    ],
+    "Examples": [
+        "least(3, 2, 4, 4)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT least(5, 10, 3);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 290,
+            "Prompt Tokens": 266,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.43e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT least(5, 10, 3);"
+    ]
+}

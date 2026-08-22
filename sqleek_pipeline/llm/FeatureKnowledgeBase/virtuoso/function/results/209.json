@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_flush/"
+  ],
+  "Title": [
+    "http_flush ("
+  ],
+  "Feature": [
+    "http_flush ("
+  ],
+  "Description": [
+    "This flushes the internal buffer where output of a VSP page is stored pending the execution of the page's code.\nThis sends the content of the page output buffer along with headers and disconnects\nthe client.  The status is 200 OK by default, unless overridden by http_status.\nThe purpose of this function is to allow a page to send output before terminating\n, thus the page can continue processing for an indefinite time without\nrequiring the client to wait.  This is useful for starting long running background tasks\nfrom HTTP clients.\nVSP pages that use this function must be sure to supply appropriate content\n(or response headers) if needed before calling this function.\nVirtuoso supports HTTP 1.1 Chunking Encoding which allows Virtuoso to\nsend the user agent chunks of output as the page is still processing.  Chunking\nis enabled by calling http_flush(1) within the VSP page.\nBy default chunks are sent for every 4k worth of output generated, but in some\ncases the output needs to consist of  smaller chunks, for example when run-time status needs to be shown in a status page.\nSo to achieve this the http_flush (try_what=1) could be invoked\nin places where chunk must be flushed to the User agent.\nhttp_flush(1)\nChunked mode requires the following conditions:\nFailing these conditions, http_flush(1) will be a\n    No-Operation.\nhttp_flush(1)\nIf the function has actually switched to chunked mode it will return a non-zero integer. Otherwise\n    and integer 0 will be returned.\nChunked mode is not supported for static content."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

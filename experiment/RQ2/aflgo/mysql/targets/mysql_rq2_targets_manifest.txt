@@ -1,0 +1,16 @@
+target_list=/root/SQLeek/experiment/RQ2/aflgo/mysql/targets/mysql_rq2_targets.txt
+resolved_targets=/root/SQLeek/experiment/RQ2/aflgo/mysql/targets/mysql_rq2_targets_resolved.tsv
+stage1_sources=/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/mysql_memory.txt /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/mysql_stale.txt /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/mysql_logic.txt
+mysql_memory.txt_raw_lines=1289
+mysql_memory.txt_valid_lines=1289
+mysql_stale.txt_raw_lines=602
+mysql_stale.txt_valid_lines=602
+mysql_logic.txt_raw_lines=1
+mysql_logic.txt_valid_lines=0
+deduped_targets=1289
+sha256=5b866b8cc4e271abc893cb2bee5de405c092903c5c8d70815921a96f67d23ef1
+resolved_unique=1461
+resolved_ambiguous=430
+resolved_missing=0
+mysql_source=447eb26e094b444a88c532028647e48228c3c04f
+aflgo_source=fa125da5d70621daf7141c6279877c97708c8c1f

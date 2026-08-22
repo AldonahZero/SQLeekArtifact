@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_zmin/"
+  ],
+  "Title": [
+    "ST_ZMin ("
+  ],
+  "Feature": [
+    "ST_ZMin ("
+  ],
+  "Description": [
+    "returns boundaries of a bounding box around a shape. Bounding boxes around arcs are calculated in\n    \tssumption that no one arc is longer than a half of full circle."
+  ],
+  "Examples": [
+    "SELECT ?s,"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

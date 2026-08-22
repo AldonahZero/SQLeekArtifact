@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "array_reverse"
+    ],
+    "Feature": [
+        "array_reverse"
+    ],
+    "Description": [
+        "list_reverse(list)",
+        "Reverses the list."
+    ],
+    "Examples": [
+        "list_reverse([3, 6, 1, 2])"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_reverse([1, 2, 3, 4, 5]);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 5.565e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_reverse([1, 2, 3, 4, 5]);"
+    ]
+}

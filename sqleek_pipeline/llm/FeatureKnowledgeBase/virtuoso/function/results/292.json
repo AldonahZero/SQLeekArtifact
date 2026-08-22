@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_make_array/"
+  ],
+  "Title": [
+    "array make_array ("
+  ],
+  "Feature": [
+    "array make_array ("
+  ],
+  "Description": [
+    "This returns an array of length elements with the content element\n    type. The initial content of the array is undefined."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

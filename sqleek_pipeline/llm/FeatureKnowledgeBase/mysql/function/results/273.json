@@ -1,0 +1,59 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "ROW_NUMBER()",
+    "Description": [
+        "\nROW_NUMBER()\nover_clause\n",
+        "\n            Returns the number of the current row within its partition.\n            Rows numbers range from 1 to the number of partition rows.\n          ",
+        "\nORDER BY affects the order in which rows\n            are numbered. Without ORDER BY, row\n            numbering is nondeterministic.\n          ",
+        "\nROW_NUMBER() assigns peers\n            different row numbers. To assign peers the same value, use\n            RANK() or\n            DENSE_RANK(). For an example,\n            see the RANK() function\n            description.\n          ",
+        "\nover_clause is as described in\n            Section\u00a014.20.2, \u201cWindow Function Concepts and Syntax\u201d.\n"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html#function_row-number",
+    "Feature": [
+        "ROW_NUMBER()"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ROW_NUMBER() OVER (ORDER BY some_column) AS row_num;",
+        "SELECT ROW_NUMBER() OVER (ORDER BY id) AS row_num;",
+        "SELECT ROW_NUMBER() OVER () AS row_num;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 435,
+            "Prompt Tokens": 408,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 7.74e-05
+        },
+        {
+            "Total Tokens": 598,
+            "Prompt Tokens": 572,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00010139999999999998
+        },
+        {
+            "Total Tokens": 756,
+            "Prompt Tokens": 734,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.0001233
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'some_column' in 'window order by'\")\n",
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'id' in 'window order by'\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ROW_NUMBER() OVER () AS row_num;"
+    ]
+}

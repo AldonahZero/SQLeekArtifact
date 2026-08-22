@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_backup_online/"
+  ],
+  "Title": [
+    "int backup_online ("
+  ],
+  "Feature": [
+    "int backup_online ("
+  ],
+  "Description": [
+    "This procedure will backup all information from the checkpoint \n    space to a series of files named \n    \" <file_prefix><n>.bp \", where \n    <n> is the sequence number of the file in the backup series.  \n    The first backup will be a full gzip compressed dump of database pages in \n    the checkpoint space.  Any subsequent call will only backup pages which have \n    changed since the last backup was made.  To start with a fresh full backup, \n    use backup_clear_context to clear the change tracking data.\n    At each checkpoint the checkpoint space will be updated, and the next \n    \"backup_online;\" procedure will create new files.  Once backup_online() \n    has been called for the first time, the arguments supplied will be used for \n    subsequent calls to it.  Hence, arguments supplied to this procedure (except the \n    \"dirs\" argument) will be ignored in subsequent calls.\n<file_prefix><n>.bp\nBefore a new backup series can be started, the backup_context_clear(); procedure must be called first.  This procedure will clear the current backup \n    context and mark all pages in the checkpoint space as ready for backup.\nbackup_context_clear();\nA database checkpoint cannot be performed while an online backup is \n    in progress.  Attempt to do a checkpoint will wait until the backup is complete.\nThis is the preferred means of backing up databases and replaces any \n    other prior means.  As an alternative, copying database files while the \n    database is running will still work, as long as no checkpoint is made during \n    the copy process."
+  ],
+  "Examples": [
+    "created in the Virtuoso database directory:"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

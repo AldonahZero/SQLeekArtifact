@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dbg_obj_print/"
+  ],
+  "Title": [
+    "dbg_obj_print ("
+  ],
+  "Feature": [
+    "dbg_obj_print ("
+  ],
+  "Description": [
+    "dbg_obj_print prints a variable number of\n    arguments onto the system console (stdout) of Virtuoso server, each\n    argument in its own native format, on the same line, which is followed\n    by one newline.\ndbg_obj_print"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

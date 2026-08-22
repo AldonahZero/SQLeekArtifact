@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_script_delete/"
+  ],
+  "Title": [
+    "BPEL.BPEL.script_delete ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.script_delete ("
+  ],
+  "Description": [
+    "BPEL.BPEL.script_delete Deletes all versions of the BPEL process and all related partner links, instances, sources etc. if delete_instances is false and there exist instances of at least one version of the script the function signals an error and does nothing\nBPEL.BPEL.script_delete"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

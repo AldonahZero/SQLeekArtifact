@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "key": "deepseek_v4_flash",
+      "label": "DeepSeek V4 Flash",
+      "provider": "openai-compatible",
+      "model_default": "deepseek-v4-flash",
+      "model_env": "SQLEEK_DEEPSEEK_V4_FLASH_MODEL",
+      "base_url_default": "https://api.deepseek.com/v1",
+      "base_url_env": "SQLEEK_DEEPSEEK_V4_FLASH_BASE_URL",
+      "api_key_env": "SQLEEK_DEEPSEEK_V4_FLASH_API_KEY",
+      "input_price_env": "SQLEEK_DEEPSEEK_V4_FLASH_INPUT_USD_PER_MILLION",
+      "output_price_env": "SQLEEK_DEEPSEEK_V4_FLASH_OUTPUT_USD_PER_MILLION"
+    },
+    {
+      "key": "gpt_5_5_medium",
+      "label": "GPT-5.5 (medium)",
+      "provider": "openai",
+      "model_default": "gpt-5.5",
+      "model_env": "SQLEEK_GPT_5_5_MEDIUM_MODEL",
+      "base_url_default": "https://api.openai.com/v1",
+      "base_url_env": "SQLEEK_GPT_5_5_MEDIUM_BASE_URL",
+      "api_key_env": "SQLEEK_GPT_5_5_MEDIUM_API_KEY",
+      "input_price_env": "SQLEEK_GPT_5_5_MEDIUM_INPUT_USD_PER_MILLION",
+      "output_price_env": "SQLEEK_GPT_5_5_MEDIUM_OUTPUT_USD_PER_MILLION"
+    },
+    {
+      "key": "qwen_27b",
+      "label": "Qwen 27B",
+      "provider": "openai-compatible",
+      "model_default": "qwen-27b",
+      "model_env": "SQLEEK_QWEN_27B_MODEL",
+      "base_url_default": "",
+      "base_url_env": "SQLEEK_QWEN_27B_BASE_URL",
+      "api_key_env": "SQLEEK_QWEN_27B_API_KEY",
+      "input_price_env": "SQLEEK_QWEN_27B_INPUT_USD_PER_MILLION",
+      "output_price_env": "SQLEEK_QWEN_27B_OUTPUT_USD_PER_MILLION"
+    }
+  ]
+}

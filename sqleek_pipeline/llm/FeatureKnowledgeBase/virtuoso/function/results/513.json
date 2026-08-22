@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_write_file_dsn/"
+  ],
+  "Title": [
+    "integer sql_write_file_dsn ("
+  ],
+  "Feature": [
+    "integer sql_write_file_dsn ("
+  ],
+  "Description": [
+    "This function calls the SQLWriteFileDSN as follows :\nSQLWriteFileDSN (dsn, 'ODBC', string, value)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

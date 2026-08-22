@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "ltrim(string)"
+    ],
+    "Feature": [
+        "ltrim(string)"
+    ],
+    "Description": [
+        "Removes any spaces from the left side of the string.",
+        "Removes any spaces from the left side of the string. In the example, the \u2423 symbol denotes a space character."
+    ],
+    "Examples": [
+        "ltrim('\u2423\u2423\u2423\u2423test\u2423\u2423')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ltrim('   Hello, World!');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 306,
+            "Prompt Tokens": 283,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.624999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ltrim('   Hello, World!');"
+    ]
+}

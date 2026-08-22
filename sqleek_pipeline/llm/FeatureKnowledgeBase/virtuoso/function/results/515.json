@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sqrt/"
+  ],
+  "Title": [
+    "sqrt ("
+  ],
+  "Feature": [
+    "sqrt ("
+  ],
+  "Description": [
+    "sqrt calculates the square root of its\n    argument and returns it as a IEEE 64-bit float.\nsqrt"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

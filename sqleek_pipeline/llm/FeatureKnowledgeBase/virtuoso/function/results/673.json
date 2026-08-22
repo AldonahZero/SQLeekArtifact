@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_get_key_identifier/"
+  ],
+  "Title": [
+    "varchar xenc_get_key_identifier ("
+  ],
+  "Feature": [
+    "varchar xenc_get_key_identifier ("
+  ],
+  "Description": [
+    "The function returns key identifier."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

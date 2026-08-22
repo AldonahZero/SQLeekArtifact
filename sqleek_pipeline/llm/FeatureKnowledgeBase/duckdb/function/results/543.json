@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "datetrunc(part, timestamptz)"
+    ],
+    "Feature": [
+        "datetrunc(part, timestamptz)"
+    ],
+    "Description": [
+        "Alias of date_trunc. Truncate to specified precision."
+    ],
+    "Examples": [
+        "datetrunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT datetrunc('hour', '2023-10-01 12:34:56+00'::timestamptz);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 323,
+            "Prompt Tokens": 280,
+            "Completion Tokens": 43,
+            "Total Cost (USD)": 6.78e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT datetrunc('hour', '2023-10-01 12:34:56+00'::timestamptz);"
+    ]
+}

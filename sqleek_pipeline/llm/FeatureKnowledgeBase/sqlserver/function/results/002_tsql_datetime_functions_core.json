@@ -1,0 +1,25 @@
+{
+  "Name": "TSQL_DATETIME_CORE",
+  "Feature": [
+    "GETDATE(), SYSDATETIME(), DATEADD(datepart, number, date), DATEDIFF(datepart, startdate, enddate), DATETRUNC(datepart, date), EOMONTH(start_date [, month_to_add]), DATEFROMPARTS(year, month, day)"
+  ],
+  "Description": [
+    "Core T-SQL date and time functions for arithmetic, truncation, and construction.",
+    "GETDATE returns DATETIME; SYSDATETIME returns DATETIME2 with higher precision.",
+    "DATEDIFF counts boundary crossings, which may differ from elapsed-duration intuition.",
+    "DATETRUNC is SQL Server 2022+ and simplifies bucketed time aggregation.",
+    "EOMONTH is useful for month-end calculations without manual date math."
+  ],
+  "Examples": [
+    "SELECT DATEADD(day, 7, GETDATE());",
+    "SELECT DATEDIFF(day, '2024-12-31 23:59:59', '2025-01-01 00:00:00'); -- 1",
+    "SELECT DATETRUNC(month, SYSDATETIME());"
+  ],
+  "Category": [
+    "T-SQL Cheat Sheet",
+    "Date and Time Functions"
+  ],
+  "EffectiveSQLs": [
+    "SELECT EOMONTH(SYSDATETIME(), 1);"
+  ]
+}

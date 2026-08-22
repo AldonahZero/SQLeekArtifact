@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_tmp_file_name/"
+  ],
+  "Title": [
+    "varchar tmp_file_name ("
+  ],
+  "Feature": [
+    "varchar tmp_file_name ("
+  ],
+  "Description": [
+    "The following function is used to obtain unique name of a file, which is located in \n    temporary directory on file system. The two optional parameters can be supplied: \n    prefix of the file and extension for it. These will be prepended and appended (dot MUST be omitted) to the unique string. \n    The directory where this file is located depends of $TMPDIR or %TMP% environment settings for UNIX's and Windows platforms respectively. If these environment settings are not available or empty, the defaults will be used for the \n    operation system. (in practice for most UNIX's it's /tmp or /var/tmp directory). \n    Note that this function do NOT open the file, it only give us a name."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

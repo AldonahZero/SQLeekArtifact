@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "pi()"
+    ],
+    "Feature": [
+        "pi()"
+    ],
+    "Description": [
+        "Return type: ",
+        "double",
+        "\u03c0 constant"
+    ],
+    "Examples": [
+        "pi()"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pi();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 263,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.6649999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pi();"
+    ]
+}

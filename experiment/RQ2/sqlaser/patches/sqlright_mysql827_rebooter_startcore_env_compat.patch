@@ -1,0 +1,29 @@
+--- /root/SQLeek/experiment/RQ2/sqlaser/build/mysql827_sqlright_native/docker/fuzz_root/mysql_rebooter.py.before_sqlright_mysql827_envfix	2026-07-12 08:10:47.817981831 +0000
++++ /root/SQLeek/experiment/RQ2/sqlaser/build/mysql827_sqlright_native/docker/fuzz_root/mysql_rebooter.py	2026-07-12 08:10:47.845982037 +0000
+@@ -30,7 +30,7 @@
+     all_mysql_p_list[cur_inst_id] = cur_shm_str
+     print("Received cur_inst_id %d, cur_shm_str: %s. \n" % (cur_inst_id, cur_shm_str))
+ 
+-
++runtime_starting_core_id = min(all_mysql_p_list.keys()) if all_mysql_p_list else starting_core_id
+ 
+ # Read prevoius shutdown time
+ all_prev_shut_time_file = open("./all_prev_shut_time_file.txt", "r")
+@@ -51,7 +51,7 @@
+     if (time.mktime(time.localtime())  -  prev_shutdown_time)  > MYSQL_REBOOT_TIME_GAP: # 60 sec, restart mysql
+         print("******************\nBegin scheduled MYSQL restart. ID: %d\n" % (prev_shutdown_time_idx))
+         # Politely, restart MySQL. 
+-        cur_port_num = port_starting_num + prev_shutdown_time_idx - starting_core_id
++        cur_port_num = port_starting_num + prev_shutdown_time_idx - runtime_starting_core_id
+         socket_path = "/tmp/mysql_" + str(prev_shutdown_time_idx) + ".sock"
+         try:
+             db = MySQLdb.connect(host="localhost",    # your host, usually localhost
+@@ -91,7 +91,7 @@
+ 
+ for cur_inst_id,_ in all_mysql_p_list.items():
+     cur_shm_str = all_mysql_p_list[cur_inst_id]
+-    cur_port_num = port_starting_num + cur_inst_id - starting_core_id
++    cur_port_num = port_starting_num + cur_inst_id - runtime_starting_core_id
+     socket_path = "/tmp/mysql_" + str(cur_inst_id) + ".sock"
+     is_server_down = False
+     try:

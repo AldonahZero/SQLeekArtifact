@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/uuid-functions"
+    ],
+    "Title": [
+        "sys.isauuid(string)"
+    ],
+    "Feature": [
+        "sys.isauuid(string)"
+    ],
+    "Description": [
+        "Return type: ",
+        "boolean",
+        "tests if the given string represents a valid uuid value and returns a boolean value true or false, or null when the input is null"
+    ],
+    "Examples": [
+        "sys.isauuid('e31960fb-dc8b-452d-ab30-b342723e7565')"
+    ],
+    "Category": [
+        "UUID Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.isauuid('123e4567-e89b-12d3-a456-426614174000');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 325,
+            "Prompt Tokens": 287,
+            "Completion Tokens": 38,
+            "Total Cost (USD)": 6.585e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.isauuid('123e4567-e89b-12d3-a456-426614174000');"
+    ]
+}

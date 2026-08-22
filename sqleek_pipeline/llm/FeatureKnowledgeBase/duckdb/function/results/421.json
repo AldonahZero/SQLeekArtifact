@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "regexp_extract_all(string, regex[, group = 0])"
+    ],
+    "Feature": [
+        "regexp_extract_all(string, regex[, group = 0])"
+    ],
+    "Description": [
+        "Split the string along the regex and extract all occurrences of group."
+    ],
+    "Examples": [
+        "regexp_extract_all('hello_world', '([a-z ]+)_?', 1)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_extract_all('example text 123', '\\d+')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 315,
+            "Prompt Tokens": 289,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.894999999999998e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_extract_all('example text 123', '\\d+')"
+    ]
+}

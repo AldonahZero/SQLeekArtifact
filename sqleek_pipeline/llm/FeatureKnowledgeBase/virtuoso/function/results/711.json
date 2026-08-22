@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_tree/"
+  ],
+  "Title": [
+    "xml_tree ("
+  ],
+  "Feature": [
+    "xml_tree ("
+  ],
+  "Description": [
+    "This parses the argument, which is expected to be a well formed XML\n      fragment and returns a parse tree as a structure of nested heterogeneous vectors."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

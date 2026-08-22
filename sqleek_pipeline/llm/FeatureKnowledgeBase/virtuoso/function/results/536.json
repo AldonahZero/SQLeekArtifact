@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_setsrid/"
+  ],
+  "Title": [
+    "ST_SetSRID ("
+  ],
+  "Feature": [
+    "ST_SetSRID ("
+  ],
+  "Description": [
+    "The geometry given as argument is modified to have the specified SRID and the modified\ngeometry is returned."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

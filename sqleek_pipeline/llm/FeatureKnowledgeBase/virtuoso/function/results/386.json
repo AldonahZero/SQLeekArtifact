@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_registry_set/"
+  ],
+  "Title": [
+    "registry_set ("
+  ],
+  "Feature": [
+    "registry_set ("
+  ],
+  "Description": [
+    "This associates a value to the name in the Database \n    registry. The name should be a string and the value must be also string.\nRegistry settings are kept in Database, therefore they are persistent.\nSome registry variables are used solely by internal server routines so they should not be set by any application.\nSome of these \"protected\" variables can be updated by DBA only (in built-in Virtuoso/PL routines)\nwhereas some can not be updated by any Virtuoso/PL routine at all.\nIf the function is called by DBA then a third argument can be specified to indicate how the function should try to update such a variable,\nbut you will probably never use this feature."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

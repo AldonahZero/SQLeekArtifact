@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_stddev_samp/"
+  ],
+  "Title": [
+    "numeric STDDEV_SAMP ("
+  ],
+  "Feature": [
+    "numeric STDDEV_SAMP ("
+  ],
+  "Description": [
+    "STDDEV_SAMP computes the cumulative sample standard deviation and returns the square root of the sample variance. The expr is a numeric expression, and the function returns a value of type\nNUMERIC. This function is same as the square root of the VAR_SAMP function. When VAR_SAMP returns null, this function returns null."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

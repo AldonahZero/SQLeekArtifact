@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_zap/"
+  ],
+  "Title": [
+    "dict_zap ("
+  ],
+  "Feature": [
+    "dict_zap ("
+  ],
+  "Description": [
+    "The function removes all items from the given dictionary.\nIf the destructive parameter is 0 or 1 then an error 22023 is signalled if the dictionary is used as a value of more than one variable.\nThe parameter equal to 2 forces the function to ignore the presence of multiple variables; in this case the operation may cause unexpected results in other fragments of code that share the dictionary.\ndestructive\nIn most of cases, this function is used specifically for its side effect on other variables.\nWith only one variable in use, one may simply set that variable to the value returned by dict_new ()\n(or to NULL if the dictionary is no longer needed).\nIf the dictionary is no longer referenced by any variable, it is destroyed and the occupied memory is freed.\nHowever one may wish to zap the dictionary in order to not worry about number of variables that refers to the dictionary, e.g., when dictionary is used only in some part of a long procedure.\ndict_new"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

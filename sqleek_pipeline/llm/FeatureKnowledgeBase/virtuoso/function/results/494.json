@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sprintf/"
+  ],
+  "Title": [
+    "sprintf ("
+  ],
+  "Feature": [
+    "sprintf ("
+  ],
+  "Description": [
+    "sprintf returns a new string formed by \"printing\" a variable number\n    of arguments arg_1 - arg_x according to the format string format,\n    that is, exactly the same way as with the sprintf function of C language.\n    However the sprintf function enforces some additional limitations over the sprintf C function.\n    It does not allow for single value output to take more than 2000 characters.\n    It does support the following additional format characters:\ndiouxXeEfgcs - as in the C language printf\nS - as 's' but escapes the single quotes by doubling them (as per SQL/92). This is suitable for\n    constructing dynamic SQL statements with string literals inline.\nsprintf ('insert into testit (data) values ('%S')', 'Test ''Real'' data')\n\t-> insert into testit (data) values ('Test ''Real'' data')\nI - as 's' but escapes the string value to form a valid identifier name (will double the double\n      quotes).  This is suitable for constructing dynamic SQL statements with identifiers inline.\nsprintf ('select * from \"%I\"', 'Big \"Table\" Name')\n\t-> select * from \"Big \"\"Table\"\" Name\"\nU - as 's' but escapes the string value as an HTTP URL (same as http_url() function). Useful for making\n      dynamic VSP content\nsprintf ('<a href=\"%U\">', 'day & night')\n\t-> <a href=\"day+%26+night\">\nR - use to replace leading spaces: the modifiers are one of + - # 0 and space.\nsprintf ('%-R', ' 123')\n    -123\n    sprintf ('%-R', '  123')\n    --123\nV - as 's' but escapes the string value as an HTTP Value (same as http_value). Useful for making\n      dynamic VSP content\nsprintf ('<INPUT name=\"test\" value=\"%V\">', 'day & night')\n\t-> <INPUT name=\"test\" value=\"day &amp; night\">\nNote that the sprintf format length and precision modifiers do not apply to the extension format characters\nsprintf('Int=%d/%o/%x, String=%s, Character=%c',\n    42798,42798,42798,'la cadena',65)\n -> 'Int=42798/123456/a72e, String=la cadena, Character=A'\nIn addition, %{varname}U syntax extension is supported, mostly for uing connection variables in RDF IRI classes . That syntax is to print the value of client connection variable varname using print format %U . Other format characters are not supported for that feature in current version of Virtuoso but might be supported in the future.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

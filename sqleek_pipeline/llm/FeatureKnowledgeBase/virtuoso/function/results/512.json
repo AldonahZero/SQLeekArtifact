@@ -1,0 +1,34 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_transact/"
+  ],
+  "Title": [
+    "sql_transact ("
+  ],
+  "Feature": [
+    "sql_transact ("
+  ],
+  "Description": [
+    "This procedure can be used to control the commit/rollback behavior\n    of a particular remote data source during a Virtuoso transaction such as in\n    a stored procedure.\nUnder normal circumstances Virtuoso will correctly commit or\n    rollback all associated work as expected, however it may be desirable\n    intervene. When issued without the second parameter a commit will be\n    forced upon the current transactions of the dsn_name above\n    the call to sql_transact regardless\n    of overall outcome. When rollback = 1 is set then a rollback will be forced\n    likewise, hence this will not rollback work on the remote dsn_name prior\n    to sql_transact .\nsql_transact\nsql_transact"
+  ],
+  "Examples": [
+    "create procedure TEST_ROLLBACK ()",
+    "insert into mydsn..rb_test values (1);",
+    "insert into mydsn..rb_test values (2);",
+    "create procedure TEST_ROLLBACK ()",
+    "insert into mydsn..rb_test values (1);",
+    "insert into mydsn..rb_test values (2);",
+    "delete from mydsn..rb_test;",
+    "select MIN (ID) from mydsn..rb_test;",
+    "delete from mydsn..rb_test;",
+    "select MIN (ID) from mydsn..rb_test;"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

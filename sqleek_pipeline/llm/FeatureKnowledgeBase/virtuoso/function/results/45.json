@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bit_shift/"
+  ],
+  "Title": [
+    "bit_shift ("
+  ],
+  "Feature": [
+    "bit_shift ("
+  ],
+  "Description": [
+    "The function returns bitwise shift of two given integers.\n    Depending on the arguments, the shift may be \tleft or right.\n\tFor right-shift, leftmost bits of the result are filled by the value\n    of the 31-st bit.\nOn 64-bit platforms, both arguments are intentionally truncated to 32 bits\n    and the shift is restricted to 32 bits to maintain compatibility."
+  ],
+  "Examples": [
+    "select bit_shift (18, 6);",
+    "select bit_shift (-18, 6);",
+    "select bit_shift (1152, -6);",
+    "select bit_shift (-1152, -6);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

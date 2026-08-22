@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-08-02T13:44:30.132387+00:00",
+  "operation": "import_formal_mysql_wo_m1_coverage_replay",
+  "variant": "SQLeek-W/O-M1",
+  "dbms": "MySQL",
+  "source_package": "/root/SQLeek/experiment/RQ4/live/rq4_wo_m1_mysql_coverage_replay_20260802_053659/data",
+  "coverage_image": "griffin_mysql_clean_llvmcov@sha256:7b662259a2b43ea6dc4df96bf8eca4a6c7c00dbe8f61d84fe24b3f99665539b9",
+  "repeats": 5,
+  "checkpoints_per_repeat": 9,
+  "checkpoints_min": [
+    60,
+    180,
+    300,
+    480,
+    600,
+    720,
+    900,
+    1200,
+    1440
+  ],
+  "denominators": {
+    "target_region_branches": 4602,
+    "target_regions": 1445,
+    "global_branches": 326944
+  },
+  "raw_denominators": {
+    "target_region_branches": 5248,
+    "target_regions": 1445,
+    "global_branches": 324926
+  },
+  "normalization": "coverage ratios preserved; branch totals use the RQ3 reference denominator map",
+  "target_region_source": "/root/SQLeek/experiment/RQ3/result/audit/sqleek_mysql/target_regions.csv",
+  "backup": "/root/SQLeek/experiment/RQ4/result/backups/before_mysql_wo_m1_dbms_filter_fix_20260802_134421",
+  "rows_added": {
+    "coverage_summary": 5,
+    "coverage_timeseries": 45,
+    "coverage_timeseries_stats": 9,
+    "runs": 5,
+    "component_heatmap": 8
+  }
+}

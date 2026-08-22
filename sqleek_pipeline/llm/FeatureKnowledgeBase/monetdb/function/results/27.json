@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "ceiling(x)"
+    ],
+    "Feature": [
+        "ceiling(x)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double",
+        "nearest integer greater than or equal to argument (same as ceil(x))"
+    ],
+    "Examples": [
+        "ceiling(-95.3)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ceiling(5.7);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 287,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.205e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ceiling(5.7);"
+    ]
+}

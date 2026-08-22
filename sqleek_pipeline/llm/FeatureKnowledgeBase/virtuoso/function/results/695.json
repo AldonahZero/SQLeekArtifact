@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_x509_generate/"
+  ],
+  "Title": [
+    "xenc_x509_generate ("
+  ],
+  "Feature": [
+    "xenc_x509_generate ("
+  ],
+  "Description": [
+    "This function creates a X.509v3 certificate from a public key and sign the certificate with CA private key"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

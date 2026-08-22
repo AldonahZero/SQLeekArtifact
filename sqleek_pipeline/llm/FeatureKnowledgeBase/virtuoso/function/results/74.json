@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_chr/"
+  ],
+  "Title": [
+    "varchar chr ("
+  ],
+  "Feature": [
+    "varchar chr ("
+  ],
+  "Description": [
+    "chr returns a new one character long string\n    containing the character with character code given as parameter.\nchr"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

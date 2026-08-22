@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_blob_to_string_output/"
+  ],
+  "Title": [
+    "varchar blob_to_string_output ("
+  ],
+  "Feature": [
+    "varchar blob_to_string_output ("
+  ],
+  "Description": [
+    "Although primarily used for converting blobs ( long varbinary , long varchar ) to string output object , blob_to_string_output may also be used to convert from wide string , persistent XML (XPER) and string_output streams .\nblob_to_string_output"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

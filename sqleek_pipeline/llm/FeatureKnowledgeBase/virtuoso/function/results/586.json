@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_totp_generate/"
+  ],
+  "Title": [
+    "varchar TOTP_generate ("
+  ],
+  "Feature": [
+    "varchar TOTP_generate ("
+  ],
+  "Description": [
+    "Returns TOTP string Time-based One-time Password Generator (rfc6238)."
+  ],
+  "Examples": [
+    "select TOTP_generate (stringdate ('1970-01-01Z'), stringdate ('2603-10-11 11:33:20Z'), 30, 8, 'k2', 'hmac-sha256');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_text/"
+  ],
+  "Title": [
+    "repl_text ("
+  ],
+  "Feature": [
+    "repl_text ("
+  ],
+  "Description": [
+    "This SQL function adds the SQL statement to the log of the publication.\n    The statement will typically be a procedure call but can be any SQL statement.\n    There can be a parameters, which are bound to ?'s in the statement's text\n    from left to right.  There is no restriction on the number of parameters."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,5 @@
+run,source_run,run_start_time,run_time_hours,raw_dedup_entries,feedback_filtered_bugs_24h,first_filtered_seen_hours,last_filtered_seen_hours
+r1,griffin_mariadb_sqleek_rnd1,2026-06-29 11:19:18,25.508056,11,3,2.193056,4.528611
+r2,griffin_mariadb_sqleek_rnd2,2026-06-29 11:19:20,25.510833,23,6,1.045556,8.470000
+r3,griffin_mariadb_sqleek_rnd3,2026-06-29 11:19:23,10.576944,11,4,1.567500,9.500556
+r4,griffin_mariadb_sqleek_rnd4,2026-06-29 11:19:26,25.514722,31,7,1.963889,22.649444

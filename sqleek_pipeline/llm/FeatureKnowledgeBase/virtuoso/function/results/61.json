@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_set_var/"
+  ],
+  "Title": [
+    "BPEL.BPEL.setVariableData ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.setVariableData ("
+  ],
+  "Description": [
+    "BPEL.BPEL.setVariableData Sets the data selected by \"query\" in the part (named by\n\t\"part\" argument) of the BPEL variable. If there is no variable\n        with such name or the query contains syntax errors or if its evaluation signals a run time error, the appropriate error is signalled.\n\n  This procedure may only be used in Virtuoso/PL code invoked from a BPEL process.\nBPEL.BPEL.setVariableData"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

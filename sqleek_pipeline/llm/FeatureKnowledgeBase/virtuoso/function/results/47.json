@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_blob_to_string/"
+  ],
+  "Title": [
+    "varchar blob_to_string ("
+  ],
+  "Feature": [
+    "varchar blob_to_string ("
+  ],
+  "Description": [
+    "Although primarily used for converting blobs ( long varbinary , long varchar ) to string , blob_to_string may also be used to convert from wide string , persistent \n\tXML (XPER) and string_output streams . If the data being \n\tconverted is longer than maximum length of a string , blob_to_string will signal an error.\nblob_to_string\nblob_to_string\nThis function is equivalent to\ncast (x as varchar)\n.\n      Using cast is preferred.\ncast"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

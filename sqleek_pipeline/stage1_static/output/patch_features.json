@@ -1,0 +1,62 @@
+{
+  "A_minus": [
+    "lookup_rowtype_tupdesc_copy"
+  ],
+  "A_plus": [
+    "CreateTupleDescCopyConstr",
+    "ERRCODE_DATATYPE_MISMATCH",
+    "TYPECACHE_TUPDESC",
+    "TypeCacheEntry",
+    "cacheptr",
+    "changed",
+    "ereport",
+    "errcode",
+    "errmsg",
+    "format_type_be",
+    "has",
+    "lookup_type_cache",
+    "row",
+    "rowcache",
+    "scratch",
+    "tdtypeid",
+    "tupDesc",
+    "tupDesc_identifier",
+    "tupdesc_id",
+    "type",
+    "typentry"
+  ],
+  "C_minus": [
+    [
+      "old_tupdesc_lookup",
+      "-                tupdesc = lookup_rowtype_tupdesc_copy(rowexpr->row_typeid, -1);"
+    ]
+  ],
+  "C_plus": [
+    [
+      "cache_lookup",
+      "+                typentry = lookup_type_cache(rowexpr->row_typeid,"
+    ],
+    [
+      "guard",
+      "+    if (op->d.row.rowcache.tupdesc_id != 0)"
+    ],
+    [
+      "guard",
+      "+        if (typentry->tupDesc_identifier != op->d.row.rowcache.tupdesc_id)"
+    ],
+    [
+      "error_raise",
+      "+            ereport(ERROR,"
+    ]
+  ],
+  "G": "op->d.row.rowcache.tupdesc_id != 0 AND typentry->tupDesc_identifier != op->d.row.rowcache.tupdesc_id",
+  "affected_files": [
+    "src/backend/executor/execExpr.c",
+    "src/backend/executor/execExprInterp.c"
+  ],
+  "patch_source": "known_patch_fallback",
+  "patch_stats": {
+    "added_lines": 17,
+    "removed_lines": 1
+  }
+}

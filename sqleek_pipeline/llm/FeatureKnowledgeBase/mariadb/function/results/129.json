@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/json_array_intersect/"
+    ],
+    "Title": [
+        "JSON_ARRAY_INTERSECT"
+    ],
+    "Feature": [
+        "JSON_ARRAY_INTERSECT(arr1, arr2)\n"
+    ],
+    "Description": [
+        "Finds intersection between two json arrays and returns an array of items found in both array."
+    ],
+    "Examples": [
+        "SET @json1= '[1,2,3]';\nSET @json2= '[1,2,4]';\n\nSELECT json_array_intersect(@json1, @json2); \n+--------------------------------------+\n| json_array_intersect(@json1, @json2) |\n+--------------------------------------+\n| [1, 2]                               |\n+--------------------------------------+\n"
+    ],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT JSON_ARRAY_INTERSECT('[1, 2, 3]', '[2, 3, 4]');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 312,
+            "Prompt Tokens": 274,
+            "Completion Tokens": 38,
+            "Total Cost (USD)": 6.390000000000001e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT JSON_ARRAY_INTERSECT('[1, 2, 3]', '[2, 3, 4]');"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_exec_metadata/"
+  ],
+  "Title": [
+    "exec_metadata ("
+  ],
+  "Feature": [
+    "exec_metadata ("
+  ],
+  "Description": [
+    "This function provides dynamic SQL capabilities in Virtuoso PL.\n    The first argument is an arbitrary SQL statement, which may contain\n    parameter placeholders. The function returns as output parameters a\n    SQL state, error message, column metadata if the statement is a select."
+  ],
+  "Examples": [
+    "create procedure get_meta (in str varchar)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

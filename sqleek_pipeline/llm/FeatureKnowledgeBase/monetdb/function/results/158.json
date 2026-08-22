@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "sys.epoch(int seconds)"
+    ],
+    "Feature": [
+        "sys.epoch(int seconds)"
+    ],
+    "Description": [
+        "Return type: ",
+        "timestamptz",
+        "add number of seconds to timestamp '1970-01-01 00:00:00.0'"
+    ],
+    "Examples": [
+        "sys.epoch(1234567890)"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.epoch(3600);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 308,
+            "Prompt Tokens": 287,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.565e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.epoch(3600);"
+    ]
+}

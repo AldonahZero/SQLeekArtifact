@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_now/"
+  ],
+  "Title": [
+    "now ("
+  ],
+  "Feature": [
+    "now ("
+  ],
+  "Description": [
+    "Now returns the timestamp associated with current transaction as a DATETIME .\n      This value is guaranteed to differ from the timestamp of any other transaction."
+  ],
+  "Examples": [
+    "callret                   callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

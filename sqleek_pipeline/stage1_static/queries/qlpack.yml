@@ -1,0 +1,5 @@
+# Enables `codeql query compile` / pack resolution for dbms_*.ql
+name: sqleek/stage1-dbms-queries
+version: 0.0.1
+dependencies:
+  codeql/cpp-all: 9.0.0

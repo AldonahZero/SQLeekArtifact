@@ -1,0 +1,180 @@
+[0m[1;94m[*] [0mAttempting dry run with 'id:000057,orig:distinct-2-2.sql'...[0m
+[1;90m    len = 548, map size = 8909, exec speed = 335 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000058,orig:fkey-1-1.sql'...[0m
+[1;90m    len = 512, map size = 7422, exec speed = 327 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000059,orig:fkey-3-1.sql'...[0m
+[1;90m    len = 292, map size = 8020, exec speed = 326 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000060,orig:fkey3.sql'...[0m
+[1;90m    len = 296, map size = 7527, exec speed = 304 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000061,orig:gencol-1-1.sql'...[0m
+[1;90m    len = 159, map size = 7628, exec speed = 291 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000062,orig:gencol-1-2.sql'...[0m
+[1;90m    len = 374, map size = 8584, exec speed = 320 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000063,orig:in-4-1.sql'...[0m
+[1;90m    len = 272, map size = 8514, exec speed = 315 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000064,orig:index-1-1.sql'...[0m
+[1;90m    len = 200, map size = 8171, exec speed = 306 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000065,orig:index-2-1.sql'...[0m
+[1;90m    len = 153, map size = 8541, exec speed = 300 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000066,orig:index-3-1.sql'...[0m
+[1;90m    len = 163, map size = 8611, exec speed = 297 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000067,orig:index-6-1.sql'...[0m
+[1;90m    len = 385, map size = 8883, exec speed = 378 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000068,orig:index-6-2.sql'...[0m
+[1;90m    len = 213, map size = 7912, exec speed = 291 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000069,orig:insert-1-1.sql'...[0m
+[1;90m    len = 357, map size = 9130, exec speed = 310 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000070,orig:notnull-1-1.sql'...[0m
+[1;90m    len = 673, map size = 8087, exec speed = 314 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000071,orig:orderby-1-1.sql'...[0m
+[1;90m    len = 524, map size = 8989, exec speed = 330 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000072,orig:select-c-1.sql'...[0m
+[1;90m    len = 267, map size = 7877, exec speed = 305 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000073,orig:select-c-2.sql'...[0m
+[1;90m    len = 739, map size = 8845, exec speed = 358 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000074,orig:select-c-3.sql'...[0m
+[1;90m    len = 468, map size = 7870, exec speed = 332 us
+[0m[1;93m[!] [1;97mWARNING: [0mNo new instrumentation output, test case may be useless.[0m
+[1;94m[*] [0mAttempting dry run with 'id:000075,orig:select-c-4.sql'...[0m
+[1;90m    len = 339, map size = 8504, exec speed = 1732 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000076,orig:select-d-1.sql'...[0m
+[1;90m    len = 484, map size = 8124, exec speed = 410 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000077,orig:select-d-2.sql'...[0m
+[1;90m    len = 302, map size = 8563, exec speed = 316 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000078,orig:select-e-1.sql'...[0m
+[1;90m    len = 580, map size = 8773, exec speed = 369 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000079,orig:select-f-1.sql'...[0m
+[1;90m    len = 223, map size = 7866, exec speed = 294 us
+[0m[1;93m[!] [1;97mWARNING: [0mNo new instrumentation output, test case may be useless.[0m
+[1;94m[*] [0mAttempting dry run with 'id:000080,orig:select1-1.sql'...[0m
+[1;90m    len = 735, map size = 8678, exec speed = 386 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000081,orig:select1-2.sql'...[0m
+[1;90m    len = 339, map size = 9076, exec speed = 327 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000082,orig:select1-3.sql'...[0m
+[1;90m    len = 171, map size = 8514, exec speed = 325 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000083,orig:select1-4.sql'...[0m
+[1;90m    len = 233, map size = 8825, exec speed = 325 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000084,orig:select1-5.sql'...[0m
+[1;90m    len = 283, map size = 8239, exec speed = 309 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000085,orig:select10-1.sql'...[0m
+[1;90m    len = 1156, map size = 8855, exec speed = 368 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000086,orig:select10-2.sql'...[0m
+[1;90m    len = 455, map size = 8842, exec speed = 491 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000087,orig:select10-3.sql'...[0m
+[1;90m    len = 191, map size = 8951, exec speed = 384 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000088,orig:select2-1.sql'...[0m
+[1;90m    len = 352, map size = 7604, exec speed = 370 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000089,orig:select3-1.sql'...[0m
+[1;90m    len = 549, map size = 8671, exec speed = 378 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000090,orig:select3-2.sql'...[0m
+[1;90m    len = 229, map size = 8140, exec speed = 340 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000091,orig:select3-3.sql'...[0m
+[1;90m    len = 245, map size = 9252, exec speed = 364 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000092,orig:select3-4.sql'...[0m
+[1;90m    len = 254, map size = 8500, exec speed = 316 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000093,orig:select4-1.sql'...[0m
+[1;90m    len = 741, map size = 9199, exec speed = 410 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000094,orig:select4-2.sql'...[0m
+[1;90m    len = 361, map size = 8662, exec speed = 311 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000095,orig:select4-3.sql'...[0m
+[1;90m    len = 700, map size = 10228, exec speed = 576 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000096,orig:select4-4.sql'...[0m
+[1;90m    len = 348, map size = 8850, exec speed = 311 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000097,orig:select4-5.sql'...[0m
+[1;90m    len = 357, map size = 9824, exec speed = 432 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000098,orig:select4-6.sql'...[0m
+
+[1;91m[-] [0mOops, the program crashed with one of the test cases provided. There are
+    several possible explanations:
+
+    - The test case causes known crashes under normal working conditions. If
+      so, please remove it. The fuzzer should be seeded with interesting
+      inputs - but not ones that cause an outright crash.
+
+    - The current memory limit (200 MB) is too low for this program, causing
+      it to die due to OOM when parsing valid files. To fix this, try
+      bumping it up with the -m setting in the command line. If in doubt,
+      try something along the lines of:
+
+      ( ulimit -Sv $[199 << 10]; /path/to/binary [...] <testcase )
+
+      Tip: you can use http://jwilk.net/software/recidivm to quickly
+      estimate the required amount of virtual memory for the binary. Also,
+      if you are using ASAN, see docs/notes_for_asan.txt.
+
+    - Least likely, there is a horrible bug in the fuzzer. If other options
+      fail, poke <lcamtuf@coredump.cx> for troubleshooting tips.
+[1;94m[*] [0mAttempting dry run with 'id:000099,orig:select5-1.sql'...[0m
+[1;90m    len = 162, map size = 8139, exec speed = 279 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000100,orig:select5-2.sql'...[0m
+[1;90m    len = 518, map size = 9003, exec speed = 339 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000101,orig:select5-3.sql'...[0m
+[1;90m    len = 186, map size = 8758, exec speed = 297 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000102,orig:select6-1.sql'...[0m
+[1;90m    len = 761, map size = 9514, exec speed = 378 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000103,orig:select6-2.sql'...[0m
+[1;90m    len = 233, map size = 7722, exec speed = 295 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000104,orig:select7-1.sql'...[0m
+[1;90m    len = 274, map size = 7984, exec speed = 327 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000105,orig:select7-2.sql'...[0m
+[1;90m    len = 419, map size = 8362, exec speed = 361 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000106,orig:select7-3.sql'...[0m
+[1;90m    len = 665, map size = 8092, exec speed = 339 us
+[0m[1;93m[!] [1;97mWARNING: [0mNo new instrumentation output, test case may be useless.[0m
+[1;94m[*] [0mAttempting dry run with 'id:000107,orig:select7-4.sql'...[0m
+[1;90m    len = 377, map size = 8375, exec speed = 308 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000108,orig:select9-1.sql'...[0m
+[1;90m    len = 507, map size = 8895, exec speed = 367 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000109,orig:select9-2.sql'...[0m
+[1;90m    len = 319, map size = 8575, exec speed = 348 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000110,orig:select9-3.sql'...[0m
+[1;90m    len = 257, map size = 7552, exec speed = 318 us
+[0m[1;93m[!] [1;97mWARNING: [0mNo new instrumentation output, test case may be useless.[0m
+[1;94m[*] [0mAttempting dry run with 'id:000111,orig:skipscan-1-1.sql'...[0m
+[1;90m    len = 256, map size = 8487, exec speed = 318 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000112,orig:strict-1-1.sql'...[0m
+[1;90m    len = 137, map size = 5871, exec speed = 252 us
+[0m[1;93m[!] [1;97mWARNING: [0mNo new instrumentation output, test case may be useless.[0m
+[1;94m[*] [0mAttempting dry run with 'id:000113,orig:strict-2-1.sql'...[0m
+[1;90m    len = 441, map size = 7671, exec speed = 301 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000114,orig:table-1-1.sql'...[0m
+[1;90m    len = 195, map size = 7502, exec speed = 1115 us
+[0m[1;94m[*] [0mAttempting dry run with 'id:000115,orig:tkt-8454a-1-1.sql'...[0m
+[1;90m    len = 252, map size = 7857, exec speed = 360 us
+[0m[1;92m[+] [0mAll test cases processed.[0m
+
+[1;93m[!] [1;97mWARNING: [0m[1;91mSome test cases look useless. Consider using a smaller set.[0m
+[1;93m[!] [1;97mWARNING: [0m[1;91mYou probably have far too many input files! Consider trimming down.[0m
+[1;92m[+] [0mHere are some useful stats:
+
+[1;90m    Test case count : [0m91 favored, 0 variable, 116 total
+[1;90m       Bitmap range : [0m5871 to 10428 bits (average: 8402.50 bits)
+[1;90m        Exec timing : [0m252 to 1732 us (average: 365 us)
+[0m
+[1;94m[*] [0mNo -t option specified, so I'll use exec timeout of 20 ms.[0m
+[1;92m[+] [0mAll set and ready to roll![0m
+[1;94m[*] [0mEntering queue cycle 1.[0m
+[1;94m[*] [0mFuzzing test case #0 (116 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #1 (133 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #2 (167 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #4 (188 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #5 (205 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #7 (216 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #9 (250 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #10 (261 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #11 (290 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #12 (300 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #13 (313 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #14 (324 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #15 (332 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #16 (333 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #17 (335 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #20 (345 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #22 (353 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #24 (356 total, 0 uniq crashes found)...[0m
+[1;94m[*] [0mFuzzing test case #27 (356 total, 0 uniq crashes found)...[0m
+[?25h[1;91m
+
++++ Testing aborted by user +++
+[0m[1;92m[+] [0mWe're done here. Have a nice day!
+[0m

@@ -1,0 +1,66 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "DENSE_RANK()",
+    "Description": [
+        "\nDENSE_RANK()\nover_clause\n",
+        "\n            Returns the rank of the current row within its partition,\n            without gaps. Peers are considered ties and receive the same\n            rank. This function assigns consecutive ranks to peer\n            groups; the result is that groups of size greater than one\n            do not produce noncontiguous rank numbers. For an example,\n            see the RANK() function\n            description.\n          ",
+        "\n            This function should be used with ORDER\n            BY to sort partition rows into the desired order.\n            Without ORDER BY, all rows are peers.\n          ",
+        "\nover_clause is as described in\n            Section\u00a014.20.2, \u201cWindow Function Concepts and Syntax\u201d.\n          "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html#function_dense-rank",
+    "Feature": [
+        "DENSE_RANK()"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT DENSE_RANK() OVER (ORDER BY column_name) AS rank FROM table_name;",
+        "SELECT DENSE_RANK() OVER (ORDER BY column_name) AS `rank` FROM table_name;",
+        "SELECT DENSE_RANK() OVER (ORDER BY column_name) AS `rank` FROM your_table_name;",
+        "SELECT DENSE_RANK() OVER (ORDER BY column_name) AS `rank` FROM (SELECT 1 AS column_name) AS temp_table;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 447,
+            "Prompt Tokens": 416,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 8.099999999999999e-05
+        },
+        {
+            "Total Tokens": 643,
+            "Prompt Tokens": 610,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 0.0001113
+        },
+        {
+            "Total Tokens": 815,
+            "Prompt Tokens": 781,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 0.00013754999999999998
+        },
+        {
+            "Total Tokens": 997,
+            "Prompt Tokens": 955,
+            "Completion Tokens": 42,
+            "Total Cost (USD)": 0.00016844999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank FROM table_name' at line 1\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_mysql.table_name' doesn't exist\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_mysql.your_table_name' doesn't exist\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT DENSE_RANK() OVER (ORDER BY column_name) AS `rank` FROM (SELECT 1 AS column_name) AS temp_table;"
+    ]
+}

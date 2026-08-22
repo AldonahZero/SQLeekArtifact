@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_value/"
+  ],
+  "Title": [
+    "http_value ("
+  ],
+  "Feature": [
+    "http_value ("
+  ],
+  "Description": [
+    "The http_value is used to write to an HTTP\n    client (when in a VSP context) or a specified string output stream. http_value uses HTML-escapes for characters that\n    should be escaped according to the HTML spec.\nhttp_value\nhttp_value"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

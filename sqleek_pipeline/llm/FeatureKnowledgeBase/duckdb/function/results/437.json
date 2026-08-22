@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "starts_with(string, search_string)"
+    ],
+    "Feature": [
+        "starts_with(string, search_string)"
+    ],
+    "Description": [
+        "Return true if string begins with search_string."
+    ],
+    "Examples": [
+        "starts_with('abc', 'a')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT starts_with('hello world', 'hello');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 265,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.3549999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT starts_with('hello world', 'hello');"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_create_tables_from_mapping_schema_decl/"
+  ],
+  "Title": [
+    "xml_create_tables_from_mapping_schema_decl ("
+  ],
+  "Feature": [
+    "xml_create_tables_from_mapping_schema_decl ("
+  ],
+  "Description": [
+    "xml_create_tables_from_mapping_schema_decl takes a file containing mapping schema and\n         returns a vector containing strings. Each string is a command to drop a table or a foreign key or to\n        create table. All tables and fields are mentioned in the mapping schema. If a field type is not defined in\n        the mapping schema, the VARCHAR type is used.\nxml_create_tables_from_mapping_schema_decl"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

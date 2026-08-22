@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_replay/"
+  ],
+  "Title": [
+    "replay ("
+  ],
+  "Feature": [
+    "replay ("
+  ],
+  "Description": [
+    "This starts a roll forward of the given log. The log may have been\n    produced by normal transaction logging, backup or crash dump. Logs\n    may not be transferred between databases and thus cannot be rolled forward\n    anywhere except on the database that generated them.\nThis function is for example useful after restoring a backup.\n    It should be called for each archived transaction log produced since the\n    backup, including and starting with the one that was current when the\n    backup was made.\nThe operation blocks until the roll forward is complete.\n    Other clients are not affected."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

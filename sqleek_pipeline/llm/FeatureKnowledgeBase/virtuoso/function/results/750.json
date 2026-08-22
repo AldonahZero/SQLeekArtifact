@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xtree_doc/"
+  ],
+  "Title": [
+    "xtree_doc ("
+  ],
+  "Feature": [
+    "xtree_doc ("
+  ],
+  "Description": [
+    "This parses the argument, which is expected to be a well formed XML fragment and returns a\nparse tree as a special memory-resident object. While xper_doc creates\nsome disk-resident data structure, xtree_doc() will work faster but it may require more memory. You may\nwish to use xtree_doc for small documents (e.g. less than 5 megabytes and xper_doc for larger documents."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

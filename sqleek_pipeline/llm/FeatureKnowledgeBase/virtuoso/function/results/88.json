@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_connection_vars_set/"
+  ],
+  "Title": [
+    "connection_vars_set ("
+  ],
+  "Feature": [
+    "connection_vars_set ("
+  ],
+  "Description": [
+    "This function clears all connection variables for current\n    session and sets new ones defined in the array passed as parameter.\nConnection variables do not persist across sessions, one\n    may maintain persistence of variables by storing them in a database\n    table, as discussed in Session Variables -section."
+  ],
+  "Examples": [
+    "callret",
+    "callret                   callret                   callret                   callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

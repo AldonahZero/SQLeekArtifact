@@ -1,0 +1,77 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "mask_pan_relaxed()",
+    "Description": [
+        "\nmask_pan_relaxed(str)\n",
+        "\n              Masks a payment card Primary Account Number and returns\n              the number with all but the first six and last four digits\n              replaced by 'X' characters. The first\n              six digits indicate the payment card issuer. An optional\n              masking character can be specified.\n            ",
+        "\n              Arguments:\n",
+        "\n\nstr: The string to mask.\n                  The string must be a suitable length for the Primary\n                  Account Number, but is not otherwise checked. This\n                  argument is converted to the\n                  utf8mb4 character set.\n                \nmask_char: (Optional) The\n                  single character to use for masking. The default is\n                  'X' if\n                  mask_char is not given.\n\n",
+        "\n              Return value:\n            ",
+        "\n              The masked payment number as a string encoded in the\n              utf8mb4 character set, an error if the\n              argument is not the correct length, or\n              NULL if str\n              is in incorrect format or contains a multibyte character.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SELECT mask_pan_relaxed(gen_rnd_pan());\n+---------------------------------+\n| mask_pan_relaxed(gen_rnd_pan()) |\n+---------------------------------+\n| 551279XXXXXX3108                |\n+---------------------------------+\nmysql> SELECT mask_pan_relaxed(gen_rnd_pan(19));\n+-----------------------------------+\n| mask_pan_relaxed(gen_rnd_pan(19)) |\n+-----------------------------------+\n| 462634XXXXXXXXX6739               |\n+-----------------------------------+\nmysql> SELECT mask_pan_relaxed('a*Z');\nERROR 1123 (HY000): Can't initialize function 'mask_pan_relaxed'; Argument 0 is too short."
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/data-masking-component-functions.html#function_mask-pan-relaxed",
+    "Feature": [
+        "mask_pan_relaxed(str)"
+    ],
+    "Examples": [
+        "mysql> SELECT mask_pan_relaxed(gen_rnd_pan());\n+---------------------------------+\n| mask_pan_relaxed(gen_rnd_pan()) |\n+---------------------------------+\n| 551279XXXXXX3108                |\n+---------------------------------+\nmysql> SELECT mask_pan_relaxed(gen_rnd_pan(19));\n+-----------------------------------+\n| mask_pan_relaxed(gen_rnd_pan(19)) |\n+-----------------------------------+\n| 462634XXXXXXXXX6739               |\n+-----------------------------------+\nmysql> SELECT mask_pan_relaxed('a*Z');\nERROR 1123 (HY000): Can't initialize function 'mask_pan_relaxed'; Argument 0 is too short."
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT mask_pan_relaxed('1234567890123456');",
+        "SELECT mask_pan_relaxed('1234567812345678');",
+        "SELECT mask_pan_relaxed('1234567890123456');",
+        "SELECT mask_pan_relaxed('1234567812345678');",
+        "SELECT mask_pan_relaxed('1234567812345678');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 674,
+            "Prompt Tokens": 648,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00011279999999999999
+        },
+        {
+            "Total Tokens": 837,
+            "Prompt Tokens": 811,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00013725
+        },
+        {
+            "Total Tokens": 1000,
+            "Prompt Tokens": 974,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00016169999999999997
+        },
+        {
+            "Total Tokens": 1163,
+            "Prompt Tokens": 1137,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.00018615
+        },
+        {
+            "Total Tokens": 1326,
+            "Prompt Tokens": 1300,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 0.0002106
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mask_pan_relaxed does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mask_pan_relaxed does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mask_pan_relaxed does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mask_pan_relaxed does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.mask_pan_relaxed does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

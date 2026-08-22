@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_wsdl/"
+  ],
+  "Title": [
+    "varchar soap_wsdl ("
+  ],
+  "Feature": [
+    "varchar soap_wsdl ("
+  ],
+  "Description": [
+    "This function generates WSDL for the procedures in a PL module the same way as /SOAP/services.wsdl\n   is generated for the procedures in WS.SOAP."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

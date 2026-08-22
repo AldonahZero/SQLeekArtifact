@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dsig_template_ext/"
+  ],
+  "Title": [
+    "varchar dsig_template_ext ("
+  ],
+  "Feature": [
+    "varchar dsig_template_ext ("
+  ],
+  "Description": [
+    "The function is used to generate dynamically a digital\n\tsignature template containing references to be signed."
+  ],
+  "Examples": [
+    "create procedure XENC_TEMPLATE (in body varchar, in key_name varchar)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

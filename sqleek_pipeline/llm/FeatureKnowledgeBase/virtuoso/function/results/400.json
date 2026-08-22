@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_create_snapshot_pub/"
+  ],
+  "Title": [
+    "None REPL_CREATE_SNAPSHOT_PUB ("
+  ],
+  "Feature": [
+    "None REPL_CREATE_SNAPSHOT_PUB ("
+  ],
+  "Description": [
+    "This procedure should be used to create a bi-directional snapshot publication.  \nIf the item parameter is a table then this procedure creates \nan updateable snapshot log and generates an updating procedure.\nitem"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

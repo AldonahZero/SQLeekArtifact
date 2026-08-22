@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_signal/"
+  ],
+  "Title": [
+    "signal ("
+  ],
+  "Feature": [
+    "signal ("
+  ],
+  "Description": [
+    "This signals the given SQLSTATE with the message. The calling procedure will transfer control to the most appropriate local handler. In the absence of a local handler the procedure terminates and signals the exception in the scope where it was called from, until there either is a handler or there are no more calling procedures. If there is no handler in the entire stack of call contexts the error is signalled to the client.\nHandlers can be declared with whenever .. goto and the declare handler for construct.\nSee the Virtuoso/PL documentation.\nCREATE PROCEDURE WITHDRAW (IN C_ID VARCHAR, IN DELTA NUMERIC)\n{\n    DECLARE BAL NUMERIC;\n\n    DECLARE CR CURSOR FOR SELECT C_BALANCE FROM CUSTOMER WHERE C_ID = C_ID;\n\n    WHENEVER NOT FOUND GOTO NOCUSTOMER;\n\n    OPEN CR (EXCLUSIVE);\n    FETCH CR INTO BAL;\n    IF (BAL > DELTA)\n\tUPDATE CUSTOMER SET C_BALANCE = BAL - DELTA WHERE CURRENT OF CR;\n    ELSE\n\tSIGNAL ('NOMONEY', 'INSUFFICIENT BALANCE.');\n\n    RETURN;\n\nNOCUSTOMER:\n    SIGNAL ('NOCUS', 'BAD CUSTOMER ID');\n}\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

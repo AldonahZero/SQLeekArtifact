@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_view_schema/"
+  ],
+  "Title": [
+    "varchar xml_view_schema ("
+  ],
+  "Feature": [
+    "varchar xml_view_schema ("
+  ],
+  "Description": [
+    "This function return an XML schema for the output of given XML VIEW.\nThe returned schema will be valid if the HTTP_... output of view\nwrapped into the specified root element."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

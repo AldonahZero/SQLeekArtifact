@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_sync/"
+  ],
+  "Title": [
+    "repl_sync ("
+  ],
+  "Feature": [
+    "repl_sync ("
+  ],
+  "Description": [
+    "This starts the syncing process against an existing subscription. The function\nreturns as soon as the request has been successfully sent. The synchronization will\ntake place in the background. If the syncing process is already underway or if\nthe subscriber is already in sync and connected to the publisher this function has no effect.\nIf there is no connection to the publisher at the time of calling this function and the connection\nfails and an error is immediately signalled.\nTo initiate a synchronization a valid SQL account must be specified. Also the account must\nhave rights to the publication unless publisher DBA's account is used to connect."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

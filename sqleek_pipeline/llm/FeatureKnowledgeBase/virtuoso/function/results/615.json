@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_key_store/"
+  ],
+  "Title": [
+    "USER_KEY_STORE ("
+  ],
+  "Feature": [
+    "USER_KEY_STORE ("
+  ],
+  "Description": [
+    "This function saves a key in the database and in case the database is restarted, the key will be loaded again."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

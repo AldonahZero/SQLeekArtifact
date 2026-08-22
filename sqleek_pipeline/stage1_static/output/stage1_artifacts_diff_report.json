@@ -1,0 +1,227 @@
+{
+  "added": [
+    "codeql_results/postgres/dbms_stale_descriptor_pgqs.csv"
+  ],
+  "changed": [
+    "codeql_results/postgres/dbms_stale_descriptor.csv",
+    "targets/postgres_memory.txt",
+    "targets/postgres_stale.txt"
+  ],
+  "changed_details": {
+    "codeql_results/postgres/dbms_stale_descriptor.csv": {
+      "after": {
+        "bytes": 11323,
+        "lines": 27,
+        "sha256": "48a78b2250a0827e380ff8bcbe12d3425a5f435ab12843bad6faaa9469b4a1a3"
+      },
+      "before": {
+        "bytes": 3899,
+        "lines": 10,
+        "sha256": "e4a8eb16a5767ae3e13efcab0c65350744ae14adc2a3f085b60d25e099cd0176"
+      },
+      "new_head": [
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'finfo' in 'printtup' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/access/common/printtup.c\",\"361\",\"47\",\"361\",\"51\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'finfo' in 'printtup' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/access/common/printtup.c\",\"369\",\"47\",\"369\",\"51\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'finfo' in 'printtup_prepare_info' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/access/common/printtup.c\",\"281\",\"48\",\"281\",\"52\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'finfo' in 'printtup_prepare_info' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/access/common/printtup.c\",\"288\",\"46\",\"288\",\"50\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'tupdesc' in 'ExecEvalRow' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/executor/execExprInterp.c\",\"3671\",\"36\",\"3671\",\"42\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"362\",\"38\",\"362\",\"43\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"366\",\"11\",\"366\",\"16\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"367\",\"31\",\"367\",\"36\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"370\",\"39\",\"370\",\"44\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"430\",\"17\",\"430\",\"22\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2506\",\"17\",\"2506\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"17\",\"2507\",\"34\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"49\",\"2507\",\"58\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"14\",\"2516\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"37\",\"2516\",\"54\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2533\",\"17\",\"2533\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2541\",\"14\",\"2541\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_tupdesc\",\"/src/backend/utils/adt/expandedrecord.c\",\"234\",\"26\",\"234\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_typeid\",\"/src/backend/utils/adt/expandedrecord.c\",\"102\",\"26\",\"102\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function assign_record_type_identifier\",\"/src/backend/utils/cache/typcache.c\",\"2175\",\"20\",\"2175\",\"37\""
+      ],
+      "new_tail": [
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"367\",\"31\",\"367\",\"36\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"370\",\"39\",\"370\",\"44\"",
+        "\"DBMS stale type descriptor access\",\"Flags cached TupleDesc / type-related fields read inside evaluation or output paths where DDL may change layout (ExprEvalRowtypeCache class of issues).\",\"warning\",\"Cached descriptor field 'flinfo' in 'record_out' \u2014 review invalidation after DDL (stale TupleDesc / rowtype cache pattern).\",\"/src/backend/utils/adt/rowtypes.c\",\"430\",\"17\",\"430\",\"22\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2506\",\"17\",\"2506\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"17\",\"2507\",\"34\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"49\",\"2507\",\"58\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"14\",\"2516\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"37\",\"2516\",\"54\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2533\",\"17\",\"2533\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2541\",\"14\",\"2541\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_tupdesc\",\"/src/backend/utils/adt/expandedrecord.c\",\"234\",\"26\",\"234\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_typeid\",\"/src/backend/utils/adt/expandedrecord.c\",\"102\",\"26\",\"102\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function assign_record_type_identifier\",\"/src/backend/utils/cache/typcache.c\",\"2175\",\"20\",\"2175\",\"37\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2093\",\"8\",\"2093\",\"17\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2093\",\"31\",\"2093\",\"48\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2099\",\"8\",\"2099\",\"17\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7148\",\"16\",\"7148\",\"33\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7148\",\"43\",\"7148\",\"52\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7197\",\"7\",\"7197\",\"16\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7197\",\"30\",\"7197\",\"47\""
+      ]
+    },
+    "codeql_results/postgres/dbms_stale_descriptor_pgqs.csv": {
+      "after": {
+        "bytes": 7424,
+        "lines": 17,
+        "sha256": "84e7eb6276c18054f67dd6f473d7a90df237aadaf97a73cafc5fe07286911b95"
+      },
+      "before": null,
+      "new_head": [
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2506\",\"17\",\"2506\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"17\",\"2507\",\"34\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"49\",\"2507\",\"58\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"14\",\"2516\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"37\",\"2516\",\"54\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2533\",\"17\",\"2533\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2541\",\"14\",\"2541\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_tupdesc\",\"/src/backend/utils/adt/expandedrecord.c\",\"234\",\"26\",\"234\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_typeid\",\"/src/backend/utils/adt/expandedrecord.c\",\"102\",\"26\",\"102\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function assign_record_type_identifier\",\"/src/backend/utils/cache/typcache.c\",\"2175\",\"20\",\"2175\",\"37\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2093\",\"8\",\"2093\",\"17\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2093\",\"31\",\"2093\",\"48\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2099\",\"8\",\"2099\",\"17\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7148\",\"16\",\"7148\",\"33\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7148\",\"43\",\"7148\",\"52\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7197\",\"7\",\"7197\",\"16\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7197\",\"30\",\"7197\",\"47\""
+      ],
+      "new_tail": [
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2506\",\"17\",\"2506\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"17\",\"2507\",\"34\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2507\",\"49\",\"2507\",\"58\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"14\",\"2516\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2516\",\"37\",\"2516\",\"54\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2533\",\"17\",\"2533\",\"26\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function get_cached_rowtype\",\"/src/backend/executor/execExprInterp.c\",\"2541\",\"14\",\"2541\",\"23\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_tupdesc\",\"/src/backend/utils/adt/expandedrecord.c\",\"234\",\"26\",\"234\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function make_expanded_record_from_typeid\",\"/src/backend/utils/adt/expandedrecord.c\",\"102\",\"26\",\"102\",\"43\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function assign_record_type_identifier\",\"/src/backend/utils/cache/typcache.c\",\"2175\",\"20\",\"2175\",\"37\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2093\",\"8\",\"2093\",\"17\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2093\",\"31\",\"2093\",\"48\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function build_datatype\",\"/src/pl/plpgsql/src/pl_comp.c\",\"2099\",\"8\",\"2099\",\"17\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7148\",\"16\",\"7148\",\"33\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7148\",\"43\",\"7148\",\"52\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupdesc_id' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7197\",\"7\",\"7197\",\"16\"",
+        "\"Unsafe stale tuple descriptor cache access (improved)\",\"Finds accesses to `tupdesc_id` or `tupDesc_identifier` fields that are not guarded by an equality check in functions that use tuple type cache, indicating potential stale cache usage when row types change.\",\"error\",\"Unsafe access to stale tuple descriptor cache field 'tupDesc_identifier' in function revalidate_rectypeid\",\"/src/pl/plpgsql/src/pl_exec.c\",\"7197\",\"30\",\"7197\",\"47\""
+      ]
+    },
+    "targets/postgres_memory.txt": {
+      "after": {
+        "bytes": 461,
+        "lines": 26,
+        "sha256": "113a8bd2dd99bd4a29ed54f0ad840bffcc983fa1b9042b13f15ffd78299b2479"
+      },
+      "before": {
+        "bytes": 233,
+        "lines": 14,
+        "sha256": "937c4f7d0c7048d8f8f9d95d5eed6c27f2819bd12812e134c850f15a770ea720"
+      },
+      "new_head": [
+        "execExprInterp.c:2506",
+        "execExprInterp.c:2507",
+        "execExprInterp.c:2516",
+        "execExprInterp.c:2533",
+        "execExprInterp.c:2541",
+        "execExprInterp.c:3671",
+        "expandedrecord.c:102",
+        "expandedrecord.c:234",
+        "pg_locale_builtin.c:244",
+        "pg_locale_builtin.c:257",
+        "pl_comp.c:2093",
+        "pl_comp.c:2099",
+        "pl_exec.c:7148",
+        "pl_exec.c:7197",
+        "printtup.c:281",
+        "printtup.c:288",
+        "printtup.c:361",
+        "printtup.c:369",
+        "rowtypes.c:362",
+        "rowtypes.c:366"
+      ],
+      "new_tail": [
+        "expandedrecord.c:102",
+        "expandedrecord.c:234",
+        "pg_locale_builtin.c:244",
+        "pg_locale_builtin.c:257",
+        "pl_comp.c:2093",
+        "pl_comp.c:2099",
+        "pl_exec.c:7148",
+        "pl_exec.c:7197",
+        "printtup.c:281",
+        "printtup.c:288",
+        "printtup.c:361",
+        "printtup.c:369",
+        "rowtypes.c:362",
+        "rowtypes.c:366",
+        "rowtypes.c:367",
+        "rowtypes.c:370",
+        "rowtypes.c:430",
+        "typcache.c:2175",
+        "varlena.c:224",
+        "varlena.c:225"
+      ]
+    },
+    "targets/postgres_stale.txt": {
+      "after": {
+        "bytes": 385,
+        "lines": 22,
+        "sha256": "8c3b6b256851979c118a1d9d940251c3feebb12ccb390026386b49ab295d9c63"
+      },
+      "before": {
+        "bytes": 157,
+        "lines": 10,
+        "sha256": "2e2a9049f1be82e7920f7ae9497c968177f5e844bef21d072a460f2d9d4f2c6e"
+      },
+      "new_head": [
+        "execExprInterp.c:2506",
+        "execExprInterp.c:2507",
+        "execExprInterp.c:2516",
+        "execExprInterp.c:2533",
+        "execExprInterp.c:2541",
+        "execExprInterp.c:3671",
+        "expandedrecord.c:102",
+        "expandedrecord.c:234",
+        "pl_comp.c:2093",
+        "pl_comp.c:2099",
+        "pl_exec.c:7148",
+        "pl_exec.c:7197",
+        "printtup.c:281",
+        "printtup.c:288",
+        "printtup.c:361",
+        "printtup.c:369",
+        "rowtypes.c:362",
+        "rowtypes.c:366",
+        "rowtypes.c:367",
+        "rowtypes.c:370"
+      ],
+      "new_tail": [
+        "execExprInterp.c:2516",
+        "execExprInterp.c:2533",
+        "execExprInterp.c:2541",
+        "execExprInterp.c:3671",
+        "expandedrecord.c:102",
+        "expandedrecord.c:234",
+        "pl_comp.c:2093",
+        "pl_comp.c:2099",
+        "pl_exec.c:7148",
+        "pl_exec.c:7197",
+        "printtup.c:281",
+        "printtup.c:288",
+        "printtup.c:361",
+        "printtup.c:369",
+        "rowtypes.c:362",
+        "rowtypes.c:366",
+        "rowtypes.c:367",
+        "rowtypes.c:370",
+        "rowtypes.c:430",
+        "typcache.c:2175"
+      ]
+    }
+  },
+  "removed": []
+}

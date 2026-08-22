@@ -1,0 +1,9 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+postgres_dynsql_r1,postgres,1,executor,DynSQL,808.96,0,0.0,4,0,0.0
+postgres_dynsql_r1,postgres,1,storage,DynSQL,606.72,0,0.0,4,0,0.0
+postgres_dynsql_r1,postgres,1,type_system,DynSQL,404.48,0,0.0,6,0,0.0
+postgres_dynsql_r1,postgres,1,other,DynSQL,1415.68,101.12,0.07142857142857142,8,2,0.25
+postgres_dynsql_r2,postgres,2,executor,DynSQL,808.96,0,0.0,4,0,0.0
+postgres_dynsql_r2,postgres,2,storage,DynSQL,606.72,0,0.0,4,0,0.0
+postgres_dynsql_r2,postgres,2,type_system,DynSQL,404.48,0,0.0,6,0,0.0
+postgres_dynsql_r2,postgres,2,other,DynSQL,1415.68,101.12,0.07142857142857142,8,2,0.25

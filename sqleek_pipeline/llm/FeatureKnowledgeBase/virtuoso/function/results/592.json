@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ttlp/"
+  ],
+  "Title": [
+    "DB.DBA.TTLP ("
+  ],
+  "Feature": [
+    "DB.DBA.TTLP ("
+  ],
+  "Description": [
+    "Parses TTL (TURTLE or N3 resource) and places its triples into DB.DBA.RDF_QUAD."
+  ],
+  "Examples": [
+    "Select all triples from the graph with URI the fourth provenance URI from the NQuad file i.e.: <http://www.w3.org/People/Berners-Lee/card>:"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

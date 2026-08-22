@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_driver_connect/"
+  ],
+  "Title": [
+    "integer sql_driver_connect ("
+  ],
+  "Feature": [
+    "integer sql_driver_connect ("
+  ],
+  "Description": [
+    "This function calls SQLDriverConnect with the supplied connection string\n    and immediately disconnects after the call."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

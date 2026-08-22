@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        ">>"
+    ],
+    "Feature": [
+        ">>"
+    ],
+    "Description": [
+        "bitwise shift right"
+    ],
+    "Examples": [
+        "8 >> 2"
+    ],
+    "Category": [
+        "Numeric Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 5 >> 1;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 255,
+            "Prompt Tokens": 236,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.679999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 5 >> 1;"
+    ]
+}

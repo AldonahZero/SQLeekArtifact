@@ -1,0 +1,25 @@
+{
+  "Name": "TSQL_CONVERSION_CORE",
+  "Feature": [
+    "CAST(expr AS type), CONVERT(type, expr [, style]), TRY_CAST(expr AS type), TRY_CONVERT(type, expr [, style]), PARSE(string AS type [USING culture]), TRY_PARSE(string AS type [USING culture]), ISNULL(expr, replacement), COALESCE(expr1, expr2, ...)"
+  ],
+  "Description": [
+    "Core T-SQL conversion and NULL-handling behavior differences.",
+    "CONVERT supports style codes for date/time and character formatting (T-SQL specific).",
+    "TRY_CAST and TRY_CONVERT return NULL on failure, which is useful in fuzzing pipelines to avoid hard stop.",
+    "PARSE/TRY_PARSE are culture-aware but typically slower due to CLR involvement.",
+    "ISNULL return type follows first argument, while COALESCE follows type precedence rules."
+  ],
+  "Examples": [
+    "SELECT CONVERT(varchar(19), SYSDATETIME(), 120);",
+    "SELECT TRY_CONVERT(int, '12x'); -- NULL",
+    "SELECT ISNULL(CAST(NULL AS varchar(10)), 'x'), COALESCE(NULL, 'x');"
+  ],
+  "Category": [
+    "T-SQL Cheat Sheet",
+    "Type Conversion and NULL Handling"
+  ],
+  "EffectiveSQLs": [
+    "SELECT TRY_CAST(col AS datetime2) FROM dbo.t;"
+  ]
+}

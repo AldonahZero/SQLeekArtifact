@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rowvector_digit_sort/"
+  ],
+  "Title": [
+    "rowvector_digit_sort ("
+  ],
+  "Feature": [
+    "rowvector_digit_sort ("
+  ],
+  "Description": [
+    "The function gets an vector that contains uniform arrays (\"rows\") as items, such as a result set produced by exec ().\nOne element of each row is a key of sorting; it is identified by its zero-based position within the row, key_idx_in_row (if the data vector is a result set then N-th elements of all rows are from N-th column of the result set).\nThe sorting procedure edits data and reorders rows in such a way that their keys become ordered ascending or descending,\ndepending on sort_ascending flag.\nexec\nkey_idx_in_row\ndata\ndata\nsort_ascending\nThe performed sorting is stable. It means that it will not permutate rows in vain: it will preserve the relative order of any two rows that have equal keys.\nUsing this property, one may sort a result set by a \"secondary sorting columns\", starting with less significant and then by \"primary sorting column\".\nE.g., if each row contain elements for country code and province code then it is possible to make two-column sorting by sorting first by province and then by country;\nthat will work even if province codes are not globally unique (say, if they're enumerated from 1 in each country).\nThis function supports only integer values of sorting keys."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

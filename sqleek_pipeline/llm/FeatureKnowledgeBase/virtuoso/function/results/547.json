@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_ymax/"
+  ],
+  "Title": [
+    "ST_YMax ("
+  ],
+  "Feature": [
+    "ST_YMax ("
+  ],
+  "Description": [
+    "returns boundaries of a bounding box around a shape. Bounding boxes around arcs are calculated\n    \tin assumption that no one arc is longer than a half of full circle."
+  ],
+  "Examples": [
+    "SELECT ?s,"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

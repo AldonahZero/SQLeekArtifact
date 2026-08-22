@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "startswith(s1, s2, icase)"
+    ],
+    "Feature": [
+        "startswith(s1, s2, icase)"
+    ],
+    "Description": [
+        "Return type: ",
+        "boolean",
+        "whether string s1 starts with string s2 matching case insenstive when icase is true, case sensitive when icase is false. returns null when either s1 or s2 is null"
+    ],
+    "Examples": [
+        "startswith('bcd', 'BC', true)"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT startswith('Hello, World!', 'Hello', true);",
+        "SELECT CASE WHEN 'Hello, World!' LIKE 'Hello%' THEN true ELSE false END;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 343,
+            "Prompt Tokens": 317,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 6.314999999999999e-05
+        },
+        {
+            "Total Tokens": 509,
+            "Prompt Tokens": 479,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 8.984999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'startswith'\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CASE WHEN 'Hello, World!' LIKE 'Hello%' THEN true ELSE false END;"
+    ]
+}

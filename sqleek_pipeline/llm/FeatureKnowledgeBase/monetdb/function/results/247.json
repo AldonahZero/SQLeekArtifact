@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/url-functions"
+    ],
+    "Title": [
+        "sys.getuser(url)"
+    ],
+    "Feature": [
+        "sys.getuser(url)"
+    ],
+    "Description": [
+        "Return type: ",
+        "clob",
+        "extract the user part of the url, may return null"
+    ],
+    "Examples": [
+        "sys.getuser( url_example)"
+    ],
+    "Category": [
+        "URL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.getuser('http://example.com')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 292,
+            "Prompt Tokens": 269,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.4149999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.getuser('http://example.com')"
+    ]
+}

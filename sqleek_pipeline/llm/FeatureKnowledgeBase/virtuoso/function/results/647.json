@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vector_agg/"
+  ],
+  "Title": [
+    "vector DB.DBA.VECTOR_AGG ("
+  ],
+  "Feature": [
+    "vector DB.DBA.VECTOR_AGG ("
+  ],
+  "Description": [
+    "DB.DBA.VECTOR_AGG returns a vector of passed values. The order of items in the vector\nrepeats the order of passing individual values to the aggregate.\nDB.DBA.VECTOR_AGG"
+  ],
+  "Examples": [
+    "SELECT DB.DBA.VECTOR_AGG (subquery.X)",
+    "SELECT DB.DBA.VECTOR_AGG (subquery.Y)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

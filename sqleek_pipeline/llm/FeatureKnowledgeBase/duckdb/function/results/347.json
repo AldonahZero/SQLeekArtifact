@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "sqrt(x)"
+    ],
+    "Feature": [
+        "sqrt(x)"
+    ],
+    "Description": [
+        "Returns the square root of the number."
+    ],
+    "Examples": [
+        "sqrt(9)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sqrt(16);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 266,
+            "Prompt Tokens": 248,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.7999999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sqrt(16);"
+    ]
+}

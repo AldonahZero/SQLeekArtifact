@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "iif(X,Y,Z)"
+    ],
+    "Feature": [
+        "iif(X,Y,Z)"
+    ],
+    "Description": [
+        "\n  The iif(X,Y,Z) function returns the value Y if X is true, and Z otherwise.\n  The iif(X,Y,Z) function is logically equivalent to and generates the same\n  bytecode as the CASE expression \"CASE WHEN X THEN Y ELSE Z END\".\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT iif(condition, value_if_true, value_if_false);",
+        "SELECT iif(1=1, 'True', 'False');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 339,
+            "Prompt Tokens": 313,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 6.254999999999999e-05
+        },
+        {
+            "Total Tokens": 486,
+            "Prompt Tokens": 459,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 8.505e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: condition\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT iif(1=1, 'True', 'False');"
+    ]
+}

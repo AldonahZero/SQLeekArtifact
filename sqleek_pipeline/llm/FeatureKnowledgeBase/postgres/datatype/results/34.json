@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-net-types.html"
+    ],
+    "Title": [
+        "cidr"
+    ],
+    "Feature": [
+        "cidr"
+    ],
+    "Description": [
+        "Storage Size",
+        "7 or 19 bytes",
+        "Description",
+        "IPv4 and IPv6 networks"
+    ],
+    "Examples": [],
+    "Category": [
+        "Network Address Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT '192.168.1.0/24'::cidr;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 283,
+            "Prompt Tokens": 255,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 5.5049999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT '192.168.1.0/24'::cidr;"
+    ]
+}

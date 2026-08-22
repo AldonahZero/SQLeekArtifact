@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_open/"
+  ],
+  "Title": [
+    "varchar file_open ("
+  ],
+  "Feature": [
+    "varchar file_open ("
+  ],
+  "Description": [
+    "Returns the contents of a file. The path is relative to the working directory\n    of the database server."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

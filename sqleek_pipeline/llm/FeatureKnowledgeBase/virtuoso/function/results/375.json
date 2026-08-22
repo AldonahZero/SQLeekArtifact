@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_read_log/"
+  ],
+  "Title": [
+    "read_log ("
+  ],
+  "Feature": [
+    "read_log ("
+  ],
+  "Description": [
+    "The read_log function reads from the Virtuoso Transactions log file from a given position.\nread_log"
+  ],
+  "Examples": [
+    "create procedure rlt (in f any, in inpos int := 0)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

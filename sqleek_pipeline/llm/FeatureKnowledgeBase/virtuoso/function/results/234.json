@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_unlock/"
+  ],
+  "Title": [
+    "any http_unlock ("
+  ],
+  "Feature": [
+    "any http_unlock ("
+  ],
+  "Description": [
+    "This function takes as parameter the password of the dba user and unlocks the HTTP Web Server port"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_name_part/"
+  ],
+  "Title": [
+    "varchar name_part ("
+  ],
+  "Feature": [
+    "varchar name_part ("
+  ],
+  "Description": [
+    "The name_part() can be used to dissecting parts of a three part names (string\n    where items are divided by dots \".\") such as table names or columns names.  The table\n    name \"DB\".\"DBA\".\"SYS_USERS\" contains three parts which can be extracted individually\n    using this function providing the correct index from a 0 base: 0 would return \"DB\",\n    1 would return \"DBA\", 2 would return \"SYS_USERS\".\nname_part()"
+  ],
+  "Examples": [
+    "callret",
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

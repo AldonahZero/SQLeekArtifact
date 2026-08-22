@@ -1,0 +1,5 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+postgres_sqlaser_r1,postgres,1,executor,SQLaser,808.96,0,0.0,4,0,0.0
+postgres_sqlaser_r1,postgres,1,storage,SQLaser,606.72,0,0.0,4,0,0.0
+postgres_sqlaser_r1,postgres,1,type_system,SQLaser,404.48,0,0.0,6,0,0.0
+postgres_sqlaser_r1,postgres,1,other,SQLaser,1415.68,202.24,0.14285714285714285,8,2,0.25

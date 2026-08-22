@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_forget_timezone/"
+  ],
+  "Title": [
+    "datetime forget_timezone ("
+  ],
+  "Feature": [
+    "datetime forget_timezone ("
+  ],
+  "Description": [
+    "The function returns its first argument as a timezoned value. If the first argument is timezoneless then it is\n    \treturned unchanged. If the first argument is timezoned and second argument is missing or zero then the result is\n    \ttimezoneless value that \"looks like\" local time notation. If the first argument is timezoned and second argument\n    \tis nonzero then the value is first made GMT and then it becomes timezoneless."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

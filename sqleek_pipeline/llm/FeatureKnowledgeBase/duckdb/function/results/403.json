@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "md5(string)"
+    ],
+    "Feature": [
+        "md5(string)"
+    ],
+    "Description": [
+        "Returns the MD5 hash of the string as a VARCHAR."
+    ],
+    "Examples": [
+        "md5('123')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT md5('your_string_here')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 277,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.1e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT md5('your_string_here')"
+    ]
+}

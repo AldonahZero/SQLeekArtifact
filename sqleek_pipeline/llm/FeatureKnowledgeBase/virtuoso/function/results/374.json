@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdfs_rule_set/"
+  ],
+  "Title": [
+    "rdfs_rule_set ("
+  ],
+  "Feature": [
+    "rdfs_rule_set ("
+  ],
+  "Description": [
+    "This function associates a rule-name with a source named graphs identified by a named graph IRI.\n    \tThis named graph is contains RDF statements that constitute the desired inference rule to be created.\n    \tYou can use this procedure to add RDF statements from other named graphs as part as part of a\n    \trule-enhancement effort."
+  ],
+  "Examples": [
+    "create an inference rule declaratively via rdfs_rule_set() :",
+    "Create rule set and  verify rule's existence:"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_java_load_class/"
+  ],
+  "Title": [
+    "java_load_class ("
+  ],
+  "Feature": [
+    "java_load_class ("
+  ],
+  "Description": [
+    "Defines a java class into the running Java VM.  This is useful for \n    loading .class/.jar/.zip files from a BLOB column or from the Virtuoso \n    WebDAV repository."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

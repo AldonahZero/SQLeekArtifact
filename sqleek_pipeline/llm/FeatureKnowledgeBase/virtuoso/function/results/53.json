@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_get_var/"
+  ],
+  "Title": [
+    "BPEL.BPEL.getVariableData ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.getVariableData ("
+  ],
+  "Description": [
+    "BPEL.BPEL.getVariableData Returns select by query expression data from part (if\n\tapplicable) of the BPEL variable. If the variable is unknown,\n\tor if the XPATH expression signals an error, the appropriate error is signalled.\n  This procedure may only be used in Virtuoso/PL code invoked from a BPEL process.\nBPEL.BPEL.getVariableData"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

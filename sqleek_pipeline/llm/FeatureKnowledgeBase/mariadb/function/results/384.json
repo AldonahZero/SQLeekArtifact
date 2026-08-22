@@ -1,0 +1,68 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/vec_distance/"
+    ],
+    "Title": [
+        "VEC_DISTANCE"
+    ],
+    "Feature": [
+        "VEC_DISTANCE(v, s)\n"
+    ],
+    "Description": [
+        "VEC_Distance is an SQL function that calculates a Euclidean (L2) distance between two points."
+    ],
+    "Examples": [
+        "INSERT INTO v VALUES \n     (1, x'e360d63ebe554f3fcdbc523f4522193f5236083d'),\n     (2, x'f511303f72224a3fdd05fe3eb22a133ffae86a3f'),\n     (3,x'f09baa3ea172763f123def3e0c7fe53e288bf33e'),\n     (4,x'b97a523f2a193e3eb4f62e3f2d23583e9dd60d3f'),\n     (5,x'f7c5df3e984b2b3e65e59d3d7376db3eac63773e'),\n     (6,x'de01453ffa486d3f10aa4d3fdd66813c71cb163f'),\n     (7,x'76edfc3e4b57243f10f8423fb158713f020bda3e'),\n     (8,x'56926c3fdf098d3e2c8c5e3d1ad4953daa9d0b3e'),\n     (9,x'7b713f3e5258323f80d1113d673b2b3f66e3583f'),\n     (10,x'6ca1d43e9df91b3fe580da3e1c247d3f147cf33e');\n\nSELECT id FROM v \n  ORDER BY VEC_Distance(v, x'6ca1d43e9df91b3fe580da3e1c247d3f147cf33e');\n+----+\n| id |\n+----+\n| 10 |\n|  7 |\n|  3 |\n|  9 |\n|  2 |\n|  1 |\n|  5 |\n|  4 |\n|  6 |\n|  8 |\n+----+\n"
+    ],
+    "Category": [
+        "Vector Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT VEC_DISTANCE(point1, point2);",
+        "SELECT VEC_DISTANCE(1, 2);",
+        "SELECT VEC_DISTANCE(0, 0);",
+        "SELECT VEC_DISTANCE(1.0, 1.0);",
+        "SELECT VEC_DISTANCE(x, y);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 291,
+            "Prompt Tokens": 268,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.4e-05
+        },
+        {
+            "Total Tokens": 449,
+            "Prompt Tokens": 426,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 7.769999999999999e-05
+        },
+        {
+            "Total Tokens": 607,
+            "Prompt Tokens": 584,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00010139999999999998
+        },
+        {
+            "Total Tokens": 769,
+            "Prompt Tokens": 742,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00012749999999999998
+        },
+        {
+            "Total Tokens": 925,
+            "Prompt Tokens": 904,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 0.0001482
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION pinolo_temp_mariadb.VEC_DISTANCE does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION pinolo_temp_mariadb.VEC_DISTANCE does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION pinolo_temp_mariadb.VEC_DISTANCE does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION pinolo_temp_mariadb.VEC_DISTANCE does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION pinolo_temp_mariadb.VEC_DISTANCE does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

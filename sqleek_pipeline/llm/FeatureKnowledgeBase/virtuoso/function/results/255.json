@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_isgeometry/"
+  ],
+  "Title": [
+    "isgeometry ("
+  ],
+  "Feature": [
+    "isgeometry ("
+  ],
+  "Description": [
+    "Returns 1 if the argument is a geometry."
+  ],
+  "Examples": [
+    "callret",
+    "SELECT ?m"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

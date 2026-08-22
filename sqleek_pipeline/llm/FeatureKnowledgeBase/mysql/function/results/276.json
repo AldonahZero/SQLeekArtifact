@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "SCHEMA()",
+    "Description": [
+        "\nSCHEMA()\n",
+        "\n          This function is a synonym for\n          DATABASE().\n        "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_schema",
+    "Feature": [
+        "SCHEMA()"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Information Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT SCHEMA();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 297,
+            "Prompt Tokens": 280,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 5.2199999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT SCHEMA();"
+    ]
+}

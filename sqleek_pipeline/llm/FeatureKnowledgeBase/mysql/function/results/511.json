@@ -1,0 +1,74 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "version_tokens_unlock()",
+    "Description": [
+        "\nversion_tokens_unlock()\n",
+        "\n              Releases all locks that were acquired within the current\n              session using\n              version_tokens_lock_exclusive()\n              and\n              version_tokens_lock_shared().\n            ",
+        "Press CTRL+C to copy mysql> SELECT version_tokens_unlock();\n+-------------------------+\n| version_tokens_unlock() |\n+-------------------------+\n|                       1 |\n+-------------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/version-tokens-reference.html#function_version-tokens-unlock",
+    "Feature": [
+        "version_tokens_unlock()"
+    ],
+    "Examples": [
+        "mysql> SELECT version_tokens_unlock();\n+-------------------------+\n| version_tokens_unlock() |\n+-------------------------+\n|                       1 |\n+-------------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT version_tokens_unlock();",
+        "SELECT version_tokens_unlock();",
+        "SELECT version_tokens_lock_exclusive();",
+        "SELECT version_tokens_lock_shared();",
+        "SELECT 1;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 358,
+            "Prompt Tokens": 340,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 6.18e-05
+        },
+        {
+            "Total Tokens": 512,
+            "Prompt Tokens": 494,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 8.49e-05
+        },
+        {
+            "Total Tokens": 668,
+            "Prompt Tokens": 648,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00010919999999999998
+        },
+        {
+            "Total Tokens": 825,
+            "Prompt Tokens": 806,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 0.0001323
+        },
+        {
+            "Total Tokens": 978,
+            "Prompt Tokens": 962,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 0.00015389999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.version_tokens_unlock does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.version_tokens_unlock does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.version_tokens_lock_exclusive does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.version_tokens_lock_shared does not exist')\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 1;"
+    ]
+}

@@ -1,0 +1,2 @@
+run_id,tool,dbms,repeat_id,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate,global_branches_total,global_branches_hit,global_branch_coverage,time_to_first_risk_target_sec,time_to_50pct_risk_targets_sec
+mysql_sqleek_r1,SQLeek,mysql,1,4602,2523,0.5482398956975228,1445,939,0.6809338521400778,326944,122654,0.3751529313888617,48540,48540

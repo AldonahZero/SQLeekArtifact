@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn___xml_ns_iristr/"
+  ],
+  "Title": [
+    "__xml_ns_iristr ("
+  ],
+  "Feature": [
+    "__xml_ns_iristr ("
+  ],
+  "Description": [
+    "This function is similar to the xml_ns_uname function, \n    and it returns an varchar with box flag set to BF_IRI.\nxml_ns_uname"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

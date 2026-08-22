@@ -1,0 +1,137 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mariadb_sqleek_wo_m1_r1,MariaDB,1,type system,SQLeek-W/O-M1,2206,982,0.44514959202175886,996,637,0.6461211477151966
+mariadb_sqleek_wo_m1_r1,MariaDB,1,storage,SQLeek-W/O-M1,4,1,0.25,1,1,1.0
+mariadb_sqleek_wo_m1_r1,MariaDB,1,other,SQLeek-W/O-M1,1594,887,0.5564617314930991,415,311,0.75
+mariadb_sqleek_wo_m1_r1,MariaDB,1,optimizer,SQLeek-W/O-M1,170,102,0.6,32,29,0.9
+mariadb_sqleek_wo_m1_r1,MariaDB,1,executor,SQLeek-W/O-M1,2,0,0.0,1,0,0.0
+mariadb_sqleek_wo_m1_r1,MariaDB,1,cursor/prepared stmt,SQLeek-W/O-M1,214,154,0.719626168224299,3,1,0.3333333333333333
+mariadb_sqleek_wo_m1_r1,MariaDB,1,parser,SQLeek-W/O-M1,64,51,0.796875,5,5,1.0
+mariadb_sqleek_wo_m1_r1,MariaDB,1,catalog/metadata,SQLeek-W/O-M1,56,28,0.5,31,14,0.45161290322580644
+mariadb_sqleek_wo_m1_r2,MariaDB,2,type system,SQLeek-W/O-M1,2206,967,0.43834995466908433,996,635,0.6397449521785334
+mariadb_sqleek_wo_m1_r2,MariaDB,2,storage,SQLeek-W/O-M1,4,1,0.25,1,1,1.0
+mariadb_sqleek_wo_m1_r2,MariaDB,2,other,SQLeek-W/O-M1,1594,885,0.555207026348808,415,309,0.7451456310679612
+mariadb_sqleek_wo_m1_r2,MariaDB,2,optimizer,SQLeek-W/O-M1,170,101,0.5941176470588235,32,28,0.8666666666666667
+mariadb_sqleek_wo_m1_r2,MariaDB,2,executor,SQLeek-W/O-M1,2,0,0.0,1,0,0.0
+mariadb_sqleek_wo_m1_r2,MariaDB,2,cursor/prepared stmt,SQLeek-W/O-M1,214,156,0.7289719626168224,3,1,0.3333333333333333
+mariadb_sqleek_wo_m1_r2,MariaDB,2,parser,SQLeek-W/O-M1,64,51,0.796875,5,5,1.0
+mariadb_sqleek_wo_m1_r2,MariaDB,2,catalog/metadata,SQLeek-W/O-M1,56,26,0.4642857142857143,31,14,0.45161290322580644
+mariadb_sqleek_wo_m1_r3,MariaDB,3,type system,SQLeek-W/O-M1,2206,992,0.4496826835902085,996,636,0.640807651434644
+mariadb_sqleek_wo_m1_r3,MariaDB,3,storage,SQLeek-W/O-M1,4,1,0.25,1,1,1.0
+mariadb_sqleek_wo_m1_r3,MariaDB,3,other,SQLeek-W/O-M1,1594,888,0.5570890840652447,415,308,0.7427184466019418
+mariadb_sqleek_wo_m1_r3,MariaDB,3,optimizer,SQLeek-W/O-M1,170,99,0.5823529411764706,32,29,0.9
+mariadb_sqleek_wo_m1_r3,MariaDB,3,executor,SQLeek-W/O-M1,2,0,0.0,1,0,0.0
+mariadb_sqleek_wo_m1_r3,MariaDB,3,cursor/prepared stmt,SQLeek-W/O-M1,214,153,0.7149532710280374,3,1,0.3333333333333333
+mariadb_sqleek_wo_m1_r3,MariaDB,3,parser,SQLeek-W/O-M1,64,52,0.8125,5,5,1.0
+mariadb_sqleek_wo_m1_r3,MariaDB,3,catalog/metadata,SQLeek-W/O-M1,56,28,0.5,31,14,0.45161290322580644
+mariadb_sqleek_wo_m1_r4,MariaDB,4,type system,SQLeek-W/O-M1,2206,949,0.4301903898458749,996,617,0.6216790648246546
+mariadb_sqleek_wo_m1_r4,MariaDB,4,storage,SQLeek-W/O-M1,4,1,0.25,1,1,1.0
+mariadb_sqleek_wo_m1_r4,MariaDB,4,other,SQLeek-W/O-M1,1594,890,0.5583437892095358,415,308,0.7427184466019418
+mariadb_sqleek_wo_m1_r4,MariaDB,4,optimizer,SQLeek-W/O-M1,170,101,0.5941176470588235,32,28,0.8666666666666667
+mariadb_sqleek_wo_m1_r4,MariaDB,4,executor,SQLeek-W/O-M1,2,0,0.0,1,0,0.0
+mariadb_sqleek_wo_m1_r4,MariaDB,4,cursor/prepared stmt,SQLeek-W/O-M1,214,154,0.719626168224299,3,1,0.3333333333333333
+mariadb_sqleek_wo_m1_r4,MariaDB,4,parser,SQLeek-W/O-M1,64,52,0.8125,5,5,1.0
+mariadb_sqleek_wo_m1_r4,MariaDB,4,catalog/metadata,SQLeek-W/O-M1,56,27,0.48214285714285715,31,14,0.45161290322580644
+mariadb_sqleek_wo_m1_r5,MariaDB,5,type system,SQLeek-W/O-M1,2206,985,0.4465095194922937,996,629,0.6376195536663124
+mariadb_sqleek_wo_m1_r5,MariaDB,5,storage,SQLeek-W/O-M1,4,1,0.25,1,1,1.0
+mariadb_sqleek_wo_m1_r5,MariaDB,5,other,SQLeek-W/O-M1,1594,883,0.553952321204517,415,301,0.7257281553398058
+mariadb_sqleek_wo_m1_r5,MariaDB,5,optimizer,SQLeek-W/O-M1,170,101,0.5941176470588235,32,28,0.8666666666666667
+mariadb_sqleek_wo_m1_r5,MariaDB,5,executor,SQLeek-W/O-M1,2,0,0.0,1,0,0.0
+mariadb_sqleek_wo_m1_r5,MariaDB,5,cursor/prepared stmt,SQLeek-W/O-M1,214,154,0.719626168224299,3,1,0.3333333333333333
+mariadb_sqleek_wo_m1_r5,MariaDB,5,parser,SQLeek-W/O-M1,64,52,0.8125,5,5,1.0
+mariadb_sqleek_wo_m1_r5,MariaDB,5,catalog/metadata,SQLeek-W/O-M1,56,26,0.4642857142857143,31,14,0.45161290322580644
+mysql_sqleek_wo_m1_r1,MySQL,1,other,SQLeek-W/O-M1,234,65,0.2777777777777778,60,30,0.4909090909090909
+mysql_sqleek_wo_m1_r1,MySQL,1,catalog/metadata,SQLeek-W/O-M1,42,8,0.19047619047619047,4,3,0.75
+mysql_sqleek_wo_m1_r1,MySQL,1,type system,SQLeek-W/O-M1,4422,1630,0.3686114880144731,863,482,0.564625850340136
+mysql_sqleek_wo_m1_r1,MySQL,1,executor,SQLeek-W/O-M1,206,84,0.4077669902912621,9,9,1.0
+mysql_sqleek_wo_m1_r1,MySQL,1,optimizer,SQLeek-W/O-M1,48,26,0.5416666666666666,10,9,0.875
+mysql_sqleek_wo_m1_r1,MySQL,1,parser,SQLeek-W/O-M1,18,12,0.6666666666666666,3,3,1.0
+mysql_sqleek_wo_m1_r1,MySQL,1,cursor/prepared stmt,SQLeek-W/O-M1,290,145,0.5,5,4,0.5
+mysql_sqleek_wo_m1_r1,MySQL,1,storage,SQLeek-W/O-M1,26,2,0.07692307692307693,6,2,0.4
+mysql_sqleek_wo_m1_r2,MySQL,2,other,SQLeek-W/O-M1,234,66,0.28205128205128205,60,30,0.4909090909090909
+mysql_sqleek_wo_m1_r2,MySQL,2,catalog/metadata,SQLeek-W/O-M1,42,9,0.21428571428571427,4,3,0.75
+mysql_sqleek_wo_m1_r2,MySQL,2,type system,SQLeek-W/O-M1,4422,2092,0.4730890999547716,863,593,0.7074829931972789
+mysql_sqleek_wo_m1_r2,MySQL,2,executor,SQLeek-W/O-M1,206,108,0.5242718446601942,9,9,1.0
+mysql_sqleek_wo_m1_r2,MySQL,2,optimizer,SQLeek-W/O-M1,48,30,0.625,10,9,0.875
+mysql_sqleek_wo_m1_r2,MySQL,2,parser,SQLeek-W/O-M1,18,14,0.7777777777777778,3,3,1.0
+mysql_sqleek_wo_m1_r2,MySQL,2,cursor/prepared stmt,SQLeek-W/O-M1,290,195,0.6724137931034483,5,4,0.5
+mysql_sqleek_wo_m1_r2,MySQL,2,storage,SQLeek-W/O-M1,26,5,0.19230769230769232,6,2,0.4
+mysql_sqleek_wo_m1_r3,MySQL,3,other,SQLeek-W/O-M1,234,65,0.2777777777777778,60,30,0.4909090909090909
+mysql_sqleek_wo_m1_r3,MySQL,3,catalog/metadata,SQLeek-W/O-M1,42,9,0.21428571428571427,4,3,0.75
+mysql_sqleek_wo_m1_r3,MySQL,3,type system,SQLeek-W/O-M1,4422,2067,0.46743554952510175,863,561,0.6326530612244898
+mysql_sqleek_wo_m1_r3,MySQL,3,executor,SQLeek-W/O-M1,206,101,0.49029126213592233,9,9,1.0
+mysql_sqleek_wo_m1_r3,MySQL,3,optimizer,SQLeek-W/O-M1,48,30,0.625,10,9,0.875
+mysql_sqleek_wo_m1_r3,MySQL,3,parser,SQLeek-W/O-M1,18,14,0.7777777777777778,3,3,1.0
+mysql_sqleek_wo_m1_r3,MySQL,3,cursor/prepared stmt,SQLeek-W/O-M1,290,179,0.6172413793103448,5,4,0.5
+mysql_sqleek_wo_m1_r3,MySQL,3,storage,SQLeek-W/O-M1,26,5,0.19230769230769232,6,2,0.4
+mysql_sqleek_wo_m1_r4,MySQL,4,other,SQLeek-W/O-M1,234,67,0.2863247863247863,60,31,0.509090909090909
+mysql_sqleek_wo_m1_r4,MySQL,4,catalog/metadata,SQLeek-W/O-M1,42,9,0.21428571428571427,4,3,0.75
+mysql_sqleek_wo_m1_r4,MySQL,4,type system,SQLeek-W/O-M1,4422,2136,0.4830393487109905,863,588,0.6893424036281179
+mysql_sqleek_wo_m1_r4,MySQL,4,executor,SQLeek-W/O-M1,206,127,0.616504854368932,9,9,1.0
+mysql_sqleek_wo_m1_r4,MySQL,4,optimizer,SQLeek-W/O-M1,48,32,0.6666666666666666,10,10,1.0
+mysql_sqleek_wo_m1_r4,MySQL,4,parser,SQLeek-W/O-M1,18,14,0.7777777777777778,3,3,1.0
+mysql_sqleek_wo_m1_r4,MySQL,4,cursor/prepared stmt,SQLeek-W/O-M1,290,197,0.6793103448275862,5,4,0.5
+mysql_sqleek_wo_m1_r4,MySQL,4,storage,SQLeek-W/O-M1,26,6,0.23076923076923078,6,2,0.4
+mysql_sqleek_wo_m1_r5,MySQL,5,other,SQLeek-W/O-M1,234,67,0.2863247863247863,60,30,0.4909090909090909
+mysql_sqleek_wo_m1_r5,MySQL,5,catalog/metadata,SQLeek-W/O-M1,42,8,0.19047619047619047,4,3,0.75
+mysql_sqleek_wo_m1_r5,MySQL,5,type system,SQLeek-W/O-M1,4422,2100,0.47489823609226595,863,591,0.6938775510204082
+mysql_sqleek_wo_m1_r5,MySQL,5,executor,SQLeek-W/O-M1,206,104,0.5048543689320388,9,9,1.0
+mysql_sqleek_wo_m1_r5,MySQL,5,optimizer,SQLeek-W/O-M1,48,32,0.6666666666666666,10,9,0.875
+mysql_sqleek_wo_m1_r5,MySQL,5,parser,SQLeek-W/O-M1,18,14,0.7777777777777778,3,3,1.0
+mysql_sqleek_wo_m1_r5,MySQL,5,cursor/prepared stmt,SQLeek-W/O-M1,290,197,0.6793103448275862,5,4,0.5
+mysql_sqleek_wo_m1_r5,MySQL,5,storage,SQLeek-W/O-M1,26,5,0.19230769230769232,6,2,0.4
+postgresql_sqleek_wo_m1_r1,PostgreSQL,1,executor,SQLeek-W/O-M1,8,1,0.125,4,2,0.6666666666666666
+postgresql_sqleek_wo_m1_r1,PostgreSQL,1,storage,SQLeek-W/O-M1,6,0,0.0,4,0,0.0
+postgresql_sqleek_wo_m1_r1,PostgreSQL,1,type system,SQLeek-W/O-M1,4,3,0.75,6,6,1.0
+postgresql_sqleek_wo_m1_r1,PostgreSQL,1,other,SQLeek-W/O-M1,14,2,0.14285714285714285,8,2,0.25
+postgresql_sqleek_wo_m1_r2,PostgreSQL,2,executor,SQLeek-W/O-M1,8,1,0.125,4,2,0.6666666666666666
+postgresql_sqleek_wo_m1_r2,PostgreSQL,2,storage,SQLeek-W/O-M1,6,0,0.0,4,0,0.0
+postgresql_sqleek_wo_m1_r2,PostgreSQL,2,type system,SQLeek-W/O-M1,4,4,1.0,6,6,1.0
+postgresql_sqleek_wo_m1_r2,PostgreSQL,2,other,SQLeek-W/O-M1,14,3,0.21428571428571427,8,4,0.5
+postgresql_sqleek_wo_m1_r4,PostgreSQL,4,executor,SQLeek-W/O-M1,8,1,0.125,4,2,0.6666666666666666
+postgresql_sqleek_wo_m1_r4,PostgreSQL,4,storage,SQLeek-W/O-M1,6,0,0.0,4,0,0.0
+postgresql_sqleek_wo_m1_r4,PostgreSQL,4,type system,SQLeek-W/O-M1,4,3,0.75,6,6,1.0
+postgresql_sqleek_wo_m1_r4,PostgreSQL,4,other,SQLeek-W/O-M1,14,2,0.14285714285714285,8,2,0.25
+postgresql_sqleek_wo_m1_r5,PostgreSQL,5,executor,SQLeek-W/O-M1,8,1,0.125,4,2,0.6666666666666666
+postgresql_sqleek_wo_m1_r5,PostgreSQL,5,storage,SQLeek-W/O-M1,6,0,0.0,4,0,0.0
+postgresql_sqleek_wo_m1_r5,PostgreSQL,5,type system,SQLeek-W/O-M1,4,3,0.75,6,6,1.0
+postgresql_sqleek_wo_m1_r5,PostgreSQL,5,other,SQLeek-W/O-M1,14,2,0.14285714285714285,8,2,0.25
+monetdb_sqleek_wo_m1_r1,MonetDB,1,other,SQLeek-W/O-M1,102594,6517,0.06352223326900208,5999,2618,0.43875654671397196
+monetdb_sqleek_wo_m1_r1,MonetDB,1,storage,SQLeek-W/O-M1,696,81,0.11637931034482758,219,81,0.37155963302752293
+monetdb_sqleek_wo_m1_r1,MonetDB,1,type system,SQLeek-W/O-M1,3550,362,0.10197183098591549,166,59,0.3782051282051282
+monetdb_sqleek_wo_m1_r1,MonetDB,1,optimizer,SQLeek-W/O-M1,9324,2675,0.2868940368940369,1276,717,0.5621069182389937
+monetdb_sqleek_wo_m1_r1,MonetDB,1,parser,SQLeek-W/O-M1,148,14,0.0945945945945946,4,2,0.5
+monetdb_sqleek_wo_m1_r1,MonetDB,1,executor,SQLeek-W/O-M1,5128,61,0.01189547581903276,91,31,0.34065934065934067
+monetdb_sqleek_wo_m1_r1,MonetDB,1,catalog/metadata,SQLeek-W/O-M1,2148,605,0.28165735567970207,271,146,0.55
+monetdb_sqleek_wo_m1_r1,MonetDB,1,cursor/prepared stmt,SQLeek-W/O-M1,216,9,0.041666666666666664,5,1,0.25
+monetdb_sqleek_wo_m1_r2,MonetDB,2,other,SQLeek-W/O-M1,102594,7217,0.0703452443612687,5999,2870,0.4809934110491637
+monetdb_sqleek_wo_m1_r2,MonetDB,2,storage,SQLeek-W/O-M1,696,84,0.1206896551724138,219,84,0.3853211009174312
+monetdb_sqleek_wo_m1_r2,MonetDB,2,type system,SQLeek-W/O-M1,3550,390,0.10985915492957747,166,83,0.532051282051282
+monetdb_sqleek_wo_m1_r2,MonetDB,2,optimizer,SQLeek-W/O-M1,9324,2761,0.2961175461175461,1276,749,0.5872641509433962
+monetdb_sqleek_wo_m1_r2,MonetDB,2,parser,SQLeek-W/O-M1,148,20,0.13513513513513514,4,3,0.75
+monetdb_sqleek_wo_m1_r2,MonetDB,2,executor,SQLeek-W/O-M1,5128,122,0.02379095163806552,91,34,0.37362637362637363
+monetdb_sqleek_wo_m1_r2,MonetDB,2,catalog/metadata,SQLeek-W/O-M1,2148,630,0.29329608938547486,271,154,0.5807692307692308
+monetdb_sqleek_wo_m1_r2,MonetDB,2,cursor/prepared stmt,SQLeek-W/O-M1,216,21,0.09722222222222222,5,1,0.25
+monetdb_sqleek_wo_m1_r3,MonetDB,3,other,SQLeek-W/O-M1,102594,7371,0.07184630680156734,5999,2914,0.4882581517148167
+monetdb_sqleek_wo_m1_r3,MonetDB,3,storage,SQLeek-W/O-M1,696,84,0.1206896551724138,219,84,0.3853211009174312
+monetdb_sqleek_wo_m1_r3,MonetDB,3,type system,SQLeek-W/O-M1,3550,394,0.11098591549295775,166,83,0.532051282051282
+monetdb_sqleek_wo_m1_r3,MonetDB,3,optimizer,SQLeek-W/O-M1,9324,2781,0.2982625482625483,1276,762,0.5974842767295597
+monetdb_sqleek_wo_m1_r3,MonetDB,3,parser,SQLeek-W/O-M1,148,20,0.13513513513513514,4,3,0.75
+monetdb_sqleek_wo_m1_r3,MonetDB,3,executor,SQLeek-W/O-M1,5128,121,0.02359594383775351,91,34,0.37362637362637363
+monetdb_sqleek_wo_m1_r3,MonetDB,3,catalog/metadata,SQLeek-W/O-M1,2148,639,0.29748603351955305,271,154,0.5807692307692308
+monetdb_sqleek_wo_m1_r3,MonetDB,3,cursor/prepared stmt,SQLeek-W/O-M1,216,21,0.09722222222222222,5,1,0.25
+monetdb_sqleek_wo_m1_r4,MonetDB,4,other,SQLeek-W/O-M1,102594,7257,0.07073513070939821,5999,2882,0.4830207805372529
+monetdb_sqleek_wo_m1_r4,MonetDB,4,storage,SQLeek-W/O-M1,696,83,0.11925287356321838,219,84,0.3853211009174312
+monetdb_sqleek_wo_m1_r4,MonetDB,4,type system,SQLeek-W/O-M1,3550,392,0.1104225352112676,166,83,0.532051282051282
+monetdb_sqleek_wo_m1_r4,MonetDB,4,optimizer,SQLeek-W/O-M1,9324,2760,0.296010296010296,1276,749,0.5872641509433962
+monetdb_sqleek_wo_m1_r4,MonetDB,4,parser,SQLeek-W/O-M1,148,20,0.13513513513513514,4,3,0.75
+monetdb_sqleek_wo_m1_r4,MonetDB,4,executor,SQLeek-W/O-M1,5128,122,0.02379095163806552,91,34,0.37362637362637363
+monetdb_sqleek_wo_m1_r4,MonetDB,4,catalog/metadata,SQLeek-W/O-M1,2148,628,0.29236499068901306,271,154,0.5807692307692308
+monetdb_sqleek_wo_m1_r4,MonetDB,4,cursor/prepared stmt,SQLeek-W/O-M1,216,21,0.09722222222222222,5,1,0.25
+monetdb_sqleek_wo_m1_r5,MonetDB,5,other,SQLeek-W/O-M1,102594,7303,0.07118350000974716,5999,2888,0.48386551782395676
+monetdb_sqleek_wo_m1_r5,MonetDB,5,storage,SQLeek-W/O-M1,696,83,0.11925287356321838,219,84,0.3853211009174312
+monetdb_sqleek_wo_m1_r5,MonetDB,5,type system,SQLeek-W/O-M1,3550,395,0.11126760563380282,166,83,0.532051282051282
+monetdb_sqleek_wo_m1_r5,MonetDB,5,optimizer,SQLeek-W/O-M1,9324,2782,0.2983697983697984,1276,755,0.5919811320754716
+monetdb_sqleek_wo_m1_r5,MonetDB,5,parser,SQLeek-W/O-M1,148,20,0.13513513513513514,4,3,0.75
+monetdb_sqleek_wo_m1_r5,MonetDB,5,executor,SQLeek-W/O-M1,5128,120,0.0234009360374415,91,34,0.37362637362637363
+monetdb_sqleek_wo_m1_r5,MonetDB,5,catalog/metadata,SQLeek-W/O-M1,2148,646,0.30074487895716945,271,154,0.5807692307692308
+monetdb_sqleek_wo_m1_r5,MonetDB,5,cursor/prepared stmt,SQLeek-W/O-M1,216,21,0.09722222222222222,5,1,0.25

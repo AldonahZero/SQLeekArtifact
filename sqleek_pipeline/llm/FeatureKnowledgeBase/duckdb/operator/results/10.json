@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/date"
+    ],
+    "Title": [
+        "-"
+    ],
+    "Feature": [
+        "-"
+    ],
+    "Description": [
+        "Subtraction of an INTERVAL"
+    ],
+    "Examples": [
+        "DATE '1992-03-27' - INTERVAL 5 DAY"
+    ],
+    "Category": [
+        "Date Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT INTERVAL '1 day' - INTERVAL '2 hours';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 265,
+            "Prompt Tokens": 238,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 5.189999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT INTERVAL '1 day' - INTERVAL '2 hours';"
+    ]
+}

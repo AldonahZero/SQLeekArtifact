@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nntp_get/"
+  ],
+  "Title": [
+    "array nntp_get ("
+  ],
+  "Feature": [
+    "array nntp_get ("
+  ],
+  "Description": [
+    "nntp_get() is used to retrieve messages from a server running\nthe Network News Transfer Protocol (NNTP) as defined in RFC977 . It returns \nan array whose structure depends on the command parameter, thus:\nnntp_get()\ncommand"
+  ],
+  "Examples": [
+    "create table my_news (m_id integer, m_group varchar, m_text long varchar,",
+    "create procedure get_my_news (in server varchar, in grp varchar)",
+    "insert replacing my_news (m_id, m_group, m_text)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

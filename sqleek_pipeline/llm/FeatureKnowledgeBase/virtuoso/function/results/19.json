@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_start_instance/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_START_INSTANCE ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_START_INSTANCE ("
+  ],
+  "Description": [
+    "Starts an existing AMI that user has previously stopped."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

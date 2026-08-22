@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_numgeometries/"
+  ],
+  "Title": [
+    "ST_NumGeometries ("
+  ],
+  "Feature": [
+    "ST_NumGeometries ("
+  ],
+  "Description": [
+    "returns number of members of a MULTI... or ...COLLECTION shape, 1 for other sorts of shapes."
+  ],
+  "Examples": [
+    "SELECT ?s, bif:GeometryType(?o),"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

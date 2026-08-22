@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_mod/"
+  ],
+  "Title": [
+    "mod ("
+  ],
+  "Feature": [
+    "mod ("
+  ],
+  "Description": [
+    "mod returns the modulus (i.e. remainder) of the division dividend/divisor.\n    If the divisor is zero the SQL error 22012 \"Division by zero\" is generated.\nmod(35,3)\t\t\t-> 2\nmod(35,-3)\t\t\t-> 2\nmod(-35,3)\t\t\t-> -2\nmod(-35,-3)\t\t\t-> -2\nmod(3,35)\t\t\t-> 3\nmod(0,7)\t\t\t-> 0\nmod(60,3)\t\t\t-> 0\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

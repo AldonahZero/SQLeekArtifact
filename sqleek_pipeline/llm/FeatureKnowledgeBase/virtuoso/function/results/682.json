@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_exists/"
+  ],
+  "Title": [
+    "int xenc_key_exists ("
+  ],
+  "Feature": [
+    "int xenc_key_exists ("
+  ],
+  "Description": [
+    "The function checks if key with given name exists in the user's keys."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

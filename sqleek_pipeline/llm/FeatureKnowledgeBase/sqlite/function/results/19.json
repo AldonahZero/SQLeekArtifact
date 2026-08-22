@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "ltrim(X)ltrim(X,Y)"
+    ],
+    "Feature": [
+        "ltrim(X)ltrim(X,Y)"
+    ],
+    "Description": [
+        "\n  The ltrim(X,Y) function returns a string formed by removing any and all\n  characters that appear in Y from the left side of X.\n  If the Y argument is omitted, ltrim(X) removes spaces from the left side\n  of X.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ltrim(X, Y);",
+        "SELECT ltrim('example string', 'ex');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 341,
+            "Prompt Tokens": 321,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 6.015e-05
+        },
+        {
+            "Total Tokens": 487,
+            "Prompt Tokens": 464,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 8.34e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: X\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ltrim('example string', 'ex');"
+    ]
+}

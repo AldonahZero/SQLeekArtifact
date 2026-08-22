@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sparql_to_sql_text/"
+  ],
+  "Title": [
+    "varchar sparql_to_sql_text ("
+  ],
+  "Feature": [
+    "varchar sparql_to_sql_text ("
+  ],
+  "Description": [
+    "The sparql_to_sql_text() function can be used to convert a SPARQL query\ndirectly to the SQL it would be executed as.\nsparql_to_sql_text()"
+  ],
+  "Examples": [
+    "SELECT __id2i ( /*retval[*/ \"s-1-1-t0\".\"S\" /* s */ /*]retval*/ ) AS /*tmpl*/ \"s\","
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

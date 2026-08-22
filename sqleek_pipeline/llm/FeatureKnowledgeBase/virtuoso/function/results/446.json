@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sequence_next/"
+  ],
+  "Title": [
+    "integer sequence_next ("
+  ],
+  "Feature": [
+    "integer sequence_next ("
+  ],
+  "Description": [
+    "This function returns the current state of the specified sequence and\natomically increments it by one.\nThe next call will thus return a number one greater than the previous.\nThe sequence is shared between all connections and all transactions so an increment that is is made in one of connection will\nbe seen in other connection immediately.\nUsing a sequence never involves locking."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

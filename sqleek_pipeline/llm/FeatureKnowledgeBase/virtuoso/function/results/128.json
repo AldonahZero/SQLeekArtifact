@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_get/"
+  ],
+  "Title": [
+    "any dict_get ("
+  ],
+  "Feature": [
+    "any dict_get ("
+  ],
+  "Description": [
+    "The function returns the dependent part that corresponds to the given key in the given dictionary.\nThe function returns default_value if the dictionary does not contain a pair whose key is equivalent to the given one.\nWhen only two arguments are passed to the function the default value is integer zero.\ndefault_value"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

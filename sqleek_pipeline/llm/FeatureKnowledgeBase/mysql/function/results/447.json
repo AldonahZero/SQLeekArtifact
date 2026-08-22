@@ -1,0 +1,78 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "gen_blocklist()",
+    "Description": [
+        "\ngen_blocklist(str,\n              dictionary_name,\n              replacement_dictionary_name)\n",
+        "\n              Replaces a term present in one dictionary with a term from\n              a second dictionary and returns the replacement term. This\n              masks the original term by substitution. This function was\n              added in MySQL 8.0.23; use it instead of\n              gen_blacklist().\n            ",
+        "\n              Arguments:\n",
+        "\n\nstr: A string that\n                  indicates the term to replace.\n                \ndictionary_name: A string\n                  that names the dictionary containing the term to\n                  replace.\n                \nreplacement_dictionary_name:\n                  A string that names the dictionary from which to\n                  choose the replacement term.\n\n",
+        "\n              Return value:\n            ",
+        "\n              A string randomly chosen from\n              replacement_dictionary_name as\n              a replacement for str, or\n              str if it does not appear in\n              dictionary_name, or\n              NULL if either dictionary name is not\n              in the dictionary registry.\n            ",
+        "\n              If the term to replace appears in both dictionaries, it is\n              possible for the return value to be the same term.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SELECT gen_blocklist('Berlin', 'DE_Cities', 'US_Cities');\n+---------------------------------------------------+\n| gen_blocklist('Berlin', 'DE_Cities', 'US_Cities') |\n+---------------------------------------------------+\n| Phoenix                                           |\n+---------------------------------------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/data-masking-plugin-functions.html#function_gen-blocklist-plugin",
+    "Feature": [
+        "gen_blocklist(str,\n              dictionary_name,\n              replacement_dictionary_name)"
+    ],
+    "Examples": [
+        "mysql> SELECT gen_blocklist('Berlin', 'DE_Cities', 'US_Cities');\n+---------------------------------------------------+\n| gen_blocklist('Berlin', 'DE_Cities', 'US_Cities') |\n+---------------------------------------------------+\n| Phoenix                                           |\n+---------------------------------------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT gen_blocklist('Berlin', 'DE_Cities', 'US_Cities');",
+        "SELECT gen_blocklist('example_term', 'example_dictionary', 'replacement_dictionary');",
+        "SELECT gen_blocklist('sample_term', 'sample_dictionary', 'sample_replacement_dictionary');",
+        "SELECT gen_blocklist('term', 'dictionary', 'replacement_dictionary');",
+        "SELECT gen_blocklist('example', 'dict1', 'dict2');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 623,
+            "Prompt Tokens": 593,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 0.00010695
+        },
+        {
+            "Total Tokens": 788,
+            "Prompt Tokens": 759,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00013125
+        },
+        {
+            "Total Tokens": 955,
+            "Prompt Tokens": 924,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 0.0001572
+        },
+        {
+            "Total Tokens": 1118,
+            "Prompt Tokens": 1091,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00017984999999999998
+        },
+        {
+            "Total Tokens": 1282,
+            "Prompt Tokens": 1254,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 0.0002049
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_blocklist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_blocklist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_blocklist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_blocklist does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_blocklist does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

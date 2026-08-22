@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-numeric.html"
+    ],
+    "Title": [
+        "bigint"
+    ],
+    "Feature": [
+        "bigint"
+    ],
+    "Description": [
+        "Storage Size",
+        "8 bytes",
+        "Description",
+        "large-range integer",
+        "Range",
+        "-9223372036854775808 to +9223372036854775807"
+    ],
+    "Examples": [],
+    "Category": [
+        "Numeric Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CAST(1234567890123456789 AS bigint);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 296,
+            "Prompt Tokens": 270,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.6099999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CAST(1234567890123456789 AS bigint);"
+    ]
+}

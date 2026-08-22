@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "current_localtimestamp()"
+    ],
+    "Feature": [
+        "current_localtimestamp()"
+    ],
+    "Description": [
+        "Returns a TIMESTAMP whose GMT bin values correspond to local date and time in the current time zone."
+    ],
+    "Examples": [
+        "current_localtimestamp()"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT current_localtimestamp();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 282,
+            "Prompt Tokens": 264,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 5.04e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT current_localtimestamp();"
+    ]
+}

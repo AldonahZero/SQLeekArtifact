@@ -1,0 +1,29 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_atan",
+    "Title": "ATAN()",
+    "Feature": [
+        "ATAN(X)"
+    ],
+    "Description": [
+        "\nATAN(X)\n",
+        "\n            Returns the arc tangent of X,\n            that is, the value whose tangent is\n            X. Returns\n            NULL if\n            X is NULL\n",
+        "Press CTRL+C to copy mysql> SELECT ATAN(2);\n        -> 1.1071487177941\nmysql> SELECT ATAN(-2);\n        -> -1.1071487177941"
+    ],
+    "Examples": [
+        "mysql> SELECT ATAN(2);\n        -> 1.1071487177941\nmysql> SELECT ATAN(-2);\n        -> -1.1071487177941"
+    ],
+    "Category": [
+        "\u6570\u503c\u51fd\u6570\u4e0e\u64cd\u4f5c\u7b26"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT ATAN(2);",
+        "SELECT ATAN(-2);"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT ATAN(2);",
+        "SELECT ATAN(-2);"
+    ]
+}

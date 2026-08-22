@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_mathfunc.html"
+    ],
+    "Title": [
+        "log2(X)"
+    ],
+    "Feature": [
+        "log2(X)"
+    ],
+    "Description": [
+        "\n  Return the logarithm base-2 for the number X.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Mathematical SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT log2(X);",
+        "SELECT log2(10);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 277,
+            "Prompt Tokens": 259,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.9649999999999994e-05
+        },
+        {
+            "Total Tokens": 414,
+            "Prompt Tokens": 395,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 7.065e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: X\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT log2(10);"
+    ]
+}

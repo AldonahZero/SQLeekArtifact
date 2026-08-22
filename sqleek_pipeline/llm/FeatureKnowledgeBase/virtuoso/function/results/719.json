@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmladdattribute/"
+  ],
+  "Title": [
+    "integer XMLAddAttribute ("
+  ],
+  "Feature": [
+    "integer XMLAddAttribute ("
+  ],
+  "Description": [
+    "The function modifies the source document by adding an attribute to the current node of source entity. The source should be an XML tree entity, not \"persistent XML\"\n    one, should be an element entity (not attribute, text etc.) and should not be a root entity. Parameters attr_name and attr_value can be of any types that can be casted to string. attr_name can be an attribute entity, in this case both the name and the value of attr_name attribute is used and attr_value code must be omitted.\nsource\nsource\nsource\nattr_name\nattr_value\nattr_name\nattr_name\nattr_value\nThe mode specifies how to resolve duplicate attribute names, if an source entity already has an attribute whose name is equal to attr_name . Mode 0 is similar to \"insert into\":\n    the function signals an error if an attribute already exists. Mode 1 is similar to \"insert soft\": the function do\n    nothing if an attribute already exists and not signalling an error. Mode 2 is similar to \"insert replacing\": the\n    function either adds a new attribute or replacing the value of existing attribute.\nmode\nsource\nattr_name"
+  ],
+  "Examples": [
+    "create procedure XMLAddAttribute_demo ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

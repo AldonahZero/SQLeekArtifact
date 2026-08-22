@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "substring(s, startpos)"
+    ],
+    "Feature": [
+        "substring(s, startpos)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as input arg 1",
+        "extract substring starting from position startpos"
+    ],
+    "Examples": [
+        "substring('abcde', 3)"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT substring('Hello, World!', 8);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 296,
+            "Prompt Tokens": 273,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.4749999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT substring('Hello, World!', 8);"
+    ]
+}

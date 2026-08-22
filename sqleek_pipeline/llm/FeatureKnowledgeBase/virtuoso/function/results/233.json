@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_ttl_triple/"
+  ],
+  "Title": [
+    "http_ttl_triple ("
+  ],
+  "Feature": [
+    "http_ttl_triple ("
+  ],
+  "Description": [
+    "Outputs next triple to ses in TTL serialization. This function does not terminate the printed\n    \ttriple in hope that the next triple will has same \"s\" or pair of \"s\" and \"p\". So \"intermediate\"\n    \tsemicolon or comma can be used instead of \"trailing\" dot."
+  ],
+  "Examples": [
+    "CREATE PROCEDURE dump_one_graph",
+    "SELECT ?s ?p ?o { GRAPH `iri(?:srcgraph)` { ?s ?p ?o } }",
+    "create procedure dump_rdftriples_to_ttl(inout triples any, inout ses any)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

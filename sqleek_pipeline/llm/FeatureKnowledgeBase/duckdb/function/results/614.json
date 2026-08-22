@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/window_functions"
+    ],
+    "Title": [
+        "ntile(num_buckets)"
+    ],
+    "Feature": [
+        "ntile(num_buckets)"
+    ],
+    "Description": [
+        "An integer ranging from 1 to num_buckets, dividing the partition as equally as possible.",
+        "BIGINT"
+    ],
+    "Examples": [
+        "ntile(4)"
+    ],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ntile(5) OVER ()"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 295,
+            "Prompt Tokens": 274,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.3700000000000004e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ntile(5) OVER ()"
+    ]
+}

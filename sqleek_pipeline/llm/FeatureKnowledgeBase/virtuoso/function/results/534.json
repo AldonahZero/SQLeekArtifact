@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_numinteriorrings/"
+  ],
+  "Title": [
+    "ST_NumInteriorRings ("
+  ],
+  "Feature": [
+    "ST_NumInteriorRings ("
+  ],
+  "Description": [
+    "returns number of interior rings of the given polygon, NULL if shape is not a polygon."
+  ],
+  "Examples": [
+    "SELECT ?s bif:ST_NumInteriorRings (?o)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

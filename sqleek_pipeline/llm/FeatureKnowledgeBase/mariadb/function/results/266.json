@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/schema/"
+    ],
+    "Title": [
+        "SCHEMA"
+    ],
+    "Feature": [
+        "SCHEMA()\n"
+    ],
+    "Description": [
+        "This function is a synonym for DATABASE()."
+    ],
+    "Examples": [],
+    "Category": [
+        "Information Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT SCHEMA();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 264,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.7249999999999997e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT SCHEMA();"
+    ]
+}

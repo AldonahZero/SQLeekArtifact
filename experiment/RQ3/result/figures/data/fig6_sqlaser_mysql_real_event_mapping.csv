@@ -1,0 +1,6 @@
+tool,dbms,run,bug_id,first_seen_hours,elapsed_sec,source_file,source_line,status,top_frame,trigger_file,note
+SQLaser,MySQL,r1,B-SL-1,6.008611,21631,/root/SQLeek/experiment/RQ2/result/data/bug_events.csv,28,Reported,JOIN::optimize,triggers/B-SL-1.sql,Only SQLaser/MySQL bug currently counted for Figure 6 preview; r2-r5 are zero-bug runs.
+SQLaser,MySQL,r2,__NO_BUG__,0,,,,,,,zero-bug run marker
+SQLaser,MySQL,r3,__NO_BUG__,0,,,,,,,zero-bug run marker
+SQLaser,MySQL,r4,__NO_BUG__,0,,,,,,,zero-bug run marker
+SQLaser,MySQL,r5,__NO_BUG__,0,,,,,,,zero-bug run marker

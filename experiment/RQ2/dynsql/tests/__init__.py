@@ -1,0 +1,1 @@
+"""DynSQL adapter tests."""

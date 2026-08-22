@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_java_vm_attach/"
+  ],
+  "Title": [
+    "java_vm_attach ("
+  ],
+  "Feature": [
+    "java_vm_attach ("
+  ],
+  "Description": [
+    "Ensures that the current working thread is attached to the Java VM. \n    It operates as follows:\nif the Java VM is not created it creates it.\nif the Java VM is not created it creates it.\nif the java VM is running, but the current working thread is \n      not attached as a Java VM thread it attaches it.\nif the java VM is running, but the current working thread is \n      not attached as a Java VM thread it attaches it.\nif none of the above it returns.\nif none of the above it returns.\nThe java_vm_attach() function is called implicitly \n    in each of the other VSEs, and also when allocating, copying or deleting a \n    Virtuoso/PL reference to a Java VM object values.\njava_vm_attach()\nIf the Java VM is already initialized and the classpath is supplied \n    it will throw a SQL error.  If the Java VM is not initialized, but it is \n    required to execute a statement the server will implicitly call java_vm_attach (NULL); .  The Virtuoso Java \n    VM integration binary works with JDK 1.2 and later.\njava_vm_attach (NULL);"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

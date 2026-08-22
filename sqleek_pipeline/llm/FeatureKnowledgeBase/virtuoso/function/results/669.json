@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_decrypt_soap/"
+  ],
+  "Title": [
+    "varchar xenc_decrypt_soap ("
+  ],
+  "Feature": [
+    "varchar xenc_decrypt_soap ("
+  ],
+  "Description": [
+    "The function is used to decrypt and optionally verify signature\n\t(depends of a validate_flag parameter) of a SOAP message.\nvalidate_flag"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

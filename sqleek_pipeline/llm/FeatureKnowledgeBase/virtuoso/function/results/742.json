@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xslt_sheet/"
+  ],
+  "Title": [
+    "xslt_sheet ("
+  ],
+  "Feature": [
+    "xslt_sheet ("
+  ],
+  "Description": [
+    "This function takes a name and the root element of a parsed XML\ndocument and defines these as a stylesheet. The unique element child\nof the entity object's document should be an xsl:stylesheet\nelement. Included or imported stylesheets will be located relative to\nthe base URI of the entity passed to xslt_sheet() . Once a stylesheet thus defined it\ncan be used as the stylesheet argument of xslt.\nxslt_sheet()"
+  ],
+  "Examples": [
+    "called with the name and the root element of the parsed file. xslt_view() next gets the string to process,",
+    "create procedure xslt_view (in v varchar, in xst varchar)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

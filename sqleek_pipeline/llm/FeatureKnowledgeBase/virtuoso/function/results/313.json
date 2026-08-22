@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nntp_auth_post/"
+  ],
+  "Title": [
+    "array nntp_auth_post ("
+  ],
+  "Feature": [
+    "array nntp_auth_post ("
+  ],
+  "Description": [
+    "Nntp_auth_post is used to post a message to the server require authorization.\nNntp_auth_post"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

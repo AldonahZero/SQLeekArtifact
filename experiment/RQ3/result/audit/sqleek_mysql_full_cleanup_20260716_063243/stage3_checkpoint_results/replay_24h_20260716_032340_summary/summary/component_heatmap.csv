@@ -1,0 +1,9 @@
+dbms,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mysql,catalog_metadata,SQLeek,42,8.0,0.19047619047619047,4,3.0,0.75
+mysql,cursor_prepared,SQLeek,290,174.0,0.6,5,5.0,1.0
+mysql,executor,SQLeek,202,89.0,0.4405940594059406,7,6.0,0.6666666666666666
+mysql,optimizer,SQLeek,46,34.0,0.7391304347826086,8,8.0,1.0
+mysql,other,SQLeek,228,62.5,0.2741228070175439,58,29.0,0.509090909090909
+mysql,parser,SQLeek,18,11.0,0.6111111111111112,3,3.0,1.0
+mysql,storage,SQLeek,26,7.0,0.2692307692307692,6,3.0,0.5
+mysql,type_system,SQLeek,3786,1994.5,0.5268092974115162,846,599.5,0.7359913793103449

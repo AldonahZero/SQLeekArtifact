@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_stat/"
+  ],
+  "Title": [
+    "REPL_STAT ("
+  ],
+  "Feature": [
+    "REPL_STAT ("
+  ],
+  "Description": [
+    "Retrieves status of all subscriptions and publications. This function is for interactive use (via ISQL tool)."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

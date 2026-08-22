@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_java_get_property/"
+  ],
+  "Title": [
+    "java_get_property ("
+  ],
+  "Feature": [
+    "java_get_property ("
+  ],
+  "Description": [
+    "Gets a property value from a Java class instance referenced by \n    instance_obj.  If instance_obj is not supplied, ie NULL, then it \n    is returned as a static Java class property value."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

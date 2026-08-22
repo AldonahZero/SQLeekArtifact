@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nm_max_notnull/"
+  ],
+  "Title": [
+    "any __max_notnull ("
+  ],
+  "Feature": [
+    "any __max_notnull ("
+  ],
+  "Description": [
+    "The function returns the maximum value among all values in all its arguments by\n  \tignoring NULLs entirely."
+  ],
+  "Examples": [
+    "INSERT INTO GRAPH <http://mygraph.com>",
+    "Insert into <http://mygraph.com>, 6 (or less) triples -- done",
+    "SELECT DISTINCT ?s"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

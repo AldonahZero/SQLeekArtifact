@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sys_lockdown/"
+  ],
+  "Title": [
+    "sys_lockdown ("
+  ],
+  "Feature": [
+    "sys_lockdown ("
+  ],
+  "Description": [
+    "You must have DBA privileges to run that function.\nCalling this with lock_mode = 1 causes the server not to accept any new client\nconnections, except ones coming from localhost (127.0.0.1). This will also shut down any other\nlisteners and terminate any possibly pending processing, rolling back all open transactions and\ndisconnecting all clients, except ones from localhost. Calling thi with lock_mode 0 reverses the effect."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

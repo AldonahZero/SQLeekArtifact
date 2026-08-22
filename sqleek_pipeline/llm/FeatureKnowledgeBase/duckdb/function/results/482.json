@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/time"
+    ],
+    "Title": [
+        "extract(part FROM time)"
+    ],
+    "Feature": [
+        "extract(part FROM time)"
+    ],
+    "Description": [
+        "Get subfield from a time."
+    ],
+    "Examples": [
+        "extract('hour' FROM TIME '14:21:13')"
+    ],
+    "Category": [
+        "Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT extract(hour FROM time '12:34:56');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 255,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.324999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT extract(hour FROM time '12:34:56');"
+    ]
+}

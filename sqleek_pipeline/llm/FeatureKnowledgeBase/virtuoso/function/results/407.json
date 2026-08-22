@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_init_snapshot/"
+  ],
+  "Title": [
+    "None REPL_INIT_SNAPSHOT ("
+  ],
+  "Feature": [
+    "None REPL_INIT_SNAPSHOT ("
+  ],
+  "Description": [
+    "This procedure should be used to initialize a bi-directional snapshot publication.\nThis function should be run on publisher."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

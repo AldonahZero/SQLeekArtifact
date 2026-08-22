@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_graph_diff/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_GRAPH_DIFF ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_GRAPH_DIFF ("
+  ],
+  "Description": [
+    "Performs the core operation of preparing graph diff - matching between nodes of two graphs.\nTypically is called from wrapper that returns the diff in an extended GUO ontology \n(http://webr3.org/owl/guo#) as a string output in TURTLE syntax."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

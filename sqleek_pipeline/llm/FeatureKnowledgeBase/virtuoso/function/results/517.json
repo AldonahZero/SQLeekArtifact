@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_astext/"
+  ],
+  "Title": [
+    "st_astext ("
+  ],
+  "Feature": [
+    "st_astext ("
+  ],
+  "Description": [
+    "Returns the well known text (WKT) representation of the geometry."
+  ],
+  "Examples": [
+    "SELECT DISTINCT (bif:st_astext(?geo))",
+    "callret-0"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

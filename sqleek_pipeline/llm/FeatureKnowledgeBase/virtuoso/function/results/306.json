@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_mts_status/"
+  ],
+  "Title": [
+    "mts_status ("
+  ],
+  "Feature": [
+    "mts_status ("
+  ],
+  "Description": [
+    "Checks status of subject. Subject can be  either 'MTS' or \n\t'TRANSACTION'. In the first case this checks if  the server is \n\tconnected to MTS. In the second case, checks if  2pc control is \n\tenabled for the current transaction. This function returns status \n\tstring. For 'MTS' it could be either 'connected' or 'disconnected'. \n\tFor 'TRANSACTION' - either '2pc enabled' or '2pc disabled'.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

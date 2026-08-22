@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ses_connect/"
+  ],
+  "Title": [
+    "session_handle ses_connect ("
+  ],
+  "Feature": [
+    "session_handle ses_connect ("
+  ],
+  "Description": [
+    "Requires dba privileges.\nThis function is used to establish a new TCP connection to the target\n    host. It returns a special datatype which represents the session handle."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,8 @@
+# pattern_id	clause_chain	target_call_chain	weight	enabled
+# MariaDB reuses SQLRight's MySQL parser. SQLaser scores the SQL clause chain;
+# function labels are source-mapping candidates and require dynamic validation.
+mariadb_any	select|any	Item_allany_subselect::select_transformer|Item_in_subselect::val_bool	2	1
+mariadb_like_escape_xor	like|escape|xor	Item_func_like::eval_escape_clause|Item_func_like::val_int|Item_func_xor::val_int	2	1
+mariadb_in_subquery	select|in	Item_func_in::resolve_type|Item_func_in::val_int	1	1
+mariadb_case_cast	select|case|cast	Item_func_case::find_item|Item_func_conv::val_int	1	1
+mariadb_group_having	select|group by|having	st_select_lex::setup_ref_array|Query_block::prepare	1	1

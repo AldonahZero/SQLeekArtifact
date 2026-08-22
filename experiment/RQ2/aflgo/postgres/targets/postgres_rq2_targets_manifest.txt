@@ -1,0 +1,15 @@
+target_list=/root/SQLeek/experiment/RQ2/aflgo/postgres/targets/postgres_rq2_targets.txt
+resolved_targets=/root/SQLeek/experiment/RQ2/aflgo/postgres/targets/postgres_rq2_targets_resolved.tsv
+stage1_sources=/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/postgres_memory.txt /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/postgres_stale.txt
+postgres_memory.txt_raw_lines=26
+postgres_memory.txt_valid_lines=26
+postgres_stale.txt_raw_lines=22
+postgres_stale.txt_valid_lines=22
+postgres_logic.txt_missing=1
+deduped_targets=26
+sha256=113a8bd2dd99bd4a29ed54f0ad840bffcc983fa1b9042b13f15ffd78299b2479
+resolved_unique=48
+resolved_ambiguous=0
+resolved_missing=0
+postgres_source=62d6c7d3df6287f1bd83199c1a746e50d31571a0
+aflgo_source=fa125da5d70621daf7141c6279877c97708c8c1f

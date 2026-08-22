@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_point/"
+  ],
+  "Title": [
+    "st_point ("
+  ],
+  "Feature": [
+    "st_point ("
+  ],
+  "Description": [
+    "Returns a point geometry. The x coordinate corresponds to longitude."
+  ],
+  "Examples": [
+    "callret",
+    "SELECT ?m (bif:st_distance (?geo, bif:st_point (0, 52)))"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_string_to_file/"
+  ],
+  "Title": [
+    "string_to_file ("
+  ],
+  "Feature": [
+    "string_to_file ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nstring_to_file writes a varchar value or string session to a file. The path is relative to the server's\n    working directory. The mode is an integer value interpreted as a\n    position. A mode of 0 writes the content starting at offset 0.\n    A mode of -1 appends to the end of the file. The append option is\n    probably the most useful for producing application level logs,\n    etc.\nstring_to_file\nThe string argument can also be a string output object. In this\n    case the content is used as the string.\nIf the mode is -2, the new content supersedes the old. This is\n    different from 0 in that the file will be truncated if the new content\n    is shorter than the old.\nThe DirsAllowed and DirsDenied lists in Parameters section of the\n    virtuoso configuration file (virtuoso.ini by default) are used to control\n    disk access. An error 42000/FA024 is signalled if an attempt is made to\n    write to a file in a directory to which disk access is not explicitly\n    allowed."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

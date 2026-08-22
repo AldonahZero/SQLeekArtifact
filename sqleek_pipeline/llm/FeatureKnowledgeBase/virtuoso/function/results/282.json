@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_lh_get_handler/"
+  ],
+  "Title": [
+    "lang_handler_t * lh_get_handler ("
+  ],
+  "Feature": [
+    "lang_handler_t * lh_get_handler ("
+  ],
+  "Description": [
+    "Returns language handler"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

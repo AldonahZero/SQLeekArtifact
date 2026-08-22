@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_dec_or_remove/"
+  ],
+  "Title": [
+    "dict_dec_or_remove ("
+  ],
+  "Feature": [
+    "dict_dec_or_remove ("
+  ],
+  "Description": [
+    "The function checks whether dict contains key .\nIf it isn't so then the function checks the datatype of the value associated with the key.\nAn error 42000 is signalled in case of non-integer value or a negative integer value.\nIf the value is positive and greater than value_decrement then value_decrement is subtracted from it and the result become the new value associated with key in dict .\nIf the value is positive and less than or equal to value_decrement then key is removed from dict .\nIf key is not in the dictionary then the dictionary remains unchanged.\ndict\nkey\nvalue_decrement\nvalue_decrement\nkey\ndict\nvalue_decrement\nkey\ndict\nInformally, the function reverts the effect of dict_inc_or_add .\ndict_inc_or_add"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

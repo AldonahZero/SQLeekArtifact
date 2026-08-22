@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "ln(x)"
+    ],
+    "Feature": [
+        "ln(x)"
+    ],
+    "Description": [
+        "Computes the natural logarithm of x."
+    ],
+    "Examples": [
+        "ln(2)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ln(10);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 267,
+            "Prompt Tokens": 249,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.815e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ln(10);"
+    ]
+}

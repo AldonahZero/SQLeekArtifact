@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rnext/"
+  ],
+  "Title": [
+    "integer retcode rnext ("
+  ],
+  "Feature": [
+    "integer retcode rnext ("
+  ],
+  "Description": [
+    "Use rnext in combination with rmoreresults to\n    iterate over a result set produced by a statement run in a remote data source\n    with rexecute .\nrnext\nrmoreresults\nrexecute"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

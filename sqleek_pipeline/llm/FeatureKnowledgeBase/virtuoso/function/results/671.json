@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_encrypt/"
+  ],
+  "Title": [
+    "varchar xenc_encrypt ("
+  ],
+  "Feature": [
+    "varchar xenc_encrypt ("
+  ],
+  "Description": [
+    "Encrypt SOAP message and optionally attach an XML signature. The keys are retrieved from the\nkey store of the calling user account."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

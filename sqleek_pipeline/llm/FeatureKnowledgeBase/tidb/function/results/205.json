@@ -1,0 +1,30 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/json-functions-return"
+    ],
+    "Title": [
+        "JSON_DEPTH()"
+    ],
+    "Feature": [
+        "JSON_DEPTH()"
+    ],
+    "Description": [
+        "JSON_DEPTH()",
+        "JSON_DEPTH(json_doc) \u51fd\u6570\u8fd4\u56de JSON \u6587\u6863\u7684\u6700\u5927\u6df1\u5ea6\u3002"
+    ],
+    "Examples": [
+        "SELECT JSON_DEPTH('{\"weather\": {\"current\": \"sunny\"}}');\n"
+    ],
+    "Category": [
+        "\u8fd4\u56de JSON \u7684\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT JSON_DEPTH('{\"weather\": {\"current\": \"sunny\"}}');"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT JSON_DEPTH('{\"weather\": {\"current\": \"sunny\"}}');"
+    ]
+}

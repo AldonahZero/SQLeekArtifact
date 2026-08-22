@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_exteriorring/"
+  ],
+  "Title": [
+    "ST_ExteriorRing ("
+  ],
+  "Feature": [
+    "ST_ExteriorRing ("
+  ],
+  "Description": [
+    "Returns an external (the very first) ring of a polygon."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

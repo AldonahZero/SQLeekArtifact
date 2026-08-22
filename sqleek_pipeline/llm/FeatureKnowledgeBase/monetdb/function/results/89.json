@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "locate(s1, s2)"
+    ],
+    "Feature": [
+        "locate(s1, s2)"
+    ],
+    "Description": [
+        "Return type: ",
+        "int",
+        "locate string s1 in s2, when found return start position else 0"
+    ],
+    "Examples": [
+        "locate('DB', 'MonetDB')"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT locate('s1', 's2');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 309,
+            "Prompt Tokens": 286,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.669999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT locate('s1', 's2');"
+    ]
+}

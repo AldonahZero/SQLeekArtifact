@@ -1,0 +1,10 @@
+target_list=/root/SQLeek/experiment/RQ2/aflgo/sqlite/targets/sqlite_rq2_targets.txt
+stage1_sources=/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/sqlite_memory.txt /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/sqlite_stale.txt /root/SQLeek/sqleek_pipeline/stage1_static/output/targets/sqlite_logic.txt
+sqlite_memory.txt_raw_lines=514
+sqlite_memory.txt_valid_lines=514
+sqlite_stale.txt_raw_lines=402
+sqlite_stale.txt_valid_lines=402
+sqlite_logic.txt_raw_lines=1
+sqlite_logic.txt_valid_lines=0
+deduped_targets=514
+sha256=b4940d96a47170870dee1437f4ace3ec638a9d7f7fbf24d37deacd9c8f408e24

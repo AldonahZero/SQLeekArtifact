@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "sql_add(x, y)"
+    ],
+    "Feature": [
+        "sql_add(x, y)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as input",
+        "x plus y"
+    ],
+    "Examples": [
+        "sql_add(2, 3.4)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "sql_add(5, 3)",
+        "SELECT sql_add(5, 3)"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 286,
+            "Prompt Tokens": 266,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.19e-05
+        },
+        {
+            "Total Tokens": 442,
+            "Prompt Tokens": 421,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 7.574999999999998e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!syntax error, unexpected IDENT in: \"sql_add\"\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sql_add(5, 3)"
+    ]
+}

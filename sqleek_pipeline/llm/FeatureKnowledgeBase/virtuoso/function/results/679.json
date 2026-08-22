@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_create_cert/"
+  ],
+  "Title": [
+    "xenc_key_create_cert ("
+  ],
+  "Feature": [
+    "xenc_key_create_cert ("
+  ],
+  "Description": [
+    "The function is used to import a key (usually an asymmetric key like RSA or DSA)\n\tinto user's space from a certificate."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,34 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_localtimestamp",
+    "Title": "LOCALTIMESTAMP, LOCALTIMESTAMP()",
+    "Feature": [
+        "LOCALTIMESTAMP",
+        "LOCALTIMESTAMP([fsp])"
+    ],
+    "Description": [
+        "\nLOCALTIMESTAMP,\n          LOCALTIMESTAMP([fsp])\n",
+        "\nLOCALTIMESTAMP and\n          LOCALTIMESTAMP() are synonyms\n          for NOW().\n        "
+    ],
+    "Examples": [],
+    "Category": [
+        "\u65e5\u671f\u548c\u65f6\u95f4\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT LOCALTIMESTAMP();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 327,
+            "Prompt Tokens": 308,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 5.76e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT LOCALTIMESTAMP();"
+    ]
+}

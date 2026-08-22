@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cfg_section_count/"
+  ],
+  "Title": [
+    "cfg_section_count ("
+  ],
+  "Feature": [
+    "cfg_section_count ("
+  ],
+  "Description": [
+    "Returns the number of sections in an INI file."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

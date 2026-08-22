@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regr_slope/"
+  ],
+  "Title": [
+    "numeric REGR_SLOPE ("
+  ],
+  "Feature": [
+    "numeric REGR_SLOPE ("
+  ],
+  "Description": [
+    "REGR_SLOPE returns the slope of the line.   After the elimination of null (expr1, expr2) pairs, it makes the following computation:\nCOVAR_POP(expr1, expr2) / VAR_POP(expr2)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

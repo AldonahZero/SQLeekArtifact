@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_pack/"
+  ],
+  "Title": [
+    "varchar DB.DBA. VAD_PACK ("
+  ],
+  "Feature": [
+    "varchar DB.DBA. VAD_PACK ("
+  ],
+  "Description": [
+    "This function gets the resource identified by the sticker_uri, which contains\n  the vad:package root element. The URIs present there are interpreted in the context\n  of the base_uri_of_resources and the individual resources are fetched. These are\n  parsed to make sure that they are syntactically correct and the resources are\n  appended to the generated package resource, which is stored into the result_uri.\n  vad_pack() returns a human-readable log of error and warning messages, vad_pack()\n  will signal errors if some resources or database objects will be unavailable.\n  By convention, VAD package files have the extension '.vad'."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

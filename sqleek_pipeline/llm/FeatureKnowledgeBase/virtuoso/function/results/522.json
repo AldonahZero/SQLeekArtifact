@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_geometryn/"
+  ],
+  "Title": [
+    "ST_GeometryN ("
+  ],
+  "Feature": [
+    "ST_GeometryN ("
+  ],
+  "Description": [
+    "Given a 1-based index of a member of a MULTI... or ...COLLECTION shape, returns the member."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

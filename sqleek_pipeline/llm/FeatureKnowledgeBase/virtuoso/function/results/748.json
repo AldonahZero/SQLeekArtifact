@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xte_nodebld_final/"
+  ],
+  "Title": [
+    "xte_nodebld_final ("
+  ],
+  "Feature": [
+    "xte_nodebld_final ("
+  ],
+  "Description": [
+    "By default this function reduces all last empty items from the first argument and returns it,\n    but supplied a second argument\n    it also replaces the first item of the first argument by the second argument,\n    but does not commit the return."
+  ],
+  "Examples": [
+    "create procedure test1_nodebld()",
+    "create procedure test2_nodebld()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

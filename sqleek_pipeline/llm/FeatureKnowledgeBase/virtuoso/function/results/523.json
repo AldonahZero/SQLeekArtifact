@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_geomfromtext/"
+  ],
+  "Title": [
+    "st_geomfromtext ("
+  ],
+  "Feature": [
+    "st_geomfromtext ("
+  ],
+  "Description": [
+    "Parses the string and returns the corresponding geometry. The string is to be in well known text\nrepresentation (WKT)."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ap_add_phrases/"
+  ],
+  "Title": [
+    "AP_ADD_PHRASES ("
+  ],
+  "Feature": [
+    "AP_ADD_PHRASES ("
+  ],
+  "Description": [
+    "The function gets two arguments, the integer ID of annotation phrase set and a vector of $\ndescriptions of phrases that should be edited in that phrase set.\nEvery item of vector of descriptions is in turn vector of one or two values; first value is\nthe text of the phrase, second value is associated application specific data, the absence of second value\nindicates that the phrase should be removed. If same text of phrase appears in the vector of description\nmore than once, and associated data differ then any version of data can be stored for future use; it is\nthe roll of dice because the vector is reordered for faster processing."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

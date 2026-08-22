@@ -1,0 +1,42 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/encode/"
+    ],
+    "Title": [
+        "ENCODE"
+    ],
+    "Feature": [
+        "ENCODE(str,pass_str)\n"
+    ],
+    "Description": [
+        "ENCODE is not considered cryptographically secure, and should not be used for password encryption.\n",
+        "Encrypt str using pass_str as the password. To decrypt the result, use\nDECODE().",
+        "The result is a binary string of the same length as str.",
+        "The strength of the encryption is based on how good the random generator is. ",
+        "It is not recommended to rely on the encryption performed by the ENCODE function. Using a salt value (changed when a password is updated) will improve matters somewhat, but for storing passwords, consider a more cryptographically secure function, such as SHA2()."
+    ],
+    "Examples": [
+        "ENCODE('not so secret text', CONCAT('random_salt','password'))\n"
+    ],
+    "Category": [
+        "Encryption, Hashing and Compression Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ENCODE('my_secret_data', 'my_password');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 392,
+            "Prompt Tokens": 367,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 7.005e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ENCODE('my_secret_data', 'my_password');"
+    ]
+}

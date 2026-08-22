@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-character.html"
+    ],
+    "Title": [
+        "\"char\""
+    ],
+    "Feature": [
+        "\"char\""
+    ],
+    "Description": [
+        "Storage Size",
+        "1 byte",
+        "Description",
+        "single-byte internal type"
+    ],
+    "Examples": [],
+    "Category": [
+        "Character Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'a'::char;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 273,
+            "Prompt Tokens": 254,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.95e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'a'::char;"
+    ]
+}

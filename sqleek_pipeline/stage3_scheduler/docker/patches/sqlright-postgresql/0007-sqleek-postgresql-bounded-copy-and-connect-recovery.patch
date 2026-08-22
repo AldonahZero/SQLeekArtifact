@@ -1,0 +1,145 @@
+--- a/PostgreSQL/docker/src/AFL/afl-fuzz.cpp
++++ b/PostgreSQL/docker/src/AFL/afl-fuzz.cpp
+@@ -174,9 +174,29 @@
+ 
+ struct POSTGRES_OUTPUT {
+   string outputs = "";
+-  SQLSTATUS status;
++  SQLSTATUS status = kNormal;
+ };
+ 
++static int sqleek_env_int(const char *name, int fallback, int min_value)
++{
++  const char *value = getenv(name);
++  if (!value || !value[0]) return fallback;
++  char *endptr = NULL;
++  long parsed = strtol(value, &endptr, 10);
++  if (endptr == value || parsed < min_value) return fallback;
++  return (int)parsed;
++}
++
++static void sqleek_cancel_query(PGconn *conn)
++{
++  if (!conn) return;
++  PGcancel *cancel_conn = PQgetCancel(conn);
++  if (!cancel_conn) return;
++  char errbuf[512];
++  PQcancel(cancel_conn, errbuf, sizeof(errbuf));
++  PQfreeCancel(cancel_conn);
++}
++
+ 
+ class PostgresClient
+ {
+@@ -225,8 +245,14 @@
+ 
+     postgre_execute_total += 1;
+ 
++    int statement_timeout_ms = sqleek_env_int("SQLEEK_PG_STATEMENT_TIMEOUT_MS", 200, 1);
++    int client_timeout_ms = sqleek_env_int("SQLEEK_PG_CLIENT_TIMEOUT_MS", 2000, 1);
+     vector<string> cmd_vec = string_splitter(cmd, ';');
+-    vector<string> timeout_cmd_vec = {"set statement_timeout to 200; "};
++    vector<string> timeout_cmd_vec = {
++      "set statement_timeout to " + to_string(statement_timeout_ms) + "; ",
++      "set lock_timeout to " + to_string(statement_timeout_ms) + "; ",
++      "set idle_in_transaction_session_timeout to " + to_string(client_timeout_ms) + "; "
++    };
+     timeout_cmd_vec.insert(timeout_cmd_vec.end(), cmd_vec.begin(), cmd_vec.end());
+     cmd_vec = timeout_cmd_vec;
+ 
+@@ -240,12 +266,16 @@
+       /* Send our statements off to the server. */
+       if (!PQsendQuery(conn, cur_cmd.c_str())) {
+         cerr << "Sending statements to server failed: " << PQerrorMessage(conn) << endl;
+-        // exit_nicely(conn);
++        postgre_execute_error += 1;
++        result.status = kExecuteError;
++        disconnect(conn);
++        return result;
+       }
+ 
+       if (check_status(conn) == false) {
+         cerr << "In func execute(), we get kServerCrash. \n";
+         result.status = kServerCrash;
++        disconnect(conn);
+         return result;
+       }
+ 
+@@ -301,10 +331,8 @@
+               // cerr << "Getting timeout run_seconds: " << run_seconds << "\n\n\n";
+               if (run_seconds > 2.0) {
+                 result.outputs = "Error: Execution is Timeout. ";
+-                PGcancel* cancel_conn = PQgetCancel(conn);
+-                char errbuf[512];
+-                PQcancel(cancel_conn, errbuf, 512);
+-                PQfreeCancel(cancel_conn);
++                result.status = kTimeout;
++                sqleek_cancel_query(conn);
+                 is_timeout = true;
+                 break;
+               }
+@@ -326,6 +354,23 @@
+             // cerr << "Query execution error: " << error_msg << endl;
+             result.outputs += error_msg + "\n";
+             // return result;
++            break;
++          }
++          case PGRES_COPY_IN: {
++            result.status = kTimeout;
++            result.outputs += "Error: SQLeek aborted PostgreSQL COPY FROM STDIN protocol.\n";
++            PQputCopyEnd(conn, "sqleek abort copy protocol");
++            sqleek_cancel_query(conn);
++            is_timeout = true;
++            break;
++          }
++          case PGRES_COPY_OUT:
++          case PGRES_COPY_BOTH: {
++            result.status = kTimeout;
++            result.outputs += "Error: SQLeek aborted PostgreSQL COPY protocol.\n";
++            sqleek_cancel_query(conn);
++            is_timeout = true;
++            break;
+           }
+           default: {
+             /* Always call PQgetResult until it returns null, even on
+@@ -342,6 +387,13 @@
+       }
+     } // for (string& cur_cmd : cmd_vec)
+ 
++    if (is_timeout) {
++      postgre_execute_error += 1;
++      disconnect(conn);
++      if (result.status == kNormal) result.status = kTimeout;
++      return result;
++    }
++
+     // cout << "###################" << endl;
+     // vector<string> cmd_strs = string_splitter(cmd, ';');
+     // for (string cmd_str : cmd_strs) {
+@@ -3059,6 +3111,7 @@
+   u32 tb4;
+ 
+   child_timed_out = 0;
++  u32 sqleek_connect_failures = 0;
+ 
+   /* After this memset, trace_bits[] are effectively volatile, so we
+      must prevent any earlier operations from venturing into that
+@@ -3094,10 +3147,15 @@
+   }
+   else if (result.status == kConnectFailed)
+   {
++    u32 max_retries = (u32)sqleek_env_int("SQLEEK_PG_CONNECT_RETRIES", 3, 0);
+     cerr << "In func: run_target(), we get Connection Failed error from execute(). \n";
+-    // cout << "Connection Failed!" << endl;
+-    sleep(1);
+-    goto BEGIN;
++    if (sqleek_connect_failures < max_retries) {
++      sqleek_connect_failures++;
++      sleep(1);
++      goto BEGIN;
++    }
++    cerr << "SQLeek PostgreSQL connect retry budget exhausted: " << max_retries << "\n";
++    status = FAULT_ERROR;
+   }
+   // else
+   // {

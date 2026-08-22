@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_curdatetimeoffset/"
+  ],
+  "Title": [
+    "curdatetimeoffset ("
+  ],
+  "Feature": [
+    "curdatetimeoffset ("
+  ],
+  "Description": [
+    "The function returns current datetime, like now() , but\n    fractional part of seconds can be adjusted by providing the number of \"microseconds\" as the argument. It is like curdatetime() but the returned datetime is in GMT timezone.\nnow()\ncurdatetime()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

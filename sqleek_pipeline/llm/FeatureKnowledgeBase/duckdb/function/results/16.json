@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/aggregates"
+    ],
+    "Title": [
+        "count(*)"
+    ],
+    "Feature": [
+        "count(*)"
+    ],
+    "Description": [
+        "count()",
+        "Returns the number of rows in a group."
+    ],
+    "Examples": [
+        "count()"
+    ],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT count(*)"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 264,
+            "Prompt Tokens": 248,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.68e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT count(*)"
+    ]
+}

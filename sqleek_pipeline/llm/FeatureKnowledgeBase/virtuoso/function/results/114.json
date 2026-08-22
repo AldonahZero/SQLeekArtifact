@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dav_api_lock/"
+  ],
+  "Title": [
+    "integer DAV_LOCK ("
+  ],
+  "Feature": [
+    "integer DAV_LOCK ("
+  ],
+  "Description": [
+    "DAV_LOCK sets a new lock or refresh an existing lock or creates a lock object.\nDAV_LOCK\nDAV_UNLOCK releases a lock.\nDAV_UNLOCK\nDAV_IS_LOCKED reports whether the resource or collection is locked.\nDAV_IS_LOCKED\nDAV_LIST_LOCKS returns a full list of all locks on a resource or collection.\nDAV_LIST_LOCKS\nIt is strongly recommended to carefully study DAV standards before using these functions in applications.\nImproper use of DAV locks may result in subtle application errors that are hard to debug."
+  ],
+  "Examples": [
+    "create procedure DAV_LOCK_DEMO (in dav_passwd varchar := 'dav')"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

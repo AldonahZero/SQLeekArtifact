@@ -1,0 +1,130 @@
+diff --git a/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/Dockerfile b/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/Dockerfile
+new file mode 100644
+index 0000000..5e5e6b1
+--- /dev/null
++++ b/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/Dockerfile
+@@ -0,0 +1,82 @@
++FROM ubuntu:20.04 AS fundamental
++LABEL org.opencontainers.image.title="SQLRight SQLite 3.54.0 baseline"
++LABEL org.opencontainers.image.description="SQLRight baseline adapted to SQLeek SQLite 3.54.0 fuzzing build"
++
++ENV TZ=UTC
++ENV DEBIAN_FRONTEND=noninteractive
++RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
++RUN chmod 777 /tmp
++
++RUN apt -y update && apt -y upgrade && apt -y install \
++    bison flex git make cmake build-essential gcc-multilib g++-multilib \
++    clang xinetd libreadline-dev zlib1g-dev gdb vim tmux python3 python3-pip \
++    libxml2-dev libxslt-dev libssl-dev libxml2-utils xsltproc libpq-dev \
++    screen watch unzip wget tcl llvm g++-9 gcc-9 ca-certificates
++RUN pip3 install gitpython libtmux
++
++RUN useradd -ms /bin/bash sqlite
++USER sqlite
++WORKDIR /home/sqlite
++
++COPY --chown=sqlite:sqlite AFL /home/sqlite/AFL
++WORKDIR /home/sqlite/AFL
++RUN sed -i 's/#define MAP_SIZE_POW2       16/#define MAP_SIZE_POW2       18/' config.h
++RUN make
++WORKDIR /home/sqlite/AFL/llvm_mode
++RUN make
++
++FROM fundamental AS sqlite354_build
++WORKDIR /home/sqlite
++COPY --chown=sqlite:sqlite sqlite-src /home/sqlite/sqlite
++RUN cp -r sqlite sqlite_ori
++
++WORKDIR /home/sqlite/sqlite
++RUN test "$(cat VERSION)" = "3.54.0"
++RUN test "$(cat manifest.uuid)" = "3c0a277e6741c72281e12c44d85902aa6780890a7f59bacc3ac2b35ba27f7211"
++ENV CXX=/home/sqlite/AFL/afl-clang-fast++
++ENV CC=/home/sqlite/AFL/afl-clang-fast
++ENV CFLAGS="-g -O2"
++ENV CXXFLAGS="-g -O2"
++RUN ./configure --enable-debug --enable-fts5 --disable-shared
++RUN make -j$(nproc) sqlite3
++
++WORKDIR /home/sqlite/sqlite_ori
++RUN test "$(cat VERSION)" = "3.54.0"
++RUN test "$(cat manifest.uuid)" = "3c0a277e6741c72281e12c44d85902aa6780890a7f59bacc3ac2b35ba27f7211"
++ENV CXX=g++-9
++ENV CC=gcc-9
++ENV CFLAGS="-g -O2"
++ENV CXXFLAGS="-g -O2"
++RUN ./configure --enable-debug --enable-fts5 --disable-shared
++RUN make -j$(nproc) sqlite3
++
++FROM sqlite354_build AS sqlright_build
++USER root
++WORKDIR /home/sqlite/src
++COPY --chown=sqlite:sqlite sqlright-src/SQLite/docker/src /home/sqlite/src
++RUN chown -R sqlite:sqlite /home/sqlite/src
++USER sqlite
++WORKDIR /home/sqlite/src
++RUN make -j$(nproc)
++
++FROM sqlright_build AS sqlite354_fuzzing
++USER sqlite
++WORKDIR /home/sqlite
++RUN mkdir -p fuzzing
++
++USER root
++WORKDIR /home/sqlite/fuzzing
++COPY --chown=sqlite:sqlite sqlright-src/SQLite/docker/fuzz_root /home/sqlite/fuzzing/fuzz_root
++RUN mkdir -p /home/sqlite/fuzzing/Bug_Analysis
++
++COPY --chown=sqlite:sqlite sqlright-src/SQLite/docker/bisecting /home/sqlite/bisecting
++USER sqlite
++WORKDIR /home/sqlite
++RUN cp -r /home/sqlite/sqlite_ori ./sqlite_bisecting_binary && mkdir -p /home/sqlite/sqlite_bisecting_binary/bld
++
++USER root
++WORKDIR /home/sqlite
++COPY --chown=sqlite:sqlite sqlright-src/SQLite/docker/scripts /home/sqlite/scripts
++COPY --chown=sqlite:sqlite scripts /home/sqlite/rq2_scripts
++USER sqlite
++WORKDIR /home/sqlite/fuzzing/fuzz_root
+diff --git a/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/scripts/run_sqlright_foreground.sh b/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/scripts/run_sqlright_foreground.sh
+new file mode 100755
+index 0000000..e915c1b
+--- /dev/null
++++ b/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/scripts/run_sqlright_foreground.sh
+@@ -0,0 +1,20 @@
++#!/usr/bin/env bash
++set -e
++OUT=${1:?usage: run_sqlright_foreground.sh OUT_DIR CORE ORACLE [SECONDS]}
++CORE=${2:?usage: run_sqlright_foreground.sh OUT_DIR CORE ORACLE [SECONDS]}
++ORACLE=${3:-NOREC}
++SECONDS_LIMIT=${4:-600}
++mkdir -p "$OUT"
++cd /home/sqlite/fuzzing/fuzz_root
++cp /home/sqlite/src/afl-fuzz ./
++/home/sqlite/sqlite/sqlite3 --version | tee "$OUT/sqlite_version.txt"
++AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1 \
++AFL_SKIP_CPUFREQ=1 \
++AFL_NO_UI=1 \
++timeout "$SECONDS_LIMIT" ./afl-fuzz \
++  -i ./inputs \
++  -o "$OUT/afl_out" \
++  -c "$CORE" \
++  -O "$ORACLE" \
++  -E \
++  -- /home/sqlite/sqlite/sqlite3
+diff --git a/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/README.md b/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/README.md
+new file mode 100644
+index 0000000..fbcfdf7
+--- /dev/null
++++ b/root/SQLeek/experiment/RQ2/sqlaser/build/sqlite354_sqlright/README.md
+@@ -0,0 +1,10 @@
++# SQLRight SQLite 3.54.0 Baseline Build Context
++
++This context builds the unmodified SQLRight SQLite baseline against the SQLeek unified SQLite source version 3.54.0.
++
++- fuzzing_dbms_version: SQLite 3.54.0
++- fuzzing_instrumentation: SQLRight/AFL instrumentation
++- replay_dbms_version: SQLite 3.54.0
++- replay_instrumentation: SQLeek unified LLVM coverage
++
++SQLite 3.34.0 is not used by this context.

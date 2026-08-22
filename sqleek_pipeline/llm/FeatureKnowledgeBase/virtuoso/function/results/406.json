@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_init_copy/"
+  ],
+  "Title": [
+    "REPL_INIT_COPY ("
+  ],
+  "Feature": [
+    "REPL_INIT_COPY ("
+  ],
+  "Description": [
+    "This function is called on the subscriber to copy the current state of the\nelements of the publication from the publishing server. Copied data can\ninclude DAV collections, tables, procedures etc. Syncing the\nsubscription using repl_sync will synchronize the subscription\nonce it has been initialized with this function. The state copied\ncorresponds to the state of the published data as of the last checkpoint\ncompleted on the publisher."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

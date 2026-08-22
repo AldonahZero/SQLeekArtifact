@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xpf_extension/"
+  ],
+  "Title": [
+    "void xpf_extension ("
+  ],
+  "Feature": [
+    "void xpf_extension ("
+  ],
+  "Description": [
+    "This function is used to declare a new XPath extension function or\nredefine an existing function. It can be used in XPath queries and\nXSLT stylesheets. You should use QNames for extension functions.\nNote that the standard XPath functions cannot be redefined.\nxpf_extension() stores the functions into\nthe SYS_XPF_EXTENSIONS system table.\nxpf_extension()\nCREATE TABLE\n        DB.DBA.SYS_XPF_EXTENSIONS (\n\t    XPE_NAME VARCHAR PRIMARY KEY,\n\t    XPE_PNAME VARCHAR\n\t    )\nThe input parameters will be retrieved as a strings and then will be converted to the datatype of\n    the corresponding argument of the stored procedure."
+  ],
+  "Examples": [
+    "with constant string 'Title'."
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

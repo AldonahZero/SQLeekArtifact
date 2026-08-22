@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-oid.html"
+    ],
+    "Title": [
+        "regprocedure"
+    ],
+    "Feature": [
+        "regprocedure"
+    ],
+    "Description": [
+        "References",
+        "pg_proc",
+        "Description",
+        "function with argument types",
+        "Value Example",
+        "sum(int4)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Object Identifier Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'sum(int4)'::regprocedure;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 259,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.204999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'sum(int4)'::regprocedure;"
+    ]
+}

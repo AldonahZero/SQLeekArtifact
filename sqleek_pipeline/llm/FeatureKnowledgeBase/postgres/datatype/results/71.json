@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-pseudo.html"
+    ],
+    "Title": [
+        "cstring"
+    ],
+    "Feature": [
+        "cstring"
+    ],
+    "Description": [
+        "Description",
+        "Indicates that a function accepts or returns a null-terminated C string."
+    ],
+    "Examples": [],
+    "Category": [
+        "Pseudo-Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'Hello, World!'::cstring;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 270,
+            "Prompt Tokens": 249,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 4.995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'Hello, World!'::cstring;"
+    ]
+}

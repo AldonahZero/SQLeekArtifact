@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/datepart"
+    ],
+    "Title": [
+        "dayofyear(date)"
+    ],
+    "Feature": [
+        "dayofyear(date)"
+    ],
+    "Description": [
+        "Day of the year (starts from 1, i.e., January 1 = 1)."
+    ],
+    "Examples": [
+        "dayofyear(date '1992-02-15')"
+    ],
+    "Category": [
+        "Date Part Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT dayofyear(CURRENT_DATE);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 289,
+            "Prompt Tokens": 268,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.28e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT dayofyear(CURRENT_DATE);"
+    ]
+}

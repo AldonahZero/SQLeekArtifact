@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_import_clr/"
+  ],
+  "Title": [
+    "any import_clr ("
+  ],
+  "Feature": [
+    "any import_clr ("
+  ],
+  "Description": [
+    "This function automatically creates the SQL Type wrappers based on \n    the CLR Reflection API."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

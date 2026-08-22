@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "last_day(timestamptz)"
+    ],
+    "Feature": [
+        "last_day(timestamptz)"
+    ],
+    "Description": [
+        "The last day of the month."
+    ],
+    "Examples": [
+        "last_day(TIMESTAMPTZ '1992-03-22 01:02:03.1234')"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT last_day(current_timestamp);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 286,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 5.145e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT last_day(current_timestamp);"
+    ]
+}

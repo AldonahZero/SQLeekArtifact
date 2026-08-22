@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dayname/"
+  ],
+  "Title": [
+    "dayname ("
+  ],
+  "Feature": [
+    "dayname ("
+  ],
+  "Description": [
+    "These functions decompose a datetime to its components.  These can be used on timestamps , datetimes , dates and times , all being the same internal data type.\n:  dayname  \tname of day\n:  monthname  \tname of month\n:  dayofmonth  \tday of month\n:  dayofweek  \tday of week\n:  dayofyear  \tday since start of year\n:  quarter  \tquarter number,\n:  week  \t\tweek number\n:  month  \t\tmonth number, starting at 1 for January\n:  year  \t\tyear\n:  hour  \t\thour\n:  minute  \t\tminute\n:  second  \t\tsecond\n:  timezone  \toffset from UTC in minutes"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

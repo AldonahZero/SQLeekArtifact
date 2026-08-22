@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xte_nodebld_init/"
+  ],
+  "Title": [
+    "xte_nodebld_init ("
+  ],
+  "Feature": [
+    "xte_nodebld_init ("
+  ],
+  "Description": [
+    "This function creates the empty vector and assign it to the argument."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

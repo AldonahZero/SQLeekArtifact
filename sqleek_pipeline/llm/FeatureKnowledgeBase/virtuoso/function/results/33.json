@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_backup/"
+  ],
+  "Title": [
+    "backup ("
+  ],
+  "Feature": [
+    "backup ("
+  ],
+  "Description": [
+    "These functions  are deprecated.  The use of backup_online () is preferred for database backups.\nPerforming a backup with the destination file /dev/null is a good way of verifying a database's physical integrity.\nAll backup files, whether complete (created with backup ) or partial (created with backup_prepare and backup_row of selected rows), begin with the complete schema that was effective at\n    the time of the backup.\nbackup\nbackup_prepare\nbackup_row\nBackup and log files contain assumptions about the schema and row\n    layout of the database. Hence it is not possible to use these for\n    transferring data between databases. Attempt to do so will result in\n    unpredictable results.  Thus a log or backup may only be replayed on\n    the same database, an empty database or a copy of the database which\n    has had no schema changed since it was made.\nAlso, when replaying a backup file  onto an empty database, the +replay-crash-dump switch should be given on the executable command line.\nThis function requires dba privileges.\nThe backup function takes a file name as\n      argument. The file produced will be in the log format and will recreate\n      the database as it was at the time of the last checkpoint when replayed\n      on an empty database. Such a file cannot be replayed on anything except\n      an empty database. Logs made after the backup can be replayed over the\n      database resulting from the backup file's replay.  No schema operations\n      are allowed between replays.\nbackup\nThe backup_prepare , backup_row and backup_close operations allow making specific partial backups.\nbackup_prepare\nbackup_row\nbackup_close\nbackup_prepare . backup_prepare initiates the backup. This\n        must be the first statement to execute in its transaction.  The\n        rest of the transaction will be a read only snapshot view of the state\n        as of the last checkpoint.  Checkpointing is disabled until backup_close is called.\nbackup_prepare\nbackup_prepare\nbackup_close\nCheckpoints are disabled for the time between backup_prepare and backup_close .  The backup transaction being\n      lock-free, it cannot die of deadlock and hence will stay open for the\n      duration of the backup.\nbackup_prepare\nbackup_close\nbackup_row . backup_row writes the row given as\n        parameter into the backup file that was associated to the current\n        transaction by a prior backup_prepare . The row\n        must be obtained obtained by selecting the pseudo column _ROW from any table.\nbackup_row\nbackup_row\nbackup_prepare\n_ROW\nbackup_flush . The backup_flush function will insert a\n        transaction boundary into the backup log.  All rows backed up between\n        two backup_flush calls will be replayed as a\n        single transaction by replay.  Having long intervals between backup_flush calls will cause significant memory\n        consumption at replay time for undo logs.\nbackup_flush\nbackup_flush\nbackup_flush\nbackup_flush\nbackup_close . The backup_close function terminates the\n        backup and closes the file.  The transaction remains a read only\n        snapshot of the last checkpoint but checkpoints are now re-enabled.\n        The transaction should be committed or rolled back after backup_close .\nbackup_close\nbackup_close\nbackup_close"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

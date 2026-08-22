@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ftp_ls/"
+  ],
+  "Title": [
+    "any ftp_ls ("
+  ],
+  "Feature": [
+    "any ftp_ls ("
+  ],
+  "Description": [
+    "Virtuoso has FTP client functionality, that can be used inside Virtuoso/PL.  This Virtuoso function mimics the FTP dir command.  As with any PL, this can be combined with Web Services and SOAP."
+  ],
+  "Examples": [
+    "select dbg_obj_print(ftp_ls ('ftp.openlinksw.com', 'user_name', 'password', 'virtuoso30'));"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

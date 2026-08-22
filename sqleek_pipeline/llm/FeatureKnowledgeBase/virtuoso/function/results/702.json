@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_cut/"
+  ],
+  "Title": [
+    "xml_cut ("
+  ],
+  "Feature": [
+    "xml_cut ("
+  ],
+  "Description": [
+    "In some special cases, some part of XML document,\nbeing pointed by a XML entity, should be copied into a new separate document\nwith new entity pointing to the top-level element or the root of this document.\nOne reason for doing this is optimization of XPER processing (see xper_cut ).\nAnother way to use this functionality is passing of some XML entity\nto a function, when function uses XPath operations with references to\nthe \"document's root\".\nExample 24.511. A sample of hidden bug\ncreate procedure get_C (inout b any)\n{\n  return cast (xpath_eval('//C', b) as varchar);\n}\n\ncreate procedure hidden_bug_1()\n{\n  declare abc any;\t-- some XML document\n  declare b_list any;\t-- a vector of all B elements of the doc\n  declare c1 varchar;\t-- a name of first variable\n  declare c2 varchar;\t-- a title of second variable\n  abc := xtree_doc ('<A><B\nxml:id=\"1_01\"><C>One</C></B><B\nxml:id=\"2_01\"><C>Two</C></B></A>');\n  b_list := xpath_eval ('//B', abc, 0);\n  -- now b_list is a vector of two items, '<B\nxml:id=\"1_02\"><C>One</C></B>' and '<B\nxml:id=\"2_02\"><C>Two</C></B>'.\n  c1 := get_C ( aref (b_list, 0));\n  -- looks fine, c1 is '<C>One</C>'\n  c2 := get_C ( aref (b_list, 1));\n  -- looks strange fine, c2 is '<C>One</C>',\n  -- while the expected value is '<C>Two</C>'.\n}\nThe origin of the bug is '//C' path in get_C(), which returns not\nthe \"C element inside given b element\", but\n\"C element inside the document where given b element is located\",\nthus get_C returns the first C element in the whole document with any of\ntwo B elements given.\nThere are two ways to fix this bug.\nIt is better to correct get_C():\ncreate procedure get_C (inout b any)\n{\n  return cast (xpath_eval('./C', b) as varchar);\n}\nIf you cannot patch get_C() for some reason, xml_cut will help,\nbut it will waste both memory and CPU time for copying a branch of\nXML tree:\ncreate procedure hidden_bug_1()\n{\n...\n  c1 := get_C ( xml_cut (aref (b_list, 0)));\n...\n}\nThe current node of the resulting entity is the node that is a copy\nof the current node of the source entity. In common,\nthe top-level node of the copied subtree becomes the current node of the result.\nThere are two special cases, however. If the source entity is an attribute entity,\nthen the result is also an attribute entity and the attribute name remains the same.\nIf the source entity points to the root of the document, the resulting entity\nalso points to the root of the copied document, not to its top-level node.\nWith XPER entity given, xml_cut() works exactly as xper_cut()."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

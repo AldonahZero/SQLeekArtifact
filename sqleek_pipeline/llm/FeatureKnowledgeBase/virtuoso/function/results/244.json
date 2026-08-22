@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_internal_type/"
+  ],
+  "Title": [
+    "internal_type ("
+  ],
+  "Feature": [
+    "internal_type ("
+  ],
+  "Description": [
+    "internal_type returns an integer value representing the internal type of\n    its argument. These values are the same as what Virtuoso uses in the\n    column COL_DTP of the system table SYS_COLS for keeping the track of the\n    default types of each column of each table.\ninternal_type(space(5))\t\t-> 182 (A long string)\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

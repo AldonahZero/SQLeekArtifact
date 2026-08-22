@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_wsdl_upload/"
+  ],
+  "Title": [
+    "BPEL.BPEL.wsdl_upload ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.wsdl_upload ("
+  ],
+  "Description": [
+    "BPEL.BPEL.wsdl_upload uploads a WSDL description for a given partner link.\n\tThe function if content is not specified this will download the content via the URL specified\n\tand will associate it with the specified partner link.\n\tAlso after download the WSDL will be expanded to resolve includes in WSDL and XMLSchema\n\tnamespaces.\nBPEL.BPEL.wsdl_upload"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

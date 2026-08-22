@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "round(X)round(X,Y)"
+    ],
+    "Feature": [
+        "round(X)round(X,Y)"
+    ],
+    "Description": [
+        "\n  The round(X,Y) function returns a floating-point\n  value X rounded to Y digits to the right of the decimal point.\n  If the Y argument is omitted or negative, it is taken to be 0.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT round(123.456, 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 327,
+            "Prompt Tokens": 304,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.9399999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT round(123.456, 2);"
+    ]
+}

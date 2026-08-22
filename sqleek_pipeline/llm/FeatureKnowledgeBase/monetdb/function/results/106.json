@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "rtrim(s)"
+    ],
+    "Feature": [
+        "rtrim(s)"
+    ],
+    "Description": [
+        "Return type: ",
+        "varchar",
+        "remove trailing whitespace characters from string s"
+    ],
+    "Examples": [
+        "rtrim(E'ab df \\t\\n')"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT rtrim('example string')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 260,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.1e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT rtrim('example string')"
+    ]
+}

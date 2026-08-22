@@ -1,0 +1,27 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date",
+    "Title": "DATE()",
+    "Feature": [
+        "DATE(expr)"
+    ],
+    "Description": [
+        "\nDATE(expr)\n",
+        "\n          Extracts the date part of the date or datetime expression\n          expr. Returns\n          NULL if expr is\n          NULL.\n        ",
+        "Press CTRL+C to copy mysql> SELECT DATE('2003-12-31 01:02:03');\n        -> '2003-12-31'"
+    ],
+    "Examples": [
+        "mysql> SELECT DATE('2003-12-31 01:02:03');\n        -> '2003-12-31'"
+    ],
+    "Category": [
+        "\u65e5\u671f\u548c\u65f6\u95f4\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT DATE('2003-12-31 01:02:03');"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT DATE('2003-12-31 01:02:03');"
+    ]
+}

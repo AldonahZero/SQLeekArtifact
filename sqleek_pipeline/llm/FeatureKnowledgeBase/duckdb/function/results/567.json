@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/union"
+    ],
+    "Title": [
+        "union_value(tag := any)"
+    ],
+    "Feature": [
+        "union_value(tag := any)"
+    ],
+    "Description": [
+        "Create a single member UNION containing the argument value. The tag of the value will be the bound variable name."
+    ],
+    "Examples": [
+        "union_value(k := 'hello')"
+    ],
+    "Category": [
+        "Union Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT union_value(tag := 'example_value')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 296,
+            "Prompt Tokens": 274,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.43e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT union_value(tag := 'example_value')"
+    ]
+}

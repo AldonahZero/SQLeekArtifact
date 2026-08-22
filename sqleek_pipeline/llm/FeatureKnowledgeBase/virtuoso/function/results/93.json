@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cov_store/"
+  ],
+  "Title": [
+    "cov_store ("
+  ],
+  "Feature": [
+    "cov_store ("
+  ],
+  "Description": [
+    "This function is used to produce a coverage file called fname .  The expected format of the file is\n    described in the Branch Coverage section.\n    By default a normal concise coverage will be produced.  If the add_comment parameter is set to 1 then the\n    coverage will include code excerpts contained in line entities.\nfname\nadd_comment"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

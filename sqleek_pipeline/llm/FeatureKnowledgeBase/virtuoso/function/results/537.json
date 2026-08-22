@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_srid/"
+  ],
+  "Title": [
+    "ST_SRID ("
+  ],
+  "Feature": [
+    "ST_SRID ("
+  ],
+  "Description": [
+    "Returns the SRID of a geometry."
+  ],
+  "Examples": [
+    "SELECT (bif:ST_SRID (?geo))",
+    "callret-0",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

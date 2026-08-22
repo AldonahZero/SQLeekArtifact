@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_get_key_algo/"
+  ],
+  "Title": [
+    "varchar xenc_get_key_algo ("
+  ],
+  "Feature": [
+    "varchar xenc_get_key_algo ("
+  ],
+  "Description": [
+    "The function is used to determine signing algorithm supported by given key."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

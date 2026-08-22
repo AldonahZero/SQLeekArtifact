@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_stddev/"
+  ],
+  "Title": [
+    "numeric STDDEV ("
+  ],
+  "Feature": [
+    "numeric STDDEV ("
+  ],
+  "Description": [
+    "STDDEV returns standard deviation. It returns STDDEV_SAMP if the number of pairs is more\nthan one, or NULL."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

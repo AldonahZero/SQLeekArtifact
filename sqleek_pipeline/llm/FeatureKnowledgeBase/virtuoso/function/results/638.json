@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_var_pop/"
+  ],
+  "Title": [
+    "numeric VAR_POP ("
+  ],
+  "Feature": [
+    "numeric VAR_POP ("
+  ],
+  "Description": [
+    "VAR_POP returns the population variance of a set of numbers after discarding the nulls in this\nset. The expr is a number expression, and the function returns a value of type NUMERIC. If the\nfunction is applied to an empty set, then it returns null. The function makes the following calculation:\n(SUM(expr2) - SUM(expr)2 / COUNT(expr)) / COUNT(expr)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

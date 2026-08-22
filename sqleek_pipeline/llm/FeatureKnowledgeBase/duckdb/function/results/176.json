@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/interval"
+    ],
+    "Title": [
+        "to_days(integer)"
+    ],
+    "Feature": [
+        "to_days(integer)"
+    ],
+    "Description": [
+        "Construct a day interval."
+    ],
+    "Examples": [
+        "to_days(5)"
+    ],
+    "Category": [
+        "Interval Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT to_days(10);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 268,
+            "Prompt Tokens": 249,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.875e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT to_days(10);"
+    ]
+}

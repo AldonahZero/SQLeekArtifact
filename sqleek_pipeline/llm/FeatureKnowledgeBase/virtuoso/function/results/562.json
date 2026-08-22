@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_strcontains/"
+  ],
+  "Title": [
+    "strcontains ("
+  ],
+  "Feature": [
+    "strcontains ("
+  ],
+  "Description": [
+    "strcontains performs a\n    substring search, returning 1 or 0.\nstrcontains"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

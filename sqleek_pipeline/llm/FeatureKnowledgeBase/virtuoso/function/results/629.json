@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_check_uninstallability/"
+  ],
+  "Title": [
+    "varchar DB.DBA. VAD_CHECK_UNINSTALLABILITY ("
+  ],
+  "Feature": [
+    "varchar DB.DBA. VAD_CHECK_UNINSTALLABILITY ("
+  ],
+  "Description": [
+    "Checks if the package can be uninstalled. It does not executes any\n  pre-uninstall Virtuoso/PL code from the package, so there is no guarantee that\n  uninstallation will be successful if the check found no error."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

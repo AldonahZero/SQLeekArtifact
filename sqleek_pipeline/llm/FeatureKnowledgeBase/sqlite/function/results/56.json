@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/windowfunctions.html"
+    ],
+    "Title": [
+        "percent_rank()\n"
+    ],
+    "Feature": [
+        "percent_rank()\n"
+    ],
+    "Description": [
+        " Despite the name, this function always returns a value between 0.0\n       and 1.0 equal to (rank - 1)/(partition-rows - 1), where\n       rank is the value returned by built-in window function rank()\n       and partition-rows is the total number of rows in the\n       partition. If the partition contains only one row, this function\n       returns 0.0.\n  "
+    ],
+    "Examples": [],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT percent_rank() OVER (PARTITION BY column_name ORDER BY column_name) AS rank_value;",
+        "SELECT percent_rank() OVER () AS rank_value;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 365,
+            "Prompt Tokens": 333,
+            "Completion Tokens": 32,
+            "Total Cost (USD)": 6.915e-05
+        },
+        {
+            "Total Tokens": 506,
+            "Prompt Tokens": 484,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 8.579999999999998e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: column_name\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT percent_rank() OVER () AS rank_value;"
+    ]
+}

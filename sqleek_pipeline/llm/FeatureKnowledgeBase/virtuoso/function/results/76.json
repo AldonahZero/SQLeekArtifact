@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_client_attr/"
+  ],
+  "Title": [
+    "varchar client_attr ("
+  ],
+  "Feature": [
+    "varchar client_attr ("
+  ],
+  "Description": [
+    "client_attr\n\n         — returns a varchar containing the requested information from the connection"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,64 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "dameraulevenshtein(s1, s2, int insdel, int rep, int trans)"
+    ],
+    "Feature": [
+        "dameraulevenshtein(s1, s2, int insdel, int rep, int trans)"
+    ],
+    "Description": [
+        "Return type: ",
+        "int",
+        "Compute the 'Damerau-Levenshtein distance' between two strings returning the minimum number of single-character edits (insertions/deletions, substitutions and transpositions) required to change one word into the other. Variable costs of insertions/deletions, substitutions and transpositions, with insdel, rep and trans respectively"
+    ],
+    "Examples": [
+        "dameraulevenshtein('MonetDB', 'DB3', 4, 2, 1)"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT dameraulevenshtein('example', 'samples', 1, 1, 1);",
+        "SELECT dameraulevenshtein('example', 'samples', 1, 1, 1) AS distance;",
+        "SELECT dameraulevenshtein('example', 'samples', 1, 1, 1) AS result;",
+        "SELECT 0 AS distance;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 430,
+            "Prompt Tokens": 395,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 8.025e-05
+        },
+        {
+            "Total Tokens": 622,
+            "Prompt Tokens": 585,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 0.00010994999999999999
+        },
+        {
+            "Total Tokens": 814,
+            "Prompt Tokens": 777,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 0.00013874999999999998
+        },
+        {
+            "Total Tokens": 988,
+            "Prompt Tokens": 969,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 0.00015675
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'dameraulevenshtein'\n\n",
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'dameraulevenshtein'\n\n",
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'dameraulevenshtein'\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 0 AS distance;"
+    ]
+}

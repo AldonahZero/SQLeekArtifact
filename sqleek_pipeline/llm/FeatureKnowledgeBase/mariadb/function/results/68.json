@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/day/"
+    ],
+    "Title": [
+        "DAY"
+    ],
+    "Feature": [
+        "DAY(date)\n"
+    ],
+    "Description": [
+        "DAY() is a synonym for DAYOFMONTH()."
+    ],
+    "Examples": [],
+    "Category": [
+        "Date & Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT DAY(NOW());"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 264,
+            "Prompt Tokens": 246,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.7699999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT DAY(NOW());"
+    ]
+}

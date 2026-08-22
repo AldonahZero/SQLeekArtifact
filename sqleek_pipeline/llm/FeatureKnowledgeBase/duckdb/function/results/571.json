@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/utility"
+    ],
+    "Title": [
+        "coalesce(expr, ...)"
+    ],
+    "Feature": [
+        "coalesce(expr, ...)"
+    ],
+    "Description": [
+        "Return the first expression that evaluates to a non-NULL value. Accepts 1 or more parameters. Each expression can be a column, literal value, function result, or many others."
+    ],
+    "Examples": [
+        "coalesce(NULL, NULL, 'default_string')"
+    ],
+    "Category": [
+        "Utility Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT coalesce(NULL, 'Hello', 'World');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 310,
+            "Prompt Tokens": 286,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.729999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT coalesce(NULL, 'Hello', 'World');"
+    ]
+}

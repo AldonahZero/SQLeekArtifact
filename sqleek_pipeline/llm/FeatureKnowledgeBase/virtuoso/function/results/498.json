@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sprintf_or_null/"
+  ],
+  "Title": [
+    "sprintf_or_null ("
+  ],
+  "Feature": [
+    "sprintf_or_null ("
+  ],
+  "Description": [
+    "sprintf_or_null is similar to sprintf and returns a new string formed by \"printing\" a variable number\n    of arguments arg_1 - arg_x according to the format string format. The difference is that the function can return\nnull if any of the arguments except the first one is null."
+  ],
+  "Examples": [
+    "create function job_history("
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

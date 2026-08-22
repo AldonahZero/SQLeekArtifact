@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_serialize/"
+  ],
+  "Title": [
+    "varchar xenc_key_serialize ("
+  ],
+  "Feature": [
+    "varchar xenc_key_serialize ("
+  ],
+  "Description": [
+    "The function returns a string containing base64 encoded binary\n\tkey data. It is used to extract symmetric or asymmetric keys.\n\tSo if key is asymmetric (RSA or DSA) the second parameter\n\tdesignate which part to extract private or public."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

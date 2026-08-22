@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "datepart(part, timestamp)"
+    ],
+    "Feature": [
+        "datepart(part, timestamp)"
+    ],
+    "Description": [
+        "Alias of date_part. Get subfield (equivalent to extract)."
+    ],
+    "Examples": [
+        "datepart('minute', TIMESTAMP '1992-09-20 20:38:40')"
+    ],
+    "Category": [
+        "Timestamp Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT datepart('year', CURRENT_TIMESTAMP);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 266,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.3099999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT datepart('year', CURRENT_TIMESTAMP);"
+    ]
+}

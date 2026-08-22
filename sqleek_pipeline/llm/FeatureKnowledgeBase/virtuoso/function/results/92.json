@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cov_report/"
+  ],
+  "Title": [
+    "cov_report ("
+  ],
+  "Feature": [
+    "cov_report ("
+  ],
+  "Description": [
+    "This function is used to produce a coverage report in text format.  \n    The format of the file is described in the Branch Coverage section.  \n    This function takes a filename 'fname' as a path to the extended coverage \n    report file and 'outdir' as a path to a directory where .cov files will \n    be stored.  The profile.prof file in the output directory is a summary of function call counts and execution times, once ranked by self time, once by time spent inside the function and functions called from there.  Note that directory must exists before calling this function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

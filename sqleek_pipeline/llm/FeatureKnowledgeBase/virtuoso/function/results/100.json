@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_csv_parse/"
+  ],
+  "Title": [
+    "csv_parse ("
+  ],
+  "Feature": [
+    "csv_parse ("
+  ],
+  "Description": [
+    "Parses string session containing CSV data and then calls stored procedure\nby given callback_sp_name parameter. The call back will be invoked for lines\nbetween from_line and to_line argument's values.\nThe default from/to is 0/null which means from begining to end.\nThe callback function must take three arguments: the vector which contains\nparsed csv row, the line number, inout the callback_user_data."
+  ],
+  "Examples": [
+    "create procedure y_csv_cb (inout r any, in inx int, inout cbd any)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

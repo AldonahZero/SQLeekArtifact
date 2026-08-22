@@ -1,0 +1,183 @@
+--- a/MySQL/docker/src/AFL/afl-fuzz.cpp
++++ b/MySQL/docker/src/AFL/afl-fuzz.cpp
+@@ -232,6 +232,37 @@
+ deque<char *> g_previous_input;
+ 
+ static inline u8 has_new_bits(u8 *virgin_map, const string cur_seed_str = "");
++
++static unsigned sqleek_env_uint(const char *name, unsigned fallback)
++{
++  const char *value = getenv(name);
++  if (!value || !value[0])
++    return fallback;
++  char *endptr = NULL;
++  unsigned long parsed = strtoul(value, &endptr, 10);
++  if (endptr == value || parsed == 0)
++    return fallback;
++  return (unsigned)parsed;
++}
++
++static bool sqleek_restart_dbms_from_env()
++{
++  const char *script = getenv("SQLEEK_DBMS_RESTART_SCRIPT");
++  if (!script || !script[0])
++  {
++    cerr << "SQLeek DBMS restart requested but SQLEEK_DBMS_RESTART_SCRIPT is not set.\n";
++    return false;
++  }
++  cerr << "SQLeek restarting DBMS via " << script << "\n";
++  int rc = system(script);
++  if (rc != 0)
++  {
++    cerr << "SQLeek DBMS restart script failed with status " << rc << "\n";
++    return false;
++  }
++  return true;
++}
++
+ class MysqlClient
+ {
+ public:
+@@ -511,14 +542,26 @@
+       write(crash_fd, previous_inputs.c_str(), previous_inputs.size());  
+     }
+     
+-    int retry_time = 0;
+-    while(!conn){
+-      //cout << "reconnecting..." << endl;
++    unsigned retry_limit = sqleek_env_uint("SQLEEK_CONNECT_RETRIES", 5);
++    unsigned retry_time = 0;
++    while(!conn && retry_time < retry_limit){
++      retry_time++;
+       std::this_thread::sleep_for(std::chrono::milliseconds(30));
+       conn = connect();
+       if(!conn)
+         fix_database();
+     }
++    if(!conn){
++      cerr << "SQLeek connection retry limit reached before seed execution; restarting DBMS. retries=" << retry_time << "\n";
++      if (sqleek_restart_dbms_from_env()) {
++        fix_database();
++        conn = connect();
++      }
++    }
++    if(!conn){
++      cerr << "SQLeek connection recovery failed; marking current seed as connection failure.\n";
++      return kConnectFailed;
++    }
+     //cout << "connect succeed!" << endl;
+ 
+     res_str = "";
+@@ -621,6 +664,8 @@
+     auto check_res = check_server_alive();
+     if(check_res == false){
+       disconnect();
++      cerr << "SQLeek detected an unhealthy DBMS after seed execution; restarting DBMS before continuing.\n";
++      sqleek_restart_dbms_from_env();
+       sleep(2); // waiting for server to be up again
+       return kServerCrash;
+     }
+@@ -3269,9 +3314,8 @@
+   }
+   else if (result == kConnectFailed)
+   {
+-    cout << "Connection Failed!" << endl;
+-    sleep(1);
+-    goto BEGIN;
++    cerr << "SQLeek bounded connection recovery failed; skipping current seed as FAULT_ERROR.\n";
++    status = FAULT_ERROR;
+   }
+ 
+   else if (result == kSyntaxError) {
+--- a/MySQL/docker/fuzz_root/run_parallel.py
++++ b/MySQL/docker/fuzz_root/run_parallel.py
+@@ -73,6 +73,7 @@
+ sqleek_timeout_ms = os.environ.get("SQLEEK_AFL_TIMEOUT", "300")
+ sqleek_memory_limit = os.environ.get("SQLEEK_MEMORY_LIMIT", "4000")
+ sqleek_log_dir = os.environ.get("SQLEEK_LOG_DIR", os.environ.get("LOG_DIR", ""))
++sqleek_runtime_dir = os.environ.get("SQLEEK_RUNTIME_DIR", os.environ.get("RUNTIME_DIR", os.getcwd()))
+ 
+ if os.path.isfile(os.path.join(os.getcwd(), "shm_env.txt")):
+     os.remove(os.path.join(os.getcwd(), "shm_env.txt"))
+@@ -144,6 +145,11 @@
+     fuzzing_command.append("aaa")
+ 
+     print("Running fuzzing command: " + " ".join(fuzzing_command))
++    restart_script_path = os.path.join(sqleek_runtime_dir, "restart_mysql_%d.sh" % cur_inst_id)
++    mysql_pid_path = os.path.join(sqleek_runtime_dir, "mysqld_%d.pid" % cur_inst_id)
++    modi_env["SQLEEK_DBMS_RESTART_SCRIPT"] = restart_script_path
++    modi_env.setdefault("SQLEEK_CONNECT_RETRIES", "5")
++
+     p = subprocess.Popen(
+                         fuzzing_command,
+                         cwd=os.getcwd(),
+@@ -187,6 +193,60 @@
+     mysql_modi_env = os.environ.copy()
+     mysql_modi_env["__AFL_SHM_ID"] = cur_shm_str
+ 
++    restart_script = """#!/usr/bin/env bash
++set -euo pipefail
++pid_file=%(pid_file)r
++datadir=%(datadir)r
++srcdir=%(srcdir)r
++socket_path=%(socket_path)r
++port=%(port)d
++mysql_root=%(mysql_root)r
++mysql_bin=%(mysql_bin)r
++log_file=%(log_file)r
++shm_id=%(shm_id)r
++if [ -s "$pid_file" ]; then
++  old_pid=$(cat "$pid_file" || true)
++  if [ -n "${old_pid:-}" ] && kill -0 "$old_pid" 2>/dev/null; then
++    kill "$old_pid" 2>/dev/null || true
++    for i in $(seq 1 30); do
++      kill -0 "$old_pid" 2>/dev/null || break
++      sleep 1
++    done
++    kill -9 "$old_pid" 2>/dev/null || true
++  fi
++fi
++pkill -f -- "--datadir=$datadir" 2>/dev/null || true
++rm -f "$socket_path" "$pid_file"
++rm -rf "$datadir"
++cp -a "$srcdir" "$datadir"
++chown -R mysql:mysql "$datadir"
++env __AFL_SHM_ID="$shm_id" "$mysql_bin" --basedir="$mysql_root" --datadir="$datadir" --port="$port" --socket="$socket_path" --performance_schema=OFF --user=mysql >>"$log_file" 2>&1 &
++echo $! > "$pid_file"
++for i in $(seq 1 60); do
++  if "$mysql_root/bin/mysqladmin" --protocol=socket --socket="$socket_path" -uroot ping >/dev/null 2>&1; then
++    "$mysql_root/bin/mysql" --protocol=socket --socket="$socket_path" -uroot -e "CREATE DATABASE IF NOT EXISTS test_init; CREATE DATABASE IF NOT EXISTS test_sqlright1; ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY ''; ALTER USER 'root'@'127.0.0.1' IDENTIFIED WITH caching_sha2_password BY ''; FLUSH PRIVILEGES;" >/dev/null 2>&1 || true
++    exit 0
++  fi
++  sleep 1
++done
++echo "SQLeek MySQL restart did not become ready" >&2
++exit 1
++""" % {
++        "pid_file": mysql_pid_path,
++        "datadir": cur_mysql_data_dir_str,
++        "srcdir": mysql_src_data_dir,
++        "socket_path": socket_path,
++        "port": cur_port_num,
++        "mysql_root": mysql_root_dir,
++        "mysql_bin": mysql_bin_dir,
++        "log_file": os.path.join(child_log_dir, "sqlright_child_%d.log" % cur_inst_id) if child_log_dir else os.devnull,
++        "shm_id": cur_shm_str,
++    }
++    os.makedirs(os.path.dirname(restart_script_path), exist_ok=True)
++    with open(restart_script_path, "w") as restart_fd:
++        restart_fd.write(restart_script)
++    os.chmod(restart_script_path, 0o755)
++
+     print("Running mysql command: __AFL_SHM_ID=" + cur_shm_str + " " + " ".join(mysql_command))
+     
+     mysql_proc = subprocess.Popen(
+@@ -197,6 +257,8 @@
+                         stdin=subprocess.DEVNULL,
+                         env = mysql_modi_env
+                         )
++    with open(mysql_pid_path, "w") as mysql_pid_fd:
++        mysql_pid_fd.write(str(mysql_proc.pid))
+     time.sleep(3)
+     if mysql_proc.poll() is not None:
+         print("MySQL process exited early with code: %s" % mysql_proc.returncode)

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_3des_create/"
+  ],
+  "Title": [
+    "xenc_key_3DES_create ("
+  ],
+  "Feature": [
+    "xenc_key_3DES_create ("
+  ],
+  "Description": [
+    "Used to make a symmetric session key for triple-des algorithm."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

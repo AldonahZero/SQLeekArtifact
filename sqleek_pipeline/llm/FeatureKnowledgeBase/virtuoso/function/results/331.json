@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_randomize/"
+  ],
+  "Title": [
+    "randomize ("
+  ],
+  "Feature": [
+    "randomize ("
+  ],
+  "Description": [
+    "The rnd function returns a random number between zero and n - 1, inclusive.\nrandomize initializes the random number generator.\nThe random number generator is initialized after the clock at first usage, so the\nproduced sequences will be different each time unless\nspecifically initialized.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

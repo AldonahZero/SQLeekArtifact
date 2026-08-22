@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_result_names/"
+  ],
+  "Title": [
+    "result_names ("
+  ],
+  "Feature": [
+    "result_names ("
+  ],
+  "Description": [
+    "The result_names() predefines variables to be used in a result set to follow. The variables must\nbe previously declared, from which the column data types are ascertained.\nThis assigns the meta data but does not send any results. The result() function sends its parameters as a single row\nof results. These parameters should be compatible with those in the previous result_names() . The end_results() function can be used to separate multiple result sets. The result_names() can then be used to alter\nthe structure of the next result set.\nresult_names()\nresult()\nresult_names()\nend_results()\nresult_names()\nThe result_names() call can be omitted if\nthe application already knows what columns and their types are to be returned.\nresult_names()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

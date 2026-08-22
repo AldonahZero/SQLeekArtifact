@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_uudecode/"
+  ],
+  "Title": [
+    "uudecode ("
+  ],
+  "Feature": [
+    "uudecode ("
+  ],
+  "Description": [
+    "Uudecode transforms uuencoded data into original form.\nUuencode may return a number of sections as a vector of them,\neach of these sections should be decoded by separate call and results\nshould be concatenated in order to compose original text.\nThe mode of decoding should match to the mode used for encoding, of course.\nRFC 2045,\n(N. Borenstein, N. Freed.\nMIME (Multipurpose Internet Mail Extensions) Part One:\nThe Format of Internet Message Bodies),\ncontains detailed description of most important encodings used by mail\nsystems.\nOlder RFC 1521 is now obsoleted.\nCurrently, eight conventions are used for mail attachments.\nIn Virtuoso, they are enumerated by integer IDs.\nTable 24.106. Unicode-like standards, supported by Virtuoso\nIf there's no information about the encoding used in the message,\nzero may be passed to the uudecode() function instead of proper ID.\nuudecode() will try to guess the proper algorithm.\nIn any case, decoder feels no difference between modes 2 and 3\n(two slightly different \"Base64\" encodings) and between modes\n11 and 12 (two \"Quoted-Printable\" methods which are different\nonly encoding side).\nApplication may try all methods in turn if automatic guess will fail."
+  ],
+  "Examples": [
+    "select uudecode (':5''9XE''m:', 0);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

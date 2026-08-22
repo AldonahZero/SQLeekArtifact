@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cl_exec/"
+  ],
+  "Title": [
+    "cl_exec ("
+  ],
+  "Feature": [
+    "cl_exec ("
+  ],
+  "Description": [
+    "The cl_exec SQL function can be used for executing things on all nodes of a cluster."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

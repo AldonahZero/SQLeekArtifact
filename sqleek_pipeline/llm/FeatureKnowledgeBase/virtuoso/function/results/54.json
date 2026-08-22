@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_import_script/"
+  ],
+  "Title": [
+    "BPEL.BPEL.import_script ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.import_script ("
+  ],
+  "Description": [
+    "BPEL.BPEL.import_script imports a new BPEL process or refetches the content of bpel,\n        wsdl files and wsdl for partner links for a given process.\n        In both cases the process is turned to mode \"Edit\".\n        Urls of wsdl files must have absolute paths.\nBPEL.BPEL.import_script"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

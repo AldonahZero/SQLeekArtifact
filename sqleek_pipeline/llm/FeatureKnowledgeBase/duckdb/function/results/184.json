@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/interval"
+    ],
+    "Title": [
+        "to_seconds(integer)"
+    ],
+    "Feature": [
+        "to_seconds(integer)"
+    ],
+    "Description": [
+        "Construct a second interval."
+    ],
+    "Examples": [
+        "to_seconds(5)"
+    ],
+    "Category": [
+        "Interval Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT to_seconds(60);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 268,
+            "Prompt Tokens": 249,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.875e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT to_seconds(60);"
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "LEAD()",
+    "Description": [
+        "\nLEAD(expr [,\n            N[,\n            default]])\n            [null_treatment]\n            over_clause\n",
+        "\n            Returns the value of expr from\n            the row that leads (follows) the current row by\n            N rows within its partition. If\n            there is no such row, the return value is\n            default. For example, if\n            N is 3, the return value is\n            default for the last three rows.\n            If N or\n            default are missing, the defaults\n            are 1 and NULL, respectively.\n          ",
+        "\nN must be a literal nonnegative\n            integer. If N is 0,\n            expr is evaluated for the current\n            row.\n          ",
+        "\n            Beginning with MySQL 8.0.22, N\n            cannot be NULL. In addition, it must now\n            be an integer in the range 0 to\n            263,\n            inclusive, in any of the following forms:\n",
+        "\n\n                an unsigned integer constant literal\n              \n                a positional parameter marker (?)\n              \n                a user-defined variable\n              \n                a local variable in a stored routine\n\n",
+        "\nover_clause is as described in\n            Section\u00a014.20.2, \u201cWindow Function Concepts and Syntax\u201d.\n            null_treatment is as described in\n            the section introduction.\n          ",
+        "\n            For an example, see the LAG()\n            function description.\n          ",
+        "\n            In MySQL 8.0.22 and later, use of a negative value for the\n            rows argument of this function is not permitted.\n          "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html#function_lead",
+    "Feature": [
+        "LEAD(expr [,\n            N[,\n            default]])"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT LEAD(column_name) OVER (PARTITION BY partition_column ORDER BY order_column) AS next_value;",
+        "SELECT LEAD(value) OVER (ORDER BY id) AS next_value FROM my_table;",
+        "SELECT LEAD(1) OVER () AS next_value;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 662,
+            "Prompt Tokens": 628,
+            "Completion Tokens": 34,
+            "Total Cost (USD)": 0.0001146
+        },
+        {
+            "Total Tokens": 828,
+            "Prompt Tokens": 798,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 0.00013769999999999999
+        },
+        {
+            "Total Tokens": 990,
+            "Prompt Tokens": 966,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 0.00015929999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1054, \"Unknown column 'column_name' in 'field list'\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_mysql.my_table' doesn't exist\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT LEAD(1) OVER () AS next_value;"
+    ]
+}

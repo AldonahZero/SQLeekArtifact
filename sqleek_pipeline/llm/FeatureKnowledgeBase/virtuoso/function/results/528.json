@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_linestring/"
+  ],
+  "Title": [
+    "st_linestring ("
+  ],
+  "Feature": [
+    "st_linestring ("
+  ],
+  "Description": [
+    "returns a linestring in default SRID, the coordinates of vertices are specified by arguments that are\n    \tpoints, 2-, 3- or 4-item vectors of coordinates, linestrings, arcstrings or vectors of the above mentioned\n    \tvalues. Repeating vertices are automatically removed, except the case of repeating vertices in the middle\n    \tof a linestring/arcstring argument."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

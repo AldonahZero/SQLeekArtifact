@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_duplicate/"
+  ],
+  "Title": [
+    "dictionary dict_duplicate ("
+  ],
+  "Feature": [
+    "dictionary dict_duplicate ("
+  ],
+  "Description": [
+    "The function creates a full copy of the given dictionary.\nDictionary objects are always passed by reference, even if dictionary is passed as an 'in' argument of a function.\nIf value of a variable is a dictionary and it is assigned to other variable then both variables refer to the same internal hash table.\nThis function returns a really independent dictionary object.\nThis function duplicates the given dictionary but does not duplicate dictionaries that may be stored in key-value pairs."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

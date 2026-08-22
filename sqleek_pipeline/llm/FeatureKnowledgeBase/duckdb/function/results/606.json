@@ -1,0 +1,68 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/utility"
+    ],
+    "Title": [
+        "repeat_row(varargs, num_rows)"
+    ],
+    "Feature": [
+        "repeat_row(varargs, num_rows)"
+    ],
+    "Description": [
+        "Returns a table with num_rows rows, each containing the fields defined in varargs."
+    ],
+    "Examples": [
+        "repeat_row(1, 2, 'foo', num_rows = 3)"
+    ],
+    "Category": [
+        "Utility Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM repeat_row(1, 5)",
+        "SELECT * FROM repeat_row(1, 5)",
+        "SELECT * FROM repeat_row(1, 5)",
+        "SELECT * FROM repeat_row(1, 5)",
+        "SELECT * FROM repeat_row(1, 5)"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 300,
+            "Prompt Tokens": 277,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.535e-05
+        },
+        {
+            "Total Tokens": 455,
+            "Prompt Tokens": 432,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 7.859999999999999e-05
+        },
+        {
+            "Total Tokens": 610,
+            "Prompt Tokens": 587,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00010184999999999998
+        },
+        {
+            "Total Tokens": 765,
+            "Prompt Tokens": 742,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.0001251
+        },
+        {
+            "Total Tokens": 920,
+            "Prompt Tokens": 897,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 0.00014835
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: repeat_rows requires num_rows to be specified\n",
+        "(duckdb.duckdb.BinderException) Binder Error: repeat_rows requires num_rows to be specified\n",
+        "(duckdb.duckdb.BinderException) Binder Error: repeat_rows requires num_rows to be specified\n",
+        "(duckdb.duckdb.BinderException) Binder Error: repeat_rows requires num_rows to be specified\n",
+        "(duckdb.duckdb.BinderException) Binder Error: repeat_rows requires num_rows to be specified\n"
+    ],
+    "EffectiveSQLs": []
+}

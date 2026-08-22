@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/localtimestamp/"
+    ],
+    "Title": [
+        "LOCALTIMESTAMP"
+    ],
+    "Feature": [
+        "LOCALTIMESTAMP\nLOCALTIMESTAMP([precision])\n"
+    ],
+    "Description": [
+        "LOCALTIMESTAMP and LOCALTIMESTAMP() are synonyms for NOW()."
+    ],
+    "Examples": [],
+    "Category": [
+        "Date & Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT LOCALTIMESTAMP;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 270,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 5.13e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT LOCALTIMESTAMP;"
+    ]
+}

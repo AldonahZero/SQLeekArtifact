@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_isfinitenumeric/"
+  ],
+  "Title": [
+    "isfinitenumeric ("
+  ],
+  "Feature": [
+    "isfinitenumeric ("
+  ],
+  "Description": [
+    "isfinitenumeric returns 1 if its argument is of numeric type and\nits value is plain valid numeric value, not a peculiarity like infinity\nor not-a-number."
+  ],
+  "Examples": [
+    "INSERT INTO GRAPH <http://mygraph.com>",
+    "Insert into <http://mygraph.com>, 9 (or less) triples -- done"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

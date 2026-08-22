@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_earth_radius/"
+  ],
+  "Title": [
+    "earth_radius ("
+  ],
+  "Feature": [
+    "earth_radius ("
+  ],
+  "Description": [
+    "returns geom.mean of radius of Earth in kilometers, 6367.43568"
+  ],
+  "Examples": [
+    "SELECT earth_radius ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

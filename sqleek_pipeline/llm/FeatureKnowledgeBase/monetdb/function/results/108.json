@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "space(nr)"
+    ],
+    "Feature": [
+        "space(nr)"
+    ],
+    "Description": [
+        "Return type: ",
+        "clob(nr)",
+        "generates a string with nr spaces"
+    ],
+    "Examples": [
+        "select 's' || space(4) || 'e'"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT space(5);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 5.0249999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT space(5);"
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/numeric"
+    ],
+    "Title": [
+        "lcm(x, y)"
+    ],
+    "Feature": [
+        "lcm(x, y)"
+    ],
+    "Description": [
+        "Computes the least common multiple of x and y."
+    ],
+    "Examples": [
+        "lcm(42, 57)"
+    ],
+    "Category": [
+        "Numeric Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT lcm(12, 15);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.264999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT lcm(12, 15);"
+    ]
+}

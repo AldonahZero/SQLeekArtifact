@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_tree_md5/"
+  ],
+  "Title": [
+    "string tree_md5 ("
+  ],
+  "Feature": [
+    "string tree_md5 ("
+  ],
+  "Description": [
+    "Returns a string of 16 characters representing the binary MD5 checksum of the argument.  The argument can be any array or scalar."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

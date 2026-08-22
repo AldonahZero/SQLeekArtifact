@@ -1,0 +1,24 @@
+{
+    "HTML": [
+        "https://clickhouse.com/docs/en/sql-reference/functions/string-search-functions"
+    ],
+    "Title": [
+        "positionCaseInsensitive"
+    ],
+    "Feature": [
+        "positionCaseInsensitive"
+    ],
+    "Description": [
+        "positionCaseInsensitive",
+        "A case insensitive invariant of position."
+    ],
+    "Examples": [
+        "SELECT positionCaseInsensitive('Hello, world!', 'hello');"
+    ],
+    "Category": [
+        "Searching in Strings Functions"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT positionCaseInsensitive('Hello, world!', 'hello');"
+    ]
+}

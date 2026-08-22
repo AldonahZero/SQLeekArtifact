@@ -1,0 +1,30 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_ceiling",
+    "Title": "CEILING()",
+    "Feature": [
+        "CEILING(X)"
+    ],
+    "Description": [
+        "\nCEILING(X)\n",
+        "\n            Returns the smallest integer value not less than\n            X. Returns\n            NULL if X is\n            NULL.\n          ",
+        "Press CTRL+C to copy mysql> SELECT CEILING(1.23);\n        -> 2\nmysql> SELECT CEILING(-1.23);\n        -> -1",
+        "\n            For exact-value numeric arguments, the return value has an\n            exact-value numeric type. For string or floating-point\n            arguments, the return value has a floating-point type.\n          "
+    ],
+    "Examples": [
+        "mysql> SELECT CEILING(1.23);\n        -> 2\nmysql> SELECT CEILING(-1.23);\n        -> -1"
+    ],
+    "Category": [
+        "\u6570\u503c\u51fd\u6570\u4e0e\u64cd\u4f5c\u7b26"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT CEILING(1.23);",
+        "SELECT CEILING(-1.23);"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT CEILING(1.23);",
+        "SELECT CEILING(-1.23);"
+    ]
+}

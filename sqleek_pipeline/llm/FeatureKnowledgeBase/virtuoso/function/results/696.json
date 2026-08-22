@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_x509_ss_generate/"
+  ],
+  "Title": [
+    "xenc_x509_ss_generate ("
+  ],
+  "Feature": [
+    "xenc_x509_ss_generate ("
+  ],
+  "Description": [
+    "This function is used to create a self-signed X.509 certificate by given private key"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

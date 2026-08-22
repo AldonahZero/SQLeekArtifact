@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-string.html"
+    ],
+    "Title": [
+        "lower"
+    ],
+    "Feature": [
+        "lower ( text ) \u2192 text"
+    ],
+    "Description": [
+        "Converts the string to all lower case, according to the rules of the database's locale."
+    ],
+    "Examples": [
+        "lower('TOM') \u2192 tom"
+    ],
+    "Category": [
+        "String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT lower('HELLO WORLD');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 275,
+            "Prompt Tokens": 255,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.0249999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT lower('HELLO WORLD');"
+    ]
+}

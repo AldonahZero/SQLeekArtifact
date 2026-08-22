@@ -1,0 +1,21 @@
+{
+  "dbms": "MySQL",
+  "version": "8.0.27",
+  "mysql_commit": "3290a66c89eb1625a7058e0ef732432b6952b435",
+  "sqlright_commit": "9457f0311b70562a3423ee86ac7e2ebdaaa6664b",
+  "image": "sqlright_mysql827_native:baseline",
+  "image_id": "sha256:22a951286dae15a971820069d860bb4fb28cfb95c40e9e2886fc6c545c1dba42",
+  "environment_compat_patches": [
+    "experiment/RQ2/sqlaser/patches/sqlright_mysql827_setup_database_env_compat.patch",
+    "experiment/RQ2/sqlaser/patches/sqlright_mysql827_rebooter_startcore_env_compat.patch"
+  ],
+  "parser_gate": {"status": "PASS", "sql_inputs": 20, "parse_failures": 0},
+  "mysql_initialization_gate": "PASS",
+  "probe_2m": {"status": "PASS", "execs": 693, "execs_per_sec": 4.44, "paths": 277, "bitmap": "45.63%", "queue_files": 315, "unique_crashes": 2, "unique_hangs": 0},
+  "smoke_10m": {"status": "PASS", "execs": 3994, "execs_per_sec": 6.20, "paths": 842, "bitmap": "56.27%", "queue_files": 912, "unique_crashes": 9, "unique_hangs": 0},
+  "stability_30m": {"status": "PASS", "observed_runtime_seconds": 1833, "execs": 10143, "execs_per_sec": 6.40, "paths": 1369, "bitmap": "65.62%", "queue_files": 1419, "unique_crashes": 25, "crash_files": 27, "unique_hangs": 0, "remaining_sqlright_containers": 0},
+  "baseline_passed": true,
+  "sqlaser_logic_added": false,
+  "sqlite_formal_experiment_untouched": true,
+  "crash_candidates_confirmed_bugs": false
+}

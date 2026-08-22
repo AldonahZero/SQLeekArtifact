@@ -1,0 +1,52 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "unlikely(X)"
+    ],
+    "Feature": [
+        "unlikely(X)"
+    ],
+    "Description": [
+        "\n  The unlikely(X) function returns the argument X unchanged.\n  The unlikely(X) function is a no-op that the code generator\n  optimizes away so that it consumes no CPU cycles at\n  run-time (that is, during calls to sqlite3_step()).\n  The purpose of the unlikely(X) function is to provide a hint\n  to the query planner that the argument X is a boolean value\n  that is usually not true. The unlikely(X) function is equivalent\n  to likelihood(X, 0.0625).\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM table_name WHERE unlikely(condition);",
+        "SELECT unlikely(condition);",
+        "SELECT unlikely(1);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 376,
+            "Prompt Tokens": 354,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 6.629999999999999e-05
+        },
+        {
+            "Total Tokens": 511,
+            "Prompt Tokens": 494,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 8.43e-05
+        },
+        {
+            "Total Tokens": 646,
+            "Prompt Tokens": 628,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 0.00010499999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such table: table_name\n",
+        "(sqlite3.OperationalError) no such column: condition\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT unlikely(1);"
+    ]
+}

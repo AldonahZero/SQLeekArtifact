@@ -1,0 +1,77 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "audit_log_filter_set_filter()",
+    "Description": [
+        "\naudit_log_filter_set_filter(filter_name,\n              definition)\n",
+        "\n              Given a filter name and definition, adds the filter to the\n              current set of filters. If the filter already exists and\n              is used by any current sessions, those sessions are\n              detached from the filter and are no longer logged. This\n              occurs because the new filter definition has a new filter\n              ID that differs from its previous ID.\n            ",
+        "\n              Arguments:\n",
+        "\n\nfilter_name: A string that\n                  specifies the filter name.\n                \ndefinition: A\n                  JSON value that\n                  specifies the filter definition.\n\n",
+        "\n              Return value:\n            ",
+        "\n              A string that indicates whether the operation succeeded.\n              OK indicates success. ERROR:\n              message indicates\n              failure.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SET @f = '{ \"filter\": { \"log\": false } }';\nmysql> SELECT audit_log_filter_set_filter('SomeFilter', @f);\n+-----------------------------------------------+\n| audit_log_filter_set_filter('SomeFilter', @f) |\n+-----------------------------------------------+\n| OK                                            |\n+-----------------------------------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#function_audit-log-filter-set-filter",
+    "Feature": [
+        "audit_log_filter_set_filter(filter_name,\n              definition)"
+    ],
+    "Examples": [
+        "mysql> SET @f = '{ \"filter\": { \"log\": false } }';\nmysql> SELECT audit_log_filter_set_filter('SomeFilter', @f);\n+-----------------------------------------------+\n| audit_log_filter_set_filter('SomeFilter', @f) |\n+-----------------------------------------------+\n| OK                                            |\n+-----------------------------------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT audit_log_filter_set_filter('SomeFilter', '{ \"filter\": { \"log\": false } }');",
+        "SELECT audit_log_filter_set_filter('SomeFilter', '{ \"filter\": { \"log\": false } }');",
+        "SELECT audit_log_filter_set_filter('NewFilter', '{ \"filter\": { \"log\": true } }');",
+        "SELECT audit_log_filter_set_filter('DefaultFilter', '{ \"filter\": { \"log\": false } }');",
+        "SELECT audit_log_filter_set_filter('TestFilter', '{ \"filter\": { \"log\": true } }');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 559,
+            "Prompt Tokens": 524,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 9.96e-05
+        },
+        {
+            "Total Tokens": 732,
+            "Prompt Tokens": 697,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 0.00012555
+        },
+        {
+            "Total Tokens": 905,
+            "Prompt Tokens": 870,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 0.0001515
+        },
+        {
+            "Total Tokens": 1078,
+            "Prompt Tokens": 1043,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 0.00017744999999999998
+        },
+        {
+            "Total Tokens": 1251,
+            "Prompt Tokens": 1216,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 0.00020339999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_filter does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_filter does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

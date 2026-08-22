@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_import_key_pair/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_IMPORT_KEY_PAIR ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_IMPORT_KEY_PAIR ("
+  ],
+  "Description": [
+    "Uploads public key to Amazon"
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

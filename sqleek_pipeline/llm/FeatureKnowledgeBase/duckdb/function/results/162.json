@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/datepart"
+    ],
+    "Title": [
+        "weekday(date)"
+    ],
+    "Feature": [
+        "weekday(date)"
+    ],
+    "Description": [
+        "Numeric weekday synonym (Sunday = 0, Saturday = 6)."
+    ],
+    "Examples": [
+        "weekday(date '1992-02-15')"
+    ],
+    "Category": [
+        "Date Part Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT weekday(date);",
+        "SELECT weekday(current_date);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 271,
+            "Prompt Tokens": 254,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.8299999999999995e-05
+        },
+        {
+            "Total Tokens": 430,
+            "Prompt Tokens": 412,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 7.26e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"date\" not found in FROM clause!\nLINE 1: SELECT weekday(date);\n                       ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT weekday(current_date);"
+    ]
+}

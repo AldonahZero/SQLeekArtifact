@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vt_batch_update/"
+  ],
+  "Title": [
+    "integer DB.DBA. VT_BATCH_UPDATE ("
+  ],
+  "Feature": [
+    "integer DB.DBA. VT_BATCH_UPDATE ("
+  ],
+  "Description": [
+    "This function controls the time of update of a text index. If flag is ON, changes are accumulated\ninto a change tracking table and applied as a batch. If flag is OFF, the text index is updated\nin the same transaction as the indexed data itself. The change tracking table is automatically\ncreated and is named VTLOG_<q>_<o>_<table>, in the qualifier and owner of\nthe indexed table, where q, o and table are the qualifier, owner and name of the table.\nThe changes accumulated into that table can be explicitly applied to the\nindex using the VT_INC_INDEX_<q>_<o>_<table> function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

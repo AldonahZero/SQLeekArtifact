@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/cast-conversion-functions"
+    ],
+    "Title": [
+        "date"
+    ],
+    "Feature": [
+        "date"
+    ],
+    "Description": [
+        "convert YYYY-MM-DD formatted string value to a date type"
+    ],
+    "Examples": [
+        "select date '2020-09-28'"
+    ],
+    "Category": [
+        "Cast Conversion Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CAST('2023-10-01' AS DATE);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 270,
+            "Prompt Tokens": 244,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.2199999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CAST('2023-10-01' AS DATE);"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sinv_create_key_mapping/"
+  ],
+  "Title": [
+    "sinv_create_key_mapping ("
+  ],
+  "Feature": [
+    "sinv_create_key_mapping ("
+  ],
+  "Description": [
+    "Creates a key mapping function & table (as described in the doc section SQL Inverse Functions )"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

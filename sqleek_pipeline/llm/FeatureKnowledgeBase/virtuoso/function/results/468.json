@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_smime_sign/"
+  ],
+  "Title": [
+    "varchar smime_sign ("
+  ],
+  "Feature": [
+    "varchar smime_sign ("
+  ],
+  "Description": [
+    "Converts a MIME message to a signed S/MIME message."
+  ],
+  "Examples": [
+    "select smime_sign ('just a test', file_to_string ('thwate_pub.pem'),"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_make_error/"
+  ],
+  "Title": [
+    "varchar soap_make_error ("
+  ],
+  "Feature": [
+    "varchar soap_make_error ("
+  ],
+  "Description": [
+    "This function creates a SOAP error reply based on the given parameters. It returns the generated XML\nas a varchar value."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

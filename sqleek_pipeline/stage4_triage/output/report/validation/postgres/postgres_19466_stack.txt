@@ -1,0 +1,65 @@
+Source stack file:
+  /root/SQLeek/report/validation/postgres/crash_stack4.txt
+
+Environment:
+  PostgreSQL 18.3
+  Built from source with --enable-cassert --enable-debug --without-icu
+  Docker image: sqleek-pg18-debug:18.3
+  Runner: /root/SQLeek/report/validation/postgres/get_stack3.sh
+
+Crash evidence:
+  waiting for server to start.... done
+  server started
+  === Attaching gdb to backend PID: 58 ===
+
+psql output:
+  DROP TYPE
+  CREATE TYPE
+  BEGIN
+  DECLARE CURSOR
+        row
+  ----------------
+   (1,1073741824)
+  (1 row)
+
+  ALTER TYPE
+  psql:/tmp/trigger.sql:14: server closed the connection unexpectedly
+  psql:/tmp/trigger.sql:14: error: connection to server was lost
+
+server log:
+  2026-04-25 09:26:41.368 UTC [41] LOG:  starting PostgreSQL 18.3 on x86_64-pc-linux-gnu
+  2026-04-25 09:27:01.633 UTC [41] LOG:  client backend (PID 58) was terminated by signal 11: Segmentation fault
+  2026-04-25 09:27:01.633 UTC [41] DETAIL:  Failed process was running: FETCH c;
+
+gdb output:
+  Program received signal SIGSEGV, Segmentation fault.
+  #0  0x00007a7236074c60 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+  #1  0x000058365436157f in text_to_cstring (t=0x58365637774c) at varlena.c:234
+      tunpacked = 0x58365637774c
+      len = 268435452
+      result = 0x7a721c734048 "\020"
+  #2  0x00005836543625f9 in textout (fcinfo=0x7ffc86929ea0) at varlena.c:603
+      txt = 96990397953868
+  #3  0x00005836543b2225 in FunctionCall1Coll (flinfo=0x5836562990e8, collation=0, arg1=96990397953868) at fmgr.c:1139
+  #4  0x00005836543b3bf8 in OutputFunctionCall (flinfo=0x5836562990e8, val=96990397953868) at fmgr.c:1685
+  #5  0x00005836542f6529 in record_out (fcinfo=0x7ffc8692a040) at rowtypes.c:435
+      column_type = 25
+      attr = 96990397953868
+      tupType = 16386
+      tupdesc = 0x7a722c7562a8
+      ncolumns = 2
+      i = 1
+  #6  0x00005836543b2225 in FunctionCall1Coll (flinfo=0x5836563689a8, collation=0, arg1=96990397904456) at fmgr.c:1139
+  #7  0x00005836543b3bf8 in OutputFunctionCall (flinfo=0x5836563689a8, val=96990397904456) at fmgr.c:1685
+  #8  0x0000583653b93008 in printtup (slot=0x583656298ff8, self=0x58365626f9c0) at printtup.c:360
+  #9  0x00005836541a1cae in RunFromStore (portal=0x5836562ee740, direction=ForwardScanDirection, count=0, dest=0x58365626f9c0) at pquery.c:1094
+  #10 0x00005836541a17b7 in PortalRunSelect (portal=0x5836562ee740, forward=true, count=0, dest=0x58365626f9c0) at pquery.c:917
+  #11 0x00005836541a1416 in PortalRun (portal=0x5836562ee740, count=9223372036854775807, isTopLevel=true, dest=0x58365626f9c0, altdest=0x58365626f9c0, qc=0x7ffc8692a3c0) at pquery.c:765
+  #12 0x0000583654199b84 in exec_simple_query (query_string=0x58365626eb80 "FETCH c;") at postgres.c:1273
+  #13 0x000058365419f32f in PostgresMain (dbname=0x5836562a7f38 "postgres", username=0x5836562a7f20 "pguser") at postgres.c:4766
+  #14 0x00005836541952c0 in BackendMain (startup_data=0x7ffc8692a670, startup_data_len=24) at backend_startup.c:124
+  #15 0x0000583654094695 in postmaster_child_launch (child_type=B_BACKEND, child_slot=1, startup_data=0x7ffc8692a670, startup_data_len=24, client_sock=0x7ffc8692a6d0) at launch_backend.c:290
+  #16 0x000058365409b0c3 in BackendStartup (client_sock=0x7ffc8692a6d0) at postmaster.c:3587
+  #17 0x000058365409862e in ServerLoop () at postmaster.c:1702
+  #18 0x0000583654097f1f in PostmasterMain (argc=7, argv=0x58365626a590) at postmaster.c:1400
+  #19 0x0000583653f34123 in main (argc=7, argv=0x58365626a590) at main.c:227

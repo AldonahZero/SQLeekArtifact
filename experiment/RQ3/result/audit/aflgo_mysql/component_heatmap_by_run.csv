@@ -1,0 +1,9 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mysql_aflgo_r1,mysql,1,other,AFLGo,228,37,0.16228070175438597,58,23,0.4
+mysql_aflgo_r1,mysql,1,catalog_metadata,AFLGo,42,6,0.14285714285714285,4,3,0.75
+mysql_aflgo_r1,mysql,1,type_system,AFLGo,3786,946,0.24986793449550979,846,326,0.41810344827586204
+mysql_aflgo_r1,mysql,1,executor,AFLGo,202,65,0.3217821782178218,7,6,0.6666666666666666
+mysql_aflgo_r1,mysql,1,parser,AFLGo,18,10,0.5555555555555556,3,3,1.0
+mysql_aflgo_r1,mysql,1,optimizer,AFLGo,46,16,0.34782608695652173,8,5,0.5714285714285714
+mysql_aflgo_r1,mysql,1,cursor_prepared,AFLGo,290,98,0.33793103448275863,5,4,0.5
+mysql_aflgo_r1,mysql,1,storage,AFLGo,26,5,0.19230769230769232,6,2,0.4

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_now_impl/"
+  ],
+  "Title": [
+    "rdf_now_impl ("
+  ],
+  "Feature": [
+    "rdf_now_impl ("
+  ],
+  "Description": [
+    "This function returns the timestamp associated with current transaction as a DATETIME . The function name\n    refer to one function ( alias of now() ) that returns the timestamp of\n    current transaction. It is the datetime of the beginning of current transaction with the fractional part of seconds replaced\n    with serial number of a transaction within the second. If TimezonelessDatetimes=0 then the time has local timezone\n    offset (as it was set at the time of last server start); otherwise it is timezoneless.\nnow()\nTimezonelessDatetimes=0"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

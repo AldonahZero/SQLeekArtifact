@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "scale_up(x, y)"
+    ],
+    "Feature": [
+        "scale_up(x, y)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as first arg",
+        "??? multiply x by y"
+    ],
+    "Examples": [
+        "scale_up(13, 3)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT scale_up(2, 3);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 291,
+            "Prompt Tokens": 269,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.3549999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT scale_up(2, 3);"
+    ]
+}

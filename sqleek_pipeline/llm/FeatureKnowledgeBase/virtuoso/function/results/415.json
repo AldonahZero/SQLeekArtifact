@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_sched_init/"
+  ],
+  "Title": [
+    "REPL_SCHED_INIT ("
+  ],
+  "Feature": [
+    "REPL_SCHED_INIT ("
+  ],
+  "Description": [
+    "Adds scheduled job to synchronize all subscriptions. The server will attempt to start synchronization of all non-synchronized subscriptions at a 1 minute interval. The action can be reversed by deleting the corresponding row from the SYS_SCHEDULED_EVENTS table."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

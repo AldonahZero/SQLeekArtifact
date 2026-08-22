@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_delay/"
+  ],
+  "Title": [
+    "delay ("
+  ],
+  "Feature": [
+    "delay ("
+  ],
+  "Description": [
+    "This will halt calling procedure execution for specified\n    interval in seconds."
+  ],
+  "Examples": [
+    "create procedure"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

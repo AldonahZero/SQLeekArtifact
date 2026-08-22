@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_repl_start/"
+  ],
+  "Title": [
+    "RDF_REPL_START ("
+  ],
+  "Feature": [
+    "RDF_REPL_START ("
+  ],
+  "Description": [
+    "This function is called to enable (start) RDF Publication."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

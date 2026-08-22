@@ -1,0 +1,2 @@
+dbms	image	binary	status	message
+postgres	griffin_postgres_llvmcov	/root/bin_aflpp/usr/local/pgsql/bin/postgres	ok	LLVM source coverage backend ready

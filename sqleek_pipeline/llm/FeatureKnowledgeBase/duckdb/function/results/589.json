@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/utility"
+    ],
+    "Title": [
+        "md5_number_lower(string)"
+    ],
+    "Feature": [
+        "md5_number_lower(string)"
+    ],
+    "Description": [
+        "Returns the lower 64-bit segment of the MD5 hash of the string as a BIGINT.",
+        "Returns the MD5 hash of the string as a BIGINT."
+    ],
+    "Examples": [
+        "md5_number_lower('123')"
+    ],
+    "Category": [
+        "Utility Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT md5_number_lower('example_string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 308,
+            "Prompt Tokens": 286,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.609999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT md5_number_lower('example_string');"
+    ]
+}

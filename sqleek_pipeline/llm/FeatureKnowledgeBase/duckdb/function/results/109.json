@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/blob"
+    ],
+    "Title": [
+        "encode(string)"
+    ],
+    "Feature": [
+        "encode(string)"
+    ],
+    "Description": [
+        "Converts the string to BLOB. Converts UTF-8 characters into literal encoding."
+    ],
+    "Examples": [
+        "encode('my_string_with_\u00fc')"
+    ],
+    "Category": [
+        "Blob Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT encode('Hello, World!')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.1149999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT encode('Hello, World!')"
+    ]
+}

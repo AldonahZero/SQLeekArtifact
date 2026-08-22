@@ -1,0 +1,24 @@
+ libs/mysql/ranges/collection_interface.h           | 41 ++++++++---
+ .../sets/boundary_set_binary_operation_view_base.h |  2 +-
+ libs/mysql/sets/boundary_set_const_views.h         | 14 +++-
+ libs/mysql/sets/boundary_set_meta.h                |  2 +-
+ libs/mysql/sets/int_set_traits.h                   |  4 +-
+ libs/mysql/sets/interval.h                         |  4 +-
+ libs/mysql/sets/interval_set_interface.h           |  2 +-
+ libs/mysql/sets/interval_set_volume.h              |  2 +-
+ .../nested_set_binary_operation_iterator_base.h    |  4 +-
+ libs/mysql/sets/nested_set_traits.h                |  2 +-
+ .../sets/nonthrowing_boundary_container_adaptor.h  |  6 +-
+ libs/mysql/sets/strconv/encode.h                   |  2 +-
+ libs/mysql/sets/throwing/boundary_container.h      |  4 +-
+ libs/mysql/sets/throwing/map_boundary_storage.h    | 45 ++++++++++++
+ libs/mysql/sets/throwing/vector_boundary_storage.h |  8 +-
+ libs/mysql/strconv/conv/text_source_location.h     |  5 ++
+ libs/mysql/strconv/decode/decode.h                 |  7 +-
+ libs/mysql/strconv/decode/parse_options.h          | 17 +++--
+ libs/mysql/strconv/decode/parser.h                 | 85 ++++++++++++++++++++++
+ libs/mysql/utils/tuple_find.h                      |  2 +-
+ libs/mysql/uuids/uuid.h                            |  6 +-
+ sql/dd/impl/upgrade/server.cc                      |  9 +--
+ sql/join_optimizer/interesting_orders.cc           | 22 ++++--
+ 23 files changed, 237 insertions(+), 58 deletions(-)

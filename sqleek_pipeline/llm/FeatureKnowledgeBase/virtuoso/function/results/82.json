@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_concatenate/"
+  ],
+  "Title": [
+    "string concatenate ("
+  ],
+  "Feature": [
+    "string concatenate ("
+  ],
+  "Description": [
+    "Concatenate is an alias of concat .\nConcatenate\nconcat"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

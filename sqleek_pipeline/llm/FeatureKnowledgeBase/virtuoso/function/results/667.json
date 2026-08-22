@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_x509_certificate_verify/"
+  ],
+  "Title": [
+    "varchar x509_certificate_verify ("
+  ],
+  "Feature": [
+    "varchar x509_certificate_verify ("
+  ],
+  "Description": [
+    "This function takes a X.509 certificate and verifies it against \n\t  list of CA certificates. It checks for various certificate \n\t  attributes such as self signed, expiration date etc.\n\t  If an error is detected it will be signalled.\nThe certificates are passed as a strings containing X.509 \n\t  certificate binary data in DER (raw) format."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

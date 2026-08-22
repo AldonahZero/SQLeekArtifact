@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_validate_schema/"
+  ],
+  "Title": [
+    "xml_validate_schema ("
+  ],
+  "Feature": [
+    "xml_validate_schema ("
+  ],
+  "Description": [
+    "This parses the argument, which is expected to be an XML\nfragment (possibly with syntax errors, violations of validity conditions etc.)\nand returns a human-readable list of errors as a string.\nIf there is a \"schemaLocation\" attribute in root element,\nXML Schema declaration will be loaded and partial\nschema validation will be performed. If this attribute does not exist and\nthe Validation option below is not set to DISABLED, then an error will be\nreturned: ('FATAL  : Schema declaration is not loaded').\nThe XML Schema validation routines are tightly coupled with DTD validator.\nIf the document contains both Schema and DTD information then both validations are\nmade in the same time in order to provide as accurate diagnostics as possible.\nHowever, it is impossible to check whether the declared DTD matches or contradicts to the declared Schema,\nso the parser performs two independent validations to every item of source data.\nE.g. if DTD contradicts to the schema in description of some particular element and\ndata in the document does not contain this element then no errors is reported; but if\nsun an element occurs in the document then either DTD validator or Schema validator will log an error."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_zmflag/"
+  ],
+  "Title": [
+    "ST_Zmflag ("
+  ],
+  "Feature": [
+    "ST_Zmflag ("
+  ],
+  "Description": [
+    "Returns bits indicating presence of Z and/or M coordinates. 0 means that the shape has only X and Y, 1 means that M is\n    \talso in use (but not Z), 2 means Z but ont M, 3 is for both M and Z."
+  ],
+  "Examples": [
+    "SELECT ST_Zmflag( st_point (10, 20, 30, 40));"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/aggregates"
+    ],
+    "Title": [
+        "bool_or(arg)"
+    ],
+    "Feature": [
+        "bool_or(arg)"
+    ],
+    "Description": [
+        "Returns true if any input value is true, otherwise false."
+    ],
+    "Examples": [
+        "bool_or(A)"
+    ],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT bool_or(true);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 274,
+            "Prompt Tokens": 256,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.9199999999999997e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT bool_or(true);"
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-binarystring.html"
+    ],
+    "Title": [
+        "trim"
+    ],
+    "Feature": [
+        "trim ( [ LEADING | TRAILING | BOTH ] [ FROM ] bytes bytea, bytesremoved bytea ) \u2192 bytea"
+    ],
+    "Description": [
+        "This is a non-standard syntax for trim()."
+    ],
+    "Examples": [
+        "trim(both from '\\x1234567890'::bytea, '\\x9012'::bytea) \u2192 \\x345678"
+    ],
+    "Category": [
+        "Binary String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT trim(BOTH FROM '   example   ');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 289,
+            "Prompt Tokens": 265,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.4149999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT trim(BOTH FROM '   example   ');"
+    ]
+}

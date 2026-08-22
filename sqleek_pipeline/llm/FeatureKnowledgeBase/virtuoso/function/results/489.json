@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sparql_rexec_to_array/"
+  ],
+  "Title": [
+    "DB.DBA.SPARQL_REXEC_TO_ARRAY ("
+  ],
+  "Feature": [
+    "DB.DBA.SPARQL_REXEC_TO_ARRAY ("
+  ],
+  "Description": [
+    "Remote execution of SPARQL via SPARQL protocol, produces a vector of vectors of SQL value."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

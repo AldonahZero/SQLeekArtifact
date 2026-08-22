@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sprintf_iri_or_null/"
+  ],
+  "Title": [
+    "sprintf_iri_or_null ("
+  ],
+  "Feature": [
+    "sprintf_iri_or_null ("
+  ],
+  "Description": [
+    "sprintf_iri_or_null is similar to sprintf_iri and returns a new string formed by \"printing\" a variable number\n    of arguments arg_1 - arg_x according to the format string format. The difference is that the function can return\nnull if any of the arguments except the first one is null.\nThe returned string is marked as being IRI string so some applications and clients may distinguish between RDF reference string and RDF literal.\nNo matter what is the default server charset or default encoding of host OS, IRI strings are supposed to be in UTF-8 encoding so string arguments to print as well as the format itself are supposed to be UTF-8. Application may use calls of charset_recode as arguments.\ncharset_recode"
+  ],
+  "Examples": [
+    "create function job_history("
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

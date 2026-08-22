@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_transscale/"
+  ],
+  "Title": [
+    "ST_TransScale ("
+  ],
+  "Feature": [
+    "ST_TransScale ("
+  ],
+  "Description": [
+    "returns a copy of a shape with all coordinates shifted by the provided dX, dY and then multiplied by Xfactor and Yfactor.\n    \tDifferent values for Xfactor and Yfactor will result in distorted arcs."
+  ],
+  "Examples": [
+    "SELECT ?s, bif:ST_TransScale(?o, 0.1, 0.2, 0.1, 0.1)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

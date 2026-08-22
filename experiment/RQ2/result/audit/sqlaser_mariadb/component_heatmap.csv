@@ -1,0 +1,8 @@
+dbms,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mariadb,catalog_metadata,SQLaser,56,23.8,0.425,31,14.0,0.4516129032258064
+mariadb,cursor_prepared,SQLaser,214,141.6,0.6616822429906541,3,1.0,0.3333333333333333
+mariadb,optimizer,SQLaser,170,93.2,0.548235294117647,32,28.6,0.8866666666666667
+mariadb,other,SQLaser,1566,753.0,0.48084291187739464,413,287.8,0.6970731707317074
+mariadb,parser,SQLaser,64,49.4,0.771875,5,5.0,1.0
+mariadb,storage,SQLaser,4,1.0,0.25,1,1.0,1.0
+mariadb,type_system,SQLaser,2206,673.0,0.30507706255666367,996,480.0,0.49096705632306054

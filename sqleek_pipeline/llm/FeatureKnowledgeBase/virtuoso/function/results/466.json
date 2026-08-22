@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_smime_decrypt/"
+  ],
+  "Title": [
+    "varchar smime_decrypt ("
+  ],
+  "Feature": [
+    "varchar smime_decrypt ("
+  ],
+  "Description": [
+    "This function performs decryption of a PKCS7 encrypted smime msg"
+  ],
+  "Examples": [
+    "select smime_decrypt (file_to_string ('test.p7m'),"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

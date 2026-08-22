@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ses_write/"
+  ],
+  "Title": [
+    "ses_write ("
+  ],
+  "Feature": [
+    "ses_write ("
+  ],
+  "Description": [
+    "This function is used to write character data taken from the buffer\n    parameter to an open TCP session. Attempts to write to a close session\n    will result in an error being returned."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

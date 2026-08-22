@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-info.html"
+    ],
+    "Title": [
+        "txid_current_if_assigned"
+    ],
+    "Feature": [
+        "txid_current_if_assigned () \u2192 bigint"
+    ],
+    "Description": [
+        "See pg_current_xact_id_if_assigned()."
+    ],
+    "Examples": [],
+    "Category": [
+        "System Information Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT txid_current_if_assigned();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 264,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.22e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT txid_current_if_assigned();"
+    ]
+}

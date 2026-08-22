@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_trace_off/"
+  ],
+  "Title": [
+    "integer trace_off ("
+  ],
+  "Feature": [
+    "integer trace_off ("
+  ],
+  "Description": [
+    "You must have DBA privileges to run that function.\nThis function is used to disable logging of various information enabled by\n  default with the TraceOn ini file option or with the trace_on() function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

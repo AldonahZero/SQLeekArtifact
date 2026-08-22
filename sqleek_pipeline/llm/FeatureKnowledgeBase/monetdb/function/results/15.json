@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/comparison-functions"
+    ],
+    "Title": [
+        "nullif(arg1, arg2)"
+    ],
+    "Feature": [
+        "nullif(arg1, arg2)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as arg1",
+        "returns NULL if arg1 = arg2 is true, otherwise returns arg1. Equivalent to: CASE WHEN arg1 = arg2 THEN NULL ELSE arg1 END"
+    ],
+    "Examples": [
+        "nullif('ams', 'ams')"
+    ],
+    "Category": [
+        "Comparison Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT nullif(column1, column2);",
+        "SELECT nullif(1, 1);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 326,
+            "Prompt Tokens": 304,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.879999999999999e-05
+        },
+        {
+            "Total Tokens": 482,
+            "Prompt Tokens": 460,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 8.219999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 'column1' unknown\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT nullif(1, 1);"
+    ]
+}

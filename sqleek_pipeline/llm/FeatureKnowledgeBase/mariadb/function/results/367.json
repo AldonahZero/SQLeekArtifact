@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/ucase/"
+    ],
+    "Title": [
+        "UCASE"
+    ],
+    "Feature": [
+        "UCASE(str)\n"
+    ],
+    "Description": [
+        "UCASE() is a synonym for UPPER()."
+    ],
+    "Examples": [],
+    "Category": [
+        "String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT UCASE('hello world');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 270,
+            "Prompt Tokens": 250,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 4.95e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT UCASE('hello world');"
+    ]
+}

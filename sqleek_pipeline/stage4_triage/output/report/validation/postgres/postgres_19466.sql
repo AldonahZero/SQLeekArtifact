@@ -1,0 +1,9 @@
+CREATE TYPE foo AS (a INT, b INT);
+BEGIN;
+DECLARE c CURSOR FOR
+  SELECT (i, power(2, 30))::foo
+  FROM generate_series(1,10) i;
+FETCH c;
+ALTER TYPE foo ALTER ATTRIBUTE b TYPE TEXT;
+FETCH c;
+COMMIT;

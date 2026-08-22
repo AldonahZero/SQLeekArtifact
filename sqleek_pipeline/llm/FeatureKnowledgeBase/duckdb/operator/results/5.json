@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/bitstring"
+    ],
+    "Title": [
+        ">>"
+    ],
+    "Feature": [
+        ">>"
+    ],
+    "Description": [
+        "Bitwise shift right"
+    ],
+    "Examples": [
+        "'1001011'::BITSTRING >> 3"
+    ],
+    "Category": [
+        "Bitstring Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 8 >> 2;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 255,
+            "Prompt Tokens": 236,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.679999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 8 >> 2;"
+    ]
+}

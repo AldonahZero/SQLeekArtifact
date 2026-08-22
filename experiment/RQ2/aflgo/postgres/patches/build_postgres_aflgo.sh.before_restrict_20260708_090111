@@ -1,0 +1,129 @@
+#!/usr/bin/env bash
+set -e
+
+AFLGO_DIR=${AFLGO_DIR:-/root/SQLeek/experiment/RQ2/aflgo}
+POSTGRES_SRC=${POSTGRES_SRC:-/root/SQLeek/sources/postgres}
+WORK_DIR=${WORK_DIR:-$AFLGO_DIR/postgres}
+AFLGO_INSTRUMENT_DIR=${AFLGO_INSTRUMENT_DIR:-$AFLGO_DIR/instrument_llvm14}
+LLVM_DIR=${LLVM_DIR:-/usr/lib/llvm-14}
+BUILD_ROOT=$WORK_DIR/build
+TMP_DIR=$WORK_DIR/tmp/distance
+LOG_DIR=$WORK_DIR/logs
+BIN_DIR=$WORK_DIR/bin
+SOURCE_TARGETS_FILE=${SOURCE_TARGETS_FILE:-$WORK_DIR/targets/postgres_rq2_targets.txt}
+TARGETS_FILE=$TMP_DIR/BBtargets.txt
+BUILD_JOBS=${BUILD_JOBS:-1}
+FINAL_PREFIX=$BUILD_ROOT/postgres-install
+
+mkdir -p "$BUILD_ROOT" "$TMP_DIR" "$LOG_DIR" "$BIN_DIR"
+
+if [ ! -x "$AFLGO_INSTRUMENT_DIR/aflgo-clang" ]; then echo "missing AFLGo compiler: $AFLGO_INSTRUMENT_DIR/aflgo-clang" >&2; exit 1; fi
+if [ ! -x "$LLVM_DIR/bin/clang" ]; then echo "missing LLVM toolchain under $LLVM_DIR" >&2; exit 1; fi
+if [ ! -x "$AFLGO_DIR/distance/distance_calculator/distance.bin" ] && [ -x "$AFLGO_DIR/distance/distance_calculator/build/distance.bin" ]; then
+  ln -sf "$AFLGO_DIR/distance/distance_calculator/build/distance.bin" "$AFLGO_DIR/distance/distance_calculator/distance.bin"
+fi
+if [ ! -x "$AFLGO_DIR/distance/distance_calculator/distance.bin" ]; then echo "missing AFLGo distance calculator" >&2; exit 1; fi
+if [ ! -x "$POSTGRES_SRC/configure" ]; then echo "missing PostgreSQL configure: $POSTGRES_SRC" >&2; exit 1; fi
+if [ ! -s "$SOURCE_TARGETS_FILE" ]; then echo "missing AFLGo target list: $SOURCE_TARGETS_FILE" >&2; exit 1; fi
+cp "$SOURCE_TARGETS_FILE" "$TARGETS_FILE"
+
+mkdir -p /usr/lib/bfd-plugins
+[ -f "$LLVM_DIR/lib/LLVMgold.so" ] && ln -sf "$LLVM_DIR/lib/LLVMgold.so" /usr/lib/bfd-plugins/LLVMgold.so
+[ -f "$LLVM_DIR/lib/libLTO.so" ] && ln -sf "$LLVM_DIR/lib/libLTO.so" /usr/lib/bfd-plugins/libLTO.so
+
+unset AFLGO
+export AFL_CC=${AFL_CC:-$LLVM_DIR/bin/clang}
+export AFL_CXX=${AFL_CXX:-$LLVM_DIR/bin/clang++}
+export CC="$AFLGO_INSTRUMENT_DIR/aflgo-clang"
+export CXX="$AFLGO_INSTRUMENT_DIR/aflgo-clang++"
+export PATH="$LLVM_DIR/bin:$PATH"
+export AFL_QUIET=1
+export AFL_DONT_OPTIMIZE=1
+
+rm -rf "$BUILD_ROOT/postgres-preprocess" "$BUILD_ROOT/postgres-instrumented" "$BUILD_ROOT/postgres-preprocess-bc" "$FINAL_PREFIX"
+rm -rf "$TMP_DIR/dot-files"
+rm -f "$TMP_DIR"/BBnames.txt "$TMP_DIR"/BBcalls.txt "$TMP_DIR"/Fnames.txt "$TMP_DIR"/Ftargets.txt \
+      "$TMP_DIR"/distance.cfg.txt "$TMP_DIR"/step*.log "$TMP_DIR"/state-fast "$TMP_DIR"/callgraph.distance.txt
+
+COMMON_CONFIGURE=(
+  --without-readline
+  --without-zlib
+  --without-icu
+)
+
+echo "[1/5] AFLGo preprocessing configure"
+mkdir -p "$BUILD_ROOT/postgres-preprocess"
+(
+  cd "$BUILD_ROOT/postgres-preprocess"
+  CFLAGS="-g -O0 -flegacy-pass-manager -fno-inline -targets=$TARGETS_FILE -outdir=$TMP_DIR -flto" \
+  LDFLAGS="-flto -fuse-ld=gold -Wl,-plugin-opt=save-temps" \
+  "$POSTGRES_SRC/configure" --prefix="$BUILD_ROOT/postgres-preprocess-install" "${COMMON_CONFIGURE[@]}"
+)
+
+echo "[2/5] AFLGo preprocessing build"
+make -C "$BUILD_ROOT/postgres-preprocess" -j "$BUILD_JOBS"
+
+if [ ! -s "$TMP_DIR/BBnames.txt" ]; then echo "AFLGo did not produce BBnames.txt" >&2; exit 1; fi
+grep -v '^$' "$TMP_DIR/BBnames.txt" | rev | cut -d: -f2- | rev | sort -u > "$TMP_DIR/BBnames.clean"
+mv "$TMP_DIR/BBnames.clean" "$TMP_DIR/BBnames.txt"
+if [ -s "$TMP_DIR/BBcalls.txt" ]; then
+  grep -Ev '^[^,]*$|^([^,]*,){2,}[^,]*$' "$TMP_DIR/BBcalls.txt" | sort -u > "$TMP_DIR/BBcalls.clean" || true
+  mv "$TMP_DIR/BBcalls.clean" "$TMP_DIR/BBcalls.txt"
+else
+  : > "$TMP_DIR/BBcalls.txt"
+fi
+
+mkdir -p "$BUILD_ROOT/postgres-preprocess-bc"
+find "$BUILD_ROOT/postgres-preprocess" -type f -name '*.0.0.*.bc' -exec ln -sf {} "$BUILD_ROOT/postgres-preprocess-bc" \;
+BC_COUNT=$(find "$BUILD_ROOT/postgres-preprocess-bc" -maxdepth 1 -type l -name '*.0.0.*.bc' | wc -l | tr -d ' ')
+if [ "$BC_COUNT" = "0" ]; then echo "missing preprocessing bytecode files" >&2; exit 1; fi
+
+echo "[3/5] Computing AFLGo distances over $BC_COUNT linked bytecode files"
+python3 "$AFLGO_DIR/distance/gen_distance_fast.py" "$BUILD_ROOT/postgres-preprocess-bc" "$TMP_DIR"
+if [ ! -s "$TMP_DIR/distance.cfg.txt" ]; then echo "distance.cfg.txt is empty; see $TMP_DIR/step*.log" >&2; exit 1; fi
+
+echo "[4/5] Final distance-instrumented PostgreSQL configure/build/install"
+mkdir -p "$BUILD_ROOT/postgres-instrumented"
+(
+  cd "$BUILD_ROOT/postgres-instrumented"
+  CFLAGS="-g -O1 -flegacy-pass-manager -distance=$TMP_DIR/distance.cfg.txt" \
+  "$POSTGRES_SRC/configure" --prefix="$FINAL_PREFIX" "${COMMON_CONFIGURE[@]}"
+)
+make -C "$BUILD_ROOT/postgres-instrumented" -j "$BUILD_JOBS"
+make -C "$BUILD_ROOT/postgres-instrumented" install
+
+ln -sf "$FINAL_PREFIX/bin/postgres" "$BIN_DIR/postgres_aflgo"
+ln -sf "$FINAL_PREFIX/bin/initdb" "$BIN_DIR/initdb_aflgo"
+ln -sf "$FINAL_PREFIX/bin/pg_ctl" "$BIN_DIR/pg_ctl_aflgo"
+ln -sf "$FINAL_PREFIX/bin/psql" "$BIN_DIR/psql_aflgo"
+
+if [ ! -x "$BIN_DIR/postgres_aflgo" ] || [ ! -x "$BIN_DIR/initdb_aflgo" ]; then echo "missing installed PostgreSQL AFLGo binaries" >&2; exit 1; fi
+
+echo "[5/5] Building AFLGo PostgreSQL single-user wrapper"
+"$CC" -DNDEBUG -g -O1 -flegacy-pass-manager -distance="$TMP_DIR/distance.cfg.txt" \
+  "$WORK_DIR/postgres_single_wrapper.c" -o "$BIN_DIR/postgres_single_wrapper_aflgo"
+chmod +x "$BIN_DIR/postgres_single_wrapper_aflgo"
+
+{
+  echo "postgres_binary=$BIN_DIR/postgres_aflgo"
+  echo "initdb_binary=$BIN_DIR/initdb_aflgo"
+  echo "pg_ctl_binary=$BIN_DIR/pg_ctl_aflgo"
+  echo "psql_binary=$BIN_DIR/psql_aflgo"
+  echo "wrapper_binary=$BIN_DIR/postgres_single_wrapper_aflgo"
+  echo "install_prefix=$FINAL_PREFIX"
+  echo "source_targets_file=$SOURCE_TARGETS_FILE"
+  echo "targets_file=$TARGETS_FILE"
+  echo "targets_count=$(wc -l < "$TARGETS_FILE")"
+  echo "targets_sha256=$(sha256sum "$TARGETS_FILE" | awk '{print $1}')"
+  echo "distance_file=$TMP_DIR/distance.cfg.txt"
+  echo "bb_count=$(wc -l < "$TMP_DIR/BBnames.txt")"
+  [ -f "$TMP_DIR/Ftargets.txt" ] && echo "ftarget_count=$(wc -l < "$TMP_DIR/Ftargets.txt")"
+  echo "distance_count=$(wc -l < "$TMP_DIR/distance.cfg.txt")"
+  echo "bc_count=$BC_COUNT"
+  echo "postgres_source=$(cd "$POSTGRES_SRC" && git rev-parse HEAD 2>/dev/null || true)"
+  echo "aflgo_source=$(cd "$AFLGO_DIR" && git rev-parse HEAD 2>/dev/null || true)"
+  echo "build_jobs=$BUILD_JOBS"
+  echo "llvm_dir=$LLVM_DIR"
+  echo "aflgo_instrument_dir=$AFLGO_INSTRUMENT_DIR"
+  echo "build_command=$0"
+} | tee "$LOG_DIR/postgres_build_summary.txt"

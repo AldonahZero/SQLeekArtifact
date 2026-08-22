@@ -1,0 +1,4 @@
+# Pinned runtime deps for this repo (minimal, reproducible).
+# NOTE: this is intentionally NOT `pip freeze` of the whole machine.
+openai==1.109.1
+json-repair==0.50.0

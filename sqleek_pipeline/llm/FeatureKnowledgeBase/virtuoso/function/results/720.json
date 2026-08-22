@@ -1,0 +1,30 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlagg/"
+  ],
+  "Title": [
+    "vector XMLAGG ("
+  ],
+  "Feature": [
+    "vector XMLAGG ("
+  ],
+  "Description": [
+    "XMLAGG is aggregate function that produces a forest of XML elements from the given list of xml elements.\n    It concatenates the values returned from one column of multiple rows, unlike XMLCONCAT ,\n    which concatenates the values returned from multiple columns in the same row.\nXMLAGG\nXMLCONCAT\nThe order of element in the result of XMLAGG is defined by the order of retrieval of the\n    source data rows. It is important to remember that the order of rows in an SQL resultset defined only if there's an explicit\n    ORDER BY clause. Hence if the order of elements in the resulting forest is important then XMLAGG should be applied to data\n    that comes from inner SELECT statement that has an ORDER BY clause, not e.g. from a table reference.\nXMLAGG\nNote that XMLAGG is actually declared as DB.DBA.XMLAGG but it is not\n    important for plain use: for compatibility with other systems, any call of XMLAGG in any SQl statement\n    is always replaced with the call of DB.DBA.XMLAGG , no matter which qualifier and user name are in use.\nXMLAGG\nDB.DBA.XMLAGG\nXMLAGG\nDB.DBA.XMLAGG"
+  ],
+  "Examples": [
+    "select XMLELEMENT ('Emp', XMLATTRIBUTES ('Sales Representative' as \"Title\"),",
+    "callret",
+    "select XMLELEMENT ('Emp', XMLATTRIBUTES ('Sales Representative' as \"Title\"),",
+    "callret",
+    "select XMLELEMENT ('Emp', XMLATTRIBUTES ('Sales Representative' as \"Title\"),",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

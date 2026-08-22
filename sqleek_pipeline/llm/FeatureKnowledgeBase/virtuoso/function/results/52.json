@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_get_partner_links/"
+  ],
+  "Title": [
+    "BPEL.BPEL.get_partner_links ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.get_partner_links ("
+  ],
+  "Description": [
+    "BPEL.BPEL.get_partner_links The function is used for partner link\n    names retrieval. It returns an XML document containing all partner links.\nBPEL.BPEL.get_partner_links"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

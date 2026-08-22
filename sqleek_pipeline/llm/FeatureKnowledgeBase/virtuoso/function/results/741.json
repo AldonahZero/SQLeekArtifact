@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xslt_format_number/"
+  ],
+  "Title": [
+    "xslt_format_number ("
+  ],
+  "Feature": [
+    "xslt_format_number ("
+  ],
+  "Description": [
+    "xslt_format_number is an function wrapper for the format-number() XSLT function.\nIt always uses the default formatting parameters described in the XSLT standard."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

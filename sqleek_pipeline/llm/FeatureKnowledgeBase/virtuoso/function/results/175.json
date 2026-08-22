@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ft_set_file/"
+  ],
+  "Title": [
+    "varchar ft_set_file ("
+  ],
+  "Feature": [
+    "varchar ft_set_file ("
+  ],
+  "Description": [
+    "Associates table with tabular data structure represented by CSV document content with external CSV file."
+  ],
+  "Examples": [
+    "CREATE an empty TABLE , using the SQL command: CREATE TABLE csv.tutorial.contacts",
+    "CREATE an empty TABLE , using the SQL command:",
+    "CREATE TABLE csv.tutorial.contacts"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

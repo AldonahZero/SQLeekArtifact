@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn___xml_nsexpand_iristr/"
+  ],
+  "Title": [
+    "__xml_nsexpand_iristr ("
+  ],
+  "Feature": [
+    "__xml_nsexpand_iristr ("
+  ],
+  "Description": [
+    "Checks if the string is QName and if it is so then replaces namespace prefix to the\n    \tfull namespace IRI. Otherwise signals error if the argument is local IRI without a prefix."
+  ],
+  "Examples": [
+    "SELECT __xml_nsexpand_iristr ('no-namespace-prefix-iri')",
+    "SELECT __xml_nsexpand_iristr ('no-such-prefix:local')",
+    "SELECT __xml_ns_iristr ('no-such-prefix', 'knows')"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

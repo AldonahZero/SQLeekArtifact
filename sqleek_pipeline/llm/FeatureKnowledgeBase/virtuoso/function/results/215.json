@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_listen_host/"
+  ],
+  "Title": [
+    "integer http_listen_host ("
+  ],
+  "Feature": [
+    "integer http_listen_host ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function is used to start, stop or lookup the state of user-defined HTTP and HTTPS listeners.\n  The return value is 0 or 1 and indicates state of the listener, 1 for started and 0 for stopped."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

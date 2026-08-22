@@ -1,0 +1,91 @@
+--- a/MySQL/docker/fuzz_root/run_parallel.py
++++ b/MySQL/docker/fuzz_root/run_parallel.py
+@@ -72,6 +72,7 @@
+ sqleek_afl_bin = os.environ.get("SQLEEK_SQLRIGHT_AFL", "./afl-fuzz")
+ sqleek_timeout_ms = os.environ.get("SQLEEK_AFL_TIMEOUT", "300")
+ sqleek_memory_limit = os.environ.get("SQLEEK_MEMORY_LIMIT", "4000")
++sqleek_log_dir = os.environ.get("SQLEEK_LOG_DIR", os.environ.get("LOG_DIR", ""))
+ 
+ if os.path.isfile(os.path.join(os.getcwd(), "shm_env.txt")):
+     os.remove(os.path.join(os.getcwd(), "shm_env.txt"))
+@@ -84,6 +84,7 @@
+     if os.path.isdir(cur_mysql_data_dir_str):
+         shutil.rmtree(cur_mysql_data_dir_str)
+     shutil.copytree(mysql_src_data_dir, cur_mysql_data_dir_str)
++    subprocess.check_call(["chown", "-R", "mysql:mysql", cur_mysql_data_dir_str])
+ 
+     # Set up SQLRight output folder
+     cur_output_dir_str = ""
+@@ -100,8 +101,10 @@
+ 
+     cur_output_file = os.path.join(cur_output_dir_str, "output.txt")
+ 
+-    if os.path.isdir(cur_output_dir_str):
+-        cur_output_file_2 = open(os.path.join(cur_output_dir_str, "output_AFL.txt"), "w")
++    child_log_dir = sqleek_log_dir or os.path.dirname(cur_output_dir_str) or cur_output_dir_str
++    if child_log_dir:
++        os.makedirs(child_log_dir, exist_ok=True)
++        cur_output_file_2 = open(os.path.join(child_log_dir, "sqlright_child_%d.log" % cur_inst_id), "w", buffering=1)
+     else:
+         cur_output_file_2 = open(os.devnull, "w")
+     
+@@ -138,14 +141,12 @@
+         fuzzing_command.append("-w")
+ 
+     fuzzing_command.append("aaa")
+-    fuzzing_command.append("&")
+ 
+-    fuzzing_command = " ".join(fuzzing_command)
+-    print("Running fuzzing command: " + fuzzing_command)
++    print("Running fuzzing command: " + " ".join(fuzzing_command))
+     p = subprocess.Popen(
+                         fuzzing_command,
+                         cwd=os.getcwd(),
+-                        shell=True,
++                        shell=False,
+                         stderr=cur_output_file_2,
+                         stdout=cur_output_file_2,
+                         stdin=subprocess.DEVNULL,
+@@ -174,35 +175,30 @@
+     # mysql_command = "__AFL_SHM_ID=" + cur_shm_str + " " + mysql_bin_dir + " --basedir=" + mysql_root_dir + " --datadir=" + cur_mysql_data_dir_str + " --port=" + str(cur_port_num) + " --socket=" + socket_path + " & "
+ 
+     mysql_command = [
+-        "screen",
+-        "-dmS",
+-        "test" + str(cur_inst_id),
+-        "bash", "-c",
+-        "'",    # left quote
+         mysql_bin_dir,
+         "--basedir=" + mysql_root_dir,
+         "--datadir=" + cur_mysql_data_dir_str,
+         "--port=" + str(cur_port_num),
+         "--socket=" + socket_path,
+         "--performance_schema=OFF",
+-        "'"  # right quote
++        "--user=mysql"
+      ]
+     mysql_modi_env = os.environ.copy()
+     mysql_modi_env["__AFL_SHM_ID"] = cur_shm_str
+ 
+-    mysql_command = " ".join(mysql_command)
+-
+-    print("Running mysql command: __AFL_SHM_ID=" + cur_shm_str + " " + mysql_command)
++    print("Running mysql command: __AFL_SHM_ID=" + cur_shm_str + " " + " ".join(mysql_command))
+     
+-    p = subprocess.Popen(
++    mysql_proc = subprocess.Popen(
+                         mysql_command,
+-                        shell=True,
++                        shell=False,
+                         stderr=cur_output_file_2,
+                         stdout=cur_output_file_2,
+                         stdin=subprocess.DEVNULL,
+                         env = mysql_modi_env
+                         )
+-    time.sleep(1)
++    time.sleep(3)
++    if mysql_proc.poll() is not None:
++        print("MySQL process exited early with code: %s" % mysql_proc.returncode)
+     all_mysql_p_list[cur_inst_id] = cur_shm_str
+ 
+ all_share_mem_file = "./all_share_mem_file.txt"

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_corr/"
+  ],
+  "Title": [
+    "numeric CORR ("
+  ],
+  "Feature": [
+    "numeric CORR ("
+  ],
+  "Description": [
+    "CORR returns the coefficient of correlation of a set of number pairs.\nBoth expr1 and expr2 are number expressions.  Virtuoso applies the function to the set of (expr1,\nexpr2) after eliminating the pairs for which either expr1 or expr2 is null.  Then Virtuoso makes the\nfollowing computation:\nCOVAR_POP(expr1, expr2) / (STDDEV_POP(expr1) * STDDEV_POP(expr2))"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

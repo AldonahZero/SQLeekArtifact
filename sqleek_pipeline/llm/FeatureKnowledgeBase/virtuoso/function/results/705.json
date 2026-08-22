@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_load_mapping_schema_decl/"
+  ],
+  "Title": [
+    "xml_load_mapping_schema_decl ("
+  ],
+  "Feature": [
+    "xml_load_mapping_schema_decl ("
+  ],
+  "Description": [
+    "xml_load_mapping_schema_decl takes a file containing mapping schema and creates a xml view.\nxml_load_mapping_schema_decl"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

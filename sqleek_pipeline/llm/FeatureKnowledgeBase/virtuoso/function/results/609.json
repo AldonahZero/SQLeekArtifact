@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_change_password/"
+  ],
+  "Title": [
+    "USER_CHANGE_PASSWORD ("
+  ],
+  "Feature": [
+    "USER_CHANGE_PASSWORD ("
+  ],
+  "Description": [
+    "This function is used to change the password of an existing user\n    account."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

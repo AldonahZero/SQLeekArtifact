@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_wst_cli/"
+  ],
+  "Title": [
+    "token wst_cli ("
+  ],
+  "Feature": [
+    "token wst_cli ("
+  ],
+  "Description": [
+    "This function is for use with a SOAP client contacting a WS-Trust \n\tendpoint for a security token."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

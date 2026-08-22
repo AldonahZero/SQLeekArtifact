@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sparql_rexec_with_meta/"
+  ],
+  "Title": [
+    "DB.DBA.SPARQL_REXEC_WITH_META ("
+  ],
+  "Feature": [
+    "DB.DBA.SPARQL_REXEC_WITH_META ("
+  ],
+  "Description": [
+    "Remote execution of SPARQL via SPARQL protocol. Fills in output parameters with metadata (like exec metadata) and a vector of vector s of 'long valmode' values."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

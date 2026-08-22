@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_tidy_list_errors/"
+  ],
+  "Title": [
+    "tidy_list_errors ("
+  ],
+  "Feature": [
+    "tidy_list_errors ("
+  ],
+  "Description": [
+    "This function lists errors in given source HTML text, by invoking some\n    custom version of HTML Tidy utility. To learn more about Tidy see http://www.w3.org/People/Raggett/tidy/ ."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "from_base64(string)"
+    ],
+    "Feature": [
+        "from_base64(string)"
+    ],
+    "Description": [
+        "Convert a base64 encoded string to a character string."
+    ],
+    "Examples": [
+        "from_base64('QQ==')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT from_base64('SGVsbG8gV29ybGQ=');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 290,
+            "Prompt Tokens": 259,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 5.7449999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT from_base64('SGVsbG8gV29ybGQ=');"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_identity_value/"
+  ],
+  "Title": [
+    "integer identity_value ("
+  ],
+  "Feature": [
+    "integer identity_value ("
+  ],
+  "Description": [
+    "This function returns the value assigned to an identity column\n  by the previous insert statement.  Insert statements that do not\n  assign identity columns do not affect this.  Note that tables that\n  have no primary key have n invisible identity column called _IDN.\n  The scope is the connection.  This function may be called from a\n  client or from a stored procedure and will return the last given\n  identity column value wherever it was given.\n  The value  stays set until overwritten by the next insert  operation.  This value is not\n  set by rexecute or inserts to remote tables with autoincrement columns declared on the remote database since there is no standard way of getting this information from  remote data sources.\nThe same value can be more efficiently  accessed from clients using the SQLGetStmtOption ODBC call with the option SQL_GETLASTSERIAL.  In this case the value is of type SQLINTEGER."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

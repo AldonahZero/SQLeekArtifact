@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_m/"
+  ],
+  "Title": [
+    "ST_M ("
+  ],
+  "Feature": [
+    "ST_M ("
+  ],
+  "Description": [
+    "returns the M coordinate. M is for mileage or the like. M equal to 245.3 could be 245.3 km of road or 0.3 distance from\n    \tbuoy 245 to buoy 246 or similar."
+  ],
+  "Examples": [
+    "SELECT st_m( st_point (10, 20, 30, 40));"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

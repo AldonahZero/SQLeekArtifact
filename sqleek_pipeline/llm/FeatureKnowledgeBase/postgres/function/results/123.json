@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-binarystring.html"
+    ],
+    "Title": [
+        "sha224"
+    ],
+    "Feature": [
+        "sha224 ( bytea ) \u2192 bytea"
+    ],
+    "Description": [
+        "Computes the SHA-224 hash of the binary string."
+    ],
+    "Examples": [
+        "sha224('abc'::bytea) \u2192 \\x23097d223405d8228642a477bda2\u200b55b32aadbce4bda0b3f7e36c9da7"
+    ],
+    "Category": [
+        "Binary String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sha224('your_binary_string'::bytea);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 279,
+            "Prompt Tokens": 254,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.3099999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sha224('your_binary_string'::bytea);"
+    ]
+}

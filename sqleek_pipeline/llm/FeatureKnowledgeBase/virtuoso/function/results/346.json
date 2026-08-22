@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_graph_security_audit/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_GRAPH_SECURITY_AUDIT ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_GRAPH_SECURITY_AUDIT ("
+  ],
+  "Description": [
+    "This function can detect and automatically fix many sorts of errors in the configuration \n    \tof the graph-level security."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

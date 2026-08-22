@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_unimport_clr/"
+  ],
+  "Title": [
+    "any unimport_clr ("
+  ],
+  "Feature": [
+    "any unimport_clr ("
+  ],
+  "Description": [
+    "This function automatically drops the SQL Type wrappers based on \n\tthe CLR Reflection API. If there is compiled Virtuoso/PL code that \n\treferences the type it will fail to execute (with a compilation error) \n\twhen executed or compiled."
+  ],
+  "Examples": [
+    "select sanity::test('Rob')"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

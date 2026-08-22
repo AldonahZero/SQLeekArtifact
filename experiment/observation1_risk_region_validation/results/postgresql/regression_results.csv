@@ -1,0 +1,3 @@
+model,term,status,sample_count,positive_count
+main_effects,MODEL_STATUS,insufficient_positive_samples,26,0
+interaction,MODEL_STATUS,insufficient_positive_samples,26,0

@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vector/"
+  ],
+  "Title": [
+    "vector ("
+  ],
+  "Feature": [
+    "vector ("
+  ],
+  "Description": [
+    "vector returns a new vector (one-dimensional array) constructed from the given arguments.\nvector"
+  ],
+  "Examples": [
+    "create procedure DUMP_VEC_IMPL (inout _vec any, inout _ses any)",
+    "create function DUMP_VEC (in _vec any)",
+    "select DUMP_VEC (vector ('abc', 1, vector (3.1415), vector ()));",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

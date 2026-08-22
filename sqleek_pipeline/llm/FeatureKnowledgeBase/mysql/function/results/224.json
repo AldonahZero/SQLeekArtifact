@@ -1,0 +1,43 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "MID()",
+    "Description": [
+        "\nMID(str,pos),\n          MID(str FROM\n          pos),\n          MID(str,pos,len),\n          MID(str FROM\n          pos FOR\n          len)\n",
+        "\nMID(str,pos,len)\n          is a synonym for\n          SUBSTRING(str,pos,len).\n        "
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_mid",
+    "Feature": [
+        "MID(str,pos)",
+        "MID(str FROM\n          pos)",
+        "MID(str,pos,len)",
+        "MID(str FROM\n          pos FOR\n          len)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT MID('Hello, World!', 8, 5);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 373,
+            "Prompt Tokens": 347,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 6.764999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT MID('Hello, World!', 8, 5);"
+    ]
+}

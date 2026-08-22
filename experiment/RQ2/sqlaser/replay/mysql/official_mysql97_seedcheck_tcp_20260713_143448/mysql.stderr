@@ -1,0 +1,14 @@
+ERROR 1146 (42S02) at line 7: Table 'test.v1099' doesn't exist
+ERROR 1146 (42S02) at line 11: Table 'test.v1099' doesn't exist
+ERROR 1146 (42S02) at line 13: Table 'test.v1099' doesn't exist
+ERROR 1146 (42S02) at line 14: Table 'test.v1099' doesn't exist
+ERROR 1054 (42S22) at line 21: Unknown column 'Handler_delete' in 'where clause'
+ERROR 1054 (42S22) at line 22: Unknown column 'Handler_delete' in 'field list'
+ERROR 1146 (42S02) at line 23: Table 'test.v1099' doesn't exist
+ERROR 1146 (42S02) at line 24: Table 'test.v1099' doesn't exist
+ERROR 1049 (42000) at line 27: Unknown database 'test_sqlright1'
+ERROR 1049 (42000) at line 28: Unknown database 'test_sqlright1'
+ERROR 1146 (42S02) at line 29: Table 'test.v1099' doesn't exist
+ERROR 1146 (42S02) at line 30: Table 'test.v1099' doesn't exist
+ERROR 1049 (42000) at line 31: Unknown database 'test_sqlright1'
+ERROR 1049 (42000) at line 32: Unknown database 'test_sqlright1'

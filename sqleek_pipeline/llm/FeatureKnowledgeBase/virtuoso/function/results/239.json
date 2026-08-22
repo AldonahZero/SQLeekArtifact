@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_imap_get/"
+  ],
+  "Title": [
+    "array imap_get ("
+  ],
+  "Feature": [
+    "array imap_get ("
+  ],
+  "Description": [
+    "imap_get is used used to work with mail server\n    running the IMAP4 version 4rev1 as defined in rfc3501.\nimap_get"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

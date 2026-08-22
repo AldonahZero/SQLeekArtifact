@@ -1,0 +1,44 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_aggfunc.html"
+    ],
+    "Title": [
+        "group_concat(X)group_concat(X,Y)string_agg(X,Y)"
+    ],
+    "Feature": [
+        "group_concat(X)group_concat(X,Y)string_agg(X,Y)"
+    ],
+    "Description": [
+        "\n  The group_concat() function returns\n  a string which is the concatenation of\n  all non-NULL values of X.  If parameter Y is present then\n  it is used as the separator\n  between instances of X.A comma (\",\") is used as the separator\n  if Y is omitted.\n  \n  The string_agg(X,Y) function is an alias\n  for group_concat(X,Y).  String_agg() is compatible with PostgreSQL\n  and SQL-Server and group_concat() is compatible with MySQL.\n  \n  The order of the concatenated elements is arbitrary unless an\n  ORDER BY argument is included immediately after the last parameter.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT group_concat(X) FROM your_table;",
+        "SELECT group_concat(X) FROM (SELECT 'example' AS X);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 455,
+            "Prompt Tokens": 434,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 7.769999999999999e-05
+        },
+        {
+            "Total Tokens": 612,
+            "Prompt Tokens": 585,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00010394999999999999
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such table: your_table\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT group_concat(X) FROM (SELECT 'example' AS X);"
+    ]
+}

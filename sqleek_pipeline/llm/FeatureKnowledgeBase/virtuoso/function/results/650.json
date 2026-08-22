@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vector_of_nonnulls_agg/"
+  ],
+  "Title": [
+    "vector DB.DBA.VECTOR_OF_NONNULLS_AGG ("
+  ],
+  "Feature": [
+    "vector DB.DBA.VECTOR_OF_NONNULLS_AGG ("
+  ],
+  "Description": [
+    "DB.DBA.VECTOR_OF_NONNULLS_AGG returns a vector of passed values.\n    Similar to DB.DBA.VECTOR_AGG() but ignores NULL arguments.\nDB.DBA.VECTOR_OF_NONNULLS_AGG\nDB.DBA.VECTOR_AGG()\nThe order of items in the vector repeats the order of passing individual values to the aggregate."
+  ],
+  "Examples": [
+    "SELECT DB.DBA.VECTOR_OF_NONNULLS_AGG (subquery.X)",
+    "SELECT DB.DBA.VECTOR_OF_NONNULLS_AGG (subquery.Y)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

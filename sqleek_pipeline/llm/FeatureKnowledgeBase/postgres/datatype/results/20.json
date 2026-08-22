@@ -1,0 +1,45 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-datetime.html"
+    ],
+    "Title": [
+        "date"
+    ],
+    "Feature": [
+        "date"
+    ],
+    "Description": [
+        "Storage Size",
+        "4 bytes",
+        "Description",
+        "date (no time of day)",
+        "Low Value",
+        "4713 BC",
+        "High Value",
+        "5874897 AD",
+        "Resolution",
+        "1 day"
+    ],
+    "Examples": [],
+    "Category": [
+        "Date divide Time Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CURRENT_DATE;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 290,
+            "Prompt Tokens": 274,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 5.07e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CURRENT_DATE;"
+    ]
+}

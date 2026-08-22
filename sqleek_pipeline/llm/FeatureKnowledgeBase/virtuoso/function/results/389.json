@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regr_count/"
+  ],
+  "Title": [
+    "numeric REGR_COUNT ("
+  ],
+  "Feature": [
+    "numeric REGR_COUNT ("
+  ],
+  "Description": [
+    "REGR_COUNT Returns the number of non-null numbers used to fit the regression line."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

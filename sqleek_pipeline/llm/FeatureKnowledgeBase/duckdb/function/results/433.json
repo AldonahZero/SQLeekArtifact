@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "rtrim(string, characters)"
+    ],
+    "Feature": [
+        "rtrim(string, characters)"
+    ],
+    "Description": [
+        "Removes any occurrences of any of the characters from the right side of the string."
+    ],
+    "Examples": [
+        "rtrim('>>>>test<<', '><')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT rtrim('hello world!!!', '!');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 292,
+            "Prompt Tokens": 269,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.4149999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT rtrim('hello world!!!', '!');"
+    ]
+}

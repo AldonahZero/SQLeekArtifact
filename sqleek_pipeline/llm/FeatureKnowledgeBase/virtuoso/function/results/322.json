@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_plink_get_option/"
+  ],
+  "Title": [
+    "BPEL.BPEL.plink_get_option ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.plink_get_option ("
+  ],
+  "Description": [
+    "BPEL.BPEL.plink_get_option This function can be used to retrieve the options assigned to a\n\t    particular partner link.\n\t    These options are used to configure various Web Service\n\t    protocols (see Protocol Support section in BPEL reference chapter).\n\n\t    For available options see plink_set_option() function.\nBPEL.BPEL.plink_get_option\nplink_set_option()"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

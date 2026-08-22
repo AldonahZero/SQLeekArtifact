@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-info.html"
+    ],
+    "Title": [
+        "pg_get_userbyid"
+    ],
+    "Feature": [
+        "pg_get_userbyid ( role oid ) \u2192 name"
+    ],
+    "Description": [
+        "Returns a role's name given its OID."
+    ],
+    "Examples": [],
+    "Category": [
+        "System Information Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pg_get_userbyid(12345);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 286,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.324999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pg_get_userbyid(12345);"
+    ]
+}

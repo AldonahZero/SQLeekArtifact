@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_stat_export/"
+  ],
+  "Title": [
+    "stat_export ("
+  ],
+  "Feature": [
+    "stat_export ("
+  ],
+  "Description": [
+    "This function produces a statistics summary that can be read back into another database with the stat_import() function\nstat_import()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

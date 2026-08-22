@@ -1,0 +1,6 @@
+item	locked_value	current_replay_value	match	note
+risk_branches_total	4248	4220	False	Current rebuilt image; no scaling or normalization applied.
+risk_targets_total	3041	3041	True	Target-region universe remains 3041 valid regions.
+global_branches_total	295012	284668	False	Summary-only llvm-cov denominator from current image.
+coverage_image_id	sha256:72dca978bc11dfaa13cef3bb4dee055edb94e142713f64052006c3bf7c92eaf3	sha256:36fbf588773ecc120c3334cf469012bf2d3aa84ea4d4f12c0b06485e2bac1219	False	Image was rebuilt on 2026-08-22.
+binary_sha256	49663695fe796c3121a9f831cfa331109e46a4492a363098d23643e689de315d	874029632a85adac5d60398c1947be41f7622c29655f4b4fb238766d5be9050b	False	Current /usr/local/mysql/bin/mariadbd.

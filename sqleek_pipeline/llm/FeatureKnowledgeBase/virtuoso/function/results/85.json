@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_connection_is_dirty/"
+  ],
+  "Title": [
+    "integer connection_is_dirty ("
+  ],
+  "Feature": [
+    "integer connection_is_dirty ("
+  ],
+  "Description": [
+    "This function is used to determine if the session variables\n    have changed between a call to connection_vars_set and current point of execution. A call to connection_vars_set will cause subsequent calls to connection_is_dirty to return true.\nconnection_vars_set\nconnection_is_dirty\nThe function is useful in postprocessing functions\n    for making conditional storage of session variables in a database\n    table."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

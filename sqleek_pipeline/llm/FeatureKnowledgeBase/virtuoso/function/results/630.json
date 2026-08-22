@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_fail_check/"
+  ],
+  "Title": [
+    "DB.DBA. VAD_FAIL_CHECK ("
+  ],
+  "Feature": [
+    "DB.DBA. VAD_FAIL_CHECK ("
+  ],
+  "Description": [
+    "makes \"rollback work\", exits from atomic mode and fails server with raw_exit(-1)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

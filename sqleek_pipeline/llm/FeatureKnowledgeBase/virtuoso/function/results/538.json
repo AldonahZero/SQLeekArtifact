@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_transform/"
+  ],
+  "Title": [
+    "ST_Transform ("
+  ],
+  "Feature": [
+    "ST_Transform ("
+  ],
+  "Description": [
+    "Transforms the given shape from its current spatial reference system to one specified by dest_srid.\n    \tTwo optional arguments: the SRID of the resulting shape is set to dest_srid but the conversion is done\n    \tby proj4 using origin_proj4_string for projection of original shape and dest_proj4_string for the result.\n    \tIf orig_proj4_string or dest_proj4_string argument is passed but is NULL instead of string, the projection\n    \tcorresponding to original or destination SRID is used. ST_Transform is provided by a separate plugin named\n    \tproj4, as described below. When the plugin is loaded, functions like ST_Intersects() support pairs of arguments\n    \twith different SRIDs by converting coords of second argument into the system of the first one, as required by OGC\n    \tand GeoSPARQL."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

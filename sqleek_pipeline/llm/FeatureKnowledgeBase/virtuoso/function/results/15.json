@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_describe_images/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_DESCRIBE_IMAGES ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_DESCRIBE_IMAGES ("
+  ],
+  "Description": [
+    "Describes one or more of the images (AMIs, AKIs, and ARIs) available to you.\n    Images available to you include: public images, private images that you own, and private images\n    owned by other AWS accounts but for which you have explicit launch permissions."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

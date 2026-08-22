@@ -1,0 +1,29 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_wsdl_import_udt/"
+  ],
+  "Title": [
+    "varchar WSDL_IMPORT_UDT ("
+  ],
+  "Feature": [
+    "varchar WSDL_IMPORT_UDT ("
+  ],
+  "Description": [
+    "This function is used to create a user defined type (UDT) definition\n    automatically based on a WSDL file. The source WSDL is supplied via a URL.\nThe returned definition can be saved to a file and/or executed automatically\n    to provide instant access to the new UDT.\nTo save the file you must have an appropriate ACL defined."
+  ],
+  "Examples": [
+    "drop type \"ISOAPServerservice\"",
+    "create type \"ISOAPServerservice\"",
+    "create method \"SendTextSMS\"",
+    "create method \"RedWebServiceVersion\"",
+    "create procedure"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_cfg_write/"
+  ],
+  "Title": [
+    "cfg_write ("
+  ],
+  "Feature": [
+    "cfg_write ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function allows modification of existing entries, or update\n    updating existing items in an INI file."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

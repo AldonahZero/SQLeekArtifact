@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "repeat(string, count)"
+    ],
+    "Feature": [
+        "repeat(string, count)"
+    ],
+    "Description": [
+        "Repeats the string count number of times."
+    ],
+    "Examples": [
+        "repeat('A', 5)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT repeat('Hello, World! ', 3);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.294999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT repeat('Hello, World! ', 3);"
+    ]
+}

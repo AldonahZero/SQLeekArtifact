@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_load_rdfxml/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_LOAD_RDFXML ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_LOAD_RDFXML ("
+  ],
+  "Description": [
+    "Parses the content of RDF/XML text as a sequence of separate RDF triples."
+  ],
+  "Examples": [
+    "SELECT COUNT(*)",
+    "callret-0"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

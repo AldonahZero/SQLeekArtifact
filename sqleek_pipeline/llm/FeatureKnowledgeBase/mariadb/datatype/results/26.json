@@ -1,0 +1,53 @@
+{
+    "HTML": [
+        "https://mariadb.com/kb/en/longtext/"
+    ],
+    "Title": [
+        "LONGTEXT"
+    ],
+    "Feature": [
+        "LONGTEXT [CHARACTER SET charset_name] [COLLATE collation_name]\n"
+    ],
+    "Description": [
+        "A TEXT column with a maximum length of 4,294,967,295 or 4GB (232 - 1) characters. The effective maximum length is less if the value contains multi-byte characters. The effective maximum length of LONGTEXT columns also depends on the configured maximum packet size in the client/server protocol and available memory. Each LONGTEXT value is stored using a four-byte length prefix that indicates the number of bytes in the value.",
+        "From MariaDB 10.2.7, JSON is an alias for LONGTEXT. See JSON Data Type for details."
+    ],
+    "Examples": [],
+    "Category": [
+        "String Data Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "CREATE TABLE example_table (example_column LONGTEXT);",
+        "ALTER TABLE example_table ADD COLUMN new_column LONGTEXT;",
+        "SELECT * FROM example_table;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 391,
+            "Prompt Tokens": 368,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 6.9e-05
+        },
+        {
+            "Total Tokens": 542,
+            "Prompt Tokens": 519,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 9.164999999999999e-05
+        },
+        {
+            "Total Tokens": 681,
+            "Prompt Tokens": 663,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 0.00011025
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1050, \"Table 'example_table' already exists\")\n",
+        "This result object does not return rows. It has been closed automatically.",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT * FROM example_table;"
+    ]
+}

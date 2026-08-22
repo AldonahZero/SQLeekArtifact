@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bit_not/"
+  ],
+  "Title": [
+    "bit_not ("
+  ],
+  "Feature": [
+    "bit_not ("
+  ],
+  "Description": [
+    "The function returns bitwise NOT of a given integer.\nOn 64-bit platforms the argument is intentionally truncated to 32 bits\n    to maintain compatibility."
+  ],
+  "Examples": [
+    "select bit_not (18);",
+    "select bit_not (-18);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

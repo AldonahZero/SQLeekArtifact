@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_deregister_image/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_DEREGISTER_IMAGE ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_DEREGISTER_IMAGE ("
+  ],
+  "Description": [
+    "Deregisters the specified AMI. Once deregistered, the AMI cannot be used to launch new instances."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

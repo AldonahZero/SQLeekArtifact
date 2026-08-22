@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_stop_instance/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_STOP_INSTANCE ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_STOP_INSTANCE ("
+  ],
+  "Description": [
+    "Stops an existing AMI instance. Each time user performs transition an instance from stopped to started, OpenLink charges a full instance hour, even if transitions happen multiple times within a single hour."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

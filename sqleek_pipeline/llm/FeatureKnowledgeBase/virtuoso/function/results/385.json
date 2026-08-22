@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_registry_remove/"
+  ],
+  "Title": [
+    "registry_remove ("
+  ],
+  "Feature": [
+    "registry_remove ("
+  ],
+  "Description": [
+    "The function removes a given variable from registry, so future calls of registry_get returns zero.\nSome registry variables are used solely by internal server routines so they should not be changed by any application.\nNobody can remove such a \"protected\" variable even if some of them can be updated by DBA."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

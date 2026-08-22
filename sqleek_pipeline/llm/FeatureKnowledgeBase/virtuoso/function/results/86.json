@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_connection_set/"
+  ],
+  "Title": [
+    "connection_set ("
+  ],
+  "Feature": [
+    "connection_set ("
+  ],
+  "Description": [
+    "This associates a value to the name in the context of present\n    connection. The name should be a string and the value can be any\n    data type except blob, open cursor or an XML entity.\n    If the value is an array it may not contain the restricted types.\nConnection variable setting is not logged and information\n    stored will be lost when the connection is closed.\n    The value can be retrieved by any future statement executing within\n    the same connection. Connection variables can\n    be used as a global variable mechanism for stored procedures, the\n    scope being the client connection.\nIn the case of VSP or SOAP this mechanism cannot be used to\n    pass information between requests by the same client. It will however,\n    be useful for having 'global variables' between procedures called\n    within the same HTTP request.\nNote that this mechanism is used to provide persistent HTTP session variables in some cases but this works through special before and after code which stores the values set with this function into an external session structure.  In this sense this function itself has nothing to do with web session management although it can be used as a component for such."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

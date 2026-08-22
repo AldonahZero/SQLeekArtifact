@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn___xml_ns_uname/"
+  ],
+  "Title": [
+    "__xml_ns_uname ("
+  ],
+  "Feature": [
+    "__xml_ns_uname ("
+  ],
+  "Description": [
+    "Returns an UNAME that is IRI -- concatenation of the expanded namespace IRI and the local part."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

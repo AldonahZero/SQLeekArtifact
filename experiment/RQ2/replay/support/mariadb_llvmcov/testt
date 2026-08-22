@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#!/bin/bash
+
+source /workspace/scripts/base_env.sh
+source /workspace/scripts/env.sh
+
+while killall -9 my_8888
+do
+    sleep 0.5
+    echo "kill server..."
+done
+
+tmpfile="$(mktemp)"
+cat > "$tmpfile"
+
+SQLSIM_TIMEOUT_MS=100000 /workspace/bld_griffin/autodriver_odbc_v5_aflpp dsnForFuzzer < "$tmpfile" || true
+
+rm "$tmpfile"
+
+if ! pgrep my_8888 1>&2
+then 
+    # server crashed.
+    echo "Server crashed." 1>&2
+    kill -SIGABRT $$
+else
+    echo "Server normal." 1>&2
+fi

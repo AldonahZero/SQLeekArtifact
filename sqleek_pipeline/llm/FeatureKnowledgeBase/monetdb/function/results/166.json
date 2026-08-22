@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "local_timezone()"
+    ],
+    "Feature": [
+        "local_timezone()"
+    ],
+    "Description": [
+        "Return type: ",
+        "sec_interval",
+        "get local time zone as represented in seconds"
+    ],
+    "Examples": [
+        "local_timezone()"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT local_timezone();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 275,
+            "Prompt Tokens": 258,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 4.8899999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT local_timezone();"
+    ]
+}

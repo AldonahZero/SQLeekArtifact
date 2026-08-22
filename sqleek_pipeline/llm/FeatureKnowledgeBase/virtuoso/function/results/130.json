@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_iter_next/"
+  ],
+  "Title": [
+    "dict_iter_next ("
+  ],
+  "Feature": [
+    "dict_iter_next ("
+  ],
+  "Description": [
+    "The function gets the dictionary iterator initialized earlier by dict_iter_rewind and checks whether the iterator is still valid and not in conflict with any changes made by dict_put or the like.\nAfter that, if the iterator is in the position past the last item of the dictionary then zero is returned.\nIf the iterator points to some item then ret_key and ret_value parameters are set to the key and value of the current item,\nthe iterator is advanced to the next position (next item if present, otherwise past the end of the dictionary) and a nonzero integer is returned.\nIf ret_value is a constant or an expression but not a plain variable then it is left unchanged but no error is signalled,\nso if the caller procedure needs only values of keys from dictionary then any constant like zero can be passed as a third parameter.\nSimilarly, ret_key is not necessarily a variable.\ndict_iter_rewind\ndict_put\nret_key\nret_value\nret_value\nret_key\nNote that the values of ret_key and ret_value are left unchanged if the iterator points past the end of the dictionary.\nThey are not filled in with NULLs or something like that.\nret_key\nret_value"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

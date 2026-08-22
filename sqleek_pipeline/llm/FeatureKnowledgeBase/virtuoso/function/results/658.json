@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vt_batch_d_id/"
+  ],
+  "Title": [
+    "vt_batch_d_id ("
+  ],
+  "Feature": [
+    "vt_batch_d_id ("
+  ],
+  "Description": [
+    "Multiple documents may be indexed or unindexed with a single batch. In this\ncase this function will be called for each document id, in ascending order\nof ID."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

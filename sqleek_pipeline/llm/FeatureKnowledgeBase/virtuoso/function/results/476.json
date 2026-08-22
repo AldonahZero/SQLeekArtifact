@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_dt_define/"
+  ],
+  "Title": [
+    "soap_dt_define ("
+  ],
+  "Feature": [
+    "soap_dt_define ("
+  ],
+  "Description": [
+    "This defines a new complex SOAP datatype (usually array of structure) named 'name'.\nThe schema_string string represents definition as complexType element from XML Schema.\nThe only complexContent, all and sequence elements can be used within the complexType. This means that\noptional elements in the defined datatype are not supported as a variant of the SOAP parameter datatype.\nIf the schema descriptions contains an unsupported element , the SQL error will be signalled and error message\nwill explain what element is wrong."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

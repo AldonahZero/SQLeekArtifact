@@ -1,0 +1,77 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "gen_range()",
+    "Description": [
+        "\ngen_range(lower,\n              upper)\n",
+        "\n              Generates a random number chosen from a specified range.\n            ",
+        "\n              Arguments:\n",
+        "\n\nlower: An integer that\n                  specifies the lower boundary of the range.\n                \nupper: An integer that\n                  specifies the upper boundary of the range, which must\n                  not be less than the lower boundary.\n\n",
+        "\n              Return value:\n            ",
+        "\n              A random integer in the range from\n              lower to\n              upper, inclusive, or\n              NULL if the\n              upper argument is less than\n              lower.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SELECT gen_range(100, 200), gen_range(-1000, -800);\n+---------------------+------------------------+\n| gen_range(100, 200) | gen_range(-1000, -800) |\n+---------------------+------------------------+\n|                 177 |                   -917 |\n+---------------------+------------------------+\nmysql> SELECT gen_range(1, 0);\n+-----------------+\n| gen_range(1, 0) |\n+-----------------+\n|            NULL |\n+-----------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/data-masking-plugin-functions.html#function_gen-range-plugin",
+    "Feature": [
+        "gen_range(lower,\n              upper)"
+    ],
+    "Examples": [
+        "mysql> SELECT gen_range(100, 200), gen_range(-1000, -800);\n+---------------------+------------------------+\n| gen_range(100, 200) | gen_range(-1000, -800) |\n+---------------------+------------------------+\n|                 177 |                   -917 |\n+---------------------+------------------------+\nmysql> SELECT gen_range(1, 0);\n+-----------------+\n| gen_range(1, 0) |\n+-----------------+\n|            NULL |\n+-----------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT gen_range(10, 50);",
+        "SELECT gen_range(1, 100);",
+        "SELECT gen_range(0, 10);",
+        "SELECT gen_range(-10, 10);",
+        "SELECT gen_range(5, 15);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 546,
+            "Prompt Tokens": 524,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 9.18e-05
+        },
+        {
+            "Total Tokens": 703,
+            "Prompt Tokens": 681,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.00011535
+        },
+        {
+            "Total Tokens": 860,
+            "Prompt Tokens": 838,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.0001389
+        },
+        {
+            "Total Tokens": 1017,
+            "Prompt Tokens": 995,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.00016245
+        },
+        {
+            "Total Tokens": 1174,
+            "Prompt Tokens": 1152,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.00018599999999999997
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_range does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_range does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_range does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_range does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_range does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

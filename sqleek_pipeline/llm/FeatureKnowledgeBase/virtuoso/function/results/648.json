@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vector_concat/"
+  ],
+  "Title": [
+    "vector vector_concat ("
+  ],
+  "Feature": [
+    "vector vector_concat ("
+  ],
+  "Description": [
+    "vector_concat takes a variable number of\n      vectors (heterogeneous arrays) and constructs a new vector containing\n      copies of each (top level) element in the arguments.\nvector_concat"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

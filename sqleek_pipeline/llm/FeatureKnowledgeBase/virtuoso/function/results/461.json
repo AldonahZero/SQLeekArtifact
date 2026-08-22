@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sign/"
+  ],
+  "Title": [
+    "sign ("
+  ],
+  "Feature": [
+    "sign ("
+  ],
+  "Description": [
+    "sign returns either -1, 0 or 1 depending whether its numeric argument is negative, zero or positive.\nsign(-12)\t\t\t-> -1\nsign(0)\t\t\t\t-> 0\nsign(910)\t\t\t-> 1\nsign(atof('-1.23456789'))\t-> -1\nsign(0.0)\t\t\t-> 0\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

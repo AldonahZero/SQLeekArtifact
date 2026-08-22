@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-05T12:44:36.777885+00:00",
+  "operation": "complete_rq4_component_heatmap_from_existing_replays",
+  "backup": "/root/SQLeek/experiment/RQ4/result/data/backups/before_component_heatmap_completion_20260805_124436",
+  "rows_before": 88,
+  "rows_after": 104,
+  "rows_added": 16,
+  "imports": [
+    {
+      "dbms": "MariaDB",
+      "tool": "SQLeek-W/O-M2",
+      "source_paths": [
+        "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_seq_replay_20260729_131551/mariadb/real/component_heatmap.csv",
+        "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_mariadb_seq_replay_20260729_170725/r2/real/component_heatmap.csv",
+        "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_mariadb_seq_replay_20260729_170725/r3/real/component_heatmap.csv",
+        "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_mariadb_seq_replay_20260729_170725/r4/real/component_heatmap.csv"
+      ],
+      "source_rows": 32,
+      "source_repeats": 4,
+      "components": 8
+    },
+    {
+      "dbms": "MonetDB",
+      "tool": "SQLeek-W/O-M2",
+      "source_paths": [
+        "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_seq_replay_20260729_131551/monetdb/real/component_heatmap.csv"
+      ],
+      "source_rows": 8,
+      "source_repeats": 1,
+      "components": 8
+    }
+  ],
+  "not_inferred": [
+    "MonetDB SQLeek-W/O-M3"
+  ]
+}

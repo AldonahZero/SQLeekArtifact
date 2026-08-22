@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_stringdate/"
+  ],
+  "Title": [
+    "stringdate ("
+  ],
+  "Feature": [
+    "stringdate ("
+  ],
+  "Description": [
+    "stringdate converts dates and timestamps from text to the internal DATETIME type.\nThe external format is: YYYY.MM.DD  hh:mm.ss uuuuuu\n    where uuuuuu represents number of microseconds.\nIf trailing parts are omitted from the string given to stringdate,\n    they are assumed to be zero. The three first parts are mandatory.\n    Note that use of\ncast (x as datetime)\nis preferred\n    over this function."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

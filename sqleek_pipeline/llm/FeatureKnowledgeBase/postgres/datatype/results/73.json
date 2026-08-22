@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-pseudo.html"
+    ],
+    "Title": [
+        "language_handler"
+    ],
+    "Feature": [
+        "language_handler"
+    ],
+    "Description": [
+        "Description",
+        "A procedural language call handler is declared to return language_handler."
+    ],
+    "Examples": [],
+    "Category": [
+        "Pseudo-Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'language_handler';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 268,
+            "Prompt Tokens": 250,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.8299999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'language_handler';"
+    ]
+}

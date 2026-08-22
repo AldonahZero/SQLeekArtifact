@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_soap_box_structure/"
+  ],
+  "Title": [
+    "any soap_box_structure ("
+  ],
+  "Feature": [
+    "any soap_box_structure ("
+  ],
+  "Description": [
+    "This function provides a way to encapsulate a structure suitable for \n\t  soap serialization. It accepts a name/value pairs which represents name and\n\t  value of elements of a structure.\nFor example structure :\n{\n\t    varString 'hello',\n\t      varInt  1234 \n\t  }\nwill be represented as soap_box_structure ('varString', 'hello', 'varInt', 1234);\n\n\t      furthermore value returned from soap_box_structure passed as an output parameter \n\t      to the procedure (named structname) working as SOAP method will return :\n<structName>\n\t\t  <varString>hello</varString>\n\t\t  <varInt>1234</varInt> \n\t  </structName>\nPlease note that this is a one of possibilities to express structures \n\t      for SOAP request/response in Virtuoso/PL. The other way to express structure is to use \n\t      User Defined Types (see SOAP & WSDL section of the documentation)."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

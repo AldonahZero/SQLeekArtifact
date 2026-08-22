@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_urlrewrite_create_regex_rule/"
+  ],
+  "Title": [
+    "URLREWRITE_CREATE_REGEX_RULE ("
+  ],
+  "Feature": [
+    "URLREWRITE_CREATE_REGEX_RULE ("
+  ],
+  "Description": [
+    "Creates regex rules."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

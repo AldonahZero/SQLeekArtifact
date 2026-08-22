@@ -1,0 +1,72 @@
+--- a/libs/mysql/strconv/decode/parse_options.h
++++ b/libs/mysql/strconv/decode/parse_options.h
+@@ -99,7 +99,7 @@ struct Compound_parse_options {
+   static constexpr bool has_checker = detail::Checker_count<Tuple_t> > 0;
+   // Deliberate use of `::type`
+   // NOLINTNEXTLINE(modernize-type-traits)
+-  using Format_t = std::conditional_t<
++  using Format_t = typename std::conditional_t<
+       has_format,
+       mysql::utils::Tuple_find_helper<Tuple_t, detail::Is_format_pred>,
+       std::type_identity<Text_format>>::type;
+--- a/libs/mysql/strconv/decode/parser.h
++++ b/libs/mysql/strconv/decode/parser.h
+@@ -91,5 +91,58 @@ class Parser : public detail::Parse_position<Parser>,
+     return lhs.distance_from(rhs) <=> 0;
+   }
+ 
++  [[nodiscard]] const char &operator*() const { return *get_pointer(); }
++
++  [[nodiscard]] const char *operator->() const { return get_pointer(); }
++
++  Parser &operator++() {
++    advance(1);
++    return *this;
++  }
++
++  Parser operator++(int) {
++    Parser ret(*this);
++    advance(1);
++    return ret;
++  }
++
++  Parser &operator--() {
++    advance(-1);
++    return *this;
++  }
++
++  Parser operator--(int) {
++    Parser ret(*this);
++    advance(-1);
++    return ret;
++  }
++
++  Parser &operator+=(std::ptrdiff_t delta) {
++    advance(delta);
++    return *this;
++  }
++
++  Parser &operator-=(std::ptrdiff_t delta) { return *this += -delta; }
++
++  [[nodiscard]] Parser operator+(std::ptrdiff_t delta) const {
++    Parser ret(*this);
++    ret.advance(delta);
++    return ret;
++  }
++
++  [[nodiscard]] Parser operator-(std::ptrdiff_t delta) const { return *this + -delta; }
++
++  [[nodiscard]] std::ptrdiff_t operator-(const Parser &other) const {
++    return distance_from(other);
++  }
++
++  [[nodiscard]] const char &operator[](std::ptrdiff_t delta) const {
++    return *(*this + delta);
++  }
++
++  friend Parser operator+(std::ptrdiff_t delta, const Parser &parser) {
++    return parser + delta;
++  }
++
+ 
+   // ==== Report parse_error at current position ====

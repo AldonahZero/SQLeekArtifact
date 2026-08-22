@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/window-functions"
+    ],
+    "Title": [
+        "sys.var_pop(numeric_expr)"
+    ],
+    "Feature": [
+        "sys.var_pop(numeric_expr)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double"
+    ],
+    "Examples": [],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.var_pop(123.45) AS variance_population;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.4449999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.var_pop(123.45) AS variance_population;"
+    ]
+}

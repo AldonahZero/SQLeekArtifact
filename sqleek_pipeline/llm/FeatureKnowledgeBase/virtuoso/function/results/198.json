@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http/"
+  ],
+  "Title": [
+    "http ("
+  ],
+  "Feature": [
+    "http ("
+  ],
+  "Description": [
+    "http writes val_expr to HTTP client or, if parameter stream is given,\n    to the given string output stream.\nhttp\nval_expr\nstream\nval_expr may be any scalar object, i.e. string , date or number and will\n    automatically be cast to varchar before further processing.\n    http will print out the string without escapes. http_value uses HTML escapes and http_url URL\n    escapes.\nval_expr\nhttp_value\nhttp_url"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_trace_status/"
+  ],
+  "Title": [
+    "void trace_status ("
+  ],
+  "Feature": [
+    "void trace_status ("
+  ],
+  "Description": [
+    "You must have DBA privileges to run that function.\nThis function returns an array of all available trace options and current status of the traces."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_exec_result/"
+  ],
+  "Title": [
+    "any exec_result ("
+  ],
+  "Feature": [
+    "any exec_result ("
+  ],
+  "Description": [
+    "This function returns a result set row to the calling procedure's context, whether it is \nthe client, exec function or a procedure view).  The row's values are the elements of the supplied\nres_values_array vector."
+  ],
+  "Examples": [
+    "create procedure XX1 ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

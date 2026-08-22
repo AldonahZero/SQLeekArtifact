@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "trim(string)"
+    ],
+    "Feature": [
+        "trim(string)"
+    ],
+    "Description": [
+        "Removes any spaces from either side of the string."
+    ],
+    "Examples": [
+        "trim('    test  ')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT trim('  Hello, DuckDB!  ');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 276,
+            "Prompt Tokens": 251,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.264999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT trim('  Hello, DuckDB!  ');"
+    ]
+}

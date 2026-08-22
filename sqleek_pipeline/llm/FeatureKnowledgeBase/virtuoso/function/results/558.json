@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_stddev_pop/"
+  ],
+  "Title": [
+    "numeric STDDEV_POP ("
+  ],
+  "Feature": [
+    "numeric STDDEV_POP ("
+  ],
+  "Description": [
+    "STDDEV_POP computes the population standard deviation and returns the square root of the\npopulation variance. This function is the same as the square root of the VAR_POP function.\nWhen VAR_POP returns null, returns null."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

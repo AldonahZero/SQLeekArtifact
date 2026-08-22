@@ -1,0 +1,65 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/assignment-operators-assignment-operator/"
+    ],
+    "Title": [
+        "Assignment Operator (=)"
+    ],
+    "Feature": [
+        "identifier = expr\n"
+    ],
+    "Description": [
+        "The equal sign is used as both an assignment operator in certain contexts, and as a comparison operator. When used as assignment operator, the value on the right is assigned to the variable (or column, in some contexts) on the left.",
+        "Since its use can be ambiguous, unlike the := assignment operator, the = assignment operator cannot be used in all contexts, and is only valid as part of a SET statement, or the SET clause of an UPDATE statement",
+        "This operator works with both user-defined variables and local variables."
+    ],
+    "Examples": [
+        "UPDATE table_name SET x = 2 WHERE x > 100;\n",
+        "SET @x = 1, @y := 2;\n"
+    ],
+    "Category": [
+        "Assignment Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SET @myVariable = 10;",
+        "SET @myVariable := 10;",
+        "SET @myVariable = 10;",
+        "SELECT @myVariable := 10;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 371,
+            "Prompt Tokens": 351,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 6.464999999999999e-05
+        },
+        {
+            "Total Tokens": 514,
+            "Prompt Tokens": 494,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 8.609999999999999e-05
+        },
+        {
+            "Total Tokens": 657,
+            "Prompt Tokens": 637,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00010754999999999999
+        },
+        {
+            "Total Tokens": 800,
+            "Prompt Tokens": 780,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.000129
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "This result object does not return rows. It has been closed automatically.",
+        "This result object does not return rows. It has been closed automatically.",
+        "This result object does not return rows. It has been closed automatically.",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT @myVariable := 10;"
+    ]
+}

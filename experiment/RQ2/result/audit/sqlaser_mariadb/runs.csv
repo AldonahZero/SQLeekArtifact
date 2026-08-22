@@ -1,0 +1,6 @@
+run_id,tool,dbms,version,repeat_id,start_time,end_time,budget_hours,seed_corpus,build_id,container_id,status,unsupported_reason
+mariadb_sqlaser_r1,SQLaser,mariadb,MariaDB 12.3.2 llvmcov binary-mode replay,1,,,24,/root/SQLeek/experiment/RQ2/replay/output/sqlaser_mariadb_llvm_replay_20260822_125300/profdata_index/r1,griffin_mariadb_llvmcov:latest binary-mode=1,,completed,
+mariadb_sqlaser_r2,SQLaser,mariadb,MariaDB 12.3.2 llvmcov binary-mode replay,2,,,24,/root/SQLeek/experiment/RQ2/replay/output/sqlaser_mariadb_llvm_replay_20260822_125300/profdata_index/r2,griffin_mariadb_llvmcov:latest binary-mode=1,,completed,
+mariadb_sqlaser_r3,SQLaser,mariadb,MariaDB 12.3.2 llvmcov binary-mode replay,3,,,24,/root/SQLeek/experiment/RQ2/replay/output/sqlaser_mariadb_llvm_replay_20260822_125300/profdata_index/r3,griffin_mariadb_llvmcov:latest binary-mode=1,,completed,
+mariadb_sqlaser_r4,SQLaser,mariadb,MariaDB 12.3.2 llvmcov binary-mode replay,4,,,24,/root/SQLeek/experiment/RQ2/replay/output/sqlaser_mariadb_llvm_replay_20260822_125300/profdata_index/r4,griffin_mariadb_llvmcov:latest binary-mode=1,,completed,
+mariadb_sqlaser_r5,SQLaser,mariadb,MariaDB 12.3.2 llvmcov binary-mode replay,5,,,24,/root/SQLeek/experiment/RQ2/replay/output/sqlaser_mariadb_llvm_replay_20260822_125300/profdata_index/r5,griffin_mariadb_llvmcov:latest binary-mode=1,,completed,

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_datediff/"
+  ],
+  "Title": [
+    "datediff ("
+  ],
+  "Feature": [
+    "datediff ("
+  ],
+  "Description": [
+    "datediff subtracts date1 from date2 and returns the difference as\n    an integer in the specified units."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

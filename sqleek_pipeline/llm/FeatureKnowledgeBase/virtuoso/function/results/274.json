@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ld_dir_all/"
+  ],
+  "Title": [
+    "ld_dir_all ("
+  ],
+  "Feature": [
+    "ld_dir_all ("
+  ],
+  "Description": [
+    "Adds files from the specified directory, including any and all subdirectories, to control list set up in the virtuoso.ini file."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

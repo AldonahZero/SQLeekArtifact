@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ses_disconnect/"
+  ],
+  "Title": [
+    "ses_disconnect ("
+  ],
+  "Feature": [
+    "ses_disconnect ("
+  ],
+  "Description": [
+    "This function is used to disconnect from a session and destroy the\n    session handle. After this function is called the session handle becomes\n    invalid and hence cannot be used for reading or writing as an error will\n    occur."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

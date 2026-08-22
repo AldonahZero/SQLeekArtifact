@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vdd_measure_rpc_time/"
+  ],
+  "Title": [
+    "float vdd_measure_rpc_time ("
+  ],
+  "Feature": [
+    "float vdd_measure_rpc_time ("
+  ],
+  "Description": [
+    "This function will return the estimated number of milliseconds to \n\tperform an RPC round trip on the DSN supplied."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

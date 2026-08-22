@@ -1,0 +1,23 @@
+--- a/MySQL/docker/fuzz_root/run_parallel.py
++++ b/MySQL/docker/fuzz_root/run_parallel.py
+@@ -150,7 +150,7 @@
+                         cwd=os.getcwd(),
+                         shell=True,
+-                        stderr=subprocess.DEVNULL,
+-                        stdout=subprocess.DEVNULL,
++                        stderr=cur_output_file_2,
++                        stdout=cur_output_file_2,
+                         stdin=subprocess.DEVNULL,
+                         env=modi_env
+                         )
+@@ -204,7 +204,7 @@
+     p = subprocess.Popen(
+                         mysql_command,
+                         shell=True,
+-                        stderr=subprocess.DEVNULL,
+-                        stdout=subprocess.DEVNULL,
++                        stderr=cur_output_file_2,
++                        stdout=cur_output_file_2,
+                         stdin=subprocess.DEVNULL,
+                         env = mysql_modi_env
+                         )

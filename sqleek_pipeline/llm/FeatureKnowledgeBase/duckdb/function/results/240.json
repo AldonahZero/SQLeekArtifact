@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "array_length"
+    ],
+    "Feature": [
+        "array_length"
+    ],
+    "Description": [
+        "len(list)",
+        "Return the length of the list."
+    ],
+    "Examples": [
+        "len([1, 2, 3])"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_length([1, 2, 3, 4, 5]);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 5.565e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_length([1, 2, 3, 4, 5]);"
+    ]
+}

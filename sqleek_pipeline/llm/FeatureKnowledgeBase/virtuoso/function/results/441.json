@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rstmtexec/"
+  ],
+  "Title": [
+    "rstmtexec ("
+  ],
+  "Feature": [
+    "rstmtexec ("
+  ],
+  "Description": [
+    "This function can be used to execute SQL on a remote data source\n    directly. It returns a result set where one is expected.\nThis function is wrapper for the rexecute() provided for convenience as a shortcut.\nrexecute()\nUnless explicitly granted, only the DBA group is permitted to use the rstmtexec() to maintain security. Caution is required\n\there since any user granted use of rstmtexec() has\n\tfull control of the remote data source set-up by the DBA, albeit limited\n\tto the overall abilities of the remote user on the remote data source.\n\tUsers can be granted and denied access to this function using the following\n\tcommands:\nrstmtexec()\nrstmtexec()\nGRANT REXECUTE ON '<attached_dsn_name>' TO <user_name>\nREVOKE REXECUTE ON '<attached_dsn_name>' FROM <user_name>\nThis command directly affects the grant to the rexecute() function, which is the underlying mechanism for providing this function.\nrexecute()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_physical_path/"
+  ],
+  "Title": [
+    "http_physical_path ("
+  ],
+  "Feature": [
+    "http_physical_path ("
+  ],
+  "Description": [
+    "This function returns the absolute path to the physical path location of\ncurrent HTTP request"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

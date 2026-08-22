@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vad_check_installability/"
+  ],
+  "Title": [
+    "varchar DB.DBA. VAD_CHECK_INSTALLABILITY ("
+  ],
+  "Feature": [
+    "varchar DB.DBA. VAD_CHECK_INSTALLABILITY ("
+  ],
+  "Description": [
+    "Checks the presence and correct versions of required packages and\n  of the Virtuoso platform. It does not execute any pre-install Virtuoso/PL code\n  from the package, so there is no guarantee that installation will be\n  successful if the check found no error."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

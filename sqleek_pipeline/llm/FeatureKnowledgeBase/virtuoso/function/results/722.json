@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlattributes/"
+  ],
+  "Title": [
+    "XMLATTRIBUTES ("
+  ],
+  "Feature": [
+    "XMLATTRIBUTES ("
+  ],
+  "Description": [
+    "This function creates a vector that may be used only as argument of XMLELEMENT function. The vector has an even number of elements, each odd element is a name of an attribute, an\n   even element is its value. If the attribute value is NULL, then no attribute and no value is created.\n   If none of the attribute is created, then the function returns NULL.\n   If string_expr is a column name, then you can omit the AS clause, and Virtuoso uses the partially escaped form of \n   the column name as the attribute name.\nXMLELEMENT"
+  ],
+  "Examples": [
+    "with one attribute (if value of the column 'Region' is NULL)",
+    "select XMLELEMENT (\"EmpName\",",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

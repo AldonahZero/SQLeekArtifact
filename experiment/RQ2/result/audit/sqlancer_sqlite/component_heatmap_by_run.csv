@@ -1,0 +1,7 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+sqlite_sqlancer_r1,sqlite,1,executor,SQLancer,1050,493,0.4695238095238095,255,200,0.7672955974842768
+sqlite_sqlancer_r1,sqlite,1,other,SQLancer,764,489,0.6400523560209425,80,74,0.9375
+sqlite_sqlancer_r1,sqlite,1,storage,SQLancer,500,146,0.292,62,33,0.525
+sqlite_sqlancer_r1,sqlite,1,type_system,SQLancer,54,6,0.1111111111111111,8,6,0.75
+sqlite_sqlancer_r1,sqlite,1,optimizer,SQLancer,434,243,0.5599078341013825,32,28,0.8421052631578947
+sqlite_sqlancer_r1,sqlite,1,catalog_metadata,SQLancer,6,4,0.6666666666666666,6,6,1.0

@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/string-functions"
+    ],
+    "Title": [
+        "TRIM()"
+    ],
+    "Feature": [
+        "TRIM()"
+    ],
+    "Description": [
+        "TRIM()",
+        "\u53bb\u6389\u524d\u7f00\u548c\u540e\u7f00\u7a7a\u683c"
+    ],
+    "Examples": [],
+    "Category": [
+        "\u5b57\u7b26\u4e32\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT TRIM('   Hello, World!   ');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 255,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.324999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT TRIM('   Hello, World!   ');"
+    ]
+}

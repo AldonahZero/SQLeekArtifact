@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_tree_doc_media_type/"
+  ],
+  "Title": [
+    "varchar xml_tree_doc_media_type ("
+  ],
+  "Feature": [
+    "varchar xml_tree_doc_media_type ("
+  ],
+  "Description": [
+    "This function returns the media type in effect for the result of the xslt() \n    (XSL-T) transformation , based on xsl:output \"media-type\" and \"method\" \n    attributes of the XSL-T style-sheet applied.  \n    It accepts an entity (potentially resulting from using xslt()) as a argument \n    and will return a string containing the media-type."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

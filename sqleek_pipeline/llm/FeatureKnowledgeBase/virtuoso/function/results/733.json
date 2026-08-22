@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xper_doc/"
+  ],
+  "Title": [
+    "xper_doc ("
+  ],
+  "Feature": [
+    "xper_doc ("
+  ],
+  "Description": [
+    "This parses the argument, which is expected to be a well formed XML\nfragment and returns a parse tree as a special object with underlying disk structure, named\n\"persistent XML\" or \"XPER\"\nWhile the result of xml_tree is a memory-resident array of vectors,\nthe XPER object consumes only a little amount of memory, and almost all data are disk-resident.\nXPERs are better then \"XML trees\" for large documents and\nfor \"write once -- read many\" stores such as a table with\none XML document per row used as a \"library\" of documents.\nTo be saved in a LONG VARCHAR column, \"XML tree\" entity will be\nconverted back to plain text of XML syntax; but \"XPER\" entity\nwill be saved as a ready-to-use disk structure."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

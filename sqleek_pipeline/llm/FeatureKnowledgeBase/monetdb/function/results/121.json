@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "ucase(s)"
+    ],
+    "Feature": [
+        "ucase(s)"
+    ],
+    "Description": [
+        "Return type: ",
+        "same as input",
+        "convert string s to upper case"
+    ],
+    "Examples": [
+        "ucase('MonetDB')"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT UCASE('example string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 281,
+            "Prompt Tokens": 261,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.1149999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT UCASE('example string');"
+    ]
+}

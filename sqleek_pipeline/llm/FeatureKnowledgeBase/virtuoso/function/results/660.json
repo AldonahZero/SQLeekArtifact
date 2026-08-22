@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vt_batch_feed_offband/"
+  ],
+  "Title": [
+    "vt_batch_feed_offband ("
+  ],
+  "Feature": [
+    "vt_batch_feed_offband ("
+  ],
+  "Description": [
+    "This function allows you to add offband information to a free text update batch.\nThis should be done by index and unindex hook functions of the free text index\nif and only if the index is created with both \"CLUSTERED WITH (...)\"\nand \"USING FUNCTION\" options and the hook function returns non-zero\nvalue, i.e. disables standard indexing of the document.\nThis function is needed only for very unusual free text indexes."
+  ],
+  "Examples": [
+    "create table LEADS (",
+    "create procedure LEADS_SUBJECT_INDEX_HOOK (inout vtb any, inout pkeyid integer)",
+    "create procedure",
+    "create text index on LEADS (SUBJECT) with key FREETEXT_ID"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

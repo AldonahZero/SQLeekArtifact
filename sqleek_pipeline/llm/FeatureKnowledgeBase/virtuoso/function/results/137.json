@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_to_vector/"
+  ],
+  "Title": [
+    "vector dict_to_vector ("
+  ],
+  "Feature": [
+    "vector dict_to_vector ("
+  ],
+  "Description": [
+    "The function returns an array of all data stored in the given dictionary, every pair is represented as two consecutive element of the resulting array.\nThus the dictionary of N pairs is converted into a vector of length 2N where keys are at positions 0, 2, 4, ..., 2N-1\nand corresponding dependent data are at positions 1, 3, 5, ..., 2N.\nIf keys are all scalars of same type then get_keyword function can be used to search in the resulting array.\nget_keyword\nIf the destructive parameter is 1 or 2 then the function may avoid copying of keys and values to the resulting array\nby moving them out from the dictionary. This is faster but the dictionary will become empty at the end of operation.\nThe destructive parameter equal to 1 does not have any effect if the dictionary is used as a value of more than one variable.\nThus it is safe to make this parameter equal to 1 as soon as the variable passed to the function as dict is no longer in use after\nthe function call and there's no need to inspect the whole program to check if other variables may be affected.\nThe parameter equal to 2 ignores the presence of multiple variables so the operation may cause unexpected results in other fragments of code that share the dictionary.\ndestructive\ndestructive\ndict"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

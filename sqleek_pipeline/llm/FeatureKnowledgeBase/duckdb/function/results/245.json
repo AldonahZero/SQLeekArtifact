@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "array_push_back"
+    ],
+    "Feature": [
+        "array_push_back"
+    ],
+    "Description": [
+        "array_append",
+        "list_append(list, element)",
+        "Appends element to list."
+    ],
+    "Examples": [
+        "list_append([2, 3], 4)"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_push_back(array[1, 2, 3], 4);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 287,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 5.654999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_push_back(array[1, 2, 3], 4);"
+    ]
+}

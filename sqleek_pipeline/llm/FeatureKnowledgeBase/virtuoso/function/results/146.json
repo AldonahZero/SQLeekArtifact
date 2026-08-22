@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_either/"
+  ],
+  "Title": [
+    "either ("
+  ],
+  "Feature": [
+    "either ("
+  ],
+  "Description": [
+    "either returns a copy of arg1 if cond is something\n      else than integer 0 (zero). Otherwise, a copy of arg2 is returned."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-textsearch.html"
+    ],
+    "Title": [
+        "ts_stat"
+    ],
+    "Feature": [
+        "ts_stat ( sqlquery text [, weights text ] ) \u2192 setof record ( word text, ndoc integer, nentry integer )"
+    ],
+    "Description": [
+        "Executes the sqlquery, which must return a single tsvector column, and returns statistics about each distinct lexeme contained in the data. See Section\u00a012.4.4 for details."
+    ],
+    "Examples": [
+        "ts_stat('SELECT vector FROM apod') \u2192 (foo,10,15) ..."
+    ],
+    "Category": [
+        "Text Search Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM ts_stat('SELECT to_tsvector(''your text here'')')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 332,
+            "Prompt Tokens": 300,
+            "Completion Tokens": 32,
+            "Total Cost (USD)": 6.419999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT * FROM ts_stat('SELECT to_tsvector(''your text here'')')"
+    ]
+}

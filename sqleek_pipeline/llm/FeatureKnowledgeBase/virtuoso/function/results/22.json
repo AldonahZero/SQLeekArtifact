@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ann_phrase_class_add/"
+  ],
+  "Title": [
+    "DB.DBA.ANN_PHRASE_CLASS_ADD ("
+  ],
+  "Feature": [
+    "DB.DBA.ANN_PHRASE_CLASS_ADD ("
+  ],
+  "Description": [
+    "The returned value is APC_ID of a class if positive or an error code if negative.\nTo update phrase class, no special DB.DBA.ANN_PHRASE_CLASS_UPDATE() exists, use DB.DBA.ANN_PHRASE_CLASS_ADD()\nwith parameter \"mode\" equal to 'replacing'."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

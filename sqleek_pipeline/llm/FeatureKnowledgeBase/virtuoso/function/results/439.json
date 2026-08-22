@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_row_count/"
+  ],
+  "Title": [
+    "integer row_count ("
+  ],
+  "Feature": [
+    "integer row_count ("
+  ],
+  "Description": [
+    "This function returns the count of rows affected by the previous DML\n  statement in a procedure body. The scope is local to the procedure. Calling\n  this from ODBC will always return 0. This is the PL equivalent of the\n  SQLRowCount ODBC function. The count is set after any in-line searched or\n  positioned update, insert or delete. This is also set by the exec function.\n  The count stays set until overwritten by the next DML operation. This is not\n  set by rexecute."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

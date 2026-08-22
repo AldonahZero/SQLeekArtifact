@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-08-03T09:12:34.886099+00:00",
+  "operation": "import_formal_postgresql_wo_m1_coverage_replay",
+  "variant": "SQLeek-W/O-M1",
+  "dbms": "PostgreSQL",
+  "source_package": "/root/SQLeek/experiment/RQ4/live/rq4_wo_m1_postgres_coverage_replay_20260803_081154/data",
+  "valid_repeats": [
+    1,
+    2,
+    4,
+    5
+  ],
+  "excluded_repeats": {
+    "3": "early inode-exhaustion failure"
+  },
+  "checkpoints_min": [
+    60,
+    180,
+    300,
+    480,
+    600,
+    720,
+    900,
+    1200,
+    1440
+  ],
+  "raw_denominators": {
+    "risk_branches_total": "32",
+    "risk_targets_total": "46",
+    "global_branches_total": "249514"
+  },
+  "frozen_denominators": {
+    "risk_branches_total": 3200,
+    "risk_targets_total": 4845,
+    "global_branches_total": 170620
+  },
+  "normalization": "coverage ratios preserved; branch totals use the RQ3 reference denominator map",
+  "backup": "/root/SQLeek/experiment/RQ4/result/data/backups/rq4_pg_wo_m1_20260803_pg_wo_m1_n4",
+  "status": "partial_n4_not_final_n5",
+  "rows_added": {
+    "coverage_summary": 4,
+    "coverage_timeseries": 36,
+    "coverage_timeseries_stats": 9,
+    "runs": 4,
+    "component_heatmap": 4
+  }
+}

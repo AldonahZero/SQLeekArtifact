@@ -1,0 +1,78 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "audit_log_filter_set_user()",
+    "Description": [
+        "\naudit_log_filter_set_user(user_name,\n              filter_name)\n",
+        "\n              Given a user account name and a filter name, assigns the\n              filter to the user. A user can be assigned only one\n              filter, so if the user was already assigned a filter, the\n              assignment is replaced. Filtering of current sessions for\n              the user remains unaffected. New connections are filtered\n              using the new filter.\n            ",
+        "\n              As a special case, the name %\n              represents the default account. The filter is used for\n              connections from any user account that has no explicitly\n              assigned filter.\n            ",
+        "\n              Arguments:\n",
+        "\n\nuser_name: The user account\n                  name as a string in\n                  user_name@host_name\n                  format, or % to represent the\n                  default account.\n                \nfilter_name: A string that\n                  specifies the filter name.\n\n",
+        "\n              Return value:\n            ",
+        "\n              A string that indicates whether the operation succeeded.\n              OK indicates success. ERROR:\n              message indicates\n              failure.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SELECT audit_log_filter_set_user('user1@localhost', 'SomeFilter');\n+------------------------------------------------------------+\n| audit_log_filter_set_user('user1@localhost', 'SomeFilter') |\n+------------------------------------------------------------+\n| OK                                                         |\n+------------------------------------------------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/audit-log-reference.html#function_audit-log-filter-set-user",
+    "Feature": [
+        "audit_log_filter_set_user(user_name,\n              filter_name)"
+    ],
+    "Examples": [
+        "mysql> SELECT audit_log_filter_set_user('user1@localhost', 'SomeFilter');\n+------------------------------------------------------------+\n| audit_log_filter_set_user('user1@localhost', 'SomeFilter') |\n+------------------------------------------------------------+\n| OK                                                         |\n+------------------------------------------------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT audit_log_filter_set_user('user1@localhost', 'SomeFilter');",
+        "SELECT audit_log_filter_set_user('%', 'SomeFilter');",
+        "SELECT audit_log_filter_set_user('user1@localhost', '%');",
+        "SELECT audit_log_filter_set_user('user1@localhost', 'DefaultFilter');",
+        "SELECT audit_log_filter_set_user('user2@localhost', 'AnotherFilter');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 600,
+            "Prompt Tokens": 571,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00010304999999999998
+        },
+        {
+            "Total Tokens": 763,
+            "Prompt Tokens": 738,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 0.0001257
+        },
+        {
+            "Total Tokens": 928,
+            "Prompt Tokens": 901,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00015134999999999997
+        },
+        {
+            "Total Tokens": 1095,
+            "Prompt Tokens": 1066,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00017729999999999997
+        },
+        {
+            "Total Tokens": 1262,
+            "Prompt Tokens": 1233,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00020234999999999999
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_user does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_user does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_user does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_user does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.audit_log_filter_set_user does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

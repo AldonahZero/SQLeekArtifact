@@ -1,0 +1,9 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+mariadb_griffin_r2,mariadb,2,type_system,Griffin,2206,626,0.28377153218495016,996,443,0.4505844845908608
+mariadb_griffin_r2,mariadb,2,storage,Griffin,4,1,0.25,1,1,1.0
+mariadb_griffin_r2,mariadb,2,other,Griffin,1594,751,0.4711417816813049,415,278,0.6699029126213593
+mariadb_griffin_r2,mariadb,2,optimizer,Griffin,170,82,0.4823529411764706,32,28,0.8666666666666667
+mariadb_griffin_r2,mariadb,2,executor,Griffin,2,0,0.0,1,0,0.0
+mariadb_griffin_r2,mariadb,2,cursor_prepared,Griffin,214,123,0.5747663551401869,3,1,0.3333333333333333
+mariadb_griffin_r2,mariadb,2,parser,Griffin,64,48,0.75,5,5,1.0
+mariadb_griffin_r2,mariadb,2,catalog_metadata,Griffin,56,17,0.30357142857142855,31,9,0.2903225806451613

@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "string_to_array"
+    ],
+    "Feature": [
+        "string_to_array"
+    ],
+    "Description": [
+        "str_split",
+        "string_split(string, separator)",
+        "Splits the string along the separator."
+    ],
+    "Examples": [
+        "string_split('hello world', ' ')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT string_to_array('hello,world', ',');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 283,
+            "Prompt Tokens": 259,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.324999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT string_to_array('hello,world', ',');"
+    ]
+}

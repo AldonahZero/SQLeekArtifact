@@ -1,0 +1,22 @@
+{
+  "checkpoint_path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m",
+  "corpus_file_count": 7899,
+  "corpus_path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/runtime/seed_snapshots/mysql_20260714_062649/corpus",
+  "cutoff_epoch": 1784084433,
+  "cutoff_utc": "2026-07-15T03:00:33Z",
+  "earliest_mtime_epoch": 1784080901.491811,
+  "earliest_mtime_utc": "2026-07-15T02:01:41.491811Z",
+  "hi_val_count": 0,
+  "initial_corpus_count": 7898,
+  "latest_mtime_epoch": 1784084430.9760048,
+  "latest_mtime_utc": "2026-07-15T03:00:30.976005Z",
+  "manifest": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/manifest.jsonl",
+  "new_queue_count": 2204,
+  "queue_60m_total": 10102,
+  "replay_queue_time_named": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_queue_time_named",
+  "run_start_epoch": 1784080833,
+  "run_start_utc": "2026-07-15T02:00:33Z",
+  "selection_rule": "queue file st_mtime <= run_start_epoch + 3600.000 seconds",
+  "source_queue": "/root/sqleek_stage3_official_runs/mysql/mysql2x24h_resetfix0006_20260715_020032/r1/output/mysql_memory/default/queue",
+  "total_size_bytes": 24489380
+}

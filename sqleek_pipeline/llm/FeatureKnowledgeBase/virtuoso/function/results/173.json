@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_floor/"
+  ],
+  "Title": [
+    "floor ("
+  ],
+  "Feature": [
+    "floor ("
+  ],
+  "Description": [
+    "floor calculates the largest integer smaller than or equal to x .\nfloor\nx"
+  ],
+  "Examples": [
+    "callret   callret   callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/utility"
+    ],
+    "Title": [
+        "uuid()"
+    ],
+    "Feature": [
+        "uuid()"
+    ],
+    "Description": [
+        "Return a random UUID similar to this: eeccb8c5-9943-b2bb-bb5e-222f4e14b687."
+    ],
+    "Examples": [
+        "uuid()"
+    ],
+    "Category": [
+        "Utility Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT uuid();"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 284,
+            "Prompt Tokens": 268,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 4.9800000000000004e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT uuid();"
+    ]
+}

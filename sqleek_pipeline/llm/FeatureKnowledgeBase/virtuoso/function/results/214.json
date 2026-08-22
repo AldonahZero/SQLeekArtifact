@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_kill/"
+  ],
+  "Title": [
+    "http_kill ("
+  ],
+  "Feature": [
+    "http_kill ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function is used to kill the process whose details match that of the\ninput parameters.  If Client's IP and URL are specified, then it will try\nto kill all matching pending HTTP requests for that peer requesting\nthat URL.  If all three parameters are given, then it will try to\nkill only that pending HTTP request."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

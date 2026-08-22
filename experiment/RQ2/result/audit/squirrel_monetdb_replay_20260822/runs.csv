@@ -1,0 +1,6 @@
+run_id,tool,dbms,version,repeat_id,start_time,end_time,budget_hours,seed_corpus,build_id,container_id,status,unsupported_reason
+monetdb_squirrel_r1,SQUIRREL,monetdb,MonetDB llvmcov,1,,,24,/root/SQLeek/experiment/RQ2/live/monetdb_adapters/20260821_064823/profdata_squirrel_monetdb/r1,griffin_monetdb_llvmcov,,completed,
+monetdb_squirrel_r2,SQUIRREL,monetdb,MonetDB llvmcov,2,,,24,/root/SQLeek/experiment/RQ2/live/monetdb_adapters/20260821_064823/profdata_squirrel_monetdb/r2,griffin_monetdb_llvmcov,,completed,
+monetdb_squirrel_r3,SQUIRREL,monetdb,MonetDB llvmcov,3,,,24,/root/SQLeek/experiment/RQ2/live/monetdb_adapters/20260821_064823/profdata_squirrel_monetdb/r3,griffin_monetdb_llvmcov,,completed,
+monetdb_squirrel_r4,SQUIRREL,monetdb,MonetDB llvmcov,4,,,24,/root/SQLeek/experiment/RQ2/live/monetdb_adapters/20260821_064823/profdata_squirrel_monetdb/r4,griffin_monetdb_llvmcov,,completed,
+monetdb_squirrel_r5,SQUIRREL,monetdb,MonetDB llvmcov,5,,,24,/root/SQLeek/experiment/RQ2/live/monetdb_adapters/20260821_064823/profdata_squirrel_monetdb/r5,griffin_monetdb_llvmcov,,completed,

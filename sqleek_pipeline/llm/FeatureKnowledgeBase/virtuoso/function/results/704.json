@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_get_system_paths/"
+  ],
+  "Title": [
+    "xml_get_system_paths ("
+  ],
+  "Feature": [
+    "xml_get_system_paths ("
+  ],
+  "Description": [
+    "xml_get_system_paths\n\n         — Returns vector of all system paths."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

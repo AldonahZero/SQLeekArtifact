@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_backup_context_clear/"
+  ],
+  "Title": [
+    "backup_context_clear ("
+  ],
+  "Feature": [
+    "backup_context_clear ("
+  ],
+  "Description": [
+    "This procedure must be called before a new backup series can be started,\n    This procedure will clear the current backup context and mark all pages in\n    the checkpoint space as ready for backup."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,26 @@
+{
+  "cleanup_time_utc": "2026-07-13T04:49:17Z",
+  "root": "/root/SQLeek/experiment/RQ2/replay/output/sqlaser_sqlite354_formal_replay_3532_20260713_033500",
+  "kept": [
+    "data/",
+    "manifests/",
+    "logs/batches.log",
+    "repeats/r*/run_summary.json",
+    "replay_index.host.tsv",
+    "experiment/RQ2/sqlaser/evidence/sqlite_replay_20260713_033500/"
+  ],
+  "removed_classes": [
+    "checkpoint coverage JSON",
+    "checkpoint profdata",
+    "checkpoint reports/manifests",
+    "per-seed replay logs",
+    "source_map/sqlite3.c",
+    "smoke replay output directories"
+  ],
+  "size_before_kb": 20711020,
+  "size_after_kb": 3132,
+  "freed_kb_within_formal_root": 20707888,
+  "disk_free_before_kb": 35310556,
+  "disk_free_after_kb": 56480576,
+  "disk_free_delta_kb": 21170020
+}

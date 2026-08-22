@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_script_source_update/"
+  ],
+  "Title": [
+    "BPEL.BPEL.script_source_update ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.script_source_update ("
+  ],
+  "Description": [
+    "BPEL.BPEL.script_source_update is used to update the script source of an already uploaded script. The script must be in edit mode in order to do that. The URL and content parameters works as in script_upload.\nBPEL.BPEL.script_source_update"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

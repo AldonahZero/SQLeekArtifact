@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_internal_to_sql_type/"
+  ],
+  "Title": [
+    "internal_to_sql_type ("
+  ],
+  "Feature": [
+    "internal_to_sql_type ("
+  ],
+  "Description": [
+    "internal_to_sql_type returns an integer value representing the standard\n    SQL type converted from internal_type given as its argument.\ninternal_to_sql_type(182)\t-> 12 (VARCHAR)\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

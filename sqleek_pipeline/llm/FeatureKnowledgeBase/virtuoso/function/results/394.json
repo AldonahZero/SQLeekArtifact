@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regr_sxy/"
+  ],
+  "Title": [
+    "numeric REGR_SXY ("
+  ],
+  "Feature": [
+    "numeric REGR_SXY ("
+  ],
+  "Description": [
+    "REGR_SXY makes the following computation after eliminating NULL (expr1, expr2) pairs:\nREGR_COUNT(expr1, expr2) * COVAR_POP(expr1, expr2)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

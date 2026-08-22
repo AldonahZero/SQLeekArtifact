@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_log_message/"
+  ],
+  "Title": [
+    "log_message ("
+  ],
+  "Feature": [
+    "log_message ("
+  ],
+  "Description": [
+    "log_message Appends a line to the system log file (typically virtuoso.log).\nlog_message"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

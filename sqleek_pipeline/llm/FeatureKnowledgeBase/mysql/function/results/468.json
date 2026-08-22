@@ -1,0 +1,61 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "keyring_hashicorp_update_config()",
+    "Description": [
+        "\nkeyring_hashicorp_update_config()\n",
+        "\n            Associated keyring plugin:\n            keyring_hashicorp\n",
+        "\n            When invoked, the\n            keyring_hashicorp_update_config()\n            function causes keyring_hashicorp to\n            perform a runtime reconfiguration, as described in\n            keyring_hashicorp Configuration.\n          ",
+        "\n            This function requires the\n            SYSTEM_VARIABLES_ADMIN\n            privilege because it modifies global system variables.\n          ",
+        "\n            Arguments:\n          ",
+        "\n            None.\n          ",
+        "\n            Return value:\n          ",
+        "\n            Returns the string 'Configuration update was\n            successful.' for success, or\n            'Configuration update failed.' for\n            failure.\n"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/keyring-functions-plugin-specific.html#function_keyring-hashicorp-update-config",
+    "Feature": [
+        "keyring_hashicorp_update_config()"
+    ],
+    "Examples": [],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT keyring_hashicorp_update_config();",
+        "SELECT keyring_hashicorp_update_config();",
+        "SELECT 'Function does not exist';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 432,
+            "Prompt Tokens": 411,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 7.424999999999999e-05
+        },
+        {
+            "Total Tokens": 592,
+            "Prompt Tokens": 571,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 9.824999999999998e-05
+        },
+        {
+            "Total Tokens": 751,
+            "Prompt Tokens": 731,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00012164999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.keyring_hashicorp_update_config does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.keyring_hashicorp_update_config does not exist')\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'Function does not exist';"
+    ]
+}

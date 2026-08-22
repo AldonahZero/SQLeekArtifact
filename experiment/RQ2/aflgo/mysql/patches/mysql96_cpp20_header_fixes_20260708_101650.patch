@@ -1,0 +1,708 @@
+diff --git a/libs/mysql/ranges/collection_interface.h b/libs/mysql/ranges/collection_interface.h
+index dc24db38514..c8df8ddd14d 100644
+--- a/libs/mysql/ranges/collection_interface.h
++++ b/libs/mysql/ranges/collection_interface.h
+@@ -34,6 +34,33 @@
+ 
+ namespace mysql::ranges {
+ 
++namespace detail {
++
++template <class Range_t>
++concept Has_member_begin_end = requires(Range_t range) {
++  range.begin();
++  range.end();
++};
++
++template <class Range_t>
++concept Has_bidirectional_member_iterator =
++    Has_member_begin_end<Range_t> &&
++    std::bidirectional_iterator<mysql::ranges::Range_iterator_type<Range_t>> &&
++    std::same_as<mysql::ranges::Range_iterator_type<Range_t>,
++                 decltype(std::declval<Range_t>().end())>;
++
++template <class Range_t>
++concept Has_random_access_member_iterator =
++    Has_member_begin_end<Range_t> &&
++    std::random_access_iterator<mysql::ranges::Range_iterator_type<Range_t>>;
++
++template <class Range_t>
++concept Has_contiguous_member_iterator =
++    Has_member_begin_end<Range_t> &&
++    std::contiguous_iterator<mysql::ranges::Range_iterator_type<Range_t>>;
++
++}  // namespace detail
++
+ /// CRTP base class to provide members of a *collection* based on an
+ /// implementation that provides begin/end iterators.
+ ///
+@@ -158,11 +185,7 @@ class Collection_interface {
+   }
+ 
+   /// Return the last element. Enabled if we have bidirectional iterators.
+-  [[nodiscard]] constexpr decltype(auto) back() const
+-    requires(std::bidirectional_iterator<Iterator_for<Self_t>> &&
+-             std::same_as<Iterator_for<Self_t>,
+-                          decltype(std::declval<Self_t>().end())>)
+-  {
++  [[nodiscard]] constexpr decltype(auto) back() const {
+     // Not std::prev, since that is undefined for iterators whose value type is
+     // not a reference, since they don't model LegacyBidirectionalIterator.
+     return *std::ranges::prev(self().end());
+@@ -171,7 +194,7 @@ class Collection_interface {
+   /// Return the n'th element, possibly mutable. Enabled if we have random
+   /// access iterators.
+   [[nodiscard]] constexpr decltype(auto) operator[](std::ptrdiff_t n)
+-    requires std::random_access_iterator<Iterator_for<Self_t>>
++    requires detail::Has_random_access_member_iterator<Self_t>
+   {
+     return self().begin()[n];
+   }
+@@ -179,7 +202,7 @@ class Collection_interface {
+   /// Return the n'th element, const. Enabled if we have random access
+   /// iterators.
+   [[nodiscard]] constexpr decltype(auto) operator[](std::ptrdiff_t n) const
+-    requires std::random_access_iterator<Iterator_for<Self_t>>
++    requires detail::Has_random_access_member_iterator<Self_t>
+   {
+     return self().begin()[n];
+   }
+@@ -187,7 +210,7 @@ class Collection_interface {
+   /// Return pointer to underlying contiguous memory. Enabled if we have
+   /// contiguous iterators.
+   [[nodiscard]] constexpr auto *data()
+-    requires std::contiguous_iterator<Iterator_for<Self_t>>
++    requires detail::Has_contiguous_member_iterator<Self_t>
+   {
+     return &*self().begin();
+   }
+@@ -195,7 +218,7 @@ class Collection_interface {
+   /// Return const pointer to underlying contiguous memory. Enabled if we have
+   /// contiguous iterators.
+   [[nodiscard]] constexpr auto *data() const
+-    requires std::contiguous_iterator<Iterator_for<Self_t>>
++    requires detail::Has_contiguous_member_iterator<Self_t>
+   {
+     return &*self().begin();
+   }
+diff --git a/libs/mysql/sets/boundary_set_binary_operation_view_base.h b/libs/mysql/sets/boundary_set_binary_operation_view_base.h
+index 608fadc71bd..ea987d69c7d 100644
+--- a/libs/mysql/sets/boundary_set_binary_operation_view_base.h
++++ b/libs/mysql/sets/boundary_set_binary_operation_view_base.h
+@@ -71,7 +71,7 @@ class Boundary_set_binary_operation_view_base
+   using Iterator1_t = mysql::ranges::Range_const_iterator_type<Source1_t>;
+   using Iterator2_t = mysql::ranges::Range_const_iterator_type<Source2_t>;
+   using Set_traits_t = typename Source1_t::Set_traits_t;
+-  using Element_t = Set_traits_t::Element_t;
++  using Element_t = typename Set_traits_t::Element_t;
+   using Iterator_t =
+       Boundary_set_binary_operation_iterator<Source1_t, Source2_t, operation>;
+   static constexpr bool disable_fast_size = true;
+diff --git a/libs/mysql/sets/boundary_set_const_views.h b/libs/mysql/sets/boundary_set_const_views.h
+index 8f0559cd12e..7ed9d27578d 100644
+--- a/libs/mysql/sets/boundary_set_const_views.h
++++ b/libs/mysql/sets/boundary_set_const_views.h
+@@ -43,6 +43,7 @@
+ 
+ #include <algorithm>                             // upper_bound
+ #include <array>                                 // array
++#include <compare>                               // strong_ordering
+ #include "mysql/iterators/iterator_interface.h"  // Iterator_interface
+ #include "mysql/meta/is_same_ignore_const.h"     // Is_same_ignore_const
+ #include "mysql/sets/base_const_views.h"         // Empty_set_view
+@@ -69,7 +70,7 @@ class Const_boundary_view_iterator
+           Const_boundary_view_iterator<Set_traits_tp, boundaries...>> {
+  public:
+   using Set_traits_t = Set_traits_tp;
+-  using Element_t = Set_traits_t::Element_t;
++  using Element_t = typename Set_traits_t::Element_t;
+   static constexpr auto size = sizeof...(boundaries);
+   using Array_t = std::array<Element_t, size>;
+   using Iterator_category_t = std::contiguous_iterator_tag;
+@@ -96,6 +97,17 @@ class Const_boundary_view_iterator
+     return m_position - other.m_position;
+   }
+ 
++  friend constexpr bool operator==(const Const_boundary_view_iterator &lhs,
++                                   const Const_boundary_view_iterator &rhs) {
++    return lhs.distance_from(rhs) == 0;
++  }
++
++  friend constexpr std::strong_ordering operator<=> (
++      const Const_boundary_view_iterator &lhs,
++      const Const_boundary_view_iterator &rhs) {
++    return lhs.distance_from(rhs) <=> 0;
++  }
++
+   /// Return true if the current position is an endpoint.
+   [[nodiscard]] constexpr bool is_endpoint() const {
+     return (m_position & 1) == 1;
+diff --git a/libs/mysql/sets/boundary_set_meta.h b/libs/mysql/sets/boundary_set_meta.h
+index 6b84cec7ca8..26954d39214 100644
+--- a/libs/mysql/sets/boundary_set_meta.h
++++ b/libs/mysql/sets/boundary_set_meta.h
+@@ -375,7 +375,7 @@ namespace mysql::sets {
+ 
+ /// Type alias for Container_t::Storage_t if that exists, or void otherwise.
+ template <class Container_t>
+-using Storage_or_void = detail::Storage_or_void_helper<Container_t>::Type;
++using Storage_or_void = typename detail::Storage_or_void_helper<Container_t>::Type;
+ 
+ }  // namespace mysql::sets
+ 
+diff --git a/libs/mysql/sets/int_set_traits.h b/libs/mysql/sets/int_set_traits.h
+index 59f582660af..15b6f74e195 100644
+--- a/libs/mysql/sets/int_set_traits.h
++++ b/libs/mysql/sets/int_set_traits.h
+@@ -59,8 +59,8 @@ struct Int_set_traits
+   using Base_t = Ordered_set_traits_interface<
+       Int_set_traits<Element_tp, min_tp, max_exclusive_tp>, Element_tp,
+       std::make_unsigned_t<Element_tp>>;
+-  using Element_t = Base_t::Element_t;
+-  using Difference_t = Base_t::Difference_t;
++  using Element_t = typename Base_t::Element_t;
++  using Difference_t = typename Base_t::Difference_t;
+ 
+   /// Return the minimum allowed value.
+   [[nodiscard]] static constexpr Element_t min() { return min_tp; }
+diff --git a/libs/mysql/sets/interval.h b/libs/mysql/sets/interval.h
+index 5292bf396c8..578a2fd2ec0 100644
+--- a/libs/mysql/sets/interval.h
++++ b/libs/mysql/sets/interval.h
+@@ -53,7 +53,7 @@ template <Is_bounded_set_traits Set_traits_tp>
+ class Interval_base {
+  public:
+   using Set_traits_t = Set_traits_tp;
+-  using Element_t = Set_traits_t::Element_t;
++  using Element_t = typename Set_traits_t::Element_t;
+ 
+  protected:
+   // Default-construct an interval. The resulting interval has a single element,
+@@ -178,7 +178,7 @@ template <Is_bounded_set_traits Set_traits_tp>
+ class Interval : public detail::Interval_base<Set_traits_tp> {
+  public:
+   using Set_traits_t = Set_traits_tp;
+-  using Element_t = Set_traits_t::Element_t;
++  using Element_t = typename Set_traits_t::Element_t;
+   using Return_status_t = mysql::utils::Return_status;
+ 
+  private:
+diff --git a/libs/mysql/sets/interval_set_interface.h b/libs/mysql/sets/interval_set_interface.h
+index fd72f47fa0b..7ee4a675697 100644
+--- a/libs/mysql/sets/interval_set_interface.h
++++ b/libs/mysql/sets/interval_set_interface.h
+@@ -92,7 +92,7 @@ class Interval_set_interface
+   using This_t = Interval_set_interface<Self_t, Boundary_set_t>;
+ 
+   using Set_category_t = Interval_set_category_tag;
+-  using Set_traits_t = Boundary_set_t::Set_traits_t;
++  using Set_traits_t = typename Boundary_set_t::Set_traits_t;
+   using Element_t = typename Set_traits_t::Element_t;
+ 
+   using Make_interval_t = detail::Make_interval<Set_traits_t>;
+diff --git a/libs/mysql/sets/interval_set_volume.h b/libs/mysql/sets/interval_set_volume.h
+index 03d14ff7b64..36bccfb4243 100644
+--- a/libs/mysql/sets/interval_set_volume.h
++++ b/libs/mysql/sets/interval_set_volume.h
+@@ -39,7 +39,7 @@ namespace mysql::sets {
+ template <Is_interval_set Interval_set_t>
+   requires Is_metric_set_traits<typename Interval_set_t::Set_traits_t>
+ [[nodiscard]] constexpr auto volume(const Interval_set_t &set) {
+-  using Set_traits_t = Interval_set_t::Set_traits_t;
++  using Set_traits_t = typename Interval_set_t::Set_traits_t;
+   using Diff_t = typename Set_traits_t::Difference_t;
+   Diff_t diff{};
+   for (const auto &interval : set) {
+diff --git a/libs/mysql/sets/nested_set_binary_operation_iterator_base.h b/libs/mysql/sets/nested_set_binary_operation_iterator_base.h
+index 2a40b3f9cf9..170109e7461 100644
+--- a/libs/mysql/sets/nested_set_binary_operation_iterator_base.h
++++ b/libs/mysql/sets/nested_set_binary_operation_iterator_base.h
+@@ -63,8 +63,8 @@ class Nested_set_binary_operation_iterator_base
+   using Iterator2_t = typename Source2_t::Const_iterator_t;
+   using Key_traits_t = typename Source1_tp::Key_traits_t;
+   using Key_t = typename Key_traits_t::Element_t;
+-  using Mapped1_t = Source1_t::Mapped_t;
+-  using Mapped2_t = Source2_t::Mapped_t;
++  using Mapped1_t = typename Source1_t::Mapped_t;
++  using Mapped2_t = typename Source2_t::Mapped_t;
+   using Mapped_t = Binary_operation_view_type<operation, Mapped1_t, Mapped2_t>;
+   using Value_t = std::pair<const Key_t, Mapped_t>;
+ 
+diff --git a/libs/mysql/sets/nested_set_traits.h b/libs/mysql/sets/nested_set_traits.h
+index 784cf798f60..111bae5f61d 100644
+--- a/libs/mysql/sets/nested_set_traits.h
++++ b/libs/mysql/sets/nested_set_traits.h
+@@ -49,7 +49,7 @@ struct Nested_set_traits : public Base_set_traits {
+   using Key_traits_t = Key_traits_tp;
+   using Mapped_category_t = Mapped_category_tp;
+   using Mapped_traits_t = Mapped_traits_tp;
+-  using Key_t = Key_traits_tp::Element_t;
++  using Key_t = typename Key_traits_tp::Element_t;
+ };
+ 
+ }  // namespace mysql::sets
+diff --git a/libs/mysql/sets/nonthrowing_boundary_container_adaptor.h b/libs/mysql/sets/nonthrowing_boundary_container_adaptor.h
+index 3ffd818fc71..2bbb2f74323 100644
+--- a/libs/mysql/sets/nonthrowing_boundary_container_adaptor.h
++++ b/libs/mysql/sets/nonthrowing_boundary_container_adaptor.h
+@@ -60,9 +60,9 @@ class Nonthrowing_boundary_container_adaptor
+       mysql::ranges::Range_iterator_type<Throwing_boundary_container_t>;
+   using Const_iterator_t =
+       mysql::ranges::Range_const_iterator_type<Throwing_boundary_container_t>;
+-  using Set_traits_t = Throwing_boundary_container_t::Set_traits_t;
+-  using Element_t = Set_traits_t::Element_t;
+-  using Storage_t = Throwing_boundary_container_t::Storage_t;
++  using Set_traits_t = typename Throwing_boundary_container_t::Set_traits_t;
++  using Element_t = typename Set_traits_t::Element_t;
++  using Storage_t = typename Throwing_boundary_container_t::Storage_t;
+   using Memory_resource_t = mysql::allocators::Memory_resource;
+   using Allocator_t = typename Throwing_boundary_container_t::Allocator_t;
+   using This_t =
+diff --git a/libs/mysql/sets/strconv/encode.h b/libs/mysql/sets/strconv/encode.h
+index 134971ca3db..641785b99e3 100644
+--- a/libs/mysql/sets/strconv/encode.h
++++ b/libs/mysql/sets/strconv/encode.h
+@@ -127,7 +127,7 @@ template <mysql::sets::Is_boundary_set Boundary_set_t>
+ void boundary_set_to_binary(const Is_format auto &format,
+                             Is_string_target auto &target,
+                             const Boundary_set_t &boundary_set) {
+-  using Set_traits_t = Boundary_set_t::Set_traits_t;
++  using Set_traits_t = typename Boundary_set_t::Set_traits_t;
+   auto size = boundary_set.size();
+   auto next_min = Set_traits_t::min();
+   auto it = boundary_set.begin();
+diff --git a/libs/mysql/sets/throwing/boundary_container.h b/libs/mysql/sets/throwing/boundary_container.h
+index 379343ebe26..f8404fc5bf2 100644
+--- a/libs/mysql/sets/throwing/boundary_container.h
++++ b/libs/mysql/sets/throwing/boundary_container.h
+@@ -70,8 +70,8 @@ class Boundary_container : public mysql::sets::Basic_boundary_container_wrapper<
+   static_assert(
+       mysql::iterators::Is_declared_legacy_bidirectional_iterator<Iterator_t>);
+   using Const_iterator_t = mysql::ranges::Range_const_iterator_type<Storage_t>;
+-  using Set_traits_t = Storage_t::Set_traits_t;
+-  using Element_t = Set_traits_t::Element_t;
++  using Set_traits_t = typename Storage_t::Set_traits_t;
++  using Element_t = typename Set_traits_t::Element_t;
+   using Memory_resource_t = mysql::allocators::Memory_resource;
+   using Allocator_t = typename Storage_t::Allocator_t;
+   using This_t = Boundary_container<Storage_t>;
+diff --git a/libs/mysql/sets/throwing/map_boundary_storage.h b/libs/mysql/sets/throwing/map_boundary_storage.h
+index 40c748cdb6d..0ac8b161568 100644
+--- a/libs/mysql/sets/throwing/map_boundary_storage.h
++++ b/libs/mysql/sets/throwing/map_boundary_storage.h
+@@ -104,6 +104,28 @@ class Map_boundary_iterator
+     if (m_is_endpoint) --m_position;
+   }
+ 
++  constexpr Map_boundary_iterator &operator++() {
++    next();
++    return *this;
++  }
++
++  constexpr Map_boundary_iterator operator++(int) {
++    Map_boundary_iterator ret(*this);
++    next();
++    return ret;
++  }
++
++  constexpr Map_boundary_iterator &operator--() {
++    prev();
++    return *this;
++  }
++
++  constexpr Map_boundary_iterator operator--(int) {
++    Map_boundary_iterator ret(*this);
++    prev();
++    return ret;
++  }
++
+   /// @return true if this object is equal to the other object.
+   [[nodiscard]] constexpr bool is_equal(
+       const Map_boundary_iterator &other) const {
+@@ -111,6 +133,11 @@ class Map_boundary_iterator
+            m_is_endpoint == other.m_is_endpoint;
+   }
+ 
++  friend constexpr bool operator==(const Map_boundary_iterator &lhs,
++                                   const Map_boundary_iterator &rhs) {
++    return lhs.is_equal(rhs);
++  }
++
+   /// @return true if this is an endpoint.
+   [[nodiscard]] constexpr bool is_endpoint() const { return m_is_endpoint; }
+ 
+@@ -129,6 +156,24 @@ static_assert(Is_bidirectional_boundary_iterator<
+ 
+ }  // namespace mysql::sets::throwing::detail
+ 
++// Clang/libstdc++12 does not always infer the legacy bidirectional category
++// from Iterator_interface for this CRTP iterator during concept checks. Make the
++// category explicit for this user-defined iterator type.
++template <class Map_iterator_tp, class Mutable_map_iterator_tp>
++struct std::iterator_traits<
++    mysql::sets::throwing::detail::Map_boundary_iterator<Map_iterator_tp,
++                                                         Mutable_map_iterator_tp>> {
++  using Iterator_t =
++      mysql::sets::throwing::detail::Map_boundary_iterator<Map_iterator_tp,
++                                                           Mutable_map_iterator_tp>;
++  using reference = decltype(*std::declval<Iterator_t>());
++  using pointer = decltype(std::declval<Iterator_t>().operator->());
++  using value_type = std::remove_cvref_t<reference>;
++  using difference_type = std::ptrdiff_t;
++  using iterator_category = std::bidirectional_iterator_tag;
++  using iterator_concept = std::bidirectional_iterator_tag;
++};
++
+ namespace mysql::sets::throwing {
+ 
+ /// Storage for boundary points, backed by a std::map.
+diff --git a/libs/mysql/sets/throwing/vector_boundary_storage.h b/libs/mysql/sets/throwing/vector_boundary_storage.h
+index ee7f0107214..7615ec3075e 100644
+--- a/libs/mysql/sets/throwing/vector_boundary_storage.h
++++ b/libs/mysql/sets/throwing/vector_boundary_storage.h
+@@ -142,15 +142,15 @@ class Vector_boundary_storage
+  public:
+   using Set_traits_t = Set_traits_tp;
+ 
+-  using Element_t = Set_traits_t::Element_t;
+-  using Less_t = Set_traits_t::Less_t;
++  using Element_t = typename Set_traits_t::Element_t;
++  using Less_t = typename Set_traits_t::Less_t;
+ 
+   using Memory_resource_t = mysql::allocators::Memory_resource;
+   using Allocator_t = mysql::allocators::Allocator<Element_t>;
+ 
+   using Vector_t = std::vector<Element_t, Allocator_t>;
+-  using Vector_iterator_t = Vector_t::iterator;
+-  using Vector_const_iterator_t = Vector_t::const_iterator;
++  using Vector_iterator_t = typename Vector_t::iterator;
++  using Vector_const_iterator_t = typename Vector_t::const_iterator;
+   using Iterator_t = detail::Vector_boundary_iterator<Vector_iterator_t>;
+ 
+   static_assert(std::contiguous_iterator<Iterator_t>);
+diff --git a/libs/mysql/strconv/conv/text_source_location.h b/libs/mysql/strconv/conv/text_source_location.h
+index c1b91ac4dea..781cc15fe92 100644
+--- a/libs/mysql/strconv/conv/text_source_location.h
++++ b/libs/mysql/strconv/conv/text_source_location.h
+@@ -27,7 +27,10 @@
+ /// @file
+ /// Experimental API header
+ 
++#include <version>                                // feature-test macros
++#if defined(__cpp_lib_source_location)
+ #include <source_location>                       // source_location
++#endif
+ #include "mysql/strconv/encode/string_target.h"  // Is_string_target
+ #include "mysql/strconv/formats/text_format.h"   // Text_format
+ 
+@@ -36,11 +39,13 @@
+ 
+ namespace mysql::strconv {
+ /// Enable conversion from std::source_location to string
++#if defined(__cpp_lib_source_location)
+ void encode_impl(const Text_format &format, Is_string_target auto &target,
+                  const std::source_location &source_location) {
+   target.concat(format, source_location.file_name(), ":",
+                 source_location.line(), ":", source_location.function_name());
+ }
++#endif
+ }  // namespace mysql::strconv
+ 
+ // addtogroup GroupLibsMysqlStrconv
+diff --git a/libs/mysql/strconv/decode/decode.h b/libs/mysql/strconv/decode/decode.h
+index 2020c30df8e..2622023152c 100644
+--- a/libs/mysql/strconv/decode/decode.h
++++ b/libs/mysql/strconv/decode/decode.h
+@@ -147,9 +147,10 @@ namespace mysql::strconv {
+ /// unchanged.
+ ///
+ /// @return Parser that can be queried for success and error messages.
+-[[nodiscard]] Parser decode(
+-    const Is_parse_options_nocheck auto &opt, const std::string_view &in_sv,
+-    mysql::meta::Is_specialization<std::basic_string> auto &out) {
++template <Is_parse_options_nocheck Opt_t, class String_t>
++  requires mysql::meta::Is_specialization<String_t, std::basic_string>
++[[nodiscard]] Parser decode(const Opt_t &opt, const std::string_view &in_sv,
++                            String_t &out) {
+   return decode(opt, in_sv, out_str_growable(out));
+ }
+ 
+diff --git a/libs/mysql/strconv/decode/parse_options.h b/libs/mysql/strconv/decode/parse_options.h
+index b0c5e4687ef..8ba4933a8ee 100644
+--- a/libs/mysql/strconv/decode/parse_options.h
++++ b/libs/mysql/strconv/decode/parse_options.h
+@@ -28,6 +28,7 @@
+ /// Experimental API header
+ 
+ #include <tuple>                                // tuple
++#include <type_traits>                          // remove_cvref_t
+ #include "mysql/meta/is_specialization.h"       // Is_specialization
+ #include "mysql/strconv/decode/checker.h"       // Is_checker
+ #include "mysql/strconv/decode/repeat.h"        // Repeat
+@@ -99,7 +100,7 @@ struct Compound_parse_options {
+   static constexpr bool has_checker = detail::Checker_count<Tuple_t> > 0;
+   // Deliberate use of `::type`
+   // NOLINTNEXTLINE(modernize-type-traits)
+-  using Format_t = std::conditional_t<
++  using Format_t = typename std::conditional_t<
+       has_format,
+       mysql::utils::Tuple_find_helper<Tuple_t, detail::Is_format_pred>,
+       std::type_identity<Text_format>>::type;
+@@ -189,15 +190,15 @@ inline auto make_compound_parse_options() {
+ }
+ template <Is_format Format_t>
+ auto make_compound_parse_options(const Format_t &format) {
+-  return Compound_parse_options<std::tuple<Format_t>>(format);
++  return Compound_parse_options<std::tuple<Format_t>>{std::tuple<Format_t>{format}};
+ }
+ template <Is_repeat Repeat_t>
+ auto make_compound_parse_options(const Repeat_t &repeat) {
+-  return Compound_parse_options<std::tuple<Repeat_t>>(repeat);
++  return Compound_parse_options<std::tuple<Repeat_t>>{std::tuple<Repeat_t>{repeat}};
+ }
+ template <Is_checker Checker_t>
+ auto make_compound_parse_options(const Checker_t &checker) {
+-  return Compound_parse_options<std::tuple<Checker_t>>(checker);
++  return Compound_parse_options<std::tuple<Checker_t>>{std::tuple<Checker_t>{checker}};
+ }
+ auto make_compound_parse_options(const Is_compound_parse_options auto &opt) {
+   return opt;
+@@ -208,9 +209,11 @@ auto make_compound_parse_options(const Is_compound_parse_options auto &opt) {
+ /// Combine two Parse Options objects into one.
+ template <Is_parse_options Opt1, Is_parse_options Opt2>
+ auto operator|(const Opt1 &opt1, const Opt2 &opt2) {
+-  return Compound_parse_options(
+-      std::tuple_cat(detail::make_compound_parse_options(opt1).m_tuple,
+-                     detail::make_compound_parse_options(opt2).m_tuple));
++  auto combined_tuple = std::tuple_cat(
++      detail::make_compound_parse_options(opt1).m_tuple,
++      detail::make_compound_parse_options(opt2).m_tuple);
++  return Compound_parse_options<std::remove_cvref_t<decltype(combined_tuple)>>{
++      combined_tuple};
+ }
+ 
+ }  // namespace mysql::strconv
+diff --git a/libs/mysql/strconv/decode/parser.h b/libs/mysql/strconv/decode/parser.h
+index 293187c374b..5b94d0a8a58 100644
+--- a/libs/mysql/strconv/decode/parser.h
++++ b/libs/mysql/strconv/decode/parser.h
+@@ -29,6 +29,7 @@
+ 
+ #include <string_view>                             // string_view
+ #include <type_traits>                             // remove_cvref_t
++#include <compare>                                 // strong_ordering
+ #include "mysql/strconv/decode/parse_options.h"    // Is_parse_options
+ #include "mysql/strconv/decode/parse_position.h"   // Parse_position
+ #include "mysql/strconv/decode/parse_result.h"     // Parse_result
+@@ -70,6 +71,13 @@ class Parser : public detail::Parse_position<Parser>,
+   using Return_status_t = mysql::utils::Return_status;
+ 
+  public:
++  using iterator_category = std::contiguous_iterator_tag;
++  using iterator_concept = std::contiguous_iterator_tag;
++  using value_type = char;
++  using difference_type = std::ptrdiff_t;
++  using pointer = const char *;
++  using reference = const char &;
++
+   /// Be default-constructible. The resulting Parser is a singular object,
+   /// which may only be used as the target of an assignment operation.
+   Parser() = default;
+@@ -82,6 +90,69 @@ class Parser : public detail::Parse_position<Parser>,
+   explicit Parser(const std::string_view &source, std::size_t pos_arg = 0)
+       : Parse_position(source, pos_arg) {}
+ 
++  friend bool operator==(const Parser &lhs, const Parser &rhs) {
++    return lhs.distance_from(rhs) == 0;
++  }
++
++  friend std::strong_ordering operator<=>(const Parser &lhs,
++                                          const Parser &rhs) {
++    return lhs.distance_from(rhs) <=> 0;
++  }
++
++  [[nodiscard]] const char &operator*() const { return *get_pointer(); }
++
++  [[nodiscard]] const char *operator->() const { return get_pointer(); }
++
++  Parser &operator++() {
++    advance(1);
++    return *this;
++  }
++
++  Parser operator++(int) {
++    Parser ret(*this);
++    advance(1);
++    return ret;
++  }
++
++  Parser &operator--() {
++    advance(-1);
++    return *this;
++  }
++
++  Parser operator--(int) {
++    Parser ret(*this);
++    advance(-1);
++    return ret;
++  }
++
++  Parser &operator+=(std::ptrdiff_t delta) {
++    advance(delta);
++    return *this;
++  }
++
++  Parser &operator-=(std::ptrdiff_t delta) { return *this += -delta; }
++
++  [[nodiscard]] Parser operator+(std::ptrdiff_t delta) const {
++    Parser ret(*this);
++    ret.advance(delta);
++    return ret;
++  }
++
++  [[nodiscard]] Parser operator-(std::ptrdiff_t delta) const { return *this + -delta; }
++
++  [[nodiscard]] std::ptrdiff_t operator-(const Parser &other) const {
++    return distance_from(other);
++  }
++
++  [[nodiscard]] const char &operator[](std::ptrdiff_t delta) const {
++    return *(*this + delta);
++  }
++
++  friend Parser operator+(std::ptrdiff_t delta, const Parser &parser) {
++    return parser + delta;
++  }
++
++
+   // ==== Report parse_error at current position ====
+ 
+   /// Store a result representing that the requested object could not be parsed
+@@ -456,6 +527,20 @@ class Parser : public detail::Parse_position<Parser>,
+   }
+ };  // class Parser
+ 
++}  // namespace mysql::strconv
++
++template <>
++struct std::incrementable_traits<mysql::strconv::Parser> {
++  using difference_type = std::ptrdiff_t;
++};
++
++template <>
++struct std::indirectly_readable_traits<mysql::strconv::Parser> {
++  using value_type = char;
++};
++
++namespace mysql::strconv {
++
+ static_assert(std::contiguous_iterator<Parser>);
+ 
+ }  // namespace mysql::strconv
+diff --git a/libs/mysql/utils/tuple_find.h b/libs/mysql/utils/tuple_find.h
+index 6d0cc5e23b2..f68b2cce35c 100644
+--- a/libs/mysql/utils/tuple_find.h
++++ b/libs/mysql/utils/tuple_find.h
+@@ -129,7 +129,7 @@ constexpr std::size_t Tuple_find_index =
+ ///   short>);
+ /// @endcode
+ template <class Tuple, template <class> class Pred>
+-using Tuple_find = Tuple_find_helper<Tuple, Pred>::type;
++using Tuple_find = typename Tuple_find_helper<Tuple, Pred>::type;
+ 
+ /// True if at least one element type in the tuple-like type mathes the type
+ /// predicate.
+diff --git a/libs/mysql/uuids/uuid.h b/libs/mysql/uuids/uuid.h
+index e785b819a16..aff1feb32e5 100644
+--- a/libs/mysql/uuids/uuid.h
++++ b/libs/mysql/uuids/uuid.h
+@@ -127,10 +127,10 @@ inline void decode_impl(const Text_format &format, Parser &parser,
+   // Decode `2*size` hex digits from input into `size` bytes of output, and
+   // advance the cursors into input and output.
+   auto read_hex = [&](std::size_t size) {
+-    auto ret = parser.read_to_out_str(Repeat::exact(size) | Hex_format{},
+-                                      out_str_fixed_nz(out, size));
++    parser.read_to_out_str(Repeat::exact(size) | Hex_format{},
++                           out_str_fixed_nz(out, size));
+     out += size;
+-    return ret;
++    return parser.is_ok() ? return_ok : mysql::utils::Return_status::error;
+   };
+ 
+   // Check for brace-enclosed format.
+diff --git a/sql/dd/impl/upgrade/server.cc b/sql/dd/impl/upgrade/server.cc
+index 3de09c9c4c8..5aa80575ebc 100644
+--- a/sql/dd/impl/upgrade/server.cc
++++ b/sql/dd/impl/upgrade/server.cc
+@@ -271,8 +271,8 @@ void comma_separated_join(std::vector<dd::String_type> &list,
+                           dd::String_type &dest) {
+   assert(!list.empty());
+   dest.append(list.front());
+-  for (const dd::String_type &elt : list | std::ranges::views::drop(1)) {
+-    dest.append(", ").append(elt);
++  for (size_t idx = 1; idx < list.size(); ++idx) {
++    dest.append(", ").append(list[idx]);
+   }
+ }
+ 
+@@ -303,11 +303,10 @@ class MySQL_check {
+     append_escaped(tables_list, sch->name()).append(1, '.');
+     append_escaped(tables_list, schema_table_names.front());
+ 
+-    for (const dd::String_type &table_name :
+-         schema_table_names | std::ranges::views::drop(1)) {
++    for (size_t idx = 1; idx < schema_table_names.size(); ++idx) {
+       tables_list.append(", ");
+       append_escaped(tables_list, sch->name()).append(1, '.');
+-      append_escaped(tables_list, table_name);
++      append_escaped(tables_list, schema_table_names[idx]);
+     }
+ 
+     return false;
+diff --git a/sql/join_optimizer/interesting_orders.cc b/sql/join_optimizer/interesting_orders.cc
+index 135fda0c628..edeeab298b5 100644
+--- a/sql/join_optimizer/interesting_orders.cc
++++ b/sql/join_optimizer/interesting_orders.cc
+@@ -1883,10 +1883,12 @@ void LogicalOrderings::PruneNFSM(THD *thd) {
+       if (state.type == NFSMState::DELETED) {
+         continue;
+       }
+-      const auto removed = std::ranges::remove(
+-          state.outgoing_edges, NFSMState::DELETED,
+-          [this](const NFSMEdge &edge) { return edge.state(this)->type; });
+-      state.outgoing_edges.erase(removed.begin(), removed.end());
++      const auto removed = std::remove_if(
++          state.outgoing_edges.begin(), state.outgoing_edges.end(),
++          [this](const NFSMEdge &edge) {
++            return edge.state(this)->type == NFSMState::DELETED;
++          });
++      state.outgoing_edges.erase(removed, state.outgoing_edges.end());
+     }
+   } while (pruned_anything);
+ 
+@@ -2038,8 +2040,12 @@ void LogicalOrderings::ConvertNFSMToDFSM(THD *thd) {
+         return make_pair(edge.required_fd_idx, edge.state_idx);
+       };
+       std::ranges::sort(nfsm_edges, {}, edge_as_pair);
+-      const auto removed = std::ranges::unique(nfsm_edges, {}, edge_as_pair);
+-      nfsm_edges.erase(removed.begin(), removed.end());
++      const auto removed = std::unique(
++          nfsm_edges.begin(), nfsm_edges.end(),
++          [&](const auto &left, const auto &right) {
++            return edge_as_pair(left) == edge_as_pair(right);
++          });
++      nfsm_edges.erase(removed, nfsm_edges.end());
+     }
+ 
+     // For each relevant FD, find out which set of m_states we could reach.
+@@ -2070,8 +2076,8 @@ void LogicalOrderings::ConvertNFSMToDFSM(THD *thd) {
+ 
+       // Canonicalize: Sort and deduplicate.
+       std::ranges::sort(nfsm_states);
+-      const auto removed = std::ranges::unique(nfsm_states);
+-      nfsm_states.erase(removed.begin(), removed.end());
++      const auto removed = std::unique(nfsm_states.begin(), nfsm_states.end());
++      nfsm_states.erase(removed, nfsm_states.end());
+ 
+       // Add a new DFSM state for the NFSM states we've collected.
+       int target_dfsm_state_idx = m_dfsm_states.size();

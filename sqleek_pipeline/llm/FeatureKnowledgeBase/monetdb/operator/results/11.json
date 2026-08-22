@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/cast-conversion-functions"
+    ],
+    "Title": [
+        "time"
+    ],
+    "Feature": [
+        "time"
+    ],
+    "Description": [
+        "convert HH:MI:SS formatted string value to a time type"
+    ],
+    "Examples": [
+        "select time '18:40:05'"
+    ],
+    "Category": [
+        "Cast Conversion Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CAST('12:30:00' AS TIME);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 271,
+            "Prompt Tokens": 246,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.1899999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT CAST('12:30:00' AS TIME);"
+    ]
+}

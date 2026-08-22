@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "ascii(string)"
+    ],
+    "Feature": [
+        "ascii(string)"
+    ],
+    "Description": [
+        "Returns an integer that represents the Unicode code point of the first character of the string."
+    ],
+    "Examples": [
+        "ascii('\u03a9')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ascii('A');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 275,
+            "Prompt Tokens": 257,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 4.934999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ascii('A');"
+    ]
+}

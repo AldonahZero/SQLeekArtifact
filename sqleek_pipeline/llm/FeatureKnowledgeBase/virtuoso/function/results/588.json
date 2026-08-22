@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_trace_on/"
+  ],
+  "Title": [
+    "integer trace_on ("
+  ],
+  "Feature": [
+    "integer trace_on ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function enables logging specified server operations for debugging purposes.\n  The log entries will be shown at the server console (if started with foreground option) and will be written into the server message log file.\n  The traceable events are divided into several groups: user activity, transactions, compilation of the SQL statements, DDL statements, statements execution and VDB actions."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_fk_check_input_values/"
+  ],
+  "Title": [
+    "DB.DBA. fk_check_input_values ("
+  ],
+  "Feature": [
+    "DB.DBA. fk_check_input_values ("
+  ],
+  "Description": [
+    "Enforcing foreign key constraints is enabled by default.\nThis function allows globally disabling it without however disabling all triggers.\nThis may be useful for large data imports or other special circumstances.\nThe return value is the previous state of this setting, 0 for off, 1, for on.  The effect of this function is persistent and survives server restart.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

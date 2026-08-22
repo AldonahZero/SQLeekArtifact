@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_header_get/"
+  ],
+  "Title": [
+    "varchar http_header_get ("
+  ],
+  "Feature": [
+    "varchar http_header_get ("
+  ],
+  "Description": [
+    "Returns the response header associated with the current HTTP request.  This will not return the default header lines, only those explicitly set with http_header.\nThis is useful for incrementally modifying response headers during processing\nof a URL."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

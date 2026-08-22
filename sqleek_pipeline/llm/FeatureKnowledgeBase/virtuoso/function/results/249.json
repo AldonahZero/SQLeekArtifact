@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_isbinary/"
+  ],
+  "Title": [
+    "boolean isbinary ("
+  ],
+  "Feature": [
+    "boolean isbinary ("
+  ],
+  "Description": [
+    "isbinary returns one if its argument is of type VARBINARY, zero otherwise."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

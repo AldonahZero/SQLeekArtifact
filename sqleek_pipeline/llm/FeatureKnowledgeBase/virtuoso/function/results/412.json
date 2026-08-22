@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_publish/"
+  ],
+  "Title": [
+    "REPL_PUBLISH ("
+  ],
+  "Feature": [
+    "REPL_PUBLISH ("
+  ],
+  "Description": [
+    "This function starts a publication and associates a file system file to it.   The file\nwill be used to log transaction records associated to the publication.  The server will\nperiodically start new files, so that replication log files do not grow indefinitely.\nNew files will go to the same directory as the initial one and will have names suffixed with\nthe date and time of their creation."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

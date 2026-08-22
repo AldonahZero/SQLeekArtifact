@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xte_head/"
+  ],
+  "Title": [
+    "xte_head ("
+  ],
+  "Feature": [
+    "xte_head ("
+  ],
+  "Description": [
+    "This function takes odd number of parameters and creates vector which\n    corresponds to a head of a XML element. The first parameter is a tag name of the head.\n    The remaining parameters are optional. Each even parameter is a name of an attribute,\n    each next odd parameter is a value of this attribute. If two or more attributes have the\n    same name, the head would have only the last pair."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

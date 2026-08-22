@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_ewkt_read/"
+  ],
+  "Title": [
+    "st_ewkt_read ("
+  ],
+  "Feature": [
+    "st_ewkt_read ("
+  ],
+  "Description": [
+    "Parses the given text as a EWKT and returns the parsed shape."
+  ],
+  "Examples": [
+    "select st_translate ("
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

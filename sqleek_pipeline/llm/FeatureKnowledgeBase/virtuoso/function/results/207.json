@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_enable_gz/"
+  ],
+  "Title": [
+    "integer http_enable_gz ("
+  ],
+  "Feature": [
+    "integer http_enable_gz ("
+  ],
+  "Description": [
+    "Enable (1)/ Disable (0) \"Content-Encoding: gzip\" for HTTP server."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_config_data_sources/"
+  ],
+  "Title": [
+    "vector sql_config_data_sources ("
+  ],
+  "Feature": [
+    "vector sql_config_data_sources ("
+  ],
+  "Description": [
+    "This function creates or modifies a user or system data source based on the semicolon\n    separated list of DSN attributes.\nThe type argument must be either 'system' or 'user'.\nConfigures the data source by calling SQLWriteDSNToIni/SQLWritePrivateProfileString/SQLSetConfigMode\n    from the ODBC Installer API."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

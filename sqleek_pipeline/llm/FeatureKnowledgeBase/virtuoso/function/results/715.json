@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_validate_dtd/"
+  ],
+  "Title": [
+    "xml_validate_dtd ("
+  ],
+  "Feature": [
+    "xml_validate_dtd ("
+  ],
+  "Description": [
+    "This parses the argument, which is expected to be an XML\nfragment (possibly with syntax errors, violations of validity conditions etc.)\nand returns a human-readable list of errors as a string.\n DTD validation may be performed during any reading of XML\nsource in functions xml_tree() , xml_persistent() or xper_doc() , so that\nan application may check XML source on the fly; severe constraint violations in\nsource XML will be signalled as SQL runtime errors.\nxml_tree()\nxml_persistent()\nxper_doc()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

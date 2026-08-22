@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_make_string/"
+  ],
+  "Title": [
+    "make_string ("
+  ],
+  "Feature": [
+    "make_string ("
+  ],
+  "Description": [
+    "make_string returns a new string of length count, filled with\n    binary zeros.\nIf count is zero, an empty string '' is returned."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

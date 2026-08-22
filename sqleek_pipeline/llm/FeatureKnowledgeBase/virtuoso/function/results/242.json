@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_initcap/"
+  ],
+  "Title": [
+    "initcap ("
+  ],
+  "Feature": [
+    "initcap ("
+  ],
+  "Description": [
+    "initcap returns a copy of string str with the first character, if it is a\n    lowercase letter, converted to the corresponding uppercase letter.\n    Otherwise, an identical copy of the string is returned. Notes about ucase\n    apply also here.\ninitcap('simurg!')  -> 'Simurg!'\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

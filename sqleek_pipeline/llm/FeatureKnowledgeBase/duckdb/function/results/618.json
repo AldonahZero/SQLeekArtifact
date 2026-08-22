@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/window_functions"
+    ],
+    "Title": [
+        "row_number()"
+    ],
+    "Feature": [
+        "row_number()"
+    ],
+    "Description": [
+        "The number of the current row within the partition, counting from 1.",
+        "BIGINT"
+    ],
+    "Examples": [
+        "row_number()"
+    ],
+    "Category": [
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT row_number() OVER ()"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 277,
+            "Prompt Tokens": 258,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 5.01e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT row_number() OVER ()"
+    ]
+}

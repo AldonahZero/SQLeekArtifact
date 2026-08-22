@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_split_and_decode/"
+  ],
+  "Title": [
+    "vector or string split_and_decode ("
+  ],
+  "Feature": [
+    "vector or string split_and_decode ("
+  ],
+  "Description": [
+    "split_and_decode converts the escaped var=val pair inputs text to a corresponding vector of\nstring elements. If the optional third argument is a string of less than three characters, then\ndoes only the decoding (but no splitting) and returns back a string."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,7 @@
+dbms,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+sqlite,catalog_metadata,SQLaser,6,5.0,0.8333333333333334,6,6.0,1.0
+sqlite,executor,SQLaser,1050,648.8,0.6179047619047618,255,216.4,0.8490566037735849
+sqlite,optimizer,SQLaser,434,374.0,0.8617511520737328,32,32.0,1.0
+sqlite,other,SQLaser,764,632.2,0.8274869109947645,80,79.0,0.9791666666666666
+sqlite,storage,SQLaser,500,299.0,0.598,62,57.2,0.9199999999999999
+sqlite,type_system,SQLaser,54,38.6,0.7148148148148148,8,8.0,1.0

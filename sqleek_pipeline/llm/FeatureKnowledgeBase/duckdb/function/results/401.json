@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "ltrim(string, characters)"
+    ],
+    "Feature": [
+        "ltrim(string, characters)"
+    ],
+    "Description": [
+        "Removes any occurrences of any of the characters from the left side of the string."
+    ],
+    "Examples": [
+        "ltrim('>>>>test<<', '><')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ltrim('   Hello World', ' ');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 293,
+            "Prompt Tokens": 269,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.4749999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ltrim('   Hello World', ' ');"
+    ]
+}

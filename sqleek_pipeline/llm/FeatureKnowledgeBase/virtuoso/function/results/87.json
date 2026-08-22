@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_connection_vars/"
+  ],
+  "Title": [
+    "any connection_vars ("
+  ],
+  "Feature": [
+    "any connection_vars ("
+  ],
+  "Description": [
+    "This function returns all stored session variables in an array with\nname/value pairs.\nConnection variables do not persist across sessions, one\nmay maintain persistence of variables by storing them in a database table:\nsee the Session Variables Section."
+  ],
+  "Examples": [
+    "update session set s_vars = serialize (ses_vars) where s_id = get_keyword ('sid', params);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

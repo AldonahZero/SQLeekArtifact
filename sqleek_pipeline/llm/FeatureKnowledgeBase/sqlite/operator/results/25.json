@@ -1,0 +1,49 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_expr.html"
+    ],
+    "Title": [
+        "SQL Language Expressions"
+    ],
+    "Feature": [
+        "AND"
+    ],
+    "Description": [
+        "The AND operator is used to combine two or more boolean expressions. It returns true if all expressions evaluate to true; otherwise, it returns false.",
+        "Parameters: Two or more boolean expressions.",
+        "Returns: True if all expressions are true; otherwise, false."
+    ],
+    "Examples": [
+        "SELECT * FROM orders WHERE status = 'shipped' AND order_date > '2024-01-01'; -- Finds orders that are shipped and placed after January 1, 2024",
+        "SELECT * FROM employees WHERE department_id = 1 AND salary > 50000; -- Finds employees in department 1 with a salary above 50,000"
+    ],
+    "Category": [
+        "Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT * FROM table_name WHERE condition1 AND condition2;",
+        "SELECT 1 WHERE 1 = 1 AND 2 = 2;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 313,
+            "Prompt Tokens": 289,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.774999999999999e-05
+        },
+        {
+            "Total Tokens": 459,
+            "Prompt Tokens": 431,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 8.145e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such table: table_name\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 1 WHERE 1 = 1 AND 2 = 2;"
+    ]
+}

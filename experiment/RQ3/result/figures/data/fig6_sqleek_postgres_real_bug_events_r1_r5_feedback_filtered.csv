@@ -1,0 +1,8 @@
+tool,dbms,run,bug_id,first_seen_hours
+SQLeek,PostgreSQL,r1,PG-19470-file-19471-ref,1.0
+SQLeek,PostgreSQL,r2,PG-19470-file-19471-ref,1.0
+SQLeek,PostgreSQL,r3,PG-19470-file-19471-ref,1.0
+SQLeek,PostgreSQL,r4,PG-19470-file-19471-ref,1.0
+SQLeek,PostgreSQL,r5,PG-19470-file-19471-ref,1.0
+SQLeek,PostgreSQL,r5,PG-19466,0.008889
+SQLeek,PostgreSQL,r5,PG-19469,0.008889

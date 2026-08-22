@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_registry_get_all/"
+  ],
+  "Title": [
+    "vector registry_get_all ("
+  ],
+  "Feature": [
+    "vector registry_get_all ("
+  ],
+  "Description": [
+    "The function returns a vector of even length that contains\ntwo elements for every registry setting that is now stored in the database:\nthe name and the current value of the setting.\nThe order of 'name-value' pairs in the resulting vector may vary from call to call.\nTo search such a vector by a setting name,\nthe vector can be passed as a second argument to the function get_keyword ().\nget_keyword\nThe returned vector is a full copy of the content of the registry. To change the\nactual registry, use registry_set .\nregistry_set"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

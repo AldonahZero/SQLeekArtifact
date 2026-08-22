@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_iter_rewind/"
+  ],
+  "Title": [
+    "dict_iter_rewind ("
+  ],
+  "Feature": [
+    "dict_iter_rewind ("
+  ],
+  "Description": [
+    "The dictionary is always passed by reference, due to its (potentialy big) size.\nThe reference variable contains not only pointer to the whole dictionary but also a forward-only iterator (a \"cursor\") that can be used to retrieve items of the dictionary one after the other.\nThe function sets the iterator to the very first item of the dictionary."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

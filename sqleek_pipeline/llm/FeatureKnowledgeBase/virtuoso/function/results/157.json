@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_exec_next/"
+  ],
+  "Title": [
+    "integer retcode exec_next ("
+  ],
+  "Feature": [
+    "integer retcode exec_next ("
+  ],
+  "Description": [
+    "Use exec_next() to\n    iterate over a result set produced by a statement run\n    with exec .\nexec_next()\nexec"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

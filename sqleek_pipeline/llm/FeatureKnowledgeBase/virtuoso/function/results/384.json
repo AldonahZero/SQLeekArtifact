@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_registry_name_is_protected/"
+  ],
+  "Title": [
+    "registry_name_is_protected ("
+  ],
+  "Feature": [
+    "registry_name_is_protected ("
+  ],
+  "Description": [
+    "Some registry variables are used solely by internal server routines so they should not be changed by any application.\nSome of these \"protected\" variables can be updated by DBA only (in built-in Virtuoso/PL routines)\nwhereas some can not be updated by any Virtuoso/PL routine at all.\nThe function gets a variable name as a parameter and returns zero if such a variable variable can be created/modified/removed by\nany application, one if a variable can be modified by DBA but can not be removed and two if the variable can not be altered even by DBA.\nThe returned value does not indicate that the variable exists or not exists. The name of not yet existing variable can\nbe protected anyway to prevent future misuse of an variable by an application.\nThe name of any protected variable starts with two underscores. It can be a good idea to not start names of\napplication-specific registry variable with two underscores to ensure compatibility with future versions of Virtuoso Server."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

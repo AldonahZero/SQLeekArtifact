@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "format(format, parameters, ...)"
+    ],
+    "Feature": [
+        "format(format, parameters, ...)"
+    ],
+    "Description": [
+        "Formats a string using the fmt syntax."
+    ],
+    "Examples": [
+        "format('Benchmark \"{}\" took {} seconds', 'CSV', 42)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT format('Hello, {}!', 'world');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 283,
+            "Prompt Tokens": 260,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.2799999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT format('Hello, {}!', 'world');"
+    ]
+}

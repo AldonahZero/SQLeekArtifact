@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_log/"
+  ],
+  "Title": [
+    "log ("
+  ],
+  "Feature": [
+    "log ("
+  ],
+  "Description": [
+    "log calculates the natural logarithm of its\n    argument and returns it as a IEEE 64-bit float.\nlog"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

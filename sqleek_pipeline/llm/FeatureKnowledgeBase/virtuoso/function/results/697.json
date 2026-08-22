@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_add_system_path/"
+  ],
+  "Title": [
+    "xml_add_system_path ("
+  ],
+  "Feature": [
+    "xml_add_system_path ("
+  ],
+  "Description": [
+    "When validating XML parser tries to resolve system entities it \n\tsearches in http_root directory.\n\tIf it fails parser iterates internal list of system paths and tries to\n\tfind required files there. The function adds new path in this list.\n\tList of system paths contains one directory item by default - \n\t\"file://system/\".\nNOTE: List of system paths is not persistent. It means that you must\n\tadd desired path each time when server starts. An ideal place for this\n\toperation in \"autoexec.isql\" file.\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

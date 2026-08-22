@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "substr"
+    ],
+    "Feature": [
+        "substr"
+    ],
+    "Description": [
+        "substring(string, start, length)",
+        "Extract substring of length characters starting from character start. Note that a start value of 1 refers to the first character of the string."
+    ],
+    "Examples": [
+        "substring('Hello', 2, 2)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT substr('Hello, World!', 1, 5);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 293,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.565e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT substr('Hello, World!', 1, 5);"
+    ]
+}

@@ -1,0 +1,2 @@
+image	binary	status	message
+griffin_sqlite_llvmcov	/root/bin_aflpp/usr/local/bin/sqlite3	ok	LLVM source coverage backend ready

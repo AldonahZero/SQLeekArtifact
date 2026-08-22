@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vdd_disconnect_data_source/"
+  ],
+  "Title": [
+    "vdd_disconnect_data_source ("
+  ],
+  "Feature": [
+    "vdd_disconnect_data_source ("
+  ],
+  "Description": [
+    "You must have DBA privileges to run that function.\nThis function disconnects all the idle opened connections to a VDB datasource.\nIf there are active transactions server-side, using connections to that datasource,\nthey are not closed. After they finish, this function can be called again to disconnect\nthe new idle connections.\nThe datasource continues to be valid and any subsequent transactions using this datasource\nwill open a new connection to it."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

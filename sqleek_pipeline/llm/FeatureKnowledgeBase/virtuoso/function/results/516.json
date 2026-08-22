@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_affine/"
+  ],
+  "Title": [
+    "ST_Affine ("
+  ],
+  "Feature": [
+    "ST_Affine ("
+  ],
+  "Description": [
+    "performs standard 2d affine transformation with matrix:\nXXa XXb 0\nYXd YYe 0\n0    0    0\nand shift (Xoff, Yoff, 0)"
+  ],
+  "Examples": [
+    "select st_affine (st_ewkt_read ('POLYGON((1 3,2 4,1 5,0 4,1 3),"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

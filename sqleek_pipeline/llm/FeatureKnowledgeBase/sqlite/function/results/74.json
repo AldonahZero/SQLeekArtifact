@@ -1,0 +1,45 @@
+{
+    "HTML": [
+        "https://sqlite.org/json1.html"
+    ],
+    "Title": [
+        "4.11. The jsonb_insert(), jsonb_replace, and jsonb_set() functions"
+    ],
+    "Feature": [
+        "4.11. The jsonb_insert(), jsonb_replace, and jsonb_set() functions"
+    ],
+    "Description": [
+        "4.11. The jsonb_insert(), jsonb_replace, and jsonb_set() functions",
+        "The jsonb_insert(), jsonb_replace(), and jsonb_set() functions work the\nsame as json_insert(), json_replace(), and json_set(), respectively,\nexcept that \"jsonb_\" versions return their result in the binary\nJSONB format.\n\n\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "JSON Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT jsonb_set('{}', '{key}', '\"value\"');",
+        "SELECT jsonb_set('{}', '$.key', '\"value\"');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 405,
+            "Prompt Tokens": 378,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 7.29e-05
+        },
+        {
+            "Total Tokens": 568,
+            "Prompt Tokens": 540,
+            "Completion Tokens": 28,
+            "Total Cost (USD)": 9.78e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) bad JSON path: '{key}'\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT jsonb_set('{}', '$.key', '\"value\"');"
+    ]
+}

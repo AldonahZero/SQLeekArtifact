@@ -1,0 +1,251 @@
+2026-07-13 14:35:44+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:35:44+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2026-07-13 14:35:44+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:35:45+00:00 [Note] [Entrypoint]: Initializing database files
+2026-07-13T14:35:45.421372Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
+2026-07-13T14:35:45.424336Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 9.7.0) initializing of server in progress as process 87
+2026-07-13T14:35:45.442017Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:35:45.468657Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:35:47.039353Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:35:49.842757Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2026-07-13T14:35:53.640120Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.
+2026-07-13 14:35:53+00:00 [Note] [Entrypoint]: Database files initialized
+2026-07-13 14:35:53+00:00 [Note] [Entrypoint]: Starting temporary server
+2026-07-13T14:35:53.924138Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:35:54.257674Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 202
+2026-07-13T14:35:54.257690Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:35:54.257716Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:35:54.301212Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:35:54.341342Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:35:55.252963Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:35:55.835182Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:35:55.835310Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:35:55.844534Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:35:55.892929Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+2026-07-13T14:35:55.893424Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+2026-07-13 14:35:55+00:00 [Note] [Entrypoint]: Temporary server started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/leapseconds' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/tzdata.zi' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+
+2026-07-13 14:35:57+00:00 [Note] [Entrypoint]: Stopping temporary server
+2026-07-13T14:35:58.004601Z 11 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:35:59.215748Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:35:59.215767Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:36:00+00:00 [Note] [Entrypoint]: Temporary server stopped
+
+2026-07-13 14:36:00+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+
+2026-07-13T14:36:00.045721Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:36:00.330695Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 1
+2026-07-13T14:36:00.330721Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:36:00.330754Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:36:00.342554Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:36:00.384828Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:36:01.128501Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:36:01.649417Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:36:01.649462Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:36:01.676459Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:36:01.712523Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2026-07-13T14:36:01.712698Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2026-07-13T14:36:05.112140Z 21 [ERROR] [MY-012390] [InnoDB] Cannot create a tablespace for table test/t1#p#p0 because the directory is not a valid location. The DATA DIRECTORY location must be in a known directory.
+2026-07-13T14:37:27.557335Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:37:28.969842Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:37:28.969869Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:37:30+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:37:30+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2026-07-13 14:37:30+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2026-07-13T14:37:31.083021Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:37:31.372849Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 1
+2026-07-13T14:37:31.372871Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:37:31.372900Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:37:31.385816Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:37:31.428727Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:37:32.270884Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:37:32.631704Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:37:32.631750Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:37:32.638032Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:37:32.672361Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2026-07-13T14:37:32.672563Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2026-07-13T14:38:53.611998Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:38:55.138340Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:38:55.138362Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:38:56+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:38:56+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2026-07-13 14:38:56+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2026-07-13T14:38:57.372637Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:38:57.710061Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 1
+2026-07-13T14:38:57.710075Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:38:57.710099Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:38:57.717445Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:38:57.778108Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:38:58.516751Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:38:58.912536Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:38:58.912592Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:38:58.917916Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:38:58.951265Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2026-07-13T14:38:58.951309Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2026-07-13T14:40:23.481489Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:40:24.582762Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:40:24.582787Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:40:25+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:40:26+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2026-07-13 14:40:26+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2026-07-13T14:40:26.682068Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:40:27.022453Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 1
+2026-07-13T14:40:27.022478Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:40:27.022505Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:40:27.030365Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:40:27.073975Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:40:28.213143Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:40:28.978502Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:40:28.978727Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:40:28.988218Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:40:29.027988Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2026-07-13T14:40:29.028073Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2026-07-13T14:41:45.884912Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:41:47.287569Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:41:47.287596Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:41:48+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:41:49+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2026-07-13 14:41:49+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2026-07-13T14:41:49.499959Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:41:49.778826Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 1
+2026-07-13T14:41:49.778841Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:41:49.778872Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:41:49.786994Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:41:49.835885Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:41:50.906317Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:41:51.309363Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:41:51.309411Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:41:51.317119Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:41:51.356672Z 6 [Warning] [MY-013140] [Server] Error in diagnostics area: MY-001292 - Truncated incorrect max_allowed_packet value: '0'
+2026-07-13T14:41:51.356722Z 6 [Warning] [MY-013140] [Server] Error in diagnostics area: MY-001708 - The value of 'max_allowed_packet' should be no less than the value of 'net_buffer_length'
+2026-07-13T14:41:51.358521Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2026-07-13T14:41:51.358987Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2026-07-13T14:43:08.207264Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:43:09.860170Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:43:09.860190Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:43:10+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:43:11+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2026-07-13 14:43:11+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2026-07-13T14:43:12.002775Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:43:12.326261Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 1
+2026-07-13T14:43:12.326292Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:43:12.326339Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:43:12.347619Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:43:12.402464Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:43:13.277091Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:43:13.710195Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:43:13.710350Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:43:13.714525Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:43:13.766755Z 6 [Warning] [MY-013140] [Server] Error in diagnostics area: MY-001292 - Truncated incorrect max_allowed_packet value: '0'
+2026-07-13T14:43:13.766785Z 6 [Warning] [MY-013140] [Server] Error in diagnostics area: MY-001708 - The value of 'max_allowed_packet' should be no less than the value of 'net_buffer_length'
+2026-07-13T14:43:13.768615Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2026-07-13T14:43:13.768741Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2026-07-13T14:44:05.778685Z 270 [Warning] [MY-010604] [Repl] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a replica and has his hostname changed!! Please use '--relay-log=6642c05b8315-relay-bin' to avoid this problem.
+2026-07-13T14:44:05.863155Z 270 [ERROR] [MY-013123] [Repl] Replica I/O for channel '': Replica failed to initialize connection metadata structure from the repository, Error_code: MY-013123
+2026-07-13T14:44:12.199355Z 298 [System] [MY-010597] [Repl] 'CHANGE REPLICATION SOURCE TO FOR CHANNEL '' executed'. Previous state source_host='', source_port= 3306, source_log_file='', source_log_pos= 4, source_bind=''. New state source_host='', source_port= 3306, source_log_file='', source_log_pos= 4, source_bind=''.
+2026-07-13T14:44:33.435254Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:44:33.438124Z 0 [Note] [MY-015023] [Server] MySQL Server: Closing Connections - start.
+2026-07-13T14:44:33.438474Z 0 [Note] [MY-010067] [Server] Giving 1 client threads a chance to die gracefully
+2026-07-13T14:44:33.438514Z 0 [Note] [MY-010117] [Server] Shutting down replica threads
+2026-07-13T14:44:33.444623Z 0 [Note] [MY-010054] [Server] Event Scheduler: Killing the scheduler thread, thread id 5
+2026-07-13T14:44:33.444660Z 0 [Note] [MY-010050] [Server] Event Scheduler: Waiting for the scheduler thread to reply
+2026-07-13T14:44:33.444844Z 0 [Note] [MY-010048] [Server] Event Scheduler: Stopped
+2026-07-13T14:44:33.444859Z 0 [Note] [MY-010118] [Server] Forcefully disconnecting 0 remaining clients
+2026-07-13T14:44:33.444876Z 0 [Note] [MY-010043] [Server] Event Scheduler: Purging the queue. 3 events
+2026-07-13T14:44:33.451642Z 0 [Note] [MY-015024] [Server] MySQL Server: Closing Connections - end.
+2026-07-13T14:44:33.453089Z 0 [Note] [MY-012330] [InnoDB] FTS optimize thread exiting.
+2026-07-13T14:44:33.529599Z 0 [Note] [MY-010120] [Server] Binlog end
+2026-07-13T14:44:33.538011Z 0 [Note] [MY-015019] [Server] MySQL Server: Plugins Shutdown - start.
+2026-07-13T14:44:33.538088Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'mysqlx'
+2026-07-13T14:44:33.540386Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'mysqlx_cache_cleaner'
+2026-07-13T14:44:33.540430Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'ngram'
+2026-07-13T14:44:33.540438Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'BLACKHOLE'
+2026-07-13T14:44:33.540454Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'ARCHIVE'
+2026-07-13T14:44:33.540461Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'TempTable'
+2026-07-13T14:44:33.540472Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2026-07-13T14:44:33.540516Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'MRG_MYISAM'
+2026-07-13T14:44:33.540538Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'MyISAM'
+2026-07-13T14:44:33.540553Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_SESSION_TEMP_TABLESPACES'
+2026-07-13T14:44:33.540560Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_CACHED_INDEXES'
+2026-07-13T14:44:33.540566Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_VIRTUAL'
+2026-07-13T14:44:33.540572Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_COLUMNS'
+2026-07-13T14:44:33.540577Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_TABLESPACES'
+2026-07-13T14:44:33.540583Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_INDEXES'
+2026-07-13T14:44:33.540588Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_TABLESTATS'
+2026-07-13T14:44:33.540593Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_TABLES'
+2026-07-13T14:44:33.540599Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2026-07-13T14:44:33.540604Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2026-07-13T14:44:33.540610Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_FT_CONFIG'
+2026-07-13T14:44:33.540615Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2026-07-13T14:44:33.540621Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_FT_DELETED'
+2026-07-13T14:44:33.540627Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2026-07-13T14:44:33.540634Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_METRICS'
+2026-07-13T14:44:33.540641Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2026-07-13T14:44:33.540646Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2026-07-13T14:44:33.540651Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2026-07-13T14:44:33.540657Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2026-07-13T14:44:33.540662Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2026-07-13T14:44:33.540668Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2026-07-13T14:44:33.540682Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2026-07-13T14:44:33.540688Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_CMPMEM'
+2026-07-13T14:44:33.540694Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_CMP_RESET'
+2026-07-13T14:44:33.540699Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_CMP'
+2026-07-13T14:44:33.540705Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'INNODB_TRX'
+2026-07-13T14:44:33.540711Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'InnoDB'
+2026-07-13T14:44:33.540774Z 0 [Note] [MY-013072] [InnoDB] Starting shutdown...
+2026-07-13T14:44:33.541714Z 0 [Note] [MY-011944] [InnoDB] Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2026-07-13T14:44:33.542302Z 0 [Note] [MY-011944] [InnoDB] Buffer pool(s) dump completed at 260713 14:44:33
+2026-07-13T14:44:33.566450Z 0 [Note] [MY-013084] [InnoDB] Log background threads are being closed...
+2026-07-13T14:44:34.166027Z 0 [Note] [MY-013854] [InnoDB] Bytes written to disk by DBLWR (ON): 21151744
+2026-07-13T14:44:34.167392Z 0 [Note] [MY-012980] [InnoDB] Shutdown completed; log sequence number 33727971
+2026-07-13T14:44:34.170527Z 0 [Note] [MY-012255] [InnoDB] Removed temporary tablespace data file: "ibtmp1"
+2026-07-13T14:44:34.170614Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'MEMORY'
+2026-07-13T14:44:34.170626Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'CSV'
+2026-07-13T14:44:34.170645Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'daemon_keyring_proxy_plugin'
+2026-07-13T14:44:34.170791Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'caching_sha2_password'
+2026-07-13T14:44:34.170810Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'sha256_password'
+2026-07-13T14:44:34.171277Z 0 [Note] [MY-010733] [Server] Shutting down plugin 'binlog'
+2026-07-13T14:44:34.171293Z 0 [Note] [MY-015020] [Server] MySQL Server: Plugins Shutdown - end.
+2026-07-13T14:44:34.172940Z 0 [Note] [MY-015021] [Server] MySQL Server: Components Shutdown - start.
+2026-07-13T14:44:34.177095Z 0 [Note] [MY-015022] [Server] MySQL Server: Components Shutdown - end (with return value = 0).
+2026-07-13T14:44:34.177628Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:44:34.177640Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:44:35+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:44:35+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2026-07-13 14:44:35+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'
+2026-07-13T14:44:36.393063Z 0 [System] [MY-015015] [Server] MySQL Server - start.
+2026-07-13T14:44:36.666349Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 9.7.0) starting as process 1
+2026-07-13T14:44:36.666373Z 0 [System] [MY-015603] [Server] MySQL Server has access to 64 logical CPUs.
+2026-07-13T14:44:36.666407Z 0 [System] [MY-015603] [Server] MySQL Server has access to 1081972289536 bytes of physical memory.
+2026-07-13T14:44:36.674389Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-13T14:44:36.721271Z 0 [ERROR] [MY-013632] [InnoDB] sched_setaffinity() failed!
+2026-07-13T14:44:37.356563Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-13T14:44:37.729836Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-07-13T14:44:37.729898Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-07-13T14:44:37.742243Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2026-07-13T14:44:37.775641Z 0 [Warning] [MY-010604] [Repl] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a replica and has his hostname changed!! Please use '--relay-log=6642c05b8315-relay-bin' to avoid this problem.
+2026-07-13T14:44:37.792286Z 6 [Warning] [MY-013140] [Server] Error in diagnostics area: MY-001292 - Truncated incorrect max_allowed_packet value: '0'
+2026-07-13T14:44:37.792325Z 6 [Warning] [MY-013140] [Server] Error in diagnostics area: MY-001708 - The value of 'max_allowed_packet' should be no less than the value of 'net_buffer_length'
+2026-07-13T14:44:37.793804Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2026-07-13T14:44:37.793966Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '9.7.0'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2026-07-13T14:45:48.390789Z 453 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2026-07-13T14:45:54.402447Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.0).
+2026-07-13T14:45:55.320188Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 9.7.0)  MySQL Community Server - GPL.
+2026-07-13T14:45:55.320297Z 0 [System] [MY-015016] [Server] MySQL Server - end.
+2026-07-13 14:45:56+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.7.0-1.el9 started.
+2026-07-13 14:45:56+00:00 [ERROR] [Entrypoint]: mysqld failed while attempting to check config
+	command was: mysqld --verbose --help --log-bin-index=/tmp/tmp.B53scgY6H6
+	2026-07-13T14:45:56.434009Z 0 [ERROR] [MY-010214] [Server] Persisted config file is corrupt. Please ensure mysqld-auto.cnf file is valid JSON.

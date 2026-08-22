@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_prof_enable/"
+  ],
+  "Title": [
+    "prof_enable ("
+  ],
+  "Feature": [
+    "prof_enable ("
+  ],
+  "Description": [
+    "prof_enable is used to enable or disable\n    profiling of execution times, SQL statements and web requests.\n    Passing flag value 1, enables profiling, causing times of statement\n    executions, which begin and end while profiling is on, to be\n    accumulated.\nprof_enable\nWhen called with a flag of 0, the accumulation is stopped and\n    results gathered so far are written into file named virtprof.out in\n    the server's working directory.  For a description of the file, see\n    section about SQL Execution Profiling in Performance tuning part of\n    Virtuoso documentation."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

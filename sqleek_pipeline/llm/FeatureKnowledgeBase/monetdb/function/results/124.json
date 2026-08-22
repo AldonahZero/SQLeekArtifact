@@ -1,0 +1,70 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/string-functions"
+    ],
+    "Title": [
+        "levenshtein(s1, s2, id, r)"
+    ],
+    "Feature": [
+        "levenshtein(s1, s2, id, r)"
+    ],
+    "Description": [
+        "Return type: ",
+        "int",
+        "compute the 'Levenshtein distance' between two strings returning the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other."
+    ],
+    "Examples": [
+        "levenshtein('MonetDB', 'DB3', 1, 1)"
+    ],
+    "Category": [
+        "Character String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT levenshtein('example', 'samples', 1, 0);",
+        "SELECT levenshtein('kitten', 'sitting', 1, 0);",
+        "SELECT levenshtein('hello', 'hallo', 1, 0);",
+        "SELECT levenshtein('abc', 'ab', 1, 0);",
+        "SELECT levenshtein('test', 'tent', 1, 0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 360,
+            "Prompt Tokens": 331,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 6.705e-05
+        },
+        {
+            "Total Tokens": 534,
+            "Prompt Tokens": 503,
+            "Completion Tokens": 31,
+            "Total Cost (USD)": 9.404999999999998e-05
+        },
+        {
+            "Total Tokens": 707,
+            "Prompt Tokens": 677,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 0.00011955
+        },
+        {
+            "Total Tokens": 879,
+            "Prompt Tokens": 850,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00014489999999999997
+        },
+        {
+            "Total Tokens": 1051,
+            "Prompt Tokens": 1022,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00017069999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'levenshtein'\n\n",
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'levenshtein'\n\n",
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'levenshtein'\n\n",
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'levenshtein'\n\n",
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: no such operator 'levenshtein'\n\n"
+    ],
+    "EffectiveSQLs": []
+}

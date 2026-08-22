@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "generate_series(timestamp, timestamp, interval)"
+    ],
+    "Feature": [
+        "generate_series(timestamp, timestamp, interval)"
+    ],
+    "Description": [
+        "Generate a table of timestamps in the closed range, stepping by the interval."
+    ],
+    "Examples": [
+        "generate_series(TIMESTAMP '2001-04-10', TIMESTAMP '2001-04-11', INTERVAL 30 MINUTE)"
+    ],
+    "Category": [
+        "Timestamp Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT generate_series('2023-01-01 00:00:00'::timestamp, '2023-01-02 00:00:00'::timestamp, '1 hour'::interval);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 332,
+            "Prompt Tokens": 275,
+            "Completion Tokens": 57,
+            "Total Cost (USD)": 7.544999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT generate_series('2023-01-01 00:00:00'::timestamp, '2023-01-02 00:00:00'::timestamp, '1 hour'::interval);"
+    ]
+}

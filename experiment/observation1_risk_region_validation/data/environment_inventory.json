@@ -1,0 +1,157 @@
+{
+  "docker_containers": "CONTAINER ID   NAMES                                                                       STATUS                 IMAGE\n23863821a064   sqleek_stage3_mariadb_mariadb2x24h_staged500_20260716_062440_r2             Up 3 hours (healthy)   sqleek-mariadb:mariadb-stage3-20260716-staged\n67f2c00a1193   sqleek_stage3_mariadb_mariadb2x24h_staged500_20260716_062440_r1             Up 3 hours (healthy)   sqleek-mariadb:mariadb-stage3-20260716-staged\n3902aa061c2e   sqleek_stage3_postgresql_pg2x24h_staged500_copyfix0007_20260716_021147_r1   Up 7 hours (healthy)   sqleek-postgresql:pg-stage3-20260716-copyfix0007",
+  "generated_at_utc": "2026-07-16T09:03:13.642611+00:00",
+  "high_cpu_affinity": [
+    {
+      "affinity": "pid 475141's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "./afl-fuzz -t 1000 -m 4096 -P 9000 -K /tmp/mysql_6.sock -i /workspace/runtime/sqlright-mysql/inputs -o /workspace/output/mariadb_memory -c 6 -O NOREC -S default aaa",
+      "command": "afl-fuzz",
+      "last_cpu": "18",
+      "pcpu": "25.9",
+      "pid": "475141",
+      "ppid": "475131"
+    },
+    {
+      "affinity": "pid 474539's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "./afl-fuzz -t 1000 -m 4096 -P 9000 -K /tmp/mysql_6.sock -i /workspace/runtime/sqlright-mysql/inputs -o /workspace/output/mariadb_memory -c 6 -O NOREC -S default aaa",
+      "command": "afl-fuzz",
+      "last_cpu": "177",
+      "pcpu": "25.8",
+      "pid": "474539",
+      "ppid": "474530"
+    },
+    {
+      "affinity": "pid 477662's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "/opt/dbms/bin/mysqld --basedir=/opt/dbms --datadir=/opt/dbms/data_all/data_6 --port=9000 --socket=/tmp/mysql_6.sock --performance_schema=OFF --user=mysql",
+      "command": "mysqld",
+      "last_cpu": "151",
+      "pcpu": "21.8",
+      "pid": "477662",
+      "ppid": "471247"
+    },
+    {
+      "affinity": "pid 685054's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "/opt/dbms/bin/mysqld --basedir=/opt/dbms --datadir=/opt/dbms/data_all/data_6 --port=9000 --socket=/tmp/mysql_6.sock --performance_schema=OFF --user=mysql",
+      "command": "mysqld",
+      "last_cpu": "30",
+      "pcpu": "19.1",
+      "pid": "685054",
+      "ppid": "471451"
+    },
+    {
+      "affinity": "pid 3963132's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78",
+      "args": "/workspace/runtime/sqlright-postgresql/afl-fuzz -t 1000 -m 4096 -P 7000 -i /workspace/runtime/sqlright-postgresql/inputs -o /workspace/output/postgres_memory -c 6 -O NOREC -S default aaa",
+      "command": "afl-fuzz",
+      "last_cpu": "76",
+      "pcpu": "16.8",
+      "pid": "3963132",
+      "ppid": "3962968"
+    },
+    {
+      "affinity": "pid 473987's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms mariadb --duration 86400 --log-file /workspace/logs/scheduler.log",
+      "command": "python3",
+      "last_cpu": "18",
+      "pcpu": "2.7",
+      "pid": "473987",
+      "ppid": "471451"
+    },
+    {
+      "affinity": "pid 474553's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms mariadb --duration 86400 --log-file /workspace/logs/scheduler.log",
+      "command": "python3",
+      "last_cpu": "26",
+      "pcpu": "2.6",
+      "pid": "474553",
+      "ppid": "471247"
+    },
+    {
+      "affinity": "pid 171268's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "/root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/node --dns-result-order=ipv4first /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false",
+      "command": "MainThread",
+      "last_cpu": "200",
+      "pcpu": "1.7",
+      "pid": "171268",
+      "ppid": "171147"
+    },
+    {
+      "affinity": "pid 173979's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "/root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/node /root/.vscode-server/extensions/ms-python.vscode-pylance-2026.2.1/dist/server.bundle.js --cancellationReceive=file:7ed76b6a03b301ab7d4f9da4355d48f288e6ca0f9f --node-ipc --clientProcessId=171268",
+      "command": "MainThread",
+      "last_cpu": "152",
+      "pcpu": "1.4",
+      "pid": "173979",
+      "ppid": "171268"
+    },
+    {
+      "affinity": "pid 3963504's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78",
+      "args": "/opt/dbms/bin/postgres -D /opt/dbms/data_all/data_0 -p 7000 -h 127.0.0.1",
+      "command": "postgres",
+      "last_cpu": "76",
+      "pcpu": "1.4",
+      "pid": "3963504",
+      "ppid": "3963503"
+    },
+    {
+      "affinity": "pid 201's current affinity list: 6,10,18,24,26,27,30,33,35,36,39,45,51,54,58,64,65,67,76,78,81-83,86,87,90,93,98,100,106,112,120,121,123,124,132,151-153,155,160,163,173,177,184,186,189,196,197,199-201,204,206,210,211,216,218,227,233,236,238,239,247",
+      "args": "/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock",
+      "command": "dockerd",
+      "last_cpu": "86",
+      "pcpu": "1.3",
+      "pid": "201",
+      "ppid": "1"
+    }
+  ],
+  "host": "jie-2",
+  "repositories": {
+    "mysql": {
+      "branch": "trunk",
+      "commit": "447eb26e094b444a88c532028647e48228c3c04f",
+      "exists": "true",
+      "first_commit": "7eec25e393727b16bb916b50d82b0aa3084e065c 2000-07-31 Initial repository create",
+      "is_git_repo": "true",
+      "latest_commit": "447eb26e094b444a88c532028647e48228c3c04f 2025-12-23 BUG#38784394 - mysql packages failing with conflicts on FC43",
+      "path": "/root/SQLeek/sources/mysql",
+      "status_short": ""
+    },
+    "postgresql": {
+      "branch": "",
+      "commit": "62d6c7d3df6287f1bd83199c1a746e50d31571a0",
+      "exists": "true",
+      "first_commit": "62d6c7d3df6287f1bd83199c1a746e50d31571a0 2026-02-23 Stamp 18.3.",
+      "is_git_repo": "true",
+      "latest_commit": "62d6c7d3df6287f1bd83199c1a746e50d31571a0 2026-02-23 Stamp 18.3.",
+      "path": "/root/SQLeek/sources/postgres",
+      "status_short": ""
+    },
+    "sqleek": {
+      "branch": "main",
+      "commit": "925d2e076bc3dafc915bcf5e9032b75dbb3371f2",
+      "exists": "true",
+      "first_commit": "f2e01e21902231b0f4e8f06968cf8b8baba7dfc5 2026-04-24 first commit",
+      "is_git_repo": "true",
+      "latest_commit": "925d2e076bc3dafc915bcf5e9032b75dbb3371f2 2026-07-16 31",
+      "path": "/root/SQLeek",
+      "status_short": "M sqleek_pipeline/stage3_scheduler/docker/common/run_scheduler.sh\n M sqleek_pipeline/stage3_scheduler/docker/monetdb/Dockerfile\n?? experiment/observation1_risk_region_validation/\n?? sqleek_pipeline/stage3_scheduler/docker/.last_monetdb_image.txt\n?? sqleek_pipeline/stage3_scheduler/docker/common/monetdb_single_wrapper.sh\n?? sqleek_pipeline/stage3_scheduler/docker/patches/sqlright-sqlite-monetdb/"
+    },
+    "tmp_pg_src": {
+      "exists": "False",
+      "is_git_repo": "false",
+      "path": "/tmp/pg_src"
+    }
+  },
+  "root": "/root/SQLeek",
+  "running_sqleek_experiments": [
+    "[ps]  475141  475131 25.9  18 afl-fuzz        ./afl-fuzz -t 1000 -m 4096 -P 9000 -K /tmp/mysql_6.sock -i /workspace/runtime/sqlright-mysql/inputs -o /workspace/output/mariadb_memory -c 6 -O NOREC -S default aaa",
+    "[ps]  474539  474530 25.8 177 afl-fuzz        ./afl-fuzz -t 1000 -m 4096 -P 9000 -K /tmp/mysql_6.sock -i /workspace/runtime/sqlright-mysql/inputs -o /workspace/output/mariadb_memory -c 6 -O NOREC -S default aaa",
+    "[ps] 3963132 3962968 16.8  76 afl-fuzz        /workspace/runtime/sqlright-postgresql/afl-fuzz -t 1000 -m 4096 -P 7000 -i /workspace/runtime/sqlright-postgresql/inputs -o /workspace/output/postgres_memory -c 6 -O NOREC -S default aaa",
+    "[ps]  473987  471451  2.7  18 python3         python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms mariadb --duration 86400 --log-file /workspace/logs/scheduler.log",
+    "[ps]  474553  471247  2.6  26 python3         python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms mariadb --duration 86400 --log-file /workspace/logs/scheduler.log",
+    "[ps] 3962390 3961973  0.4  18 python3         python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms postgres --duration 86400 --log-file /workspace/logs/scheduler.log",
+    "[docker] 23863821a064   sqleek_stage3_mariadb_mariadb2x24h_staged500_20260716_062440_r2             Up 3 hours (healthy)   sqleek-mariadb:mariadb-stage3-20260716-staged",
+    "[docker] 67f2c00a1193   sqleek_stage3_mariadb_mariadb2x24h_staged500_20260716_062440_r1             Up 3 hours (healthy)   sqleek-mariadb:mariadb-stage3-20260716-staged",
+    "[docker] 3902aa061c2e   sqleek_stage3_postgresql_pg2x24h_staged500_copyfix0007_20260716_021147_r1   Up 7 hours (healthy)   sqleek-postgresql:pg-stage3-20260716-copyfix0007"
+  ],
+  "tmux_sessions": "",
+  "top_cpu_processes": "PID    PPID %CPU PSR COMMAND         COMMAND\n 475141  475131 25.9  18 afl-fuzz        ./afl-fuzz -t 1000 -m 4096 -P 9000 -K /tmp/mysql_6.sock -i /workspace/runtime/sqlright-mysql/inputs -o /workspace/output/mariadb_memory -c 6 -O NOREC -S default aaa\n 474539  474530 25.8 177 afl-fuzz        ./afl-fuzz -t 1000 -m 4096 -P 9000 -K /tmp/mysql_6.sock -i /workspace/runtime/sqlright-mysql/inputs -o /workspace/output/mariadb_memory -c 6 -O NOREC -S default aaa\n 477662  471247 21.8 151 mysqld          /opt/dbms/bin/mysqld --basedir=/opt/dbms --datadir=/opt/dbms/data_all/data_6 --port=9000 --socket=/tmp/mysql_6.sock --performance_schema=OFF --user=mysql\n 685054  471451 19.1  30 mysqld          /opt/dbms/bin/mysqld --basedir=/opt/dbms --datadir=/opt/dbms/data_all/data_6 --port=9000 --socket=/tmp/mysql_6.sock --performance_schema=OFF --user=mysql\n3963132 3962968 16.8  76 afl-fuzz        /workspace/runtime/sqlright-postgresql/afl-fuzz -t 1000 -m 4096 -P 7000 -i /workspace/runtime/sqlright-postgresql/inputs -o /workspace/output/postgres_memory -c 6 -O NOREC -S default aaa\n 473987  471451  2.7  18 python3         python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms mariadb --duration 86400 --log-file /workspace/logs/scheduler.log\n 474553  471247  2.6  26 python3         python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms mariadb --duration 86400 --log-file /workspace/logs/scheduler.log\n 171268  171147  1.7 200 MainThread      /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/node --dns-result-order=ipv4first /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false\n 173979  171268  1.4 152 MainThread      /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/node /root/.vscode-server/extensions/ms-python.vscode-pylance-2026.2.1/dist/server.bundle.js --cancellationReceive=file:7ed76b6a03b301ab7d4f9da4355d48f288e6ca0f9f --node-ipc --clientProcessId=171268\n3963504 3963503  1.4  76 postgres        /opt/dbms/bin/postgres -D /opt/dbms/data_all/data_0 -p 7000 -h 127.0.0.1\n    201       1  1.3  86 dockerd         /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock\n 171288  171147  0.9  30 MainThread      /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/node /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/out/bootstrap-fork --type=fileWatcher\n 171147  171142  0.6  78 MainThread      /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/node /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/out/server-main.js --connection-token=remotessh --accept-server-license-terms --agent-host-bridge-port=39193 --agent-host-bridge-host=127.0.0.1 --agent-host-bridge-connection-token=9e6d185a-6cca-446c-86c7-f05fe21bb284 --start-server --enable-remote-auto-shutdown --socket-path=/tmp/code-f9997469-4850-4511-9b91-4edbcfbbe541\n      1       0  0.4 211 systemd         /sbin/init\n    205       1  0.4 236 mysqld          /usr/sbin/mysqld\n 201948  201928  0.4  76 code-125df4672b /root/.vscode-server/code-125df4672b8a6a34975303c6b0baa124e560a4f7 command-shell --cli-data-dir /root/.vscode-server/cli --parent-process-id 201928 --on-host=127.0.0.1 --on-port\n3962390 3961973  0.4  18 python3         python3 /opt/sqleek/stage3_scheduler/seed_scheduler.py --mode online --dbms postgres --duration 86400 --log-file /workspace/logs/scheduler.log\n 201895       1  0.3  78 sshd            sshd: root@notty\n 171261  171147  0.2  27 MainThread      /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/node /root/.vscode-server/cli/servers/Stable-125df4672b8a6a34975303c6b0baa124e560a4f7/server/out/bootstrap-fork --type=ptyHost --logsPath /root/.vscode-server/data/logs/20260716T040524\n    148       1  0.1 206 containerd      /usr/bin/containerd\n 474578  474530  0.1   6 mysql <defunct> [mysqld] <defunct>\n 475163  475131  0.1  87 mysql <defunct> [mysqld] <defunct>\n     47       1  0.0  86 systemd-journal /lib/systemd/systemd-journald\n    103       1  0.0  24 systemd-network /lib/systemd/systemd-networkd\n    105       1  0.0 163 systemd-resolve /lib/systemd/systemd-resolved\n    108       1  0.0  27 cron            /usr/sbin/cron -f -P\n    109       1  0.0  78 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only\n    110       1  0.0 211 NetworkManager  /usr/sbin/NetworkManager --no-daemon\n    114       1  0.0 124 networkd-dispat /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers\n    115       1  0.0  87 polkitd         /usr/libexec/polkitd --no-debug\n    116       1  0.0 196 rsyslogd        /usr/sbin/rsyslogd -n -iNONE\n    117       1  0.0  86 systemd-logind  /lib/systemd/systemd-logind\n    118       1  0.0 163 wpa_supplicant  /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant\n    134       1  0.0  33 clash           /usr/local/bin/clash\n    156       1  0.0 239 agetty          /sbin/agetty -o -p -- \\u --noclear --keep-baud console 115200,38400,9600 linux\n    157       1  0.0 121 agetty          /sbin/agetty -o -p -- \\u --noclear --keep-baud tty1 115200,38400,9600 linux\n    158       1  0.0 218 agetty          /sbin/agetty -o -p -- \\u --noclear --keep-baud tty2 115200,38400,9600 linux\n    396       1  0.0 155 master          /usr/lib/postfix/sbin/master -w\n    685       1  0.0  35 systemd         /lib/systemd/systemd --user"
+}

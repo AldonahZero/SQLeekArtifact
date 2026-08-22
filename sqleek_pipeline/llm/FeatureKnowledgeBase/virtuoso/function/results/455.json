@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ses_read_line/"
+  ],
+  "Title": [
+    "varchar ses_read_line ("
+  ],
+  "Feature": [
+    "varchar ses_read_line ("
+  ],
+  "Description": [
+    "This function is used to read a line of character data from an open TCP\n    session. This function will read characters until it reaches an end of line\n    up to a maximum of  1024 characters. The session can be passed as a\n    session_handle. If the session_handle is omitted then execution is in\n    current session/VSP context and will read from the open HTTP session. Ses_read_line() will suspend execution while attempting\n    to read from the session until the timeout period of 100 seconds expires.\n    When the timeout expires an error will be produced to indicate that the\n    operation was unsuccessful.\nSes_read_line()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

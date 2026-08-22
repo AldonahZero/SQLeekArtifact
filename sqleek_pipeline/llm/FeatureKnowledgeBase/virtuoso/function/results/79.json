@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_composite/"
+  ],
+  "Title": [
+    "composite obj composite ("
+  ],
+  "Feature": [
+    "composite obj composite ("
+  ],
+  "Description": [
+    "Create a composite object\nReturns a composite object containing the serialization of each argument.\n      The total serialized length of the arguments may not exceed 255."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

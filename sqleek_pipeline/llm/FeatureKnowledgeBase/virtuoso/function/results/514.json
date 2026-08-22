@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sql_write_private_profile_string/"
+  ],
+  "Title": [
+    "integer sql_write_private_profile_string ("
+  ],
+  "Feature": [
+    "integer sql_write_private_profile_string ("
+  ],
+  "Description": [
+    "This function corresponds to the ODBC catalog call of similar name.\n    It and related functions are used by the virtual database to query\n    remote data dictionaries.\nThe type argument must be either 'system' or 'user'.\nSets a data source attribute by calling SQLWritePrivateProfileString from the ODBC Installer API."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

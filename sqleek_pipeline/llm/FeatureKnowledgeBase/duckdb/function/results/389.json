@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "greatest(x1, x2, ...)"
+    ],
+    "Feature": [
+        "greatest(x1, x2, ...)"
+    ],
+    "Description": [
+        "Selects the largest value using lexicographical ordering. Note that lowercase characters are considered \u201clarger\u201d than uppercase characters and collations are not supported."
+    ],
+    "Examples": [
+        "greatest('abc', 'bcd', 'cde', 'EFG')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT greatest('apple', 'Banana', 'cherry');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 321,
+            "Prompt Tokens": 295,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.984999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT greatest('apple', 'Banana', 'cherry');"
+    ]
+}

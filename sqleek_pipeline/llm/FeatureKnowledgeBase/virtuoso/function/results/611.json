@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_drop/"
+  ],
+  "Title": [
+    "USER_DROP ("
+  ],
+  "Feature": [
+    "USER_DROP ("
+  ],
+  "Description": [
+    "This is used to remove an existing user account from local security schema."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

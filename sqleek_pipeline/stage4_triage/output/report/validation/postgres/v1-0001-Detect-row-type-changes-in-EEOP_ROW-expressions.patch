@@ -1,0 +1,139 @@
+From 5311d44fed4871a0cb0bc2b23be027ea38eee142 Mon Sep 17 00:00:00 2001
+From: Ayush Tiwari <ayushtiwari.slg01@gmail.com>
+Date: Sat, 25 Apr 2026 09:49:51 +0000
+Subject: [PATCH] Detect row type changes in EEOP_ROW expressions
+
+EEOP_ROW cached the target composite type's TupleDesc at executor
+startup and never re-checked it.  If ALTER TYPE modified the type
+while a cursor was still open, the next FETCH would use the stale
+descriptor, which could crash the backend with SIGSEGV when attribute
+storage properties changed (e.g. int -> text).
+
+Other rowtype-aware steps (EEOP_FIELDSELECT, EEOP_FIELDSTORE_DEFORM,
+EEOP_NULLTEST_ROW*, EEOP_CONVERT_ROWTYPE) already guard against this
+via ExprEvalRowtypeCache.  Add the same check to EEOP_ROW: stash the
+TypeCacheEntry pointer and tupDesc_identifier at init time, and
+compare at runtime in ExecEvalRow(), raising an error if the type has
+changed.
+
+Reported-by: HaoGang Mao
+---
+ src/backend/executor/execExpr.c        | 15 ++++++++++++++-
+ src/backend/executor/execExprInterp.c  | 11 +++++++++++
+ src/include/executor/execExpr.h        |  1 +
+ src/test/regress/expected/rowtypes.out | 17 +++++++++++++++++
+ src/test/regress/sql/rowtypes.sql      | 12 ++++++++++++
+ 5 files changed, 55 insertions(+), 1 deletion(-)
+
+diff --git a/src/backend/executor/execExpr.c b/src/backend/executor/execExpr.c
+index 77229141b38..8b83e5d71ea 100644
+--- a/src/backend/executor/execExpr.c
++++ b/src/backend/executor/execExpr.c
+@@ -2011,11 +2011,24 @@ ExecInitExprRec(Expr *node, ExprState *state,
+ 					ExecTypeSetColNames(tupdesc, rowexpr->colnames);
+ 					/* Bless the tupdesc so it can be looked up later */
+ 					BlessTupleDesc(tupdesc);
++					scratch.d.row.rowcache.cacheptr = NULL;
++					scratch.d.row.rowcache.tupdesc_id = 0;
+ 				}
+ 				else
+ 				{
++					TypeCacheEntry *typentry;
++
+ 					/* it's been cast to a named type, use that */
+-					tupdesc = lookup_rowtype_tupdesc_copy(rowexpr->row_typeid, -1);
++					typentry = lookup_type_cache(rowexpr->row_typeid,
++											   TYPECACHE_TUPDESC);
++					if (typentry->tupDesc == NULL)
++						ereport(ERROR,
++								(errcode(ERRCODE_WRONG_OBJECT_TYPE),
++								 errmsg("type %s is not composite",
++										format_type_be(rowexpr->row_typeid))));
++					tupdesc = CreateTupleDescCopyConstr(typentry->tupDesc);
++					scratch.d.row.rowcache.cacheptr = typentry;
++					scratch.d.row.rowcache.tupdesc_id = typentry->tupDesc_identifier;
+ 				}
+ 
+ 				/*
+diff --git a/src/backend/executor/execExprInterp.c b/src/backend/executor/execExprInterp.c
+index 0634af964a9..0ec06e87278 100644
+--- a/src/backend/executor/execExprInterp.c
++++ b/src/backend/executor/execExprInterp.c
+@@ -3667,6 +3667,17 @@ ExecEvalRow(ExprState *state, ExprEvalStep *op)
+ {
+ 	HeapTuple	tuple;
+ 
++	if (op->d.row.rowcache.tupdesc_id != 0)
++	{
++		TypeCacheEntry *typentry = (TypeCacheEntry *) op->d.row.rowcache.cacheptr;
++
++		if (typentry->tupDesc_identifier != op->d.row.rowcache.tupdesc_id)
++			ereport(ERROR,
++					(errcode(ERRCODE_DATATYPE_MISMATCH),
++					 errmsg("row type %s has changed",
++							format_type_be(op->d.row.tupdesc->tdtypeid))));
++	}
++
+ 	/* build tuple from evaluated field values */
+ 	tuple = heap_form_tuple(op->d.row.tupdesc,
+ 							op->d.row.elemvalues,
+diff --git a/src/include/executor/execExpr.h b/src/include/executor/execExpr.h
+index c61b3d624d5..532e01b7b6c 100644
+--- a/src/include/executor/execExpr.h
++++ b/src/include/executor/execExpr.h
+@@ -499,6 +499,7 @@ typedef struct ExprEvalStep
+ 		struct
+ 		{
+ 			TupleDesc	tupdesc;	/* descriptor for result tuples */
++			ExprEvalRowtypeCache rowcache;
+ 			/* workspace for the values constituting the row: */
+ 			Datum	   *elemvalues;
+ 			bool	   *elemnulls;
+diff --git a/src/test/regress/expected/rowtypes.out b/src/test/regress/expected/rowtypes.out
+index 956bc2d02fc..7ede45b320a 100644
+--- a/src/test/regress/expected/rowtypes.out
++++ b/src/test/regress/expected/rowtypes.out
+@@ -1408,3 +1408,20 @@ ERROR:  column "oid" not found in data type compositetable
+ LINE 1: SELECT (NULL::compositetable).oid;
+                 ^
+ DROP TABLE compositetable;
++-- A named ROW() result must not survive ALTER TYPE with the old layout.
++CREATE TYPE cursor_rowtype AS (a int, b int);
++BEGIN;
++DECLARE c CURSOR FOR
++  SELECT (i, power(2, 30))::cursor_rowtype
++  FROM generate_series(1, 2) i;
++FETCH c;
++      row       
++----------------
++ (1,1073741824)
++(1 row)
++
++ALTER TYPE cursor_rowtype ALTER ATTRIBUTE b TYPE text;
++FETCH c;
++ERROR:  row type cursor_rowtype has changed
++ROLLBACK;
++DROP TYPE cursor_rowtype;
+diff --git a/src/test/regress/sql/rowtypes.sql b/src/test/regress/sql/rowtypes.sql
+index 174b062144a..ec64f968be8 100644
+--- a/src/test/regress/sql/rowtypes.sql
++++ b/src/test/regress/sql/rowtypes.sql
+@@ -562,3 +562,15 @@ SELECT (NULL::compositetable).a;
+ SELECT (NULL::compositetable).oid;
+ 
+ DROP TABLE compositetable;
++
++-- A named ROW() result must not survive ALTER TYPE with the old layout.
++CREATE TYPE cursor_rowtype AS (a int, b int);
++BEGIN;
++DECLARE c CURSOR FOR
++  SELECT (i, power(2, 30))::cursor_rowtype
++  FROM generate_series(1, 2) i;
++FETCH c;
++ALTER TYPE cursor_rowtype ALTER ATTRIBUTE b TYPE text;
++FETCH c;
++ROLLBACK;
++DROP TYPE cursor_rowtype;
+-- 
+2.43.0
+

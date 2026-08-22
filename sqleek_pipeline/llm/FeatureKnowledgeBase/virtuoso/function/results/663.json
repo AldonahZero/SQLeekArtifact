@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vt_drop_ftt/"
+  ],
+  "Title": [
+    "DB.DBA. VT_DROP_FTT ("
+  ],
+  "Feature": [
+    "DB.DBA. VT_DROP_FTT ("
+  ],
+  "Description": [
+    "Drops free text trigger."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

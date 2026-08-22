@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_create/"
+  ],
+  "Title": [
+    "USER_CREATE ("
+  ],
+  "Feature": [
+    "USER_CREATE ("
+  ],
+  "Description": [
+    "This function creates a new user account. The account is valid for SQL and/or DAV,\ndepending n options."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

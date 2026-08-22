@@ -1,0 +1,31 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_convert_rdfxml_to_ttl/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_CONVERT_RDFXML_TO_TTL ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_CONVERT_RDFXML_TO_TTL ("
+  ],
+  "Description": [
+    "Converts rdf xml to ttl."
+  ],
+  "Examples": [
+    "create procedure DB.DBA.RDF_XML_IRI_TO_TTL (inout obj any, inout ses any)",
+    "create procedure DB.DBA.RDF_XML_OBJ_TO_TTL (",
+    "create procedure DB.DBA.RDF_CONVERT_RDFXML_TO_TTL_EV_NEW_BLANK (inout g varchar, inout app_env any, inout res IRI_ID)",
+    "create procedure DB.DBA.RDF_CONVERT_RDFXML_TO_TTL_EV_TRIPLE (",
+    "create procedure DB.DBA.RDF_CONVERT_RDFXML_TO_TTL_EV_TRIPLE_L (",
+    "create procedure DB.DBA.RDF_CONVERT_RDFXML_TO_TTL (in strg varchar, in base varchar, inout ttl_ses any)",
+    "create procedure DB.DBA.RDF_CONVERT_RDFXML_FILE_TO_TTL_FILE (in rdfxml_source_filename varchar, in base varchar, in ttl_target_filename varchar)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

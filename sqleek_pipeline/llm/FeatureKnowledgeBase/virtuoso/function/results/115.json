@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dav_api_search/"
+  ],
+  "Title": [
+    "integer DAV_SEARCH_ID ("
+  ],
+  "Feature": [
+    "integer DAV_SEARCH_ID ("
+  ],
+  "Description": [
+    "DAV_SEARCH_ID() returns the RES_ID or COL_ID, depending on the\n    ' what ' parameter passed. ('R'esource or 'C'ollection\n    or 'P'arent collection).\nwhat\nDAV_SEARCH_PATH() returns full path string of resource or collection,\n    depending on parameter passed. ('R'esource or 'C'ollection or\n    'P'arent collection).\nDAV_DIR_LIST() returns an array of arrays that contains the\n    following information about the requested path:"
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

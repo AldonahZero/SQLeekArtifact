@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_exp/"
+  ],
+  "Title": [
+    "exp ("
+  ],
+  "Feature": [
+    "exp ("
+  ],
+  "Description": [
+    "The function raises e to the power of x , it\n    works with double precision floating point numbers, converts its argument\n    to an IEEE 64-bit float and returns a result of that type.\nx"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

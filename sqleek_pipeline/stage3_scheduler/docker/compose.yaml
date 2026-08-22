@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: sqleek-mysql:${SQLEEK_IMAGE_TAG:-latest}
+    container_name: sqleek_stage3_mysql_${RUN_ID:-manual}
+    labels:
+      org.sqleek.stage: stage3
+      org.sqleek.dbms: mysql
+    environment:
+      DBMS: mysql
+      RUN_ID: ${RUN_ID:-manual}
+      DURATION: ${DURATION:-24h}
+      AFL_TIMEOUT: ${AFL_TIMEOUT:-1000}
+      MEMORY_LIMIT: ${MEMORY_LIMIT:-4096}
+      SCHEDULER_CONFIG: ${SCHEDULER_CONFIG:-}
+    volumes:
+      - ${SEED_DIR:-./seeds}:/workspace/seeds:ro
+      - ${TARGET_DIR:-./targets}:/workspace/targets:ro
+      - ${OUTPUT_DIR:-./output}:/workspace/output
+      - ${LOG_DIR:-./logs}:/workspace/logs
+      - ${RUNTIME_DIR:-./runtime}:/workspace/runtime
+    command: ["run"]

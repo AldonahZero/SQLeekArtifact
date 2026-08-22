@@ -1,0 +1,282 @@
+{
+  "mode": "llm_inferred",
+  "inference_provider": "codex_prompt_manual_no_deepseek",
+  "dbms": "mysql",
+  "bug_type": "memory",
+  "chains_path": "/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/callchains.json",
+  "phi_mapping_path": "/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/phi_mapping.json",
+  "targets_path": "/root/SQLeek/sqleek_pipeline/stage1_static/output/targets/mysql_memory.txt",
+  "stage1_context_summary": {
+    "active_dbms": "mysql",
+    "chain_entries": [
+      "do_command",
+      "handle_connection",
+      "mysql_execute_command"
+    ],
+    "mysql_chain_rows": 29,
+    "mysql_memory_targets": 1289,
+    "mysql_stale_targets": 602,
+    "hot_files": [
+      "field.cc",
+      "item.cc",
+      "item_cmpfunc.cc",
+      "item_subselect.cc",
+      "sql_insert.cc",
+      "sql_update.cc",
+      "filesort.cc"
+    ]
+  },
+  "generation_note": "Generated directly from the assistant prompt using Stage1 MySQL callchains, targets, and phi hints. The repository OpenAILLMClient/DeepSeek path was not invoked.",
+  "max_entries": 3,
+  "top_templates_expanded": 5,
+  "variants_per_template": 10,
+  "templates": [
+    {
+      "template_name": "field_store_conversion_after_alter",
+      "template": "<Codex-generated MySQL template: field_store_conversion_after_alter>",
+      "clauses": [
+        "CREATE_TABLE",
+        "INSERT",
+        "INSERT_SELECT",
+        "ALTER_TABLE",
+        "UPDATE",
+        "SELECT",
+        "JSON_OBJECT",
+        "GENERATED_COLUMN",
+        "TYPE_COERCION",
+        "CAST",
+        "ORDER_BY",
+        "DDL"
+      ],
+      "reasoning": "Stage1 targets are dense in field.cc store/val/sql_type locations. This seed first stores boundary values, then changes storage classes and writes CAST/JSON results through the altered Field descriptors.",
+      "confidence": 0.86,
+      "risk_scenario": "Field::store and generated-column length metadata are stressed by converting VARCHAR/DECIMAL/VARBINARY columns to new types, then writing old expressions into the altered layout.",
+      "seed_weight": 5.2853,
+      "entry_fn": "do_command",
+      "dbms": "mysql",
+      "bug_type": "memory",
+      "top_functions": [
+        "do_command",
+        "store",
+        "val_str",
+        "val_int",
+        "my_realloc"
+      ],
+      "phi_hints": [],
+      "softmax_prob": 0.3976,
+      "variants": [
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_00.sql",
+          "suffix": "00"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_01.sql",
+          "suffix": "01"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank00_02.sql",
+          "suffix": "02"
+        }
+      ]
+    },
+    {
+      "template_name": "range_join_index_churn",
+      "template": "<Codex-generated MySQL template: range_join_index_churn>",
+      "clauses": [
+        "CREATE_TABLE",
+        "INSERT",
+        "PREPARE",
+        "EXECUTE_PREPARED",
+        "ALTER_TABLE",
+        "UPDATE",
+        "SELECT",
+        "JOIN",
+        "RANGE_PREDICATE",
+        "IN_SUBQUERY",
+        "ORDER_BY",
+        "DDL"
+      ],
+      "reasoning": "The do_command chains reach memcpy, memmove, my_malloc, reset, copy, and store. A prepared join query with BETWEEN/LIKE/IN subquery exercises range analysis and filesort; ALTER TABLE changes index and column descriptors before re-execution.",
+      "confidence": 0.82,
+      "risk_scenario": "Range optimizer and join Item trees are forced to reuse or rebuild index metadata after DROP/ADD INDEX and column-type changes.",
+      "seed_weight": 5.0395,
+      "entry_fn": "do_command",
+      "dbms": "mysql",
+      "bug_type": "memory",
+      "top_functions": [
+        "do_command",
+        "get_mm_tree",
+        "test_quick_select",
+        "filesort",
+        "memcpy"
+      ],
+      "phi_hints": [],
+      "softmax_prob": 0.311,
+      "variants": [
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_00.sql",
+          "suffix": "00"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_01.sql",
+          "suffix": "01"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank01_02.sql",
+          "suffix": "02"
+        }
+      ]
+    },
+    {
+      "template_name": "view_window_reprepare",
+      "template": "<Codex-generated MySQL template: view_window_reprepare>",
+      "clauses": [
+        "CREATE_TABLE",
+        "CREATE_VIEW",
+        "INSERT",
+        "PREPARE",
+        "EXECUTE_PREPARED",
+        "ALTER_TABLE",
+        "UPDATE",
+        "SELECT",
+        "WINDOW_FUNCTION",
+        "DERIVED_TABLE",
+        "TYPE_COERCION",
+        "ORDER_BY",
+        "DDL"
+      ],
+      "reasoning": "Stage1 results cover item.cc, item_cmpfunc.cc, item_subselect.cc, and item_timefunc.cc. A prepared query over a view with ROW_NUMBER/LAG and ORDER BY forces Item tree materialization, then ALTER TABLE invalidates base field descriptors before re-execution.",
+      "confidence": 0.8,
+      "risk_scenario": "View expansion and window Item evaluation are re-entered after ALTER TABLE changes the base table field metadata.",
+      "seed_weight": 4.9166,
+      "entry_fn": "do_command",
+      "dbms": "mysql",
+      "bug_type": "memory",
+      "top_functions": [
+        "do_command",
+        "fix_fields",
+        "resolve_type",
+        "item_cmp_type",
+        "copy"
+      ],
+      "phi_hints": [],
+      "softmax_prob": 0.275,
+      "variants": [
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_00.sql",
+          "suffix": "00"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_01.sql",
+          "suffix": "01"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank02_02.sql",
+          "suffix": "02"
+        }
+      ]
+    },
+    {
+      "template_name": "temporary_copy_filesort_blob",
+      "template": "<Codex-generated MySQL template: temporary_copy_filesort_blob>",
+      "clauses": [
+        "CREATE_TABLE",
+        "CREATE_TEMPORARY_TABLE",
+        "INSERT",
+        "ALTER_TABLE",
+        "UPDATE_JOIN",
+        "SELECT",
+        "GROUP_BY",
+        "ORDER_BY",
+        "TEXT_BLOB",
+        "TYPE_COERCION",
+        "DDL"
+      ],
+      "reasoning": "The handle_connection chains include do_command, my_malloc, memcpy, strlen, destroy, and store. Temporary-table CTAS plus ALTER and UPDATE JOIN stresses copy/materialization, text/blob lengths, and filesort/grouping metadata.",
+      "confidence": 0.76,
+      "risk_scenario": "Temporary-table materialization copies text/blob-derived metadata and then mutates the temporary table layout before grouped filesort output.",
+      "seed_weight": 1.7489,
+      "entry_fn": "handle_connection",
+      "dbms": "mysql",
+      "bug_type": "memory",
+      "top_functions": [
+        "handle_connection",
+        "do_command",
+        "memcpy",
+        "strlen",
+        "store"
+      ],
+      "phi_hints": [],
+      "softmax_prob": 0.0116,
+      "variants": [
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_00.sql",
+          "suffix": "00"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_01.sql",
+          "suffix": "01"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank03_02.sql",
+          "suffix": "02"
+        }
+      ]
+    },
+    {
+      "template_name": "prepared_generated_json_alter",
+      "template": "<Codex-generated MySQL template: prepared_generated_json_alter>",
+      "clauses": [
+        "CREATE_TABLE",
+        "INSERT",
+        "PREPARE",
+        "EXECUTE_PREPARED",
+        "ALTER_TABLE",
+        "UPDATE",
+        "SELECT",
+        "JSON_EXTRACT",
+        "GENERATED_COLUMN",
+        "TYPE_COERCION",
+        "ORDER_BY",
+        "DDL"
+      ],
+      "reasoning": "Stage1 PGQS emphasized Field/Item metadata access in field.cc and item.cc plus mysql_execute_command. A prepared SELECT over generated JSON metadata, followed by ALTER TABLE and repeated EXECUTE, drives reprepare and descriptor invalidation paths while also reaching Field::store during UPDATE.",
+      "confidence": 0.88,
+      "risk_scenario": "Prepared statement metadata and generated-column descriptors are reused across ALTER TABLE and JSON/type conversion paths.",
+      "seed_weight": 0.88,
+      "entry_fn": "mysql_execute_command",
+      "dbms": "mysql",
+      "bug_type": "memory",
+      "top_functions": [
+        "mysql_execute_command",
+        "store",
+        "make_field",
+        "field_type",
+        "memcpy"
+      ],
+      "phi_hints": [
+        "DDL",
+        "INSERT",
+        "QUERY_EXECUTION",
+        "SELECT",
+        "UPDATE"
+      ],
+      "softmax_prob": 0.0049,
+      "variants": [
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_00.sql",
+          "suffix": "00"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_01.sql",
+          "suffix": "01"
+        },
+        {
+          "file": "/root/SQLeek/sqleek_pipeline/stage2_setup/output/seeds/mysql/memory/llm_rank04_02.sql",
+          "suffix": "02"
+        }
+      ]
+    }
+  ],
+  "total_seeds": 50
+}

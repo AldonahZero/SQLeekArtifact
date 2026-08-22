@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/data-type-string"
+    ],
+    "Title": [
+        "BINARY \u7c7b\u578b"
+    ],
+    "Feature": [
+        "BINARY \u7c7b\u578b"
+    ],
+    "Description": [
+        "BINARY \u7c7b\u578b",
+        "\u7c7b\u4f3c\u4e8e CHAR\uff0c\u533a\u522b\u5728\u4e8e BINARY \u5b58\u50a8\u7684\u662f\u4e8c\u8fdb\u5236\u5b57\u7b26\u4e32\u3002",
+        "BINARY(M)\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "\u5b57\u7b26\u4e32\u7c7b\u578b"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT BINARY 'example';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 289,
+            "Prompt Tokens": 270,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 5.19e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT BINARY 'example';"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ttlp_mt_local_file/"
+  ],
+  "Title": [
+    "DB.DBA.TTLP_MT_LOCAL_FILE ("
+  ],
+  "Feature": [
+    "DB.DBA.TTLP_MT_LOCAL_FILE ("
+  ],
+  "Description": [
+    "Loads the TTL (TURTLE or N3 resource) file on multiple threads, using parallel I/O and multiprocessing if available. The function commit partial transactions while it runs so the transaction log may contain part of loading. Moreover, the function may or may not leave a transaction log, depending on log_mode . Hence, after successful load, one may need to execute the checkpoint statement to make sure that a server restart does not wipe out the results.\nlog_mode"
+  ],
+  "Examples": [
+    "select *",
+    "delete from RDF_QUAD where G = DB.DBA.RDF_MAKE_IID_OF_QNAME (graph_uri);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

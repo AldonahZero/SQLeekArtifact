@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sequence_get_all/"
+  ],
+  "Title": [
+    "vector sequence_get_all ("
+  ],
+  "Feature": [
+    "vector sequence_get_all ("
+  ],
+  "Description": [
+    "The function returns a vector of even length that contains\ntwo elements for every sequence object that is now stored in the database:\nthe name and the current state.\nThe order of 'name-state' pairs in the resulting vector may vary from call to call.\nTo search such a vector by a setting name,\nthe vector can be passed as a second argument to the function get_keyword ().\nget_keyword\nChanges in the returned vector will not alter sequence objects of the database. To change\nactual sequence objects, use sequence_set ().\nsequence_set"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

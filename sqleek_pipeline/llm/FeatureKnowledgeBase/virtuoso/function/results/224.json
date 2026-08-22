@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_proxy/"
+  ],
+  "Title": [
+    "http_proxy ("
+  ],
+  "Feature": [
+    "http_proxy ("
+  ],
+  "Description": [
+    "This function is used to retrieve content from a foreign host and send\nthe response to the HTTP client of the page calling this.  This is useful for re-routing a request to another server in the middle of a VSP page."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

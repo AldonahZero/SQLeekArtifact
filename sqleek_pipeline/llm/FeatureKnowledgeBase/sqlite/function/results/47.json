@@ -1,0 +1,60 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_aggfunc.html"
+    ],
+    "Title": [
+        "avg(X)"
+    ],
+    "Feature": [
+        "avg(X)"
+    ],
+    "Description": [
+        "\n  The avg() function\n  returns the average value of all non-NULL X within a\n  group.  String and BLOB values that do not look like numbers are\n  interpreted as 0.\n  The result of avg() is always a floating point value whenever\n  there is at least one non-NULL input even if all\n  inputs are integers.  The result of avg() is NULL if\n  there are no non-NULL inputs.  The result of avg() is computed\n  as total()/count() so all of the constraints that apply to\n  total() also apply to avg().\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT avg(X);",
+        "SELECT avg(column_name) FROM table_name;",
+        "SELECT avg(X) FROM some_table;",
+        "SELECT avg(X) FROM (SELECT 1 AS X UNION ALL SELECT 2 UNION ALL SELECT 3);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 388,
+            "Prompt Tokens": 371,
+            "Completion Tokens": 17,
+            "Total Cost (USD)": 6.585e-05
+        },
+        {
+            "Total Tokens": 526,
+            "Prompt Tokens": 505,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 8.834999999999999e-05
+        },
+        {
+            "Total Tokens": 664,
+            "Prompt Tokens": 644,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00010859999999999998
+        },
+        {
+            "Total Tokens": 817,
+            "Prompt Tokens": 782,
+            "Completion Tokens": 35,
+            "Total Cost (USD)": 0.0001383
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(sqlite3.OperationalError) no such column: X\n",
+        "(sqlite3.OperationalError) no such table: table_name\n",
+        "(sqlite3.OperationalError) no such table: some_table\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT avg(X) FROM (SELECT 1 AS X UNION ALL SELECT 2 UNION ALL SELECT 3);"
+    ]
+}

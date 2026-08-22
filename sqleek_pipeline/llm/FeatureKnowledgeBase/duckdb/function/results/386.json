@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "format_bytes(bytes)"
+    ],
+    "Feature": [
+        "format_bytes(bytes)"
+    ],
+    "Description": [
+        "Converts bytes to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.)."
+    ],
+    "Examples": [
+        "format_bytes(16384)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT format_bytes(1024);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 292,
+            "Prompt Tokens": 272,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.28e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT format_bytes(1024);"
+    ]
+}

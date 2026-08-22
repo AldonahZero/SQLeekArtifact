@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-math.html"
+    ],
+    "Title": [
+        "|/ double precision"
+    ],
+    "Feature": [
+        "|/ double precision \u2192 double precision"
+    ],
+    "Description": [
+        "Square root"
+    ],
+    "Examples": [
+        "|/ 25.0 \u2192 5"
+    ],
+    "Category": [
+        "Mathematical Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT SQRT(2.0)::double precision;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 271,
+            "Prompt Tokens": 248,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.099999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT SQRT(2.0)::double precision;"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_load_stop/"
+  ],
+  "Title": [
+    "rdf_load_stop ("
+  ],
+  "Feature": [
+    "rdf_load_stop ("
+  ],
+  "Description": [
+    "All RDF loader threads can be stopped using the command rdf_load_stop(), at which point all currently running threads\n    \twill be allowed to complete and then exit."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

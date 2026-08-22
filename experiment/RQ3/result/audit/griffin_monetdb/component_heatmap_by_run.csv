@@ -1,0 +1,9 @@
+run_id,dbms,repeat_id,component,tool,risk_branches_total,risk_branches_hit,target_region_branch_coverage,risk_targets_total,risk_targets_hit,target_function_hit_rate
+monetdb_griffin_r1,monetdb,1,other,Griffin,102594,19852,0.1935005945766809,5999,4729,0.7898293630680858
+monetdb_griffin_r1,monetdb,1,storage,Griffin,696,154,0.22126436781609196,219,127,0.5779816513761468
+monetdb_griffin_r1,monetdb,1,type_system,Griffin,3550,1097,0.30901408450704226,166,150,0.9230769230769231
+monetdb_griffin_r1,monetdb,1,optimizer,Griffin,9324,4973,0.5333547833547834,1276,1121,0.8789308176100629
+monetdb_griffin_r1,monetdb,1,parser,Griffin,148,21,0.14189189189189189,4,3,0.75
+monetdb_griffin_r1,monetdb,1,executor,Griffin,5128,436,0.08502340093603744,91,63,0.6923076923076923
+monetdb_griffin_r1,monetdb,1,catalog_metadata,Griffin,2148,1349,0.6280260707635009,271,230,0.8461538461538461
+monetdb_griffin_r1,monetdb,1,cursor_prepared,Griffin,216,123,0.5694444444444444,5,3,0.75

@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://sqlite.org/lang_corefunc.html"
+    ],
+    "Title": [
+        "sqlite_compileoption_get(N)"
+    ],
+    "Feature": [
+        "sqlite_compileoption_get(N)"
+    ],
+    "Description": [
+        "\n  The sqlite_compileoption_get() SQL function is a wrapper around the\n  sqlite3_compileoption_get() C/C++ function.\n  This routine returns the N-th compile-time option used to build SQLite\n  or NULL if N is out of range.  See also the compile_options pragma.\n"
+    ],
+    "Examples": [],
+    "Category": [
+        "Core SQL Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sqlite_compileoption_get(0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 336,
+            "Prompt Tokens": 315,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.985e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sqlite_compileoption_get(0);"
+    ]
+}

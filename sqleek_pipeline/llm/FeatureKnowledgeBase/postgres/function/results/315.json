@@ -1,0 +1,39 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-aggregate.html"
+    ],
+    "Title": [
+        "bit_and"
+    ],
+    "Feature": [
+        "bit_and ( smallint ) \u2192 smallint",
+        "bit_and ( integer ) \u2192 integer",
+        "bit_and ( bigint ) \u2192 bigint",
+        "bit_and ( bit ) \u2192 bit"
+    ],
+    "Description": [
+        "Computes the bitwise AND of all non-null input values."
+    ],
+    "Examples": [],
+    "Category": [
+        "Aggregate Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT bit_and(1) AS result;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 303,
+            "Prompt Tokens": 282,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.489999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT bit_and(1) AS result;"
+    ]
+}

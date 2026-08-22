@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sparql_rexec/"
+  ],
+  "Title": [
+    "DB.DBA.SPARQL_REXEC ("
+  ],
+  "Feature": [
+    "DB.DBA.SPARQL_REXEC ("
+  ],
+  "Description": [
+    "Remote execution of SPARQL via SPARQL protocol, produces a result set of SQL values."
+  ],
+  "Examples": [
+    "create procedure SPARQL_TEST (in rquri varchar, in graph_uri varchar, in resuri varchar, in in_result integer := 0)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

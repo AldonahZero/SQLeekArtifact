@@ -1,0 +1,27 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_cos",
+    "Title": "COS()",
+    "Feature": [
+        "COS(X)"
+    ],
+    "Description": [
+        "\nCOS(X)\n",
+        "\n            Returns the cosine of X, where\n            X is given in radians. Returns\n            NULL if X is\n            NULL.\n          ",
+        "Press CTRL+C to copy mysql> SELECT COS(PI());\n        -> -1"
+    ],
+    "Examples": [
+        "mysql> SELECT COS(PI());\n        -> -1"
+    ],
+    "Category": [
+        "\u6570\u503c\u51fd\u6570\u4e0e\u64cd\u4f5c\u7b26"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT COS(PI());"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT COS(PI());"
+    ]
+}

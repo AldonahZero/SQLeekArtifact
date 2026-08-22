@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dateadd/"
+  ],
+  "Title": [
+    "dateadd ("
+  ],
+  "Feature": [
+    "dateadd ("
+  ],
+  "Description": [
+    "dateadd adds a positive or negative quantity of units to a date\n    (in the internal date time format), and returns a new date so formed.\n    The unit is specified as a string and can be one of the following:\n    'second', 'minute', 'hour', 'day', 'month', or 'year'.\n    Use datestring to convert the result to a human-readable string."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

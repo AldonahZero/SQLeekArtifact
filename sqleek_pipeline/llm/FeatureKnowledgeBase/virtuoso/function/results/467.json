@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_smime_encrypt/"
+  ],
+  "Title": [
+    "varchar smime_encrypt ("
+  ],
+  "Feature": [
+    "varchar smime_encrypt ("
+  ],
+  "Description": [
+    "This function performs encryption of a (signed) e-mail message."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

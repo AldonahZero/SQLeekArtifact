@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vacuum/"
+  ],
+  "Title": [
+    "DB.DBA.VACUUM ("
+  ],
+  "Feature": [
+    "DB.DBA.VACUUM ("
+  ],
+  "Description": [
+    "This functionality happens automatically in Virtuoso versions 6 and greater.\nThis is not the same as compacting the database and may actually make the db file\n        larger when run. The preferred way to shrink the database file itself is to perform a backup-dump/restore-crash-dump cycle.\nThis function reads through the specified tables and indices and finds groups of adjacent index\npages holding data that will fit on fewer pages than it currently occupies. If such an operation can be made,\nthe pages are thus compacted.\nThe compacted pages become part of the committed state and will be written to the checkpoint\nspace on the next checkpoint.\nThe vacuum operation is non-locking and can be run on a busy database. It will simply skip pages\nwith ongoing activity such as pending cursors or locks. The vacuum procedure returns only after it has read\n    through the indices it affects but it will not prevent other activity on the indices.\nThe vacuum operation may run out of disk space even if it makes net gains because the modified\npages will not be final until the next checkpoint and the originals will not be free until this same\ncheckpoint. Thus manually running a checkpoint after vacuum runs out of space will free the space and\nvacuum may be rerun."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

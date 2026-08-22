@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/list"
+    ],
+    "Title": [
+        "array_push_front"
+    ],
+    "Feature": [
+        "array_push_front"
+    ],
+    "Description": [
+        "array_prepend",
+        "list_prepend(element, list)",
+        "Prepends element to list."
+    ],
+    "Examples": [
+        "list_prepend(3, [4, 5, 6])"
+    ],
+    "Category": [
+        "List Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_push_front(list, element);",
+        "SELECT array_push_front([1, 2, 3], 0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 259,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.145e-05
+        },
+        {
+            "Total Tokens": 454,
+            "Prompt Tokens": 425,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 8.115e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"element\" not found in FROM clause!\nLINE 1: SELECT array_push_front(list, element);\n                                      ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_push_front([1, 2, 3], 0);"
+    ]
+}

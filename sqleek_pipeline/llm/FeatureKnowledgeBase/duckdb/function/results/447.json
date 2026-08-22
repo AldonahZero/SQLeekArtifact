@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "trim(string, characters)"
+    ],
+    "Feature": [
+        "trim(string, characters)"
+    ],
+    "Description": [
+        "Removes any occurrences of any of the characters from either side of the string."
+    ],
+    "Examples": [
+        "trim('>>>>test<<', '><')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT trim('  Hello World!  ', ' ')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 264,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.4e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT trim('  Hello World!  ', ' ')"
+    ]
+}

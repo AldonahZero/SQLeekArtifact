@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_charset_recode/"
+  ],
+  "Title": [
+    "any charset_recode ("
+  ],
+  "Feature": [
+    "any charset_recode ("
+  ],
+  "Description": [
+    "This function translates a string from a given source charset to a destination charset.  It provides a generic way of recoding string entities.\nThe src_charset may be a narrow or a wide string . If it's a narrow string ( VARCHAR ) then the src_charset is taken into account and defines the current encoding of the src_string .  In any other case src_charset is ignored.\nsrc_charset\nsrc_charset\nsrc_string\nsrc_charset\nsrc_charset and dst_charset are names of system-defined 8 bit charset tables. Use charsets_list to obtain a list of currently defined character sets and aliases. If either of these is null, then the charset in effect is used. There are two special character set names - \"UTF-8\" and \"_WIDE_\" - that are recognized by this function. These represent UTF-8 encoding of characters and wide string ( NVARCHAR ).\nsrc_charset\ndst_charset\ncharsets_list"
+  ],
+  "Examples": [
+    "select cast (charset_recode ('\\xA9', 'ISO-8859-1', 'UTF-8') as varbinary)",
+    "select cast (charset_recode ('\\xC0', 'WINDOWS-1251', 'ISO-8859-5') as varbinary)",
+    "select cast (charset_recode (N'\\x410', '_WIDE_', 'WINDOWS-1251') as varbinary)",
+    "select charset_recode (N'\\x410', '_WIDE_', 'ISO-8859-1')"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

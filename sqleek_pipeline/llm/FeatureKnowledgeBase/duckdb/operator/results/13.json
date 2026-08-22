@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/interval"
+    ],
+    "Title": [
+        "+"
+    ],
+    "Feature": [
+        "+"
+    ],
+    "Description": [
+        "addition to a DATE"
+    ],
+    "Examples": [
+        "DATE '1992-03-22' + INTERVAL 5 DAY"
+    ],
+    "Category": [
+        "Interval Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT DATE '2023-10-01' + INTERVAL '1 DAY';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 266,
+            "Prompt Tokens": 236,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 5.339999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT DATE '2023-10-01' + INTERVAL '1 DAY';"
+    ]
+}

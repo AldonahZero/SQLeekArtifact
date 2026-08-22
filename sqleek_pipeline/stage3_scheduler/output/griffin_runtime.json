@@ -1,0 +1,13 @@
+{
+  "postgres": {
+    "container": "sqleek_griffin_postgres",
+    "crashes_dir": "/workspace/fuzzing/fuzz_out_dir/default/crashes",
+    "harness": "/workspace/bld_griffin_dynamic/autodriver_odbc_v5_aflpp",
+    "image": "griffin_postgres",
+    "log_saved_dir": "/workspace/fuzzing/logSaved",
+    "mutator": "/workspace/bld_griffin_dynamic/custom_mutator/squirrel_dependencies/libsquirrel_postgres.so",
+    "queue_dir": "/workspace/fuzzing/fuzz_out_dir/default/queue",
+    "start_script": "/workspace/scripts/start_all.sh",
+    "status": "ok"
+  }
+}

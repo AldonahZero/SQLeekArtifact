@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-info.html"
+    ],
+    "Title": [
+        "pg_ts_parser_is_visible"
+    ],
+    "Feature": [
+        "pg_ts_parser_is_visible ( parser oid ) \u2192 boolean"
+    ],
+    "Description": [
+        "Is text search parser visible in search path?"
+    ],
+    "Examples": [],
+    "Category": [
+        "System Information Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pg_ts_parser_is_visible(12345);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 262,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.3099999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pg_ts_parser_is_visible(12345);"
+    ]
+}

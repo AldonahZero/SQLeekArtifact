@@ -1,0 +1,47 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "CAN_ACCESS_DATABASE()",
+    "Description": [
+        "\nCAN_ACCESS_DATABASE(ARGS)\n"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/internal-functions.html#function_can-access-database",
+    "Feature": [
+        "CAN_ACCESS_DATABASE(ARGS)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Internal Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT CAN_ACCESS_DATABASE('example_argument');",
+        "SELECT 1;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 290,
+            "Prompt Tokens": 269,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.295e-05
+        },
+        {
+            "Total Tokens": 443,
+            "Prompt Tokens": 427,
+            "Completion Tokens": 16,
+            "Total Cost (USD)": 7.365e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (3566, \"Access to native function 'CAN_ACCESS_DATABASE' is rejected.\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 1;"
+    ]
+}

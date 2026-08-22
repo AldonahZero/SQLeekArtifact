@@ -1,0 +1,69 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/spider_copy_tables/"
+    ],
+    "Title": [
+        "SPIDER_COPY_TABLES"
+    ],
+    "Feature": [
+        "SPIDER_COPY_TABLES(spider_table_name, \n  source_link_id, destination_link_id_list [,parameters])\n"
+    ],
+    "Description": [
+        "A UDF installed with the Spider Storage Engine, this function copies table data from source_link_id to destination_link_id_list. The service does not need to be stopped in order to copy.",
+        "If the Spider table is partitioned, the name must be of the format table_name#P#partition_name. The partition name can be viewed in the mysql.spider_tables table, for example:",
+        "SELECT table_name FROM mysql.spider_tables;\n+-------------+\n| table_name  |\n+-------------+\n| spt_a#P#pt1 |\n| spt_a#P#pt2 |\n| spt_a#P#pt3 |\n+-------------+\n",
+        "Returns 1 if the data was copied successfully, or 0 if copying the data failed."
+    ],
+    "Examples": [],
+    "Category": [
+        "Spider Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SPIDER_COPY_TABLES('spt_a#P#pt1', 1, [2, 3])",
+        "SELECT SPIDER_COPY_TABLES('spt_a#P#pt1', 1, '2,3')",
+        "SELECT SPIDER_COPY_TABLES('spt_a#P#pt1', 1, '2,3') FROM dual",
+        "CALL SPIDER_COPY_TABLES('spt_a#P#pt1', 1, '2,3')",
+        "SELECT * FROM mysql.spider_tables WHERE table_name = 'spt_a#P#pt1'"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 469,
+            "Prompt Tokens": 432,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 8.699999999999999e-05
+        },
+        {
+            "Total Tokens": 687,
+            "Prompt Tokens": 650,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 0.0001197
+        },
+        {
+            "Total Tokens": 866,
+            "Prompt Tokens": 827,
+            "Completion Tokens": 39,
+            "Total Cost (USD)": 0.00014744999999999998
+        },
+        {
+            "Total Tokens": 1043,
+            "Prompt Tokens": 1006,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 0.00017309999999999998
+        },
+        {
+            "Total Tokens": 1218,
+            "Prompt Tokens": 1185,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 0.00019754999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SPIDER_COPY_TABLES('spt_a#P#pt1', 1, [2, 3])' at line 1\")\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION pinolo_temp_mariadb.SPIDER_COPY_TABLES does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION pinolo_temp_mariadb.SPIDER_COPY_TABLES does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'PROCEDURE pinolo_temp_mariadb.SPIDER_COPY_TABLES does not exist')\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'mysql.spider_tables' doesn't exist\")\n"
+    ],
+    "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_user_grant_role/"
+  ],
+  "Title": [
+    "USER_GRANT_ROLE ("
+  ],
+  "Feature": [
+    "USER_GRANT_ROLE ("
+  ],
+  "Description": [
+    "This function is used to assign an existing role to an existing\n    security object. This is the same as the GRANT <role> statement.\nGRANT <role>\nAll roles assigned to the role object will be inherited."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

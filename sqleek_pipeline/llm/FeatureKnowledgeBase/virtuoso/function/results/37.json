@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bag_concat_agg/"
+  ],
+  "Title": [
+    "vector DB.DBA.BAG_CONCAT_AGG ("
+  ],
+  "Feature": [
+    "vector DB.DBA.BAG_CONCAT_AGG ("
+  ],
+  "Description": [
+    "DB.DBA.BAG_CONCAT_AGG expects SQL vectors as arguments and the result is a concatenation\nof all passed vectors.\nDB.DBA.BAG_CONCAT_AGG"
+  ],
+  "Examples": [
+    "SELECT DB.DBA.BAG_CONCAT_AGG (vector (U_NAME, U_ID))"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

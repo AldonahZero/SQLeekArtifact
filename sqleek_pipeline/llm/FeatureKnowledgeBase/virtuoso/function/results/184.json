@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_get_keyword/"
+  ],
+  "Title": [
+    "get_keyword ("
+  ],
+  "Feature": [
+    "get_keyword ("
+  ],
+  "Description": [
+    "get_keyword performs a case sensitive seek\n    for the occurrence of keyword from each even position of searched_array . If found,this   returns the\n element following the occurrence of the keyword.\n    If the keyword is not found this returns the default argument or NULL if the default is\n    not supplied.\nget_keyword\nkeyword\nsearched_array"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

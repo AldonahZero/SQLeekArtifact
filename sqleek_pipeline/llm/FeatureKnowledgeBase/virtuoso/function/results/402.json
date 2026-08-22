@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_disconnect/"
+  ],
+  "Title": [
+    "repl_disconnect ("
+  ],
+  "Feature": [
+    "repl_disconnect ("
+  ],
+  "Description": [
+    "This terminates any communication with the publisher. Any\npending synchronization communication is disconnected and all subscribed publications\nare marked as 'OFF'. The effect is reversed on a subscription by subscription\nbasis by calling repl_sync for each."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

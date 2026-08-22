@@ -1,0 +1,29 @@
+{
+  "operation": "targeted_rq4_disk_cleanup",
+  "generated_at": "2026-07-31T14:24:14Z",
+  "deleted_paths": [
+    {
+      "path": "/root/SQLeek/experiment/RQ4/live/rq4_wo_m2_campaign_20260728_085746/runs/postgresql/rq4_wo_m2_postgres_r1aflignore_20260728_222219",
+      "size_before": "13G",
+      "reason": "failed/obsolete PostgreSQL r1 AFL-ignore run"
+    },
+    {
+      "path": "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_postgres_bucketed_seq_replay_20260731_055820",
+      "size_before": "1.6G",
+      "reason": "superseded old PostgreSQL r1 replay package"
+    }
+  ],
+  "removed_containers": [
+    "sqleek_stage3_postgresql_rq4_wo_m2_postgres_r5_20260729_173043",
+    "sqleek_stage3_postgresql_rq4_wo_m2_postgres_r4_20260729_173043",
+    "sqleek_stage3_postgresql_rq4_wo_m2_postgres_r3_20260729_173043",
+    "sqleek_stage3_postgresql_rq4_wo_m2_postgres_r1_20260729_173043"
+  ],
+  "preserved": [
+    "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_postgres_bucketed_seq_replay_mtime_20260731_060212",
+    "/root/SQLeek/experiment/RQ4/result",
+    "/root/SQLeek/experiment/RQ4/configs/wo_m1",
+    "/root/SQLeek/experiment/RQ4/live/rq4_wo_m2_campaign_20260728_085746/runs"
+  ],
+  "note": "No global Docker prune was run; images, volumes, M1 pool, final campaign corpora, current PG replay package, and result artifacts were preserved."
+}

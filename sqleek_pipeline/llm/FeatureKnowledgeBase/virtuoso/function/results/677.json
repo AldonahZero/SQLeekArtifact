@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xenc_key_aes_create/"
+  ],
+  "Title": [
+    "xenc_key_AES_create ("
+  ],
+  "Feature": [
+    "xenc_key_AES_create ("
+  ],
+  "Description": [
+    "Used to make a symmetric session key for AES encryption algorithm."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

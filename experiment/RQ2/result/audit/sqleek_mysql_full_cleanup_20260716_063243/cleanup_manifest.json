@@ -1,0 +1,1742 @@
+{
+  "copied_result_files": [
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/PARTIAL_REPLAY_RESULTS.md",
+      "size": 1786,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/PARTIAL_REPLAY_RESULTS.md"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/manifest.sha256",
+      "size": 158,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/manifest.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/replay_driver.log",
+      "size": 379,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/replay_driver.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/replay_index.sha256",
+      "size": 160,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/replay_index.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/replay_index.tsv",
+      "size": 7856577,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/replay_index.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/summary.json",
+      "size": 673,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/summary.json"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/summary.sha256",
+      "size": 156,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/summary.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/target_regions.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/target_regions.sha256",
+      "size": 162,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/target_regions.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/work/copied_stat.tsv",
+      "size": 2626033,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/work/copied_stat.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_12h/work/selected_paths.txt",
+      "size": 955177,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/work/selected_paths.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/manifest.jsonl.sha256",
+      "size": 81,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/manifest.jsonl.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_assets.sha256",
+      "size": 354,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_assets.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_driver.log",
+      "size": 867,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_driver.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_index.tsv",
+      "size": 10935672,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_index.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_index.tsv.sha256",
+      "size": 83,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_index.tsv.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000001.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000001.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000002.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000002.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000003.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000003.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000004.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000004.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000005.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000005.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000006.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000006.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000007.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000007.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000008.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000008.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000009.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000009.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000010.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000010.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000011.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000011.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000012.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000012.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000013.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000013.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000014.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000014.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000015.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000015.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000016.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000016.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000017.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000017.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000018.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000018.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000019.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000019.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000020.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000020.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000021.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000021.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000022.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000022.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000023.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000023.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000024.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000024.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000025.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000025.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000026.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000026.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000027.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000027.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000028.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000028.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000029.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000029.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000030.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000030.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000031.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000031.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000032.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000032.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000033.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000033.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000034.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000034.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000035.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000035.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000036.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000036.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000037.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000037.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000038.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000038.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000039.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000039.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000040.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000040.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000041.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000041.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000042.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000042.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000043.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000043.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000044.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000044.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000045.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000045.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000046.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000046.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000047.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000047.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000048.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000048.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000049.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000049.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000050.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000050.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000051.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000051.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000052.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000052.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000053.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000053.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000054.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000054.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000055.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000055.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000056.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000056.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000057.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000057.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000058.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000058.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000059.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000059.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000060.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000060.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000061.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000061.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000062.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000062.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000063.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000063.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000064.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000064.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000065.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000065.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000066.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000066.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000067.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000067.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000068.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000068.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000069.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000069.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000070.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000070.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000071.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000071.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000072.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000072.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000073.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000073.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000074.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000074.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000075.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000075.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000076.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000076.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000077.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000077.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000078.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000078.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000079.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000079.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000080.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000080.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000081.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000081.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000082.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000082.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000083.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000083.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000084.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000084.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000085.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000085.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000086.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000086.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000087.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000087.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000088.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000088.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000089.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000089.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000090.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000090.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000091.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000091.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000092.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000092.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000093.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000093.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000094.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000094.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000095.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000095.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000096.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000096.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000097.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000097.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000098.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000098.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000099.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000099.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000100.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000100.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000101.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000101.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000102.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000102.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000103.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000103.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000104.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000104.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000105.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000105.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000106.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000106.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000107.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000107.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000108.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000108.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000109.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000109.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000110.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000110.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000111.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000111.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000112.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000112.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000113.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000113.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000114.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000114.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000115.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000115.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000116.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/profdata/buckets/sqleek_mysql_r1_24h_bucket_000116.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.checkpoint_meta.tsv",
+      "size": 1106,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.checkpoint_meta.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.executed_seeds.tsv",
+      "size": 3665888,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.executed_seeds.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.input_status.tsv",
+      "size": 4157107,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.input_status.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.mysqld-init.log",
+      "size": 163105,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.mysqld-init.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.mysqld.log",
+      "size": 450386,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.mysqld.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.profile_bucket_meta.tsv",
+      "size": 27793,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.profile_bucket_meta.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.server_restarts.tsv",
+      "size": 24905,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h.server_restarts.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t1200.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t1200.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t1440.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t1440.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t1441.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t1441.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t180.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t180.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t300.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t300.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t480.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t480.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t60.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t60.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t600.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t600.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t720.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t720.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t900.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out/bucketed_all_checkpoints/sqleek_mysql_r1_24h_t900.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_queue_time_named.tsv",
+      "size": 10935672,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_queue_time_named.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/replay_queue_time_named.tsv.sha256",
+      "size": 94,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_queue_time_named.tsv.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/source_files.txt.sha256",
+      "size": 88,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/source_files.txt.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/summary.json",
+      "size": 816,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/summary.json"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/summary.json.sha256",
+      "size": 79,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/summary.json.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/target_regions.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_24h_20260716_032340/work/source_files.txt",
+      "size": 1127042,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/work/source_files.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/REPLAY_RESULTS.md",
+      "size": 2550,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/REPLAY_RESULTS.md"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/component_heatmap.csv",
+      "size": 150,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/component_heatmap.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/component_heatmap_by_run.csv",
+      "size": 167,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/component_heatmap_by_run.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/coverage_summary.csv",
+      "size": 411,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/coverage_summary.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/coverage_timeseries.csv",
+      "size": 281,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/coverage_timeseries.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/manifest.sha256",
+      "size": 158,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/manifest.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/component_heatmap.csv",
+      "size": 150,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/component_heatmap.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/component_heatmap_by_run.csv",
+      "size": 167,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/component_heatmap_by_run.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/coverage_summary.csv",
+      "size": 411,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/coverage_summary.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/coverage_timeseries.csv",
+      "size": 281,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/coverage_timeseries.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/replay_index.tsv",
+      "size": 568,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/replay_index.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/runs.csv",
+      "size": 317,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/runs.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/target_branch_hits.csv",
+      "size": 79,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/target_branch_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/target_region_hits.csv",
+      "size": 141,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/target_region_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/real_data/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/real_data/target_regions.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/replay_driver.log",
+      "size": 1949,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_driver.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/replay_index.tsv",
+      "size": 5128137,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_index.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/replay_queue_time_named.tsv",
+      "size": 5128137,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_queue_time_named.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/summary.json",
+      "size": 1195,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/summary.json"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/summary.sha256",
+      "size": 156,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/summary.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/target_branch_hits.csv",
+      "size": 79,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/target_branch_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/target_region_hits.csv",
+      "size": 141,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/target_region_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/target_regions.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m/work/selected_paths.txt",
+      "size": 1869679,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/work/selected_paths.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m.bak_precise_20260715_050737/manifest.sha256",
+      "size": 158,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m.bak_precise_20260715_050737/manifest.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m.bak_precise_20260715_050737/replay_queue_time_named.tsv",
+      "size": 5128533,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m.bak_precise_20260715_050737/replay_queue_time_named.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m.bak_precise_20260715_050737/summary.json",
+      "size": 1114,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m.bak_precise_20260715_050737/summary.json"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m.bak_precise_20260715_050737/summary.sha256",
+      "size": 156,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m.bak_precise_20260715_050737/summary.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_60m.bak_precise_20260715_050737/work/selected_paths.txt",
+      "size": 1869835,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m.bak_precise_20260715_050737/work/selected_paths.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/REPLAY_RESULTS.md",
+      "size": 2236,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/REPLAY_RESULTS.md"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/manifest.jsonl.sha256",
+      "size": 81,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/manifest.jsonl.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_assets.sha256",
+      "size": 362,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_assets.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_driver.log",
+      "size": 831,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_driver.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_index.tsv",
+      "size": 9262945,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_index.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000001.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000001.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000002.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000002.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000003.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000003.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000004.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000004.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000005.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000005.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000006.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000006.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000007.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000007.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000008.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000008.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000009.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000009.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000010.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000010.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000011.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000011.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000012.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000012.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000013.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000013.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000014.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000014.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000015.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000015.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000016.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000016.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000017.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000017.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000018.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000018.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000019.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000019.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000020.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000020.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000021.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000021.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000022.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000022.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000023.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000023.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000024.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000024.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000025.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000025.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000026.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000026.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000027.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000027.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000028.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000028.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000029.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000029.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000030.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000030.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000031.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000031.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000032.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000032.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000033.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000033.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000034.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000034.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000035.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000035.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000036.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000036.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000037.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000037.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000038.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000038.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000039.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000039.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000040.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000040.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000041.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000041.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000042.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000042.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000043.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000043.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000044.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000044.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000045.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000045.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000046.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000046.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000047.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000047.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000048.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000048.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000049.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000049.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000050.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000050.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000051.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000051.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000052.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000052.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000053.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000053.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000054.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000054.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000055.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000055.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000056.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000056.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000057.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000057.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000058.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000058.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000059.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000059.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000060.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000060.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000061.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000061.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000062.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000062.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000063.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000063.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000064.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000064.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000065.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000065.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000066.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000066.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000067.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000067.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000068.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000068.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000069.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000069.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000070.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000070.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000071.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000071.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000072.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000072.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000073.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000073.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000074.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000074.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000075.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000075.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000076.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000076.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000077.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000077.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000078.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000078.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000079.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000079.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000080.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000080.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000081.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000081.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000082.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000082.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000083.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000083.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000084.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000084.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000085.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000085.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000086.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000086.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000087.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000087.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000088.merge.log",
+      "size": 0,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/profdata/buckets/sqleek_mysql_r1_current_bucket_000088.merge.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/resummarize_809m.log",
+      "size": 304,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/resummarize_809m.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.checkpoint_meta.tsv",
+      "size": 172,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.checkpoint_meta.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.executed_seeds.tsv",
+      "size": 3085026,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.executed_seeds.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.input_status.tsv",
+      "size": 3485993,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.input_status.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.mysqld-init.log",
+      "size": 134130,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.mysqld-init.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.mysqld.log",
+      "size": 320616,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.mysqld.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.profile_bucket_meta.tsv",
+      "size": 22149,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.profile_bucket_meta.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.server_restarts.tsv",
+      "size": 19483,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current.server_restarts.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current_t809.report.txt",
+      "size": 870431,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/sqleek_mysql_r1_current_t809.report.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/component_heatmap.csv",
+      "size": 150,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/component_heatmap.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/component_heatmap_by_run.csv",
+      "size": 167,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/component_heatmap_by_run.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/coverage_summary.csv",
+      "size": 417,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/coverage_summary.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/coverage_timeseries.csv",
+      "size": 282,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/coverage_timeseries.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/replay_index.tsv",
+      "size": 724,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/replay_index.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/runs.csv",
+      "size": 368,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/runs.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/target_branch_hits.csv",
+      "size": 79,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/target_branch_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/target_region_hits.csv",
+      "size": 141,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/target_region_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out/current_bucketed/summary_809m/target_regions.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/replay_queue_time_named.tsv",
+      "size": 9262945,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_queue_time_named.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/source_files.txt.sha256",
+      "size": 88,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/source_files.txt.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/summary.json",
+      "size": 608,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/summary.json"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/summary.json.sha256",
+      "size": 79,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/summary.json.sha256"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/target_regions.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/r1/queue_current_20260715_153117/work/source_files.txt",
+      "size": 973951,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/work/source_files.txt"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/resummarize.log",
+      "size": 2512,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/resummarize.log"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/component_heatmap.csv",
+      "size": 677,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/component_heatmap.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/component_heatmap_by_run.csv",
+      "size": 1480,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/component_heatmap_by_run.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/coverage_summary.csv",
+      "size": 413,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/coverage_summary.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/coverage_timeseries.csv",
+      "size": 1258,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/coverage_timeseries.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/replay_index.tsv",
+      "size": 5145,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/replay_index.tsv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/runs.csv",
+      "size": 340,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/runs.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/target_branch_hits.csv",
+      "size": 1426998,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/target_branch_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/target_region_hits.csv",
+      "size": 391892,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/target_region_hits.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/summary/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/summary/target_regions.csv"
+    },
+    {
+      "dst": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results/replay_24h_20260716_032340_summary/target_regions.csv",
+      "size": 168541,
+      "src": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/target_regions.csv"
+    }
+  ],
+  "created_at": "20260716_063243",
+  "kept_audit_results": "/root/SQLeek/experiment/RQ2/result/audit/sqleek_mysql_full_cleanup_20260716_063243/stage3_checkpoint_results",
+  "kept_final_roots": [
+    "/root/SQLeek/experiment/RQ2/result/data",
+    "/root/SQLeek/experiment/RQ2/result/figures",
+    "/root/SQLeek/experiment/RQ4/result/data"
+  ],
+  "removed_checkpoint_paths": [
+    {
+      "bytes": 66844835,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m.bak_precise_20260715_050737"
+    },
+    {
+      "bytes": 24489380,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/queue"
+    },
+    {
+      "bytes": 24489380,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_queue_time_named"
+    },
+    {
+      "bytes": 1869679,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/work"
+    },
+    {
+      "bytes": 0,
+      "exists": false,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_out"
+    },
+    {
+      "bytes": 47899870,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/queue"
+    },
+    {
+      "bytes": 47899870,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/replay_queue_time_named"
+    },
+    {
+      "bytes": 3581210,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/work"
+    },
+    {
+      "bytes": 50058330,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/queue"
+    },
+    {
+      "bytes": 50058330,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_queue_time_named"
+    },
+    {
+      "bytes": 973951,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/work"
+    },
+    {
+      "bytes": 1229010125,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_out"
+    },
+    {
+      "bytes": 70838200,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/queue"
+    },
+    {
+      "bytes": 70838200,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_queue_time_named"
+    },
+    {
+      "bytes": 1127042,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/work"
+    },
+    {
+      "bytes": 1773042341,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_out"
+    },
+    {
+      "bytes": 449678664,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/replay_24h_20260716_032340_summary/profdata_root"
+    },
+    {
+      "bytes": 10861024,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/manifest.jsonl"
+    },
+    {
+      "bytes": 5128137,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_index.tsv"
+    },
+    {
+      "bytes": 5128137,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_60m/replay_queue_time_named.tsv"
+    },
+    {
+      "bytes": 8416199,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/manifest.jsonl"
+    },
+    {
+      "bytes": 7856577,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_12h/replay_index.tsv"
+    },
+    {
+      "bytes": 11756777,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/manifest.jsonl"
+    },
+    {
+      "bytes": 9262945,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_index.tsv"
+    },
+    {
+      "bytes": 9262945,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_current_20260715_153117/replay_queue_time_named.tsv"
+    },
+    {
+      "bytes": 14123089,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/manifest.jsonl"
+    },
+    {
+      "bytes": 10935672,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_index.tsv"
+    },
+    {
+      "bytes": 10935672,
+      "exists": true,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/checkpoints/mysql/r1/queue_24h_20260716_032340/replay_queue_time_named.tsv"
+    }
+  ],
+  "removed_runtime_paths": [
+    {
+      "bytes": 0,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/runtime/mysql_resetfix0006_full7898_smoke_20260715_012928"
+    },
+    {
+      "bytes": 110847048,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/runtime/mysql_resetfix0006_full7898_smoke_20260715_013145"
+    },
+    {
+      "bytes": 130461024,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/runtime/mysql_resetfix0006_full7898_smoke_20260715_013557"
+    },
+    {
+      "bytes": 34097,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/runtime/mysql_resetfix0006_minverify_20260714_163952"
+    },
+    {
+      "bytes": 20227155,
+      "path": "/root/SQLeek/sqleek_pipeline/stage3_scheduler/runtime/mysql_resetfix0006_minverify_20260714_164148"
+    }
+  ],
+  "removed_total_bytes": 4277935905,
+  "scope": "SQLeek Stage3 MySQL Full intermediate cleanup"
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_unlink/"
+  ],
+  "Title": [
+    "file_unlink ("
+  ],
+  "Feature": [
+    "file_unlink ("
+  ],
+  "Description": [
+    "This function requires dba privileges.\nThis function deletes a file from the file system.  sys_unlink is a synonym of this function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

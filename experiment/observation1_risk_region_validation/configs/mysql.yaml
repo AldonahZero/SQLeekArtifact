@@ -1,0 +1,54 @@
+dbms: mysql
+sqleek_root: /root/SQLeek
+source_repo: /root/SQLeek/sources/mysql
+source_path: /root/SQLeek/sources/mysql
+stage1_codeql_results_dir: /root/SQLeek/sqleek_pipeline/stage1_static/output/codeql_results/mysql
+stage1_targets_dir: /root/SQLeek/sqleek_pipeline/stage1_static/output/targets
+coverage:
+  official_coverage_csv: ''
+  allow_fuzzing_coverage_for_main: false
+  excluded_fuzzing_coverage_note: Fuzzing/replay coverage is not used for Observation
+    1 main coverage-gap signal.
+analysis:
+  historical_repair_threshold: 2
+  mapping_confidence_for_main: high
+  coverage_gap_primary: below_dbms_median_branch_coverage
+paths:
+  data_dir: /root/SQLeek/experiment/observation1_risk_region_validation/data/mysql
+  results_dir: /root/SQLeek/experiment/observation1_risk_region_validation/results/mysql
+  reports_dir: /root/SQLeek/experiment/observation1_risk_region_validation/reports
+windows:
+  main:
+    window_id: main
+    historical_start: '2000-07-31'
+    historical_end: '2023-12-31'
+    validation_start: '2024-01-01'
+    validation_end: '2025-12-31'
+  rolling:
+  - window_id: hist_to_2020_val_2021_2022
+    historical_start: '2000-07-31'
+    historical_end: '2020-12-31'
+    validation_start: '2021-01-01'
+    validation_end: '2022-12-31'
+  - window_id: hist_to_2021_val_2022_2023
+    historical_start: '2000-07-31'
+    historical_end: '2021-12-31'
+    validation_start: '2022-01-01'
+    validation_end: '2023-12-31'
+  - window_id: hist_to_2022_val_2023_2024
+    historical_start: '2000-07-31'
+    historical_end: '2022-12-31'
+    validation_start: '2023-01-01'
+    validation_end: '2024-12-31'
+  - window_id: hist_to_2023_val_2024_2025
+    historical_start: '2000-07-31'
+    historical_end: '2023-12-31'
+    validation_start: '2024-01-01'
+    validation_end: '2025-12-31'
+source_commit: 447eb26e094b444a88c532028647e48228c3c04f
+history:
+  repo_first_commit_date: '2000-07-31'
+  repo_latest_commit_date: '2025-12-23'
+  latest_complete_year: 2025
+  commit_count_no_merges: 109579
+  history_scope: current_branch_head

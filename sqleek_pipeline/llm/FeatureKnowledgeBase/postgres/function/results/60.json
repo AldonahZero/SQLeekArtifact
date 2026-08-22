@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-string.html"
+    ],
+    "Title": [
+        "ltrim"
+    ],
+    "Feature": [
+        "ltrim ( string text [, characters text ] ) \u2192 text"
+    ],
+    "Description": [
+        "Removes the longest string containing only characters in characters (a space by default) from the start of string."
+    ],
+    "Examples": [
+        "ltrim('zzzytest', 'xyz') \u2192 test"
+    ],
+    "Category": [
+        "String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ltrim('   Hello World');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 267,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.265e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ltrim('   Hello World');"
+    ]
+}

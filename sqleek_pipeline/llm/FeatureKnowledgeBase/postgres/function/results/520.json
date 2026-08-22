@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-admin.html"
+    ],
+    "Title": [
+        "pg_split_walfile_name"
+    ],
+    "Feature": [
+        "pg_split_walfile_name ( file_name text ) \u2192 record ( segment_number numeric, timeline_id bigint )"
+    ],
+    "Description": [
+        "Extracts the sequence number and timeline ID from a WAL file name."
+    ],
+    "Examples": [],
+    "Category": [
+        "System Administration Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pg_split_walfile_name('0000000100000002000000A1');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 313,
+            "Prompt Tokens": 281,
+            "Completion Tokens": 32,
+            "Total Cost (USD)": 6.135e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pg_split_walfile_name('0000000100000002000000A1');"
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-string.html"
+    ],
+    "Title": [
+        "text || text"
+    ],
+    "Feature": [
+        "text || text \u2192 text"
+    ],
+    "Description": [
+        "Concatenates the two strings."
+    ],
+    "Examples": [
+        "'Post' || 'greSQL' \u2192 PostgreSQL"
+    ],
+    "Category": [
+        "String Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'text1' || 'text2';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 271,
+            "Prompt Tokens": 248,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.099999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'text1' || 'text2';"
+    ]
+}

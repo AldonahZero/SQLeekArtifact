@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_view_dtd/"
+  ],
+  "Title": [
+    "varchar xml_view_dtd ("
+  ],
+  "Feature": [
+    "varchar xml_view_dtd ("
+  ],
+  "Description": [
+    "This function will return an XML DTD for the output of a given XML VIEW.\nThe returned DTD will be valid if the HTTP_... output of the view is\nwrapped into the specified root element."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ldap_modify/"
+  ],
+  "Title": [
+    "int ldap_modify ("
+  ],
+  "Feature": [
+    "int ldap_modify ("
+  ],
+  "Description": [
+    "This function modifies an existing LDAP directory entry."
+  ],
+  "Examples": [
+    "create procedure"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

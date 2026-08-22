@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_atof/"
+  ],
+  "Title": [
+    "atof ("
+  ],
+  "Feature": [
+    "atof ("
+  ],
+  "Description": [
+    "atof returns its argument as a single precision floating point.\n      If the string cannot be parsed and converted to a valid\n      float, a value 0.0 is returned."
+  ],
+  "Examples": [
+    "callret",
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

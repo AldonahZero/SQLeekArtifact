@@ -1,0 +1,41 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/datatype-geometric.html"
+    ],
+    "Title": [
+        "line"
+    ],
+    "Feature": [
+        "line"
+    ],
+    "Description": [
+        "Storage Size",
+        "24 bytes",
+        "Description",
+        "Infinite line",
+        "Representation",
+        "{A,B,C}"
+    ],
+    "Examples": [],
+    "Category": [
+        "Geometric Types"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT 'line'::text;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 272,
+            "Prompt Tokens": 253,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 4.934999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'line'::text;"
+    ]
+}

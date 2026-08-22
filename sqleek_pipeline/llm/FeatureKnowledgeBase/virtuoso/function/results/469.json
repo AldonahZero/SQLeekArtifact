@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_smime_verify/"
+  ],
+  "Title": [
+    "varchar smime_verify ("
+  ],
+  "Feature": [
+    "varchar smime_verify ("
+  ],
+  "Description": [
+    "This function takes the RFC822 text of an e-mail containing an S/MIME signed\n\tmessage and verifies it's signature using the CA certificates in certs, which\n\tis an array of strings containing single or multiple PEM-encoded certificates."
+  ],
+  "Examples": [
+    "select smime_verify (file_to_string ('signed.eml'),"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_triples_to_rdf_xml_text/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_TRIPLES_TO_RDF_XML_TEXT ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_TRIPLES_TO_RDF_XML_TEXT ("
+  ],
+  "Description": [
+    "Serializes vector of triples into a session, in TURTLE syntax. In current version, every triple is printed in separate top-level record (say, in rdf:Description tag),\nwithout any pretty-print or nesting optimization."
+  ],
+  "Examples": [
+    "create procedure simple_test(in query varchar, in dflt_graph varchar)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

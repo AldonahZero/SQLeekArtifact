@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_starts_with/"
+  ],
+  "Title": [
+    "starts_with ("
+  ],
+  "Feature": [
+    "starts_with ("
+  ],
+  "Description": [
+    "starts_with checks whether string X begins with Y, ignoring occurencies of Y in other places. Returns 1 or 0.\nstarts_with"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

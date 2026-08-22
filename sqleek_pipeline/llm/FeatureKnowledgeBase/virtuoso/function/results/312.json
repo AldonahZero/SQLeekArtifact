@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nntp_auth_get/"
+  ],
+  "Title": [
+    "array nntp_auth_get ("
+  ],
+  "Feature": [
+    "array nntp_auth_get ("
+  ],
+  "Description": [
+    "The nntp_auth_get() is used to retrieve messages from a \nserver requiring authorization.  See nntp_get for more information.\nnntp_auth_get()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

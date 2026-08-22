@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_amazon_create_volume/"
+  ],
+  "Title": [
+    "DB.DBA.AMAZON_CREATE_VOLUME ("
+  ],
+  "Feature": [
+    "DB.DBA.AMAZON_CREATE_VOLUME ("
+  ],
+  "Description": [
+    "Creates an Amazon EBS volume that can be attached to any Amazon EC2 instance in the same Availability\n    Zone. Any AWS Marketplace product codes from the snapshot are propagated to the volume."
+  ],
+  "Examples": [
+    "create procedure simple_test()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

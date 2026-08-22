@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_table_drop_policy/"
+  ],
+  "Title": [
+    "table_drop_policy ("
+  ],
+  "Feature": [
+    "table_drop_policy ("
+  ],
+  "Description": [
+    "Drops policy function from table."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

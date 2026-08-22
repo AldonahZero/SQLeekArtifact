@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_udt_implements_method/"
+  ],
+  "Title": [
+    "any udt_implements_method ("
+  ],
+  "Feature": [
+    "any udt_implements_method ("
+  ],
+  "Description": [
+    "This returns a non-zero value (true) if the udt has an instance method\n    with a name equal to the value of method_name. For methods with the same\n    name, but with different signatures this function will return the handle\n    of the first method in order of definition. If a method is not found, 0\n    will be returned. The return value can be used to call the method using\n    the indirect call statement. In which case an instance should be passed\n    as a first argument to the indirect call statement."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

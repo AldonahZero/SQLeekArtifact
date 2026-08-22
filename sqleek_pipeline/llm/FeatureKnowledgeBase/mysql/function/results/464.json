@@ -1,0 +1,71 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "gen_rnd_us_phone()",
+    "Description": [
+        "\ngen_rnd_us_phone()\n",
+        "\n              Generates a random US phone number in\n              1-555-AAA-BBBB\n              format. The 555 area code is not used for legitimate phone\n              numbers.\n            ",
+        "\n              Arguments:\n            ",
+        "\n              None.\n            ",
+        "\n              Return value:\n            ",
+        "\n              A random US phone number as a string.\n            ",
+        "\n              Example:\n            ",
+        "Press CTRL+C to copy mysql> SELECT gen_rnd_us_phone();\n+--------------------+\n| gen_rnd_us_phone() |\n+--------------------+\n| 1-555-682-5423     |\n+--------------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/data-masking-plugin-functions.html#function_gen-rnd-us-phone-plugin",
+    "Feature": [
+        "gen_rnd_us_phone()"
+    ],
+    "Examples": [
+        "mysql> SELECT gen_rnd_us_phone();\n+--------------------+\n| gen_rnd_us_phone() |\n+--------------------+\n| 1-555-682-5423     |\n+--------------------+"
+    ],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT gen_rnd_us_phone();",
+        "SELECT gen_rnd_us_phone();",
+        "SELECT gen_rnd_us_phone();",
+        "SELECT 'Function does not exist';"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 427,
+            "Prompt Tokens": 407,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 7.304999999999999e-05
+        },
+        {
+            "Total Tokens": 585,
+            "Prompt Tokens": 565,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 9.674999999999998e-05
+        },
+        {
+            "Total Tokens": 743,
+            "Prompt Tokens": 723,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00012044999999999999
+        },
+        {
+            "Total Tokens": 901,
+            "Prompt Tokens": 881,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 0.00014414999999999998
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_rnd_us_phone does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_rnd_us_phone does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.gen_rnd_us_phone does not exist')\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT 'Function does not exist';"
+    ]
+}

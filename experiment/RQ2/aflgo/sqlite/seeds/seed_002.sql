@@ -1,0 +1,3 @@
+CREATE TABLE t2(id INTEGER PRIMARY KEY, v TEXT);
+INSERT INTO t2(v) VALUES ('alpha'), ('beta');
+SELECT id, v FROM t2 WHERE id > 0 ORDER BY id DESC;

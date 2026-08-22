@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rmoreresults/"
+  ],
+  "Title": [
+    "rmoreresults ("
+  ],
+  "Feature": [
+    "rmoreresults ("
+  ],
+  "Description": [
+    "This function moves to the next result set when handling\n    result sets returned by statement executed with rexecute."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

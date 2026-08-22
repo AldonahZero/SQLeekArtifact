@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_drop_snapshot_pub/"
+  ],
+  "Title": [
+    "None REPL_DROP_SNAPSHOT_PUB ("
+  ],
+  "Feature": [
+    "None REPL_DROP_SNAPSHOT_PUB ("
+  ],
+  "Description": [
+    "This procedure drops a snapshot publication."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

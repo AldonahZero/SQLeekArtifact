@@ -1,0 +1,46 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "monthname(timestamp)"
+    ],
+    "Feature": [
+        "monthname(timestamp)"
+    ],
+    "Description": [
+        "The (English) name of the month."
+    ],
+    "Examples": [
+        "monthname(TIMESTAMP '1992-09-20')"
+    ],
+    "Category": [
+        "Timestamp Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT monthname(timestamp) AS month_name;",
+        "SELECT monthname(current_timestamp) AS month_name;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 274,
+            "Prompt Tokens": 253,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 5.0549999999999995e-05
+        },
+        {
+            "Total Tokens": 443,
+            "Prompt Tokens": 421,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 7.634999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(duckdb.duckdb.BinderException) Binder Error: Referenced column \"timestamp\" not found in FROM clause!\nLINE 1: SELECT monthname(timestamp) AS month_name;\n                         ^\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT monthname(current_timestamp) AS month_name;"
+    ]
+}

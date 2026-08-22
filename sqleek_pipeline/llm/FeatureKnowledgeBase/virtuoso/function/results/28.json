@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_aset/"
+  ],
+  "Title": [
+    "aset ("
+  ],
+  "Feature": [
+    "aset ("
+  ],
+  "Description": [
+    "aset sets the nth element of a string, array or vector where nth\n      is a zero-based index. If the first argument is a string, the nth\n      character of string is replaced with the ASCII value given in the third\n      argument elem."
+  ],
+  "Examples": [
+    "callret",
+    "callret   callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

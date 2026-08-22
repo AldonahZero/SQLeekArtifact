@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xpf_extension_remove/"
+  ],
+  "Title": [
+    "void xpf_extension_remove ("
+  ],
+  "Feature": [
+    "void xpf_extension_remove ("
+  ],
+  "Description": [
+    "Removes a user-defined XPath function."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

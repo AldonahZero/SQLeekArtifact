@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_java_vm_detach/"
+  ],
+  "Title": [
+    "java_vm_detach ("
+  ],
+  "Feature": [
+    "java_vm_detach ("
+  ],
+  "Description": [
+    "Detaches the current Virtuoso working thread from the Java VM."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

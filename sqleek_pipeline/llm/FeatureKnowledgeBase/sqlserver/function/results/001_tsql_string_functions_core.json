@@ -1,0 +1,25 @@
+{
+  "Name": "TSQL_STRING_CORE",
+  "Feature": [
+    "CONCAT(arg1, arg2, ...), CONCAT_WS(separator, arg1, arg2, ...), STRING_AGG(expr, separator) WITHIN GROUP (ORDER BY ...), LEN(expr), DATALENGTH(expr), CHARINDEX(substr, str [, start]), PATINDEX(pattern, expr), SUBSTRING(expr, start, len), STUFF(expr, start, len, replace_expr), REPLACE(expr, from_expr, to_expr)"
+  ],
+  "Description": [
+    "Core T-SQL string processing and concatenation functions.",
+    "CONCAT/CONCAT_WS are safer than '+' because they handle NULL more predictably.",
+    "LEN excludes trailing spaces, while DATALENGTH returns byte count (important for NVARCHAR).",
+    "CHARINDEX and PATINDEX provide 1-based position search; PATINDEX supports wildcard patterns.",
+    "STRING_AGG is the primary row-to-string aggregate in SQL Server."
+  ],
+  "Examples": [
+    "SELECT CONCAT('A', NULL, 'B'); -- AB",
+    "SELECT LEN('A  '), DATALENGTH(N'A  ');",
+    "SELECT STRING_AGG(name, ',') WITHIN GROUP (ORDER BY name) FROM dbo.t;"
+  ],
+  "Category": [
+    "T-SQL Cheat Sheet",
+    "String Functions"
+  ],
+  "EffectiveSQLs": [
+    "SELECT CONCAT('prefix-', CAST(id AS varchar(20))) FROM dbo.t;"
+  ]
+}

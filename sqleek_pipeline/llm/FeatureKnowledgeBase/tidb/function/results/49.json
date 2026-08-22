@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/string-functions"
+    ],
+    "Title": [
+        "STRCMP()"
+    ],
+    "Feature": [
+        "STRCMP()"
+    ],
+    "Description": [
+        "STRCMP()",
+        "\u6bd4\u8f83\u4e24\u4e2a\u5b57\u7b26\u4e32"
+    ],
+    "Examples": [],
+    "Category": [
+        "\u5b57\u7b26\u4e32\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT STRCMP('string1', 'string2');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 271,
+            "Prompt Tokens": 247,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.145e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT STRCMP('string1', 'string2');"
+    ]
+}

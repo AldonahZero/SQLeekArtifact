@@ -1,0 +1,62 @@
+[
+  {
+    "name": "CHAR",
+    "description": "CHAR(INTNUM)"
+  },
+  {
+    "name": "CHARACTER",
+    "description": "CHARACTER"
+  },
+  {
+    "name": "DATE",
+    "description": "DATE"
+  },
+  {
+    "name": "DATETIME",
+    "description": "DATETIME"
+  },
+  {
+    "name": "DECIMAL",
+    "description": "DECIMAL\\nDECIMAL(INTNUM)\\nDECIMAL(INTNUM,INTNUM)"
+  },
+  {
+    "name": "FLOAT",
+    "description": "FLOAT\\nFLOAT(INTNUM)"
+  },
+  {
+    "name": "INT",
+    "description": "INT"
+  },
+  {
+    "name": "INTEGER",
+    "description": "INTEGER"
+  },
+  {
+    "name": "NUMERIC",
+    "description": "NUMERIC\\nNUMERIC(INTNUM)\\nNUMERIC(INTNUM,INTNUM)"
+  },
+  {
+    "name": "NVARCHAR",
+    "description": "NVARCHAR\\nNVARCHAR(INTNUM)"
+  },
+  {
+    "name": "REAL",
+    "description": "REAL"
+  },
+  {
+    "name": "SMALLINT",
+    "description": "SMALLINT"
+  },
+  {
+    "name": "TIME",
+    "description": "TIME"
+  },
+  {
+    "name": "TIMESTAMP",
+    "description": "TIMESTAMP"
+  },
+  {
+    "name": "VARCHAR",
+    "description": "VARCHAR\\nVARCHAR(INTNUM)"
+  }
+]

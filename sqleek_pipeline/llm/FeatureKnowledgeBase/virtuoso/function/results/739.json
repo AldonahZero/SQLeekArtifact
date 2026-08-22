@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xquery_eval/"
+  ],
+  "Title": [
+    "xquery_eval ("
+  ],
+  "Feature": [
+    "xquery_eval ("
+  ],
+  "Description": [
+    "The xquery_eval function returns the result of applying the xquery expression to the\ncontext node. By default only the first result is returned, but supplying a third argument\nallows you to specify an index for the value, the default assumes a value of 1 here.\nA value of 0 returns an array of 0 or more elements, one for each value calculated by the\nxquery expression.\nWhen an entity is returned in a result set to a client the client will see an nvarchar value containing the\nserialization of the entity, complete with markup.\nWhen the entity is passed as a SQL value it remains\nan entity referencing the node of a parsed XML tree, permitting navigation inside the tree.\nThe expression can be passed parameters by specifying a fourth argument\nto xquery_eval() . This will be a vector of name/value\npairs. The values can be referenced from inside XPath expression by using\ntheir names with '$' prefix. You may use any Virtuoso data type.\nThe names in the parameter vector should appear without the '$' sign.\nIf any of the parameter values is NULL the parameter will be ignored because NULL\nhas no XPath counterpart.\nIf the same name appears more than once in the vector, the last name/value pair is\nused and all preceding pairs with this name are silently ignored.\nObviously, names should be strings that are valid XQuery variable names.\nxquery_eval()"
+  ],
+  "Examples": [
+    "select xt_file, xquery_eval ('<authors>//author</authors>', t) from xml_text"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

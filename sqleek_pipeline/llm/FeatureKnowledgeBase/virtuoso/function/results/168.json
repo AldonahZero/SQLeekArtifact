@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_file_stat/"
+  ],
+  "Title": [
+    "file_stat ("
+  ],
+  "Feature": [
+    "file_stat ("
+  ],
+  "Description": [
+    "file_stat returns various information for\n\t    an OS file by calling stat () system call and converting the\n\t    relevant value to a varchar . The path is relative\n\t    to the server's working directory. The what is an integer value\n\t    selecting what information to return. If you don't supply second\n\t    argument to the function it defaults to mode = 0.\nfile_stat\nThe DirsAllowed and DirsDenied lists in Parameters section of the\n\t    virtuoso configuration file (virtuoso.ini by default) are not used to control\n\t    disk access."
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_load_rdfxml_mt/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_LOAD_RDFXML_MT ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_LOAD_RDFXML_MT ("
+  ],
+  "Description": [
+    "For loading large resources when transactional integrity is not important (loading of a single resource may take more than one transaction). The function may or may not leave a transaction log, depending on log_mode . Hence, after successful load, one may need to execute the checkpoint statement to make sure that a server restart does not wipe out the results.\nlog_mode"
+  ],
+  "Examples": [
+    "select *",
+    "delete from RDF_QUAD where G = DB.DBA.RDF_MAKE_IID_OF_QNAME (graph_uri);",
+    "select *"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

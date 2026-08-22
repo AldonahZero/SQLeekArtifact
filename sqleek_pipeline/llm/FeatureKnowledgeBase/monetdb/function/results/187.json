@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/date-time-functions"
+    ],
+    "Title": [
+        "sys.str_to_date(s, format_str)"
+    ],
+    "Feature": [
+        "sys.str_to_date(s, format_str)"
+    ],
+    "Description": [
+        "Return type: ",
+        "date",
+        "parse string s using format_str and construct a date value. See format specifiers"
+    ],
+    "Examples": [
+        "sys.str_to_date('4/30/2021', '%m/%d/%Y')"
+    ],
+    "Category": [
+        "Date Time Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT sys.str_to_date('2023-10-01', '%Y-%m-%d');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 322,
+            "Prompt Tokens": 289,
+            "Completion Tokens": 33,
+            "Total Cost (USD)": 6.314999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT sys.str_to_date('2023-10-01', '%Y-%m-%d');"
+    ]
+}

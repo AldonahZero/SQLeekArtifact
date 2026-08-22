@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_st_ewkt/"
+  ],
+  "Title": [
+    "http_st_ewkt ("
+  ],
+  "Feature": [
+    "http_st_ewkt ("
+  ],
+  "Description": [
+    "Writes a EWKT representation of a shape to the given session, a fast replacement for http (st_astext (shape), ses)."
+  ],
+  "Examples": [
+    "create procedure Example_http_st_ewkt ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,70 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/loadable-function-reference.html"
+    ],
+    "Title": [
+        "14.2 Loadable Function Reference"
+    ],
+    "Name": "service_release_locks()",
+    "Description": [
+        "\nservice_release_locks(namespace)\n",
+        "\n                For the given namespace, releases all locks that were\n                acquired within the current session using\n                service_get_read_locks()\n                and\n                service_get_write_locks().\n              ",
+        "\n                It is not an error for there to be no locks in the\n                namespace.\n"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/locking-service.html#function_service-release-locks",
+    "Feature": [
+        "service_release_locks(namespace)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Loadable Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT service_release_locks('your_namespace');",
+        "SELECT service_release_locks('namespace_example');",
+        "SELECT service_release_locks('default_namespace');",
+        "SELECT service_release_locks('test_namespace');",
+        "SELECT service_release_locks('namespace');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 351,
+            "Prompt Tokens": 329,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 6.255e-05
+        },
+        {
+            "Total Tokens": 510,
+            "Prompt Tokens": 488,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 8.639999999999999e-05
+        },
+        {
+            "Total Tokens": 669,
+            "Prompt Tokens": 647,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.00011025
+        },
+        {
+            "Total Tokens": 828,
+            "Prompt Tokens": 806,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 0.0001341
+        },
+        {
+            "Total Tokens": 986,
+            "Prompt Tokens": 965,
+            "Completion Tokens": 21,
+            "Total Cost (USD)": 0.00015735
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.service_release_locks does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.service_release_locks does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.service_release_locks does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.service_release_locks does not exist')\n",
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_mysql.service_release_locks does not exist')\n"
+    ],
+    "EffectiveSQLs": []
+}

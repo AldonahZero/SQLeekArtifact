@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_sparql_select_known_graphs/"
+  ],
+  "Title": [
+    "DB.DBA.SPARQL_SELECT_KNOWN_GRAPHS ("
+  ],
+  "Feature": [
+    "DB.DBA.SPARQL_SELECT_KNOWN_GRAPHS ("
+  ],
+  "Description": [
+    "This function returns URIs for all explicitly created graphs."
+  ],
+  "Examples": [
+    "CREATE GRAPH <http://example.com/mygraph>;",
+    "callret-0",
+    "Create graph <http://example.com/mygraph> -- done"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

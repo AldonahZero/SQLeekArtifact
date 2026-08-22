@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlsql_update/"
+  ],
+  "Title": [
+    "xmlsql_update ("
+  ],
+  "Feature": [
+    "xmlsql_update ("
+  ],
+  "Description": [
+    "xmlsql_update() supports XML-based insert,\n    update, and delete operations performed on an existing table in the\n    database. See Updategrams basics in the \"Web and XML section\" for a detailed explanation.\nxmlsql_update()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_geo_fill/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_GEO_FILL ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_GEO_FILL ("
+  ],
+  "Description": [
+    "Converts geo:lat and geo:long properties into geometries.\nThis operation reads through all graphs and for each subject with at least one geo:lat and geo:long, a point\ngeometry is made for each distinct lat/long pair where lat and long are in the same graph.\nIt should not happen in practice that a single subject has multiple lats or long within one graph.\nIf this still happens, a geometry is made for each combination.\nThe geometry is added to the subject with the lat and long as the value of the geo:geometry property.\nThis is performed in parallel on multiple threads and is optimized for cluster execution and\ndone without transaction logging and is not transactional. To make the result persistent, the operator\nshould do an explicit checkpoint by executing:\nSQL>cl_exec ('checkpoint');\non any process of a cluster or single server. Otherwise the result may be lost if the server\nterminates abnormally before an automatic checkpoint is made."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

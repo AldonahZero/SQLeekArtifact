@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ld_dir/"
+  ],
+  "Title": [
+    "ld_dir ("
+  ],
+  "Feature": [
+    "ld_dir ("
+  ],
+  "Description": [
+    "Adds files to control list set up in the virtuoso.ini file."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

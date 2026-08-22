@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "date_part([part, ...], timestamp)"
+    ],
+    "Feature": [
+        "date_part([part, ...], timestamp)"
+    ],
+    "Description": [
+        "Get the listed subfields as a struct. The list must be constant."
+    ],
+    "Examples": [
+        "date_part(['year', 'month', 'day'], TIMESTAMP '1992-09-20 20:38:40')"
+    ],
+    "Category": [
+        "Timestamp Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT date_part('year', CURRENT_TIMESTAMP);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 301,
+            "Prompt Tokens": 279,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.5049999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT date_part('year', CURRENT_TIMESTAMP);"
+    ]
+}

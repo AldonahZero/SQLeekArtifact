@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ftp_put/"
+  ],
+  "Title": [
+    "integer ftp_put ("
+  ],
+  "Feature": [
+    "integer ftp_put ("
+  ],
+  "Description": [
+    "Virtuoso has FTP client functionality, that can be used inside Virtuoso/PL.  \n    This Virtuoso function mimics the FTP put command.  As with any PL, this can be combined with Web Services and SOAP."
+  ],
+  "Examples": [
+    "select ftp_put ('ftp.openlinksw.com', 'user_name', 'password', 'virtuoso30.tar.gz', 'virtuoso30.tar.gz');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

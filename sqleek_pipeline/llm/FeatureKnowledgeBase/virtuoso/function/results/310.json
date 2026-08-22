@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nm_min/"
+  ],
+  "Title": [
+    "any __min ("
+  ],
+  "Feature": [
+    "any __min ("
+  ],
+  "Description": [
+    "The function returns the minimum value among all values in all its arguments."
+  ],
+  "Examples": [
+    "INSERT INTO GRAPH <http://mygraph2.com>",
+    "Insert into <http://mygraph.com>, 9 (or less) triples -- done"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

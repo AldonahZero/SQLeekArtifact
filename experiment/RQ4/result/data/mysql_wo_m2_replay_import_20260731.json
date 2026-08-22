@@ -1,0 +1,23 @@
+{
+  "operation": "import_formal_mysql_wo_m2_replay_into_rq4",
+  "generated_at": "2026-07-31T09:43:12.737979+00:00",
+  "source_package": "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_mysql_bucketed_seq_replay_legacy845d52_20260731_060729/real",
+  "coverage_image": "griffin_mysql_clean_llvmcov_legacy845d52",
+  "variant": "SQLeek-W/O-M2",
+  "dbms": "MySQL",
+  "repeats": 5,
+  "checkpoints_per_repeat": 9,
+  "risk_branches_total": 4602,
+  "risk_targets_total": 1445,
+  "global_branches_total": 326944,
+  "rows_added": {
+    "coverage_summary.csv": 5,
+    "coverage_timeseries.csv": 45,
+    "coverage_timeseries_stats.csv": 9,
+    "runs.csv": 5,
+    "component_heatmap.csv": 8
+  },
+  "backup": "/root/SQLeek/experiment/RQ4/result/data/backups/before_mysql_wo_m2_import_20260731_094312",
+  "target_region_hit_rate_definition": "risk_targets_hit / risk_targets_total",
+  "target_function_hit_rate_note": "Retained as a separate replay field; not used for RQ4 target-region hit rate."
+}

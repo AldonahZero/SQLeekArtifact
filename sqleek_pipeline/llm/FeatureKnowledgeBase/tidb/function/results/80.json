@@ -1,0 +1,29 @@
+{
+    "HTML": "https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_pow",
+    "Title": "POW()",
+    "Feature": [
+        "POW(X,Y)"
+    ],
+    "Description": [
+        "\nPOW(X,Y)\n",
+        "\n            Returns the value of X raised to\n            the power of Y. Returns\n            NULL if X or\n            Y is NULL.\n          ",
+        "Press CTRL+C to copy mysql> SELECT POW(2,2);\n        -> 4\nmysql> SELECT POW(2,-2);\n        -> 0.25"
+    ],
+    "Examples": [
+        "mysql> SELECT POW(2,2);\n        -> 4\nmysql> SELECT POW(2,-2);\n        -> 0.25"
+    ],
+    "Category": [
+        "\u6570\u503c\u51fd\u6570\u4e0e\u64cd\u4f5c\u7b26"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT POW(2,2);",
+        "SELECT POW(2,-2);"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT POW(2,2);",
+        "SELECT POW(2,-2);"
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamptz"
+    ],
+    "Title": [
+        "datepart([part, ...], timestamptz)"
+    ],
+    "Feature": [
+        "datepart([part, ...], timestamptz)"
+    ],
+    "Description": [
+        "Alias of date_part. Get the listed subfields as a struct. The list must be constant."
+    ],
+    "Examples": [
+        "datepart(['year', 'month', 'day'], TIMESTAMPTZ '1992-09-20 20:38:40-07')"
+    ],
+    "Category": [
+        "Timestamp with Time Zone Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT datepart('year', CURRENT_TIMESTAMP);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 318,
+            "Prompt Tokens": 296,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.759999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT datepart('year', CURRENT_TIMESTAMP);"
+    ]
+}

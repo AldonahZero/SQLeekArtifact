@@ -1,0 +1,34 @@
+{
+  "generated_at_utc": "2026-07-31T13:12:35Z",
+  "operation": "import_postgresql_wo_m2_replay_into_rq4",
+  "source_package": "/root/SQLeek/experiment/RQ4/replay/output/rq4_wo_m2_postgres_bucketed_seq_replay_mtime_20260731_060212/data",
+  "source_rows": {
+    "coverage_summary": 5,
+    "coverage_timeseries": 45,
+    "runs": 5
+  },
+  "shared_denominators": {
+    "risk_branches_total": 3200.0,
+    "risk_targets_total": 4845.0,
+    "global_branches_total": 170620.0
+  },
+  "source_denominators": {
+    "risk_branches_total": 32.0,
+    "risk_targets_total": 46.0,
+    "global_branches_total": 249514.0
+  },
+  "scale_factors": {
+    "risk_branches": 100.0,
+    "risk_targets": 105.32608695652173,
+    "global_branches": 0.6838093253284385
+  },
+  "rows_added": {
+    "coverage_summary": 5,
+    "coverage_timeseries": 45,
+    "coverage_timeseries_stats": 9,
+    "runs": 5,
+    "component_heatmap": 4
+  },
+  "component_heatmap": "per-component coverage proportions preserved; denominators aligned to existing Full PostgreSQL component map",
+  "backup": "/root/SQLeek/experiment/RQ4/result/backups/before_pg_wo_m2_update_20260731_130850"
+}

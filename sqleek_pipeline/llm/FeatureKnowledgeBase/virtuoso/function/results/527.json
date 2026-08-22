@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_st_intersects/"
+  ],
+  "Title": [
+    "st_intersects ("
+  ],
+  "Feature": [
+    "st_intersects ("
+  ],
+  "Description": [
+    "Returns intersects between two geometries. If prec is supplied, this is a\ntolerance for the matching in units of linear distance appropriate to the srid. Both geometries\nshould have the same srid. st_intersects is true if there is at least one point in common."
+  ],
+  "Examples": [
+    "callret",
+    "SELECT ?c (bif:st_intersects (?geo, bif:st_point (0, 52), 100))"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_pldbg_stats_load/"
+  ],
+  "Title": [
+    "pldbg_stats_load ("
+  ],
+  "Feature": [
+    "pldbg_stats_load ("
+  ],
+  "Description": [
+    "This function is used to load coverage information for a single procedure \n    record.  The expected format is an array.  The data expected is exactly that which \n    can be produced by pldbg_stats() .  Only one record will \n    can be accepted, an array of several procedure records will not be acceptable.\npldbg_stats()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dict_new/"
+  ],
+  "Title": [
+    "dictionary dict_new ("
+  ],
+  "Feature": [
+    "dictionary dict_new ("
+  ],
+  "Description": [
+    "This function creates a new dictionary.  A dictionary is a memory-resident hash table that can store an arbitrary number of key-value pairs.\nBoth key and dependent part can be of any type, including vectors. Two keys of different data types are always considered as different even if\nSQL '=' operator return 'true', e.g. integer zero and double precision 0.0 are two different keys.\nVectors are equivalent if their corresponding members are either equal scalars or equivalent vectors.\nXML entities are equivalent if they refer to the same node or attribute in the same document.\nDictionary objects are always passed by reference, even if dictionary is passed as an 'in' argument of a function.\nIf value of a variable is a dictionary and it is assigned to other variable then both variables refer to the same internal hashtable.\nTo create two really independent dictionary objects, use dict_duplicate () .\ndict_duplicate ()"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

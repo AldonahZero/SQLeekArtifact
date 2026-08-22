@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/utility"
+    ],
+    "Title": [
+        "pg_typeof(expression)"
+    ],
+    "Feature": [
+        "pg_typeof(expression)"
+    ],
+    "Description": [
+        "Returns the lower case name of the data type of the result of the expression. For PostgreSQL compatibility."
+    ],
+    "Examples": [
+        "pg_typeof('abc')"
+    ],
+    "Category": [
+        "Utility Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT pg_typeof(1);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 289,
+            "Prompt Tokens": 269,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.235e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT pg_typeof(1);"
+    ]
+}

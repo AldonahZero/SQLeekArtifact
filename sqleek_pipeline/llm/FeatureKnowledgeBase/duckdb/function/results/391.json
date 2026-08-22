@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "ilike_escape(string, like_specifier, escape_character)"
+    ],
+    "Feature": [
+        "ilike_escape(string, like_specifier, escape_character)"
+    ],
+    "Description": [
+        "Returns true if the string matches the like_specifier (see Pattern Matching) using case-insensitive matching. escape_character is used to search for wildcard characters in the string."
+    ],
+    "Examples": [
+        "ilike_escape('A%c', 'a$%C', '$')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT ilike_escape('example_string', '%ex%', '\\')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 336,
+            "Prompt Tokens": 310,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 6.209999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT ilike_escape('example_string', '%ex%', '\\')"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_abs/"
+  ],
+  "Title": [
+    "abs ("
+  ],
+  "Feature": [
+    "abs ("
+  ],
+  "Description": [
+    "abs returns the absolute value of its argument.\nabs"
+  ],
+  "Examples": [
+    "callret          callret         callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

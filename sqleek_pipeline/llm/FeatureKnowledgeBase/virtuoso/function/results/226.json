@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_request_header/"
+  ],
+  "Title": [
+    "any http_request_header ("
+  ],
+  "Feature": [
+    "any http_request_header ("
+  ],
+  "Description": [
+    "This function provides access to the HTTP request header lines."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

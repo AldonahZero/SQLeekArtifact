@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ldap_add/"
+  ],
+  "Title": [
+    "int ldap_add ("
+  ],
+  "Feature": [
+    "int ldap_add ("
+  ],
+  "Description": [
+    "This function adds a new entry to the LDAP directory."
+  ],
+  "Examples": [
+    "create procedure"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

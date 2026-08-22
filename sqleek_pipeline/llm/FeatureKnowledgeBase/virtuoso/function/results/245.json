@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_internal_type_name/"
+  ],
+  "Title": [
+    "internal_type_name ("
+  ],
+  "Feature": [
+    "internal_type_name ("
+  ],
+  "Description": [
+    "internal_type_name returns a string which is a human-readable name for an\n    internal_type integer given as its argument. The function dv_type_title() is an alias of internal_type_name() .\ndv_type_title()\ninternal_type_name()\ninternal_type_name (internal_type ('kumikala'))\n\t\t-> 'SHORT_STRING'\nselect internal_type_name(COL_DTP) from SYS_COLS;\n© OpenLink Software 2016 .\nThis HTML5 document contains 16 embedded RDF statements represented using HTML+Microdata notation.\nThe embedded RDF content will be recognized by any processor of HTML5 Microdata.\nThis HTML document contains 16 embedded RDF statements represented using (X)HTML+RDFa notation.\nThe embedded RDF content will be recognized by any processor of (X)HTML+RDFa."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

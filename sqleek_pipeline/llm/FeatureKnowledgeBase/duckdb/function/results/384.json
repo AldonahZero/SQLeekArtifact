@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "contains(string, search_string)"
+    ],
+    "Feature": [
+        "contains(string, search_string)"
+    ],
+    "Description": [
+        "Return true if search_string is found within string."
+    ],
+    "Examples": [
+        "contains('abc', 'a')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT contains('Hello, world!', 'world');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 285,
+            "Prompt Tokens": 262,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 5.3099999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT contains('Hello, world!', 'world');"
+    ]
+}

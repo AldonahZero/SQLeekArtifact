@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "replace(string, source, target)"
+    ],
+    "Feature": [
+        "replace(string, source, target)"
+    ],
+    "Description": [
+        "Replaces any occurrences of the source with target in string."
+    ],
+    "Examples": [
+        "replace('hello', 'l', '-')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT replace('hello world', 'world', 'duckdb');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 294,
+            "Prompt Tokens": 268,
+            "Completion Tokens": 26,
+            "Total Cost (USD)": 5.58e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT replace('hello world', 'world', 'duckdb');"
+    ]
+}

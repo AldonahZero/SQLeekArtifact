@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/timestamp"
+    ],
+    "Title": [
+        "make_timestamp(microseconds)"
+    ],
+    "Feature": [
+        "make_timestamp(microseconds)"
+    ],
+    "Description": [
+        "The timestamp for the given number of \u00b5s since the epoch."
+    ],
+    "Examples": [
+        "make_timestamp(1667810584123456)"
+    ],
+    "Category": [
+        "Timestamp Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT make_timestamp(1633072800000000);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 289,
+            "Prompt Tokens": 265,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.4149999999999995e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT make_timestamp(1633072800000000);"
+    ]
+}

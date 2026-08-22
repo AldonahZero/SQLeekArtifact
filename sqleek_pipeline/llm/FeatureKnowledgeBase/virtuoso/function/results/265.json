@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_java_new_object/"
+  ],
+  "Title": [
+    "any java_new_object ("
+  ],
+  "Feature": [
+    "any java_new_object ("
+  ],
+  "Description": [
+    "Creates an instance of a java class, makes a global reference in the \n    Java VM and returns it to Virtuoso as a PL object reference value."
+  ],
+  "Examples": [
+    "creates a new java.util.Date class instance and initializes it with",
+    "creates a new java.util.Date class instance and initializes it with"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ann_phrase_class_del/"
+  ],
+  "Title": [
+    "DB.DBA.ANN_PHRASE_CLASS_DEL ("
+  ],
+  "Feature": [
+    "DB.DBA.ANN_PHRASE_CLASS_DEL ("
+  ],
+  "Description": [
+    "The returned value is APS_ID of a deleted phrase set if positive or an error code if negative. A phrase\nset can not be deleted while used by some advertiser (as described here )."
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

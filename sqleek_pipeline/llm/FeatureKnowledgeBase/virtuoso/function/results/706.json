@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_load_schema_decl/"
+  ],
+  "Title": [
+    "xml_load_schema_decl ("
+  ],
+  "Feature": [
+    "xml_load_schema_decl ("
+  ],
+  "Description": [
+    "Loads given file using base_uri. Try to parse file of XML Schema definition and check it for correctness to XML\n\t\tSchema specification."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

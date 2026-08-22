@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_regr_sxx/"
+  ],
+  "Title": [
+    "numeric REGR_SXX ("
+  ],
+  "Feature": [
+    "numeric REGR_SXX ("
+  ],
+  "Description": [
+    "REGR_SXX makes the following computation after eliminating NULL (expr1, expr2) pairs:\nREGR_COUNT(expr1, expr2) * VAR_POP(expr2)"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

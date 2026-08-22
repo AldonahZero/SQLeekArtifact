@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_bpel_copy_script/"
+  ],
+  "Title": [
+    "BPEL.BPEL.copy_script ("
+  ],
+  "Feature": [
+    "BPEL.BPEL.copy_script ("
+  ],
+  "Description": [
+    "BPEL.BPEL.copy_script makes a copy of an existing script and put it in edit mode.\nBPEL.BPEL.copy_script"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

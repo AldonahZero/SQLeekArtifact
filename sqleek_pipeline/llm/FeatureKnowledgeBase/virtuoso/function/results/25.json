@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ap_build_match_list/"
+  ],
+  "Title": [
+    "AP_BUILD_MATCH_LIST ("
+  ],
+  "Feature": [
+    "AP_BUILD_MATCH_LIST ("
+  ],
+  "Description": [
+    "Forms a report that lists all occurrences of phrases from the specified sets in the text.\nThe report describes \"phrase hits\", i.e. occurrences of annotation phrases in the\ntext, using \"arrows\" that point to specific fragments in the text, such as words of found phrases or HTML\ntags.\nThe structure of the report is complicated, due to contradiction in requirements.\nIt is compact to provide reasonable performance and scalability, so common data should not be repeated,\nsaving memory. It is complete enough to prevent application from reading omitted data from system tables,\nsaving time.\nAll objects of one type are listed as items of some vector and the whole report consists of several\nsuch vectors. An item in one vector may refer to item in other vector by its index, without storing a\nlocal copy.\nDetailed description of the report structure can be found here ."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

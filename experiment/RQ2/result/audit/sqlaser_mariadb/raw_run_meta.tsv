@@ -1,0 +1,11 @@
+metric	value
+source_stage	/root/SQLeek/experiment/RQ2/collected/sqlaser_formal_24h_20260821_ssh_docker_replay_inputs_20260822/mariadb
+tool	SQLaser
+dbms	MariaDB
+image	griffin_mariadb_llvmcov:latest
+checkpoints_min	60,180,300,480,600,720,900,1200,1440
+llvm_cov_export_options	--skip-functions --skip-expansions
+profile_pattern	/tmp/rq2_prof/%p-%m.profraw
+started_utc	2026-08-22T12:53:00.087715+00:00
+ended_utc	2026-08-22T13:23:26.555642+00:00
+status	failed

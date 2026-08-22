@@ -1,0 +1,4 @@
+name: sqleek/rq4-queries
+version: 0.0.1
+dependencies:
+  codeql/cpp-all: 9.0.0

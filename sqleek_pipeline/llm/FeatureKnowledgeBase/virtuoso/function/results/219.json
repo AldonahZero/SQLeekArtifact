@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_nt_triple/"
+  ],
+  "Title": [
+    "http_nt_triple ("
+  ],
+  "Feature": [
+    "http_nt_triple ("
+  ],
+  "Description": [
+    "Outputs next triple to ses in NT serialization."
+  ],
+  "Examples": [
+    "create procedure dump_rdftriples_to_nt(inout triples any, inout ses any)"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

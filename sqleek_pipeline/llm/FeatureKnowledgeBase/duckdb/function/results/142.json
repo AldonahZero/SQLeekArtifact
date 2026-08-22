@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/datepart"
+    ],
+    "Title": [
+        "dayofmonth(date)"
+    ],
+    "Feature": [
+        "dayofmonth(date)"
+    ],
+    "Description": [
+        "Day (synonym)."
+    ],
+    "Examples": [
+        "dayofmonth(date '1992-02-15')"
+    ],
+    "Category": [
+        "Date Part Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT dayofmonth(current_date);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 273,
+            "Prompt Tokens": 253,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 4.9949999999999994e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT dayofmonth(current_date);"
+    ]
+}

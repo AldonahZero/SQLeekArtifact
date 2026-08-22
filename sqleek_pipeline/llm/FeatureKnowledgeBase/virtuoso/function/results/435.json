@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_right/"
+  ],
+  "Title": [
+    "right ("
+  ],
+  "Feature": [
+    "right ("
+  ],
+  "Description": [
+    "right returns the count rightmost characters of string str.\ncount\nIf count is zero an empty string '' is returned.\nIf length of str is less than count then a copy of the whole str is returned.\nstr"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

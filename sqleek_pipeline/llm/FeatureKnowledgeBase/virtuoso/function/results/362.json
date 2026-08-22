@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_repl_graph_ins/"
+  ],
+  "Title": [
+    "RDF_REPL_GRAPH_INS ("
+  ],
+  "Feature": [
+    "RDF_REPL_GRAPH_INS ("
+  ],
+  "Description": [
+    "This function inserts graph to enabled RDF Replication. The graphs in this replication can be\nmore than one."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

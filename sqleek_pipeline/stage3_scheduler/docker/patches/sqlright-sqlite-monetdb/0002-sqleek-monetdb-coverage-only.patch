@@ -1,0 +1,28 @@
+--- a/SQLite/docker/src/AFL/afl-fuzz.cpp
++++ b/SQLite/docker/src/AFL/afl-fuzz.cpp
+@@ -5480,9 +5480,23 @@ EXP_ST u8 common_fuzz_stuff(char **argv, vector<string> &query_str, vector<strin
+   }
+   
+   if (fault == FAULT_NONE &&
+       all_comp_res.final_res == ORA_COMP_RES::ALL_Error){
+-    // cerr << "Query all error. " << endl;
+-    return 0;
++    bool sqleek_monetdb_coverage_only = false;
++    const char *sqleek_dbms = getenv("SQLEEK_DBMS");
++    const char *sqleek_cov_only = getenv("SQLEEK_MONETDB_COVERAGE_ONLY");
++    if (sqleek_dbms && !strcmp(sqleek_dbms, "monetdb") &&
++        sqleek_cov_only && sqleek_cov_only[0] && strcmp(sqleek_cov_only, "0")) {
++      sqleek_monetdb_coverage_only = true;
++    }
++
++    if (!sqleek_monetdb_coverage_only) {
++      // cerr << "Query all error. " << endl;
++      return 0;
++    }
++
++    /* MonetDB reuses SQLRight's SQLite IR/mutator but not SQLite's
++       correctness oracle. Let AFL coverage decide queue admission. */
++    all_comp_res.final_res = ORA_COMP_RES::Pass;
+   }
+ 
+   queued_discovered +=

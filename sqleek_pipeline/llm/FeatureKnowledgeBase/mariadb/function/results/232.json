@@ -1,0 +1,37 @@
+{
+    "HTML": [
+        "https://mariadb.com//kb/en/position/"
+    ],
+    "Title": [
+        "POSITION"
+    ],
+    "Feature": [
+        "POSITION(substr IN str)\n"
+    ],
+    "Description": [
+        "POSITION(substr IN str) is a synonym for LOCATE(substr,str).",
+        "It's part of ODBC 3.0."
+    ],
+    "Examples": [],
+    "Category": [
+        "String Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT POSITION('substr' IN 'str');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 286,
+            "Prompt Tokens": 264,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.2799999999999996e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT POSITION('substr' IN 'str');"
+    ]
+}

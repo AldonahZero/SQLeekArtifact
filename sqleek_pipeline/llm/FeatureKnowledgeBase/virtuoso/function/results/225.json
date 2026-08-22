@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_request_get/"
+  ],
+  "Title": [
+    "http_request_get ("
+  ],
+  "Feature": [
+    "http_request_get ("
+  ],
+  "Description": [
+    "This function is used to access the HTTP request line within VSP or VSPX\n\t  context. It returns 'CGI' style variables for protocol version, HTTP method\n\t  and query string."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

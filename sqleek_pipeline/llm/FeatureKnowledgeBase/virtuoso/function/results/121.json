@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_dbg_printf/"
+  ],
+  "Title": [
+    "dbg_printf ("
+  ],
+  "Feature": [
+    "dbg_printf ("
+  ],
+  "Description": [
+    "dbg_printf prints a variable number\n            (max. eight) of arguments to the system console of Virtuoso server,\n            each argument formatted in C printf style,\n            according to the format string specified in the first argument.\ndbg_printf\nprintf"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

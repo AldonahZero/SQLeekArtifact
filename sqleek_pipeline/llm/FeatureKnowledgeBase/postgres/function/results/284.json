@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://www.postgresql.org/docs/16/functions-array.html"
+    ],
+    "Title": [
+        "array_cat"
+    ],
+    "Feature": [
+        "array_cat ( anycompatiblearray, anycompatiblearray ) \u2192 anycompatiblearray"
+    ],
+    "Description": [
+        "Concatenates two arrays (same as the anycompatiblearray || anycompatiblearray operator)."
+    ],
+    "Examples": [
+        "array_cat(ARRAY[1,2,3], ARRAY[4,5]) \u2192 {1,2,3,4,5}"
+    ],
+    "Category": [
+        "Array Functions and Operators"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT array_cat(ARRAY[1, 2, 3], ARRAY[4, 5, 6]);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 303,
+            "Prompt Tokens": 266,
+            "Completion Tokens": 37,
+            "Total Cost (USD)": 6.209999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT array_cat(ARRAY[1, 2, 3], ARRAY[4, 5, 6]);"
+    ]
+}

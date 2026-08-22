@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_ftp_get/"
+  ],
+  "Title": [
+    "integer ftp_get ("
+  ],
+  "Feature": [
+    "integer ftp_get ("
+  ],
+  "Description": [
+    "Virtuoso has FTP client functionality, that can be used inside Virtuoso/PL.  This Virtuoso function mimics the FTP get command.  As with any PL, this can be combined with Web Services and SOAP."
+  ],
+  "Examples": [
+    "select ftp_get ('ftp.openlinksw.com', 'user_name', 'password', 'virtuoso30.tar.gz', 'virtuoso30.tar.gz');"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-08-05T12:06:16.092184+00:00",
+  "operation": "import_formal_monetdb_wo_m1_coverage_replay",
+  "variant": "SQLeek-W/O-M1",
+  "dbms": "MonetDB",
+  "source_package": "/root/SQLeek/experiment/RQ4/.monetdb_fuzz_tmp_20260803/formal_5x24/replay_timeseries_parallel_20260805_20260805_114900/data_parallel",
+  "coverage_image": "griffin_monetdb_llvmcov:latest",
+  "repeats": 5,
+  "checkpoints_per_repeat": 9,
+  "checkpoints_min": [
+    60,
+    180,
+    300,
+    480,
+    600,
+    720,
+    900,
+    1200,
+    1440
+  ],
+  "denominators": {
+    "target_region_branches": 120042,
+    "target_regions": 10233,
+    "global_branches": 301870
+  },
+  "raw_denominators": {
+    "target_region_branches": 120042,
+    "target_regions": 10233,
+    "global_branches": 301870
+  },
+  "normalization": "none",
+  "target_region_source": "/root/SQLeek/experiment/RQ4/result/data/target_regions_monetdb.csv",
+  "backup": "/root/SQLeek/experiment/RQ4/result/data/backups/rq4_before_monetdb_parallel_20260805",
+  "rows_added": {
+    "coverage_summary": 5,
+    "coverage_timeseries": 45,
+    "coverage_timeseries_stats": 9,
+    "runs": 5,
+    "component_heatmap": 8
+  }
+}

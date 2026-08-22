@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "editdist3(s1, s2)"
+    ],
+    "Feature": [
+        "editdist3(s1, s2)"
+    ],
+    "Description": [
+        "Alias of levenshtein for SQLite compatibility. The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., a and A) are considered different."
+    ],
+    "Examples": [
+        "editdist3('duck', 'db')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT editdist3('example', 'samples');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 337,
+            "Prompt Tokens": 314,
+            "Completion Tokens": 23,
+            "Total Cost (USD)": 6.089999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT editdist3('example', 'samples');"
+    ]
+}

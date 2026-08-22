@@ -1,0 +1,27 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xml_namespace_scope/"
+  ],
+  "Title": [
+    "vector xml_namespace_scope ("
+  ],
+  "Feature": [
+    "vector xml_namespace_scope ("
+  ],
+  "Description": [
+    "The function returns a vector of even length that consists of all declared namespace prefixes and namespace URIs\n    \tfrom the ent and all its ancestors. This information is needed for processing XML documents that\n    \tcontains a mix of data and XPath expressions, such as BPEL documents.\nent"
+  ],
+  "Examples": [
+    "create procedure xpath_add_namespace_scope (in ent any, in use_default_ns integer)",
+    "select xpath_add_namespace_scope (",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

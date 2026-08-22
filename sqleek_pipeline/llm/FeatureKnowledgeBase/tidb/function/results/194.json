@@ -1,0 +1,45 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/json-functions-modify"
+    ],
+    "Title": [
+        "JSON_APPEND()"
+    ],
+    "Feature": [
+        "JSON_APPEND()"
+    ],
+    "Description": [
+        "JSON_APPEND()",
+        "\u8be5\u51fd\u6570\u4e3a JSON_ARRAY_APPEND() \u7684\u522b\u540d\u3002"
+    ],
+    "Examples": [],
+    "Category": [
+        "\u4fee\u6539 JSON \u7684\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT JSON_APPEND('{}', '$.key', 'value');",
+        "SELECT JSON_ARRAY_APPEND('{}', '$', 'value');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 255,
+            "Completion Tokens": 25,
+            "Total Cost (USD)": 5.324999999999999e-05
+        },
+        {
+            "Total Tokens": 437,
+            "Prompt Tokens": 413,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 7.634999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (1305, 'FUNCTION knowledge_base_preprocess_tidb.json_append does not exist')\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT JSON_ARRAY_APPEND('{}', '$', 'value');"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_nm_max/"
+  ],
+  "Title": [
+    "any __max ("
+  ],
+  "Feature": [
+    "any __max ("
+  ],
+  "Description": [
+    "The function returns the maximum value among all values in all its arguments."
+  ],
+  "Examples": [
+    "INSERT INTO GRAPH <http://mygraph2.com>",
+    "Insert into <http://mygraph2.com>, 9 (or less) triples -- done"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vt_create_text_index/"
+  ],
+  "Title": [
+    "vt_create_text_index ("
+  ],
+  "Feature": [
+    "vt_create_text_index ("
+  ],
+  "Description": [
+    "The vt_create_text_index procedure adds a text index to an existing table.\nThere can at most be one text index per table, including super tables and\nsubtables.\nThe table argument is a string naming the table. The column is the name of the column\nto index. The id_col should be the name of a unique integer row identifier column. If null,\nthe system will either add such a column or use an existing integer primary key if one\nis available. The is_xml argument, if non-0, specifies that the values of the indexed column\nshould be checked for XML well formedness and that the XML structure should be taken into account in indexing the\nvalues.\nUse the CREATE TEXT INDEX statement as an alternative to the vt_create_text_index function.\nIn order for a table to be referenced in a text index it must have\na uniquely identifying integer key. If the table in question has such a\nkey this can be used as the id column. If there is no such column this\nprocedure makes one. Using a previously existing identifier column saves\nspace and if that is the primary key of the table this also saves in\nretrieval time.\nIf the table being indexed has a single part integer primary key\nvt_create_text_index will automatically use this as the identifier. Note\nthat the zero and negative numbers may not be used as identifier values.\nCreating the index will read through the table's contents and generate\nthe index. When the table is changed the index can either be updated after\neach change or periodically, depending on the application needs. The rationale\nfor background maintenance of the text index is that it is up to several times\nmore efficient to maintain a text index in batches of several changed documents\nthan after each single document change. The default maintenance mode is\nsynchronous, meaning that each insert, delete or update of the indexed column\nwill be immediately reflected in the index. This mode can be set using\nthe vt_batch_update() procedure.\nThe mode should be set to batch if there are\nany massive operations on the table.\nvt_batch_update()\nIt will create two additional tables:\n<datatable>_<datacolumn>_WORDS\nand\nVTLOG_<datatable_qualifieri>_<data_table_owner>_<data_table_name>\nand two procedures:\nvt_index_<datatable_qualifier>_<data_table_owner>_<data_table_name>\n\t\t(in to_delete integer)\nand\nvt_inc_index<datatable_qualifieri>_<data_table_owner>_<data_table_name> ().\nThe table <datatable>_<datafield>_WORDS contains the full text index data.\nThe table VTLOG_<datatable>_<datafield> is an update tracking table, similar to the snapshot log table but using the key column instead of the primary key.\nin the transaction semantics section that there is the sync mode for the purpose of creating a text index."
+  ],
+  "Examples": [
+    "create table xml_text (xt_id integer, xt_file varchar,",
+    "create index xt_file on xml_text (xt_file);"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_exec_result_names/"
+  ],
+  "Title": [
+    "exec_result_names ("
+  ],
+  "Feature": [
+    "exec_result_names ("
+  ],
+  "Description": [
+    "This function allows you to define the column details for result sets returned by procedures, in particular for use with the exec() function.  This function \nis similar to result_names() .\nexec()\nresult_names()"
+  ],
+  "Examples": [
+    "create procedure XX1 ()"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

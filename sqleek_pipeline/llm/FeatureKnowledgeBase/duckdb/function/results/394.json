@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "left_grapheme(string, count)"
+    ],
+    "Feature": [
+        "left_grapheme(string, count)"
+    ],
+    "Description": [
+        "Extract the left-most grapheme clusters."
+    ],
+    "Examples": [
+        "left_grapheme('\ud83e\udd26\ud83c\udffc\u200d\u2642\ufe0f\ud83e\udd26\ud83c\udffd\u200d\u2640\ufe0f', 1)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT left_grapheme('example', 3);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 292,
+            "Prompt Tokens": 268,
+            "Completion Tokens": 24,
+            "Total Cost (USD)": 5.46e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT left_grapheme('example', 3);"
+    ]
+}

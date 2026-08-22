@@ -1,0 +1,9 @@
+# pattern_id	clause_chain	target_call_chain	weight	enabled
+# SQLRight supplies the SQLite parser/IR mutator; these clauses are the
+# MonetDB-compatible SQLaser structure proxy. Call-chain labels remain pending
+# dynamic validation on the instrumented MonetDB build.
+monetdb_case_cast	select|case|cast	sqlite3Select|sqlite3ExprCodeTarget|sqlite3ExprFunction	2	1
+monetdb_distinct_order_by	select distinct|order by	sqlite3Select|sqlite3SelectPrep|sqlite3WhereBegin	2	1
+monetdb_group_having	select|group by|having	sqlite3Select|sqlite3WhereBegin|sqlite3ExprCodeTarget	2	1
+monetdb_in_subquery	select|in|select	sqlite3ExprCodeIN|sqlite3CodeSubselect|sqlite3Select	1	1
+monetdb_create_index_where	create index|where	sqlite3CreateIndex|sqlite3WhereBegin	1	1

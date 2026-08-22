@@ -1,0 +1,26 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn___any_grants/"
+  ],
+  "Title": [
+    "integer __any_grants ("
+  ],
+  "Feature": [
+    "integer __any_grants ("
+  ],
+  "Description": [
+    "The __any_grants() can be used to test whether there\n    are any rights granted (for insert/update/delete) to a table for\n    current SQL account.\n__any_grants()"
+  ],
+  "Examples": [
+    "callret",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

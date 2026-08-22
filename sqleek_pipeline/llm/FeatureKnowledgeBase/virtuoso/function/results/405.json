@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_repl_grant/"
+  ],
+  "Title": [
+    "REPL_GRANT ("
+  ],
+  "Feature": [
+    "REPL_GRANT ("
+  ],
+  "Description": [
+    "This function is used to grant privilege for subscription to a SQL\n\taccount for particular publication. The DBA accounts always have right\n\tfor subscription to all available publications."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

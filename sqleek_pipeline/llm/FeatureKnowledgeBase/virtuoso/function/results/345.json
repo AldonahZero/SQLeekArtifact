@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_rdf_graph_group_ins/"
+  ],
+  "Title": [
+    "DB.DBA.RDF_GRAPH_GROUP_INS ("
+  ],
+  "Feature": [
+    "DB.DBA.RDF_GRAPH_GROUP_INS ("
+  ],
+  "Description": [
+    "Inserts graph into a given group."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

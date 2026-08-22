@@ -1,0 +1,25 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_quote_dotted/"
+  ],
+  "Title": [
+    "varchar quote_dotted ("
+  ],
+  "Feature": [
+    "varchar quote_dotted ("
+  ],
+  "Description": [
+    "The quote_dotted() function will return the\n    identifier (table name or column name) appropriately quoted for the remote\n    data source.  This function will obtain the appropriate quote characters\n    from the remote data source.  This function can be used in conjunction with\n    rexecute function.\nquote_dotted()"
+  ],
+  "Examples": [
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

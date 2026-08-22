@@ -1,0 +1,47 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "INTERNAL_MAX_DATA_LENGTH()",
+    "Description": [
+        "\nINTERNAL_MAX_DATA_LENGTH(ARGS)\n"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/internal-functions.html#function_internal-max-data-length",
+    "Feature": [
+        "INTERNAL_MAX_DATA_LENGTH(ARGS)"
+    ],
+    "Examples": [],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Internal Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT INTERNAL_MAX_DATA_LENGTH('example_string');",
+        "SELECT LENGTH('example_string');"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 295,
+            "Prompt Tokens": 273,
+            "Completion Tokens": 22,
+            "Total Cost (USD)": 5.4149999999999995e-05
+        },
+        {
+            "Total Tokens": 453,
+            "Prompt Tokens": 434,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 7.649999999999999e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.OperationalError) (3566, \"Access to native function 'INTERNAL_MAX_DATA_LENGTH' is rejected.\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT LENGTH('example_string');"
+    ]
+}

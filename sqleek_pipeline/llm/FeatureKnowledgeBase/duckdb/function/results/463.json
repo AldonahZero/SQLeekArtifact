@@ -1,0 +1,40 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "list_extract"
+    ],
+    "Feature": [
+        "list_extract"
+    ],
+    "Description": [
+        "list_element",
+        "array_extract(list, index)",
+        "Extract a single character using a (1-based) index."
+    ],
+    "Examples": [
+        "array_extract('DuckDB', 2)"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT list_extract(array[1, 2, 3], 2);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 288,
+            "Prompt Tokens": 259,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 5.625e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT list_extract(array[1, 2, 3], 2);"
+    ]
+}

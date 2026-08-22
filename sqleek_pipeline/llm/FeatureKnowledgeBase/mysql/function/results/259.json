@@ -1,0 +1,70 @@
+{
+    "HTML": [
+        "https://dev.mysql.com/doc/refman/8.0/en/built-in-function-reference.html"
+    ],
+    "Title": [
+        "14.1 Built-In Function and Operator Reference"
+    ],
+    "Name": "RANK()",
+    "Description": [
+        "\nRANK()\nover_clause\n",
+        "\n            Returns the rank of the current row within its partition,\n            with gaps. Peers are considered ties and receive the same\n            rank. This function does not assign consecutive ranks to\n            peer groups if groups of size greater than one exist; the\n            result is noncontiguous rank numbers.\n          ",
+        "\n            This function should be used with ORDER\n            BY to sort partition rows into the desired order.\n            Without ORDER BY, all rows are peers.\n          ",
+        "\nover_clause is as described in\n            Section\u00a014.20.2, \u201cWindow Function Concepts and Syntax\u201d.\n          ",
+        "\n            The following query shows the difference between\n            RANK(), which produces ranks\n            with gaps, and DENSE_RANK(),\n            which produces ranks without gaps. The query shows rank\n            values for each member of a set of values in the\n            val column, which contains some\n            duplicates. RANK() assigns\n            peers (the duplicates) the same rank value, and the next\n            greater value has a rank higher by the number of peers minus\n            one. DENSE_RANK() also\n            assigns peers the same rank value, but the next higher value\n            has a rank one greater. For reference, the query also\n            displays row numbers using\n            ROW_NUMBER():\n          ",
+        "Press CTRL+C to copy mysql> SELECT\n         val,\n         ROW_NUMBER() OVER w AS 'row_number',\n         RANK()       OVER w AS 'rank',\n         DENSE_RANK() OVER w AS 'dense_rank'\n       FROM numbers\n       WINDOW w AS (ORDER BY val);\n+------+------------+------+------------+\n| val  | row_number | rank | dense_rank |\n+------+------------+------+------------+\n|    1 |          1 |    1 |          1 |\n|    1 |          2 |    1 |          1 |\n|    2 |          3 |    3 |          2 |\n|    3 |          4 |    4 |          3 |\n|    3 |          5 |    4 |          3 |\n|    3 |          6 |    4 |          3 |\n|    4 |          7 |    7 |          4 |\n|    4 |          8 |    7 |          4 |\n|    5 |          9 |    9 |          5 |\n+------+------------+------+------------+"
+    ],
+    "Reference HTML": "https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html#function_rank",
+    "Feature": [
+        "RANK()"
+    ],
+    "Examples": [
+        "mysql> SELECT\n         val,\n         ROW_NUMBER() OVER w AS 'row_number',\n         RANK()       OVER w AS 'rank',\n         DENSE_RANK() OVER w AS 'dense_rank'\n       FROM numbers\n       WINDOW w AS (ORDER BY val);\n+------+------------+------+------------+\n| val  | row_number | rank | dense_rank |\n+------+------------+------+------------+\n|    1 |          1 |    1 |          1 |\n|    1 |          2 |    1 |          1 |\n|    2 |          3 |    3 |          2 |\n|    3 |          4 |    4 |          3 |\n|    3 |          5 |    4 |          3 |\n|    3 |          6 |    4 |          3 |\n|    4 |          7 |    7 |          4 |\n|    4 |          8 |    7 |          4 |\n|    5 |          9 |    9 |          5 |\n+------+------------+------+------------+"
+    ],
+    "Category": [
+        "Built-In Functions and Operators",
+        "Window Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT RANK() OVER (ORDER BY val) AS rank FROM numbers;",
+        "SELECT RANK() OVER (ORDER BY val) AS `rank_value` FROM numbers;",
+        "SELECT RANK() OVER (ORDER BY 1) AS `rank_value`;",
+        "SELECT RANK() OVER (ORDER BY val) AS `rank_value` FROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 2 UNION ALL SELECT 3) AS numbers;"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 842,
+            "Prompt Tokens": 815,
+            "Completion Tokens": 27,
+            "Total Cost (USD)": 0.00013844999999999998
+        },
+        {
+            "Total Tokens": 1034,
+            "Prompt Tokens": 1004,
+            "Completion Tokens": 30,
+            "Total Cost (USD)": 0.00016859999999999998
+        },
+        {
+            "Total Tokens": 1201,
+            "Prompt Tokens": 1172,
+            "Completion Tokens": 29,
+            "Total Cost (USD)": 0.00019319999999999995
+        },
+        {
+            "Total Tokens": 1404,
+            "Prompt Tokens": 1351,
+            "Completion Tokens": 53,
+            "Total Cost (USD)": 0.00023444999999999995
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rank FROM numbers' at line 1\")\n",
+        "(pymysql.err.ProgrammingError) (1146, \"Table 'knowledge_base_preprocess_mysql.numbers' doesn't exist\")\n",
+        "(pymysql.err.OperationalError) (3592, \"Window '<unnamed window>': ORDER BY or PARTITION BY uses legacy position indication which is not supported, use expression.\")\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT RANK() OVER (ORDER BY val) AS `rank_value` FROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 2 UNION ALL SELECT 3) AS numbers;"
+    ]
+}

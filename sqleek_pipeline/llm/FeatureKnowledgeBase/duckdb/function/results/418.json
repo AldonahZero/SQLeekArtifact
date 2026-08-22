@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/char"
+    ],
+    "Title": [
+        "regexp_escape(string)"
+    ],
+    "Feature": [
+        "regexp_escape(string)"
+    ],
+    "Description": [
+        "Escapes special patterns to turn string into a regular expression similarly to Python's re.escape function."
+    ],
+    "Examples": [
+        "regexp_escape('http://d.org')"
+    ],
+    "Category": [
+        "Text Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT regexp_escape('example_string')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 283,
+            "Prompt Tokens": 263,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.145e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT regexp_escape('example_string')"
+    ]
+}

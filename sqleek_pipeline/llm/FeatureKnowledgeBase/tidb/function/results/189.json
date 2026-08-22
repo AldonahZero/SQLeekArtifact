@@ -1,0 +1,36 @@
+{
+    "HTML": [
+        "https://docs.pingcap.com/zh/tidb/v8.3/json-functions-search"
+    ],
+    "Title": [
+        "JSON_CONTAINS_PATH()"
+    ],
+    "Feature": [
+        "JSON_CONTAINS_PATH()"
+    ],
+    "Description": [
+        "JSON_CONTAINS_PATH()",
+        "JSON_CONTAINS_PATH(json_doc,all_or_one,path [,path, ...]) \u51fd\u6570\u8fd4\u56de 0 \u6216 1\uff0c\u8868\u793a JSON \u6587\u6863\u662f\u5426\u5305\u542b\u6307\u5b9a\u8def\u5f84\u4e0b\u7684\u6570\u636e\u3002"
+    ],
+    "Examples": [
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.foo');\n",
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.bar');\n",
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.foo', '$.aaa');\n"
+    ],
+    "Category": [
+        "\u641c\u7d22 JSON \u7684\u51fd\u6570"
+    ],
+    "EffectiveSQLsRefined": [
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.foo');",
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.bar');",
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.foo', '$.aaa');"
+    ],
+    "EffectiveSQLsGenerated": [],
+    "EffectiveSQLsGeneratedCosts": [],
+    "EffectiveSQLsGeneratedErrors": [],
+    "EffectiveSQLs": [
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.foo');",
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.bar');",
+        "SELECT JSON_CONTAINS_PATH('{\"foo\": \"bar\", \"aaa\": 5}','all','$.foo', '$.aaa');"
+    ]
+}

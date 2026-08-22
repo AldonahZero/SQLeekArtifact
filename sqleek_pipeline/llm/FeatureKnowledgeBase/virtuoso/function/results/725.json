@@ -1,0 +1,28 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_xmlforest/"
+  ],
+  "Title": [
+    "XMLFOREST ("
+  ],
+  "Feature": [
+    "XMLFOREST ("
+  ],
+  "Description": [
+    "XMLFOREST produces a forest of XML elements from the given list of arguments. \n   The arguments may be string expressions with optional aliases. If string expression is a column name, \n   then you can omit the AS clause, and Virtuoso uses the partially escaped form of \n   the column name as the name of the enclosing tag. If the expression evaluates to NULL, then no element is \n   created for that expression. If none of the element is created, then the function returns NULL.\nXMLFOREST"
+  ],
+  "Examples": [
+    "select XMLFOREST (",
+    "callret",
+    "select XMLFOREST (",
+    "callret"
+  ],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

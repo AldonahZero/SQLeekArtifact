@@ -1,0 +1,38 @@
+{
+    "HTML": [
+        "https://duckdb.org/docs/sql/functions/bitstring"
+    ],
+    "Title": [
+        "bit_length(bitstring)"
+    ],
+    "Feature": [
+        "bit_length(bitstring)"
+    ],
+    "Description": [
+        "Returns the number of bits in the bitstring."
+    ],
+    "Examples": [
+        "bit_length('1101011'::BITSTRING)"
+    ],
+    "Category": [
+        "Bitstring Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT bit_length('101010')"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 278,
+            "Prompt Tokens": 258,
+            "Completion Tokens": 20,
+            "Total Cost (USD)": 5.07e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT bit_length('101010')"
+    ]
+}

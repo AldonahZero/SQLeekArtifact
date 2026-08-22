@@ -1,0 +1,48 @@
+{
+    "HTML": [
+        "https://www.monetdb.org/documentation-Aug2024/user-guide/sql-functions/mathematics-functions"
+    ],
+    "Title": [
+        "cosh(x)"
+    ],
+    "Feature": [
+        "cosh(x)"
+    ],
+    "Description": [
+        "Return type: ",
+        "double",
+        "hyperbolic cosine of angle x in radians"
+    ],
+    "Examples": [
+        "cosh(3.0)"
+    ],
+    "Category": [
+        "Mathematics Functions"
+    ],
+    "EffectiveSQLsRefined": [],
+    "EffectiveSQLsGenerated": [
+        "SELECT cosh(x);",
+        "SELECT cosh(0);"
+    ],
+    "EffectiveSQLsGeneratedCosts": [
+        {
+            "Total Tokens": 280,
+            "Prompt Tokens": 262,
+            "Completion Tokens": 18,
+            "Total Cost (USD)": 5.01e-05
+        },
+        {
+            "Total Tokens": 428,
+            "Prompt Tokens": 409,
+            "Completion Tokens": 19,
+            "Total Cost (USD)": 7.274999999999998e-05
+        }
+    ],
+    "EffectiveSQLsGeneratedErrors": [
+        "(pymonetdb.exceptions.OperationalError) 42000!SELECT: identifier 'x' unknown\n\n",
+        "None"
+    ],
+    "EffectiveSQLs": [
+        "SELECT cosh(0);"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_vhost_remove/"
+  ],
+  "Title": [
+    "Void DB.DBA. VHOST_REMOVE ("
+  ],
+  "Feature": [
+    "Void DB.DBA. VHOST_REMOVE ("
+  ],
+  "Description": [
+    "vhost_remove is used to remove virtual hosts and virtual paths on the Virtuoso HTTP server. Effectively this procedure deletes a row in the table DB.DBA.HTTP_PATH .\nVirtuoso supports both flavours of virtual hosting: IP-based and name-based.\nvhost_remove\nDB.DBA.HTTP_PATH"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_get_keyword_ucase/"
+  ],
+  "Title": [
+    "get_keyword_ucase ("
+  ],
+  "Feature": [
+    "get_keyword_ucase ("
+  ],
+  "Description": [
+    "Identical to get_keyword except all comparisons  are performed case insensitively.\nget_keyword"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

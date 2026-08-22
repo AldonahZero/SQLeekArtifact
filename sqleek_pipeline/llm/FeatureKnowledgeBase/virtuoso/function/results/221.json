@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_http_path/"
+  ],
+  "Title": [
+    "http_path ("
+  ],
+  "Feature": [
+    "http_path ("
+  ],
+  "Description": [
+    "This function returns the absolute path to the logical path location\nof current HTTP request."
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}

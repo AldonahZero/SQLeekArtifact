@@ -1,0 +1,23 @@
+{
+  "HTML": [
+    "https://docs.openlinksw.com/virtuoso/fn_equ/"
+  ],
+  "Title": [
+    "lt ("
+  ],
+  "Feature": [
+    "lt ("
+  ],
+  "Description": [
+    "These functions return 1 if their first argument is less than (lt),\n    less than or equivalent (lte), greater than (gt), greater than or\n    equivalent (gte), equivalent (equ), or not equivalent (neq) to the\n    second argument, respectively. If the arguments are not of the same type,\n    then an appropriate type coercion is done for them before\n    comparison.\nThese functions correspond to SQL query operators <, <=, >,\n    >=, = and <> and are needed because the SQL syntax does not\n    allow these operators to be used on the left side of FROM keyword in a SELECT statement.\nFROM\nSELECT"
+  ],
+  "Examples": [],
+  "Category": [
+    "SQL Functions"
+  ],
+  "EffectiveSQLsRefined": [],
+  "EffectiveSQLsGenerated": [],
+  "EffectiveSQLsGeneratedCosts": [],
+  "EffectiveSQLsGeneratedErrors": [],
+  "EffectiveSQLs": []
+}
