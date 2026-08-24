@@ -1,1 +1,0 @@
-model_key,model_label,model,dbms,repeat,run_id,run_dir,total_tokens,cost_usd,unique_bug_count,bugs_per_10k_tokens,tokens_per_bug
