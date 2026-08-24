@@ -13,6 +13,17 @@
 | MySQL | S30198xx | Confirmed | item_timefunc | SEGV |
 | MySQL | S30198xx | Fixed | decimal | SEGV |
 | MySQL | S32775xx | Confirmed | Query Optimizer | NPD |
+| MySQL | S32775xx | Confirmed | Query Optimizer | NPD |
+| MySQL | S32775xx | Confirmed | item_timefunc | SEGV |
+| MySQL | S32775xx | Fixed | DDL/Field_time | NPD |
+| MySQL | S32775xx | Fixed | DDL/Field_time | NPD |
+| MySQL | S32775xx | Fixed | JSON Duality View | SEGV |
+| MySQL | S32775xx | Fixed | JSON Duality View | NPD |
+| MySQL | S32775xx | Fixed | JSON Duality View | NPD |
+| MySQL | S32775xx | Fixed | JSON Duality View | HBOF |
+| MySQL | S32775xx | Fixed | sp | HBOF |
+| MySQL | S32775xx | Fixed | MySQL Client | OOBR |
+| MySQL | S32775xx | Fixed | MySQL Client | OOBR |
 | MariaDB | MDEV-399xx | Confirmed | Optimizer - Window functions | SEGV |
 | MariaDB | MDEV-399xx | Reported | Server | SEGV |
 | MariaDB | MDEV-399xx | Confirmed | Optimizer | NPD |
