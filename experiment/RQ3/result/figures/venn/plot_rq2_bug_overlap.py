@@ -102,7 +102,7 @@ def main():
     # SQLeek only; SQLaser∩SQLeek; SQUIRREL∩SQLeek only;
     # SQUIRREL∩Griffin∩SQLeek; Griffin∩SQLeek only;
     # SQUIRREL only; Griffin only.
-    add_count(ax, -0.36, 0.38, 34)
+    add_count(ax, -0.36, 0.38, 45)
     add_count(ax, 0.45, 0.30, 1)
     add_count(ax, 0.50, -0.29, 1)
     add_count(ax, 0.03, -0.50, 2)
