@@ -39,13 +39,6 @@ TOOL_STYLES = {
 }
 BRANCH_DENOM_OVERRIDE: dict[str, float] = {}
 
-# Display-only separation for nearly coincident MonetDB series.  These
-# offsets do not modify canonical CSV/TEX data or reported coverage values.
-DISPLAY_VERTICAL_OFFSETS: dict[tuple[str, str], float] = {
-    ("MonetDB", "SQLaser"): 1000.0,
-    ("MonetDB", "AFLGo"): -1000.0,
-}
-
 DISPLAY_CI_FLOOR_RATIO = 0.01
 DISPLAY_CI_FLOOR_MIN_BRANCHES = 1.0
 
@@ -205,13 +198,6 @@ def plot() -> None:
                     x = np.insert(x, 0, 0.0)
                     y = np.insert(y, 0, 0.0)
                     ci95 = np.insert(ci95, 0, 0.0)
-
-            # Keep the artificial origin at zero; offset only observed points.
-            display_offset = DISPLAY_VERTICAL_OFFSETS.get((dbms, tool), 0.0)
-            if display_offset and len(y):
-                y[1:] += display_offset if x[0] == 0.0 else 0.0
-                if x[0] != 0.0:
-                    y += display_offset
 
             style = TOOL_STYLES[tool]
             if len(x) >= 2:
