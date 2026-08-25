@@ -18,13 +18,14 @@ When DBMS notes are present, treat them as the primary source for DBMS-specific
 function families, metadata objects, sink patterns, and precision constraints.
 
 ## Hard constraints
-- Output **ONLY** a complete `.ql` file content (no markdown fences, no explanation).
+- Output **ONLY** the JSON object described below (no markdown fences or explanation).
 - Must compile with CodeQL for C/C++:
   - `import cpp`
 - Use `@kind problem` and include a message string in the second column.
 - Keep the query under ~140 lines.
 - Do NOT reference crash stacks, file/line constants, or bug IDs in the query logic.
 - The query must not "invent" call chains; it only matches local code patterns.
+- Keep the predicate IR to at most 8 distinct local variables.
 
 ## Desired behavior
 - Use ψ to anchor on new identifiers and guard invariant G (e.g., cache keys, descriptor ids, cache pointers).
@@ -32,4 +33,24 @@ function families, metadata objects, sink patterns, and precision constraints.
 - Prefer higher precision: avoid reporting fixed code if G indicates how to guard it.
 
 ## Output format
-Return a single `.ql` file.
+Return one JSON object with exactly these fields:
+
+```json
+{
+  "predicates": [
+    ["insidePriorityFunction", {"var": "access"}, {"var": "function"}],
+    ["readsCachedDescriptor", {"var": "access"}, "tupDesc"],
+    ["not", "guardedByFreshnessCheck", {"var": "access"}]
+  ],
+  "query": "/** ... */\nimport cpp\n..."
+}
+```
+
+`predicates` is a flat AND-connected conjunction describing the static-analysis
+form of the query. Each atom starts with a semantic predicate name. Represent a
+local rule variable only as `{"var": "name"}`. Keep function names, API names,
+field names, string constants, and other semantic constants as ordinary JSON
+values; never mark them as variables. Do not put commit hashes, bug IDs, or
+file/line anchors in `predicates`.
+
+`query` contains the complete executable `.ql` file as a JSON string.

@@ -11,6 +11,7 @@ Extract(Δ): Convert fix patch diff into structured feature vector ψ.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import subprocess
@@ -51,13 +52,19 @@ KNOWN_PATCH = r"""
 """
 
 
-def get_patch_from_git() -> str:
-    """Try to find the fix commit in /tmp/pg_src git history."""
+def patch_fix_id(patch_text: str) -> str:
+    """Build stable provenance when no repository commit id is available."""
+    digest = hashlib.sha256(patch_text.encode("utf-8")).hexdigest()
+    return f"patch-{digest}"
+
+
+def get_patch_from_git() -> tuple[str, str]:
+    """Return the fix patch and its commit id (or a stable patch digest)."""
     if not (PG_SRC / ".git").exists():
-        return KNOWN_PATCH
+        return KNOWN_PATCH, patch_fix_id(KNOWN_PATCH)
     try:
         result = subprocess.run(
-            ["git", "-C", str(PG_SRC), "log", "--all", "--oneline"],
+            ["git", "-C", str(PG_SRC), "log", "--all", "--format=%H%x09%s"],
             capture_output=True,
             text=True,
             timeout=10,
@@ -65,8 +72,8 @@ def get_patch_from_git() -> str:
         )
         keywords = ["rowtype", "eeop_row", "stale", "tupdesc", "rowcache", "ExprEvalRowtypeCache".lower()]
         for line in result.stdout.splitlines():
-            if any(k in line.lower() for k in keywords):
-                commit = line.split()[0]
+            commit, separator, subject = line.partition("\t")
+            if separator and any(k in subject.lower() for k in keywords):
                 diff = subprocess.run(
                     ["git", "-C", str(PG_SRC), "show", commit, "--unified=5"],
                     capture_output=True,
@@ -74,11 +81,13 @@ def get_patch_from_git() -> str:
                     timeout=15,
                     check=False,
                 )
-                print(f"[extract_patch_features] found candidate commit: {line}")
-                return diff.stdout or KNOWN_PATCH
+                print(f"[extract_patch_features] found candidate commit: {commit} {subject}")
+                if diff.stdout:
+                    return diff.stdout, commit
+                return KNOWN_PATCH, patch_fix_id(KNOWN_PATCH)
     except Exception as exc:
         print(f"[extract_patch_features] git lookup failed: {exc}")
-    return KNOWN_PATCH
+    return KNOWN_PATCH, patch_fix_id(KNOWN_PATCH)
 
 
 def extract_identifiers(patch_lines: list[str], prefix: str) -> set[str]:
@@ -151,7 +160,7 @@ def extract_structural_changes(added_lines: list[str], removed_lines: list[str])
     return c_plus, c_minus
 
 
-def extract(patch_text: str) -> dict:
+def extract(patch_text: str, fix_id: str | None = None) -> dict:
     lines = patch_text.splitlines()
     added = [l for l in lines if l.startswith("+") and not l.startswith("+++")]
     removed = [l for l in lines if l.startswith("-") and not l.startswith("---")]
@@ -172,6 +181,7 @@ def extract(patch_text: str) -> dict:
         "C_minus": c_minus,
         "G": g,
         "affected_files": affected_files,
+        "fix_id": fix_id or patch_fix_id(patch_text),
         "patch_stats": {"added_lines": len(added), "removed_lines": len(removed)},
         "patch_source": "git" if patch_text != KNOWN_PATCH else "known_patch_fallback",
     }
@@ -179,8 +189,8 @@ def extract(patch_text: str) -> dict:
 
 def main() -> dict:
     print("[extract_patch_features] extracting patch features (Extract(Δ))")
-    patch = get_patch_from_git()
-    psi = extract(patch)
+    patch, fix_id = get_patch_from_git()
+    psi = extract(patch, fix_id=fix_id)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(psi, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"[extract_patch_features] wrote {OUT}")
@@ -190,4 +200,3 @@ def main() -> dict:
 
 if __name__ == "__main__":
     main()
-

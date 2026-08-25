@@ -18,13 +18,13 @@ The current implementation supports MySQL, PostgreSQL, MariaDB, and MonetDB.
 | PostgreSQL | #194xx | Fixed | optimizer/plan | AF |
 | PostgreSQL | #195xx | Confirmed | pl/plpgsql | SEGV |
 | MySQL | S32775xx | Confirmed | Query Optimizer | NPD |
-| MySQL | S32775xx | Confirmed | sql_union | SEGV |
+| MySQL | S32775xx | Fixed | sql_union | SEGV |
 | MySQL | S36169xx | Fixed | decimal | SEGV |
-| MySQL | S32775xx | Confirmed | Query Optimizer | SEGV |
+| MySQL | S32775xx | Fixed | Query Optimizer | SEGV |
 | MySQL | S32775xx | Confirmed | sql_union | NPD |
 | MySQL | S30198xx | Confirmed | sql_string | SEGV |
-| MySQL | S36169xx | Confirmed | item_geofunc | SEGV |
-| MySQL | S30198xx | Confirmed | item_timefunc | SEGV |
+| MySQL | S36169xx | Fixed | item_geofunc | SEGV |
+| MySQL | S30198xx | Fixed | item_timefunc | SEGV |
 | MySQL | S30198xx | Fixed | decimal | SEGV |
 | MySQL | S32775xx | Confirmed | Query Optimizer | NPD |
 | MySQL | S32775xx | Confirmed | Query Optimizer | NPD |
