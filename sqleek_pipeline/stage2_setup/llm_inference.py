@@ -75,6 +75,47 @@ def infer_sql_template(
         }
 
 
+def repair_sql_candidate(
+    client: Any,
+    dbms: str,
+    sql: str,
+    diagnostics: dict[str, Any],
+    coverage: dict[str, Any],
+    context: dict[str, Any] | None = None,
+    round_index: int = 1,
+) -> dict[str, Any]:
+    """Ask the LLM to repair one already-expanded SQL candidate.
+
+    The executor owns validation; this function only translates its structured
+    feedback into a repair request and returns the repaired concrete SQL.
+    """
+
+    skill_template = client.load_skill("seed_repair")
+    system_prompt = (
+        skill_template.replace("{{dbms}}", str(dbms))
+        .replace("{{round_index}}", str(round_index))
+    )
+    payload = {
+        "dbms": dbms,
+        "current_sql": sql,
+        "diagnostics": diagnostics,
+        "coverage": coverage,
+        "context": context or {},
+        "repair_round": round_index,
+    }
+    text = client.complete(
+        system_prompt,
+        json.dumps(payload, ensure_ascii=False, indent=2, default=str),
+        temperature=0.2,
+    )
+    obj = _parse_json_object(text)
+    repaired_sql = obj.get("sql") or obj.get("template")
+    if not isinstance(repaired_sql, str) or not repaired_sql.strip():
+        raise ValueError("repair response did not contain a non-empty sql field")
+    obj["sql"] = repaired_sql.strip()
+    return obj
+
+
 def _strip_code_fences(text: str) -> str:
     if "```" not in text:
         return text.strip()
@@ -85,3 +126,19 @@ def _strip_code_fences(text: str) -> str:
     if mid.startswith("json\n"):
         mid = mid[5:]
     return mid.strip()
+
+
+def _parse_json_object(text: str) -> dict[str, Any]:
+    cleaned = _strip_code_fences(text)
+    try:
+        obj = json.loads(cleaned)
+        if isinstance(obj, dict):
+            return obj
+        raise ValueError("LLM JSON is not an object")
+    except Exception as exc:
+        if json_repair is not None:
+            repaired = json_repair.repair_json(cleaned)
+            obj = json.loads(repaired)
+            if isinstance(obj, dict):
+                return obj
+        raise ValueError(f"LLM repair JSON parse failed: {exc}") from exc

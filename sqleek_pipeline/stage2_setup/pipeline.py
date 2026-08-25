@@ -16,12 +16,17 @@ from sqleek_pipeline.stage2_setup.common import (
     default_source_root,
     log,
 )
-from sqleek_pipeline.stage2_setup.llm_inference import infer_sql_template
+from sqleek_pipeline.stage2_setup.llm_inference import infer_sql_template, repair_sql_candidate
 from sqleek_pipeline.stage2_setup.seed_scoring import (
     compute_seed_weight,
     expand_template,
     softmax,
     write_seed,
+)
+from sqleek_pipeline.stage2_setup.seed_validation import (
+    MAX_REPAIR_ROUNDS,
+    load_executor_config,
+    validate_and_repair_seed,
 )
 from sqleek_pipeline.stage2_setup.source_context import (
     get_source_context,
@@ -75,10 +80,24 @@ def main() -> None:
         max_entries,
         dbms_list=active_dbms,
     )
-    seed_count = _write_ranked_seeds(all_templates, top_templates, variants_per_template, SEEDS_DIR)
+    seed_count, validation_records = _write_ranked_seeds(
+        all_templates,
+        top_templates,
+        variants_per_template,
+        SEEDS_DIR,
+        client,
+    )
 
     generation_log["templates"] = all_templates
     generation_log["total_seeds"] = seed_count
+    generation_log["validation"] = {
+        "enabled": True,
+        "max_repair_rounds": MAX_REPAIR_ROUNDS,
+        "attempted": len(validation_records),
+        "validated": sum(1 for record in validation_records if record["validation"].get("validated")),
+        "rejected": sum(1 for record in validation_records if not record["validation"].get("validated")),
+        "records": validation_records,
+    }
 
     log_path = OUTPUT_DIR / "seed_generation_stage2.json"
     log_path.write_text(json.dumps(generation_log, indent=2), encoding="utf-8")
@@ -200,17 +219,56 @@ def _write_ranked_seeds(
     top_templates: int,
     variants_per_template: int,
     out_base: Path,
-) -> int:
+    client: OpenAILLMClient,
+) -> tuple[int, list[dict[str, Any]]]:
     seed_count = 0
+    validation_records: list[dict[str, Any]] = []
+    executor_by_dbms: dict[str, Any] = {}
     for rank, tmpl in enumerate(all_templates[:top_templates]):
         template_str = str(tmpl.get("template") or "SELECT 1;")
         variants = expand_template(template_str, k=variants_per_template)
         dbms = str(tmpl.get("dbms") or "unknown")
         bug_type = str(tmpl.get("bug_type") or "memory")
+        if dbms not in executor_by_dbms:
+            executor_by_dbms[dbms] = load_executor_config(dbms)
+        executor = executor_by_dbms[dbms]
         seed_dir = out_base / dbms / bug_type
         seed_dir.mkdir(parents=True, exist_ok=True)
         for vi, variant in enumerate(variants):
             seed_file = seed_dir / f"llm_rank{rank:02d}_{vi:02d}.sql"
-            write_seed(seed_file, variant)
-            seed_count += 1
-    return seed_count
+            candidate_id = f"{dbms}:{bug_type}:rank{rank:02d}_variant{vi:02d}"
+            validation = validate_and_repair_seed(
+                variant,
+                dbms=dbms,
+                client=client,
+                repair_fn=repair_sql_candidate,
+                executor=executor,
+                max_repair_rounds=MAX_REPAIR_ROUNDS,
+                candidate_id=candidate_id,
+                context={
+                    "entry_fn": tmpl.get("entry_fn", ""),
+                    "clauses": tmpl.get("clauses", []),
+                    "reasoning": tmpl.get("reasoning", ""),
+                    "risk_scenario": tmpl.get("risk_scenario", ""),
+                },
+            )
+            validation_records.append(
+                {
+                    "candidate_id": candidate_id,
+                    "dbms": dbms,
+                    "bug_type": bug_type,
+                    "rank": rank,
+                    "variant": vi,
+                    "seed_file": str(seed_file),
+                    "validation": validation,
+                }
+            )
+            # Rejected candidates never reach the seed directory writer.
+            if validation.get("validated"):
+                write_seed(seed_file, str(validation.get("sql") or variant))
+                seed_count += 1
+            elif seed_file.exists():
+                # Do not leave a stale generated seed that failed this run's
+                # validation in the corpus consumed by Stage 3.
+                seed_file.unlink()
+    return seed_count, validation_records
