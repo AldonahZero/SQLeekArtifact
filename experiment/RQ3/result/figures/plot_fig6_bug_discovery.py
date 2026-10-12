@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 
-TOOLS = ["SQLeek", "SQUIRREL", "Griffin", "SQLaser"]
+TOOLS = ["SQLeek", "SQUIRREL", "Griffin", "DynSQL", "SQLaser"]
 DBMS_ORDER = ["PostgreSQL", "MySQL", "MariaDB", "MonetDB"]
 RUNS = ["r1", "r2", "r3", "r4", "r5"]
 REQUIRED_COLUMNS = ["tool", "dbms", "run", "bug_id", "first_seen_hours"]
@@ -43,6 +43,11 @@ STYLE = {
         "color": "#7E57C2",
         "linestyle": (0, (1.0, 1.8)),
         "linewidth": 1.20,
+    },
+    "DynSQL": {
+        "color": "#0072B2",
+        "linestyle": (0, (5.0, 2.0, 1.0, 2.0)),
+        "linewidth": 1.22,
     },
     "SQLaser": {
         "color": "#7F7F7F",
@@ -404,10 +409,16 @@ def display_mean(series: pd.DataFrame, tool: str) -> np.ndarray:
 def plot_figure(
     stats: dict[tuple[str, str], pd.DataFrame],
     output_prefix: Path,
+    layout: str,
 ) -> dict[str, tuple[float, float]]:
     configure_matplotlib()
     y_ranges = compute_y_ranges(stats)
-    fig, axes = plt.subplots(2, 2, figsize=(7.15, 4.55), sharex=False, sharey=False)
+    if layout == "2x2":
+        fig, axes = plt.subplots(2, 2, figsize=(7.15, 4.55), sharex=False, sharey=False)
+    elif layout == "1x4":
+        fig, axes = plt.subplots(1, 4, figsize=(10.4, 2.65), sharex=False, sharey=False)
+    else:
+        raise ValueError(f"Unknown layout: {layout}")
     axes = axes.flatten()
     line_order = [tool for tool in TOOLS if tool != "SQLeek"] + ["SQLeek"]
     plotted_tools: set[str] = set()
@@ -453,8 +464,9 @@ def plot_figure(
             plotted_tools.add(tool)
 
         ax.set_title(SUBPLOT_TITLES[dbms], fontweight="semibold", pad=4)
-        ax.set_xlabel("Time (h)")
-        ax.set_ylabel("Cumulative unique bugs")
+        if layout == "2x2":
+            ax.set_xlabel("Time (h)")
+            ax.set_ylabel("Cumulative unique bugs")
         ax.set_xlim(0, 24)
         ax.set_ylim(*y_ranges[dbms])
         ax.set_xticks([0, 5, 10, 15, 20, 24])
@@ -483,18 +495,24 @@ def plot_figure(
     fig.legend(
         handles=handles,
         loc="lower center",
-        bbox_to_anchor=(0.5, 0.012),
+        bbox_to_anchor=(0.5, 0.012 if layout == "2x2" else 0.015),
         ncol=max(1, len(handles)),
         frameon=False,
         handlelength=2.45,
         columnspacing=0.85,
         handletextpad=0.38,
     )
-    fig.subplots_adjust(left=0.083, right=0.99, top=0.955, bottom=0.18, wspace=0.27, hspace=0.40)
+    if layout == "2x2":
+        fig.subplots_adjust(left=0.083, right=0.99, top=0.955, bottom=0.18, wspace=0.27, hspace=0.40)
+    else:
+        fig.supxlabel("Time (h)", y=0.13, fontsize=8.7)
+        fig.supylabel("Cumulative unique bugs", x=0.02, fontsize=8.7)
+        fig.subplots_adjust(left=0.07, right=0.99, top=0.84, bottom=0.27, wspace=0.34)
 
-    pdf_path = output_prefix.with_suffix(".pdf")
-    svg_path = output_prefix.with_suffix(".svg")
-    png_path = output_prefix.with_suffix(".png")
+    layout_prefix = output_prefix.with_name(f"{output_prefix.name}_{layout}")
+    pdf_path = layout_prefix.with_suffix(".pdf")
+    svg_path = layout_prefix.with_suffix(".svg")
+    png_path = layout_prefix.with_suffix(".png")
 
     fig.savefig(pdf_path, bbox_inches="tight", pad_inches=0.025)
     fig.savefig(svg_path, bbox_inches="tight", pad_inches=0.025)
@@ -539,7 +557,8 @@ def main() -> None:
     df = validate_input(df, input_path, args.allow_partial_runs)
     checkpoints = make_checkpoints(df)
     stats = build_all_stats(df, checkpoints, args.allow_partial_runs, zero_missing_pairs)
-    y_ranges = plot_figure(stats, output_prefix)
+    for layout in ("2x2", "1x4"):
+        y_ranges = plot_figure(stats, output_prefix, layout)
 
     if args.stats_output:
         stats_output = Path(args.stats_output)
@@ -548,8 +567,10 @@ def main() -> None:
         write_stats_csv(stats, stats_output)
         print(f"STATS_OUTPUT {stats_output}")
 
-    for suffix in [".pdf", ".png", ".svg"]:
-        print(f"OUTPUT {output_prefix.with_suffix(suffix)}")
+    for layout in ("2x2", "1x4"):
+        layout_prefix = output_prefix.with_name(f"{output_prefix.name}_{layout}")
+        for suffix in (".pdf", ".png", ".svg"):
+            print(f"OUTPUT {layout_prefix.with_suffix(suffix)}")
     print_summary(stats, y_ranges)
 
 
