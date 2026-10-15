@@ -184,12 +184,6 @@ def plot() -> None:
                 * tool_rows["branch_hit_std"].fillna(0.0).to_numpy(float)
                 / np.sqrt(np.maximum(repeat_count, 1.0))
             )
-            if tool == "SQLeek":
-                display_floor = np.maximum(
-                    DISPLAY_CI_FLOOR_MIN_BRANCHES,
-                    np.maximum(y, 0.0) * DISPLAY_CI_FLOOR_RATIO,
-                )
-                ci95 = np.where(ci95 > 0.0, ci95, display_floor)
             if len(x):
                 if x[0] == 0:
                     y[0] = 0.0
